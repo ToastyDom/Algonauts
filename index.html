@@ -28,21 +28,21 @@
     <link rel="stylesheet" href="/css/etline-font.css">
     <link rel="stylesheet" href="/bower_components/animate.css/animate.min.css">
     <link href="https://use.fontawesome.com/releases/v5.0.3/css/all.css" rel="stylesheet">
-    <script src="/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+    <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
 </head>
 
 <body id="top" ng-controller="mainCtrl">
     <section class="hero">
         <div style="max-height: 750px;  position: absolute; top: 0; bottom: 0; width:100%; height: 100%; background-color: black; overflow: hidden;">
-            <img src="/img/index_background_compressedv2.jpg" style="width: 100%; opacity: 0.9" class="filter-me-2023">
-        </div>
+            <img src="img/index_background_compressedv2.jpg" style="width: 100%; opacity: 0.9" class="filter-me-2023">
+        </div> 
         <section class="navigation">
             <header>
                 <div class="header-content">
                     <div class="logo">
                         <ul class="primary-nav" >
                            <!-- <li><a href="index.html">The Algonauts Project</a></li>-->
-                            <!--<a href="index.html"><img src="/img/algonauts_project_logo_3.png" style="width:30%"></a>-->
+                            <!--<a href="index.html"><img src="img/algonauts_project_logo_3.png" style="width:30%"></a>-->
                         </ul>
                     </div>
                     <div class="header-nav navbar-right">
@@ -144,7 +144,7 @@
                 <div class="col-md-3 intro-feature">
                     <div class="intro-icon">
                         <span class="icon">
-                            <img src="/favicon.ico" style="height:40px; vertical-align: inherit;">
+                            <img src="favicon.ico" style="height:40px; vertical-align: inherit;">
                         </span>
                     </div>
                     <div class="intro-content">
@@ -384,7 +384,7 @@
                 <div ng-cloak class="col-md-3 portfolio-box" ng-repeat="member in coreMembers2023">
                     <div class="wow zoomIn">
                         <a href="{{member.url}}" class="a-2021">
-                            <img ng-cloak ng-src="/img/team/{{ member.photo }}" class="img-members">
+                            <img ng-cloak ng-src="img/team/{{ member.photo }}" class="img-members">
                         </a>
                     </div>
                     <div class="portfolio-box-caption">
@@ -402,7 +402,7 @@
                 <div class="col-md-4 col-sm-6" ng-repeat="member in members2023">
                     <div class="wow zoomIn">
                         <a href="{{member.url}}" class="a-2021">
-                            <img ng-cloak ng-src="/img/team/{{ member.photo }}" class="img-members">
+                            <img ng-cloak ng-src="img/team/{{ member.photo }}" class="img-members">
                         </a>
                     </div>
                     <div class="portfolio-box-caption">
@@ -424,27 +424,27 @@
             <div class="row content-flex-wrap">
                 <div class="col-xs-12 col-md-4 img-align">
                     <a href="http://mitibmwatsonailab.mit.edu/">
-                        <img class="img-logo-alt" style="height:140px; width:auto"  src="/img/logo_mitibm.png">
+                        <img class="img-logo-alt" style="height:140px; width:auto"  src="img/logo_mitibm.png">
                     </a>
                 </div>
                 <div class="col-xs-12 col-md-4 img-align">
                     <a href="https://erc.europa.eu/">
-                        <img class="img-sponsor" src="/img/logo_erc.png">
+                        <img class="img-sponsor" src="img/logo_erc.png">
                     </a>
                 </div>
                 <div class="col-xs-12 col-md-4 img-align">
                     <a href="https://www.dfg.de/en/">
-                        <img class="img-sponsor" style="height:80px" src="/img/logo_dfg.jpg">
+                        <img class="img-sponsor" style="height:80px" src="img/logo_dfg.jpg">
                     </a>
                 </div>
                 <div class="col-xs-12 col-md-4 img-align">
                     <a href="https://wissenschaft.hessen.de/">
-                        <img class="img-sponsor" style="height:80px" src="/img/logo_hessen.jpg">
+                        <img class="img-sponsor" style="height:80px" src="img/logo_hessen.jpg">
                     </a>
                 </div>
                 <div class="col-xs-12 col-md-4 img-align">
                     <a href="https://hessian.ai/">
-                        <img class="img-sponsor" style="height:80px" src="/img/logo_hessian-ai.svg">
+                        <img class="img-sponsor" style="height:80px" src="img/logo_hessian-ai.svg">
                     </a>
                 </div>
             </div>
@@ -478,23 +478,23 @@
     
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js "></script>
     <script>
-        window.jQuery || document.write('<script src="/js/vendor/jquery-1.11.2.min.js "><\/script>')
+        window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js "><\/script>')
     </script>
-    <script src="/js/jquery.fancybox.pack.js "></script>
-    <script src="/js/vendor/bootstrap.min.js "></script>
-    <script src="/js/vendor/wow.min.js "></script>
-    <script src="/js/scripts.js "></script>
-    <script src="/js/jquery.flexslider-min.js "></script>
-    <script src="/bower_components/classie/classie.js "></script>
-    <script src="/bower_components/jquery-waypoints/lib/jquery.waypoints.min.js "></script>
-    <script src="/node_modules/angular/angular.min.js "></script>
-    <script src="/node_modules/angulargrid/angulargrid.js "></script>
-    <script src="/node_modules/angular-aria/angular-aria.min.js "></script>
-    <script src="/node_modules/angular-material/angular-material.min.js "></script>
-    <script src="/node_modules/angular-animate/angular-animate.min.js "></script>
-    <script src="/node_modules/angular-messages/angular-messages.min.js "></script>
-    <script src="/js/ng/src/app.js "></script>
-    <script src="/js/ng/src/controller.js "></script>
+    <script src="js/jquery.fancybox.pack.js "></script>
+    <script src="js/vendor/bootstrap.min.js "></script>
+    <script src="js/vendor/wow.min.js "></script>
+    <script src="js/scripts.js "></script>
+    <script src="js/jquery.flexslider-min.js "></script>
+    <script src="bower_components/classie/classie.js "></script>
+    <script src="bower_components/jquery-waypoints/lib/jquery.waypoints.min.js "></script>
+    <script src="node_modules/angular/angular.min.js "></script>
+    <script src="node_modules/angulargrid/angulargrid.js "></script>
+    <script src="node_modules/angular-aria/angular-aria.min.js "></script>
+    <script src="node_modules/angular-material/angular-material.min.js "></script>
+    <script src="node_modules/angular-animate/angular-animate.min.js "></script>
+    <script src="node_modules/angular-messages/angular-messages.min.js "></script>
+    <script src="js/ng/src/app.js "></script>
+    <script src="js/ng/src/controller.js "></script>
     <script> function externalLinks() { for (var c = document.getElementsByTagName("a"), a = 0; a < c.length; a++) { var b = c[a]; b.getAttribute("href") && b.hostname !== location.hostname && (b.target = "_blank") } }; externalLinks();</script>
 </body>
 
