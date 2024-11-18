@@ -1,0 +1,228 @@
+<!doctype html>
+<html ng-app="momentsApp" lang="en">
+
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VCQ9D4SNB4"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-VCQ9D4SNB4');
+    </script>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Linearizing Encoding Models &ndash; Algonauts Project 2023</title>
+    <meta name="description" content="Challenge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Alex Lascelles">
+    <link rel="icon" type="image/png" href="../favicon.ico" sizes="32x32" />
+    <link rel="stylesheet" href="../css/normalize.min.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/jquery.fancybox.css">
+    <link rel="stylesheet" href="../css/flexslider.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/angulargrid.css">
+    <link rel="stylesheet" href="../css/queries.css">
+    <link rel="stylesheet" href="../css/etline-font.css">
+    <link rel="stylesheet" href="../node_modules/angular-material/angular-material.min.css">
+    <link rel="stylesheet" href="../bower_components/animate.css/animate.min.css">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <script async src="../js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({ tex2jax: { inlineMath: [ ['$','$'], ["\\(","\\)"] ], displayMath: [ ['$$','$$'], ["\\[","\\]"] ], processEscapes:
+        true, processEnvironments: true }, // Center justify equations in code and markdown cells. Elsewhere // we use CSS
+        to left justify single line equations in code cells. displayAlign: 'center', "HTML-CSS": { styles: {'.MathJax_Display':
+        {"margin": 0}}, linebreaks: { automatic: true } } });
+    </script>
+</head>
+
+<body id="top" ng-controller="mainCtrl" ng-cloak>
+    <section class="hero" style="min-height: 400px;">
+        <div style="max-height: 750px; position: absolute;
+                top: 0;
+                bottom: 0;
+                width: 100%;
+                height: 100%;
+                background-color: black;
+                overflow: hidden;">
+            <img src="../img/images_website_wallpaper_2_compressed.jpg" style="width: inherit; opacity: 0.7;">
+        </div>
+        <div class="hero-explore-content text-center"
+            style="display: flex; justify-content: center; align-items: center; height: 100%; width: 100%; flex-direction: column; padding-top: 0; position: absolute;">
+            <h1 style="margin-bottom: 25px; color: white;"><b>Encoding Models</b></h1>
+            <h1 style="font-size: 29px; margin-bottom: 25px; color: white; font-style: italic;"><b>The Algonauts Project 2023</b></h1>
+        </div>
+        <section class="navigation">
+            <header>
+                <div class="header-content">
+                    <div class="logo">
+                        <li><a href="index.html">The Algonauts Project</a></li>
+                    </div>
+                    <div class="header-nav navbar-right">
+                        <nav>
+                            <ul class="primary-nav">
+                                <li><a href="index.html#about">About</a></li>
+                                <li><a href="challenge.html">Challenge</a></li>
+                                <li><a href="braindata.html">Brain Data</a></li>
+                                <li><a href="encoding.html">Encoding Models</a></li>
+                                <li><a href="index.html#cite">Papers</a></li>
+                                <li><a href="index.html#team">Team</a></li>
+                                <li><a href="index.html#contact">Contact</a></li>
+                                <li><a href="archive.html">Archive</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="navicon">
+                        <a class="nav-toggle" href="#">
+                            <span></span>
+                        </a>
+                    </div>
+                </div>
+            </header>
+        </section>
+    </section>
+    <section class="challenge intro-section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <p class="intro-paragraph" style="text-align: justify; margin-top: 2em">
+                        There are different ways to relate brain measurements to computational models. For example, the <a href="../2019/index.html" class="a-2021">2019 edition of the
+                        Algonauts Challenge</a> used representational similarity analysis (RSA, <a href="#refs" class="a-2021">Kriegeskorte et
+                        al. 2008</a>).
+                    </p>
+
+                    <p class="intro-paragraph" style="text-align: justify;">
+                        As in the <a href="../2021/index.html" class="a-2021">2021 edition</a>, we leave it up to you to determine the approach to predict brain responses (see <a
+                            href="challenge.html#Rules" class="a-2021">Challenge Rules</a>). As an example, we guide the reader through one
+                        common approach called linearizing encoding (<a href="#refs" class="a-2021">Naselaris et al., 2011;
+                            Wu et al., 2006</a>), where the response of each vertex is predicted independently using the multiple features
+                        provided by a computational model (linear regression is typically used to form the prediction).
+                    </p>
+
+                    <p class="intro-paragraph" style="text-align: justify;">
+                        We provide an example implementation of the linearizing encoding model using AlexNet as the computational model in the
+                        <a href="https://colab.research.google.com/drive/1bLJGP3bAo_hAOwZPHpiSHKlt97X9xsUw?usp=share_link" class="a-2021">development kit</a>.
+                    </p>
+
+                    <div class="container" style="text-align:center" id="fig1">
+                        <img src="../img/linearizing_encoding_algorithm_compressed.jpg" style="margin-top:1em; margin-bottom:1em; max-width:60%;">
+                        <p class="intro-paragraph" style="margin-bottom: 2em">
+                            <i><b style="font-weight: 600">Figure 1.</b> A) First, we use a computational model to extract the
+                                visual features of a given set of train images. B) We then estimate a linear mapping (via regression) between
+                                these model features and the brain vertex activity responses to the same train images. C) After the linear
+                                mapping has been estimated we use it to predict (i.e., to encode) the brain vertex responses to the test
+                                images.</i>
+                        </p>
+                    </div>
+
+                    <p class="intro-paragraph" style="text-align: justify;">
+                        The approach has three steps:
+                    </p>
+
+                    <p class="intro-paragraph" style="text-align: justify;">
+                        <b style="font-weight: 600">Step 1.</b> Features of a computer vision model to images are extracted (Fig. 1A). This changes the format of the
+                        data (from pixels to model features) and typically reduces the dimensionality of the data. The features of a given model
+                        are interpreted as a potential hypothesis about the features that a given brain area might be using to represent the
+                        stimulus.
+                    </p>
+
+                    <p class="intro-paragraph" style="text-align: justify;">
+                        <b style="font-weight: 600">Step 2.</b> Features of the computational model are linearly mapped onto each vertex's responses (Fig. 1B) using the
+                        provided train set. This step is needed as there is not necessarily a one-to-one mapping between vertices and model
+                        features. Instead, each vertex's response is hypothesized to correspond to a weighted combination of activations of
+                        multiple features of the model.
+                    </p>
+
+                    <p class="intro-paragraph" style="text-align: justify;">
+                        <b style="font-weight: 600">Testing the model:</b> If the computational model is a suitable model of the brain, the mapped predictions of the
+                        encoding model will fit empirically recorded data well. In the Challenge, we test your predicted brain responses against
+                        the held-out brain data responses to images from the test set. If you want to evaluate your model yourself before you
+                        submit, you can do so by dividing the data we provide you further into a train and a validation set. The <a
+                        href="https://colab.research.google.com/drive/1bLJGP3bAo_hAOwZPHpiSHKlt97X9xsUw?usp=share_link" class="a-2021">development kit</a> 
+                        provides an example of how to do this.
+                    </p>
+
+                    <p class="intro-paragraph" style="text-align: justify;">
+                        <b style="font-weight: 600">Step 3.</b> The estimated mapping from the train dataset is applied on the model features corresponding to images in
+                        the test set, thus predicting the fMRI responses to the test images (Fig. 1C). The predicted fMRI test data is then
+                        compared against the ground-truth (withheld) fMRI test data. This ensures that the model fit is cross-validated and thus
+                        unbiased. In the context of the Challenge, we do the comparison for you since we keep the test set brain data hidden.
+                    </p>
+
+
+                    <h3 style="margin-bottom: 1em" id="refs">References</h3>
+                    <p class="intro-paragraph" style="text-align: justify;">
+                        Kriegeskorte, N., Mur, M., & Bandettini, P. A. (2008). <i>Representational similarity
+                        analysis-connecting the branches of systems neuroscience</i>. Frontiers in systems neuroscience, 2, 4. DOI: <a
+                            href="https://doi.org/10.3389/neuro.06.004.2008" class="a-2021">https://doi.org/10.3389/neuro.06.004.2008</a>
+                    </p>
+                    <p class="intro-paragraph" style="text-align: justify;">
+                        Naselaris, T., Kay, K. N., Nishimoto, S., & Gallant, J. L. (2011). <i>Encoding and decoding in fMRI</i>. Neuroimage,
+                        56(2), 400-410. DOI: <a href="https://doi.org/10.1016/j.neuroimage.2010.07.073"
+                            class="a-2021">https://doi.org/10.1016/j.neuroimage.2010.07.073</a>
+                    </p>
+                    <p class="intro-paragraph" style="text-align: justify;">
+                        Wu, M. C.-K., David, S. V., & Gallant, J. L. (2006). <i>Complete Functional Characterization of Sensory Neurons by
+                            System Identification</i>. Annual Review of Neuroscience, 29(1), 477&ndash;505. DOI: <a
+                            href="https://doi.org/10.1146/annurev.neuro.29.051605.113024"
+                            class="a-2021">https://doi.org/10.1146/annurev.neuro.29.051605.113024</a>
+                    </p>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="to-top">
+        <div class="container">
+            <div class="row">
+                <div class="to-top-wrap">
+                    <a href="#top" class="top">
+                        <i class="fa fa-angle-up"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container ">
+            <div class="row ">
+                <div class="col-md-7 ">
+                    <div class="footer-links ">
+                        <p>
+                            Copyright © The Algonauts Project | <a href="https://accessibility.mit.edu/">Accessibility</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script>
+        window.jQuery || document.write('<script src="../js/vendor/jquery-1.11.2.min.js"><\/script>')
+    </script>
+    <script src="../js/jquery.fancybox.pack.js"></script>
+    <script src="../js/vendor/bootstrap.min.js"></script>
+    <script src="../js/vendor/wow.min.js"></script>
+    <script src="../js/scripts.js"></script>
+    <script src="../js/jquery.flexslider-min.js"></script>
+    <script src="../bower_components/classie/classie.js"></script>
+    <script src="../bower_components/jquery-waypoints/lib/jquery.waypoints.min.js"></script>
+    <script src="../node_modules/angular/angular.min.js"></script>
+    <script src="../node_modules/angulargrid/angulargrid.js"></script>
+    <script src="../node_modules/angular-aria/angular-aria.min.js"></script>
+    <script src="../node_modules/angular-material/angular-material.min.js"></script>
+    <script src="../node_modules/angular-animate/angular-animate.min.js"></script>
+    <script src="../node_modules/angular-messages/angular-messages.min.js"></script>
+    <script src="../js/ng/src/app.js"></script>
+    <script src="../js/ng/src/controller.js"></script>
+    <script> function externalLinks() { for (var c = document.getElementsByTagName("a"), a = 0; a < c.length; a++) { var b = c[a]; b.getAttribute("href") && b.hostname !== location.hostname && (b.target = "_blank") } }; externalLinks();</script>
+</body>
+
+</html>

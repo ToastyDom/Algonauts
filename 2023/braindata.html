@@ -1,0 +1,213 @@
+<!doctype html>
+<html ng-app="momentsApp" lang="en">
+
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VCQ9D4SNB4"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-VCQ9D4SNB4');
+    </script>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Brain Data &ndash; Algonauts Project 2023</title>
+    <meta name="description" content="Challenge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Alex Lascelles">
+    <link rel="icon" type="image/png" href="../favicon.ico" sizes="32x32" />
+    <link rel="stylesheet" href="../css/normalize.min.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/jquery.fancybox.css">
+    <link rel="stylesheet" href="../css/flexslider.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/angulargrid.css">
+    <link rel="stylesheet" href="../css/queries.css">
+    <link rel="stylesheet" href="../css/etline-font.css">
+    <link rel="stylesheet" href="../node_modules/angular-material/angular-material.min.css">
+    <link rel="stylesheet" href="../bower_components/animate.css/animate.min.css">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <script async src="../js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({ tex2jax: { inlineMath: [ ['$','$'], ["\\(","\\)"] ], displayMath: [ ['$$','$$'], ["\\[","\\]"] ], processEscapes:
+        true, processEnvironments: true }, // Center justify equations in code and markdown cells. Elsewhere // we use CSS
+        to left justify single line equations in code cells. displayAlign: 'center', "HTML-CSS": { styles: {'.MathJax_Display':
+        {"margin": 0}}, linebreaks: { automatic: true } } });
+    </script>
+</head>
+
+<body id="top" ng-controller="mainCtrl" ng-cloak>
+    <section class="hero" style="min-height: 400px;">
+        <div style="max-height: 750px; position: absolute;
+                top: 0;
+                bottom: 0;
+                width: 100%;
+                height: 100%;
+                background-color: black;
+                overflow: hidden;">
+            <img src="../img/images_website_wallpaper_2_compressed.jpg" style="width: inherit; opacity: 0.7;">
+        </div>
+        <div class="hero-explore-content text-center"
+            style="display: flex; justify-content: center; align-items: center; height: 100%; width: 100%; flex-direction: column; padding-top: 0; position: absolute;">
+            <h1 style="margin-bottom: 25px; color: white;"><b>Brain Data</b></h1>
+            <h1 style="font-size: 29px; margin-bottom: 25px; color: white; font-style: italic;"><b>The Algonauts Project 2023</b></h1>
+        </div>
+        <section class="navigation">
+            <header>
+                <div class="header-content">
+                    <div class="logo">
+                        <li><a href="index.html">The Algonauts Project</a></li>
+                        <!--<a href="index.html"><img src="../img/algonauts_project_logo_3.png" style="width:30%"></a>-->
+                    </div>
+                    <div class="header-nav navbar-right">
+                        <nav>
+                            <ul class="primary-nav">
+                                <li><a href="index.html#about">About</a></li>
+                                <li><a href="challenge.html">Challenge</a></li>
+                                <li><a href="braindata.html">Brain Data</a></li>
+                                <li><a href="encoding.html">Encoding Models</a></li>
+                                <li><a href="index.html#cite">Papers</a></li>
+                                <li><a href="index.html#team">Team</a></li>
+                                <li><a href="index.html#contact">Contact</a></li>
+                                <li><a href="archive.html">Archive</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="navicon">
+                        <a class="nav-toggle" href="#">
+                            <span></span>
+                        </a>
+                    </div>
+                </div>
+            </header>
+        </section>
+    </section>
+    
+
+    <!-- BRAIN RESPONSE MAPPING AND ANALYSIS -->
+    <section class="challenge intro-section-padding" id="BrainResponseMappingAndAnalysis">
+        <div class="container">                 
+            <div class="row content-flex-wrap wow fadeInUp" style="margin-top: 3em;" id="BrainResponseMeasurement">
+                <div class="col-xs-12 col-md-4 img-align">
+                    <img src="../img/fmri_pic_v3.png" style="max-width: 100%">
+                </div>
+                <div class="col-xs-12 col-md-8">
+                    <h3>Brain Response Measurement: fMRI</h3>
+                    <p class="intro-paragraph" style="text-align: justify;">
+                        We provide measurements of brain responses using the technique of functional magnetic resonance imaging (fMRI) for
+                        millimeter spatial resolution. This technique measures brain activity indirectly by
+                        detecting changes in blood flow associated with brain activity. fMRI is a core technique in cognitive
+                        neuroscience to observe the human brain in action noninvasively.
+                    </p>
+                </div>
+            </div>
+                
+            <div class="row wow fadeInUp" style="margin-top: 2em;"> 
+                <div class="col-xs-12">
+                    <h3>Challenge Data</h3>
+                    <p class="intro-paragraph" style="text-align: justify;">
+                        The 2023 Challenge data comes from the <a href="https://naturalscenesdataset.org/" class="a-2021">Natural Scenes
+                            Dataset</a>
+                        (NSD) (<a href="https://www.nature.com/articles/s41593-021-00962-x" class="a-2021">Allen et al., 2022</a>), a
+                        massive 8-subjects dataset of 7T fMRI responses to images of natural scenes coming from
+                        the <a href="https://cocodataset.org/#home" class="a-2021">COCO database</a> (<a
+                            href="https://link.springer.com/chapter/10.1007/978-3-319-10602-1_48" class="a-2021">Lin et al., 2014</a>).
+                    </p>
+                    <p class="intro-paragraph" style="text-align: justify;">
+                        During the NSD experiment each subject viewed 10,000 distinct images, and a special set of 1000 images was shared
+                        across subjects (8 subjects x 9000 unique images + 1000 shared images = 73,000 images). Each of the 10,000
+                        images was presented three times, for a total of 30,000 image trials per subject. Subjects were instructed to focus on a
+                        fixation cross at the center of the screen and performed a continuous recognition task in which they reported whether
+                        the current image had been presented at any previous point in the experiment. All images were presented with a visual
+                        angle of 8.4° x 8.4°.
+                    </p>
+                    <p class="intro-paragraph" style="text-align: justify;">
+                        For every subject the NSD experiment was split across 40 scan sessions: not all subjects completed all of them,
+                        resulting in different amounts of recorded data between subjects. The fMRI data of the last three sessions of every
+                        subject is withheld and constitutes the basis for the test split of the Algonauts Project 2023 Challenge, whereas the
+                        data of the remaining sessions is released and constitutes the basis for the train split of the Challenge.
+                    </p>
+
+                    <p class="intro-paragraph" style="text-align: justify;">
+                        The Challenge uses preprocessed fMRI responses (BOLD response amplitudes) from each subject that have been projected
+                        onto a common cortical surface group template (FreeSurfer's fsaverage surface) (more information on preprocessing in the
+                        <a href="https://doi.org/10.1038/s41593-021-00962-x" class="a-2021">NSD paper</a>). The whole brain surfaces are mapped 
+                        out in vertices, and the Challenge data consists of a subset of cortical
+                        surface vertices in the visual cortex (a region of the brain specialized in processing visual input) that were maximally
+                        responsive to visual stimulation. The fMRI data is divided into the left (LH) and right (RH) hemispheres, each
+                        consisting of 19,004 and 20,544 vertices, with the exception of subjects 6 (18,978 LH and 20,220 RH vertices) and 8
+                        (18,981 LH and 20,530 RH vertices) due to missing data. We z-scored the activity of each voxel independently for each
+                        NSD scan session, and then averaged the fMRI responses across repeats of the same stimuli images.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="container" style="text-align:center" id="challenge2023_vertices">
+                <div class="row wow fadeInUp">
+                    <div class="col-md-12">
+                        <div style="vertical-align:middle; text-align:center">
+                            <img src="../img/challenge_vertices.png" style="margin-top:1em; margin-bottom:1em; max-width:60%;">
+                            <p class="intro-paragraph">
+                                <i><b style="font-weight: 600">Challenge vertices.</b> Brain surface plots of the vertices used for the Challenge (in purple).</i>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+    <section class="to-top">
+        <div class="container">
+            <div class="row">
+                <div class="to-top-wrap">
+                    <a href="#top" class="top">
+                        <i class="fa fa-angle-up"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container ">
+            <div class="row ">
+                <div class="col-md-7 ">
+                    <div class="footer-links ">
+                        <p>
+                            Copyright © The Algonauts Project | <a href="https://accessibility.mit.edu/">Accessibility</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script>
+        window.jQuery || document.write('<script src="../js/vendor/jquery-1.11.2.min.js"><\/script>')
+    </script>
+    <script src="../js/jquery.fancybox.pack.js"></script>
+    <script src="../js/vendor/bootstrap.min.js"></script>
+    <script src="../js/vendor/wow.min.js"></script>
+    <script src="../js/scripts.js"></script>
+    <script src="../js/jquery.flexslider-min.js"></script>
+    <script src="../bower_components/classie/classie.js"></script>
+    <script src="../bower_components/jquery-waypoints/lib/jquery.waypoints.min.js"></script>
+    <script src="../node_modules/angular/angular.min.js"></script>
+    <script src="../node_modules/angulargrid/angulargrid.js"></script>
+    <script src="../node_modules/angular-aria/angular-aria.min.js"></script>
+    <script src="../node_modules/angular-material/angular-material.min.js"></script>
+    <script src="../node_modules/angular-animate/angular-animate.min.js"></script>
+    <script src="../node_modules/angular-messages/angular-messages.min.js"></script>
+    <script src="../js/ng/src/app.js"></script>
+    <script src="../js/ng/src/controller.js"></script>
+    <script> function externalLinks() { for (var c = document.getElementsByTagName("a"), a = 0; a < c.length; a++) { var b = c[a]; b.getAttribute("href") && b.hostname !== location.hostname && (b.target = "_blank") } }; externalLinks();</script>
+</body>
+
+</html>

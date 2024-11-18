@@ -1,0 +1,271 @@
+<!doctype html>
+<html ng-app="momentsApp" lang="en">
+
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VCQ9D4SNB4"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-VCQ9D4SNB4');
+    </script>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Brain Mapping & Analysis &ndash; Algonauts Project 2021</title>
+    <meta name="description" content="Challenge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Alex Andonian">
+    <link rel="icon" type="image/png" href="favicon.ico" sizes="32x32" />
+    <link rel="stylesheet" href="../css/normalize.min.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/jquery.fancybox.css">
+    <link rel="stylesheet" href="../css/flexslider.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/angulargrid.css">
+    <link rel="stylesheet" href="../css/queries.css">
+    <link rel="stylesheet" href="../css/etline-font.css">
+    <link rel="stylesheet" href="../node_modules/angular-material/angular-material.min.css">
+    <link rel="stylesheet" href="../bower_components/animate.css/animate.min.css">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <script async src="../js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({ tex2jax: { inlineMath: [ ['$','$'], ["\\(","\\)"] ], displayMath: [ ['$$','$$'], ["\\[","\\]"] ], processEscapes:
+        true, processEnvironments: true }, // Center justify equations in code and markdown cells. Elsewhere // we use CSS
+        to left justify single line equations in code cells. displayAlign: 'center', "HTML-CSS": { styles: {'.MathJax_Display':
+        {"margin": 0}}, linebreaks: { automatic: true } } });
+    </script>
+</head>
+
+<body id="top" ng-controller="mainCtrl" ng-cloak>
+    <section class="hero" style="min-height: 400px;">
+        <div style="max-height: 750px;  position: absolute;
+                top: 0;
+                bottom: 0;
+                width: 100%;
+                height: 100%;
+                background-color: black;
+                overflow: hidden;">
+            <video src="../img/ap2021_banner_compressed.mp4" autoplay loop muted style="    position: absolute;
+                    min-width: 100%;
+                    min-height: 100%;
+                    width: auto;
+                    height: auto;
+                    opacity: 0.6;
+                    top: 0;">
+                </video>
+                <div class="hero-explore-content text-center"
+                    style="display: flex; justify-content: center; align-items: center; height: 100%; width: 100%; flex-direction: column; padding-top: 0; position: absolute;">
+                    <h1 style="color: white; font-weight: bold; margin-bottom: 0;">Brain Mapping & Analysis</h1>
+                    <h1 style="font-size: 29px; margin-bottom: 25px; color: white; font-style: italic;"><b>The Algonauts Project 2021</b></h1>
+                </div>
+        </div>
+        <section class="navigation">
+            <header>
+                <div class="header-content">
+                    <div class="logo">
+                        <li><a href="index.html">The Algonauts Project</a></li>
+                    </div>
+                    <div class="header-nav navbar-right">
+                        <nav>
+                            <ul class="primary-nav">
+                                <li><a href="index.html#about">About</a></li>
+                                <li><a href="challenge.html">Challenge</a></li>
+                                <li><a href="brainmappingandanalysis.html">Brain Mapping</a></li>
+                                <li><a href="encoding.html">Encoding Models</a></li>
+                                <li><a href="https://arxiv.org/abs/2104.13714v1" target="_blank">Paper</a></li>
+                                <li><a href="index.html#team">Team</a></li>
+                                <li><a href="index.html#contact">Contact</a></li>
+                                <li><a href="../archive.html">Archive</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="navicon">
+                        <a class="nav-toggle" href="#">
+                            <span></span>
+                        </a>
+                    </div>
+                </div>
+            </header>
+        </section>
+    </section>
+    
+    <section class="challenge intro-section-padding" id="BrainResponseMappingAndAnalysis">
+        <div class="container">                 
+            <div class="row content-flex-wrap wow fadeInUp" style="margin-top: 3em;" id="BrainResponseMeasurement">
+                <div class="col-xs-12 col-md-4 img-align">
+                    <img src="../img/fmri_pic_v3.png" style="max-width: 100%">
+                </div>
+                <div class="col-xs-12 col-md-8">
+                    <h3>Brain Response Measurement: fMRI</h3>
+                    <p class="intro-paragraph" style="text-align: justify;">
+                        We provide measurements of brain responses using the technique of functional magnetic resonance imaging (fMRI) for
+                        millimeter spatial resolution. This technique measures brain activity indirectly by
+                        detecting changes in blood flow associated with brain activity. fMRI is a core technique in cognitive
+                        neuroscience to observe the human brain in action noninvasively.
+                    </p>
+                </div>
+            </div>
+                
+            <div class="row wow fadeInUp" style="margin-top: 2em;"> 
+                <div class="col-xs-12">
+                    <h3>Experimental Paradigm</h3>
+                    <p class="intro-paragraph" style="text-align: justify;">
+                        Each of the ten participants completed five separate scanning sessions. The first scanning session consisted of a
+                        localizer experiment, where participants passively viewed short videos (distinct from the 1,102 test/train videos in the
+                        main experiment) belonging to various categories (such as faces, bodies, objects, scenes, and scrambled videos). The
+                        brain data obtained from this localizer experiment was used to define the location of the visual ROIs in each subject
+                        and is otherwise unrelated to the main experiment (<a href="#roi_masks" class="a-2021">ROI Masks figure</a>).<br /> <br />
+
+                        The remaining four sessions consisted of the main experiment and followed an identical structure. For each of the four remaining sessions,
+                        participants were instructed to focus on a fixation cross at the center of the screen while they passively viewed the 3
+                        second training and testing set videos without audio. The videos were presented in 13 separate runs, with each run lasting about 7
+                        minutes and consisting only of either training videos or testing videos. By the end of the four main experiment
+                        sessions, each participant viewed each of the 1,000 training videos 3 times and each of the 102 testing videos 10 times.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="container" style="text-align:center" id="roi_masks">
+                <div class="row wow fadeInUp"> 
+                    <img src="../img/ROI_masks_v2.png" style="width: 50%; margin-top:1em;">
+                    <p class="intro-paragraph" style="text-align: justify; margin-bottom:1em; width: 50%">
+                        <em><b style="font-weight: 600">ROI Masks:</b> Using our localizer experiment, we functionally defined nine non-overlapping ROIs for each of
+                            the ten participants. These ROIs span the ventral visual pathway from early and mid-level visual cortex (V1, V2,
+                            V3, and V4) to higher-level regions responding preferentially to objects and object categories (Body - EBA; Face
+                            - FFA, STS; Object - LOC; Scene - PPA). Here we show the ROIs for a representative participant.</em>
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-md-12">
+                <div class="row wow fadeInUp"> 
+                    <h3>Recording Parameters</h3>
+                    <p class="intro-paragraph" style="text-align: justify;">
+                        The MRI data were acquired with a 3T Trio Siemens scanner with the following acquisition parameters: TR = 1750 ms,
+                        resolution = 2.5 mm x 2.5 mm x 2.5 mm, slices = 54, multi-band acceleration factor = 2, ascending interleaved
+                        acquisition. The acquisition parameters were identical across the localizer, training, and testing runs.
+                    </p>
+                </div>
+
+                <div class="row wow fadeInUp"> 
+                    <h3>Preprocessing</h3>
+                    <p class="intro-paragraph" style="text-align: justify;">
+                        The data was organized according to standard <a href="https://bids.neuroimaging.io/" class="a-2021" target="_blank">BIDS</a> format
+                        and preprocessed using the fMRIprep preprocessing pipeline. The pipeline includes slice time correction,
+                        realignment, co-registration, and normalization to MNI space (for more fMRIprep pipeline details, see <a
+                            href="https://fmriprep.readthedocs.io/en/stable/workflows.html" class="a-2021">here</a>). We then
+                        used a custom MATLAB script to interpolate (pchip method) the data from the collected TR=1750ms to TR=1000ms to vary
+                        the time point at which the BOLD response was sampled for each video. Data quality measures were generated using
+                        <a href="https://mriqc.readthedocs.io/en/stable/index.html" class="a-2021">MRIQC</a> and can be found <a
+                            href="http://wednesday.csail.mit.edu/Algonauts2021/MRIQC/" class="a-2021">here</a>.
+                    </p>
+                </div>
+
+                <div class="row wow fadeInUp"> 
+                    <h3>Analysis Parameters</h3>
+                    <p class="intro-paragraph" style="text-align: justify;">
+                        We modeled the BOLD-signal of each voxel in the preprocessed and interpolated fMRI data of each participant as a
+                        weighted combination of simple Finite Impulse Response (FIR) basis functions. We modeled the BOLD response with
+                        respect to each video onset from 5 to 9 seconds in 1 second steps (corresponding to the resolution of the resampled
+                        time series).<br /><br />
+                        Using FIR in the way described above, we modeled every trial in the experimental run of each session. For every
+                        session we generated separate FIR models for training and test sets. Overall, for each video condition in the test
+                        set we extracted 10 (repetitions) x 5 (seconds) estimated beta values and in the training set 3 (repetitions) x 5
+                        (seconds) beta estimates. The estimated beta values were averaged across time resulting in a single averaged beta
+                        value for each video presentation. The extracted betas entered further analysis using an encoding model, either as
+                        defined in ROIs or for the whole brain.
+                    </p>
+                </div>
+
+                <div class="row wow fadeInUp"> 
+                    <h3>Whole Brain Encoding</h3>
+                    <p class="intro-paragraph" style="text-align: justify;">
+                        The whole brain beta values for each video condition (10 repetitions = 10 betas for each testing video and 3
+                        repetitions = 3 betas for each training video) were masked with the reliable voxels (determined by split-half
+                        reliability). To estimate split-half reliability, the voxel responses to test videos were split into all possible
+                        combinations of two splits of 5 repetitions each and Pearson's correlation (ρ) was calculated between the splits.
+                        The split-half reliability was then calculated using Spearman-Brown formula (2ρ/(1+ρ)) and by averaging the
+                        reliability across all combinations of splits. The remaining reliable beta values were used as the encoding model
+                        prediction data for the Full Track.
+                    </p>
+                </div>
+
+                <div class="row wow fadeInUp">
+                    <h3>ROI Encoding</h3>
+                    <p class="intro-paragraph" style="text-align: justify;">
+                        The whole brain beta values for each video condition (10 repetitions = 10 betas for each testing video and 3
+                        repetitions = 3 betas for each training video) were first masked with the non-overlapping subject-specific ROI mask
+                        to extract only the beta values within the ROI. Next, the ROI beta values were masked with the reliable voxels
+                        within the ROI (determined by split-half reliability). The remaining reliable beta values within the ROI were used
+                        as the encoding model prediction data for the appropriate Mini Track. <br /> <br />
+                    
+                        <a href="encoding.html" class="a-2021">Click here to learn more about voxel-wise encoding</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="to-top">
+        <div class="container">
+            <div class="row">
+                <div class="to-top-wrap">
+                    <a href="#top" class="top">
+                        <i class="fa fa-angle-up"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-7">
+                    <div class="footer-links">
+                        <ul class="footer-group-2021">
+                            <li><a href="index.html#about">About</a></li>
+                            <li><a href="challenge.html">Challenge</a></li>
+                            <li><a href="brainmappingandanalysis.html">Brain Mapping</a></li>
+                            <li><a href="encoding.html">Encoding Models</a></li>
+                            <li><a href="https://arxiv.org/abs/2104.13714v1" target="_blank">Paper</a></li>
+                            <li><a href="index.html#team">Team</a></li>
+                            <li><a href="index.html#contact">Contact</a></li>
+                            <li><a href="../archive.html">Archive</a></li>
+                        </ul>
+                        <p>
+                            Copyright © The Algonauts Project | <a href="https://accessibility.mit.edu/">Accessibility</a>
+                        </p>
+                    </div>
+                </div>
+   
+            </div>
+        </div>
+    </footer>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script>
+        window.jQuery || document.write('<script src="../js/vendor/jquery-1.11.2.min.js"><\/script>')
+    </script>
+    <script src="../js/jquery.fancybox.pack.js"></script>
+    <script src="../js/vendor/bootstrap.min.js"></script>
+    <script src="../js/vendor/wow.min.js"></script>
+    <script src="../js/scripts.js"></script>
+    <script src="../js/jquery.flexslider-min.js"></script>
+    <script src="../bower_components/classie/classie.js"></script>
+    <script src="../bower_components/jquery-waypoints/lib/jquery.waypoints.min.js"></script>
+    <script src="../node_modules/angular/angular.min.js"></script>
+    <script src="../node_modules/angulargrid/angulargrid.js"></script>
+    <script src="../node_modules/angular-aria/angular-aria.min.js"></script>
+    <script src="../node_modules/angular-material/angular-material.min.js"></script>
+    <script src="../node_modules/angular-animate/angular-animate.min.js"></script>
+    <script src="../node_modules/angular-messages/angular-messages.min.js"></script>
+    <script src="../js/ng/src/app.js"></script>
+    <script src="../js/ng/src/controller.js"></script>
+    <script> function externalLinks() { for (var c = document.getElementsByTagName("a"), a = 0; a < c.length; a++) { var b = c[a]; b.getAttribute("href") && b.hostname !== location.hostname && (b.target = "_blank") } }; externalLinks();</script>
+</body>
+
+</html>

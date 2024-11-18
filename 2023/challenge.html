@@ -1,0 +1,1415 @@
+<!doctype html>
+<html ng-app="momentsApp" lang="en">
+
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VCQ9D4SNB4"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-VCQ9D4SNB4');
+    </script>
+    
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Challenge &ndash; Algonauts Project 2023</title>
+    <meta name="description" content="Challenge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Alex Lascelles">
+    <link rel="icon" type="image/png" href="../favicon.ico" sizes="32x32" />
+    <link rel="stylesheet" href="../css/normalize.min.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/jquery.fancybox.css">
+    <link rel="stylesheet" href="../css/flexslider.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/angulargrid.css">
+    <link rel="stylesheet" href="../css/queries.css">
+    <link rel="stylesheet" href="../css/etline-font.css">
+    <link rel="stylesheet" href="../node_modules/angular-material/angular-material.min.css">
+    <link rel="stylesheet" href="../bower_components/animate.css/animate.min.css">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <script async src="../js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({ tex2jax: { inlineMath: [ ['$','$'], ["\\(","\\)"] ], displayMath: [ ['$$','$$'], ["\\[","\\]"] ], processEscapes:
+        true, processEnvironments: true }, // Center justify equations in code and markdown cells. Elsewhere // we use CSS
+        to left justify single line equations in code cells. displayAlign: 'center', "HTML-CSS": { styles: {'.MathJax_Display':
+        {"margin": 0}}, linebreaks: { automatic: true } } });
+    </script>
+</head>
+
+<body id="top" ng-controller="mainCtrl">
+    <section class="hero" style="min-height: 400px;">
+        <div style="max-height: 750px; position: absolute; top: 0; bottom: 0; width: 100%; height: 100%; background-color: black; overflow: hidden;">
+            <img src="../img/images_website_wallpaper_2_compressed.jpg" style="width: inherit; opacity: 0.7;">
+        </div>
+        <section class="navigation">
+            <header>
+                <div class="header-content">
+                    <div class="logo">
+                        <li><a href="index.html">The Algonauts Project</a></li>
+                    </div>
+                    <div class="header-nav navbar-right">
+                        <nav>
+                            <ul class="primary-nav">
+                                <li><a href="index.html#about">About</a></li>
+                                <li><a href="challenge.html">Challenge</a></li>
+                                <li><a href="braindata.html">Brain Data</a></li>
+                                <li><a href="encoding.html">Encoding Models</a></li>
+                                <li><a href="index.html#cite">Papers</a></li>
+                                <li><a href="index.html#team">Team</a></li>
+                                <li><a href="index.html#contact">Contact</a></li>
+                                <li><a href="archive.html">Archive</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="navicon">
+                        <a class="nav-toggle" href="#">
+                            <span></span>
+                        </a>
+                    </div>
+                </div>
+            </header>
+        </section>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-10 col-md-offset-1">
+                    <div class="hero-explore-content text-center">
+                        <h1 style="margin-bottom: 25px; color: white;"><b>The 2023 Challenge:</b></h1>
+                        <h1 style="font-size: 29px; margin-bottom: 25px; color: white; font-style: italic;"><b>How the Human Brain Makes Sense of Natural Scenes</b></h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="challenge intro-section-first-padding" id="challenge_about">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h2 style="margin-bottom: 1em" id="challenge_overview">Challenge Overview</h2>
+                    <div style="vertical-align:middle; text-align:center">
+                        <img src="../img/challenge_overview_compressed_1.jpg" style="height: auto; width: auto; max-width: 100%;">
+                    </div>
+
+                    <p class="intro-paragraph" style="text-align: justify; margin-top: 1em">
+                        Understanding how the human brain works is one of the key challenges that science and society face. The Algonauts
+                        Challenge proposes a test of how well computational models do today. This test is intrinsically <b style="font-weight: 600">open</b> and
+                        <b style="font-weight: 600">quantitative</b>. This will allow us to precisely assess the progress in explaining the human brain.
+                    </p>
+
+                    <p class="intro-paragraph" style="text-align: justify;">
+                        At every blink our eyes are flooded by a massive array of photons&mdash;and yet, we perceive the visual world as ordered and
+                        meaningful. The primary target of the 2023 Challenge is predicting human brain responses to complex natural visual scenes, using
+                        the largest available brain dataset for this purpose.
+                    </p>
+
+                    <p class="intro-paragraph" style="text-align: justify;">
+                        Watching a visual scene activates large swathes of the human cortex. We pose the question: How well does your
+                        computational model account for these activations?
+                    </p>
+
+                    <div class="col-md-6 col-xs-12" style="margin-bottom: 2em">
+                        <div class="responsive-youtube">
+                            <iframe src="https://www.youtube.com/embed/KlwSDpxUX6k?vq=hd1080&rel=0" width="560" height="315" title="The Algonauts Project 2023: Challenge & development kit tutorial walk-through" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-xs-12" style="margin-bottom: 2em">
+                        <div class="responsive-youtube">
+                            <iframe src="https://www.youtube.com/embed/6b8OuMSXIpA?vq=hd1080&rel=0" width="560" height="315" title="The Algonauts Project 2023: CodaLab Submission Walkthrough" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                    </div>
+
+                    <p class="intro-paragraph" style="text-align: justify;">
+                        Watch the first video above for an introduction to the Algonauts 2023 Challenge and a detailed walkthrough of the development kit. When you are ready to participate, 
+                        the second video will guide you through the CodaLab competition submission process.
+                    </p>
+
+                </div>
+            </div>
+        </div>
+    </section>  
+
+    <section class="challenge intro-section-padding" id="Competition">
+        <div class="container">
+            <div class="row wow fadeInUp">
+                <div class="col-md-12">
+                    <div class="challenge-icon">
+                        <span class="icon filter-purple">
+                            <img src="../img/trophy3.svg" class="icon" style="height:55px;">
+                        </span>
+                    </div>
+                    <h2 style="margin-bottom: 1em">Competition</h2>
+
+                    <p class="intro-paragraph" style="text-align: justify;">
+                        The main goal of the Algonauts Project 2023 Challenge is to use computational models to predict brain responses recorded
+                        while participants view complex natural visual scenes.
+                    </p>
+                    <p class="intro-paragraph" style="text-align: justify;">
+                        Current computational models in AI are parameter rich and data-hungry. We thus partner with the 
+                        <a href="https://naturalscenesdataset.org/" class="a-2021">Natural Scenes Dataset (NSD)</a> team to provide the
+                        largest available set of brain responses to complex natural scenes. The NSD provides brain responses from 8 human 
+                        participants to in total 73,000 different visual scenes. The brain responses were measured with functional MRI. 
+                    </p>
+                    <p class="intro-paragraph" style="text-align: justify;">
+                        <a href="braindata.html" class="a-2021">Learn more about the stimuli and fMRI dataset used in the 2023 Challenge</a>
+                    </p>
+                    <p class="intro-paragraph" style="text-align: justify;">
+                        The goal of the Challenge is to predict brain responses <b style="font-weight: 600">across the whole visual brain</b>.
+                        That is where the most reliable responses to images were found.
+                    </p>
+                    <p class="intro-paragraph" style="text-align: justify;">
+                        We provide i) a set of images and ii) the corresponding brain responses recorded while human participants viewed those
+                        images. With that, participants are expected to build computational models to predict brain responses for images which
+                        brain data we held out.
+                    </p>
+                    <p class="intro-paragraph" style="text-align: justify;">
+                        Participants submit <b style="font-weight: 600">predicted responses (for the provided set of brain surface vertices)</b> 
+                        in the format described in the
+                        <a href="https://colab.research.google.com/drive/1bLJGP3bAo_hAOwZPHpiSHKlt97X9xsUw?usp=share_link" class="a-2021">
+                            development kit</a>. We score the submission by measuring the predictivity for
+                        each vertex in the selected set for all the subjects and display the overall mean predictivity in the leaderboard
+                        calculated across all vertices and all subjects.
+                    </p>
+                    <p class="intro-paragraph">
+                        <b style="font-weight: 600"><a href="https://codalab.lisn.upsaclay.fr/competitions/9304" class="a-2021">Participate in the 2023 Challenge</a></b>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="challenge intro-section-padding" id="ChallengeData">
+        <div class="container">
+            <div class="row wow fadeInUp"> 
+                <div class="col-md-12">
+                    <h2 style="margin-bottom: 1em">Challenge Data</h2>
+                    <p class="intro-paragraph" style="text-align: justify;">
+                        <b style="font-weight: 600"><a href="https://docs.google.com/forms/d/e/1FAIpQLSehZkqZOUNk18uTjRTuLj7UYmRGz-OkdsU25AyO3Wm6iAb0VA/viewform?usp=sf_link"
+                        class="a-2021">Download the data for the Algonauts Project 2023 Challenge</a></b>
+                    </p>
+
+                    <h3>Train Data</h3>
+                    <ul>
+                        <li style="margin-bottom: 0.5em">
+                            <b style="font-weight: 600">Images:</b> For each of the 8 subjects there are [9841, 9841, 9082, 8779, 9841, 9082, 9841, 8779] different images
+                            (in '.png' format). As an example, the first training image of subject 1 is named 'train-0001_nsd-00013.png'. The first
+                            index ('train-0001') orders the images to match the stimulus images dimension of the fMRI train split data. This
+                            indexing starts from 1. The second index ('nsd-00013') corresponds to the 73,000 NSD image IDs that you can use to map
+                            the image back to the <a href="https://cvnlab.slite.page/p/NKalgWd__F/Experiments" class="a-2021">original '.hdf5' NSD
+                                image file</a> (which contains all the 73,000 images used in the NSD experiment), and from there to the <a
+                                href="https://cocodataset.org/#home" class="a-2021">COCO dataset</a> images for metadata). The 73,000 NSD images IDs
+                            in the filename start from 0, so that you can directly use them for indexing the '.hdf5' NSD images in Python. Note 
+                            that the images used in the NSD experiment (and here in the Algonauts 2023 Challenge) are cropped versions of the 
+                            original COCO images. Therefore, if you wish to use the COCO image metadata you first need to adapt it to the cropped 
+                            image coordinates. You can find code to perform this operation 
+                            <a href="https://github.com/styvesg/nsd_gnet8x/blob/main/data_preparation.ipynb" class="a-2021">here</a>.
+                        </li>
+                        <li>
+                            <b style="font-weight: 600">fMRI:</b> Along with the train images we share the corresponding fMRI visual responses (as '.npy' files) of both the
+                            left hemisphere ('lh_training_fmri.npy') and the right hemisphere ('rh_training_fmri.npy'). The fMRI data is z-scored
+                            within each NSD scan session and averaged across image repeats, resulting in 2D arrays with the number of images as rows
+                            and as columns a selection of the vertices that showed reliable responses to images during the NSD experiment. The left
+                            (LH) and right (RH) hemisphere files consist of, respectively, 19,004 and 20,544 vertices, with the exception of subjects 6
+                            (18,978 LH and 20,220 RH vertices) and 8 (18,981 LH and 20,530 RH vertices) due to missing data.
+                        </li>                            
+                    </ul>
+
+                    <h3 style="margin-top: 1em">Test Data</h3>
+                    <ul>
+                        <li style="margin-bottom: 0.5em">
+                            <b style="font-weight: 600">Images:</b> For each of the 8 subjects there are [159, 159, 293, 395, 159, 293, 159, 395] different images (in '.png'
+                            format). The file naming scheme is the same as for the train images.
+                        </li>
+                        <li>
+                            <b style="font-weight: 600">fMRI:</b> The corresponding fMRI visual responses are not released.
+                        </li>
+                    </ul>
+
+                    <h3 style="margin-bottom: 1em; margin-top: 1em">Region-of-Interest (ROI) Indices</h3>
+                    <p class="intro-paragraph" style="text-align: justify;">
+                        The visual cortex is divided into multiple areas having different functional properties, referred to as
+                        regions-of-interest (ROIs). Along with the fMRI data we provide ROI indices for selecting vertices belonging to specific
+                        visual ROIs, that Challenge participants can optionally use at their own discretion (e.g., to build different encoding
+                        models for functionally different regions of the visual cortex). However, the Challenge evaluation score is computed
+                        over all available vertices, and not over any single ROI. For the ROI definition please see the 
+                        <a href="https://www.nature.com/articles/s41593-021-00962-x" class="a-2021">NSD paper</a>. Note
+                        that not all ROIs exist in all subjects. Following is the list of ROIs provided (ROI class file names in parenthesis):
+                        <ul>
+                            <li>
+                                <b style="font-weight: 600">Early retinotopic visual regions (prf-visualrois):</b> V1v, V1d, V2v, V2d, V3v, V3d, hV4.
+                            </li>
+                            <li>
+                                <b style="font-weight: 600">Body-selective regions (floc-bodies):</b> EBA, FBA-1, FBA-2, mTL-bodies.
+                            </li>
+                            <li>
+                                <b style="font-weight: 600">Face-selective regions (floc-faces):</b> OFA, FFA-1, FFA-2, mTL-faces, aTL-faces.
+                            </li>
+                            <li>
+                                <b style="font-weight: 600">Place-selective regions (floc-places):</b> OPA, PPA, RSC.
+                            </li>
+                            <li>
+                                <b style="font-weight: 600">Word-selective regions (floc-words):</b> OWFA, VWFA-1, VWFA-2, mfs-words, mTL-words.
+                            </li>
+                            <li>
+                                <b style="font-weight: 600">Anatomical streams (streams):</b> early, midventral, midlateral, midparietal, ventral, lateral, parietal.
+                            </li>
+                        </ul>
+                    </p>
+
+                    <div style="vertical-align:middle; text-align:center; margin-top: 1em; margin-bottom: 1em;">
+                        <img src="../img/all_rois_surface_plots.png" style="height: auto; width: auto; max-width: 100%">
+                        <p class="intro-paragraph">
+                            <i><b style="font-weight: 600">ROIs surface plots.</b> Visualizations of subject 1 ROIs on surface plots. Different ROIs are represented
+                            using different colors. The names of missing ROIs are left in black.</i>
+                        </p>
+                    </div>
+                    
+
+                    <h3 style="margin-bottom: 1em">Development Kit</h3>
+                    <p class="intro-paragraph" style="text-align: justify;">
+                        We provide a <a href="https://colab.research.google.com/drive/1bLJGP3bAo_hAOwZPHpiSHKlt97X9xsUw?usp=share_link" class="a-2021">Colab tutorial</a> 
+                        in Python where we take you all the way from data input to Challenge submission. In particular, we show you how to:
+                        <ul>
+                            <li>
+                                Load and visualize the fMRI data, its ROIs, and the corresponding image conditions.
+                            </li>
+                            <li>
+                                Build linearizing encoding models using a pretrained AlexNet architecture, evaluate them, and visualize the resulting
+                                prediction accuracy.
+                            </li>
+                            <li>
+                                Prepare the predicted brain responses to the test images in the right format for submission to the Challenge website.
+                            </li>
+                        </ul>
+                    </p>
+            
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="challenge intro-section-padding" id="Leaderboard">
+        <div class="container">
+            <div class="row wow fadeInUp"> 
+                <div class="col-md-12">
+                    <h2 style="margin-bottom: 1em">Leaderboard</h2>                    
+                    <div style="overflow-x:auto; overflow-x:auto; max-height: 600px; display: flex; justify-content: center;">
+
+                        <table class="tables-2021-ll">
+                            <tr><th class="table-ll-headers-2-2021" style="border-left: 0px;">Rank</th>
+                                <th class="table-ll-headers-2-2021">Team Name</th>
+                                <th class="table-ll-headers-2-2021">Challenge Score</th>
+                                <th class="table-ll-headers-2-2021">Report</th>
+                                <th class="table-ll-headers-2-2021">Code</th>
+                                <th class="table-ll-headers-2-2021">Visualization</th>
+                            </tr>
+
+                            <tr>
+                                <td><b>1</b></td>
+                                <td><b>huze</b></td>
+                                <td class="table-emphasis">70.8473</td>
+                                <td><a href="https://arxiv.org/abs/2308.01175" class="a-2021">Report</a></td>
+                                <td><a href="https://github.com/huzeyann/Mem" class="a-2021">Code</a></td>
+                                <td><a href="visualizations_2023/01_huze.png" class="a-2021">Visualization</a></td>
+                            </tr>
+                            <tr>
+                                <td><b>2</b></td>
+                                <td><b>hosseinadeli</b></td>
+                                <td class="table-emphasis">63.5229</td>
+                                <td><a href="https://www.biorxiv.org/content/10.1101/2023.08.02.551743v1" class="a-2021">Report</a></td>
+                                <td><a href="https://github.com/Hosseinadeli/algonauts2023_transformers" class="a-2021">Code</a></td>
+                                <td><a href="visualizations_2023/02_hosseinadeli.png" class="a-2021">Visualization</a></td>
+                            </tr>
+                            <tr>
+                                <td><b>3</b></td>
+                                <td><b>UARK-SUNY-Albany</b></td>
+                                <td class="table-emphasis">61.5693</td>
+                                <td><a href="https://arxiv.org/abs/2308.00262" class="a-2021">Report</a></td>
+                                <td><a href="https://github.com/uark-cviu/Algonauts2023" class="a-2021">Code</a></td>
+                                <td><a href="visualizations_2023/03_UARK-SUNY-Albany.png" class="a-2021">Visualization</a></td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>CYHSM</td>
+                                <td class="table-emphasis">60.8190</td>
+                                <td></td>
+                                <td></td>
+                                <td><a href="visualizations_2023/004_CYHSM.png" class="a-2021">Visualization</a></td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>cvailab</td>
+                                <td class="table-emphasis">60.6817</td>
+                                <td></td>
+                                <td></td>
+                                <td><a href="visualizations_2023/005_cvailab.png" class="a-2021">Visualization</a></td>
+                            </tr>
+                            <tr>
+                                <td>6</td>
+                                <td>BlobGPT</td>
+                                <td class="table-emphasis">60.2472</td>
+                                <td><a href="https://arxiv.org/abs/2308.02351" class="a-2021">Report</a></td>
+                                <td><a href="https://github.com/cmi-dair/algonauts23" class="a-2021">Code</a></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>7</td>
+                                <td>lisq</td>
+                                <td class="table-emphasis">59.6215</td>
+                                <td></td>
+                                <td></td>
+                                <td><a href="visualizations_2023/007_lisq.png" class="a-2021">Visualization</a></td>
+                            </tr>
+                            <tr>
+                                <td>8</td>
+                                <td>takuya</td>
+                                <td class="table-emphasis">59.2217</td>
+                                <td><a href="https://arxiv.org/abs/2308.00678" class="a-2021">Report</a></td>
+                                <td><a href="https://github.com/suyamat/ScalingVisionEncoder" class="a-2021">Code</a></td>
+                                <td><a href="visualizations_2023/008_takuya.png" class="a-2021">Visualization</a></td>
+                            </tr>
+                            <tr>
+                                <td>9</td>
+                                <td>ashes</td>
+                                <td class="table-emphasis">58.7017</td>
+                                <td></td>
+                                <td></td>
+                                <td><a href="visualizations_2023/009_ashes.png" class="a-2021">Visualization</a></td>
+                            </tr>
+                            <tr>
+                                <td>10</td>
+                                <td>koelma</td>
+                                <td class="table-emphasis">58.6946</td>
+                                <td></td>
+                                <td></td>
+                                <td><a href="visualizations_2023/010_koelma.png" class="a-2021">Visualization</a></td>
+                            </tr>
+                            <tr>
+                                <td>11</td>
+                                <td>kyti</td>
+                                <td class="table-emphasis">58.6272</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>12</td>
+                                <td>grapeot</td>
+                                <td class="table-emphasis">57.6842</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>13</td>
+                                <td>ChanceLevel</td>
+                                <td class="table-emphasis">56.9884</td>
+                                <td></td>
+                                <td></td>
+                                <td><a href="visualizations_2023/013_ChanceLevel.png" class="a-2021">Visualization</a></td>
+                            </tr>
+                            <tr>
+                                <td>14</td>
+                                <td>zcboluo</td>
+                                <td class="table-emphasis">53.9323</td>
+                                <td></td>
+                                <td></td>
+                                <td><a href="visualizations_2023/014_zcboluo.png" class="a-2021">Visualization</a></td>
+                            </tr>
+                            <tr>
+                                <td>15</td>
+                                <td>skyboy23</td>
+                                <td class="table-emphasis">53.9259</td>
+                                <td></td>
+                                <td></td>
+                                <td><a href="visualizations_2023/015_skyboy23.png" class="a-2021">Visualization</a></td>
+                            </tr>
+                            <tr>
+                                <td>16</td>
+                                <td>IVACoders</td>
+                                <td class="table-emphasis">53.6696</td>
+                                <td></td>
+                                <td></td>
+                                <td><a href="visualizations_2023/016_IVACoders.png" class="a-2021">Visualization</a></td>
+                            </tr>
+                            <tr>
+                                <td>17</td>
+                                <td>taru</td>
+                                <td class="table-emphasis">53.5135</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>18</td>
+                                <td>fractalencoders</td>
+                                <td class="table-emphasis">53.4228</td>
+                                <td></td>
+                                <td></td>
+                                <td><a href="visualizations_2023/018_fractalencoders.png" class="a-2021">Visualization</a></td>
+                            </tr>
+                            <tr>
+                                <td>19</td>
+                                <td>PaulScotti</td>
+                                <td class="table-emphasis">52.2649</td>
+                                <td></td>
+                                <td></td>
+                                <td><a href="visualizations_2023/019_PaulScotti.png" class="a-2021">Visualization</a></td>
+                            </tr>
+                            <tr>
+                                <td>20</td>
+                                <td>es123</td>
+                                <td class="table-emphasis">52.0784</td>
+                                <td></td>
+                                <td></td>
+                                <td><a href="visualizations_2023/020_es123.png" class="a-2021">Visualization</a></td>
+                            </tr>
+                            <tr>
+                                <td>21</td>
+                                <td>slavaheroes</td>
+                                <td class="table-emphasis">50.6321</td>
+                                <td><a href="https://drive.google.com/file/d/1oNw9YU0Vuu3OW6jRnVO5-5JVzzEplvGc/view?usp=sharingReport" class="a-2021">Report</a></td>
+                                <td><a href="https://github.com/slavaheroes/breil-algonauts-challenge" class="a-2021">Code</a></td>
+                                <td><a href="visualizations_2023/021_slavaheroes.png" class="a-2021">Visualization</a></td>
+                            </tr>
+                            <tr>
+                                <td>22</td>
+                                <td>LukeK</td>
+                                <td class="table-emphasis">49.1195</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>23</td>
+                                <td>RLeipe</td>
+                                <td class="table-emphasis">48.7589</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>24</td>
+                                <td>dpan</td>
+                                <td class="table-emphasis">48.7225</td>
+                                <td></td>
+                                <td></td>
+                                <td><a href="visualizations_2023/024_dpan.png" class="a-2021">Visualization</a></td>
+                            </tr>
+                            <tr>
+                                <td>25</td>
+                                <td>catosine</td>
+                                <td class="table-emphasis">48.4552</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>26</td>
+                                <td>Yinglab</td>
+                                <td class="table-emphasis">48.2846</td>
+                                <td></td>
+                                <td></td>
+                                <td><a href="visualizations_2023/026_Yinglab.png" class="a-2021">Visualization</a></td>
+                            </tr>
+                            <tr>
+                                <td>27</td>
+                                <td>Dandelion</td>
+                                <td class="table-emphasis">48.1315</td>
+                                <td></td>
+                                <td></td>
+                                <td><a href="visualizations_2023/027_Dandelion.png" class="a-2021">Visualization</a></td>
+                            </tr>
+                            <tr>
+                                <td>28</td>
+                                <td>q710572172</td>
+                                <td class="table-emphasis">47.8408</td>
+                                <td></td>
+                                <td></td>
+                                <td><a href="visualizations_2023/028_q710572172.png" class="a-2021">Visualization</a></td>
+                            </tr>
+                            <tr>
+                                <td>29</td>
+                                <td>Divyanshu-Bhatt</td>
+                                <td class="table-emphasis">47.6603</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>30</td>
+                                <td>skynet</td>
+                                <td class="table-emphasis">47.6533</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>31</td>
+                                <td>Rxliang</td>
+                                <td class="table-emphasis">47.6037</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>32</td>
+                                <td>iannwtf</td>
+                                <td class="table-emphasis">47.3071</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>33</td>
+                                <td>yunagi</td>
+                                <td class="table-emphasis">46.9504</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>34</td>
+                                <td>henry</td>
+                                <td class="table-emphasis">46.2651</td>
+                                <td><a href="https://www.biorxiv.org/content/10.1101/2023.07.30.551149v1" class="a-2021">Report</a></td>
+                                <td><a href="https://github.com/HMUNACHI/FBNET" class="a-2021">Code</a></td>
+                                <td><a href="visualizations_2023/034_henry.png" class="a-2021">Visualization</a></td>
+                            </tr>
+                            <tr>
+                                <td>35</td>
+                                <td>matteoferrante</td>
+                                <td class="table-emphasis">45.2463</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>36</td>
+                                <td>jschubeck</td>
+                                <td class="table-emphasis">45.2193</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>37</td>
+                                <td>simoneazeglio</td>
+                                <td class="table-emphasis">44.4575</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>38</td>
+                                <td>MASS</td>
+                                <td class="table-emphasis">44.0524</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>39</td>
+                                <td>Yoshito</td>
+                                <td class="table-emphasis">43.9263</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>40</td>
+                                <td>artem9k</td>
+                                <td class="table-emphasis">43.0304</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>41</td>
+                                <td>ffan</td>
+                                <td class="table-emphasis">42.9663</td>
+                                <td></td>
+                                <td></td>
+                                <td><a href="visualizations_2023/041_ffan.png" class="a-2021">Visualization</a></td>
+                            </tr>
+                            <tr>
+                                <td>42</td>
+                                <td>random-walk</td>
+                                <td class="table-emphasis">42.5818</td>
+                                <td></td>
+                                <td></td>
+                                <td><a href="visualizations_2023/042_random-walk.png" class="a-2021">Visualization</a></td>
+                            </tr>
+                            <tr>
+                                <td>43</td>
+                                <td>giorgiocarbone</td>
+                                <td class="table-emphasis">42.4919</td>
+                                <td></td>
+                                <td><a href="https://github.com/giocoal/fMRI-to-BOLD-activations-encoding-models" class="a-2021">Code</a></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>44</td>
+                                <td>Anonymous_user</td>
+                                <td class="table-emphasis">42.3535</td>
+                                <td></td>
+                                <td></td>
+                                <td><a href="visualizations_2023/044_Anonymous_user.png" class="a-2021">Visualization</a></td>
+                            </tr>
+                            <tr>
+                                <td>45</td>
+                                <td>neuro_enc</td>
+                                <td class="table-emphasis">42.2649</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>46</td>
+                                <td>ConvolutionalSlayers</td>
+                                <td class="table-emphasis">42.2471</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>47</td>
+                                <td>csng_team</td>
+                                <td class="table-emphasis">41.7998</td>
+                                <td></td>
+                                <td></td>
+                                <td><a href="visualizations_2023/047_csng_team.png" class="a-2021">Visualization</a></td>
+                            </tr>
+                            <tr>
+                                <td>48</td>
+                                <td>ne</td>
+                                <td class="table-emphasis">41.7412</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>49</td>
+                                <td>ccc29</td>
+                                <td class="table-emphasis">41.3450</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>50</td>
+                                <td>Roman_Beliy</td>
+                                <td class="table-emphasis">41.2527</td>
+                                <td></td>
+                                <td></td>
+                                <td><a href="visualizations_2023/050_Roman_Beliy.png" class="a-2021">Visualization</a></td>
+                            </tr>
+                            <tr>
+                                <td>51</td>
+                                <td>kitahashi</td>
+                                <td class="table-emphasis">40.8347</td>
+                                <td></td>
+                                <td></td>
+                                <td><a href="visualizations_2023/051_kitahashi.png" class="a-2021">Visualization</a></td>
+                            </tr>
+                            <tr>
+                                <td><b>52</b></td>
+                                <td><b>OrganizerBaseline</b></td>
+                                <td class="table-emphasis">40.4222</td>
+                                <td></td>
+                                <td></td>
+                                <td><a href="visualizations_2023/052_OrganizerBaseline.png" class="a-2021">Visualization</a></td>
+                            </tr>
+                            <tr>
+                                <td>53</td>
+                                <td>flash00</td>
+                                <td class="table-emphasis">40.3870</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>54</td>
+                                <td>BJ_Summer</td>
+                                <td class="table-emphasis">40.2981</td>
+                                <td></td>
+                                <td></td>
+                                <td><a href="visualizations_2023/054_BJ_Summer.png" class="a-2021">Visualization</a></td>
+                            </tr>
+                            <tr>
+                                <td>55</td>
+                                <td>aborovykh</td>
+                                <td class="table-emphasis">40.1590</td>
+                                <td></td>
+                                <td></td>
+                                <td><a href="visualizations_2023/055_aborovykh.png" class="a-2021">Visualization</a></td>
+                            </tr>
+                            <tr>
+                                <td>56</td>
+                                <td>Takuma.B</td>
+                                <td class="table-emphasis">40.1230</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>57</td>
+                                <td>Riccardo-Chimisso</td>
+                                <td class="table-emphasis">39.9926</td>
+                                <td><a href="https://docs.google.com/document/d/1EXXwaJ8xfz3_O5vlZxsEHeH9jBVOyoczxr4nDDYcrK0/edit?usp=sharing" class="a-2021">Report</a></td>
+                                <td><a href="https://github.com/DimNeuroLab/algonauts-project" class="a-2021">Code</a></td>
+                                <td><a href="visualizations_2023/057_Riccardo-Chimisso.png" class="a-2021">Visualization</a></td>
+                            </tr>
+                            <tr>
+                                <td>58</td>
+                                <td>s.m</td>
+                                <td class="table-emphasis">39.7824</td>
+                                <td></td>
+                                <td></td>
+                                <td><a href="visualizations_2023/058_s.m.png" class="a-2021">Visualization</a></td>
+                            </tr>
+                            <tr>
+                                <td>59</td>
+                                <td>vstark21</td>
+                                <td class="table-emphasis">38.0716</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>60</td>
+                                <td>yzl18</td>
+                                <td class="table-emphasis">37.3623</td>
+                                <td></td>
+                                <td></td>
+                                <td><a href="visualizations_2023/060_yzl18.png" class="a-2021">Visualization</a></td>
+                            </tr>
+                            <tr>
+                                <td>61</td>
+                                <td>Kriti</td>
+                                <td class="table-emphasis">36.9284</td>
+                                <td></td>
+                                <td></td>
+                                <td><a href="visualizations_2023/061_Kriti.png" class="a-2021">Visualization</a></td>
+                            </tr>
+                            <tr>
+                                <td>62</td>
+                                <td>mmxia</td>
+                                <td class="table-emphasis">36.8178</td>
+                                <td></td>
+                                <td></td>
+                                <td><a href="visualizations_2023/062_mmxia.png" class="a-2021">Visualization</a></td>
+                            </tr>
+                            <tr>
+                                <td>63</td>
+                                <td>Mei</td>
+                                <td class="table-emphasis">36.7625</td>
+                                <td></td>
+                                <td></td>
+                                <td><a href="visualizations_2023/063_Mei.png" class="a-2021">Visualization</a></td>
+                            </tr>
+                            <tr>
+                                <td>64</td>
+                                <td>hwgu</td>
+                                <td class="table-emphasis">36.5715</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>65</td>
+                                <td>beizai</td>
+                                <td class="table-emphasis">36.4533</td>
+                                <td></td>
+                                <td></td>
+                                <td><a href="visualizations_2023/065_beizai.png" class="a-2021">Visualization</a></td>
+                            </tr>
+                            <tr>
+                                <td>66</td>
+                                <td>KatanaGirl</td>
+                                <td class="table-emphasis">36.1601</td>
+                                <td></td>
+                                <td></td>
+                                <td><a href="visualizations_2023/066_KatanaGirl.png" class="a-2021">Visualization</a></td>
+                            </tr>
+                            <tr>
+                                <td>67</td>
+                                <td>kadaj13</td>
+                                <td class="table-emphasis">36.1601</td>
+                                <td></td>
+                                <td></td>
+                                <td><a href="visualizations_2023/067_kadaj13.png" class="a-2021">Visualization</a></td>
+                            </tr>
+                            <tr>
+                                <td>68</td>
+                                <td>qrx</td>
+                                <td class="table-emphasis">35.9656</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>69</td>
+                                <td>trungpham</td>
+                                <td class="table-emphasis">35.8158</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>70</td>
+                                <td>Yizhuo_Lu</td>
+                                <td class="table-emphasis">34.4342</td>
+                                <td></td>
+                                <td></td>
+                                <td><a href="visualizations_2023/070_Yizhuo_Lu.png" class="a-2021">Visualization</a></td>
+                            </tr>
+                            <tr>
+                                <td>71</td>
+                                <td>jroth</td>
+                                <td class="table-emphasis">34.4181</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>72</td>
+                                <td>Flo2306</td>
+                                <td class="table-emphasis">33.2701</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>73</td>
+                                <td>anp</td>
+                                <td class="table-emphasis">33.2054</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>74</td>
+                                <td>kawa</td>
+                                <td class="table-emphasis">32.9845</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>75</td>
+                                <td>qasymjomart</td>
+                                <td class="table-emphasis">32.4863</td>
+                                <td></td>
+                                <td></td>
+                                <td><a href="visualizations_2023/075_qasymjomart.png" class="a-2021">Visualization</a></td>
+                            </tr>
+                            <tr>
+                                <td>76</td>
+                                <td>shinouta</td>
+                                <td class="table-emphasis">32.3211</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>77</td>
+                                <td>Cyb3rBlaze</td>
+                                <td class="table-emphasis">31.9342</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>78</td>
+                                <td>lightdisappear</td>
+                                <td class="table-emphasis">31.7650</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>79</td>
+                                <td>chandrakant</td>
+                                <td class="table-emphasis">31.6927</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>80</td>
+                                <td>Wenshuo</td>
+                                <td class="table-emphasis">31.6471</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>81</td>
+                                <td>ShijZ</td>
+                                <td class="table-emphasis">27.6497</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>82</td>
+                                <td>multivariate</td>
+                                <td class="table-emphasis">22.9256</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>83</td>
+                                <td>HomoDigitalis</td>
+                                <td class="table-emphasis">22.4356</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>84</td>
+                                <td>Cris</td>
+                                <td class="table-emphasis">21.8303</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>85</td>
+                                <td>Ryoto</td>
+                                <td class="table-emphasis">21.8115</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>86</td>
+                                <td>Subhrasankar</td>
+                                <td class="table-emphasis">21.5636</td>
+                                <td></td>
+                                <td></td>
+                                <td><a href="visualizations_2023/086_Subhrasankar.png" class="a-2021">Visualization</a></td>
+                            </tr>
+                            <tr>
+                                <td>87</td>
+                                <td>shuhei019</td>
+                                <td class="table-emphasis">18.6579</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>88</td>
+                                <td>kuma</td>
+                                <td class="table-emphasis">18.6412</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>89</td>
+                                <td>goldy-fj</td>
+                                <td class="table-emphasis">17.8612</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>90</td>
+                                <td>XUJT</td>
+                                <td class="table-emphasis">17.5636</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>91</td>
+                                <td>alex12341</td>
+                                <td class="table-emphasis">17.4030</td>
+                                <td></td>
+                                <td></td>
+                                <td><a href="visualizations_2023/091_alex12341.png" class="a-2021">Visualization</a></td>
+                            </tr>
+                            <tr>
+                                <td>92</td>
+                                <td>shinji</td>
+                                <td class="table-emphasis">17.2762</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>93</td>
+                                <td>chenjuun</td>
+                                <td class="table-emphasis">16.7032</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>94</td>
+                                <td>nystrom</td>
+                                <td class="table-emphasis">14.9991</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>95</td>
+                                <td>chadyang</td>
+                                <td class="table-emphasis">14.6997</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>96</td>
+                                <td>tsneurotech</td>
+                                <td class="table-emphasis">14.5501</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>97</td>
+                                <td>advaith</td>
+                                <td class="table-emphasis">13.9676</td>
+                                <td></td>
+                                <td></td>
+                                <td><a href="visualizations_2023/097_advaith.png" class="a-2021">Visualization</a></td>
+                            </tr>
+                            <tr>
+                                <td>98</td>
+                                <td>atsuki</td>
+                                <td class="table-emphasis">13.3175</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>99</td>
+                                <td>ping</td>
+                                <td class="table-emphasis">10.4776</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>100</td>
+                                <td>contestant1</td>
+                                <td class="table-emphasis">10.2275</td>
+                                <td></td>
+                                <td></td>
+                                <td><a href="visualizations_2023/100_contestant1.png" class="a-2021">Visualization</a></td>
+                            </tr>
+                            <tr>
+                                <td>101</td>
+                                <td>cuikailong</td>
+                                <td class="table-emphasis">9.2913</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>102</td>
+                                <td>swest19</td>
+                                <td class="table-emphasis">9.1866</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>103</td>
+                                <td>daochang-liu</td>
+                                <td class="table-emphasis">8.5897</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>104</td>
+                                <td>jajoosam</td>
+                                <td class="table-emphasis">5.2462</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>105</td>
+                                <td>annie_johansson</td>
+                                <td class="table-emphasis">2.9330</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>106</td>
+                                <td>contestant3</td>
+                                <td class="table-emphasis">1.5685</td>
+                                <td></td>
+                                <td></td>
+                                <td><a href="visualizations_2023/106_contestant3.png" class="a-2021">Visualization</a></td>
+                            </tr>
+                            <tr>
+                                <td>107</td>
+                                <td>bjmiao</td>
+                                <td class="table-emphasis">1.4248</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                
+                        </table>  
+                    </div> 
+                    <div style="vertical-align:middle; text-align:center; margin-top: 1em; margin-bottom: 1em;">
+                        <p class="intro-paragraph">
+                            <i><b style="font-weight: 600">The Algonauts Project 2023 Challenge Leaderboard.</b> The Challenge Score is the mean 
+                            noise-normalized encoding accuracy of our held-out brain data across the vertices of all subjects and hemispheres 
+                            (<a href="#ComparisonMetric" class="a-2021">see details</a>). View the leaderboard on CodaLab 
+                            <a href="https://codalab.lisn.upsaclay.fr/competitions/9304#results" class="a-2021">here</a>.</i>
+                        </p>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="challenge intro-section-padding" id="ComparisonMetric">
+        <div class="container">
+            <div class="row content-flex-wrap wow fadeInUp" style="margin-bottom:1em;">
+                <div class="col-xs-12 col-md-8">
+                    <h3>Challenge Evaluation Metric</h3>
+                    <p class="intro-paragraph" style="text-align: justify;">
+                        To determine how well your models encode brain responses (i.e., the models' encoding accuracy) we compare your submitted
+                        predicted brain data (the one predicted by your model to the left out test images) to the empirically measured brain
+                        responses. Specifically, we (1) correlate the predicted test fMRI data with the corresponding ground truth fMRI data
+                        (across image conditions, independently for each vertex), (2) square the correlation coefficients of each vertex, and
+                        (3) normalize the resulting value of each vertex by its noise ceiling. Your leaderboard ranking metric is determined by
+                        the mean noise-normalized encoding accuracy across all the vertices of all subjects and hemispheres:
+                    </p>
+
+                    <div style="text-align: center;">
+                        <img src="../img/evaluation_metric_equation_1.png" style="max-width:50%; margin-bottom:2em;">
+                        <img src="../img/evaluation_metric_equation_2.png" style="max-width:50%; margin-bottom:2em">
+                    </div>
+
+                    <p class="intro-paragraph" style="text-align: justify;">
+                        where <i style="font-family:Times New Roman">&nu;</i> is the index of vertices (over all subjects and hemispheres),
+                        <i style="font-family:Times New Roman">t</i> is the index of the test stimuli images, <i
+                            style="font-family:Times New Roman">G</i> and <i style="font-family:Times New Roman">P</i>
+                        correspond to, respectively, the ground truth and predicted fMRI test data, <i
+                            style="font-family:Times New Roman">G&#772;</i> and <i style="font-family:Times New Roman">P&#772;</i> are the
+                        ground truth and predicted fMRI test data averaged across test stimuli images, <i style="font-family:Times New Roman">R</i> is the
+                        Pearson correlation coefficient between <i style="font-family:Times New Roman">G</i> and <i
+                            style="font-family:Times New Roman">P</i>, and <i style="font-family:Times New Roman">NC</i>
+                        is the noise ceiling.
+                    </p>
+                </div>
+                
+                <div class="col-xs-12 col-md-4 img-align">
+                    <a href="encoding.html" class="a-2021">
+                        <img src="../img/challenge_evaluation_metric_compressed.jpg" style="max-width:100%">  
+                    </a>
+                </div>
+            </div>
+
+            <div class="row content-flex-wrap wow fadeInUp" style="margin-top:2em;">
+                <div class="col-xs-12 col-md-12">
+                    <h3>How to Predict Brain Data Using Computational Models?</h3>
+                    <p class="intro-paragraph" style="text-align: justify;">
+                        There are different ways to predict brain data using computational models. We put close to no restrictions on how you do
+                        so (see <a href="#Rules" class="a-2021">Challenge Rules</a>). However, a commonly used approach is to use linearizing
+                        encoding models, and we provide a development kit to implement such a model.
+                    </p>
+                    <p class="intro-paragraph" style="text-align: justify;">
+                        <a href="encoding.html" class="a-2021">Click here to learn more about linearizing encoding</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="challenge intro-section-padding" id="Rules">
+        <div class="container">
+            <div class="row wow fadeInUp">
+                <div class="col-md-12">
+                    <h2 style="margin-bottom: 1em">Challenge Rules and Best Practices</h2>
+                    <p class="intro-paragraph" style="text-align: justify;">
+                        <b style="font-weight: 600">1.</b> Participants can make a maximum of 3 submissions per day and 250 submissions over the entire competition. 
+                        Each challenge participant can only compete using one account. Creating multiple accounts to increase the number of possible submissions will 
+                        result in disqualification to the challenge.
+                    </p>
+                    <p class="intro-paragraph" style="text-align: justify;">
+                        <b style="font-weight: 600">2.</b> Participants can use any (external) data for model building and any model. However, participants that use the
+                        test set for training will be disqualified (in particular brain data generated using the test set). Also, if you ever had access to the fMRI 
+                        test data you cannot participate in the challenge.
+                    </p>
+                    <p class="intro-paragraph" style="text-align: justify;">
+                        <b style="font-weight: 600">3.</b> Participants should be ready to upload a short report (~4-8 pages) describing their model building process
+                        for their best model to a preprint server (e.g. bioRxiv, arXiv) and send the PDF or preprint link to the organizers by
+                        filling out <a
+                            href="https://docs.google.com/forms/d/e/1FAIpQLSeUvAKMq65WZ0_-hy4WgCi72Hiljk9JQbI63UnOoUnjvOHmWQ/viewform"
+                            class="a-2021">this form</a>.
+                        You must submit the Challenge report by the <a href="index.html#dates_table" class="a-2021">Challenge report 
+                            submission deadline</a> to be considered for the evaluation of challenge outcomes. While all reports are encouraged 
+                        to link to their code (e.g. GitHub), sharing code is mandatory for the top three submissions. Participants that do 
+                        not make their approach open and transparent cannot be considered.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="challenge intro-section-padding" id="Citation">
+        <div class="container">
+            <div class="row wow fadeInUp">
+                <div class="col-md-12">
+                    <h2 style="margin-bottom: 1em">Papers</h2>
+                    <p class="intro-paragraph" style="text-align: justify;">
+                        <a class="a-2021" href="index.html#cite">Click here to read the papers and for guidance on citation</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="challenge intro-section-padding" id="dates_table">
+        <div class="container">
+            <div class="row wow fadeInUp">
+                    <div class="col-md-8">
+                        <h2 style="margin-bottom: 1em">Important Dates</h2>
+                        <table class="tables-2021">
+                            <tr class="boxkey-challenge-2021">
+                                <td>Train data, test stimuli, and development kit released:</td>
+                                <td>January 14th, 2023</td>
+                            <tr class="boxkey-challenge-2021">
+                                <td>Challenge submission deadline:</td>
+                                <td>July 26th, 2023 at 11:59pm (UTC-4)</td>
+                            <tr class="boxkey-challenge-2021">
+                                <td>Challenge report/code submission deadline:</td>
+                                <td>August 2nd, 2023</td>
+                            <tr class="boxkey-challenge-2021">
+                                <td>Challenge results released:</td>
+                                <td>August 10th, 2023</td>
+                            <tr class="boxkey-challenge-2021">
+                                <td><a href="https://ccneuro.org/" class="a-2021">Sessions at CCN 2023</a>:</td>
+                                <td>August 25&ndash;26th, 2023</td>
+                        </table>
+                    </div>
+                </div>
+                <p class="intro-paragraph" style="text-align: justify;">
+                    <b style="font-weight: 600">If you participate in the Challenge, use <a
+                    href="https://docs.google.com/forms/d/e/1FAIpQLSeUvAKMq65WZ0_-hy4WgCi72Hiljk9JQbI63UnOoUnjvOHmWQ/viewform?usp=sf_link"
+                    class="a-2021">this form</a> to submit the Challenge report and code.</b>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="challenge intro-section-padding" id="Acknowledgements">
+        <div class="container">
+            <div class="row wow fadeInUp">
+                <div class="col-md-12">
+                    <h2 style="margin-bottom: 1em">Acknowledgements</h2>
+                    <p class="intro-paragraph" style="text-align: justify;">
+                        This research was funded by DFG (CI-241/1-1, CI241/1-3,CI-241/1-7) and ERC grant (ERC-2018-StG) to RMC; NSF award
+                        (1532591) in Neural and Cognitive Systems, the Vannevar Bush Faculty Fellowship program funded by the ONR
+                        (N00014-16-1-3116) and MIT-IBM Watson AI Lab to AO; the Alfons and Gertrud Kassel foundation to GR. Collection of the
+                        NSD dataset was supported by NSF IIS-1822683 and NSF IIS-1822929.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="challenge intro-section-padding" style="background:none" id="sponsors">
+        <div class="container-fluid">
+            <h2 class="section-heading text-center">Sponsors</h2>
+            <div class="row content-flex-wrap">
+                <div class="col-xs-12 col-md-4 img-align">
+                    <a href="http://mitibmwatsonailab.mit.edu/">
+                        <img class="img-logo-alt" style="height:140px; width:auto"  src="../img/logo_mitibm.png">
+                    </a>
+                </div>
+                <div class="col-xs-12 col-md-4 img-align">
+                    <a href="https://erc.europa.eu/">
+                        <img class="img-sponsor" src="../img/logo_erc.png">
+                    </a>
+                </div>
+                <div class="col-xs-12 col-md-4 img-align">
+                    <a href="https://www.dfg.de/en/">
+                        <img class="img-sponsor" style="height:80px" src="../img/logo_dfg.jpg">
+                    </a>
+                </div>
+                <div class="col-xs-12 col-md-4 img-align">
+                    <a href="https://wissenschaft.hessen.de/">
+                        <img class="img-sponsor" style="height:80px" src="../img/logo_hessen.jpg">
+                    </a>
+                </div>
+                <div class="col-xs-12 col-md-4 img-align">
+                    <a href="https://hessian.ai/">
+                        <img class="img-sponsor" style="height:80px" src="../img/logo_hessian-ai.svg">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <section class="to-top">
+        <div class="container">
+            <div class="row">
+                <div class="to-top-wrap">
+                    <a href="#top" class="top">
+                        <i class="fa fa-angle-up"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container ">
+            <div class="row ">
+                <div class="col-md-7 ">
+                    <div class="footer-links ">
+                        <p>
+                            Copyright © The Algonauts Project | <a href="https://accessibility.mit.edu/">Accessibility</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script>
+        window.jQuery || document.write('<script src="../js/vendor/jquery-1.11.2.min.js"><\/script>')
+    </script>
+    <script src="../js/jquery.fancybox.pack.js"></script>
+    <script src="../js/vendor/bootstrap.min.js"></script>
+    <script src="../js/vendor/wow.min.js"></script>
+    <script src="../js/scripts.js"></script>
+    <script src="../js/jquery.flexslider-min.js"></script>
+    <script src="../bower_components/classie/classie.js"></script>
+    <script src="../bower_components/jquery-waypoints/lib/jquery.waypoints.min.js"></script>
+    <script src="../node_modules/angular/angular.min.js"></script>
+    <script src="../node_modules/angulargrid/angulargrid.js"></script>
+    <script src="../node_modules/angular-aria/angular-aria.min.js"></script>
+    <script src="../node_modules/angular-material/angular-material.min.js"></script>
+    <script src="../node_modules/angular-animate/angular-animate.min.js"></script>
+    <script src="../node_modules/angular-messages/angular-messages.min.js"></script>
+    <script src="../js/ng/src/app.js"></script>
+    <script src="../js/ng/src/controller.js"></script>
+    <script> function externalLinks() { for (var c = document.getElementsByTagName("a"), a = 0; a < c.length; a++) { var b = c[a]; b.getAttribute("href") && b.hostname !== location.hostname && (b.target = "_blank") } }; externalLinks();</script>
+</body>
+
+</html>

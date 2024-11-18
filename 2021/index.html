@@ -1,0 +1,439 @@
+<!doctype html>
+<html ng-app="momentsApp" lang="en">
+
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VCQ9D4SNB4"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-VCQ9D4SNB4');
+    </script>
+    
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>The Algonauts Project 2021</title>
+    <meta name="description" content="homepage">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Alex Andonian">
+    <link rel="icon" type="image/png" href="favicon.ico" sizes="32x32" />
+    <link rel="stylesheet" href="../css/normalize.min.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/jquery.fancybox.css">
+    <link rel="stylesheet" href="../css/flexslider.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/queries.css">
+    <link rel="stylesheet" href="../css/etline-font.css">
+    <link rel="stylesheet" href="../bower_components/animate.css/animate.min.css">
+    <link href="https://use.fontawesome.com/releases/v5.0.3/css/all.css" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"> -->
+    <script src="../js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+</head>
+
+<body id="top" ng-controller="mainCtrl">
+    <section class="hero">
+        <div style="max-height: 750px;  position: absolute; top: 0; bottom: 0; width: 100%; height: 100%; background-color: black; overflow: hidden;">
+            <img src="../img/index_background_compressedv2.jpg" style="width: 100%; opacity: 0.7" class="filter-me">
+        </div>
+        <section class="navigation">
+            <header>
+                <div class="header-content">
+                    <div class="header-nav navbar-right">
+                        <nav>
+                            <ul class="primary-nav">
+                                <li><a href="index.html#about" class="a-2021">About</a></li>
+                                <li><a href="challenge.html" class="a-2021">Challenge</a></li>
+                                <li><a href="brainmappingandanalysis.html">Brain Mapping</a></li>
+                                <li><a href="encoding.html">Encoding Models</a></li>
+                                <li><a href="https://arxiv.org/abs/2104.13714v1" target="_blank">Paper</a></li>
+                                <li><a href="index.html#team" class="a-2021">Team</a></li>
+                                <li><a href="index.html#contact" class="a-2021">Contact</a></li>
+                                <li><a href="../archive.html">Archive</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="navicon">
+                        <a class="nav-toggle" href="#"><span></span></a>
+                    </div>
+                </div>
+            </header>
+        </section>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-10 col-md-offset-1">
+                    <div class="hero-content text-center">
+                        <h1 style="margin-bottom: 25px; color: white;">
+                            <b>The Algonauts Project 2021</b>
+                        </h1>
+                        <h1 style="font-size: 29px; margin-bottom: 25px; color: white; font-style: italic;">
+                            <b>How the Human Brain Makes Sense of a World in Motion</b>
+                        </h1>
+                        <a style="margin-top: 2em; font-weight: bold; font-size:14px;" href="challenge.html" class="btn-2021 btn-accent btn-large">Explore the Challenge</a>
+                        <br>
+                        <a style="margin-top: 2em; font-weight: bold; font-size:14px;" href="#ccn" class="btn-2021 btn-accent btn-large">Session @ CCN 2021</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="challenge intro-section-first-padding" id="news">
+        <div class="container">
+            <h3>News</h3>
+            <p class="intro-paragraph" style="text-align: justify">
+                <b style="font-weight: 600">Thank you very much to everyone who participated in the Challenge and Workshop for the Algonauts Project 2019!</b><br>
+                <b style="font-weight: 600"><a href="../index.html">Click here for the current edition of the Algonauts Project</a></b>
+            </p>
+            <p class="intro-paragraph" style="text-align: justify">
+                <b style="font-weight: 600">Sep 10, 2021:</b> The Algonauts Challenge 2021 officially ended on
+                August 15th, 2021. However, we've re-enabled submissions 
+                (<a href="https://competitions.codalab.org/competitions/30930#participate" class="a-2021" target="_blank">Mini Track</a>/<a href="https://competitions.codalab.org/competitions/30937#participate" class="a-2021" target="_blank">Full Track</a>) 
+                to allow you to test and improve your models further!
+            </p>
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="challenge intro-section-first-padding" id="about">
+        <div class="container">
+            <h2 style="margin-bottom: 1em" id="overview">Overview</h2>
+            <div class="row">
+                <div class="col-md-12">
+                    <p class="intro-paragraph" style="text-align: justify;">
+                        The quest to understand the nature of human intelligence and engineer more advanced forms of artificial intelligence
+                        are becoming increasingly intertwined. The Algonauts Project brings biological and machine intelligence researchers
+                        together on a common platform to exchange ideas and advance both fields.
+                    </p>
+                    <p class="intro-paragraph" style="text-align: justify;">
+                        In 2019, the challenge focused on explaining brain responses as human subjects studied still images. The challenge
+                        returns this year, centered around video perception and understanding. The 2021 challenge will focus on explaining
+                        responses in the human brain as subjects watch
+                        short video clips of everyday actions. We are pleased to announce that from this year onwards, the challenge will be
+                        organized in partnership with the <a href="https://ccneuro.org/" class="a-2021">Conference on Cognitive Computational Neuroscience (CCN)</a>.
+                    </p>
+                </div>
+            </div>
+            <div class="row wow fadeInUp">
+                <div class="col-md-3 intro-feature">
+                    <div class="intro-icon">
+                        <span class="icon">
+                            <img src="favicon.ico" style="height:40px; vertical-align: inherit;"></img>
+                        </span>
+                    </div>
+                    <div class="intro-content">
+                        <h5>An Algorithmic Exploration</h5>
+                        <p>Inspired by the astronauts who launched 
+                            into space to explore a new frontier, the Algonauts Project aims to explore human and machine 
+                            intelligence with the latest algorithmic tools. Comparing how brains and models respond could 
+                            lead to unexpected insights into what makes intelligent systems efficient, robust and trustworthy.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-3 intro-feature">
+                    <div class="intro-icon">
+                        <span data-icon="&#xe01f;" class="icon"></span>
+                        
+                    </div>
+                    <div class="intro-content">
+                        <h5>Faster Innovation</h5>
+                        <p>The brain has inspired many of the algorithms responsible for the recent and spectacular progress in 
+                            artificial intelligence. Those algorithms are now critical in testing new theories about the brain. 
+                            The Algonauts Project brings together intelligence researchers in both domains to accelerate the pace of innovation.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-3 intro-feature">
+                    <div class="intro-icon">
+                        <span data-icon="&#xe046;" class="icon"></span>
+                    </div>
+                    <div class="intro-content">
+                        <h5>Collaborative Neuroscience</h5>
+                        <p>Hackathon-like competitions create an environment 
+                            for sharing and collaboration, which are important for advancing science and ensuring that results 
+                            are valid and reproducible. The Algonauts Project is committed to a spirit of open collaboration.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-3 intro-feature">
+                    <div class="intro-icon">
+                        <span data-icon="&#xe02a;" class="icon"></span>
+                    </div>
+                    <div class="intro-content">
+                        <h5>The Future</h5>
+                        <p>The Algonauts Project is designed to expand to other fields, from physics and biology to the 
+                            social sciences, and to complement experimental, theoretical and computational disciplines. 
+                            It will grow, in content and methods, with the communities that shape this endeavor.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="challenge intro-section-padding" id="callforparticipation">
+        <div class="container">
+            <div class="row wow fadeInUp">
+                <h2 style="margin-bottom: 1em">Call For Participation</h2>
+
+                <div class="col-md-12">   
+                    <h3 id="ccn">Challenge 2021</h3>
+                    <p class="intro-paragraph" style="text-align: justify;">
+                        The Algonauts Project 2021 Challenge will evaluate the computational models of your choice on how well they predict
+                        human visual brain data recorded while humans watch short video clips of everyday events.<br/>
+                        <a href="challenge.html" class="a-2021">Learn more about the challenge</a> <br/>
+                    </p>
+
+                    <h3>Session at CCN 2021</h3>
+                    <p class="intro-paragraph" style="text-align: justify;">
+                        The Algonauts Project 2021 Challenge will conclude with a session at the 2021 Conference on Cognitive Computational
+                        Neuroscience, held virtually this year. <br/> <br/>
+                        Check the schedule below (all times in UTC-4/EDT) for the Algonauts segment and <a href="https://ccneuro.org/" class="a-2021">register for CCN 2021 here</a>.
+                    </p>
+
+                    <div class="container" id="ccn_schedule">
+                        <div class="row wow fadeInUp">
+                            <div class="col-md-12">
+                                <table class="tables-2021">
+                                    <tr class="boxkey-challenge-2021">
+                                        <td>12:00&ndash;12:15pm</td>
+                                        <td>Opening of CNN (Kendrick Kay & Thomas Naselaris)</td>
+                                    <tr class="boxkey-challenge-2021">
+                                        <td>12:15&ndash;12:30pm</td>
+                                        <td>Introduction to the 2021 Algonauts Challenge (Radek Cichy)</td>
+                                    <tr class="boxkey-challenge-2021">
+                                        <td>12:30&ndash;01:30pm</td>
+                                        <td>Hands-on Tutorial on the 2021 Challenge (Kshitij Dwivedi) [<a href="https://tinyurl.com/algonauts" class="a-2021">Google Colab</a>]</td>
+                                    <tr class="boxkey-challenge-2021">
+                                        <td>01:30&ndash;02:45pm</td>
+                                        <td>Talks by the best performing teams (moderator: Gemma Roig)</td>
+                                    <tr class="boxkey-challenge-2021">
+                                        <td>02:45pm&ndash;end</td>
+                                        <td>Announcement of Algonauts 2022 Challenge & Goodbye (Radek Cichy)</td>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                    <p class="intro-paragraph" style="text-align: justify;">
+                        <a href="https://www.youtube.com/watch?v=xtSh_XotVlo" class="a-2021">Click here to watch a recording of the Algonauts segment at CCN</a>.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="challenge intro-section-padding" id="dates_table">
+        <div class="container">
+            <div class="row wow fadeInUp">
+                <h2 style="margin-bottom: 1em">Important Dates</h2>
+                    <div class="col-md-6">
+                        <table class="tables-2021">
+                            <tr class="boxkey-challenge-2021">
+                                <td>Training data, test data, and development kit released:</td>
+                                <td>May 1st, 2021</td>
+                            <tr class="boxkey-challenge-2021">
+                                <td>Challenge submission deadline:</td>
+                                <td>August 15th, 2021 at 11:59pm (UTC-4)</td>
+                            <tr class="boxkey-challenge-2021">
+                                <td>Challenge report submission deadline:</td>
+                                <td>August 22nd, 2021</td>
+                            <tr class="boxkey-challenge-2021">
+                                <td>Challenge results released:</td>
+                                <td>August 23rd, 2021</td>
+                            <tr class="boxkey-challenge-2021">
+                                <td><a href="https://ccneuro.org/" class="a-2021">Session at CCN 2021 (virtual)</a>:</td>
+                                <td>September 7th, 2021</td>
+                        </table>
+                    </div>
+                </div>
+                <p class="intro-paragraph" style="text-align: justify;">
+                    If you participated in the <a href="challenge.html" class="a-2021">Challenge</a>, <b style="font-weight:600">use <a
+                            href="https://docs.google.com/forms/d/e/1FAIpQLScp5TZwgxknSFK3S9mgjrvTyrphurdhe8TYQGRCrs5kKbd1Dg/viewform?usp=sf_link"
+                            class="a-2021">this form</a> to submit the challenge report</b>. <br>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="challenge intro-section-padding" id="contact">
+        <div class="container">
+            <div class="row wow fadeInUp">
+                <h2 style="margin-bottom: 1em">Contact</h2>
+                <div class="col-md-12">
+                    <p class="intro-paragraph" style="text-align: justify;">
+                        For general inquiries about the Algonauts Project, please contact <a
+                            href="mailto:algonauts.mit@gmail.com" class="a-2021">algonauts.mit@gmail.com</a>.<br /> <br/>
+                        For specific questions about the Algonauts Project <b style="font-weight:600">challenge</b>, please use the Forum of
+                        the respective track once the competition is live &mdash; <a href="https://competitions.codalab.org/forums/27626/" class="a-2021">Mini Track</a> and <a href="https://competitions.codalab.org/forums/27633/" class="a-2021">Full Track</a>.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="challenge intro-section-padding" id="cite">
+        <div class="container">
+            <div class="row wow fadeInUp">
+                <div class="col-md-12">
+                    <h2 style="margin-bottom: 1em">Paper and Citation</h2>
+                    <p class="intro-paragraph" style="text-align: justify;">
+                        If you use the data provided for the Algonauts Project 2021 Challenge please <a href="https://arxiv.org/abs/2104.13714v1" class="a-2021">cite this manuscript</a>.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="features section-padding-small" id="team">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Team</h2>
+                </div>
+            </div>
+            <!-- CORE MEMBERS controller.js-->
+            <div class="row">
+                <div ng-cloak class="col-md-4 portfolio-box" ng-repeat="member in coreMembers2020">
+                    <div class="wow zoomIn">
+                        <a href="{{member.url}}" class="a-2021">
+                            <img ng-cloak ng-src="../img/team/{{ member.photo }}" class="img-members">
+                        </a>
+                    </div>
+                    <div class="portfolio-box-caption">
+                        <div class="portfolio-box-name">
+                            <h4 ng-cloak>{{member.name}}</h4>
+                        </div>
+                        <div class="portfolio-box-affiliation">
+                            <h5 ng-cloak>{{member.affiliation}}</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- MEMBERS controller.js-->
+            <div class="row">
+                <div class="col-md-3 col-sm-4" ng-repeat="member in members2020">
+                    <div class="wow zoomIn">
+                        <a href="{{member.url}}" class="a-2021">
+                            <img ng-cloak ng-src="../img/team/{{ member.photo }}" class="img-members">
+                        </a>
+                    </div>
+                    <div class="portfolio-box-caption">
+                        <div class="portfolio-box-name">
+                            <h4 ng-cloak>{{member.name}}</h4>
+                        </div>
+                        <div class="portfolio-box-affiliation">
+                            <h5 ng-cloak>{{member.affiliation}}</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="challenge intro-section-padding" style="background:none" id="sponsors">
+        <div class="container-fluid">
+            <h2 class="section-heading text-center">Sponsors</h2>
+            <div class="row content-flex-wrap">
+                <div class="col-xs-12 col-md-3 img-align">
+                    <a href="https://basicresearch.defense.gov/Programs/Vannevar-Bush-Faculty-Fellowship/" target="_blank">
+                        <img class="img-sponsor" src="../img/logo_vannevarbushDoD.png">
+                    </a>
+                </div>
+                <!--<div class="col-xs-12 col-md-3 img-align">
+                    <a href="https://www.nsf.gov/" target="_blank">
+                        <img class="img-sponsor" src="../img/logo_nsf.png">
+                    </a>
+                </div>-->
+                <div class="col-xs-12 col-md-3 img-align">
+                    <a href="http://mitibmwatsonailab.mit.edu/" target="_blank">
+                        <img class="img-logo-alt" style="height:140px; width:auto"  src="../img/logo_mitibm.png">
+                    </a>
+                </div>
+                <!--<div class="col-xs-12 col-md-3 img-align">
+                    <a href="https://quest.mit.edu/" target="_blank">
+                        <img class="img-logo-alt" src="../img/logo_quest_black.png">
+                    </a>
+                </div>-->
+                <div class="col-xs-12 col-md-3 img-align">
+                    <a href="https://erc.europa.eu/" target="_blank">
+                        <img class="img-sponsor" src="../img/logo_erc.png">
+                    </a>
+                </div>
+                <div class="col-xs-12 col-md-3 img-align">
+                    <a href="https://www.dfg.de/en/" target="_blank">
+                        <img class="img-sponsor" style="height:80px" src="../img/logo_dfg.jpg">
+                    </a>
+                </div>
+            </div>
+            <!--<div class="row content-flex-wrap">
+                <div class="col-xs-12 col-md-12 img-align">
+                    <a href="https://www.dfg.de/en/" target="_blank">
+                        <img class="img-sponsor" style="height:80px" src="../img/logo_dfg.jpg">
+                    </a>
+                </div>
+            </div>
+            -->
+        </div>
+    </section>
+
+
+    <section class="to-top ">
+        <div class="container ">
+            <div class="row ">
+                <div class="to-top-wrap ">
+                    <a href="#top " class="top"><i class="fa fa-angle-up "></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="container ">
+            <div class="row ">
+                <div class="col-md-7 ">
+                    <div class="footer-links ">
+                        <ul class="footer-group-2021 ">
+                            <li><a href="index.html#about">About</a></li>
+                            <li><a href="challenge.html">Challenge</a></li>
+                            <li><a href="brainmappingandanalysis.html">Brain Mapping</a></li>
+                            <li><a href="encoding.html">Encoding Models</a></li>
+                            <li><a href="https://arxiv.org/abs/2104.13714v1" target="_blank">Paper</a></li>
+                            <li><a href="index.html#team">Team</a></li>
+                            <li><a href="index.html#contact">Contact</a></li>
+                            <li><a href="../archive.html">Archive</a></li>
+                        </ul>
+                        <p>
+                            Copyright © The Algonauts Project | <a href="https://accessibility.mit.edu/">Accessibility</a>
+                        </p>
+                    </div>
+                </div>
+    
+            </div>
+        </div>
+    </footer>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js "></script>
+    <script>
+        window.jQuery || document.write('<script src="../js/vendor/jquery-1.11.2.min.js "><\/script>')
+    </script>
+    <script src="../js/jquery.fancybox.pack.js "></script>
+    <script src="../js/vendor/bootstrap.min.js "></script>
+    <script src="../js/vendor/wow.min.js "></script>
+    <script src="../js/scripts.js "></script>
+    <script src="../js/jquery.flexslider-min.js "></script>
+    <script src="../bower_components/classie/classie.js "></script>
+    <script src="../bower_components/jquery-waypoints/lib/jquery.waypoints.min.js "></script>
+    <script src="../node_modules/angular/angular.min.js "></script>
+    <script src="../node_modules/angulargrid/angulargrid.js "></script>
+    <script src="../node_modules/angular-aria/angular-aria.min.js "></script>
+    <script src="../node_modules/angular-material/angular-material.min.js "></script>
+    <script src="../node_modules/angular-animate/angular-animate.min.js "></script>
+    <script src="../node_modules/angular-messages/angular-messages.min.js "></script>
+    <script src="../js/ng/src/app.js "></script>
+    <script src="../js/ng/src/controller.js "></script>
+    <script> function externalLinks() { for (var c = document.getElementsByTagName("a"), a = 0; a < c.length; a++) { var b = c[a]; b.getAttribute("href") && b.hostname !== location.hostname && (b.target = "_blank") } }; externalLinks();</script>
+</body>
+
+</html>

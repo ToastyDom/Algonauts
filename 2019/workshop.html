@@ -1,0 +1,522 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html ng-app="momentsApp" lang="en">
+
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VCQ9D4SNB4"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-VCQ9D4SNB4');
+    </script>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Workshop &ndash; Algonauts Project 2019</title>
+    <meta name="description" content="Challenge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Alex Lascelles">
+    <link rel="icon" type="image/png" href="favicon.ico" sizes="32x32" />
+    <link rel="stylesheet" href="../css/normalize.min.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/jquery.fancybox.css">
+    <link rel="stylesheet" href="../css/flexslider.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/angulargrid.css">
+    <link rel="stylesheet" href="../css/queries.css">
+    <link rel="stylesheet" href="../css/etline-font.css">
+    <link rel="stylesheet" href="../node_modules/angular-material/angular-material.min.css">
+    <link rel="stylesheet" href="../bower_components/animate.css/animate.min.css">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <script async src="../js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({ tex2jax: { inlineMath: [ ['$','$'], ["\\(","\\)"] ], displayMath: [ ['$$','$$'], ["\\[","\\]"] ], processEscapes:
+        true, processEnvironments: true }, // Center justify equations in code and markdown cells. Elsewhere // we use CSS
+        to left justify single line equations in code cells. displayAlign: 'center', "HTML-CSS": { styles: {'.MathJax_Display':
+        {"margin": 0}}, linebreaks: { automatic: true } } });
+    </script>
+</head>
+
+<body id="top" ng-controller="mainCtrl" ng-cloak>
+    <section class="hero" style="height: 400px;">
+        <div style="max-height: 400px;  position: absolute;
+                top: 0;
+                bottom: 0;
+                width: 100%;
+                height: 100%;
+                background-color: black;
+                overflow: hidden;">
+            <img src="../img/index_background.jpg" style="width: inherit; opacity: 0.7">
+        </div>
+        <section class="navigation">
+            <header>
+                <div class="header-content">
+                    <div class="logo">
+                        <li><a href="index.html">The Algonauts Project</a></li>
+                    </div>
+                    <div class="header-nav navbar-right">
+                        <nav>
+                            <ul class="primary-nav">
+                                <li><a href="index.html#about">About</a></li>
+                                <li><a href="challenge.html">Challenge</a></li>
+                                <li><a href="workshop.html">Workshop</a></li>
+                                <li><a href="download.html">Download</a></li>
+                                <li><a href="AlgonautsProject2019_arXiv.pdf">Paper</a></li>
+                                <li><a href="index.html#team">Team</a></li>
+                                <li><a href="index.html#contact">Contact</a></li>
+                                <li><a href="../archive.html">Archive</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="navicon">
+                        <a class="nav-toggle" href="#">
+                            <span></span>
+                        </a>
+                    </div>
+                </div>
+            </header>
+        </section>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-10 col-md-offset-1">
+                    <div class="hero-explore-content text-center">
+                        <h1 style="margin-bottom: 15px; color: white;"><b>The 2019 Workshop:</b></h1>
+                        <h1 style="font-size: 29px; margin-bottom: 15px; color: white; font-style: italic;"><b>Explaining the Human Visual Brain</b></h1>
+                        <h2 style="font-size: 18px; color: white;"><b>Dates: July 19-20, 2019 <br>Place: MIT, Cambridge, MA</b></h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SPEAKERS -->
+    <section class="challenge intro-section-first-padding" id="speakers">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h2 class="section-heading text-center" style="margin-bottom:1em">Invited Speakers</h2>
+                </div>
+            </div>
+            <!-- MEMBERS controller.js-->
+            <div class="row">
+                <div class="col-md-4 col-sm-4" ng-repeat="member in speakers">
+                    <div class="wow zoomIn">
+                        <a href="{{member.url}}" target="_blank">
+                            <img ng-cloak ng-src="../img/speakers/{{ member.photo }}" class="img-members">
+                        </a>
+                    </div>
+                    <div class="portfolio-box-caption">
+                        <div class="portfolio-box-name">
+                            <h4 ng-cloak>{{member.name}}</h4>
+                        </div>
+                        <div class="portfolio-box-affiliation">
+                            <h5 ng-cloak>{{member.affiliation}}</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+<br>
+    <section class="challenge intro-section-padding" id="schedule_friday">
+        <div class="container">
+            <h2 style="margin-bottom: 1em">Workshop Schedule</h2>
+            <div class="row">
+                <div class="col-md-12">
+
+                <h3 style="font-weight:600; margin-bottom:1.5em;">Friday July 19: Tutorials</h3>
+                <p class="intro-paragraph" style="text-align: justify;">
+                    <span style="font-weight: 600">Location:</span> MIT <a href="http://whereis.mit.edu/?go=46" target="_blank">Building 46</a>, Singleton Auditorium, 46-3002<br>
+                </p>
+                <table class="tables">
+                    <tr><th>Time</th><th>Event</th></tr>
+                    <tr><td style="background: #3c9fb538">12:30 pm &ndash; 1:00 pm</td><td style="background: #3c9fb538">Registration and Refreshments / Opening Remarks</td>
+                    <tr><td>1:00 pm &ndash; 2:00 pm</td><td><a href="http://www.cvai.cs.uni-frankfurt.de/">Gemma Roig</a> &ndash; Introduction to Neural Networks <br>[<a href="../slides/Gemma_Roig-Introduction_to_Neural_Networks.pdf">Slides</a>]</td>
+                    <tr><td style="background: #3c9fb538">2:00 pm &ndash; 2:15 pm</td><td style="background: #3c9fb538">Break and Refreshments</td>
+                    <tr><td>2:15 pm &ndash; 3:15 pm</td><td><a href="https://sites.google.com/site/dryaldamohsenzadeh/">Yalda Mohsenzadeh</a> &ndash; Introduction to Brain Imaging: fMRI and MEG/EEG <br>[<a href="../slides/Yalda_Mohsenzadeh-Introduction_to_Brain_Imaging.pdf">Slides</a>]</td></tr>
+                    <tr><td style="background: #3c9fb538">3:15 pm &ndash; 3:30 pm</td><td style="background: #3c9fb538">Break and Refreshments</td></tr>
+                    <tr><td>3:30 pm &ndash; 4:30 pm</td><td><a href="http://martin-hebart.de/">Martin Hebart</a> &ndash; Comparing Brains and DNNs: Methods and Findings <br>[<a href="../slides/Martin_Hebart-Comparing_Brains_and_DNNs.pdf">Slides</a>]</td></tr>
+                    <tr><td style="background: #3c9fb538">4:30 pm &ndash; 4:45 pm</td><td style="background: #3c9fb538">Break and Refreshments</td></tr>
+                    <tr><td>4:45 pm &ndash; 5:45 pm</td><td><a href="https://www.ewi-psy.fu-berlin.de/en/einrichtungen/arbeitsbereiche/neural_dyn_of_vis_cog">Radoslaw Cichy</a> &ndash; Comparing Brains and DNNs: Theory of Science <br>[<a href="../slides/Radek_Cichy-Comparing_Brains_and_DNNs.pdf">Slides</a>]</td></tr>
+                    <tr><td>5:45 pm &ndash; 6:00 pm</td><td>Summary</td></tr>
+                </table>
+
+                </div>
+            </div>
+
+            <div class="row" id="schedule_saturday">
+                <div class="col-md-12">
+
+                    <h3 style="font-weight:600; margin-top:4em; margin-bottom:1.5em;">Saturday July 20: Workshop</h3>
+                    <p class="intro-paragraph" style="text-align: justify;">
+                        <span style="font-weight: 600">Location:</span> MIT <a href="http://whereis.mit.edu/?go=46" target="_blank">Building 46</a>, Singleton Auditorium, 46-3002<br>
+                    </p>
+                    <table class="tables">
+                        <tr><th>Time</th><th>Event</th></tr>
+                        <tr><td style="background: #3c9fb538; width: 25%">8:30 am &ndash; 9:00 am</td><td class="td-highpadding" style="background: #3c9fb538">Breakfast</td>
+                        <tr><td>9:00 am &ndash; 9:15 am</td><td class="td-highpadding">Introduction by <a href="https://www.ewi-psy.fu-berlin.de/en/einrichtungen/arbeitsbereiche/neural_dyn_of_vis_cog">Radoslaw Cichy</a> <br>[<a href="../slides/Algonauts2019_Radek_Cichy_Day_Intro.pdf">Slides</a>] [<a href="http://algonauts.csail.mit.edu/videos/3090_Algonauts_Project_Challenge_Radek_Cichy-Introduction.mp4">Video</a>]</td></tr>
+                        <tr><td>9:15 am &ndash; 9:35 am</td><td class="td-highpadding"><a href="#Botvinick">Matt Botvinick</a> &ndash; Toward Object-Oriented Deep Reinforcement Learning <br>[<a href="../slides/Algonauts2019_Matt_Botvinick.pdf">Slides</a>] [<a href="http://algonauts.csail.mit.edu/videos/3090_Algonauts_Project_Challenge_Matt_Botvinick-Toward_Object_Oriented_Deep_Reinforcement_Learning.mp4">Video</a>]</td></tr>
+                        <tr><td>9:35 am &ndash; 9:55 am</td><td class="td-highpadding"><a href="#Oliva">Aude Oliva</a> &ndash; Interpretability and Visualization of Deep Neural Networks <br>[<a href="../slides/Algonauts2019_Aude_Oliva.pdf">Slides</a>] [Video N/A]</td></tr>
+                        <tr><td>9:55 am &ndash; 10:15 am</td><td class="td-highpadding"><a href="#Naselaris">Thomas Naselaris</a> &ndash; Deep Generative Networks as Models of the Visual System <br>[<a href="../slides/Algonauts2019_Thomas_Naselaris.pdf">Slides</a>] [<a href="http://algonauts.csail.mit.edu/videos/3090_Algonauts_Project_Challenge_Thomas_Naselaris-Deep_Generative_Networks_as_Models_of_the_Visual_System.mp4">Video</a>]</td></tr>
+                        <tr><td style="background: #3c9fb538">10:15 am &ndash; 11:00 am</td><td class="td-highpadding" style="background: #3c9fb538">Posters and Coffee</td></tr>
+                        <tr><td>11:00 am &ndash; 11:20 am</td><td class="td-highpadding"><a href="#Cox">David Cox</a> &ndash; Predictive Coding Models of Perception <br>[Slides N/A] [Video N/A]</td></tr>
+                        <tr><td>11:20 am &ndash; 11:40 am</td><td class="td-highpadding"><a href="#DiCarlo">James DiCarlo</a> &ndash; Brain Benchmarking Our Way to an Understanding of Visual Intelligence <br>[Slides N/A] [Video N/A]</td></tr>
+                        <tr><td>11:40 am &ndash; 12:00 pm</td><td class="td-highpadding"><a href="#Kay">Kendrick Kay</a> &ndash; The Natural Scenes Dataset: Massive High-Quality Whole-Brain 7T fMRI Measurements During Visual Perception and Memory <br>[<a href="../slides/Algonauts2019_Kendrick_Kay.pdf">Slides</a>] [<a href="http://algonauts.csail.mit.edu/videos/3090_Algonauts_Project_Challenge_Kendrick_Kay-The_Natural_Scenes_Dataset.mp4">Video</a>]</td></tr>
+                        <tr><td style="background: #3c9fb538">12:00 pm &ndash; 1:30 pm</td><td class="td-highpadding" style="background: #3c9fb538"><a href="https://institute-events.mit.edu/visit/where-to-eat">Lunch on Your Own</a></td></tr>
+                        <tr><td>1:30 pm &ndash; 1:50 pm</td><td class="td-highpadding">Introduction to the Algonauts Challenge by <a href="https://www.ewi-psy.fu-berlin.de/en/einrichtungen/arbeitsbereiche/neural_dyn_of_vis_cog">Radoslaw Cichy</a> <br>[<a href="../slides/Algonauts2019_Radek_Cichy_Challenge_Intro.pdf">Slides</a>] [<a href="http://algonauts.csail.mit.edu/videos/3090_Algonauts_Project_Challenge_Radek_Cichy-Introduction_to_the_Algonauts_Challenge.mp4">Video</a>]</td></tr>
+                        <tr><td>1:50 pm &ndash; 2:50 pm</td><td class="td-highpadding">Invited Talks: Challenge Winners <br>[<a href="http://algonauts.csail.mit.edu/videos/3090_Algonauts_Project_Challenge_Challenge_Winners_Invited_Talks-010.mp4">Video</a>]<br><br>Agustin Lage Castellanos (agustin) [<a href="../reports/agustin.pdf">Report</a>] [<a href="../slides/Algonauts2019_Agustin_Lage_Castellanos.pdf">Slides</a>] <br>Aakash Agrawal (Aakash) [<a href="https://arxiv.org/abs/1907.02591">Report</a>] [<a href="../slides/Algonauts2019_Aakash_Agrawal.pdf">Slides</a>] <br>Romuald Janik (rmldj) [<a href="https://arxiv.org/abs/1907.00950">Report</a>] [<a href="../slides/Algonauts2019_Romuald_Janik.pdf">Slides</a>]</td></tr>
+                        <tr><td style="background: #3c9fb538">2:50 pm &ndash; 3:30 pm</td><td class="td-highpadding" style="background: #3c9fb538">Posters and Coffee</td></tr>
+                        <tr><td>3:30 pm &ndash; 3:50 pm</td><td class="td-highpadding"><a href="#Konkle">Talia Konkle</a> &ndash; Response Preferences vs Patterns: Insights from Deep Neural Networks <br>[Slides N/A] [Video N/A]</td></tr>
+                        <tr><td>3:50 pm &ndash; 4:10 pm</td><td class="td-highpadding"><a href="#Kriegeskorte">Nikolaus Kriegeskorte</a> &ndash; Cognitive Computational Neuroscience of Vision <br>[<a href="../slides/Algonauts2019_Nikolaus_Kriegeskorte.pdf">Slides</a>] [<a href="http://algonauts.csail.mit.edu/videos/3090_Algonauts_Project_Challenge_Nikolaus Kriegeskorte-Cognitive_Computational_Neuroscience_of_Vision.mp4">Video</a>]</td></tr>
+                        <tr><td>4:10 pm &ndash; 4:30 pm</td><td class="td-highpadding"><a href="#Gallant">Jack Gallant</a> &ndash; Taking Natural Scene Statistics into Account when Evaluating Brain Data and Models <br>[Slides N/A] [Video N/A]</td></tr>
+                        <tr><td>4:30 pm &ndash; 5:00 pm</td><td class="td-highpadding">Panel Discussion with Speakers &ndash; Moderated by <a href="http://www.cvai.cs.uni-frankfurt.de/">Gemma Roig</a> & <a href="https://www.ewi-psy.fu-berlin.de/en/einrichtungen/arbeitsbereiche/neural_dyn_of_vis_cog">Radoslaw Cichy</a></td></tr>
+                        <tr><td style="background: #3c9fb538">5:00 pm &ndash; 6:30 pm</td><td class="td-highpadding" style="background: #3c9fb538">Reception and Refreshments</td></tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SPEAKER ABSTRACTS -->
+    <section class="challenge intro-section-padding" id="workshop_abstracts">
+        <div class="container">
+            <h2 style="margin-bottom: 1em">Invited Speaker Abstracts</h2>
+
+            <div class="row" style="display:flex;">
+                <div class="col-md-12">
+                    <p class="intro-paragraph" style="text-align: justify;">
+                        <span class="speaker"><a class="a-black" href="https://deepmind.com/">Matt Botvinick</a></span> <br>
+                        <span style="font-weight: 600">Title:</span> Toward object-oriented deep reinforcement learning<br>
+                        <span style="font-weight: 600" id="Cox">Abstract:</span> Deep reinforcement learning has revolutionized AI research by generating super-human performance in tasks ranging from Atari to go and chess to the video-game StarCraft. From a neuroscientist's point of view, it is gratifying to note that Insights from visual neuroscience have played a key role in driving these technological advances. A number of considerations suggest that, to proceed further, deep reinforcement learning may have to draw a further lesson from visual neuroscience, namely, the central role of objects. I'll review recent work suggesting that object-level representation may be a critical ingredient for deep RL, and consider some recently developed techniques for extracting objects from visual data, including some proposals from my group at DeepMind.<br>
+                    </p>
+                </div>
+            </div>
+    
+            <div class="row" style="display:flex;">
+                <div class="col-md-12">
+                    <p class="intro-paragraph" style="text-align: justify;">
+                        <span class="speaker"><a class="a-black" href="http://www.coxlab.org/">David Cox</a></span> <br>
+                        <span style="font-weight: 600">Title:</span> Predictive Coding Models of Perception<br>
+                        <span style="font-weight: 600" id="DiCarlo">Abstract:</span> The ability to predict future states of the world is essential for planning behavior, and it is arguably a central pillar of intelligence. In the field of sensory neuroscience, "predictive coding"—the notion that circuits in cerebral actively predict their own activity—has been an influential theoretical framework for understanding visual cortex. In my talk, I will bring together the idea of predictive coding with modern tools of machine learning to build practical, working vision models that predict their inputs in both space and time. These networks learn to predict future frames in a video sequence, with each layer in the network making local predictions and only forwarding deviations from those predictions to subsequent network layers. We show that these networks are able to robustly learn to predict the movement of synthetic (rendered) objects, and that in doing so, the networks learn internal representations that are useful for decoding latent object parameters (e.g. pose) that support object recognition with fewer training views. We also show that these networks can scale to complex natural image streams (car-mounted camera videos), capturing key aspects of both egocentric movement and the movement of objects in the visual scene, and generalizing well across video datasets. These results suggest that prediction represents a powerful framework for unsupervised learning, allowing for implicit learning of object and scene structure. At the same time, we find that models trained for prediction also recapitulate a wide variety of findings in neuroscience and psychology, providing a touch point between deep learning and empirical neuroscience data.<br>
+                    </p>
+                </div>
+            </div>
+
+            <div class="row" style="display:flex;">
+                <div class="col-md-12">
+                    <p class="intro-paragraph" style="text-align: justify;">
+                        <span class="speaker"><a class="a-black" href="http://dicarlolab.mit.edu/">James DiCarlo</a></span> <br>
+                        <span style="font-weight: 600">Title:</span> Brain benchmarking our way to an understanding of visual intelligence<br>
+                    </p>
+                </div>
+            </div>
+
+            <div class="row" style="display:flex;">
+                <div class="col-md-12">
+                    <p class="intro-paragraph" style="text-align: justify;">
+                        <span class="speaker"><a class="a-black" href="http://gallantlab.org/">Jack Gallant</a></span> <br>
+                        <span style="font-weight: 600">Title:</span> Taking natural scene statistics into account when evaluating brain data and models<br>
+                        <span style="font-weight: 600" id="Gallant">Abstract:</span> Natural scenes (and natural movies) have very a specific statistical structure. The lower-order
+                        statistics of natural scenes were characterized explicitly over 20 years ago. Their higher order
+                        statistics are largely unknown (though many of these statistics are represented implicitly by deep
+                        networks trained to classify natural images). The visual system has evolved and developed to
+                        exploit these statistical properties, but the structure and function of the visual system also reflect
+                        other evolutionary, computational, behavioral and environmental factors that are not directly tied to
+                        stimulus statistics. Therefore, in interpreting results of vision experiments that use natural scenes,
+                        it is critical to answer three questions: (1) Does the result merely reflect a tendency for vision to
+                        exploit and mirror scene statistics? (2) Does this result reflect a case where vision over- or under-
+                        represents scene statistics? (3) Does the result reflect a case where vision works in opposition to
+                        scene statistics? Each of these three cases suggests a very different reason or cause for the
+                        observed result. Therefore, the answer to these questions will dramatically change interpretation
+                        of results, and researchers ignore these key distinctions at their peril.<br>
+                    </p>
+                </div>
+            </div>
+
+            <div class="row" style="display:flex;" >
+                <div class="col-md-12">
+                    <p class="intro-paragraph" style="text-align: justify;">
+                        <span class="speaker"><a class="a-black" href="http://cvnlab.net">Kendrick Kay</a></span> <br>
+                        <span style="font-weight: 600">Title:</span> The Natural Scenes Dataset: massive high-quality whole-brain 7T fMRI measurements during visual perception and memory<br>
+                        <span style="font-weight: 600" id="Konkle">Abstract:</span> Access to high-quality data is essential for developing better models of visual information processing. Here, we describe an ambitious experiment in which ultra-high-field fMRI measurements are made (7T, whole-brain, T2*-weighted gradient-echo EPI, 1.8-mm resolution, 1.6-s TR) while 8 carefully selected and trained human participants view many thousands of color natural scenes over the course of 40 scan sessions held throughout nearly a year. In the experiment, subjects fixate centrally and perform a continuous recognition task in which they judge whether they have seen each given image at any point either in the current scan session or any previous scan session. I will describe the design of the experiment, the types of neuroimaging and behavioral measures that are collected, the current state of data acquisition, and the signal processing techniques we have developed to maximize signal-to-noise ratio. Preliminary analyses indicate that the data are of excellent quality, including nearly perfect response rates, high recognition performance, spatially stable brain imaging across scan sessions, and highly replicable brain activity patterns across repeated trials of the same image. The data (raw and pre-processed) will be made publicly available to the scientific community, and could be used to develop and benchmark models as well as answer a variety of neuroscientific questions. Finally, I will conclude with some brief comments regarding goals and desiderata for modeling efforts.<br>
+                    </p>
+                </div>
+            </div>
+    
+            <div class="row" style="display:flex;" >
+                <div class="col-md-12">
+                    <p class="intro-paragraph" style="text-align: justify;">
+                        <span class="speaker"><a class="a-black" href="http://konklab.fas.harvard.edu/">Talia Konkle</a></span> <br>
+                        <span style="font-weight: 600">Title:</span> Response Preferences vs Patterns: Insights from deep neural networks<br>
+                        <span style="font-weight: 600" id="Kriegeskorte">Abstract:</span> Object representations are housed in the occipitotemporal cortex of the human brain, where a few focal regions respond relatively selectively to some categories—faces, houses, bodies, as evident in univariate responses. However, in recent empirical work, we found that the representational geometries of these regions can be quite strongly correlated with each other, as well as with cortex outside of these regions (Cohen et al., 2017). Here, we leverage deep neural networks to provide some insight into this unexpected empirical result, defining and probing deep net category-selective "regions". We found that across deepnet face and place regions, representational geometries were also relatively similar to each other, mirroring data from human brain responses. Based on these results, I will discuss the idea that the similarity of representational geometries evident in these brain regions indicate that the entire occipito-temporal cortex participates as one discriminative feature bank with a common representational constraint, while the selectivity of different parts of the cortex reveal how this space is mapped across the cortex for read-out mechanisms. <br>
+                    </p>
+                </div>
+            </div>
+
+            <div class="row" style="display:flex;" >
+                <div class="col-md-12">
+                    <p class="intro-paragraph" style="text-align: justify;">
+                        <span class="speaker"><a class="a-black" href="https://zuckermaninstitute.columbia.edu/nikolaus-kriegeskorte-phd">Nikolaus Kriegeskorte</a></span> <br>
+                        <span style="font-weight: 600">Title:</span> Cognitive computational neuroscience of vision<br>
+                        <span style="font-weight: 600" id="Naselaris">Abstract:</span> To learn how cognition is implemented in the brain, we must build computational models that can perform cognitive tasks, and test such models with brain and behavioral experiments [<a href="https://doi.org/10.1038/s41593-018-0210-5">1</a>]. Modern technologies enable us to measure and manipulate brain activity in unprecedentedly rich ways in animals and humans. However, experiments will yield theoretical insight only when employed to test brain computational models. Recent advances in neural network modelling have enabled major strides in computer vision and other artificial intelligence applications. This brain-inspired technology provides the basis for tomorrow’s computational neuroscience [<a href="https://doi.org/10.1038/s41593-018-0210-5">1</a>, <a href="https://doi.org/10.1146/annurev-vision-082114-035447">2</a>]. Deep convolutional neural nets trained for visual object recognition have internal representational spaces remarkably similar to those of the human and monkey ventral visual pathway [<a href="https://doi.org/10.1371/journal.pcbi.1003915">3</a>]. Functional imaging and invasive neuronal recording provide rich brain activity measurements in humans and animals, but a challenge is to leverage such data to gain insight into the brain’s computational mechanisms [<a href="https://doi.org/10.1371/journal.pcbi.1005508">4</a>, <a href="https://doi.org/10.1098/rstb.2016.0278">5</a>]. We build neural network models of primate vision, inspired by biology and guided by engineering considerations [<a href="https://doi.org/10.1146/annurev-vision-082114-035447">2</a>, <a href="https://doi.org/10.3389/fpsyg.2017.01551">6</a>]. We also develop statistical inference techniques that enable us to adjudicate between complex brain-computational models on the basis of brain and behavioral data [<a href="https://doi.org/10.1371/journal.pcbi.1005508">4</a>, <a href="https://doi.org/10.1098/rstb.2016.0278">5</a>]. I will discuss recent work extending deep convolutional feedforward vision models by adding recurrent signal flow and stochasticity. These characteristics of biological neural networks may improve inferential performance and enable neural networks to more accurately represent their own uncertainty.<br>
+                    </p>
+                </div>
+            </div>
+
+            <div class="row" style="display:flex;" >
+                <div class="col-md-12">
+                    <p class="intro-paragraph" style="text-align: justify;">
+                        <span class="speaker"><a class="a-black" href="http://www.naselarislab.net/">Thomas Naselaris</a></span> <br>
+                        <span style="font-weight: 600">Title:</span> Deep generative networks as models of the visual system<br>
+                        <span style="font-weight: 600" id="Oliva">Abstract:</span> We will discuss the merits of deep generative networks—such as the variational autoencoder—as abstract models of computation in the human visual system. Unlike deep discriminative networks, deep generative networks minimize an unsupervised cost function and provide a natural framework for relating top-down and bottom-up signals. We will show that generative networks also provide a ready-made theory of mental imagery—an essential capacity of the human visual system that cannot be properly accounted for by discriminative networks. We will then discuss the limitations of extant deep generative networks as the basis for encoding models of brain responses during vision, and discuss the prospects for overcoming those limitations with a new large-scale data collection effort.<br>
+                    </p>
+                </div>
+            </div>
+    
+            <div class="row" style="display:flex;">
+                <div class="col-md-12">
+                    <p class="intro-paragraph" style="text-align: justify;">
+                        <span class="speaker"><a class="a-black" href="http://olivalab.mit.edu/">Aude Oliva</a></span> <br>
+                        <span style="font-weight: 600">Title:</span> Interpretability and Visualization of Deep Neural Networks<br>
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="challenge intro-section-padding" id="workshop_dates">
+        <div class="container">
+            <h2 style="margin-bottom: 1em">Important Dates</h2>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <table class="tables">
+                        <tr><td><a href="#registration_details">Workshop registration opens</a></td><td>June 7, 2019</td>
+                        <tr><td><a href="#abstract_submission">Poster abstract submission deadline</a></td><td>July 16, 2019</td>
+                        <tr><td><a href="#registration_details">Workshop registration deadline</a></td><td>July 19, 2019</td></tr>
+                        <tr><td><a href="#">Workshop</td><td>July 19&ndash;20, 2019</td></tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="challenge intro-section-padding" id="abstract_submission">
+        <div class="container">
+            <h2 style="margin-bottom: 1em">Poster Abstract Submission</h2>
+            <div class="row">
+                <div class="col-md-12">
+                    <p class="intro-paragraph" style="text-align: justify;">
+                        We accept abstract submissions for posters about relevant work related to the workshop. 
+                        Abstracts related to submissions to the <a href="http://algonauts.csail.mit.edu/challenge.html">Algonauts Challenge</a> are also eligible to be selected. 
+                        There is no need to have a submission to the challenge to be selected to present an abstract. 
+                        Selected abstracts will be invited to present as a poster in the workshop. 
+                        If selected, at least one author has to register to the workshop before the registration deadline, 
+                        and is expected to attend the workshop to present the poster. 
+                    </p>
+
+                    <p class="intro-paragraph" style="text-align: justify;">
+                        Abstracts should be of maximum 500 words. The deadline for poster abstract submission is <b style="font-weight:400">July 16, 2019</b>. 
+                    </p>
+                    
+                    <!-- <p class="intro-paragraph" style="text-align: justify;">
+                        Abstract submission is now open. A limited number of abstracts will be invited to be presented as a poster during the workshop, on a first come first served basis.
+                    </p> -->
+
+                    <p class="intro-paragraph" style="text-align: justify;">
+                        For submitting an abstract use <a href="https://forms.gle/uvqY7pWSqjf6C7K59">this form</a>, and follow the instructions.
+                    </p> 
+                </div>
+            </div>
+            <h3 style="margin-bottom: 1em" id="poster_presentation">Poster Presentation</h3>
+            <div class="row">
+                <div class="col-md-12">
+                    <p class="intro-paragraph" style="text-align: justify;">
+                        Your poster should fit within a poster board of 4 ft height <span>&times;</span> 6 ft width (121 cm <span>&times;</span> 188 cm).
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- TEAM -->
+    <section class="features section-padding-small" id="team">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Team</h2>
+                </div>
+            </div>
+            <!-- CORE MEMBERS controller.js-->
+            <div class="row">
+                <div ng-cloak class="col-md-4 portfolio-box" ng-repeat="member in coreMembers">
+                    <div class="wow zoomIn">
+                        <a href="{{member.url}}">
+                            <img ng-cloak ng-src="../img/team/{{ member.photo }}" class="img-members">
+                        </a>
+                    </div>
+                    <div class="portfolio-box-caption">
+                        <div class="portfolio-box-name">
+                            <h4 ng-cloak>{{member.name}}</h4>
+                        </div>
+                        <div class="portfolio-box-affiliation">
+                            <h5 ng-cloak>{{member.affiliation}}</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- MEMBERS controller.js-->
+            <div class="row">
+                <div class="col-md-3 col-sm-4" ng-repeat="member in members">
+                    <div class="wow zoomIn">
+                        <a href="{{member.url}}">
+                            <img ng-cloak ng-src="../img/team/{{ member.photo }}" class="img-members">
+                        </a>
+                    </div>
+                    <div class="portfolio-box-caption">
+                        <div class="portfolio-box-name">
+                            <h4 ng-cloak>{{member.name}}</h4>
+                        </div>
+                        <div class="portfolio-box-affiliation">
+                            <h5 ng-cloak>{{member.affiliation}}</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="features" id="team">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading section-padding-small">Event Planners</h2>
+                </div>
+            </div>
+            <!-- EVENT PLANNERS controller.js-->
+            <div class="row">
+                <div ng-cloak class="col-md-4 portfolio-box" ng-repeat="member in eventPlanners">
+                    <div class="wow zoomIn">
+                        <a href="{{member.url}}">
+                            <img ng-cloak ng-src="../img/team/{{ member.photo }}" class="img-members">
+                        </a>
+                    </div>
+                    <div class="portfolio-box-caption">
+                        <div class="portfolio-box-name">
+                            <h4 ng-cloak>{{member.name}}</h4>
+                        </div>
+                        <div class="portfolio-box-affiliation">
+                            <h5 ng-cloak>{{member.affiliation}}</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="challenge intro-section-padding" style="background:none" id="sponsors">
+        <div class="container-fluid">
+            <h2 class="section-heading text-center">Sponsors</h2>
+            <div class="row content-flex-wrap">
+                <div class="col-xs-12 col-md-3 img-align">
+                    <a href="https://basicresearch.defense.gov/Programs/Vannevar-Bush-Faculty-Fellowship/" target="_blank">
+                        <img class="img-sponsor" src="../img/logo_vannevarbushDoD.png">
+                    </a>
+                </div>
+                <div class="col-xs-12 col-md-3 img-align">
+                    <a href="https://www.nsf.gov/" target="_blank">
+                        <img class="img-sponsor" src="../img/logo_nsf.png">
+                    </a>
+                </div>
+                <div class="col-xs-12 col-md-3 img-align">
+                    <a href="http://mitibmwatsonailab.mit.edu/" target="_blank">
+                        <img class="img-logo-alt" src="../img/logo_IBMwatson.jpg">
+                    </a>
+                </div>
+                <div class="col-xs-12 col-md-3 img-align">
+                    <a href="https://quest.mit.edu/" target="_blank">
+                        <img class="img-logo-alt" src="../img/logo_quest_black.png">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <section class="to-top">
+        <div class="container">
+            <div class="row">
+                <div class="to-top-wrap">
+                    <a href="#top" class="top">
+                        <i class="fa fa-angle-up"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-7">
+                    <div class="footer-links">
+                        <ul class="footer-group">
+                            <li><a href="index.html#about">About</a></li>
+                            <li><a href="challenge.html">Challenge</a></li>
+                            <li><a href="workshop.html">Workshop</a></li>
+                            <li><a href="download.html">Download</a></li>
+                            <li><a href="AlgonautsProject2019_arXiv.pdf">Paper</a></li>
+                            <li><a href="index.html#team">Team</a></li>
+                            <li><a href="index.html#contact">Contact</a></li>
+                            <li><a href="../archive.html">Archive</a></li>
+                        </ul>
+                        <p>
+                            Copyright © The Algonauts Project | <a href="https://accessibility.mit.edu/">Accessibility</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="social-share">
+                    <p>Share Algonauts with your friends</p>
+                    <a href="https://twitter.com/intent/tweet?button_hashtag=algonauts2019&ref_src=twsrc%5Etfw" class="twitter-hashtag-button" data-size="large" data-text="Check out the Algonauts Project (http://algonauts.csail.mit.edu), a challenge and workshop hosted @MIT that aims to unite biological and artificial intelligence researchers. Topic for 2019: &quot;Explaining the Human Visual Brain&quot;. Workshop July, 19-20. @MIT_Quest @MITIBMLab" data-related="" data-show-count="false">Tweet #algonauts2019</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                    <br> <br>
+                    <iframe src="https://www.facebook.com/plugins/share_button.php?href=http%3A%2F%2Falgonauts.csail.mit.edu&layout=button_count&size=large&width=91&height=28&appId" width="91" height="28" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script>
+        window.jQuery || document.write('<script src="../js/vendor/jquery-1.11.2.min.js"><\/script>')
+    </script>
+    <script src="../js/jquery.fancybox.pack.js"></script>
+    <script src="../js/vendor/bootstrap.min.js"></script>
+    <script src="../js/vendor/wow.min.js"></script>
+    <script src="../js/scripts.js"></script>
+    <script src="../js/jquery.flexslider-min.js"></script>
+    <script src="../bower_components/classie/classie.js"></script>
+    <script src="../bower_components/jquery-waypoints/lib/jquery.waypoints.min.js"></script>
+    <script src="../node_modules/angular/angular.min.js"></script>
+    <script src="../node_modules/angulargrid/angulargrid.js"></script>
+    <script src="../node_modules/angular-aria/angular-aria.min.js"></script>
+    <script src="../node_modules/angular-material/angular-material.min.js"></script>
+    <script src="../node_modules/angular-animate/angular-animate.min.js"></script>
+    <script src="../node_modules/angular-messages/angular-messages.min.js"></script>
+    <script src="../js/ng/src/app.js"></script>
+    <script src="../js/ng/src/controller.js"></script>
+    <script> function externalLinks() { for (var c = document.getElementsByTagName("a"), a = 0; a < c.length; a++) { var b = c[a]; b.getAttribute("href") && b.hostname !== location.hostname && (b.target = "_blank") } }; externalLinks();</script>
+</body>
+
+</html>

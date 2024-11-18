@@ -565,6 +565,10 @@ Added by Alex L
     filter: hue-rotate(190deg);
 }
 
+.filter-me-2025 {
+    filter: hue-rotate(80deg);
+}
+
 .filter-purple {
     filter: invert(11%) sepia(100%) saturate(6335%) hue-rotate(268deg) brightness(93%) contrast(124%);
 }

@@ -1,0 +1,237 @@
+<!doctype html>
+<html ng-app="momentsApp" lang="en">
+
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VCQ9D4SNB4"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-VCQ9D4SNB4');
+    </script>
+    
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Data Release &ndash; Algonauts Project 2019</title>
+    <meta name="description" content="Challenge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Alex Lascelles">
+    <link rel="icon" type="image/png" href="favicon.ico" sizes="32x32" />
+    <link rel="stylesheet" href="../css/normalize.min.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/jquery.fancybox.css">
+    <link rel="stylesheet" href="../css/flexslider.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/angulargrid.css">
+    <link rel="stylesheet" href="../css/queries.css">
+    <link rel="stylesheet" href="../css/etline-font.css">
+    <link rel="stylesheet" href="../node_modules/angular-material/angular-material.min.css">
+    <link rel="stylesheet" href="../bower_components/animate.css/animate.min.css">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <script async src="../js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({ tex2jax: { inlineMath: [ ['$','$'], ["\\(","\\)"] ], displayMath: [ ['$$','$$'], ["\\[","\\]"] ], processEscapes:
+        true, processEnvironments: true }, // Center justify equations in code and markdown cells. Elsewhere // we use CSS
+        to left justify single line equations in code cells. displayAlign: 'center', "HTML-CSS": { styles: {'.MathJax_Display':
+        {"margin": 0}}, linebreaks: { automatic: true } } });
+    </script>
+</head>
+
+<body id="top" ng-controller="mainCtrl" ng-cloak>
+    <section class="hero" style="height: 400px;">
+        <div style="position: absolute;
+                top: 0;
+                bottom: 0;
+                width: 100%;
+                height: 100%;
+                background-color: black;
+                overflow: hidden;">
+            <img src="../img/banner_v3_compressed.jpg" style="opacity: 0.6; min-width: 100%; min-height: 100%;">
+        </div>
+        <section class="navigation">
+            <header>
+                <div class="header-content">
+                    <div class="logo">
+                        <li><a href="index.html">The Algonauts Project</a></li>
+                    </div>
+                    <div class="header-nav navbar-right">
+                        <nav>
+                            <ul class="primary-nav">
+                                <li><a href="index.html#about">About</a></li>
+                                <li><a href="challenge.html">Challenge</a></li>
+                                <li><a href="workshop.html">Workshop</a></li>
+                                <li><a href="download.html">Download</a></li>
+                                <li><a href="AlgonautsProject2019_arXiv.pdf">Paper</a></li>
+                                <li><a href="index.html#team">Team</a></li>
+                                <li><a href="index.html#contact">Contact</a></li>
+                                <li><a href="../archive.html">Archive</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="navicon">
+                        <a class="nav-toggle" href="#">
+                            <span></span>
+                        </a>
+                    </div>
+                </div>
+            </header>
+        </section>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-10 col-md-offset-1">
+                    <div class="hero-explore-content text-center">
+                        <h1 style="margin-bottom: 25px; color: white;"><b>Data Release</b></h1>
+                        <h1 style="font-size: 29px; margin-bottom: 25px; color: white; font-style: italic;"><b>The Algonauts Project 2019</b></h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- MAIN TEXT -->
+
+    <section class="challenge intro-section-first-padding" id="data_release">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <p class="intro-paragraph" style="margin-top: 1em">
+                        The Algonauts Project 2019 involved both training and test datasets. All training data was
+                        included within the original dataset and development kit released to participants on April 1, 2019. This set also
+                        included the 78 test set images (but no fMRI or MEG data). The challenge test data (twinset1) was not available to
+                        participants during the competition and was used to rank submissions. Similarly, the Hidden Test Set (twinset2) was
+                        not available to participants and was used to rank a single submission after the main challenge had ended to assess
+                        the degree of overfitting/generalizability of the submitted models. <b style="font-weight: 400">Here, we release all
+                            datasets at once.</b></p>
+                    <p class="intro-paragraph">The data belong to a <a href="http://twinsetfusion.csail.mit.edu/">study explained on this
+                            webpage</a> (Mohsenzadeh et al., 2019) which used fMRI and MEG to record data while 15 participants viewed a set
+                        of 156 natural images. These images can be subdivided into five categories (faces, bodies, animals, objects, scenes)
+                        or two twinsets of 78 images each. Images in twinsets 1 and 2 are each composed of unique images that share the same
+                        exemplar (e.g. both twinsets each have a unique image of a giraffe). Beta maps from the fMRI data and the MEG
+                        epoched data per subject are available to download from that website.</p>
+                    <p class="intro-paragraph" id="original_dataset"><b style="font-weight: 400">Download the original <i>training</i> dataset, test
+                            images, and development kit released on April 1, 2019 to participants of the Algonauts Project Challenge 2019 <a
+                                href="https://forms.gle/VajU1XNMe1EEWFmJA" target="_blank">here</a>.</b> <br>Below is a list of what is
+                        included:</p>
+                    <ul>
+                        <li> <b style="font-weight: 400"><i>Challenge Training</i> Set A:</b> 92 images (.jpg format) + fMRI/MEG human brain
+                            data RDMs from 2 regions/time intervals (EVC and IT/early and late) in response to viewing images from this set
+                            (.mat format).</li>
+                        <li> <b style="font-weight: 400"><i>Challenge Training</i> Set B:</b> 118 images (.jpg format) + fMRI/MEG human
+                            brain data RDMs from 2 regions/time intervals (EVC and IT/early and late) in response to viewing images from
+                            this set (.mat format).</li>
+                        <li> <b style="font-weight: 400">Development Kit:</b> Sample code for generating activations from
+                            AlexNet/VGG/ResNet, computing RDMs from these networks, and evaluating model RDMs.</li>
+                        <li> <b style="font-weight: 400"><i>Challenge Test</i> Set Images:</b> 78 images (.jpg format).</li>
+                    </ul>
+                    <br>
+                    <br>
+                    <p class="intro-paragraph" id="hidden_dataset"><b style="font-weight: 400">Download all data from the <i>Challenge</i> Test Set and
+                            the <i>Hidden</i> Test Set used in the Algonauts Project Challenge 2019 at <a
+                                href="https://forms.gle/iYwAbQz4ZC5MWUfX8" target="_blank">this link</a>.</b> <br>Below is a list of what is
+                        included:</p>
+                    <ul>
+                        <li> <b style="font-weight: 400"><i>Challenge</i> Test Set RDMs:</b> fMRI/MEG human brain data RDMs from 2
+                            regions/time intervals (EVC and IT/early and late) in response to viewing images from this set (.mat format).
+                        </li>
+                        <li> <b style="font-weight: 400"><i>Hidden</i> Test Set RDMs:</b> fMRI/MEG human brain data RDMs from 2 regions/time
+                            intervals (EVC and IT/early and late) in response to viewing images from this set (.mat format).</li>
+                        <li> <b style="font-weight: 400"><i>Challenge</i> and <i>Hidden</i> Test Set Images:</b> 78+78=156 images (.jpg
+                            format).</li>
+                    </ul>
+                    <br>
+                    <h2 style="margin-bottom: 1em" id="Citation">Citation</h2>
+                    <p class="intro-paragraph">If you use <b style="font-weight: 400">any of the above data</b>, please cite the Algonauts
+                        Project 2019:</p>
+                    <p class="intro-paragraph">Radoslaw Martin Cichy, Gemma Roig, Alex Andonian, Kshitij Dwivedi, Benjamin Lahner, Alex
+                        Lascelles, Yalda Mohsenzadeh, Kandan Ramakrishnan, and Aude Oliva. (2019). <b style='font-weight: 400'>The Algonauts
+                            Project: A Platform for Communication between the Sciences of Biological and Artificial Intelligence.</b>
+                        <i>arXiv, arXiv:1905.05675.</i> <a href="https://arxiv.org/pdf/1905.05675.pdf">PDF</a> | <a
+                            href="https://arxiv.org/abs/1905.05675" target="_blank">arXiv cs.CV</a></p>
+                    <br>
+                    <br>
+                    <p class="intro-paragraph">If you use the <b style="font-weight: 400">training data</b> specifically, please also cite:
+                    </p>
+                    <p class="intro-paragraph">Radoslaw M. Cichy, Dimitrios Pantazis and Aude Oliva. (2016). <b
+                            style="font-weight: 400">Similarity-Based Fusion of MEG and fMRI Reveals Spatio-Temporal Dynamics in Human
+                            Cortex During Visual Object Recognition.</b> Cerebral Cortex, 26 (8): 3563-3579. <a
+                            href="http://userpage.fu-berlin.de/rmcichy/publication_pdfs/Cichy_et_al_CC_2016.pdf">PDF</a> | <a
+                            href="https://academic.oup.com/cercor/article/26/8/3563/2428700" target="_blank">Cerebral Cortex</a></p>
+                    <br>
+                    <br>
+                    <p class="intro-paragraph">If you use the <b style="font-weight: 400">test data</b> specifically, please also cite:</p>
+                    <p class="intro-paragraph">Yalda Mohsenzadeh*, Caitlin Mullin*, Benjamin Lahner, Radoslaw Martin Cichy, and Aude Oliva.
+                        (2019). <b style="font-weight: 400">Reliability and Generalizability of Similarity-Based Fusion of MEG and fMRI Data in Human Ventral and Dorsal Visual Streams.</b> <i>Vision, 3(1), 8.</i> <a href="http://twinsetfusion.csail.mit.edu/vision_paper.pdf">PDF</a> | <a href="https://www.mdpi.com/2411-5150/3/1/8" target="_blank">Vision</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- FOOTER -->
+    <section class="to-top">
+        <div class="container">
+            <div class="row">
+                <div class="to-top-wrap">
+                    <a href="#top" class="top">
+                        <i class="fa fa-angle-up"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-7">
+                    <div class="footer-links">
+                        <ul class="footer-group">
+                            <li><a href="index.html#about">About</a></li>
+                            <li><a href="challenge.html">Challenge</a></li>
+                            <li><a href="workshop.html">Workshop</a></li>
+                            <li><a href="download.html">Download</a></li>
+                            <li><a href="AlgonautsProject2019_arXiv.pdf">Paper</a></li>
+                            <li><a href="index.html#team">Team</a></li>
+                            <li><a href="index.html#contact">Contact</a></li>
+                            <li><a href="../archive.html">Archive</a></li>
+                        </ul>
+                        <p>
+                            Copyright © The Algonauts Project | <a href="https://accessibility.mit.edu/">Accessibility</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="social-share">
+                    <p>Share Algonauts with your friends</p>
+                    <a href="https://twitter.com/intent/tweet?button_hashtag=algonauts2019&ref_src=twsrc%5Etfw" class="twitter-hashtag-button" data-size="large" data-text="Check out the Algonauts Project (http://algonauts.csail.mit.edu), a challenge and workshop hosted @MIT that aims to unite biological and artificial intelligence researchers. Topic for 2019: &quot;Explaining the Human Visual Brain&quot;. Workshop July, 19-20. @MIT_Quest @MITIBMLab" data-related="" data-show-count="false">Tweet #algonauts2019</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                    <br> <br>
+                    <iframe src="https://www.facebook.com/plugins/share_button.php?href=http%3A%2F%2Falgonauts.csail.mit.edu&layout=button_count&size=large&width=91&height=28&appId" width="91" height="28" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script>
+        window.jQuery || document.write('<script src="../js/vendor/jquery-1.11.2.min.js"><\/script>')
+    </script>
+    <script src="../js/jquery.fancybox.pack.js"></script>
+    <script src="../js/vendor/bootstrap.min.js"></script>
+    <script src="../js/vendor/wow.min.js"></script>
+    <script src="../js/scripts.js"></script>
+    <script src="../js/jquery.flexslider-min.js"></script>
+    <script src="../bower_components/classie/classie.js"></script>
+    <script src="../bower_components/jquery-waypoints/lib/jquery.waypoints.min.js"></script>
+    <script src="../node_modules/angular/angular.min.js"></script>
+    <script src="../node_modules/angulargrid/angulargrid.js"></script>
+    <script src="../node_modules/angular-aria/angular-aria.min.js"></script>
+    <script src="../node_modules/angular-material/angular-material.min.js"></script>
+    <script src="../node_modules/angular-animate/angular-animate.min.js"></script>
+    <script src="../node_modules/angular-messages/angular-messages.min.js"></script>
+    <script src="../js/ng/src/app.js"></script>
+    <script src="../js/ng/src/controller.js"></script>
+    <script> function externalLinks() { for (var c = document.getElementsByTagName("a"), a = 0; a < c.length; a++) { var b = c[a]; b.getAttribute("href") && b.hostname !== location.hostname && (b.target = "_blank") } }; externalLinks();</script>
+</body>
+
+</html>

@@ -1,0 +1,749 @@
+<!doctype html>
+<html ng-app="momentsApp" lang="en">
+
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VCQ9D4SNB4"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-VCQ9D4SNB4');
+    </script>
+    
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Challenge &ndash; Algonauts Project 2019</title>
+    <meta name="description" content="Challenge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Alex Lascelles">
+    <link rel="icon" type="image/png" href="favicon.ico" sizes="32x32" />
+    <link rel="stylesheet" href="../css/normalize.min.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/jquery.fancybox.css">
+    <link rel="stylesheet" href="../css/flexslider.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/angulargrid.css">
+    <link rel="stylesheet" href="../css/queries.css">
+    <link rel="stylesheet" href="../css/etline-font.css">
+    <link rel="stylesheet" href="../node_modules/angular-material/angular-material.min.css">
+    <link rel="stylesheet" href="../bower_components/animate.css/animate.min.css">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <script async src="../js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({ tex2jax: { inlineMath: [ ['$','$'], ["\\(","\\)"] ], displayMath: [ ['$$','$$'], ["\\[","\\]"] ], processEscapes:
+        true, processEnvironments: true }, // Center justify equations in code and markdown cells. Elsewhere // we use CSS
+        to left justify single line equations in code cells. displayAlign: 'center', "HTML-CSS": { styles: {'.MathJax_Display':
+        {"margin": 0}}, linebreaks: { automatic: true } } });
+    </script>
+</head>
+
+<body id="top" ng-controller="mainCtrl" ng-cloak>
+    <section class="hero" style="height: 400px;">
+        <div style="position: absolute; top: 0; bottom: 0; width: 100%; height: 100%; background-color: black; overflow: hidden;">
+            <img src="../img/banner_v3_compressed.jpg" style="opacity: 0.6; min-width: 100%; min-height: 100%;">
+        </div>
+        <section class="navigation">
+            <header>
+                <div class="header-content">
+                    <div class="logo">
+                        <li><a href="index.html">The Algonauts Project</a></li>
+                    </div>
+                    <div class="header-nav navbar-right">
+                        <nav>
+                            <ul class="primary-nav">
+                                <li><a href="index.html#about">About</a></li>
+                                <li><a href="challenge.html">Challenge</a></li>
+                                <li><a href="workshop.html">Workshop</a></li>
+                                <li><a href="download.html">Download</a></li>
+                                <li><a href="AlgonautsProject2019_arXiv.pdf">Paper</a></li>
+                                <li><a href="index.html#team">Team</a></li>
+                                <li><a href="index.html#contact">Contact</a></li>
+                                <li><a href="../archive.html">Archive</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="navicon">
+                        <a class="nav-toggle" href="#">
+                            <span></span>
+                        </a>
+                    </div>
+                </div>
+            </header>
+        </section>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-10 col-md-offset-1">
+                    <div class="hero-explore-content text-center">
+                        <h1 style="margin-bottom: 25px; color: white;"><b>The 2019 Challenge:</b></h1>
+                        <h1 style="font-size: 29px; margin-bottom: 25px; color: white; font-style: italic;"><b>Explaining the Human Visual Brain</b></h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- MAIN TEXT -->
+
+    <section class="challenge intro-section-first-padding" id="challenge_about">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <!-- OVERVIEW -->
+                    <h2 style="margin-bottom: 1em" id="challenge_overview">Overview</h2>
+
+                    <div style="vertical-align:middle; text-align:center">
+                        <img src="../img/challenge_summary_v3.png" style="height: auto; width: auto; max-width: 90%;">
+                    </div>
+
+                    <!-- INTRO PARAGRAPH -->
+                    <p class="intro-paragraph" style="text-align: justify;">
+                        Understanding how the human brain works is one of the greatest challenges that science faces today. 
+                        The Algonauts challenge proposes an open and quantified test of computational models on human brain data, 
+                        including both spatial (i.e. <a href="fmri_and_meg.html">fMRI</a>) and temporal (i.e. <a href="fmri_and_meg.html">MEG</a>/EEG) measurements. This will allow us to assess the 
+                        real progress of the field of cognitive computational neuroscience (see also <a href="http://www.brain-score.org/" target="_blank">Brain-Score</a> and the <a href="http://neuralprediction.berkeley.edu/" target="_blank">Neural Prediction Challenge</a>).
+                    </p>
+
+                    <p class="intro-paragraph" style="text-align: justify;">
+                        The primary target of the 2019 challenge is the visual brain: the part of the brain that is responsible for seeing. 
+                        Currently, particular deep neural networks trained on object recognition 
+                        (Yamins et al. <a href="https://doi.org/10.1073/pnas.1403112111" target="_blank">2014</a>, 
+                        Khaligh-Razavi & Kriegeskorte <a href="https://doi.org/10.1371/journal.pcbi.1003915" target="_blank">2014</a>, 
+                        Cichy et al. <a href="https://doi.org/10.1038/srep27755" target="_blank">2016</a> etc.) do best in explaining brain activity. Can your model do better?
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>  
+
+
+    <!-- TWO CHALLENGE TRACKS -->
+    <section class="challenge intro-section-padding" id="2tracks">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+
+                    <!-- COMPETITION TRACKS -->
+                    <h2 style="margin-bottom: 1em" id="challenge_tracks">Competition Tracks</h2>
+
+                    <p class="intro-paragraph" style="text-align: justify;">
+                        The main goal of the 2019 Algonauts challenge is to predict brain activity from two sources&mdash;fMRI data from two brain regions (Track 1), or MEG data from two temporal windows (Track 2)&mdash;using computational models. 
+                        The brain activity is in response to viewing sets of images; for each image set, fMRI and MEG data are collected from the <i>same</i> 15 human subjects. 
+                        Participants can choose to play in <a href="#Track1">Track 1</a> (fMRI), <a href="#Track2">Track 2</a> (MEG), or both.
+                    </p>
+
+                    <div class="row content-flex-wrap">
+                        <div class="col-xs-12 col-md-9">
+                            <p class="intro-paragraph" style="text-align: justify;">
+                                Underlying object recognition is a hierarchical 
+                                processing cascade (called the “ventral visual stream”) in which neural activity 
+                                unfolds in space and time. At the beginning of the hierarchy, there is a region 
+                                called the early visual cortex (EVC), shown in red in the figure. 
+                                Neurons in this area respond to lines or edges with specific orientations. As EVC 
+                                is early in the processing cascade, it responds early in time. <br/> <br/> 
+
+                                Later in this hierarchy there is a region called the inferior temporal cortex (IT), shown in yellow. Neurons in this region have been found to respond to images of objects.
+                            </p>
+                        </div>
+                        <div class="col-xs-12 col-md-3 img-align">
+                            <img src="../img/EVC_IT_ROIs.gif" style="max-width: 100%"> 
+                        </div>
+                    </div>
+
+                    <p class="intro-paragraph" style="text-align: justify;">
+                        In the <b>2019 edition of the Algonauts challenge</b>, the target is to explain brain activity in two 
+                        segments of the visual processing cascade. The brain regions to explain are EVC and IT for Track 1, and 
+                        two intervals in time (early interval around the peak of response in EVC and later interval around the 
+                        peak of response in IT, with respect to when an image was shown to human subjects) for Track 2.
+                    </p>
+
+                    <p class="intro-paragraph" style="text-align: justify;" id="Track1">
+                        Given a set of images consisting of everyday objects and corresponding brain activity recorded while human subjects viewed those images, 
+                        participants will devise computational models which predict brain activity, which will be used to predict the brain activity for a brand new set of images.
+                    </p>
+  
+                    <div class="row">
+                        <!-- TRACK 1 (fMRI) -->
+                        <div class="col-md-12 intro-feature" style="margin-bottom: 1em">
+                            <div class="challenge-icon">
+                                <span class="icon">
+                                    <img src="../img/fmri.png" class="icon" style="height:55px;"></img>
+                                </span>
+                            </div>
+                            <div class="challenge-content">
+                                <h5 style="font-size: 24px"><a href="http://challenge.algonauts.csail.mit.edu/competitions/77">TRACK 1 (fMRI)</a></h5>
+                                <p class="challenge-paragraph">The goal of Track 1 (fMRI) is to construct models that best predict activity in 2 regions of the brain, <b>early</b> (EVC) and <b>late</b> (IT) 
+                                    in the human visual hierarchy. Participants submit their model responses to a test image set which we will compare against held-out fMRI data. 
+                                    The <a href="rsa.html">representational similarity analysis</a> approach (a technique that maps models and fMRI data to a common similarity space to enable comparison) will be used to score your submissions.</p>
+                                <p class="challenge-paragraph">We provide the following data <b>(available for download <a href="https://forms.gle/VajU1XNMe1EEWFmJA">here</a>)</b>:</p>
+                                <ul>
+                                    <li> <i>Training</i> Set A: 92 images + fMRI human brain data RDMs from 2 regions (EVC and IT) in response to viewing images from this set.</li>
+                                    <li> <i>Training</i> Set B: 118 images + fMRI human brain data RDMs from 2 regions (EVC and IT) in response to viewing images from this set.</li>
+                                    <li> Development Kit: Sample code for generating activations from AlexNet/VGG/ResNet, computing RDMs from these networks, and evaluating model RDMs.</li>
+                                    <li> <i>Test</i> Image Set: 78 images.</li>
+                                </ul>
+                                <br>
+
+                                <p class="challenge-paragraph"><b>Learn more and participate in Track 1 <a href="http://challenge.algonauts.csail.mit.edu/competitions/77">here</a></b></p>
+                            </div>
+                        </div>
+                        
+
+                        <h3 style="margin-bottom: 1em; margin-top: 1em; text-align:center" id="Track1Leaderboard_challenge">Track 1 <b>Challenge Test Set</b> Leaderboard (<a href="leaderboard_fmri.html">see detailed table</a>)</h3>
+                        <div style="overflow-x:auto;">
+                            <table class="tables-ll">
+                                <tr><th></th>
+                                    <th></th>
+                                    <th class="table-ll-headers">EVC</th>
+                                    <th class="table-ll-headers">IT</th>
+                                    <th class="table-ll-headers">Score</th>
+                                <tr><th class="table-ll-headers-2" style="border-left: 0px;">Rank</th>
+                                    <th class="table-ll-headers-2">Team Name</th>
+                                    <!-- <th class="table-ll-headers-2">R<sup>2</sup></th> -->
+                                    <th class="table-ll-headers-2">Noise Normalized R<sup>2</sup> (%)</th>
+                                    <!-- <th class="table-ll-headers-2">R<sup>2</sup></th> -->
+                                    <th class="table-ll-headers-2">Noise Normalized R<sup>2</sup> (%)</th>
+                                    <!-- <th class="table-ll-headers-2">Average R<sup>2</sup></th> -->
+                                    <th class="table-ll-headers-2">Average Noise Normalized R<sup>2</sup> (%)</th>
+                                </tr>
+                                <tr><td></td>
+                                    <td><i>Noise Ceiling</i></td>
+                                    <td><i>100</i></td>
+                                    <td><i>100</i></td>
+                                    <td><i>100</i></td>
+                                </tr>
+                                <tr ng-repeat="row in lb_fmri_ts1">
+                                    <td>{{$index+1}}</td>
+                                    <td>{{row.Team_Name}}</td>
+                                    <!-- <td>{{row.Metric1_R2}}</td> -->
+                                    <td>{{row.EVC_pc.toFixed(4)}}</td>
+                                    <!-- <td>{{row.Metric2_R2}}</td> -->
+                                    <td>{{row.IT_pc.toFixed(4)}}</td>
+                                    <!-- <td class="table-emphasis">{{row.Score_R2}}</td> -->
+                                    <td class="table-emphasis">{{row.score_pc.toFixed(4)}}</td>
+                                    <td><a href="{{row.Team_Name}}_results.html">Detailed Results</a></td>
+                                </tr>
+                            </table>  
+                        </div>
+                        <p class="intro-paragraph" style="font-size:18px; margin-bottom:20px">
+                            The three main columns are <i>EVC</i> and <i>IT</i> (the two brain regions of interest), and <i>Score</i> (average of EVC and IT). The entry with the highest <i>Score</i> is ranked first. 
+                            <i>R<sup>2</sup></i> represents the submitted model RDM squared correlation (spearman) to the EVC/IT RDM. <i>Noise Normalized</i> represents the fact that R<sup>2</sup> values are normalized to the noise ceiling (see <a href="http://challenge.algonauts.csail.mit.edu/competitions/77#learn_the_details-evaluation">here</a> for more details). AlexNet is the organizer baseline.
+                        </p>
+
+
+
+                        <!-- TRACK 1 (fMRI) ----------------------- TWIN SET 2-->
+                        <h3 style="margin-bottom: 1em; margin-top: 0em; text-align: center" id="Track1Leaderboard_challenge">Track 1 <b>Hidden Test Set</b> Leaderboard (<a href="leaderboard_fmri_TS2.html">see detailed table</a>)</h3>
+                        <div style="overflow-x:auto;">
+                            <table class="tables-ll">
+                                <tr><th></th>
+                                    <th></th>
+                                    <th class="table-ll-headers">EVC</th>
+                                    <th class="table-ll-headers">IT</th>
+                                    <th class="table-ll-headers">Score</th>
+                                <tr><th class="table-ll-headers-2" style="border-left: 0px;">Rank</th>
+                                    <th class="table-ll-headers-2">Team Name</th>
+                                    <!-- <th class="table-ll-headers-2">R<sup>2</sup></th> -->
+                                    <th class="table-ll-headers-2">Noise Normalized R<sup>2</sup> (%)</th>
+                                    <!-- <th class="table-ll-headers-2">R<sup>2</sup></th> -->
+                                    <th class="table-ll-headers-2">Noise Normalized R<sup>2</sup> (%)</th>
+                                    <!-- <th class="table-ll-headers-2">Average R<sup>2</sup></th> -->
+                                    <th class="table-ll-headers-2">Average Noise Normalized R<sup>2</sup> (%)</th>
+                                </tr>
+                                <tr><td></td>
+                                    <td><i>Noise Ceiling</i></td>
+                                    <td><i>100</i></td>
+                                    <td><i>100</i></td>
+                                    <td><i>100</i></td>
+                                </tr>
+                                <tr ng-repeat="row in lb_fmri_ts2">
+                                    <td>{{$index+1}}</td>
+                                    <td>{{row.Team_Name}}</td>
+                                    <!-- <td>{{row.Metric1_R2}}</td> -->
+                                    <td>{{row.EVC_pc.toFixed(4)}}</td>
+                                    <!-- <td>{{row.Metric2_R2}}</td> -->
+                                    <td>{{row.IT_pc.toFixed(4)}}</td>
+                                    <!-- <td class="table-emphasis">{{row.Score_R2}}</td> -->
+                                    <td class="table-emphasis">{{row.score_pc.toFixed(4)}}</td>
+                                    <td><a href="{{row.Team_Name}}_results_TS2.html">Detailed Results</a></td>
+                                </tr>
+                            </table>  
+                        </div>
+                        <p class="intro-paragraph" style="font-size:18px; margin-bottom:60px;" id="Track2">
+                            The three main columns are <i>EVC</i> and <i>IT</i> (the two brain regions of interest), and <i>Score</i> (average of EVC and IT). The entry with the highest <i>Score</i> is ranked first. 
+                            <i>R<sup>2</sup></i> represents the submitted model RDM squared correlation (spearman) to the EVC/IT RDM. <i>Noise Normalized</i> represents the fact that R<sup>2</sup> values are normalized to the noise ceiling (see <a href="http://challenge.algonauts.csail.mit.edu/competitions/77#learn_the_details-evaluation">here</a> for more details). AlexNet is the organizer baseline.
+                        </p>
+
+
+
+
+
+                        <!-- TRACK 2 (MEG) -->
+                        <div class="col-md-12 intro-feature" style="margin-bottom: 1em">
+                            <div class="challenge-icon">
+                                <span class="icon">
+                                    <img src="../img/meg.png" class="icon" style="height:55px;"></img>
+                                </span>
+                            </div>
+                            <div class="challenge-content">
+                                <h5 style="font-size: 24px"><a href="http://challenge.algonauts.csail.mit.edu/competitions/78">TRACK 2 (MEG)</a></h5>
+                                <p class="challenge-paragraph">The goal of Track 2 (MEG) is to construct models that best predict brain data from 2 time intervals, <b>early</b> and <b>late</b> 
+                                    stages of visual processing with respect to onset of an image. Participants submit their model responses to a test image set which we will compare against held-out MEG data. 
+                                    The <a href="rsa.html">representational similarity analysis</a> approach (a technique that maps models and MEG data to a common similarity space to enable comparison) will be used to score your submissions. 
+                                    Time intervals of 20ms are defined based on the peak latency of MEG/fMRI fusion time series (0&ndash;200ms) in EVC and IT, and are shown with the corresponding image sets below (see Cichy et al. 2014, 2016; Mohsenzadeh et al. 2019 for MEG/fMRI fusion method).</p>
+                                <p class="challenge-paragraph">We provide the following data <b>(available for download <a href="https://forms.gle/VajU1XNMe1EEWFmJA">here</a>)</b>:</p>
+                                <ul>
+                                    <li> <i>Training</i> Set A: 92 images + MEG human brain data RDMs from 2 time intervals, i.e. early (70&ndash;90ms) and late (140&ndash;160ms) in visual processing, in response to viewing images from this set. Peak latencies = 82ms (early) and 150ms (late).</li>
+                                    <li> <i>Training</i> Set B: 118 images + MEG human brain data RDMs from 2 time intervals, i.e. early (100&ndash;120ms) and late (165&ndash;185ms) in visual processing, in response to viewing images from this set. Peak latencies = 108ms (early) and 176ms (late).</li>
+                                    <li> Development Kit: Sample code for generating activations from AlexNet/VGG/ResNet, computing RDMs from these networks, and evaluating model RDMs.</li>
+                                    <li> <i>Test</i> Set: 78 images.</li>
+                                </ul>
+                                <br>
+                                <p class="challenge-paragraph"><b>Learn more and participate in Track 2 <a href="http://challenge.algonauts.csail.mit.edu/competitions/78">here</a></b></p>
+                            </div>
+                        </div>
+
+                        <h3 style="margin-bottom: 1em; margin-top: 5em; text-align: center" id="Track2Leaderboard_challenge">Track 2 <b>Challenge Test Set</b> Leaderboard (<a href="leaderboard_meg.html">see detailed table</a>)</h3>
+                        <div style="overflow-x:auto;">
+                            <table class="tables-ll">
+                                <tr><th></th>
+                                    <th></th>
+                                    <th class="table-ll-headers">Early Interval</th>
+                                    <th class="table-ll-headers">Late Interval</th>
+                                    <th class="table-ll-headers">Score</th>
+                                <tr><th class="table-ll-headers-2" style="border-left: 0px;">Rank</th>
+                                    <th class="table-ll-headers-2">Team Name</th>
+                                    <!-- <th class="table-ll-headers-2">R<sup>2</sup></th> -->
+                                    <th class="table-ll-headers-2">Noise Normalized R<sup>2</sup> (%)</th>
+                                    <!-- <th class="table-ll-headers-2">R<sup>2</sup></th> -->
+                                    <th class="table-ll-headers-2">Noise Normalized R<sup>2</sup> (%)</th>
+                                    <!-- <th class="table-ll-headers-2">Average R<sup>2</sup></th> -->
+                                    <th class="table-ll-headers-2">Average Noise Normalized R<sup>2</sup> (%)</th>
+                                </tr>
+                                <tr><td></td>
+                                    <td><i>Noise Ceiling</i></td>
+                                    <td><i>100</i></td>
+                                    <td><i>100</i></td>
+                                    <td><i>100</i></td>
+                                </tr>
+                                <tr ng-repeat="row in lb_meg_ts1">
+                                    <td>{{$index+1}}</td>
+                                    <td>{{row.Team_Name}}</td>
+                                    <!-- <td>{{row.Metric1_R2}}</td> -->
+                                    <td>{{row.early_pc.toFixed(4)}}</td>
+                                    <!-- <td>{{row.Metric2_R2}}</td> -->
+                                    <td>{{row.late_pc.toFixed(4)}}</td>
+                                    <!-- <td class="table-emphasis">{{row.Score_R2}}</td> -->
+                                    <td class="table-emphasis">{{row.score_pc.toFixed(4)}}</td>
+                                    <td><a href="{{row.Team_Name}}_results.html">Detailed Results</a></td>
+                                </tr>
+                            </table> 
+                        </div>
+                        <p class="intro-paragraph" style="font-size:18px">
+                            The three main columns are <i>Early</i> and <i>Late Interval</i> (the two time intervals of interest), and <i>Score</i> (average of Early and Late). The entry with the highest <i>Score</i> is ranked first. 
+                            <i>R<sup>2</sup></i> represents the submitted model RDM squared correlation (spearman) to the Early/Late Interval RDM. <i>Noise Normalized</i> represents the fact that R<sup>2</sup> values are normalized to the noise ceiling (see <a href="http://challenge.algonauts.csail.mit.edu/competitions/78#learn_the_details-evaluation">here</a> for more details). AlexNet is the organizer baseline.
+                        </p>
+
+
+                        <!-- TRACK 2 (MEG) ----------------------- TWIN SET 2-->
+                        <h3 style="margin-bottom: 1em; margin-top: 0em; text-align: center" id="Track2Leaderboard_hidden">Track 2 <b>Hidden Test Set</b> Leaderboard (<a href="leaderboard_meg_TS2.html">see detailed table</a>)</h3>
+                        <div style="overflow-x:auto;">
+                            <table class="tables-ll">
+                                <tr><th></th>
+                                    <th></th>
+                                    <th class="table-ll-headers">Early Interval</th>
+                                    <th class="table-ll-headers">Late Interval</th>
+                                    <th class="table-ll-headers">Score</th>
+                                <tr><th class="table-ll-headers-2" style="border-left: 0px;">Rank</th>
+                                    <th class="table-ll-headers-2">Team Name</th>
+                                    <!-- <th class="table-ll-headers-2">R<sup>2</sup></th> -->
+                                    <th class="table-ll-headers-2">Noise Normalized R<sup>2</sup> (%)</th>
+                                    <!-- <th class="table-ll-headers-2">R<sup>2</sup></th> -->
+                                    <th class="table-ll-headers-2">Noise Normalized R<sup>2</sup> (%)</th>
+                                    <!-- <th class="table-ll-headers-2">Average R<sup>2</sup></th> -->
+                                    <th class="table-ll-headers-2">Average Noise Normalized R<sup>2</sup> (%)</th>
+                                </tr>
+                                <tr><td></td>
+                                    <td><i>Noise Ceiling</i></td>
+                                    <td><i>100</i></td>
+                                    <td><i>100</i></td>
+                                    <td><i>100</i></td>
+                                </tr>
+                                <tr ng-repeat="row in lb_meg_ts2">
+                                    <td>{{$index+1}}</td>
+                                    <td>{{row.Team_Name}}</td>
+                                    <!-- <td>{{row.Metric1_R2}}</td> -->
+                                    <td>{{row.early_pc.toFixed(4)}}</td>
+                                    <!-- <td>{{row.Metric2_R2}}</td> -->
+                                    <td>{{row.late_pc.toFixed(4)}}</td>
+                                    <!-- <td class="table-emphasis">{{row.Score_R2}}</td> -->
+                                    <td class="table-emphasis">{{row.score_pc.toFixed(4)}}</td>
+                                    <td><a href="{{row.Team_Name}}_results_TS2.html">Detailed Results</a></td>
+                                </tr>
+                            </table> 
+                        </div>
+                        <p class="intro-paragraph" style="font-size:18px">
+                            The three main columns are <i>Early</i> and <i>Late Interval</i> (the two time intervals of interest), and <i>Score</i> (average of Early and Late). The entry with the highest <i>Score</i> is ranked first. 
+                            <i>R<sup>2</sup></i> represents the submitted model RDM squared correlation (spearman) to the Early/Late Interval RDM. <i>Noise Normalized</i> represents the fact that R<sup>2</sup> values are normalized to the noise ceiling (see <a href="http://challenge.algonauts.csail.mit.edu/competitions/78#learn_the_details-evaluation">here</a> for more details). AlexNet is the organizer baseline.
+                        </p>
+
+                    </div>
+
+                </div>
+            </div>  
+        </div>
+    </section>
+
+    <!-- BRAIN ACTIVITY AND ANALYSIS -->
+    <section class="challenge intro-section-padding" id="challenge_brainaa">
+        <div class="container">
+            <h2 style="margin-bottom: 1em">Brain Activity and Analysis</h2>
+
+            <!-- BRAIN ACTIVITY MEASUREMENT -->                    
+            <div class="row content-flex-wrap" style="margin-top: 3em; margin-bottom: 3em;">
+                <div class="col-xs-12 col-md-3 img-align">
+                    <a href="fmri_and_meg.html">
+                        <img src="../img/icon_brain_activity_measurement_v2.png" style="max-width: 100%"> 
+                    </a>
+                </div>
+                <div class="col-xs-12 col-md-9">
+                    <h3>Brain Activity Measurement</h3>
+                    <p class="intro-paragraph" style="text-align: justify;">
+                        Current non-invasive techniques to measure brain 
+                        activity resolve the brain either well in <b>space</b> or in <b>time</b>, but not both. We provide 
+                        measurements of brain activity while humans viewed a set of images from two techniques: 
+                        (1) functional magnetic resonance imaging (fMRI) for millimeter spatial resolution and 
+                        (2) magnetoencephalography (MEG) for millisecond temporal resolution. There is a 
+                        challenge track for explaining brain data in space (fMRI) and in time (MEG) 
+                        respectively. <br>
+                        <a href="fmri_and_meg.html">Click here to learn more about fMRI and MEG</a>
+                    </p>
+                </div>
+            </div>
+        
+            <!-- COMPARISON METRIC -->
+            <div class="row content-flex-wrap" style="margin-top:3em; margin-bottom:3em;">
+                <div class="col-xs-12 col-md-8">
+                    <h3>Comparison Metric</h3>
+                    <p class="intro-paragraph" style="text-align: justify;">
+                        To compare computational models to human brains we use representational similarity 
+                        analysis (RSA). The idea is that if models and brains are similar, then they treat the 
+                        same images as similar or dissimilar. Using RSA allows us to compare human brains and 
+                        models at the relevant level of representations in spite of the numerous differences 
+                        between them (e.g. in-silico vs. biological). <br>
+                        <a href="rsa.html">Click here to learn about RSA and the comparison metric</a>
+                    </p>
+                </div>
+                <div class="col-xs-12 col-md-4 img-align">
+                    <a href="rsa.html">
+                        <img src="../img/icon_comparison_metrics_v3.png" style="max-width:100%">  
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="challenge intro-section-padding" id="challenge_datarelease">
+        <div class="container">
+            <h2 style="margin-bottom: 1em">Challenge Data Release</h2>
+            
+            <!-- CHALLENGE TRAINING DATA -->
+            <div class="row" style="display:flex; margin-top:3em; margin-bottom:3em;">
+                <div class="col-md-12">
+                    <p class="intro-paragraph" style="text-align: justify;">
+                        You can submit your model out of the box without any further training. However, we 
+                        provide training brain data that can help optimize your model for predicting brain data. <br><br>
+                        <b>Download the training data, test images, and development kit for the Algonauts Project 2019 <a style="font-size: 20px" href="https://forms.gle/VajU1XNMe1EEWFmJA">here</a></b>
+                    </p>
+                    <h3>Training Data</h3>
+                    <p class="intro-paragraph" style="text-align: justify">
+
+                        The training data consist of brain activity from both fMRI and MEG in response to viewing images from two sets&mdash;the 92 and 118 sets. For each image set, the fMRI and MEG data are collected from the <i>same</i> 15 human subjects.
+                        For fMRI, the data provided is based on correlation distances for two brain regions, 
+                        EVC and IT and for MEG it is based on correlation distances in two time intervals 
+                        (one corresponding to early brain responses associated with EVC and the other for 
+                        later brain responses associated with IT).
+                    </p>
+                    <div class="col-md-12" style="display: flex; justify-content: center; align-items: center">
+                        <img src="../img/icon_challenge_training_datav2.png" style="height: auto; width: auto; max-width: 90%;"> 
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="row" style="display:flex; margin-top:2em; margin-bottom:2em;" id="challenge_testdata">
+                <div class="col-md-12">
+                    <h3 style="margin-top:1em">Test Data</h3>
+                    <p class="intro-paragraph" style="text-align: justify;">
+                        For the challenge, we provide the 78 test images only. For all test data released post-challenge, please visit the <a href="download.html">Download</a> page.
+                    </p>
+                </div>
+            </div>
+
+            <div class="row" style="display:flex; margin-top:2em; margin-bottom:2em;" id="challenge_devkit">
+                <div class="col-md-12">
+                    <h3 style="margin-top:1em">Development Kit</h3>
+                    <p class="intro-paragraph" style="text-align: justify;">
+                        Sample Python and MATLAB code for generating activations from AlexNet/VGG/ResNet, computing RDMs from these networks, and evaluating model RDMs against human brain data RDMs.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="challenge intro-section-padding" id="challenge_bestpractice">
+        <div class="container">
+            <h2 style="margin-bottom: 1em">Challenge Rules and Best Practice</h2>
+            <div class="row">
+                <div class="col-md-12">
+
+                    <p class="intro-paragraph" style="text-align: justify;">
+                        <b>1.</b> Participants can use any external data for model building. Participants that use the test image set for training will be disqualified (including brain data generated using the test image set).
+                    </p>
+                    <p class="intro-paragraph" style="text-align: justify;">
+                        <b>2.</b> Each participant (single researchers or team) can make 10 submissions per day per track for a maximum of 250 submissions.
+                    </p>
+                    <p class="intro-paragraph" style="text-align: justify;">
+                        <b>3.</b> Participants should be ready to upload a short report (up to 4 pages) describing their model building process for their best 
+                        model to a preprint server (e.g biorxiv or arxiv) or send a PDF by email to algonauts.mit@gmail.com. If you participated in the challenge, use <a href="https://forms.gle/oPNpaL3Pw9ARKwCG8">this form</a> to submit the challenge report.
+                        
+                        <b style='font-weight: 400'>Only teams that submit a report via the above form will be considered for the challenge participation. Submission deadline is July 1, 2019 at 11:59pm (UTC-4).</b>
+
+                    </p>
+                    <p class="intro-paragraph" style="text-align: justify;">
+                        <b>4.</b> <b style='font-weight: 400'>PRIZES FOR WINNERS:</b> top 1 and top 2 entries for each track will receive a travel reimbursement for one attendee to present their method at the <a href="workshop.html">Algonauts Workshop</a> at MIT on July 19-20, 2019. Top 1 entries for each track will receive a gift.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="challenge intro-section-padding" id="challenge_citation">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+
+                    <h2 style="margin-bottom: 1em">Citation</h2>
+                    <p class="intro-paragraph" style="text-align: justify;">
+                        Please refer to <a href="download.html#Citation">this page</a> for guidance on citation if you have used any data associated with the Algonauts Project 2019.
+                    </p>
+                    <p class="intro-paragraph" style="text-align: justify;">
+                        We will provide a more extensive paper including the results of the challenge at a later time point. When published, news will be announced via an update on our <a href="index.html">homepage</a>.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- IMPORTANT DATES -->
+    <section class="challenge section-padding-small" style="background: #3c9fb538" id="challenge_importantdates">
+        <div class="container">
+            <div class="row wow fadeInUp">
+                <div class="col-md-12">
+                    <h2 class="section-heading">Important Dates:</h2>
+                    <ul>
+                        <li>
+                            <b>April 1, 2019:</b> Training data (images, fMRI and MEG data) and Development Kit with evaluation scripts released. Test data (images only) released. [<a href="https://forms.gle/VajU1XNMe1EEWFmJA">Download</a>]</li>
+                        <li>
+                            <b>July 1, 2019 at 11:59pm (UTC-4):</b> Submission deadline.</li>
+                        <li>
+                            <b>July 5, 2019:</b> Challenge results released.</li>
+                        <li>
+                            <b>July 19-20, 2019:</b> Winner(s) are invited to present at the Workshop.</li> <br>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <p class="intro-paragraph" style="text-align: justify;">
+                        <b style='font-weight: 400'>Note:</b> Teams with best submission results will receive an invitation to participate in the <a href="workshop.html">Algonauts Workshop</a>, held at MIT on July 19-20, to give a talk about their method during the workshop. <br> <br>
+                    
+                        <b style='font-weight: 400'>For submitting the challenge report, use <a href="https://forms.gle/oPNpaL3Pw9ARKwCG8">this form</a></b>.
+                        Only teams that submit a report via the above form will be considered for the challenge participation. 
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- TEAM -->
+    <section class="features section-padding-small" id="team">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Team</h2>
+                </div>
+            </div>
+            <!-- CORE MEMBERS controller.js-->
+            <div class="row">
+                <div ng-cloak class="col-md-4 portfolio-box" ng-repeat="member in coreMembers">
+                    <div class="wow zoomIn">
+                        <a href="{{member.url}}">
+                            <img ng-cloak ng-src="../img/team/{{ member.photo }}" class="img-members">
+                        </a>
+                    </div>
+                    <div class="portfolio-box-caption">
+                        <div class="portfolio-box-name">
+                            <h4 ng-cloak>{{member.name}}</h4>
+                        </div>
+                        <div class="portfolio-box-affiliation">
+                            <h5 ng-cloak>{{member.affiliation}}</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- MEMBERS controller.js-->
+            <div class="row">
+                <div class="col-md-3 col-sm-4" ng-repeat="member in members">
+                    <div class="wow zoomIn">
+                        <a href="{{member.url}}">
+                            <img ng-cloak ng-src="../img/team/{{ member.photo }}" class="img-members">
+                        </a>
+                    </div>
+                    <div class="portfolio-box-caption">
+                        <div class="portfolio-box-name">
+                            <h4 ng-cloak>{{member.name}}</h4>
+                        </div>
+                        <div class="portfolio-box-affiliation">
+                            <h5 ng-cloak>{{member.affiliation}}</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="features" id="team">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading section-padding-small">Event Planners</h2>
+                </div>
+            </div>
+            <!-- EVENT PLANNERS controller.js-->
+            <div class="row">
+                <div ng-cloak class="col-md-4 portfolio-box" ng-repeat="member in eventPlanners">
+                    <div class="wow zoomIn">
+                        <a href="{{member.url}}">
+                            <img ng-cloak ng-src="../img/team/{{ member.photo }}" class="img-members">
+                        </a>
+                    </div>
+                    <div class="portfolio-box-caption">
+                        <div class="portfolio-box-name">
+                            <h4 ng-cloak>{{member.name}}</h4>
+                        </div>
+                        <div class="portfolio-box-affiliation">
+                            <h5 ng-cloak>{{member.affiliation}}</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="challenge intro-section-padding" style="background:none" id="sponsors">
+        <div class="container-fluid">
+            <h2 class="section-heading text-center">Sponsors</h2>
+            <div class="row content-flex-wrap">
+                <div class="col-xs-12 col-md-3 img-align">
+                    <a href="https://basicresearch.defense.gov/Programs/Vannevar-Bush-Faculty-Fellowship/" target="_blank">
+                        <img class="img-sponsor" src="../img/logo_vannevarbushDoD.png">
+                    </a>
+                </div>
+                <div class="col-xs-12 col-md-3 img-align">
+                    <a href="https://www.nsf.gov/" target="_blank">
+                        <img class="img-sponsor" src="../img/logo_nsf.png">
+                    </a>
+                </div>
+                <div class="col-xs-12 col-md-3 img-align">
+                    <a href="http://mitibmwatsonailab.mit.edu/" target="_blank">
+                        <img class="img-logo-alt" src="../img/logo_IBMwatson.jpg">
+                    </a>
+                </div>
+                <div class="col-xs-12 col-md-3 img-align">
+                    <a href="https://quest.mit.edu/" target="_blank">
+                        <img class="img-logo-alt" src="../img/logo_quest_black.png">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- FOOTER -->
+    <section class="to-top">
+        <div class="container">
+            <div class="row">
+                <div class="to-top-wrap">
+                    <a href="#top" class="top">
+                        <i class="fa fa-angle-up"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-7">
+                    <div class="footer-links">
+                        <ul class="footer-group">
+                            <li><a href="index.html#about">About</a></li>
+                            <li><a href="challenge.html">Challenge</a></li>
+                            <li><a href="workshop.html">Workshop</a></li>
+                            <li><a href="download.html">Download</a></li>
+                            <li><a href="AlgonautsProject2019_arXiv.pdf">Paper</a></li>
+                            <li><a href="index.html#team">Team</a></li>
+                            <li><a href="index.html#contact">Contact</a></li>
+                            <li><a href="../archive.html">Archive</a></li>
+                        </ul>
+                        <p>
+                            Copyright © The Algonauts Project | <a href="https://accessibility.mit.edu/">Accessibility</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="social-share">
+                    <p>Share Algonauts with your friends</p>
+                    <!-- <a href="#" class="twitter-share">
+                        <i class="fa fa-twitter"></i>
+                    </a> -->
+                    <!-- <a href="#" class="facebook-share">
+                        <i class="fa fa-facebook"></i>
+                    </a> -->
+
+                    <a href="https://twitter.com/intent/tweet?button_hashtag=algonauts2019&ref_src=twsrc%5Etfw" class="twitter-hashtag-button" data-size="large" data-text="Check out the Algonauts Project (http://algonauts.csail.mit.edu), a challenge and workshop hosted @MIT that aims to unite biological and artificial intelligence researchers. Topic for 2019: &quot;Explaining the Human Visual Brain&quot;. Workshop July, 19-20. @MIT_Quest @MITIBMLab" data-related="" data-show-count="false">Tweet #algonauts2019</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                    
+                    <br> <br>
+
+                    <iframe src="https://www.facebook.com/plugins/share_button.php?href=http%3A%2F%2Falgonauts.csail.mit.edu&layout=button_count&size=large&width=91&height=28&appId" width="91" height="28" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script>
+        window.jQuery || document.write('<script src="../js/vendor/jquery-1.11.2.min.js"><\/script>')
+    </script>
+    <script src="../js/jquery.fancybox.pack.js"></script>
+    <script src="../js/vendor/bootstrap.min.js"></script>
+    <script src="../js/vendor/wow.min.js"></script>
+    <script src="../js/scripts.js"></script>
+    <script src="../js/jquery.flexslider-min.js"></script>
+    <script src="../bower_components/classie/classie.js"></script>
+    <script src="../bower_components/jquery-waypoints/lib/jquery.waypoints.min.js"></script>
+    <script src="../node_modules/angular/angular.min.js"></script>
+    <script src="../node_modules/angulargrid/angulargrid.js"></script>
+    <script src="../node_modules/angular-aria/angular-aria.min.js"></script>
+    <script src="../node_modules/angular-material/angular-material.min.js"></script>
+    <script src="../node_modules/angular-animate/angular-animate.min.js"></script>
+    <script src="../node_modules/angular-messages/angular-messages.min.js"></script>
+    <script src="../js/ng/src/app.js"></script>
+    <script src="../js/ng/src/controller.js"></script>
+    <script> function externalLinks() { for (var c = document.getElementsByTagName("a"), a = 0; a < c.length; a++) { var b = c[a]; b.getAttribute("href") && b.hostname !== location.hostname && (b.target = "_blank") } }; externalLinks();</script>
+</body>
+
+</html>

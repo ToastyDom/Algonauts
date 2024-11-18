@@ -1,0 +1,929 @@
+<!doctype html>
+<html ng-app="momentsApp" lang="en">
+
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VCQ9D4SNB4"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-VCQ9D4SNB4');
+    </script>
+    
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Challenge &ndash; Algonauts Project 2021</title>
+    <meta name="description" content="Challenge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Alex Andonian">
+    <link rel="icon" type="image/png" href="favicon.ico" sizes="32x32" />
+    <link rel="stylesheet" href="../css/normalize.min.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/jquery.fancybox.css">
+    <link rel="stylesheet" href="../css/flexslider.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/angulargrid.css">
+    <link rel="stylesheet" href="../css/queries.css">
+    <link rel="stylesheet" href="../css/etline-font.css">
+    <link rel="stylesheet" href="../node_modules/angular-material/angular-material.min.css">
+    <link rel="stylesheet" href="../bower_components/animate.css/animate.min.css">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <script async src="../js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({ tex2jax: { inlineMath: [ ['$','$'], ["\\(","\\)"] ], displayMath: [ ['$$','$$'], ["\\[","\\]"] ], processEscapes:
+        true, processEnvironments: true }, // Center justify equations in code and markdown cells. Elsewhere // we use CSS
+        to left justify single line equations in code cells. displayAlign: 'center', "HTML-CSS": { styles: {'.MathJax_Display':
+        {"margin": 0}}, linebreaks: { automatic: true } } });
+    </script>
+</head>
+
+<body id="top" ng-controller="mainCtrl" ng-cloak>
+    <section class="hero" style="min-height: 600px;">
+        <div style="max-height: 750px; position: absolute;
+                top: 0;
+                bottom: 0;
+                width: 100%;
+                height: 100%;
+                background-color: black;
+                overflow: hidden;">
+            <video src="../img/ap2021_banner_compressed.mp4" autoplay loop muted style="position: absolute;
+                    min-width: 100%;
+                    min-height: 100%;
+                    width: auto;
+                    height: auto;
+                    opacity: 0.6;
+                    top: 0;">
+            </video>        
+            <div class="hero-explore-content text-center" style="display: flex; justify-content: center; align-items: center; height: 100%; width: 100%; flex-direction: column; padding-top: 0; position: absolute;">
+                <h1 style="color: white; font-weight: bold; margin-bottom: 0;">The 2021 Challenge:</h1>
+                <h1 style="font-size: 29px; margin-bottom: 25px; color: white; font-style: italic;"><b>How the Human Brain Makes Sense of a World in Motion</b></h1>
+            </div>
+        </div>
+        <section class="navigation">
+            <header>
+                <div class="header-content">
+                    <div class="logo">
+                        <li><a href="index.html">The Algonauts Project</a></li>
+                    </div>
+                    <div class="header-nav navbar-right">
+                        <nav>
+                            <ul class="primary-nav">
+                                <li><a href="index.html#about">About</a></li>
+                                <li><a href="challenge.html">Challenge</a></li>
+                                <li><a href="brainmappingandanalysis.html">Brain Mapping</a></li>
+                                <li><a href="encoding.html">Encoding Models</a></li>
+                                <li><a href="https://arxiv.org/abs/2104.13714v1" target="_blank">Paper</a></li>
+                                <li><a href="index.html#team">Team</a></li>
+                                <li><a href="index.html#contact">Contact</a></li>
+                                <li><a href="../archive.html">Archive</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="navicon">
+                        <a class="nav-toggle" href="#">
+                            <span></span>
+                        </a>
+                    </div>
+                </div>
+            </header>
+        </section>
+    </section>
+
+    <section class="challenge intro-section-first-padding" id="challenge_about">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h2 style="margin-bottom: 1em" id="challenge_overview">Challenge Overview</h2>
+                    <div style="vertical-align:middle; text-align:center">
+                        <video src="../img/figure_summary_ap2021_v3_compressed.mp4" autoplay loop muted style="
+                            max-width: 100%;">
+                        </video>
+                    </div>
+
+                    <p class="intro-paragraph" style="text-align: justify; margin-top: 1em">
+                        Understanding how the human brain works is one of the key challenges that science and society face. The Algonauts
+                        Challenge proposes a test of how well computational models do today. This test is intrinsically open and
+                        quantitative. This will allow us to precisely assess the progress in explaining the human brain.
+                    </p>
+
+                    <p class="intro-paragraph" style="text-align: justify;">
+                        Our experience of the world is one of objects and persons moving continuously and interacting in events. The primary
+                        target of the 2021 challenge is predicting human brain responses to short video clips of such everyday events.
+                    </p>
+
+                    <p class="intro-paragraph" style="text-align: justify;">
+                        Watching events unfold over time activates large swathes of the human cortex. We pose the question: How well does
+                        your computational model account for that response?
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>  
+
+    <section class="challenge intro-section-padding" id="2tracks">
+        <div class="container">
+            <div class="row wow fadeInUp">
+                <div class="col-md-12">
+
+                    <h2 style="margin-bottom: 1em" id="ChallengeTracks">Competition Tracks</h2>
+
+                    <p class="intro-paragraph" style="text-align: justify;">
+                        The main goal of the Algonauts Project 2021 Challenge is to use computational models to predict brain responses recorded
+                        while participants viewed short video clips of everyday events.
+                    </p>
+                    <p class="intro-paragraph" style="text-align: justify;">
+                        We provide functional MRI data collected from 10 human subjects that watched over 1,000 short video clips. <b style="font-weight:600">
+                        <a href="brainmappingandanalysis.html" class="a-2021">Please click here to learn more about the fMRI brain mapping and analysis that we conducted</a>.</b>
+                        <br /> <br />
+                        <b style="font-weight:600">There are 2 challenge tracks: the <a href="#MiniTrack" class="a-2021">Mini Track</a> and
+                            the <a href="#FullTrack" class="a-2021">Full Track</a></b>. The <span style="font-style:italic">Mini
+                            Track</span>
+                        focuses on pre-specified regions of the visual brain known to play a key role in visual processing. The <span
+                            style="font-style:italic">Full Track</span> considers
+                        responses across the whole brain. Participants can play in the Mini Track, Full Track, or both.
+                    </p>
+                    
+                    <p class="intro-paragraph" style="text-align: justify;" id="MiniTrack">
+                        The task is: Given a) the set of videos of everyday events and b) the corresponding brain responses recorded while
+                        human participants viewed those videos, use computational models to predict brain responses for videos for which we
+                        held out brain data.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row wow fadeInUp">
+                <div class="col-md-12 intro-feature" style="margin-bottom: 1em">
+                    
+                    <div class="challenge-icon">
+                        <span class="icon filter-purple">
+                            <img src="../img/prize.svg" class="icon" style="height:55px;"></img>
+                        </span>
+                    </div>
+
+                    <div class="challenge-content">
+                        <h5 style="font-size: 24px; font-weight:700"><a href="https://competitions.codalab.org/competitions/30930" class="a-2021">Mini Track (9 ROIs)</a></h5>
+                        <p class="challenge-paragraph">
+                            The goal of the Mini Track is to predict brain responses in <b style="font-weight:600">specific regions of interest
+                                (ROIs)</b>, that is pre-specified regions of the brain known to play a key role in visual perception.
+                            Participants submit the <b style="font-weight:600">predicted brain responses for each ROI</b> in the format described in the <a href="#DataRelease"
+                                class="a-2021">development kit</a>. We score the submission by measuring the predictivity for
+                            each voxel in all the ROIs for all the subjects and show the overall mean predictivity in the leaderboard calculated
+                            across voxels, ROIs, and subjects.
+                        </p>
+                        <p class="challenge-paragraph">
+                            We provide the following data for the Mini Track <b style="font-weight:600">(<a
+                                href="https://forms.gle/qq9uqqu6SwN8ytxQ9" class="a-2021">download here</a>)</b>:
+                            <ul>
+                                <li>
+                                    <b style="font-weight: 600"><i>Training</i> Set</b> <br>
+                                    1,000 3-second videos + fMRI human brain data of 10 subjects in response to viewing muted videos from this set. The data
+                                    is provided for <b style="font-weight:600">9 ROIs of the visual brain</b> (V1, V2, V3, V4, LOC, EBA, FFA, STS,
+                                    PPA) in a Pickle file (e.g. V1.pkl) that contains a <span style="font-style:italic">num_videos</span> x <span style="font-style:italic">num_repetitions</span> x <span
+                                        style="font-style:italic">num_voxels</span> matrix. For each ROI, we selected voxels that showed significant split-half reliability. 
+                                </li>
+                                <li> 
+                                    <b style="font-weight: 600"><i>Test</i> Set</b><br>
+                                    102 3-second videos only (.mp4 format).
+                                </li>
+                                <li> 
+                                    <b style="font-weight: 600">Development Kit</b> <br>
+                                    We provide a development kit to obtain baseline performance provided in the leaderboard. It consists of Python
+                                    scripts to:</li>
+                                <ul>
+                                    <li>
+                                        Extract activations of a computational model (AlexNet) in response to video clips.
+                                    </li>
+                                    <li>
+                                        Train a voxel-wise encoding model using AlexNet activations to predict brain responses, and to evaluate the encoding model using
+                                        cross-validation on the training data.
+                                    </li>
+                                    <li>
+                                        Prepare the predicted brain responses from the trained encoding model in the format required for submission to the challenge.
+                                    </li>
+                                </ul>
+                            </ul>
+                        </p>
+                        <p class="challenge-paragraph">
+                            <b style="font-weight:600"><a href="https://competitions.codalab.org/competitions/30930" class="a-2021">Learn more and participate in the Mini Track here</a></b>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row wow fadeInUp"> 
+                <h3 style="margin-bottom: 0em; margin-top: 0em; text-align:center" id="MiniTrackLeaderboard"><b>Mini Track Leaderboard (Official 2021 Challenge Results)</b></h3>
+                <div style="overflow-x:auto; display: flex;">
+                    <table class="tables-2021-ll">
+                        <tr><th></th>
+                            <th></th>
+                            <th colspan="10" class="table-ll-headers-2021">Noise-Normalized Correlation</th>
+                        <tr><th class="table-ll-headers-2-2021" style="border-left: 0px;">Rank</th>
+                            <th class="table-ll-headers-2-2021">Team Name</th>
+                            <th class="table-ll-headers-2-2021">Challenge Score</th>
+                            <th class="table-ll-headers-2-2021">V1</th>
+                            <th class="table-ll-headers-2-2021">V2</th>
+                            <th class="table-ll-headers-2-2021">V3</th>
+                            <th class="table-ll-headers-2-2021">V4</th>
+                            <th class="table-ll-headers-2-2021">LOC</th>
+                            <th class="table-ll-headers-2-2021">EBA</th>
+                            <th class="table-ll-headers-2-2021">FFA</th>
+                            <th class="table-ll-headers-2-2021">STS</th>
+                            <th class="table-ll-headers-2-2021">PPA</th>
+                        </tr>
+                        <tr><td>1</td>
+                            <td>huze</td>
+                            <td class="table-emphasis">0.7110</td>
+                            <td>0.7063</td>
+                            <td>0.7084</td>
+                            <td>0.7025</td>
+                            <td>0.7412</td>
+                            <td>0.7320</td>
+                            <td>0.7693</td>
+                            <td>0.8059</td>
+                            <td>0.5989</td>
+                            <td>0.6345</td>
+                            <td><a href="../reports_2021/report_huze.pdf" class="a-2021">Report</a></td>
+                        </tr>
+                        <tr><td>2</td>
+                            <td>bionn</td>
+                            <td class="table-emphasis">0.6490</td>
+                            <td>0.6497</td>
+                            <td>0.6564</td>
+                            <td>0.6495</td>
+                            <td>0.6862</td>
+                            <td>0.6950</td>
+                            <td>0.7129</td>
+                            <td>0.7161</td>
+                            <td>0.4930</td>
+                            <td>0.5820</td>
+                            <td><a href="../reports_2021/report_bionn.pdf" class="a-2021">Report</a></td>
+                        </tr>
+                        <tr><td>3</td>
+                            <td>shinji</td>
+                            <td class="table-emphasis">0.6208</td>
+                            <td>0.6557</td>
+                            <td>0.6308</td>
+                            <td>0.6038</td>
+                            <td>0.6208</td>
+                            <td>0.6570</td>
+                            <td>0.6748</td>
+                            <td>0.6654</td>
+                            <td>0.4970</td>
+                            <td>0.5816</td>
+                            <td><a href="../reports_2021/report_shinji.pdf" class="a-2021">Report</a></td>
+                        </tr>
+                        <tr><td>4</td>
+                            <td>Hc33</td>
+                            <td class="table-emphasis">0.5917</td>
+                            <td>0.5594</td>
+                            <td>0.5525</td>
+                            <td>0.5469</td>
+                            <td>0.5901</td>
+                            <td>0.6491</td>
+                            <td>0.6649</td>
+                            <td>0.6999</td>
+                            <td>0.4971</td>
+                            <td>0.5653</td>
+                            <td><a href="../reports_2021/report_Hc33.pdf" class="a-2021">Report</a></td>
+                        </tr>
+                        <tr><td>5</td>
+                            <td>rob_the_builder</td>
+                            <td class="table-emphasis">0.5884</td>
+                            <td>0.5835</td>
+                            <td>0.5530</td>
+                            <td>0.5484</td>
+                            <td>0.5894</td>
+                            <td>0.6259</td>
+                            <td>0.6574</td>
+                            <td>0.7128</td>
+                            <td>0.4877</td>
+                            <td>0.5376</td>
+                            <td><a href="../reports_2021/report_rob_the_builder.pdf" class="a-2021">Report</a>+<a href="https://github.com/RobertTLange/algonauts-2021" class="a-2021">Code</a></td>
+                        </tr>
+                        <tr><td>6</td>
+                            <td>Aakashagr</td>
+                            <td class="table-emphasis">0.5843</td>
+                            <td>0.5812</td>
+                            <td>0.5507</td>
+                            <td>0.5397</td>
+                            <td>0.5529</td>
+                            <td>0.6411</td>
+                            <td>0.6512</td>
+                            <td>0.7213</td>
+                            <td>0.4927</td>
+                            <td>0.5276</td>
+                        </tr>
+                        <tr><td>7</td>
+                            <td>NeuBCI</td>
+                            <td class="table-emphasis">0.5760</td>
+                            <td>0.5300</td>
+                            <td>0.4999</td>
+                            <td>0.5509</td>
+                            <td>0.5510</td>
+                            <td>0.6370</td>
+                            <td>0.6462</td>
+                            <td>0.7347</td>
+                            <td>0.5168</td>
+                            <td>0.5176</td>
+                        </tr>
+                        <tr><td>8</td>
+                            <td>arnenix</td>
+                            <td class="table-emphasis">0.5715</td>
+                            <td>0.6323</td>
+                            <td>0.6172</td>
+                            <td>0.5668</td>
+                            <td>0.5454</td>
+                            <td>0.5680</td>
+                            <td>0.5299</td>
+                            <td>0.6969</td>
+                            <td>0.4727</td>
+                            <td>0.5146</td>
+                        </tr>
+                        <tr><td>9</td>
+                            <td>michaln</td>
+                            <td class="table-emphasis">0.5710</td>
+                            <td>0.4985</td>
+                            <td>0.5019</td>
+                            <td>0.5223</td>
+                            <td>0.5801</td>
+                            <td>0.6472</td>
+                            <td>0.6470</td>
+                            <td>0.7074</td>
+                            <td>0.4842</td>
+                            <td>0.5504</td>
+                            <td><a href="../reports_2021/report_michaln.pdf" class="a-2021">Report</a></td>
+                        </tr>
+                        <tr><td>10</td>
+                            <td>rematchka</td>
+                            <td class="table-emphasis">0.5674</td>
+                            <td>0.5830</td>
+                            <td>0.5678</td>
+                            <td>0.5421</td>
+                            <td>0.5521</td>
+                            <td>0.6117</td>
+                            <td>0.6172</td>
+                            <td>0.6566</td>
+                            <td>0.4588</td>
+                            <td>0.5169</td>
+                            <td><a href="../reports_2021/report_rematchka.pdf" class="a-2021">Report</a></td>
+                        </tr>
+                        <tr><td>11</td>
+                            <td>ikeroulu</td>
+                            <td class="table-emphasis">0.4527</td>
+                            <td>0.3865</td>
+                            <td>0.3895</td>
+                            <td>0.4159</td>
+                            <td>0.4539</td>
+                            <td>0.5385</td>
+                            <td>0.5440</td>
+                            <td>0.5626</td>
+                            <td>0.3726</td>
+                            <td>0.4104</td>
+                        </tr>
+                        <tr><td>12</td>
+                            <td>Mukesh</td>
+                            <td class="table-emphasis">0.4521</td>
+                            <td>0.3955</td>
+                            <td>0.3867</td>
+                            <td>0.4100</td>
+                            <td>0.4102</td>
+                            <td>0.4786</td>
+                            <td>0.5097</td>
+                            <td>0.5935</td>
+                            <td>0.4418</td>
+                            <td>0.4427</td>
+                        </tr>
+                        <tr><td>13</td>
+                            <td>Aryan120804</td>
+                            <td class="table-emphasis">0.4491</td>
+                            <td>0.3421</td>
+                            <td>0.3424</td>
+                            <td>0.3618</td>
+                            <td>0.3957</td>
+                            <td>0.5255</td>
+                            <td>0.5442</td>
+                            <td>0.6368</td>
+                            <td>0.4419</td>
+                            <td>0.4518</td>
+                            <td><a href="../reports_2021/report_Aryan120804.pdf" class="a-2021">Report</a></td>
+                        </tr>
+                        <tr><td>14</td>
+                            <td>sricharan92</td>
+                            <td class="table-emphasis">0.4448</td>
+                            <td>0.5202</td>
+                            <td>0.5016</td>
+                            <td>0.4779</td>
+                            <td>0.4681</td>
+                            <td>0.4269</td>
+                            <td>0.4454</td>
+                            <td>0.4808</td>
+                            <td>0.3154</td>
+                            <td>0.3674</td>
+                        </tr>
+                        <tr><td>15</td>
+                            <td>lingfei</td>
+                            <td class="table-emphasis">0.4397</td>
+                            <td>0.4743</td>
+                            <td>0.4510</td>
+                            <td>0.4074</td>
+                            <td>0.4117</td>
+                            <td>0.4755</td>
+                            <td>0.5065</td>
+                            <td>0.5021</td>
+                            <td>0.3484</td>
+                            <td>0.3806</td>
+                        </tr>
+                        <tr><td>16</td>
+                            <td>AlexNet-OrganizerBaseline</td>
+                            <td class="table-emphasis">0.4198</td>
+                            <td>0.4444</td>
+                            <td>0.4340</td>
+                            <td>0.4052</td>
+                            <td>0.4275</td>
+                            <td>0.4391</td>
+                            <td>0.4439</td>
+                            <td>0.5041</td>
+                            <td>0.3324</td>
+                            <td>0.3478</td>
+                        </tr>
+                    </table>  
+                </div>
+                <p style="font-size:18px; margin-bottom:20px; text-align: center;">
+                    Each brain region is scored based on their noise-normalized correlation with our held-out brain data. The challenge
+                    score is the average noise-normalized correlation across all 9 brain regions. <br>(<a
+                        href="https://competitions.codalab.org/competitions/30930#results" class="a-2021">See the ongoing Mini Track leaderboard here</a> =>
+                    click the blue "Challenge Phase" box)
+                </p>
+
+            </div>
+        </div>
+
+        <div class="container" id="FullTrack">
+            <div class="row wow fadeInUp"> 
+                <div class="col-md-12 intro-feature" style="margin-bottom: 1em">
+                    <div class="challenge-icon">
+                        <span class="icon filter-purple">
+                            <img src="../img/trophy3.svg" class="icon" style="height:55px;"></img>
+                        </span>
+                    </div>
+                    
+                    <div class="challenge-content">
+                        <h5 style="font-size: 24px; font-weight:700"><a href="https://competitions.codalab.org/competitions/30937" class="a-2021">Full Track (Whole Brain)</a></h5>
+                        <p class="challenge-paragraph">
+                            The goal of the Full Track is to predict brain responses <b style="font-weight:600">across the whole brain</b>. 
+                            Participants submit <b style="font-weight:600">predicted whole-brain responses (for the provided set of reliable voxels)</b> in the format 
+                            described in the <a href="#DataRelease" class="a-2021">development kit</a>. We score the submission by measuring the 
+                            predictivity for each voxel in the selected set for all the subjects and display the overall mean predictivity in 
+                            the leaderboard calculated across all voxels and all subjects.
+                        </p>    
+                        <p class="challenge-paragraph">
+                            We provide the following data for the Full Track <b style="font-weight:600">(<a href="https://forms.gle/qq9uqqu6SwN8ytxQ9" class="a-2021">download here</a>)</b>: 
+                            <ul>
+                                <li>
+                                    <b style="font-weight: 600"><i>Training</i> Set</b> <br>
+                                    1,000 3-second videos + fMRI human brain data of 10 subjects in response to viewing muted videos from this set.
+                                    The data is provided for <b style="font-weight:600">selected voxels across the whole brain showing reliable responses to
+                                        videos</b> in a Pickle file
+                                    (e.g. WB.pkl) that contains a <span style="font-style:italic">num_videos</span>
+                                    x <span style="font-style:italic">num_repetitions</span> x <span style="font-style:italic">num_voxels</span> matrix.
+                                    We also provide subject specific masks to visualize which voxels were selected.
+                                    </li>
+                                <li>
+                                    <b style="font-weight: 600"><i>Test</i> Set</b><br>
+                                    102 3-second videos only (.mp4 format).
+                                </li>
+                                <li>
+                                    <b style="font-weight: 600">Development Kit</b> <br>
+                                    We provide a development kit to obtain baseline performance provided in the leaderboard. 
+                                    It consists of Python scripts to:</li>
+                                <ul>
+                                    <li>
+                                        Extract activations of a computational model (AlexNet) in response to video clips.
+                                    </li>
+                                    <li>
+                                        Train a voxel-wise encoding model using AlexNet activations to predict brain responses, and to evaluate the encoding
+                                        model using cross-validation on the training data.
+                                    </li>
+                                    <li>
+                                        Visualize the data in brain space (MNI standard space).
+                                    </li>
+                                    <li>
+                                        Prepare the predicted brain responses from the trained encoding model in the format required for submission to the
+                                        challenge.
+                                    </li>
+                                </ul>
+                        
+                            </ul>
+                        </p>
+                        <p class="challenge-paragraph">
+                            <b style="font-weight:600"><a href="https://competitions.codalab.org/competitions/30937" class="a-2021">Learn more and participate in the Full Track here</a></b>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row wow fadeInUp"> 
+                <h3 style="margin-bottom: 0em; margin-top: 0em; text-align: center" id="FullTrackLeaderboard"><b>Full Track Leaderboard (Official 2021 Challenge Results)</b></h3>
+                <div style="overflow-x:auto; display: flex; justify-content: center;">
+                    <table class="tables-2021-ll">
+                        <tr><th></th>
+                            <th></th>
+                            <th class="table-ll-headers-2021">Noise-Normalized Correlation</th>
+                        <tr><th class="table-ll-headers-2-2021" style="border-left: 0px;">Rank</th>
+                            <th class="table-ll-headers-2-2021">Team Name</th>
+                            <th class="table-ll-headers-2-2021">Challenge Score</th>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>huze</td>
+                            <td class="table-emphasis">0.3733</td>
+                            <td><a href="visualizations_huze.html" class="a-2021">3D Visualization</a></td>
+                            <td><a href="../reports_2021/report_huze.pdf" class="a-2021">Report</a></td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>bionn</td>
+                            <td class="table-emphasis">0.3490</td>
+                            <td><a href="visualizations_bionn.html" class="a-2021">3D Visualization</a></td>
+                            <td><a href="../reports_2021/report_bionn.pdf" class="a-2021">Report</a></td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>shinji</td>
+                            <td class="table-emphasis">0.3395</td>
+                            <td><a href="visualizations_shinji.html" class="a-2021">3D Visualization</a></td>
+                            <td><a href="../reports_2021/report_shinji.pdf" class="a-2021">Report</a></td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Hc33</td>
+                            <td class="table-emphasis">0.3225</td>
+                            <td><a href="visualizations_Hc33.html" class="a-2021">3D Visualization</a></td>
+                            <td><a href="../reports_2021/report_Hc33.pdf" class="a-2021">Report</a></td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>michaln</td>
+                            <td class="table-emphasis">0.3117</td>
+                            <td><a href="visualizations_michaln.html" class="a-2021">3D Visualization</a></td>
+                            <td><a href="../reports_2021/report_michaln.pdf" class="a-2021">Report</a></td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>han_ice</td>
+                            <td class="table-emphasis">0.3109</td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td>Aakashagr</td>
+                            <td class="table-emphasis">0.2993</td>
+                        </tr>
+                        <tr>
+                            <td>8</td>
+                            <td>rematchka</td>
+                            <td class="table-emphasis">0.2641</td>
+                        </tr>
+                        <tr>
+                            <td>9</td>
+                            <td>lingfei</td>
+                            <td class="table-emphasis">0.2401</td>
+                        </tr>
+                        <tr>
+                            <td>10</td>
+                            <td>ikeroulu</td>
+                            <td class="table-emphasis">0.2079</td>
+                        </tr>
+                        <tr>
+                            <td>11</td>
+                            <td>ernest.kirubakaran</td>
+                            <td class="table-emphasis">0.2060</td>
+                        </tr>
+                        <tr>
+                            <td>12</td>
+                            <td>AlexNet-OrganizerBaseline</td>
+                            <td class="table-emphasis">0.2035</td>
+                            <td><a href="visualizations_AlexNet-OrganizerBaseline.html" class="a-2021">3D Visualization</a></td>
+                        </tr>
+                    </table>  
+                </div>
+                <p class="" style="font-size:18px; margin-bottom:20px; text-align: center;">
+                    The challenge score is the average noise-normalized correlation with our held-out brain data across all voxels. <br>(<a
+                        href="https://competitions.codalab.org/competitions/30937#results" class="a-2021">See the ongoing Full Track leaderboard here</a> =>
+                    click the blue "Challenge Phase" box)
+                </p>
+
+            </div>
+
+        </div>
+    </section>
+
+    <section class="challenge intro-section-padding" id="ComparisonMetric">
+        <div class="container">
+            <div class="row content-flex-wrap wow fadeInUp" style="margin-bottom:1em;">
+                <div class="col-xs-12 col-md-8">
+                    <h3>Comparison Metric</h3>
+                    <p class="intro-paragraph" style="text-align: justify;">
+                        To determine how well your models can predict brain responses we compare your submitted synthetic brain data (i.e.
+                        those predicted from your model to the left out video clips) to the empirically measured brain responses. The
+                        comparison is carried out using Pearson's correlation, comparing for each voxel the 102-dimensional vector formed by
+                        the activations for the 102 test set video clips.
+                    </p>
+                    <h3>How to Predict Brain Data Using Computational Models?</h3>
+                    <p class="intro-paragraph" style="text-align: justify;">
+                        There are different ways to predict brain data using computational models. We put close to no restrictions on how
+                        you do so (see <a href="#Rules" class="a-2021">Challenge Rules</a>). However, a commonly used approach is to use voxel-wise encoding models, and we
+                        provide a development kit to implement such a model.<br>
+                        <a href="encoding.html" class="a-2021">Click here to learn more about voxel-wise encoding</a>
+                    </p>
+                </div>
+                <div class="col-xs-12 col-md-4 img-align">
+                    <a href="encoding.html" class="a-2021">
+                        <img src="../img/metric_v2.png" style="max-width:100%">  
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="challenge intro-section-padding" id="DataRelease">
+        <div class="container">
+            <div class="row wow fadeInUp"> 
+                <div class="col-md-12">
+                    <h2 style="margin-bottom: 1em">Challenge Data Release</h2>
+                    <div class="row" style="display:flex; margin-top:1em; margin-bottom:1em;">
+                        <div class="col-md-12">
+                            <p class="intro-paragraph" style="text-align: justify;">
+                                You can watch <a href="https://www.youtube.com/watch?v=TID48cMcneo" class="a-2021" target="_blank">this 4-minute
+                                YouTube video</a> for a quick introduction to the Algonauts dataset and Development Kit. <br> <br>
+                                Once you are ready to get started, 
+                                <b style="font-weight:600"><a style="font-size: 20px" href="https://forms.gle/qq9uqqu6SwN8ytxQ9"
+                                        class="a-2021">click here to download the data for the Algonauts Project 2021
+                                        Challenge</a>.</b> <br>The link to the Development Kit on GitHub is below.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">                 
+            <div class="row content-flex-wrap wow fadeInUp">
+                <div class="col-xs-12 col-md-6">
+                    <h3>Training Data</h3>
+                    <p class="intro-paragraph" style="text-align: justify">
+                        The training data consist of 1,000 different 3-second video clips, plus the fMRI brain responses to them.   
+                    </p>
+                </div>
+
+                <div class="col-xs-12 col-md-6">
+                    <h3 style="margin-top:0em">Test Data</h3>
+                    <p class="intro-paragraph" style="text-align: justify;">
+                        The test data consist of 102 different 3-second video clips only, and we keep the fMRI data held back.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+        
+        <div class="container">                 
+            <div class="row content-flex-wrap wow fadeInUp">                
+                <div class="col-xs-12 col-md-6 img-align">
+                    <video src="../img/ap2021_data_figure_training_v2_compressed.mp4" autoplay loop muted style="
+                        position: relative;
+                        min-width: 100%;
+                        min-height: 100%;
+                        width: 300px;
+                        height: 300px;">
+                    </video>
+                </div>
+
+                <div class="col-xs-12 col-md-6 img-align">
+                    <video src="../img/ap2021_data_figure_test_v2_compressed.mp4" autoplay loop muted style="
+                        position: relative;
+                        min-width: 100%;
+                        min-height: 100%;
+                        width: 300px;
+                        height: 300px;">
+                    </video>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row wow fadeInUp" style="display:flex; margin-top:0em; margin-bottom:0em;" id="Devkit">
+                <div class="col-md-12">
+                    <h3 style="margin-top:0em">Development Kit</h3>
+                    <p class="intro-paragraph" style="text-align: justify;">
+                        We provide a development kit <a href="https://github.com/Neural-Dynamics-of-Visual-Cognition-FUB/Algonauts2021_devkit" class="a-2021">here on GitHub</a> to help you get started. It consists of
+                        Python scripts to:
+                    </p>
+                    <ul>
+                        <li>
+                            Extract activations of a computational model (AlexNet) in response to video clips.
+                        </li>
+                        <li>
+                            Train a voxel-wise encoding model using AlexNet activations to predict brain responses, and to evaluate the encoding
+                            model using cross-validation on the training data.
+                        </li>
+                        <li>
+                            Visualize the prediction results in brain space (MNI standard space).
+                        </li>
+                        <li>
+                            Prepare the predicted brain responses from the trained encoding model in the format required for submission to the
+                            challenge.
+                        </li>
+                    </ul>
+                    <p class="intro-paragraph" style="text-align: justify;">
+                        <br>It is available as a set of Python scripts, or as a easy-to-use <a href="https://colab.research.google.com/drive/1FljzKYPtE5sYoSHQ4g02re3iruEPI0Vz?usp=sharing" class="a-2021" target="_blank">Google Colab</a> where you can prepare challenge submissions online.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="challenge intro-section-padding" id="Rules">
+        <div class="container">
+            <div class="row wow fadeInUp">
+                <div class="col-md-12">
+                    <h2 style="margin-bottom: 1em; margin-top:2em;">Challenge Rules and Best Practices</h2>
+                    <p class="intro-paragraph" style="text-align: justify;">
+                        <b style="font-weight: 600">1.</b> Participants can use any (external) data for model building, any model, and any procedure to predict brain
+                        data with one exception: Participants that use the test set for training will be disqualified (in particular brain
+                        data generated using the test set).
+                    </p>
+                    <p class="intro-paragraph" style="text-align: justify;">
+                        <b style="font-weight: 600">2.</b> Each participant (single researchers or team) can make <b style='font-weight: 600'>1 submission per
+                            day</b> per track.
+                    </p>
+                    <p class="intro-paragraph" style="text-align: justify;">
+                        <b style="font-weight: 600">3.</b> Participants must upload a short report (~4-8 pages) describing their model
+                        building process for their best model to a preprint server (e.g. bioRxiv, arXiv), <b style='font-weight: 600'>or</b>
+                        send a PDF by email to <a href="mailto:algonauts.mit@gmail.com" class="a-2021">algonauts.mit@gmail.com</a>.
+                        <br />Please
+                        use <a
+                            href="https://docs.google.com/forms/d/e/1FAIpQLScp5TZwgxknSFK3S9mgjrvTyrphurdhe8TYQGRCrs5kKbd1Dg/viewform?usp=sf_link"
+                            class="a-2021">this form</a> to submit the challenge report <b style='font-weight: 600'>within 7 days
+                            of the challenge submission deadline to be considered for the evaluation of challenge outcomes. Participants
+                            that do not
+                            make their approach open and transparent cannot be considered.</b> We additionally encourage participants to
+                        make their code available online (e.g. on Github) and link to this during their form submission.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="challenge intro-section-padding" id="Citation">
+        <div class="container">
+            <div class="row wow fadeInUp">
+                <div class="col-md-12">
+                    <h2 style="margin-bottom: 1em">Paper and Citation</h2>
+                    <p class="intro-paragraph" style="text-align: justify;">
+                        If you use the data provided for the Algonauts Project 2021 Challenge please <a href="https://arxiv.org/abs/2104.13714v1" class="a-2021">cite this manuscript</a>.                    
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="challenge intro-section-padding" id="Acknowledgements">
+        <div class="container">
+            <div class="row wow fadeInUp">
+                <div class="col-md-12">
+                    <h2 style="margin-bottom: 1em">Acknowledgements</h2>
+                    <p class="intro-paragraph" style="text-align: justify;">
+                        The experiments were conducted at the Athinoula A. Martinos Imaging Center at the McGovern Institute for Brain Research,
+                        Massachusetts Institute of Technology, on a Siemens PrismaFit 3T scanner (Erlangen, Germany) that was supported with
+                        funding from a NIH Shared Instrumentation Grant Program; specifically, grant number 1S10OD021569.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="challenge intro-section-padding" id="ChallengeDates">
+        <div class="container">
+            <div class="row wow fadeInUp">
+                <div class="col-md-12">
+                    <h2 style="margin-bottom: 1em">Important Dates</h2>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <table class="tables-2021">
+                                <tr class="boxkey-challenge-2021">
+                                    <td>Training data, test data, and development kit released:</td>
+                                    <td>May 1st, 2021</td>
+                                <tr class="boxkey-challenge-2021">
+                                    <td>Challenge submission deadline:</td>
+                                    <td>August 15th, 2021 at 11:59pm (UTC-4)</td>
+                                <tr class="boxkey-challenge-2021">
+                                    <td>Challenge report submission deadline:</td>
+                                    <td>August 22nd, 2021</td>
+                                <tr class="boxkey-challenge-2021">
+                                    <td>Challenge results released:</td>
+                                    <td>August 23rd, 2021</td>
+                                <tr class="boxkey-challenge-2021">
+                                    <td><a href="https://ccneuro.org/" class="a-2021">Session at CCN 2021 (virtual)</a>:</td>
+                                    <td>September 7th, 2021</td>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="challenge intro-section-padding" style="background:none" id="sponsors">
+        <div class="container-fluid">
+            <h2 class="section-heading text-center">Sponsors</h2>
+            <div class="row content-flex-wrap">
+                <div class="col-xs-12 col-md-3 img-align">
+                    <a href="https://basicresearch.defense.gov/Programs/Vannevar-Bush-Faculty-Fellowship/" target="_blank">
+                        <img class="img-sponsor" src="../img/logo_vannevarbushDoD.png">
+                    </a>
+                </div>
+                <div class="col-xs-12 col-md-3 img-align">
+                    <a href="http://mitibmwatsonailab.mit.edu/" target="_blank">
+                        <img class="img-logo-alt" style="height:140px; width:auto" src="../img/logo_mitibm.png">
+                    </a>
+                </div>
+                <div class="col-xs-12 col-md-3 img-align">
+                    <a href="https://erc.europa.eu/" target="_blank">
+                        <img class="img-sponsor" src="../img/logo_erc.png">
+                    </a>
+                </div>
+                <div class="col-xs-12 col-md-3 img-align">
+                    <a href="https://www.dfg.de/en/" target="_blank">
+                        <img class="img-sponsor" style="height:80px" src="../img/logo_dfg.jpg">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="to-top">
+        <div class="container">
+            <div class="row">
+                <div class="to-top-wrap">
+                    <a href="#top" class="top">
+                        <i class="fa fa-angle-up"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-7">
+                    <div class="footer-links">
+                        <ul class="footer-group-2021">
+                            <li><a href="index.html#about">About</a></li>
+                            <li><a href="challenge.html">Challenge</a></li>
+                            <li><a href="brainmappingandanalysis.html">Brain Mapping</a></li>
+                            <li><a href="encoding.html">Encoding Models</a></li>
+                            <li><a href="https://arxiv.org/abs/2104.13714v1" target="_blank">Paper</a></li>
+                            <li><a href="index.html#team">Team</a></li>
+                            <li><a href="index.html#contact">Contact</a></li>
+                            <li><a href="../archive.html">Archive</a></li>
+                        </ul>
+                        <p>
+                            Copyright © The Algonauts Project | <a href="https://accessibility.mit.edu/">Accessibility</a>
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script>
+        window.jQuery || document.write('<script src="../js/vendor/jquery-1.11.2.min.js"><\/script>')
+    </script>
+    <script src="../js/jquery.fancybox.pack.js"></script>
+    <script src="../js/vendor/bootstrap.min.js"></script>
+    <script src="../js/vendor/wow.min.js"></script>
+    <script src="../js/scripts.js"></script>
+    <script src="../js/jquery.flexslider-min.js"></script>
+    <script src="../bower_components/classie/classie.js"></script>
+    <script src="../bower_components/jquery-waypoints/lib/jquery.waypoints.min.js"></script>
+    <script src="../node_modules/angular/angular.min.js"></script>
+    <script src="../node_modules/angulargrid/angulargrid.js"></script>
+    <script src="../node_modules/angular-aria/angular-aria.min.js"></script>
+    <script src="../node_modules/angular-material/angular-material.min.js"></script>
+    <script src="../node_modules/angular-animate/angular-animate.min.js"></script>
+    <script src="../node_modules/angular-messages/angular-messages.min.js"></script>
+    <script src="../js/ng/src/app.js"></script>
+    <script src="../js/ng/src/controller.js"></script>
+    <script> function externalLinks() { for (var c = document.getElementsByTagName("a"), a = 0; a < c.length; a++) { var b = c[a]; b.getAttribute("href") && b.hostname !== location.hostname && (b.target = "_blank") } }; externalLinks();</script>
+</body>
+
+</html>
