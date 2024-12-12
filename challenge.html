@@ -41,11 +41,16 @@
 </head>
 
 <body id="top" ng-controller="mainCtrl">
-    <section class="hero" style="min-height: 400px;">
-        <div style="max-height: 750px; position: absolute; top: 0; bottom: 0; width: 100%; height: 100%; background-color: black; overflow: hidden;">
-            <img src="img/images_website_wallpaper_2_compressed.jpg" style="width: inherit; opacity: 0.7;">
+    <section class="hero" style="position: relative; margin-bottom: -5px;">
+        <div style="position: relative; width: 100%; height: auto; overflow: hidden; z-index: -1;">
+            <video src="img/2024/movie_banner_mixed2.mp4" autoplay loop muted style="display: block; width: 100%; height: auto; z-index: -1;">
+            </video>
+            <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 5; text-align: center; color: white;">
+                <h1 style="color: white; font-weight: bold; margin-bottom: 0;">The 2025 Challenge:</h1>
+                <h1 style="font-size: 29px; margin-bottom: 25px; color: white; font-style: italic;"><b>How the Human Brain Makes Sense of a World in Motion</b></h1>
+            </div>
         </div>
-        <section class="navigation">
+        <section class="navigation" style="position: absolute; top: 0; width: 100%; z-index: 10;">
             <header>
                 <div class="header-content">
                     <div class="logo">
@@ -73,19 +78,9 @@
                 </div>
             </header>
         </section>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-10 col-md-offset-1">
-                    <div class="hero-explore-content text-center">
-                        <h1 style="margin-bottom: 25px; color: white;"><b>The 2023 Challenge:</b></h1>
-                        <h1 style="font-size: 29px; margin-bottom: 25px; color: white; font-style: italic;"><b>How the Human Brain Makes Sense of Natural Scenes</b></h1>
-                    </div>
-                </div>
-            </div>
-        </div>
     </section>
 
-    <section class="challenge intro-section-first-padding" id="challenge_about">
+    <section class="challenge intro-section-first-padding" id="challenge_about" style="padding-top: 400px;">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
@@ -93,13 +88,11 @@
                     <div style="vertical-align:middle; text-align:center">
                         <img src="img/challenge_overview_compressed_1.jpg" style="height: auto; width: auto; max-width: 100%;">
                     </div>
-
                     <p class="intro-paragraph" style="text-align: justify; margin-top: 1em">
                         Understanding how the human brain works is one of the key challenges that science and society face. The Algonauts
                         Challenge proposes a test of how well computational models do today. This test is intrinsically <b style="font-weight: 600">open</b> and
                         <b style="font-weight: 600">quantitative</b>. This will allow us to precisely assess the progress in explaining the human brain.
                     </p>
-
                     <p class="intro-paragraph" style="text-align: justify;">
                         At every blink our eyes are flooded by a massive array of photons&mdash;and yet, we perceive the visual world as ordered and
                         meaningful. The primary target of the 2023 Challenge is predicting human brain responses to complex natural visual scenes, using
@@ -110,6 +103,7 @@
                         Watching a visual scene activates large swathes of the human cortex. We pose the question: How well does your
                         computational model account for these activations?
                     </p>
+
 
                     <div class="col-md-6 col-xs-12" style="margin-bottom: 2em">
                         <div class="responsive-youtube">
