@@ -1467,7 +1467,24 @@ Features-stack
     height: auto; /* Maintain aspect ratio */
 }
 
+.centered-content {
+    display: flex;
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+    height: auto; /* Dynamically adjust height based on content */
+    min-height: 30vh; /* Optional: Set a minimal height for centering */
+    width: 100%; /* Full width of the container */
+    margin: 0 auto; /* Remove any additional horizontal margins */
+    padding: 0; /* Remove any extra padding */
+}
 
+
+.centered-content p {
+    margin-top: 5px; /* Minimal space between the image and caption */
+    margin-bottom: 0; /* Remove extra space below the caption */
+    font-size: 14px; /* Optionally reduce font size for the caption */
+    line-height: 1.4; /* Improve text spacing */
+}
 
 
 /* ==========================================================================
