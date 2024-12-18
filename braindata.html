@@ -207,6 +207,22 @@
     <script src="node_modules/angular-messages/angular-messages.min.js"></script>
     <script src="js/ng/src/app.js"></script>
     <script src="js/ng/src/controller.js"></script>
+    <script>
+        // Scroll event listener to toggle 'nav-scrolled' class
+        // Add 'nav-scrolled' when the user scrolls beyond the hero section
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            const heroSection = document.querySelector('.hero');
+            const heroHeight = heroSection.offsetHeight;
+
+            if (window.scrollY > heroHeight - 100) {
+                header.classList.add('nav-scrolled');
+            } else {
+                header.classList.remove('nav-scrolled');
+            }
+        });
+
+    </script>
     <script> function externalLinks() { for (var c = document.getElementsByTagName("a"), a = 0; a < c.length; a++) { var b = c[a]; b.getAttribute("href") && b.hostname !== location.hostname && (b.target = "_blank") } }; externalLinks();</script>
 </body>
 

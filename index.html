@@ -32,6 +32,7 @@
 </head>
 
 <body id="top" ng-controller="mainCtrl">
+    
     <section class="hero">
         <div style="max-height: 750px;  position: absolute; top: 0; bottom: 0; width:100%; height: 100%; background-color: black; overflow: hidden;">
             <img src="img/index_background_compressedv2.jpg" style="width: 100%; opacity: 0.9" class="filter-me-2025">
@@ -496,6 +497,25 @@
     <script src="js/ng/src/app.js "></script>
     <script src="js/ng/src/controller.js "></script>
     <script> function externalLinks() { for (var c = document.getElementsByTagName("a"), a = 0; a < c.length; a++) { var b = c[a]; b.getAttribute("href") && b.hostname !== location.hostname && (b.target = "_blank") } }; externalLinks();</script>
+    <script>
+        // Scroll event listener to toggle 'nav-scrolled' class
+        // Add 'nav-scrolled' when the user scrolls beyond the hero section
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            const heroSection = document.querySelector('.hero');
+            const heroHeight = heroSection.offsetHeight;
+
+            if (window.scrollY > heroHeight - 100) {
+                header.classList.add('nav-scrolled');
+            } else {
+                header.classList.remove('nav-scrolled');
+            }
+        });
+
+    </script>
+    </body>
+    </html>
+    
 </body>
 
 </html>
