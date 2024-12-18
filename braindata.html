@@ -42,21 +42,21 @@
 </head>
 
 <body id="top" ng-controller="mainCtrl" ng-cloak>
-    <section class="hero" style="min-height: 400px;">
-        <div style="max-height: 750px; position: absolute;
-                top: 0;
-                bottom: 0;
-                width: 100%;
-                height: 100%;
-                background-color: black;
-                overflow: hidden;">
-            <img src="img/images_website_wallpaper_2_compressed.jpg" style="width: inherit; opacity: 0.7;">
-        </div>
-        <div class="hero-explore-content text-center"
-            style="display: flex; justify-content: center; align-items: center; height: 100%; width: 100%; flex-direction: column; padding-top: 0; position: absolute;">
-            <h1 style="margin-bottom: 25px; color: white;"><b>Brain Data</b></h1>
-            <h1 style="font-size: 29px; margin-bottom: 25px; color: white; font-style: italic;"><b>The Algonauts Project 2025</b></h1>
-        </div>
+
+
+    <body id="top" ng-controller="mainCtrl">
+        <section class="hero-video-container" style="position: relative;">
+            <div class="video-wrapper">
+                <video class="full-screen-video" src="img/2024/movie_banner_mixed2.mp4" autoplay loop muted></video>
+                <div class="video-overlay">
+                    <h1 style="color: white; font-weight: bold; margin-bottom: 0;">Brain Data</h1>
+                    <h1 style="font-size: 29px; margin-bottom: 25px; color: white; font-style: italic;">
+                        <b>The Algonauts Project 2025</b>
+                    </h1>
+                </div>
+            </div>
+        </section>
+
         <section class="navigation">
             <header>
                 <div class="header-content">
@@ -233,7 +233,7 @@
         // Add 'nav-scrolled' when the user scrolls beyond the hero section
         window.addEventListener('scroll', function() {
             const header = document.querySelector('header');
-            const heroSection = document.querySelector('.hero');
+            const heroSection = document.querySelector('.hero-video-container');
             const heroHeight = heroSection.offsetHeight;
 
             if (window.scrollY > heroHeight - 100) {

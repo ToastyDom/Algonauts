@@ -1697,16 +1697,16 @@ Features-stack
 
 .hero-video-container {
     position: relative;
-    width: 100%;
-    height: 100vh; /* Full viewport height */
-    overflow: hidden; /* Ensure no overflow */
+    height: 100vh; /* Ensure the video section fills the viewport */
+    overflow: hidden;
 }
 
 .video-wrapper {
-    position: relative;
     width: 100%;
-    height: 100%; /* Fill the entire container */
+    height: 100%; /* Ensure the wrapper matches the container */
+    position: relative;
 }
+
 
 .full-screen-video {
     position: absolute;
