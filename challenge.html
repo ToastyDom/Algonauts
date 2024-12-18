@@ -14,7 +14,7 @@
     
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Challenge &ndash; Algonauts Project 2023</title>
+    <title>Challenge &ndash; Algonauts Project 2025</title>
     <meta name="description" content="Challenge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="author" content="Alex Lascelles">
@@ -42,15 +42,19 @@
 </head>
 
 <body id="top" ng-controller="mainCtrl">
-    <section class="hero" style="position: relative; margin-bottom: -5px;">
-        <div style="position: relative; width: 100%; height: auto; overflow: hidden; z-index: -1;">
-            <video src="img/2024/movie_banner_mixed2.mp4" autoplay loop muted style="display: block; width: 100%; height: auto; z-index: -1;">
-            </video>
-            <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 5; text-align: center; color: white;">
+    <section class="hero-video-container" style="position: relative;">
+        <div class="video-wrapper">
+            <video class="full-screen-video" src="img/2024/movie_banner_mixed2.mp4" autoplay loop muted></video>
+            <div class="video-overlay">
                 <h1 style="color: white; font-weight: bold; margin-bottom: 0;">The 2025 Challenge:</h1>
-                <h1 style="font-size: 29px; margin-bottom: 25px; color: white; font-style: italic;"><b>How the Human Brain Makes Sense of Multimodal Movies</b></h1>
+                <h1 style="font-size: 29px; margin-bottom: 25px; color: white; font-style: italic;">
+                    <b>How the Human Brain Makes Sense of Multimodal Movies</b>
+                </h1>
             </div>
         </div>
+    </section>
+    
+    
         <section class="navigation" style="position: absolute; top: 0; width: 100%; z-index: 10;">
             <header>
                 <div class="header-content">
@@ -79,15 +83,14 @@
                 </div>
             </header>
         </section>
-    </section>
 
-    <section class="challenge intro-section-first-padding" id="challenge_about" style="padding-top: 400px;">
+        <section class="challenge intro-section-first-padding" id="challenge_about">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
                     <h2 style="margin-bottom: 1em" id="challenge_overview">Challenge Overview</h2>
                     <div style="vertical-align:middle; text-align:center">
-                        <img src="img/challenge_overview_compressed_1.jpg" style="height: auto; width: auto; max-width: 100%;">
+                        <img src="img/2024/2025_challenge_overview.png" style="height: auto; width: auto; max-width: 100%;">
                     </div>
                     <p class="intro-paragraph" style="text-align: justify; margin-top: 1em">
                         Understanding how the human brain works is one of the key challenges that science and society face. The Algonauts 
@@ -95,7 +98,7 @@
                         <b style="font-weight: 600">quantitative</b>. This will allow us to precisely assess the progress in explaining the human brain. 
                     </p>
                     <p class="intro-paragraph" style="text-align: justify;">
-                        At every instant, we are flooded by a massive amount of visual, auditory and linguistic information&mdash;and yet, 
+                        At every instant, we are flooded by a massive amount of visual, auditory and linguistic information - and yet, 
                         we perceive the world as ordered and meaningful. The primary target of the 2025 Challenge is predicting human brain 
                         responses to complex naturalistic multimodal movies, using the largest available brain dataset for this purpose.
                     </p>
@@ -167,7 +170,7 @@
                         display the overall mean predictivity in the leaderboard calculated across all parcels and all subjects.
                     </p>
                     <p class="intro-paragraph">
-                        <b style="font-weight: 600"><a href="https://codalab.lisn.upsaclay.fr/competitions/9304" class="a-2021">Participate in the 2023 Challenge</a></b>
+                        <b style="font-weight: 600"><a href="https://www.codabench.org/competitions/4313/" class="a-2021">Participate in the 2025 Challenge</a></b>
                     </p>
                 </div>
             </div>
@@ -273,7 +276,7 @@
                         <a href="https://colab.research.google.com/drive/1fop0zvaLBLBagvJRC-HDqGDSgQElNWZB?usp=sharing" class="a-2021" target="_blank">development kit</a> in
                          Python which accompanies users through the challenge process, following four steps:
                         </p>
-                        <ol class="intro-paragraph" style="text-align: justify; padding-left: 20px;">
+                        <ol class="intro-paragraph" style="text-align: justify; padding-left: 80px;">
                             <li>Familiarizing with the challenge data.</li>
                             <li>Extracting the stimulus features used to train and validate an fMRI encoding model.</li>
                             <li>Training and validating an fMRI encoding model.</li>
@@ -315,7 +318,7 @@
                     <p class="intro-paragraph" style="text-align: justify;">
                         <b style="font-weight: 600">4.</b> To promote open science, challenge participants who wish to be considered for the winners 
                         selection will need to submit a short report (~4-8 pages) describing their encoding algorithm to a preprint server 
-                        (e.g. arXiv, bioRxiv), and send the PDF or preprint link to the Organizers by filling out <a href="https://forms.gle/RbouWUqYrm9pcWMXA" class="a-2021" target="_blank">this form</a>. 
+                        (e.g. <i>arXiv</i>, <i>bioRxiv</i>), and send the PDF or preprint link to the Organizers by filling out <a href="https://forms.gle/RbouWUqYrm9pcWMXA" class="a-2021" target="_blank">this form</a>. 
                         You must submit the challenge report by the <a href="index.html#dates_table" class="a-2021">challenge report submission deadline</a> to be considered for the evaluation
                         of the challenge outcome. Furthermore, while all reports are encouraged to link to their code (e.g. GitHub), the top-3 
                         performing teams are required to make their code openly available. Participants that do not make their approach open and 

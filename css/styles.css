@@ -1487,6 +1487,20 @@ Features-stack
 }
 
 
+.full-width-image {
+    margin: 0 auto; /* Center the entire container horizontally */
+    padding: 0; /* Remove extra padding */
+    max-width: 80%; /* Limit the width of the container to 80% of the page */
+    text-align: center; /* Center-align content within the container */
+}
+
+.centered-img {
+    width: 100%; /* Image spans full width of its container */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Ensure no inline space below the image */
+    margin: 0 auto; /* Center the image horizontally */
+}
+
 /* ==========================================================================
 .features-extra
 ========================================================================== */
@@ -1537,6 +1551,52 @@ Features-stack
     text-align: left;
 }
 
+.prizes-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center items on the page */
+    gap: 20px; /* Add space between prize items */
+    margin-top: 1em;
+}
+
+.prize-item {
+    text-align: center;
+    background-color: #f9f9f9; /* Light gray background for distinction */
+    padding: 15px;
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    max-width: 500px; /* Limit the width for better readability */
+    width: 100%; /* Ensure responsiveness */
+}
+
+.prize-item h4 {
+    margin: 0;
+    font-size: 1.5em;
+    color: #333;
+    font-weight: bold;
+}
+
+.prize-item p {
+    margin: 0.5em 0 0;
+    font-size: 1em;
+    color: #555;
+    line-height: 1.6;
+}
+
+#prizes {
+    text-transform: uppercase;
+    font-size: 1.8em;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 0.5em;
+}
+
+#CCN {
+    margin-top: 1.5em;
+    font-size: 1em;
+    line-height: 1.6;
+    color: #555;
+}
 
 
 
@@ -1586,6 +1646,39 @@ Features-stack
     transform: translateX(-50%);
 }
 
+
+.hero-video-container {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Full viewport height */
+    overflow: hidden; /* Ensure no overflow */
+}
+
+.video-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%; /* Fill the entire container */
+}
+
+.full-screen-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; /* Ensures the video spans full width */
+    height: 100%; /* Ensures the video spans full height */
+    object-fit: cover; /* Maintains aspect ratio, filling the container */
+    object-position: center; /* Centers the video content */
+}
+
+.video-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 5;
+    text-align: center;
+    color: white;
+}
 
 /* ==========================================================================
 .blog-intro
