@@ -1126,24 +1126,58 @@ Intro
 
 
 /* ==========================================================================
-Team
+Team Section
 ========================================================================== */
 
-.img-members {
-    border-radius: 50%;
-    width: 150px;
-    height: 150px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+.team-section {
+    background-color: #f9f9f9; /* Light gray background */
+    padding: 50px 0; /* Top and bottom padding */
+    width: 100%; /* Full width */
+}
+
+.container-fluid .row {
+    display: flex;
+    justify-content: center; /* Center members horizontally */
+    flex-wrap: wrap; /* Allow wrapping to new rows */
+    gap: 15px; /* Space between members in the same row */
+    margin-bottom: 30px !important; /* Ensure there is space between rows */
 }
 
 .portfolio-box {
-    margin-bottom: 5%;
+    max-width: 250px; /* Consistent size for member cards */
+    text-align: center; /* Center-align text */
+    background-color: white; /* White background for the card */
+    padding: 15px; /* Internal spacing for the card */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.img-members {
+    border-radius: 50%; /* Circular images */
+    width: 150px; /* Fixed width for images */
+    height: 150px; /* Fixed height for images */
+    display: block; /* Center within parent */
+    margin: 0 auto; /* Center horizontally */
 }
 
 .portfolio-box-caption {
     text-align: center;
+    margin-top: 10px; /* Space between image and text */
+}
+
+
+
+/* ==========================================================================
+Spacing Adjustments
+========================================================================== */
+
+.container-fluid .row {
+    gap: 15px; /* Reduced space between boxes in the same row */
+    margin-bottom: 0; /* Minimized space between rows */
+}
+
+.portfolio-box {
+    margin-bottom: 0; /* Remove extra margin between rows */
 }
 
 /* ==========================================================================
@@ -1435,6 +1469,35 @@ Features-stack
     z-index: 4;
     left: 50%;
 }
+
+
+/* ==========================================================================
+.prize-list
+========================================================================== */
+
+.prize-list {
+    margin: 0;
+    padding: 0;
+    line-height: 1.5; /* Reduce vertical spacing */
+}
+
+.prize-list span {
+    display: block;
+    margin: 0; /* Remove extra space between rows */
+    text-indent: 0; /* Start text flush */
+    padding-left: 7em; /* Adjust space for label alignment */
+    position: relative;
+}
+
+.prize-list span b {
+    position: absolute; /* Keep the bold label fixed */
+    left: 0; /* Align label to the left */
+    width: 30em; /* Reserve space for the label */
+    display: inline-block; /* Align label inline */
+    text-align: left;
+}
+
+
 
 
 /* ==========================================================================
