@@ -571,73 +571,197 @@
     </section>
 
 
-    <!-- TEAM -->
     <section class="features section-padding-small" id="team">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">Team</h2>
+                    <h2 class="section-heading">Challenge and Workshop Team</h2>
                 </div>
             </div>
-            <!-- CORE MEMBERS controller.js-->
-            <div class="row">
-                <div ng-cloak class="col-md-4 portfolio-box" ng-repeat="member in coreMembers">
-                    <div class="wow zoomIn">
-                        <a href="{{member.url}}">
-                            <img ng-cloak ng-src="../img/team/{{ member.photo }}" class="img-members">
-                        </a>
-                    </div>
-                    <div class="portfolio-box-caption">
+    
+            <!-- Team Leaders -->
+            <div class="row justify-content-center">
+                <!-- Team Leader 1 -->
+                <div class="col-md-4 portfolio-box">
+                    <a href="http://userpage.fu-berlin.de/rmcichy/" class="a-2021">
+                        <img src="../img/team/radek.png" alt="Radoslaw Cichy" class="img-members">
+                    </a>
+                    <div class="portfolio-box-caption text-center">
                         <div class="portfolio-box-name">
-                            <h4 ng-cloak>{{member.name}}</h4>
+                            <h4>Team Leader: Radoslaw Cichy</h4>
                         </div>
                         <div class="portfolio-box-affiliation">
-                            <h5 ng-cloak>{{member.affiliation}}</h5>
+                            <h5>Research Group Leader, Freie Universität Berlin</h5>
                         </div>
                     </div>
                 </div>
-            </div>
-            <!-- MEMBERS controller.js-->
-            <div class="row">
-                <div class="col-md-3 col-sm-4" ng-repeat="member in members">
-                    <div class="wow zoomIn">
-                        <a href="{{member.url}}">
-                            <img ng-cloak ng-src="../img/team/{{ member.photo }}" class="img-members">
-                        </a>
-                    </div>
-                    <div class="portfolio-box-caption">
+                <!-- Team Leader 2 -->
+                <div class="col-md-4 portfolio-box">
+                    <a href="http://olivalab.mit.edu/" class="a-2021">
+                        <img src="../img/team/aude.jpg" alt="Aude Oliva" class="img-members">
+                    </a>
+                    <div class="portfolio-box-caption text-center">
                         <div class="portfolio-box-name">
-                            <h4 ng-cloak>{{member.name}}</h4>
+                            <h4>Team Leader: Aude Oliva</h4>
                         </div>
                         <div class="portfolio-box-affiliation">
-                            <h5 ng-cloak>{{member.affiliation}}</h5>
+                            <h5>Principal Research Scientist, MIT</h5>
+                        </div>
+                    </div>
+                </div>
+                <!-- Team Leader 3 -->
+                <div class="col-md-4 portfolio-box">
+                    <a href="http://www.cvai.cs.uni-frankfurt.de/" class="a-2021">
+                        <img src="../img/team/gemma.jpg" alt="Gemma Roig" class="img-members">
+                    </a>
+                    <div class="portfolio-box-caption text-center">
+                        <div class="portfolio-box-name">
+                            <h4>Team Leader: Gemma Roig</h4>
+                        </div>
+                        <div class="portfolio-box-affiliation">
+                            <h5>Assistant Professor, SUTD</h5>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-    <section class="features" id="team">
-        <div class="container-fluid">
+    
+            <!-- Other Team Members -->
+            <div class="row">
+                <!-- Member 1 -->
+                <div class="col-md-3 portfolio-box">
+                    <a href="https://www.alexandonian.com/" class="a-2021">
+                        <img src="../img/team/alex.jpg" alt="Alex Andonian" class="img-members">
+                    </a>
+                    <div class="portfolio-box-caption">
+                        <div class="portfolio-box-name">
+                            <h4>Alex Andonian</h4>
+                        </div>
+                        <div class="portfolio-box-affiliation">
+                            <h5>Research Assistant, MIT</h5>
+                        </div>
+                    </div>
+                </div>
+                <!-- Member 2 -->
+                <div class="col-md-3 portfolio-box">
+                    <a href="https://kshitijd20.github.io/" class="a-2021">
+                        <img src="../img/team/kshitij.jpg" alt="Kshitij Dwivedi" class="img-members">
+                    </a>
+                    <div class="portfolio-box-caption">
+                        <div class="portfolio-box-name">
+                            <h4>Kshitij Dwivedi</h4>
+                        </div>
+                        <div class="portfolio-box-affiliation">
+                            <h5>PhD Student, SUTD</h5>
+                        </div>
+                    </div>
+                </div>
+                <!-- Member 3 -->
+                <div class="col-md-3 portfolio-box">
+                    <a href="https://www.linkedin.com/in/benlahner/" class="a-2021">
+                        <img src="../img/team/ben.jpg" alt="Benjamin Lahner" class="img-members">
+                    </a>
+                    <div class="portfolio-box-caption">
+                        <div class="portfolio-box-name">
+                            <h4>Benjamin Lahner</h4>
+                        </div>
+                        <div class="portfolio-box-affiliation">
+                            <h5>Research Assistant, MIT</h5>
+                        </div>
+                    </div>
+                </div>
+                <!-- Member 4 -->
+                <div class="col-md-3 portfolio-box">
+                    <a href="https://www.linkedin.com/in/alexlascelles/" class="a-2021">
+                        <img src="../img/team/alex_lascelles.jpg" alt="Alex Lascelles" class="img-members">
+                    </a>
+                    <div class="portfolio-box-caption">
+                        <div class="portfolio-box-name">
+                            <h4>Alex Lascelles</h4>
+                        </div>
+                        <div class="portfolio-box-affiliation">
+                            <h5>Research Assistant, MIT</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="row">
+                <!-- Member 5 -->
+                <div class="col-md-3 portfolio-box">
+                    <a href="https://mohsenzadehlab.com/" class="a-2021">
+                        <img src="../img/team/yalda.jpg" alt="Yalda Mohsenzadeh" class="img-members">
+                    </a>
+                    <div class="portfolio-box-caption">
+                        <div class="portfolio-box-name">
+                            <h4>Yalda Mohsenzadeh</h4>
+                        </div>
+                        <div class="portfolio-box-affiliation">
+                            <h5>Postdoctoral Researcher, MIT</h5>
+                        </div>
+                    </div>
+                </div>
+                <!-- Member 6 -->
+                <div class="col-md-3 portfolio-box">
+                    <a href="https://people.csail.mit.edu/krama/" class="a-2021">
+                        <img src="../img/team/kandan.jpg" alt="Kandan Ramakrishnan" class="img-members">
+                    </a>
+                    <div class="portfolio-box-caption">
+                        <div class="portfolio-box-name">
+                            <h4>Kandan Ramakrishnan</h4>
+                        </div>
+                        <div class="portfolio-box-affiliation">
+                            <h5>Postdoctoral Researcher, MIT</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Event Planners -->
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2 class="section-heading section-padding-small">Event Planners</h2>
+                    <h2 class="section-heading">Event Planners</h2>
                 </div>
             </div>
-            <!-- EVENT PLANNERS controller.js-->
             <div class="row">
-                <div ng-cloak class="col-md-4 portfolio-box" ng-repeat="member in eventPlanners">
-                    <div class="wow zoomIn">
-                        <a href="{{member.url}}">
-                            <img ng-cloak ng-src="../img/team/{{ member.photo }}" class="img-members">
-                        </a>
-                    </div>
+                <!-- Planner 1 -->
+                <div class="col-md-3 portfolio-box">
+                    <a href="http://web.mit.edu/fernd/www/" class="a-2021">
+                        <img src="../img/team/fern.jpg" alt="Fern Keniston" class="img-members">
+                    </a>
                     <div class="portfolio-box-caption">
                         <div class="portfolio-box-name">
-                            <h4 ng-cloak>{{member.name}}</h4>
+                            <h4>Fern Keniston</h4>
                         </div>
                         <div class="portfolio-box-affiliation">
-                            <h5 ng-cloak>{{member.affiliation}}</h5>
+                            <h5>Program Coordinator and Assistant to the Directors, MIT</h5>
+                        </div>
+                    </div>
+                </div>
+                <!-- Planner 2 -->
+                <div class="col-md-3 portfolio-box">
+                    <a href="https://www.linkedin.com/in/kmartineau/" class="a-2021">
+                        <img src="../img/team/kim.jpg" alt="Kim Martineau" class="img-members">
+                    </a>
+                    <div class="portfolio-box-caption">
+                        <div class="portfolio-box-name">
+                            <h4>Kim Martineau</h4>
+                        </div>
+                        <div class="portfolio-box-affiliation">
+                            <h5>Communications Officer, MIT</h5>
+                        </div>
+                    </div>
+                </div>
+                <!-- Planner 3 -->
+                <div class="col-md-3 portfolio-box">
+                    <a href="https://mitibmwatsonailab.mit.edu/people/samantha-smiley/" class="a-2021">
+                        <img src="../img/team/sam.jpg" alt="Samantha Smiley" class="img-members">
+                    </a>
+                    <div class="portfolio-box-caption">
+                        <div class="portfolio-box-name">
+                            <h4>Samantha Smiley</h4>
+                        </div>
+                        <div class="portfolio-box-affiliation">
+                            <h5>Administrative Assistant, MIT</h5>
                         </div>
                     </div>
                 </div>
