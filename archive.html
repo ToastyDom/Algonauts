@@ -75,6 +75,17 @@
                             </ul>
                         </nav>
                     </div>
+                    <div class="nav-overlay">
+                        <nav class="overlay-nav">
+                            <ul>
+                                <li><a href="index.html">2025</a></li>
+                                <li><a href="2023/index.html">2023</a></li>
+                                <li><a href="2021/index.html">2021</a></li>
+                                <li><a href="2019/index.html">2019</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    
                     <div class="navicon">
                         <a class="nav-toggle" href="#">
                             <span></span>
@@ -212,6 +223,28 @@
     <script src="node_modules/angular-messages/angular-messages.min.js"></script>
     <script src="js/ng/src/app.js"></script>
     <script src="js/ng/src/controller.js"></script>
+    <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const navToggle = document.querySelector('.nav-toggle');
+        const navOverlay = document.querySelector('.nav-overlay');
+        const navLinks = document.querySelectorAll('.overlay-nav ul li a');
+    
+        // Toggle the overlay when hamburger menu is clicked
+        navToggle.addEventListener('click', function (event) {
+            event.preventDefault();
+            navOverlay.classList.toggle('open');
+            navToggle.classList.toggle('active');
+        });
+    
+        // Close the overlay when a navigation link is clicked
+        navLinks.forEach(function (link) {
+            link.addEventListener('click', function () {
+                navOverlay.classList.remove('open');
+                navToggle.classList.remove('active');
+            });
+        });
+    });
+    </script>
     <script>
         // Scroll event listener to toggle 'nav-scrolled' class
         // Add 'nav-scrolled' when the user scrolls beyond the hero section

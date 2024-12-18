@@ -54,6 +54,20 @@
                             </ul>
                         </nav>
                     </div>
+                    <div class="nav-overlay">
+                        <nav class="overlay-nav">
+                            <ul>
+                                <li><a href="index.html#about" class="a-2021">About</a></li>
+                                <li><a href="challenge.html" class="a-2021">Challenge</a></li>
+                                <li><a href="brainmappingandanalysis.html">Brain Mapping</a></li>
+                                <li><a href="encoding.html">Encoding Models</a></li>
+                                <li><a href="https://arxiv.org/abs/2104.13714v1" target="_blank">Paper</a></li>
+                                <li><a href="index.html#team" class="a-2021">Team</a></li>
+                                <li><a href="index.html#contact" class="a-2021">Contact</a></li>
+                                <li><a href="../archive.html">Archive</a></li>
+                            </ul>
+                        </nav>
+                    </div>
                     <div class="navicon">
                         <a class="nav-toggle" href="#"><span></span></a>
                     </div>
@@ -563,6 +577,28 @@
     <script src="../node_modules/angular-messages/angular-messages.min.js "></script>
     <script src="../js/ng/src/app.js "></script>
     <script src="../js/ng/src/controller.js "></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const navToggle = document.querySelector('.nav-toggle');
+            const navOverlay = document.querySelector('.nav-overlay');
+            const navLinks = document.querySelectorAll('.overlay-nav ul li a');
+
+            // Toggle the overlay when hamburger menu is clicked
+            navToggle.addEventListener('click', function (event) {
+                event.preventDefault();
+                navOverlay.classList.toggle('open');
+                navToggle.classList.toggle('active');
+            });
+
+            // Close the overlay when a navigation link is clicked
+            navLinks.forEach(function (link) {
+                link.addEventListener('click', function () {
+                    navOverlay.classList.remove('open');
+                    navToggle.classList.remove('active');
+                });
+            });
+        });
+    </script>
     <script>
         window.addEventListener('scroll', function() {
             const header = document.querySelector('header');
