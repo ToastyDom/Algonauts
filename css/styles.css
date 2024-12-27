@@ -909,10 +909,24 @@ Hero
 
 
 header.nav-scrolled {
-    background: rgba(0, 0, 0, 0.95); /* Solid black */
-    padding: 30px 0; /* Further reduce padding when scrolled */
-    transition: background 0.3s ease-in-out, padding 0.3s ease-in-out;
+    position: fixed; /* Make the header fixed at the top */
+    top: 0; /* Ensure it stays at the very top */
+    left: 0; /* Align to the left edge */
+    width: 100%; /* Cover the full width of the viewport */
+    background-color: black; /* Black background for the bar */
+    z-index: 1000; /* Ensure it stays above other elements */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Optional: Add a subtle shadow for a nice effect */
 }
+
+header.nav-scrolled .navicon {
+    position: absolute; /* Position it relative to the header */
+    top: 50%; /* Center it vertically */
+    right: 20px; /* Keep it aligned to the right */
+    transform: translateY(-50%); /* Offset to achieve vertical centering */
+    z-index: 1100; /* Ensure it stays on top of the black bar */
+}
+
+
 
 .header-content {
     max-width: 1170px; /* Center content within a fixed width */
@@ -1198,6 +1212,15 @@ Team Section
     padding: 15px; /* Internal spacing for the card */
     border-radius: 8px; /* Rounded corners */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    text-decoration: none; /* Remove underline from links */
+    color: inherit; /* Inherit text color for a cleaner look */
+    display: inline-block; /* Ensure proper display as a block element */
+    transition: transform 0.2s ease, box-shadow 0.2s ease; /* Add hover effects */
+}
+
+.portfolio-box:hover {
+    transform: translateY(-5px); /* Lift the card on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
 }
 
 .img-members {
@@ -1212,6 +1235,7 @@ Team Section
     text-align: center;
     margin-top: 10px; /* Space between image and text */
 }
+
 
 
 
@@ -1509,6 +1533,21 @@ Features-stack
     margin: 0; /* Remove any default margins */
     padding: 0; /* Remove any default padding */
 }
+
+.large-image-container {
+    text-align: center; /* Ensures text alignment is centered */
+    width: 100%; /* Full width of the container */
+}
+
+.large-image {
+    max-width: 80%; /* Adjust the size of the image */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Prevent inline alignment with other elements */
+    margin: 0 auto; /* Center the image */
+}
+
+
+
 
 .fitted-image {
     max-width: 100%; /* Ensure the image doesn't exceed the container's width */

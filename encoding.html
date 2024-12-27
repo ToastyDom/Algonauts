@@ -18,7 +18,7 @@
     <meta name="description" content="Challenge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="author" content="Alex Lascelles">
-    <link rel="icon" type="image/png" href="favicon.ico" sizes="32x32" />
+    <link rel="icon" id="favicon" type="image/png" href="img/2024/logo_icon_light.png" sizes="32x32" />
     <link rel="stylesheet" href="css/normalize.min.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/jquery.fancybox.css">
@@ -38,6 +38,24 @@
         true, processEnvironments: true }, // Center justify equations in code and markdown cells. Elsewhere // we use CSS
         to left justify single line equations in code cells. displayAlign: 'center', "HTML-CSS": { styles: {'.MathJax_Display':
         {"margin": 0}}, linebreaks: { automatic: true } } });
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const favicon = document.getElementById('favicon');
+            const updateFavicon = () => {
+                if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                    favicon.href = 'img/2024/logo_icon_dark.png';
+                } else {
+                    favicon.href = 'img/2024/logo_icon_light.png';
+                }
+            };
+
+            // Initial check
+            updateFavicon();
+
+            // Listen for changes in the color scheme
+            window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', updateFavicon);
+        });
     </script>
 </head>
 
@@ -105,15 +123,15 @@
             <div class="row">
                 <div class="col-md-12">
                     <p class="intro-paragraph" style="text-align: justify; margin-top: 2em">
-                        There are different ways to relate brain measurements to computational models. 
-                        For example, the <a href="./2019/index.html" class="a-2021">2019 edition of the Algonauts challenge</a>  used representational similarity analysis (RSA, <a href="https://doi.org/10.3389/neuro.06.004.2008" class="a-2021" target="_blank">Kriegeskorte et al. 2008</a>).
-                    </p>
-
-                    <p class="intro-paragraph" style="text-align: justify;">
                         In the 2025 challenge, we leave it up to the challenge participants to determine the approach to predict brain responses 
                         (see <a href="challenge.html#Rules" class="a-2021">Challenge Rules</a>). As an example, we guide the reader through one common approach called linearizing encoding 
-                        (<a href="https://doi.org/10.1016/j.neuroimage.2010.07.073" class="a-2021" target="_blank">Naselaris et al., 2011</a>; <a href="https://doi.org/10.1146/annurev.neuro.29.051605.113024" class="a-2021" target="_blank">Wu et al., 2006</a>), where the response of each fMRI parcel is predicted independently 
-                        using the multiple stimulus features provided by a computational model (linear regression is typically used to form the prediction).
+                        (<a href="https://doi.org/10.1146/annurev.neuro.29.051605.113024" class="a-2021" target="_blank">Wu et al., 2006</a>,
+                        <a href="https://doi.org/10.1038/nature06713" class="a-2021" target="_blank">Kay et al., 2008</a>; 
+                        <a href="https://doi.org/10.1016/j.neuroimage.2010.07.073" class="a-2021" target="_blank">Naselaris et al., 2011</a>;
+                        <a href="https://doi.org/10.1038/nn.4244" class="a-2021" target="_blank">Yamins & DiCarlo, 2016</a>; 
+                        <a href="https://doi.org/10.1016/j.conb.2019.04.002" class="a-2021" target="_blank">Kriegeskorte & Douglas, 2019</a>)
+                        where the response of each fMRI parcel is predicted independently using the multiple stimulus features provided by a 
+                        computational model (linear regression is typically used to form the prediction).
                     </p>
 
                     <p class="intro-paragraph" style="text-align: justify;">
@@ -124,7 +142,7 @@
                     <div class="row wow fadeInUp centered-content"> 
                         <div class="col-md-8">
                             <img src="img/2024/linearizing_encoding_algorithm.png" alt="Figure 1" class="img-fluid fitted-image">
-                            <p style="font-style: italic; color: #666;"><b style="font-weight: 600;">Figure 1 | Linearizing encoding approach.</b>  a) First, we use a computational 
+                            <p style="font-style: italic; color: #666; margin-top: 10px; font-size: 1.4em;"><b style="font-weight: 600;">Figure 1 | Linearizing encoding approach.</b>  a) First, we use a computational 
                                 model to extract the visual, audio and language features for the training movie stimuli. 
                                 b) Next, we  train a linear mapping (via regression) between these stimulus features and the
                                 brain parcel activity responses for the same training movie stimuli.  
@@ -141,7 +159,7 @@
                     <p class="intro-paragraph" style="text-align: justify;">
                         <b style="font-weight: 600">Step 1: Feature extraction.</b> The features for the training movie stimuli 
                         are extracted using computational models (<b style="font-weight: 600;">Figure 1a</b>).This changes the format of the data from pixels, 
-                        audio samples or text, to model features. The features of a given model are interpreted as a potential 
+                        audio samples or text (language transcripts), to model features. The features of a given model are interpreted as a potential 
                         hypothesis about the features that the brain uses to represent the stimuli.
                     </p>
 
@@ -166,22 +184,31 @@
 
                     <h3 style="margin-bottom: 1em" id="refs">References</h3>
                     <p class="intro-paragraph" style="text-align: justify;">
-                        Kriegeskorte, N., Mur, M., & Bandettini, P. A. (2008). Representational similarity analysis-connecting the branches of systems neuroscience. 
-                        Frontiers in systems neuroscience, 2, 4. DOI: <a
-                            href="https://doi.org/10.3389/neuro.06.004.2008" class="a-2021">https://doi.org/10.3389/neuro.06.004.2008</a>
+                        Wu, M. C.-K., David, S. V., & Gallant, J. L. (2006). Complete Functional Characterization of Sensory Neurons by System Identification. 
+                        Annual Review of Neuroscience, 29(1), 477–505. DOI: <a href="https://doi.org/10.1146/annurev.neuro.29.051605.113024" class="a-2021">
+                        https://doi.org/10.1146/annurev.neuro.29.051605.113024</a>
+                    </p>
+                    <p class="intro-paragraph" style="text-align: justify;">
+                        Kay, K.N., Naselaris, T., Prenger, R.J. and Gallant, J.L. (2008). Identifying natural images from human brain activity. 
+                        Nature, 452(7185), pp.352-355. DOI: <a href="https://doi.org/10.1038/nature06713" class="a-2021">
+                        https://doi.org/10.1038/nature06713</a>
                     </p>
                     <p class="intro-paragraph" style="text-align: justify;">
                         Naselaris, T., Kay, K. N., Nishimoto, S., & Gallant, J. L. (2011). Encoding and decoding in fMRI. 
-                        Neuroimage, 56(2), 400-410. DOI: <a href="https://doi.org/10.1016/j.neuroimage.2010.07.073"
-                            class="a-2021">https://doi.org/10.1016/j.neuroimage.2010.07.073</a>
+                        Neuroimage, 56(2), 400-410. DOI: <a href="https://doi.org/10.1016/j.neuroimage.2010.07.073" class="a-2021">
+                        https://doi.org/10.1016/j.neuroimage.2010.07.073</a>
                     </p>
                     <p class="intro-paragraph" style="text-align: justify;">
-                        Wu, M. C.-K., David, S. V., & Gallant, J. L. (2006). Complete Functional Characterization of Sensory Neurons by
-                            System Identification. Annual Review of Neuroscience, 29(1), 477&ndash;505. DOI: <a
-                            href="https://doi.org/10.1146/annurev.neuro.29.051605.113024"
-                            class="a-2021">https://doi.org/10.1146/annurev.neuro.29.051605.113024</a>
+                        Yamins, D.L. and DiCarlo, J.J. (2016). Using goal-driven deep learning models to understand sensory cortex. 
+                        Nature neuroscience, 19(3), pp.356-365. DOI: <a href="https://doi.org/10.1038/nn.4244" class="a-2021">
+                        https://doi.org/10.1038/nn.4244</a>
                     </p>
-
+                    <p class="intro-paragraph" style="text-align: justify;">
+                        Kriegeskorte, N. and Douglas, P.K. (2019). Interpreting encoding and decoding models. 
+                        Current opinion in neurobiology, 55, pp.167-179. DOI: <a href="https://doi.org/10.1016/j.conb.2019.04.002" class="a-2021">
+                        https://doi.org/10.1016/j.conb.2019.04.002</a>
+                    </p>
+                    
                 </div>
             </div>
         </div>

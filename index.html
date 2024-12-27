@@ -18,7 +18,7 @@
     <meta name="description" content="homepage">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="author" content="Alex Lascelles">
-    <link rel="icon" type="image/png" href="favicon.ico" sizes="32x32" />
+    <link rel="icon" id="favicon" type="image/png" href="img/2024/logo_icon_light.png" sizes="32x32" />
     <link rel="stylesheet" href="css/normalize.min.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/jquery.fancybox.css">
@@ -29,6 +29,24 @@
     <link rel="stylesheet" href="bower_components/animate.css/animate.min.css">
     <link href="https://use.fontawesome.com/releases/v5.0.3/css/all.css" rel="stylesheet">
     <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const favicon = document.getElementById('favicon');
+            const updateFavicon = () => {
+                if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                    favicon.href = 'img/2024/logo_icon_dark.png';
+                } else {
+                    favicon.href = 'img/2024/logo_icon_light.png';
+                }
+            };
+
+            // Initial check
+            updateFavicon();
+
+            // Listen for changes in the color scheme
+            window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', updateFavicon);
+        });
+    </script>
 </head>
 
 <body id="top" ng-controller="mainCtrl">
@@ -85,10 +103,10 @@
                 <div class="col-md-10 col-md-offset-1">
                     <div class="hero-content text-center">
                         <h1 style="margin-bottom: 25px; color: white;"><b>The Algonauts Project 2025</b></h1>
-                        <h1 style="font-size: 29px; margin-bottom: 25px; color: white; font-style: italic;"><b>How the Human Brain Makes Sense of Multimodal movies</b></h1>
+                        <h1 style="font-size: 29px; margin-bottom: 25px; color: white; font-style: italic;"><b>How the Human Brain Makes Sense of Multimodal Movies</b></h1>
                         <a style="margin-top: 2em; font-weight: bold; font-size:14px;" href="challenge.html" class="btn-2021 btn-accent btn-large">Explore the Challenge</a>
                         <br>
-                        <a style="margin-top: 2em; font-weight: bold; font-size:14px;" href="newsletter.html" class="btn-2021 btn-accent btn-large">Newsletter</a>
+                        <a style="margin-top: 2em; font-weight: bold; font-size:14px;" href="newsletter.html" class="btn-2021 btn-accent btn-large">Stay Updated</a>
                     </div>
                 </div>
             </div>
@@ -99,7 +117,7 @@
         <div class="container">
             <h3>News</h3>
             <p class="intro-paragraph" style="text-align: justify">
-                <b style="font-weight: 600">Jan 06, 2025:</b> The <a href="challenge.html">Algonauts Project 2025 challenge</a> is now open for submissions! 
+                <b style="font-weight: 600">January 6th, 2025:</b> The <a href="challenge.html" class="a-2021">Algonauts Project 2025 challenge</a> is now open for submissions! 
                 Watch this video for an introduction to the challenge (5 min). 
                 Submit your best model predictions to the competition until <b style="font-weight: 600">July 13th, 2025</b>.
             </p>
@@ -112,10 +130,13 @@
             <div class="row">
                 <div class="col-md-12">
                     <p class="intro-paragraph" style="text-align: justify;">
-                        The Algonauts Project, first launched in 2019, is on a mission to bring biological and machine intelligence researchers
-                        together on a common platform to exchange ideas and pioneer the intelligence frontier. Inspired by the astronauts' 
-                        exploration of space, "algonauts" explore human and artificial intelligence with state-of-the-art algorithmic tools, 
-                        thus advancing both fields.
+                        The Algonauts Project 2025 challenge focuses on predicting responses in the human brain as 
+                        participants perceive complex multimodal movies. Through collaboration with the <a href="https://www.cneuromod.ca/" class="a-2021" target="_blank">Courtois Project 
+                            on Neuronal Modelling (CNeuroMod)</a> team, the challenge runs on the <b style="font-weight: 600">largest human brain dataset</b>
+                         available, opening new venues for accurate models of neural responses to multimodal naturalistic stimulation. 
+                         To promote more robust models of the brain, the 2025 challenge features a selection process 
+                         based on <b style="font-weight: 600">out-of-distribution generalization</b>. The challenge is organized in 
+                         partnership with the <a href="https://ccneuro.org/" class="a-2021" target="_blank">Conference on Cognitive Computational Neuroscience (CCN)</a>.
                     </p>
                     
                     <div class="col-md-8 col-md-offset-2 col-xs-12" style="margin-bottom: 2em; text-align: center;">
@@ -124,23 +145,14 @@
                         </div>
                     </div>
                     <p class="intro-paragraph col-md-8 col-md-offset-2 col-xs-12" style="text-align: justify; text-align: center;">
-                        <i>Introduction video to the Algonauts Project 2025 Challenge.</i>
+                        <i>Introduction video to the Algonauts Project 2025 challenge.</i>
                     </p>
 
                     <p class="intro-paragraph" style="text-align: justify;">
-
-                        The Algonauts Project 2025 challenge focuses on predicting responses in the human brain as participants perceive complex multimodal movies. 
-                        Through collaboration with the <a href="https://www.cneuromod.ca/" class="a-2021" target="_blank">Courtois Project on Neuronal Modelling (CNeuroMod)</a> team, 
-                        the challenge runs on the largest brain dataset available, opening new venues for accurate models of neural 
-                        responses to multimodal naturalistic stimulation. To promote more robust models of the brain, 
-                        the 2025 challenge features a selection process based on out-of-distribution generalization. 
-                        The challenge is organized in partnership with the <a href="https://ccneuro.org/" class="a-2021" target="_blank">Conference on Cognitive Computational Neuroscience (CCN)</a>.
-                    </p>
-                    <p class="intro-paragraph" style="text-align: justify;">
-                        Please find <a href="archive.html" class="a-2021" target="_blank">further information here</a> on the previous 
-                        Algonauts challenges: 2019 (still images of objects, <a href="2019/workshop.html" class="a-2021" target="_blank">MIT workshop videos</a>), 
-                        2021 (visual events from movies, <a href="https://www.youtube.com/watch?v=xtSh_XotVlo" class="a-2021" target="_blank">CCN session video</a>), 
-                        and 2023 (natural visual scenes, <a href="https://www.youtube.com/live/9Xh55mcWJeE?si=RXxW_8AXRBEAGop0" class="a-2021" target="_blank">CCN session video</a>)
+                        The Algonauts Project, first launched in 2019, is on a mission to bring biological and machine 
+                        intelligence researchers together on a common platform to exchange ideas and pioneer the 
+                        intelligence frontier. Inspired by the astronauts' exploration of space, "algonauts" 
+                        explore human and artificial intelligence with state-of-the-art algorithmic tools, thus advancing both fields.
                     </p>
                 </div>
             </div>
@@ -213,7 +225,7 @@
                     <p class="intro-paragraph" style="text-align: justify;">
                         The Algonauts Project 2025 challenge will evaluate computational models on how well they 
                         predict human brain data recorded while humans perceive multimodal naturalistic movies, 
-                        using a massive human brain dataset collected for that purpose <a href="https://www.cneuromod.ca/" class="a-2021" target="_blank">(CNeuroMod project page)</a>.
+                        using a massive human brain dataset collected for that purpose <a href="https://www.cneuromod.ca/" class="a-2021" target="_blank">CNeuroMod project page</a>.
                     </p>
 
                     <div class="col-md-6 col-xs-12" style="margin-bottom: 2em">
@@ -230,7 +242,7 @@
 
                     <p class="intro-paragraph" style="text-align: justify;">
                         Watch the first video above for an introduction to the Algonauts 2025 challenge, and the second video for a detailed walkthrough 
-                        of the development kit. When you are ready to participate, the third video will guide you through the Codabench competition submission process.
+                        of the <a href="https://colab.research.google.com/drive/1fop0zvaLBLBagvJRC-HDqGDSgQElNWZB?usp=sharing" class="a-2021" target="_blank">development kit</a>. When you are ready to participate, the third video will guide you through the <a href="https://www.codabench.org/competitions/4313/" class="a-2021" target="_blank">Codabench</a> competition submission process.
                     </p>
 
                     <p class="intro-paragraph" style="text-align: justify;">
@@ -238,55 +250,34 @@
                     </p>
 
                     <h3 style="margin-top: 0.5em; text-align: center;" id="prizes">Prizes</h3>
-                    <div class="prizes-container">
-                        <div class="prize-item">
-                            <h4><i class="fas fa-trophy" style="color: gold;"></i> 1st Place</h4>
-                            <p>7,500 € prize and a reimbursement of up to 1,500 € for travel expenses and conference registration fees to present at CCN 2025.</p>
+                    <div class="prizes-container" style="text-align: center;">
+                        <div class="prize-item" style="margin-bottom: 1.5em;">
+                            <h4 style="font-size: 1.3em; font-weight: bold;">
+                                <img src="img/2024/medals_gold.png" alt="Gold Medal" style="height: 40px; vertical-align: middle; margin-right: 10px;"> 
+                                1st Place
+                            </h4>
+                            <p style="font-size: 1.4em; line-height: 1.6;">7,500 € prize and a reimbursement of up to 1,500 € for travel expenses and conference registration fees to present at CCN 2025.</p>
+                        </div>
+                        <div class="prize-item" style="margin-bottom: 1.5em;">
+                            <h4 style="font-size: 1.3em; font-weight: bold;">
+                                <img src="img/2024/medals_silver.png" alt="Silver Medal" style="height: 40px; vertical-align: middle; margin-right: 10px;"> 
+                                2nd Place
+                            </h4>
+                            <p style="font-size: 1.4em; line-height: 1.6;">5,000 € prize.</p>
                         </div>
                         <div class="prize-item">
-                            <h4><i class="fas fa-medal" style="color: silver;"></i> 2nd Place</h4>
-                            <p>5,000 € prize.</p>
-                        </div>
-                        <div class="prize-item">
-                            <h4><i class="fas fa-award" style="color: #cd7f32;"></i> 3rd Place</h4>
-                            <p>3,000 € prize.</p>
+                            <h4 style="font-size: 1.3em; font-weight: bold;">
+                                <img src="img/2024/medals_bronze.png" alt="Bronze Medal" style="height: 40px; vertical-align: middle; margin-right: 10px;"> 
+                                3rd Place
+                            </h4>
+                            <p style="font-size: 1.4em; line-height: 1.6;">3,000 € prize.</p>
                         </div>
                     </div>
 
                     <p class="intro-paragraph" id="CCN" style="text-align: justify; margin-top: 1.5em; font-size: 1.3em; line-height: 1.6;">
                         The top three entries will be invited to present their encoding models during a talk at the 
                         <a href="https://2025.ccneuro.org/" class="a-2021" target="_blank">CCN conference</a> held in Amsterdam (Netherlands) in August 2025.
-                    </p>
-                    
-
-
-                    <h3 style="margin-top: 0.5em">Sessions at CCN 2025</h3>
-                    <p class="intro-paragraph" style="text-align: justify;">
-                        The Algonauts Project 2025 Challenge will conclude with a session at the <a href="https://2025.ccneuro.org/"
-                        class="a-2021">2025 Conference on Cognitive Computational Neuroscience</a>. 
-                    </p>
-
-                    <div class="container" id="ccn_schedule">
-                        <div class="row wow fadeInUp">
-                            <div class="col-md-12">
-                                <p class="intro-paragraph" style="text-align: justify; padding-bottom: 0em; margin-bottom: 0em">
-                                    <b style="font-weight: 600">Algonauts Session:</b> August 25th, 5pm&ndash;7pm (UTC+1)
-                                </p>
-                                <table class="tables-2021">
-                                    <tr class="boxkey-challenge-2021">
-                                        <td>15 min</td>
-                                        <td>Introduction to the Algonauts 2025 challenge</td>
-                                    <tr class="boxkey-challenge-2021">
-                                        <td>45 min</td>
-                                        <td>Talks by the three best performing teams</td>
-                                    <tr class="boxkey-challenge-2021">
-                                        <td>60 min</td>
-                                        <td>Panel discussion</td>
-                                </table>
-                            </div>
-                        </div>
-                    </div>
-                    
+                    </p>    
                 </div>
             </div>
         </div>
@@ -354,19 +345,18 @@
             <div class="row wow fadeInUp">
                 <div class="col-md-12">
                     <h2 style="margin-bottom: 1em">Papers</h2>
-                    <p class="intro-paragraph" style="text-align: justify;">
+                    <p class="intro-paragraph" style="text-align: justify; font-weight: normal;">
                         If you use the data provided for the Algonauts Project 2025 challenge, please cite the following papers:
-                        <ol>
-                            <li>
+                        <ol style="font-weight: normal;">
+                            <li style="font-weight: normal;">
                                 Gifford AT, Lahner B, Saba-Sadiya S, Vilas MG, Lascelles A, Oliva A, Kay K, Roig G, Cichy RM. 2023. <i>The Algonauts
                                 Project 2023 Challenge: How the Human Brain Makes Sense of Natural Scenes</i>. arXiv preprint, arXiv:2301.03198. DOI: 
                                 <a href="https://doi.org/10.48550/arXiv.2301.03198" class="a-2021">https://doi.org/10.48550/arXiv.2301.03198</a>
                             </li>
-                            <li style="margin-top:1em">
-                                Allen EJ, St-Yves G, Wu Y, Breedlove JL, Prince JS, Dowdle LT, Nau M, Caron B, Pestilli F, Charest I, Hutchinson JB,
-                                Naselaris T, Kay K. 2022. <i>A massive 7T fMRI dataset to bridge cognitive neuroscience and computational intelligence</i>.
-                                Nature Neuroscience, 25(1):116&ndash;126. DOI: <a href="https://doi.org/10.1038/s41593-021-00962-x"
-                                class="a-2021">https://doi.org/10.1038/s41593-021-00962-x</a>
+                            <li style="margin-top: 1em; font-weight: normal;">
+                                Boyle J, Pinsard B, Borghesani V, Paugam F, DuPre E, Bellec P. 2023. 
+                                The Courtois NeuroMod project: quality assessment of the initial data release (2020). 
+                                2023 Conference on Cognitive Computational Neuroscience.
                             </li>
                         </ol>                    
                     </p>
@@ -374,6 +364,9 @@
             </div>
         </div>
     </section>
+    
+    
+    
 
     <section class="team-section" id="team">
         <div class="container-fluid">
@@ -384,132 +377,135 @@
             </div>
             <!-- First Row -->
             <div class="row justify-content-center text-center">
-                <div class="col-md-3 portfolio-box">
-                    <a href="https://www.alegifford.com/" class="a-2021">
+                <a href="https://www.alegifford.com/" class="portfolio-box a-2021">
+                    <div>
                         <img src="img/2024/team/ale.png" alt="Alessandro Gifford" class="img-members">
-                    </a>
-                    <div class="portfolio-box-caption">
-                        <div class="portfolio-box-name">
-                            <h4>Alessandro Gifford</h4>
-                        </div>
-                        <div class="portfolio-box-affiliation">
-                            <h5>PhD Student,<br>Freie Universität Berlin</h5>
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-name">
+                                <h4>Alessandro Gifford</h4>
+                            </div>
+                            <div class="portfolio-box-affiliation">
+                                <h5>PhD Student,<br>Freie Universität Berlin</h5>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-3 portfolio-box">
-                    <a href="http://www.cvai.cs.uni-frankfurt.de/" class="a-2021">
+                </a>
+                <a href="http://www.cvai.cs.uni-frankfurt.de/" class="portfolio-box a-2021">
+                    <div>
                         <img src="img/2024/team/domenic.png" alt="Domenic Bersch" class="img-members">
-                    </a>
-                    <div class="portfolio-box-caption">
-                        <div class="portfolio-box-name">
-                            <h4>Domenic Bersch</h4>
-                        </div>
-                        <div class="portfolio-box-affiliation">
-                            <h5>PhD Student,<br>Goethe University Frankfurt</h5>
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-name">
+                                <h4>Domenic Bersch</h4>
+                            </div>
+                            <div class="portfolio-box-affiliation">
+                                <h5>PhD Student,<br>Goethe University Frankfurt</h5>
+                            </div>
                         </div>
                     </div>
-                </div>
+                </a>
             </div>
+            
     
             <!-- Second Row -->
             <div class="row justify-content-center text-center">
-                <div class="col-md-3 portfolio-box">
-                    <a href="https://simexp.github.io/intro.html" class="a-2021">
+                <a href="https://simexp.github.io/intro.html" class="portfolio-box a-2021">
+                    <div>
                         <img src="img/2024/team/marie.png" alt="Marie St-Laurent" class="img-members">
-                    </a>
-                    <div class="portfolio-box-caption">
-                        <div class="portfolio-box-name">
-                            <h4>Marie St-Laurent</h4>
-                        </div>
-                        <div class="portfolio-box-affiliation">
-                            <h5>Research Professional,<br>CRIUGM</h5>
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-name">
+                                <h4>Marie St-Laurent</h4>
+                            </div>
+                            <div class="portfolio-box-affiliation">
+                                <h5>Research Professional,<br>CRIUGM</h5>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-3 portfolio-box">
-                    <a href="https://github.com/bpinsard" class="a-2021">
+                </a>
+                <a href="https://github.com/bpinsard" class="portfolio-box a-2021">
+                    <div>
                         <img src="img/2024/team/basile.jpg" alt="Basile Pinsard" class="img-members">
-                    </a>
-                    <div class="portfolio-box-caption">
-                        <div class="portfolio-box-name">
-                            <h4>Basile Pinsard</h4>
-                        </div>
-                        <div class="portfolio-box-affiliation">
-                            <h5>Data Manager,<br>CRIUGM</h5>
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-name">
+                                <h4>Basile Pinsard</h4>
+                            </div>
+                            <div class="portfolio-box-affiliation">
+                                <h5>Data Manager,<br>CRIUGM</h5>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-3 portfolio-box">
-                    <a href="https://simexp.github.io/intro.html" class="a-2021">
+                </a>
+                <a href="https://simexp.github.io/intro.html" class="portfolio-box a-2021">
+                    <div>
                         <img src="img/2024/team/julie.png" alt="Julie Boyle" class="img-members">
-                    </a>
-                    <div class="portfolio-box-caption">
-                        <div class="portfolio-box-name">
-                            <h4>Julie Boyle</h4>
-                        </div>
-                        <div class="portfolio-box-affiliation">
-                            <h5>Project Manager,<br>Université de Montréal</h5>
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-name">
+                                <h4>Julie Boyle</h4>
+                            </div>
+                            <div class="portfolio-box-affiliation">
+                                <h5>Project Manager,<br>Université de Montréal</h5>
+                            </div>
                         </div>
                     </div>
-                </div>
+                </a>
             </div>
+            
     
             <!-- Third Row -->
             <div class="row justify-content-center text-center">
-                <div class="col-md-3 portfolio-box">
-                    <a href="https://simexp.github.io/intro.html" class="a-2021">
+                <a href="https://simexp.github.io/intro.html" class="portfolio-box a-2021">
+                    <div>
                         <img src="img/2024/team/lune.jpeg" alt="Lune Bellec" class="img-members">
-                    </a>
-                    <div class="portfolio-box-caption">
-                        <div class="portfolio-box-name">
-                            <h4>Team Leader: Lune Bellec</h4>
-                        </div>
-                        <div class="portfolio-box-affiliation">
-                            <h5>Associate Professor,<br>Université de Montréal</h5>
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-name">
+                                <h4>Team Leader: Lune Bellec</h4>
+                            </div>
+                            <div class="portfolio-box-affiliation">
+                                <h5>Associate Professor,<br>Université de Montréal</h5>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-3 portfolio-box">
-                    <a href="http://olivalab.mit.edu/" class="a-2021">
+                </a>
+                <a href="http://olivalab.mit.edu/" class="portfolio-box a-2021">
+                    <div>
                         <img src="img/2024/team/aude.jpg" alt="Aude Oliva" class="img-members">
-                    </a>
-                    <div class="portfolio-box-caption">
-                        <div class="portfolio-box-name">
-                            <h4>Team Leader: Aude Oliva</h4>
-                        </div>
-                        <div class="portfolio-box-affiliation">
-                            <h5>Senior Research Scientist,<br>MIT Director MIT-IBM Watson AI Lab</h5>
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-name">
+                                <h4>Team Leader: Aude Oliva</h4>
+                            </div>
+                            <div class="portfolio-box-affiliation">
+                                <h5>Senior Research Scientist,<br>MIT Director MIT-IBM Watson AI Lab</h5>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-3 portfolio-box">
-                    <a href="http://www.cvai.cs.uni-frankfurt.de/" class="a-2021">
+                </a>
+                <a href="http://www.cvai.cs.uni-frankfurt.de/" class="portfolio-box a-2021">
+                    <div>
                         <img src="img/2024/team/gemma.jpg" alt="Gemma Roig" class="img-members">
-                    </a>
-                    <div class="portfolio-box-caption">
-                        <div class="portfolio-box-name">
-                            <h4>Team Leader: Gemma Roig</h4>
-                        </div>
-                        <div class="portfolio-box-affiliation">
-                            <h5>Assistant Professor,<br>Goethe University Frankfurt</h5>
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-name">
+                                <h4>Team Leader: Gemma Roig</h4>
+                            </div>
+                            <div class="portfolio-box-affiliation">
+                                <h5>Assistant Professor,<br>Goethe University Frankfurt</h5>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-3 portfolio-box">
-                    <a href="https://www.ewi-psy.fu-berlin.de/en/einrichtungen/arbeitsbereiche/neural_dyn_of_vis_cog/index.html" class="a-2021">
+                </a>
+                <a href="https://www.ewi-psy.fu-berlin.de/en/einrichtungen/arbeitsbereiche/neural_dyn_of_vis_cog/index.html" class="portfolio-box a-2021">
+                    <div>
                         <img src="img/2024/team/radek.png" alt="Radoslaw Cichy" class="img-members">
-                    </a>
-                    <div class="portfolio-box-caption">
-                        <div class="portfolio-box-name">
-                            <h4>Team Leader: Radoslaw Cichy</h4>
-                        </div>
-                        <div class="portfolio-box-affiliation">
-                            <h5>Professor,<br>Freie Universität Berlin</h5>
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-name">
+                                <h4>Team Leader: Radoslaw Cichy</h4>
+                            </div>
+                            <div class="portfolio-box-affiliation">
+                                <h5>Professor,<br>Freie Universität Berlin</h5>
+                            </div>
                         </div>
                     </div>
-                </div>
+                </a>
             </div>
+            
         </div>
     </section>
     
@@ -584,24 +580,25 @@
         </div>
     </footer>
     
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js "></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script>
-        window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js "><\/script>')
+        window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')
     </script>
-    <script src="js/jquery.fancybox.pack.js "></script>
-    <script src="js/vendor/bootstrap.min.js "></script>
-    <script src="js/vendor/wow.min.js "></script>
-    <script src="js/scripts.js "></script>
-    <script src="js/jquery.flexslider-min.js "></script>
-    <script src="bower_components/classie/classie.js "></script>
-    <script src="bower_components/jquery-waypoints/lib/jquery.waypoints.min.js "></script>
-    <script src="node_modules/angular/angular.min.js "></script>
-    <script src="node_modules/angulargrid/angulargrid.js "></script>
-    <script src="node_modules/angular-aria/angular-aria.min.js "></script>
-    <script src="node_modules/angular-material/angular-material.min.js "></script>
-    <script src="node_modules/angular-animate/angular-animate.min.js "></script>
-    <script src="node_modules/angular-messages/angular-messages.min.js "></script>
-    <script src="js/ng/src/app.js "></script>
+    <script src="js/jquery.fancybox.pack.js"></script>
+    <script src="js/vendor/bootstrap.min.js"></script>
+    <script src="js/vendor/wow.min.js"></script>
+    <script src="js/scripts.js"></script>
+    <script src="js/jquery.flexslider-min.js"></script>
+    <script src="bower_components/classie/classie.js"></script>
+    <script src="bower_components/jquery-waypoints/lib/jquery.waypoints.min.js"></script>
+    <script src="node_modules/angular/angular.min.js"></script>
+    <script src="node_modules/angulargrid/angulargrid.js"></script>
+    <script src="node_modules/angular-aria/angular-aria.min.js"></script>
+    <script src="node_modules/angular-material/angular-material.min.js"></script>
+    <script src="node_modules/angular-animate/angular-animate.min.js"></script>
+    <script src="node_modules/angular-messages/angular-messages.min.js"></script>
+    <script src="js/ng/src/app.js"></script>
+    <script src="js/ng/src/controller.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             const navToggle = document.querySelector('.nav-toggle');
@@ -624,14 +621,12 @@
             });
         });
     </script>
-    <script src="js/ng/src/controller.js "></script>
-    <script> function externalLinks() { for (var c = document.getElementsByTagName("a"), a = 0; a < c.length; a++) { var b = c[a]; b.getAttribute("href") && b.hostname !== location.hostname && (b.target = "_blank") } }; externalLinks();</script>
     <script>
         // Scroll event listener to toggle 'nav-scrolled' class
         // Add 'nav-scrolled' when the user scrolls beyond the hero section
         window.addEventListener('scroll', function() {
             const header = document.querySelector('header');
-            const heroSection = document.querySelector('.hero');
+            const heroSection = document.querySelector('.hero-video-container');
             const heroHeight = heroSection.offsetHeight;
 
             if (window.scrollY > heroHeight - 100) {
@@ -642,9 +637,7 @@
         });
 
     </script>
-    </body>
-    </html>
-    
+    <script> function externalLinks() { for (var c = document.getElementsByTagName("a"), a = 0; a < c.length; a++) { var b = c[a]; b.getAttribute("href") && b.hostname !== location.hostname && (b.target = "_blank") } }; externalLinks();</script>
 </body>
 
 </html>

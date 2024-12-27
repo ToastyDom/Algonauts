@@ -18,7 +18,7 @@
     <meta name="description" content="Challenge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="author" content="Alex Lascelles">
-    <link rel="icon" type="image/png" href="favicon.ico" sizes="32x32" />
+    <link rel="icon" id="favicon" type="image/png" href="img/2024/logo_icon_light.png" sizes="32x32" />
     <link rel="stylesheet" href="css/normalize.min.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/jquery.fancybox.css">
@@ -38,6 +38,24 @@
         true, processEnvironments: true }, // Center justify equations in code and markdown cells. Elsewhere // we use CSS
         to left justify single line equations in code cells. displayAlign: 'center', "HTML-CSS": { styles: {'.MathJax_Display':
         {"margin": 0}}, linebreaks: { automatic: true } } });
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const favicon = document.getElementById('favicon');
+            const updateFavicon = () => {
+                if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                    favicon.href = 'img/2024/logo_icon_dark.png';
+                } else {
+                    favicon.href = 'img/2024/logo_icon_light.png';
+                }
+            };
+
+            // Initial check
+            updateFavicon();
+
+            // Listen for changes in the color scheme
+            window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', updateFavicon);
+        });
     </script>
 </head>
 
@@ -120,7 +138,7 @@
                     <p class="intro-paragraph" style="text-align: justify;">
                         The 2025 edition focuses on explaining responses in the human brain as participants perceive complex multimodal movies. 
                         Through collaboration with the <a href="https://www.cneuromod.ca/" class="a-2021" target="_blank">Courtois Project on Neuronal Modelling (CNeuroMod)</a>, 
-                        the challenge runs on the largest brain dataset available, opening new venues for accurate models of 
+                        the challenge runs on the largest human brain dataset available, opening new venues for accurate models of 
                         neural responses to multimodal naturalistic stimulation. To promote more robust models of the brain, 
                         the 2025 challenge features a selection process based on out-of-distribution generalization. 
                         The challenge is organized in partnership with the <a href="https://ccneuro.org/" class="a-2021" target="_blank">Conference on Cognitive Computational Neuroscience (CCN)</a>.
@@ -250,7 +268,7 @@
         // Add 'nav-scrolled' when the user scrolls beyond the hero section
         window.addEventListener('scroll', function() {
             const header = document.querySelector('header');
-            const heroSection = document.querySelector('.hero');
+            const heroSection = document.querySelector('.hero-video-container');
             const heroHeight = heroSection.offsetHeight;
 
             if (window.scrollY > heroHeight - 100) {

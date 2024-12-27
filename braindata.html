@@ -18,7 +18,7 @@
     <meta name="description" content="Challenge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="author" content="Alex Lascelles">
-    <link rel="icon" type="image/png" href="favicon.ico" sizes="32x32" />
+    <link rel="icon" id="favicon" type="image/png" href="img/2024/logo_icon_light.png" sizes="32x32" />
     <link rel="stylesheet" href="css/normalize.min.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/jquery.fancybox.css">
@@ -38,6 +38,24 @@
         true, processEnvironments: true }, // Center justify equations in code and markdown cells. Elsewhere // we use CSS
         to left justify single line equations in code cells. displayAlign: 'center', "HTML-CSS": { styles: {'.MathJax_Display':
         {"margin": 0}}, linebreaks: { automatic: true } } });
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const favicon = document.getElementById('favicon');
+            const updateFavicon = () => {
+                if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                    favicon.href = 'img/2024/logo_icon_dark.png';
+                } else {
+                    favicon.href = 'img/2024/logo_icon_light.png';
+                }
+            };
+
+            // Initial check
+            updateFavicon();
+
+            // Listen for changes in the color scheme
+            window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', updateFavicon);
+        });
     </script>
 </head>
 
@@ -127,27 +145,27 @@
                     <div class="row wow fadeInUp full-width-image">
                         <div class="col-12">
                             <img src="img/2024/figure_2_panels_a-b.png" alt="Figure 1" class="img-fluid centered-img">
-                            <p style="font-style: italic; color: #666; margin-top: 10px;">
+                            <p style="font-style: italic; color: #666; margin-top: 10px; font-size: 1.4em;">
                                 <b style="font-weight: 600;">Figure 1 | Challenge data. a</b>, 
                                 Multimodal movie stimuli, consisting of visual frames, audio samples, and time-stamped language transcripts. 
                                 <b style="font-weight: 600;">b</b>, Whole-brain fMRI responses (time series) to the multimodal movies in four subjects.
                             </p>
+                            
                         </div>
                     </div>
 
                     <p class="intro-paragraph" style="text-align: justify;">
-                        The Challenge data is based on the <a href="https://www.cneuromod.ca/" class="a-2021" target="_blank">CNeuroMod dataset</a> which, as of now, most intensively samples single 
-                        subject neural responses to a variety of controlled and naturalistic stimuli and tasks (over 160 hours per subject). 
+                        The Challenge data is based on the <a href="https://www.cneuromod.ca/" class="a-2021" target="_blank">CNeuroMod dataset</a> which, as of now, most intensively samples single human
+                        subject neural responses to a variety of controlled and naturalistic stimuli and tasks. 
                         The CNeuroMod dataset’s unprecedented size, combined with the multimodal nature and diversity of its stimuli and tasks, 
                         makes it an ideal training and testing ground to build robust encoding models of fMRI responses to multimodal 
                         stimuli that generalize out of their training distribution.
                     </p>
                     <p class="intro-paragraph" style="text-align: justify;">
-                        Challenge participants will train and evaluate their encoding models using a subset of CNeuroMod’s 
-                        data which includes almost 80 hours of multimodal movie stimuli and corresponding fMRI responses. 
-                        Training data are from the CNeuroMod <i>Friends</i> dataset, for which subjects watched all episodes from the 
-                        first six seasons of the <i>Friends</i> sitcom while undergoing fMRI, and from the CNeuroMod <i>Movie10</i> dataset for 
-                        which they watched three feature films and a documentary. Evaluation data are from season seven of the Friends dataset, 
+                        Challenge participants will train and evaluate their encoding models using a subset of CNeuroMod’s data which includes 
+                        almost 80 hours of multimodal movie stimuli and corresponding fMRI responses. Training data are from the CNeuroMod 
+                        <i>Friends</i> dataset, for which subjects watched all episodes from the first six seasons of the <i>Friends</i> sitcom, 
+                        plus three feature films and a documentary. Evaluation data are from season seven of the <i>Friends</i> dataset, 
                         and from the viewing of out-of-distribution (OOD) movies.
                     </p>
                     <p class="intro-paragraph" style="text-align: justify;">
