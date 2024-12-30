@@ -1206,7 +1206,8 @@ Team Section
 }
 
 .portfolio-box {
-    max-width: 250px; /* Consistent size for member cards */
+    width: 250px; /* Fixed width for consistent size */
+    min-height: 350px; /* Optional: Ensures uniform height if needed */
     text-align: center; /* Center-align text */
     background-color: white; /* White background for the card */
     padding: 15px; /* Internal spacing for the card */
@@ -1222,6 +1223,8 @@ Team Section
     transform: translateY(-5px); /* Lift the card on hover */
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
 }
+
+
 
 .img-members {
     border-radius: 50%; /* Circular images */
