@@ -59,7 +59,7 @@
     </script>
 </head>
 
-<body id="top" ng-controller="mainCtrl" ng-cloak>
+<body class="with-nav-text" id="top" ng-controller="mainCtrl" ng-cloak>
     <section class="hero" style="min-height: 400px;">
         <div style="max-height: 750px; position: absolute;
                 top: 0;
@@ -78,10 +78,13 @@
         <section class="navigation">
             <header>
                 <div class="header-content">
-                    <div class="logo">
-                        <ul class="primary-nav-2021">
-                            <li><a href="index.html">The Algonauts Project</a></li>
-                        </ul>
+                    <div class="nav-brand">
+                        <a href="index.html">
+                            <img src="img/2024/logo_icon_dark.png" alt="Algonauts Logo" class="nav-logo-img">
+                        </a>
+                        <div class="nav-text">
+                            <a href="index.html">The Algonauts Project</a>
+                        </div>
                     </div>
                     <div class="header-nav navbar-right">
                         <nav>
@@ -103,7 +106,6 @@
                             </ul>
                         </nav>
                     </div>
-                    
                     <div class="navicon">
                         <a class="nav-toggle" href="#">
                             <span></span>
@@ -113,6 +115,7 @@
             </header>
         </section>
     </section>
+
     
     <section class="challenge intro-section-padding">
         <div class="container">
@@ -268,7 +271,7 @@
         // Add 'nav-scrolled' when the user scrolls beyond the hero section
         window.addEventListener('scroll', function() {
             const header = document.querySelector('header');
-            const heroSection = document.querySelector('.hero-video-container');
+            const heroSection = document.querySelector('.hero');
             const heroHeight = heroSection.offsetHeight;
 
             if (window.scrollY > heroHeight - 100) {
