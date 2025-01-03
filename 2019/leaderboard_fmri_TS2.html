@@ -89,6 +89,20 @@
                             </ul>
                         </nav>
                     </div>
+                    <div class="nav-overlay">
+                        <nav class="overlay-nav">
+                            <ul>
+                                <li><a href="index.html#about">About</a></li>
+                                <li><a href="challenge.html">Challenge</a></li>
+                                <li><a href="workshop.html">Workshop</a></li>
+                                <li><a href="download.html">Download</a></li>
+                                <li><a href="AlgonautsProject2019_arXiv.pdf">Paper</a></li>
+                                <li><a href="index.html#team">Team</a></li>
+                                <li><a href="index.html#contact">Contact</a></li>
+                                <li><a href="../archive.html">Archive</a></li>
+                            </ul>
+                        </nav>
+                    </div>
                     <div class="navicon">
                         <a class="nav-toggle" href="#">
                             <span></span>
@@ -122,12 +136,15 @@
 
                     <div style="overflow-x:auto;">
                         <table class="tables-ll">
-                            <tr><th></th>
+                            <tr>
+                                <th></th>
                                 <th></th>
                                 <th class="table-ll-headers" colspan="2">EVC</th>
                                 <th class="table-ll-headers" colspan="2">IT</th>
                                 <th class="table-ll-headers" colspan="2">Score</th>
-                            <tr><th class="table-ll-headers-2" style="border-left: 0px;">Rank</th>
+                            </tr>
+                            <tr>
+                                <th class="table-ll-headers-2" style="border-left: 0px;">Rank</th>
                                 <th class="table-ll-headers-2">Team Name</th>
                                 <th class="table-ll-headers-2">R<sup>2</sup></th>
                                 <th class="table-ll-headers-2">Noise Normalized R<sup>2</sup> (%)</th>
@@ -136,28 +153,129 @@
                                 <th class="table-ll-headers-2">Average R<sup>2</sup></th>
                                 <th class="table-ll-headers-2">Average Noise Normalized R<sup>2</sup> (%)</th>
                             </tr>
-                            <tr><td></td>
+                            <tr>
+                                <td></td>
                                 <td><i>Noise Ceiling</i></td>
                                 <td><i>0.0655</i></td>
                                 <td><i>100</i></td>
                                 <td><i>0.0734</i></td>
                                 <td><i>100</i></td>
-                                <td><i>0.0695</i></td>
-                                <td><i>100</i></td>
+                                <td><i><b>0.0695</b></i></td>
+                                <td><i><b>100</b></i></td>
                             </tr>
-                            <tr ng-repeat="row in lb_fmri_ts2">
-                                <td>{{$index+1}}</td>
-                                <td>{{row.Team_Name}}</td>
-                                <td>{{row.EVC_r2.toFixed(4)}}</td>
-                                <td>{{row.EVC_pc.toFixed(4)}}</td>
-                                <td>{{row.IT_r2.toFixed(4)}}</td>
-                                <td>{{row.IT_pc.toFixed(4)}}</td>
-                                <td class="table-emphasis">{{row.score_r2.toFixed(4)}}</td>
-                                <td class="table-emphasis">{{row.score_pc.toFixed(4)}}</td>
-                                <!-- <td><a href="{{row.Team_Name}}_results.html">Detailed Results</a></td> -->
+                            <tr>
+                                <td>1</td>
+                                <td>rmldj</td>
+                                <td>0.0085</td>
+                                <td>12.9969</td>
+                                <td>0.0127</td>
+                                <td>17.3412</td>
+                                <td style="background-color: lavender;"><b>0.0106</b></td>
+                                <td style="background-color: lavender;"><b>15.2926</b></td>
                             </tr>
-                        </table>  
+                            <tr>
+                                <td>2</td>
+                                <td>Aakash</td>
+                                <td>0.0093</td>
+                                <td>14.1444</td>
+                                <td>0.0071</td>
+                                <td>9.6379</td>
+                                <td style="background-color: lavender;"><b>0.0082</b></td>
+                                <td style="background-color: lavender;"><b>11.7630</b></td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>ggaziv</td>
+                                <td>0.0100</td>
+                                <td>15.2585</td>
+                                <td>0.0062</td>
+                                <td>8.4870</td>
+                                <td style="background-color: lavender;"><b>0.0081</b></td>
+                                <td style="background-color: lavender;"><b>11.6802</b></td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>Mukesh_Makwana</td>
+                                <td>0.0065</td>
+                                <td>9.8786</td>
+                                <td>0.0097</td>
+                                <td>13.2405</td>
+                                <td style="background-color: lavender;"><b>0.0081</b></td>
+                                <td style="background-color: lavender;"><b>11.6551</b></td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>agustin</td>
+                                <td>0.0083</td>
+                                <td>12.6287</td>
+                                <td>0.0077</td>
+                                <td>10.5547</td>
+                                <td style="background-color: lavender;"><b>0.0080</b></td>
+                                <td style="background-color: lavender;"><b>11.5327</b></td>
+                            </tr>
+                            <tr>
+                                <td>6</td>
+                                <td>navneedhm</td>
+                                <td>0.0082</td>
+                                <td>12.5500</td>
+                                <td>0.0058</td>
+                                <td>7.8677</td>
+                                <td style="background-color: lavender;"><b>0.0070</b></td>
+                                <td style="background-color: lavender;"><b>10.0757</b></td>
+                            </tr>
+                            <tr>
+                                <td>7</td>
+                                <td>amir32002</td>
+                                <td>0.0060</td>
+                                <td>9.2338</td>
+                                <td>0.0066</td>
+                                <td>8.9633</td>
+                                <td style="background-color: lavender;"><b>0.0063</b></td>
+                                <td style="background-color: lavender;"><b>9.0909</b></td>
+                            </tr>
+                            <tr>
+                                <td>8</td>
+                                <td>ajay14</td>
+                                <td>0.0077</td>
+                                <td>11.7817</td>
+                                <td>0.0036</td>
+                                <td>4.8445</td>
+                                <td style="background-color: lavender;"><b>0.0056</b></td>
+                                <td style="background-color: lavender;"><b>8.1158</b></td>
+                            </tr>
+                            <tr>
+                                <td>9</td>
+                                <td>adrianso</td>
+                                <td>0.0063</td>
+                                <td>9.6850</td>
+                                <td>0.0030</td>
+                                <td>4.0513</td>
+                                <td style="background-color: lavender;"><b>0.0047</b></td>
+                                <td style="background-color: lavender;"><b>6.7079</b></td>
+                            </tr>
+                            <tr>
+                                <td>10</td>
+                                <td>mfonseca</td>
+                                <td>0.0036</td>
+                                <td>5.5581</td>
+                                <td>0.0034</td>
+                                <td>4.5694</td>
+                                <td style="background-color: lavender;"><b>0.0035</b></td>
+                                <td style="background-color: lavender;"><b>5.0356</b></td>
+                            </tr>
+                            <tr>
+                                <td>11</td>
+                                <td>AlexNet-OrganizerBaseline</td>
+                                <td>0.0033</td>
+                                <td>5.0564</td>
+                                <td>0.0035</td>
+                                <td>4.7650</td>
+                                <td style="background-color: lavender;"><b>0.0034</b></td>
+                                <td style="background-color: lavender;"><b>4.9024</b></td>
+                            </tr>
+                        </table>
                     </div>
+                    
                     <p class="intro-paragraph" style="font-size:18px">
                         <!-- <span style="font-weight: bold">Leaderboard structure:</span><br> -->
                         The three main columns are <i>EVC</i> and <i>IT</i> (the two brain regions of interest), and <i>Score</i> (average of EVC and IT). The entry with the highest <i>Score</i> is ranked first. 
@@ -233,6 +351,42 @@
     <script src="../node_modules/angular-messages/angular-messages.min.js"></script>
     <script src="../js/ng/src/app.js"></script>
     <script src="../js/ng/src/controller.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const navToggle = document.querySelector('.nav-toggle');
+            const navOverlay = document.querySelector('.nav-overlay');
+            const navLinks = document.querySelectorAll('.overlay-nav ul li a');
+
+            // Toggle the overlay when hamburger menu is clicked
+            navToggle.addEventListener('click', function (event) {
+                event.preventDefault();
+                navOverlay.classList.toggle('open');
+                navToggle.classList.toggle('active');
+            });
+
+            // Close the overlay when a navigation link is clicked
+            navLinks.forEach(function (link) {
+                link.addEventListener('click', function () {
+                    navOverlay.classList.remove('open');
+                    navToggle.classList.remove('active');
+                });
+            });
+        });
+    </script>
+    <script>
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            const heroSection = document.querySelector('.hero');
+            const heroHeight = heroSection.offsetHeight;
+
+            if (window.scrollY > heroHeight - 100) {
+                header.classList.add('nav-scrolled');
+            } else {
+                header.classList.remove('nav-scrolled');
+            }
+        });
+
+    </script>
     <script> function externalLinks() { for (var c = document.getElementsByTagName("a"), a = 0; a < c.length; a++) { var b = c[a]; b.getAttribute("href") && b.hostname !== location.hostname && (b.target = "_blank") } }; externalLinks();</script>
 </body>
 

@@ -226,7 +226,6 @@
                                 </ul>
                                 <br>
 
-                                <p class="challenge-paragraph"><b>Learn more and participate in Track 1 <a href="http://challenge.algonauts.csail.mit.edu/competitions/77">here</a></b></p>
                             </div>
                         </div>
                         
@@ -234,39 +233,249 @@
                         <h3 style="margin-bottom: 1em; margin-top: 1em; text-align:center" id="Track1Leaderboard_challenge">Track 1 <b>Challenge Test Set</b> Leaderboard (<a href="leaderboard_fmri.html">see detailed table</a>)</h3>
                         <div style="overflow-x:auto;">
                             <table class="tables-ll">
-                                <tr><th></th>
+                                <tr>
+                                    <th></th>
                                     <th></th>
                                     <th class="table-ll-headers">EVC</th>
                                     <th class="table-ll-headers">IT</th>
                                     <th class="table-ll-headers">Score</th>
-                                <tr><th class="table-ll-headers-2" style="border-left: 0px;">Rank</th>
-                                    <th class="table-ll-headers-2">Team Name</th>
-                                    <!-- <th class="table-ll-headers-2">R<sup>2</sup></th> -->
-                                    <th class="table-ll-headers-2">Noise Normalized R<sup>2</sup> (%)</th>
-                                    <!-- <th class="table-ll-headers-2">R<sup>2</sup></th> -->
-                                    <th class="table-ll-headers-2">Noise Normalized R<sup>2</sup> (%)</th>
-                                    <!-- <th class="table-ll-headers-2">Average R<sup>2</sup></th> -->
-                                    <th class="table-ll-headers-2">Average Noise Normalized R<sup>2</sup> (%)</th>
                                 </tr>
-                                <tr><td></td>
+                                <tr>
+                                    <th class="table-ll-headers-2" style="border-left: 0px;">Rank</th>
+                                    <th class="table-ll-headers-2">Team Name</th>
+                                    <th class="table-ll-headers-2">Noise Normalized R<sup>2</sup> (%)</th>
+                                    <th class="table-ll-headers-2">Noise Normalized R<sup>2</sup> (%)</th>
+                                    <th class="table-ll-headers-2">Average Noise Normalized R<sup>2</sup> (%)</th>
+                                    <th class="table-ll-headers-2">Detailed Results</th>
+                                </tr>
+                                <tr>
+                                    <td></td>
                                     <td><i>Noise Ceiling</i></td>
                                     <td><i>100</i></td>
                                     <td><i>100</i></td>
-                                    <td><i>100</i></td>
+                                    <td style="background-color: lavender;"><i><b>100</b></i></td>
+                                    <td></td>
                                 </tr>
-                                <tr ng-repeat="row in lb_fmri_ts1">
-                                    <td>{{$index+1}}</td>
-                                    <td>{{row.Team_Name}}</td>
-                                    <!-- <td>{{row.Metric1_R2}}</td> -->
-                                    <td>{{row.EVC_pc.toFixed(4)}}</td>
-                                    <!-- <td>{{row.Metric2_R2}}</td> -->
-                                    <td>{{row.IT_pc.toFixed(4)}}</td>
-                                    <!-- <td class="table-emphasis">{{row.Score_R2}}</td> -->
-                                    <td class="table-emphasis">{{row.score_pc.toFixed(4)}}</td>
-                                    <td><a href="{{row.Team_Name}}_results.html">Detailed Results</a></td>
+                                <tr>
+                                    <td>1</td>
+                                    <td>agustin</td>
+                                    <td>32.8833</td>
+                                    <td>20.9925</td>
+                                    <td style="background-color: lavender;"><b>26.9056</b></td>
+                                    <td><a href="agustin_results.html" class="a-2021">Detailed Results</a></td>
                                 </tr>
-                            </table>  
+                                <tr>
+                                    <td>2</td>
+                                    <td>Aakash</td>
+                                    <td>30.5612</td>
+                                    <td>19.2804</td>
+                                    <td style="background-color: lavender;"><b>24.8901</b></td>
+                                    <td><a href="Aakash_results.html" class="a-2021">Detailed Results</a></td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>rmldj</td>
+                                    <td>28.3965</td>
+                                    <td>20.7690</td>
+                                    <td style="background-color: lavender;"><b>24.5620</b></td>
+                                    <td><a href="rmldj_results.html" class="a-2021">Detailed Results</a></td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>HY</td>
+                                    <td>29.5443</td>
+                                    <td>16.3535</td>
+                                    <td style="background-color: lavender;"><b>22.9130</b></td>
+                                    <td><a href="HY_results.html" class="a-2021">Detailed Results</a></td>
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td>navneedhm</td>
+                                    <td>21.4018</td>
+                                    <td>20.4753</td>
+                                    <td style="background-color: lavender;"><b>20.9360</b></td>
+                                    <td><a href="navneedhm_results.html" class="a-2021">Detailed Results</a></td>
+                                </tr>
+                                <tr>
+                                    <td>6</td>
+                                    <td>Mukesh_Makwana</td>
+                                    <td>21.4343</td>
+                                    <td>20.4307</td>
+                                    <td style="background-color: lavender;"><b>20.9297</b></td>
+                                    <td><a href="Mukesh_Makwana_results.html" class="a-2021">Detailed Results</a></td>
+                                </tr>
+                                <tr>
+                                    <td>7</td>
+                                    <td>ggaziv</td>
+                                    <td>24.9314</td>
+                                    <td>15.5453</td>
+                                    <td style="background-color: lavender;"><b>20.2128</b></td>
+                                    <td><a href="ggaziv_results.html" class="a-2021">Detailed Results</a></td>
+                                </tr>
+                                <tr>
+                                    <td>8</td>
+                                    <td>drshti</td>
+                                    <td>19.0810</td>
+                                    <td>17.3859</td>
+                                    <td style="background-color: lavender;"><b>18.2288</b></td>
+                                    <td><a href="drshti_results.html" class="a-2021">Detailed Results</a></td>
+                                </tr>
+                                <tr>
+                                    <td>9</td>
+                                    <td>astha736</td>
+                                    <td>15.9807</td>
+                                    <td>19.6626</td>
+                                    <td style="background-color: lavender;"><b>17.8317</b></td>
+                                    <td><a href="astha736_results.html" class="a-2021">Detailed Results</a></td>
+                                </tr>
+                                <tr>
+                                    <td>10</td>
+                                    <td>mfonseca</td>
+                                    <td>17.4111</td>
+                                    <td>15.9311</td>
+                                    <td style="background-color: lavender;"><b>16.6671</b></td>
+                                    <td><a href="mfonseca_results.html" class="a-2021">Detailed Results</a></td>
+                                </tr>
+                                <tr>
+                                    <td>11</td>
+                                    <td>Team nntw</td>
+                                    <td>20.1595</td>
+                                    <td>12.1610</td>
+                                    <td style="background-color: lavender;"><b>16.1385</b></td>
+                                    <td><a href="Team nntw _results.html" class="a-2021">Detailed Results</a></td>
+                                </tr>
+                                <tr>
+                                    <td>12</td>
+                                    <td>Team UvABrain</td>
+                                    <td>13.6722</td>
+                                    <td>17.3659</td>
+                                    <td style="background-color: lavender;"><b>15.5291</b></td>
+                                    <td><a href="Team UvABrain _results.html" class="a-2021">Detailed Results</a></td>
+                                </tr>
+                                <tr>
+                                    <td>13</td>
+                                    <td>kpmtm</td>
+                                    <td>20.9645</td>
+                                    <td>9.2171</td>
+                                    <td style="background-color: lavender;"><b>15.0589</b></td>
+                                    <td><a href="kpmtm_results.html" class="a-2021">Detailed Results</a></td>
+                                </tr>
+                                <tr>
+                                    <td>14</td>
+                                    <td>am88</td>
+                                    <td>11.2759</td>
+                                    <td>16.1158</td>
+                                    <td style="background-color: lavender;"><b>13.7090</b></td>
+                                    <td><a href="am88_results.html" class="a-2021">Detailed Results</a></td>
+                                </tr>
+                                <tr>
+                                    <td>15</td>
+                                    <td>Biggzlar</td>
+                                    <td>8.0078</td>
+                                    <td>14.2666</td>
+                                    <td style="background-color: lavender;"><b>11.1542</b></td>
+                                    <td><a href="Biggzlar_results.html" class="a-2021">Detailed Results</a></td>
+                                </tr>
+                                <tr>
+                                    <td>16</td>
+                                    <td>Wenxin_SU</td>
+                                    <td>11.3084</td>
+                                    <td>11.0000</td>
+                                    <td style="background-color: lavender;"><b>11.1534</b></td>
+                                    <td><a href="Wenxin_SU_results.html" class="a-2021">Detailed Results</a></td>
+                                </tr>
+                                <tr>
+                                    <td>17</td>
+                                    <td>Team GJ</td>
+                                    <td>9.3443</td>
+                                    <td>10.1268</td>
+                                    <td style="background-color: lavender;"><b>9.7377</b></td>
+                                    <td><a href="Team GJ _results.html" class="a-2021">Detailed Results</a></td>
+                                </tr>
+                                <tr>
+                                    <td>18</td>
+                                    <td>kashyaph</td>
+                                    <td>6.9403</td>
+                                    <td>12.3594</td>
+                                    <td style="background-color: lavender;"><b>9.6646</b></td>
+                                    <td><a href="kashyaph_results.html" class="a-2021">Detailed Results</a></td>
+                                </tr>
+                                <tr>
+                                    <td>19</td>
+                                    <td>RobTLange</td>
+                                    <td>6.6997</td>
+                                    <td>11.4852</td>
+                                    <td style="background-color: lavender;"><b>9.1055</b></td>
+                                    <td><a href="RobTLange_results.html" class="a-2021">Detailed Results</a></td>
+                                </tr>
+                                <tr>
+                                    <td>20</td>
+                                    <td>abhinav</td>
+                                    <td>9.8916</td>
+                                    <td>6.6810</td>
+                                    <td style="background-color: lavender;"><b>8.2776</b></td>
+                                    <td><a href="abhinav_results.html" class="a-2021">Detailed Results</a></td>
+                                </tr>
+                                <tr>
+                                    <td>21</td>
+                                    <td>elna</td>
+                                    <td>9.3052</td>
+                                    <td>6.2630</td>
+                                    <td style="background-color: lavender;"><b>7.7758</b></td>
+                                    <td><a href="elna_results.html" class="a-2021">Detailed Results</a></td>
+                                </tr>
+                                <tr>
+                                    <td>22</td>
+                                    <td>Team Brathering</td>
+                                    <td>6.6783</td>
+                                    <td>8.6025</td>
+                                    <td style="background-color: lavender;"><b>7.6456</b></td>
+                                    <td><a href="Team Brathering _results.html" class="a-2021">Detailed Results</a></td>
+                                </tr>
+                                <tr>
+                                    <td>23</td>
+                                    <td>jomaka</td>
+                                    <td>8.0742</td>
+                                    <td>7.0917</td>
+                                    <td style="background-color: lavender;"><b>7.5803</b></td>
+                                    <td><a href="jomaka_results.html" class="a-2021">Detailed Results</a></td>
+                                </tr>
+                                <tr>
+                                    <td>24</td>
+                                    <td>AlexNet-OrganizerBaseline</td>
+                                    <td>6.5794</td>
+                                    <td>8.2250</td>
+                                    <td style="background-color: lavender;"><b>7.4066</b></td>
+                                    <td><a href="AlexNet-OrganizerBaseline_results.html" class="a-2021">Detailed Results</a></td>
+                                </tr>
+                                <tr>
+                                    <td>25</td>
+                                    <td>astrid_zeman</td>
+                                    <td>5.8994</td>
+                                    <td>6.9351</td>
+                                    <td style="background-color: lavender;"><b>6.4201</b></td>
+                                    <td><a href="astrid_zeman_results.html" class="a-2021">Detailed Results</a></td>
+                                </tr>
+                                <tr>
+                                    <td>26</td>
+                                    <td>adrianso</td>
+                                    <td>6.5053</td>
+                                    <td>5.8606</td>
+                                    <td style="background-color: lavender;"><b>6.1812</b></td>
+                                    <td><a href="adrianso_results.html"" class="a-2021">Detailed Results</a></td>
+                                </tr>
+                                <tr>
+                                    <td>27</td>
+                                    <td>ajay14</td>
+                                    <td>6.5794</td>
+                                    <td>3.2785</td>
+                                    <td style="background-color: lavender;"><b>4.9200</b></td>
+                                    <td><a href="ajay14_results.html" class="a-2021">Detailed Results</a></td>
+                                </tr>
+                            </table>
                         </div>
+                        
+                        
                         <p class="intro-paragraph" style="font-size:18px; margin-bottom:20px">
                             The three main columns are <i>EVC</i> and <i>IT</i> (the two brain regions of interest), and <i>Score</i> (average of EVC and IT). The entry with the highest <i>Score</i> is ranked first. 
                             <i>R<sup>2</sup></i> represents the submitted model RDM squared correlation (spearman) to the EVC/IT RDM. <i>Noise Normalized</i> represents the fact that R<sup>2</sup> values are normalized to the noise ceiling (see <a href="http://challenge.algonauts.csail.mit.edu/competitions/77#learn_the_details-evaluation">here</a> for more details). AlexNet is the organizer baseline.
@@ -278,39 +487,120 @@
                         <h3 style="margin-bottom: 1em; margin-top: 0em; text-align: center" id="Track1Leaderboard_challenge">Track 1 <b>Hidden Test Set</b> Leaderboard (<a href="leaderboard_fmri_TS2.html">see detailed table</a>)</h3>
                         <div style="overflow-x:auto;">
                             <table class="tables-ll">
-                                <tr><th></th>
+                                <tr>
+                                    <th></th>
                                     <th></th>
                                     <th class="table-ll-headers">EVC</th>
                                     <th class="table-ll-headers">IT</th>
                                     <th class="table-ll-headers">Score</th>
-                                <tr><th class="table-ll-headers-2" style="border-left: 0px;">Rank</th>
-                                    <th class="table-ll-headers-2">Team Name</th>
-                                    <!-- <th class="table-ll-headers-2">R<sup>2</sup></th> -->
-                                    <th class="table-ll-headers-2">Noise Normalized R<sup>2</sup> (%)</th>
-                                    <!-- <th class="table-ll-headers-2">R<sup>2</sup></th> -->
-                                    <th class="table-ll-headers-2">Noise Normalized R<sup>2</sup> (%)</th>
-                                    <!-- <th class="table-ll-headers-2">Average R<sup>2</sup></th> -->
-                                    <th class="table-ll-headers-2">Average Noise Normalized R<sup>2</sup> (%)</th>
                                 </tr>
-                                <tr><td></td>
+                                <tr>
+                                    <th class="table-ll-headers-2" style="border-left: 0px;">Rank</th>
+                                    <th class="table-ll-headers-2">Team Name</th>
+                                    <th class="table-ll-headers-2">Noise Normalized R<sup>2</sup> (%)</th>
+                                    <th class="table-ll-headers-2">Noise Normalized R<sup>2</sup> (%)</th>
+                                    <th class="table-ll-headers-2">Average Noise Normalized R<sup>2</sup> (%)</th>
+                                    <th class="table-ll-headers-2">Detailed Results</th>
+                                </tr>
+                                <tr>
+                                    <td></td>
                                     <td><i>Noise Ceiling</i></td>
                                     <td><i>100</i></td>
                                     <td><i>100</i></td>
-                                    <td><i>100</i></td>
+                                    <td style="background-color: lavender;"><i><b>100</b></i></td>
+                                    <td></td>
                                 </tr>
-                                <tr ng-repeat="row in lb_fmri_ts2">
-                                    <td>{{$index+1}}</td>
-                                    <td>{{row.Team_Name}}</td>
-                                    <!-- <td>{{row.Metric1_R2}}</td> -->
-                                    <td>{{row.EVC_pc.toFixed(4)}}</td>
-                                    <!-- <td>{{row.Metric2_R2}}</td> -->
-                                    <td>{{row.IT_pc.toFixed(4)}}</td>
-                                    <!-- <td class="table-emphasis">{{row.Score_R2}}</td> -->
-                                    <td class="table-emphasis">{{row.score_pc.toFixed(4)}}</td>
-                                    <td><a href="{{row.Team_Name}}_results_TS2.html">Detailed Results</a></td>
+                                <tr>
+                                    <td>1</td>
+                                    <td>rmldj</td>
+                                    <td>12.9969</td>
+                                    <td>17.3412</td>
+                                    <td style="background-color: lavender;"><b>15.2926</b></td>
+                                    <td><a href="rmldj_results_TS2.html" class="a-2021">Detailed Results</a></td>
                                 </tr>
-                            </table>  
+                                <tr>
+                                    <td>2</td>
+                                    <td>Aakash</td>
+                                    <td>14.1444</td>
+                                    <td>9.6379</td>
+                                    <td style="background-color: lavender;"><b>11.7630</b></td>
+                                    <td><a href="Aakash_results_TS2.html" class="a-2021">Detailed Results</a></td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>ggaziv</td>
+                                    <td>15.2585</td>
+                                    <td>8.4870</td>
+                                    <td style="background-color: lavender;"><b>11.6802</b></td>
+                                    <td><a href="ggaziv_results_TS2.html" class="a-2021">Detailed Results</a></td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>Mukesh_Makwana</td>
+                                    <td>9.8786</td>
+                                    <td>13.2405</td>
+                                    <td style="background-color: lavender;"><b>11.6551</b></td>
+                                    <td><a href="Mukesh_Makwana_results_TS2.html" class="a-2021">Detailed Results</a></td>
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td>agustin</td>
+                                    <td>12.6287</td>
+                                    <td>10.5547</td>
+                                    <td style="background-color: lavender;"><b>11.5327</b></td>
+                                    <td><a href="agustin_results_TS2.html" class="a-2021">Detailed Results</a></td>
+                                </tr>
+                                <tr>
+                                    <td>6</td>
+                                    <td>navneedhm</td>
+                                    <td>12.5500</td>
+                                    <td>7.8677</td>
+                                    <td style="background-color: lavender;"><b>10.0757</b></td>
+                                    <td><a href="navneedhm_results_TS2.html" class="a-2021">Detailed Results</a></td>
+                                </tr>
+                                <tr>
+                                    <td>7</td>
+                                    <td>amir32002</td>
+                                    <td>9.2338</td>
+                                    <td>8.9633</td>
+                                    <td style="background-color: lavender;"><b>9.0909</b></td>
+                                    <td><a href="amir32002_results_TS2.html" class="a-2021">Detailed Results</a></td>
+                                </tr>
+                                <tr>
+                                    <td>8</td>
+                                    <td>ajay14</td>
+                                    <td>11.7817</td>
+                                    <td>4.8445</td>
+                                    <td style="background-color: lavender;"><b>8.1158</b></td>
+                                    <td><a href="ajay14_results_TS2.html" class="a-2021">Detailed Results</a></td>
+                                </tr>
+                                <tr>
+                                    <td>9</td>
+                                    <td>adrianso</td>
+                                    <td>9.6850</td>
+                                    <td>4.0513</td>
+                                    <td style="background-color: lavender;"><b>6.7079</b></td>
+                                    <td><a href="adrianso_results_TS2.html" class="a-2021">Detailed Results</a></td>
+                                </tr>
+                                <tr>
+                                    <td>10</td>
+                                    <td>mfonseca</td>
+                                    <td>5.5581</td>
+                                    <td>4.5694</td>
+                                    <td style="background-color: lavender;"><b>5.0356</b></td>
+                                    <td><a href="mfonseca_results_TS2.html" class="a-2021">Detailed Results</a></td>
+                                </tr>
+                                <tr>
+                                    <td>11</td>
+                                    <td>AlexNet-OrganizerBaseline</td>
+                                    <td>5.0564</td>
+                                    <td>4.7650</td>
+                                    <td style="background-color: lavender;"><b>4.9024</b></td>
+                                    <td><a href="AlexNet-OrganizerBaseline_results_TS2.html" class="a-2021">Detailed Results</a></td>
+                                </tr>
+                            </table>
                         </div>
+                        
                         <p class="intro-paragraph" style="font-size:18px; margin-bottom:60px;" id="Track2">
                             The three main columns are <i>EVC</i> and <i>IT</i> (the two brain regions of interest), and <i>Score</i> (average of EVC and IT). The entry with the highest <i>Score</i> is ranked first. 
                             <i>R<sup>2</sup></i> represents the submitted model RDM squared correlation (spearman) to the EVC/IT RDM. <i>Noise Normalized</i> represents the fact that R<sup>2</sup> values are normalized to the noise ceiling (see <a href="http://challenge.algonauts.csail.mit.edu/competitions/77#learn_the_details-evaluation">here</a> for more details). AlexNet is the organizer baseline.
@@ -348,39 +638,160 @@
                         <h3 style="margin-bottom: 1em; margin-top: 5em; text-align: center" id="Track2Leaderboard_challenge">Track 2 <b>Challenge Test Set</b> Leaderboard (<a href="leaderboard_meg.html">see detailed table</a>)</h3>
                         <div style="overflow-x:auto;">
                             <table class="tables-ll">
-                                <tr><th></th>
+                                <tr>
+                                    <th></th>
                                     <th></th>
                                     <th class="table-ll-headers">Early Interval</th>
                                     <th class="table-ll-headers">Late Interval</th>
                                     <th class="table-ll-headers">Score</th>
-                                <tr><th class="table-ll-headers-2" style="border-left: 0px;">Rank</th>
-                                    <th class="table-ll-headers-2">Team Name</th>
-                                    <!-- <th class="table-ll-headers-2">R<sup>2</sup></th> -->
-                                    <th class="table-ll-headers-2">Noise Normalized R<sup>2</sup> (%)</th>
-                                    <!-- <th class="table-ll-headers-2">R<sup>2</sup></th> -->
-                                    <th class="table-ll-headers-2">Noise Normalized R<sup>2</sup> (%)</th>
-                                    <!-- <th class="table-ll-headers-2">Average R<sup>2</sup></th> -->
-                                    <th class="table-ll-headers-2">Average Noise Normalized R<sup>2</sup> (%)</th>
                                 </tr>
-                                <tr><td></td>
+                                <tr>
+                                    <th class="table-ll-headers-2" style="border-left: 0px;">Rank</th>
+                                    <th class="table-ll-headers-2">Team Name</th>
+                                    <th class="table-ll-headers-2">Noise Normalized R<sup>2</sup> (%)</th>
+                                    <th class="table-ll-headers-2">Noise Normalized R<sup>2</sup> (%)</th>
+                                    <th class="table-ll-headers-2">Average Noise Normalized R<sup>2</sup> (%)</th>
+                                    <th class="table-ll-headers-2">Detailed Results</th>
+                                </tr>
+                                <tr>
+                                    <td></td>
                                     <td><i>Noise Ceiling</i></td>
                                     <td><i>100</i></td>
                                     <td><i>100</i></td>
-                                    <td><i>100</i></td>
+                                    <td style="background-color: lavender;"><i><b>100</b></i></td>
+                                    <td></td>
                                 </tr>
-                                <tr ng-repeat="row in lb_meg_ts1">
-                                    <td>{{$index+1}}</td>
-                                    <td>{{row.Team_Name}}</td>
-                                    <!-- <td>{{row.Metric1_R2}}</td> -->
-                                    <td>{{row.early_pc.toFixed(4)}}</td>
-                                    <!-- <td>{{row.Metric2_R2}}</td> -->
-                                    <td>{{row.late_pc.toFixed(4)}}</td>
-                                    <!-- <td class="table-emphasis">{{row.Score_R2}}</td> -->
-                                    <td class="table-emphasis">{{row.score_pc.toFixed(4)}}</td>
-                                    <td><a href="{{row.Team_Name}}_results.html">Detailed Results</a></td>
+                                <tr>
+                                    <td>1</td>
+                                    <td>Aakash</td>
+                                    <td>58.9498</td>
+                                    <td>67.2455</td>
+                                    <td style="background-color: lavender;"><b>63.5583</b></td>
+                                    <td><a href="Aakash_results.html" class="a-2021">Detailed Results</a></td>
                                 </tr>
-                            </table> 
+                                <tr>
+                                    <td>2</td>
+                                    <td>rmldj</td>
+                                    <td>46.9061</td>
+                                    <td>57.3847</td>
+                                    <td style="background-color: lavender;"><b>52.7272</b></td>
+                                    <td><a href="rmldj_results.html" class="a-2021">Detailed Results</a></td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>agustin</td>
+                                    <td>50.9508</td>
+                                    <td>53.5932</td>
+                                    <td style="background-color: lavender;"><b>52.4187</b></td>
+                                    <td><a href="agustin_results.html" class="a-2021">Detailed Results</a></td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>ggaziv</td>
+                                    <td>51.2056</td>
+                                    <td>35.0976</td>
+                                    <td style="background-color: lavender;"><b>42.2571</b></td>
+                                    <td><a href="ggaziv_results.html" class="a-2021">Detailed Results</a></td>
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td>Team GJ</td>
+                                    <td>36.3899</td>
+                                    <td>45.3534</td>
+                                    <td style="background-color: lavender;"><b>41.3694</b></td>
+                                    <td><a href="#" class="a-2021">Detailed Results</a></td>
+                                </tr>
+                                <tr>
+                                    <td>6</td>
+                                    <td>drshti</td>
+                                    <td>21.8638</td>
+                                    <td>39.2335</td>
+                                    <td style="background-color: lavender;"><b>31.5132</b></td>
+                                    <td><a href="drshti_results.html" class="a-2021">Detailed Results</a></td>
+                                </tr>
+                                <tr>
+                                    <td>7</td>
+                                    <td>mfonseca</td>
+                                    <td>27.3910</td>
+                                    <td>27.8964</td>
+                                    <td style="background-color: lavender;"><b>27.6718</b></td>
+                                    <td><a href="mfonseca_results.html" class="a-2021">Detailed Results</a></td>
+                                </tr>
+                                <tr>
+                                    <td>8</td>
+                                    <td>Mukesh_Makwana</td>
+                                    <td>20.7331</td>
+                                    <td>26.6669</td>
+                                    <td style="background-color: lavender;"><b>24.0295</b></td>
+                                    <td><a href="Mukesh_Makwana_results.html" class="a-2021">Detailed Results</a></td>
+                                </tr>
+                                <tr>
+                                    <td>9</td>
+                                    <td>Team UvABrain</td>
+                                    <td>1.1998</td>
+                                    <td>28.5125</td>
+                                    <td style="background-color: lavender;"><b>16.3728</b></td>
+                                    <td><a href="Team UvABrain _results.html" class="a-2021">Detailed Results</a></td>
+                                </tr>
+                                <tr>
+                                    <td>10</td>
+                                    <td>AlexNet-OrganizerBaseline</td>
+                                    <td>5.8198</td>
+                                    <td>22.9284</td>
+                                    <td style="background-color: lavender;"><b>15.3241</b></td>
+                                    <td><a href="AlexNet-OrganizerBaseline_results.html" class="a-2021">Detailed Results</a></td>
+                                </tr>
+                                <tr>
+                                    <td>11</td>
+                                    <td>kpmtm</td>
+                                    <td>25.9474</td>
+                                    <td>4.4091</td>
+                                    <td style="background-color: lavender;"><b>13.9822</b></td>
+                                    <td><a href="kpmtm_results.html" class="a-2021">Detailed Results</a></td>
+                                </tr>
+                                <tr>
+                                    <td>12</td>
+                                    <td>adrianso</td>
+                                    <td>15.6797</td>
+                                    <td>8.4270</td>
+                                    <td style="background-color: lavender;"><b>11.6506</b></td>
+                                    <td><a href="adrianso_results.html" class="a-2021">Detailed Results</a></td>
+                                </tr>
+                                <tr>
+                                    <td>13</td>
+                                    <td>am88</td>
+                                    <td>6.1968</td>
+                                    <td>14.4103</td>
+                                    <td style="background-color: lavender;"><b>10.7597</b></td>
+                                    <td><a href="am88_results.html" class="a-2021">Detailed Results</a></td>
+                                </tr>
+                                <tr>
+                                    <td>14</td>
+                                    <td>Wenxin_SU</td>
+                                    <td>9.8936</td>
+                                    <td>7.1345</td>
+                                    <td style="background-color: lavender;"><b>8.3608</b></td>
+                                    <td><a href="Wenxin_SU_results.html" class="a-2021">Detailed Results</a></td>
+                                </tr>
+                                <tr>
+                                    <td>15</td>
+                                    <td>jomaka</td>
+                                    <td>0.3015</td>
+                                    <td>8.5400</td>
+                                    <td style="background-color: lavender;"><b>4.8782</b></td>
+                                    <td><a href="jomaka_results.html" class="a-2021">Detailed Results</a></td>
+                                </tr>
+                                <tr>
+                                    <td>16</td>
+                                    <td>HY</td>
+                                    <td>2.5384</td>
+                                    <td>6.4005</td>
+                                    <td style="background-color: lavender;"><b>4.6839</b></td>
+                                    <td><a href="HY_results.html" class="a-2021">Detailed Results</a></td>
+                                </tr>
+                            </table>
                         </div>
+                        
                         <p class="intro-paragraph" style="font-size:18px">
                             The three main columns are <i>Early</i> and <i>Late Interval</i> (the two time intervals of interest), and <i>Score</i> (average of Early and Late). The entry with the highest <i>Score</i> is ranked first. 
                             <i>R<sup>2</sup></i> represents the submitted model RDM squared correlation (spearman) to the Early/Late Interval RDM. <i>Noise Normalized</i> represents the fact that R<sup>2</sup> values are normalized to the noise ceiling (see <a href="http://challenge.algonauts.csail.mit.edu/competitions/78#learn_the_details-evaluation">here</a> for more details). AlexNet is the organizer baseline.
@@ -391,39 +802,88 @@
                         <h3 style="margin-bottom: 1em; margin-top: 0em; text-align: center" id="Track2Leaderboard_hidden">Track 2 <b>Hidden Test Set</b> Leaderboard (<a href="leaderboard_meg_TS2.html">see detailed table</a>)</h3>
                         <div style="overflow-x:auto;">
                             <table class="tables-ll">
-                                <tr><th></th>
+                                <tr>
+                                    <th></th>
                                     <th></th>
                                     <th class="table-ll-headers">Early Interval</th>
                                     <th class="table-ll-headers">Late Interval</th>
                                     <th class="table-ll-headers">Score</th>
-                                <tr><th class="table-ll-headers-2" style="border-left: 0px;">Rank</th>
-                                    <th class="table-ll-headers-2">Team Name</th>
-                                    <!-- <th class="table-ll-headers-2">R<sup>2</sup></th> -->
-                                    <th class="table-ll-headers-2">Noise Normalized R<sup>2</sup> (%)</th>
-                                    <!-- <th class="table-ll-headers-2">R<sup>2</sup></th> -->
-                                    <th class="table-ll-headers-2">Noise Normalized R<sup>2</sup> (%)</th>
-                                    <!-- <th class="table-ll-headers-2">Average R<sup>2</sup></th> -->
-                                    <th class="table-ll-headers-2">Average Noise Normalized R<sup>2</sup> (%)</th>
                                 </tr>
-                                <tr><td></td>
+                                <tr>
+                                    <th class="table-ll-headers-2" style="border-left: 0px;">Rank</th>
+                                    <th class="table-ll-headers-2">Team Name</th>
+                                    <th class="table-ll-headers-2">Noise Normalized R<sup>2</sup> (%)</th>
+                                    <th class="table-ll-headers-2">Noise Normalized R<sup>2</sup> (%)</th>
+                                    <th class="table-ll-headers-2">Average Noise Normalized R<sup>2</sup> (%)</th>
+                                    <th class="table-ll-headers-2">Detailed Results</th>
+                                </tr>
+                                <tr>
+                                    <td></td>
                                     <td><i>Noise Ceiling</i></td>
                                     <td><i>100</i></td>
                                     <td><i>100</i></td>
-                                    <td><i>100</i></td>
+                                    <td style="background-color: lavender;"><i><b>100</b></i></td>
+                                    <td></td>
                                 </tr>
-                                <tr ng-repeat="row in lb_meg_ts2">
-                                    <td>{{$index+1}}</td>
-                                    <td>{{row.Team_Name}}</td>
-                                    <!-- <td>{{row.Metric1_R2}}</td> -->
-                                    <td>{{row.early_pc.toFixed(4)}}</td>
-                                    <!-- <td>{{row.Metric2_R2}}</td> -->
-                                    <td>{{row.late_pc.toFixed(4)}}</td>
-                                    <!-- <td class="table-emphasis">{{row.Score_R2}}</td> -->
-                                    <td class="table-emphasis">{{row.score_pc.toFixed(4)}}</td>
-                                    <td><a href="{{row.Team_Name}}_results_TS2.html">Detailed Results</a></td>
+                                <tr>
+                                    <td>1</td>
+                                    <td>Aakash</td>
+                                    <td>49.7933</td>
+                                    <td>69.4401</td>
+                                    <td style="background-color: lavender;"><b>60.2274</b></td>
+                                    <td><a href="Aakash_results_TS2.html" class="a-2021">Detailed Results</a></td>
                                 </tr>
-                            </table> 
+                                <tr>
+                                    <td>2</td>
+                                    <td>rmldj</td>
+                                    <td>53.5460</td>
+                                    <td>55.0110</td>
+                                    <td style="background-color: lavender;"><b>54.3240</b></td>
+                                    <td><a href="rmldj_results_TS2.html" class="a-2021">Detailed Results</a></td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>agustin</td>
+                                    <td>40.5026</td>
+                                    <td>56.6497</td>
+                                    <td style="background-color: lavender;"><b>49.0780</b></td>
+                                    <td><a href="agustin_results_TS2.html" class="a-2021">Detailed Results</a></td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>ggaziv</td>
+                                    <td>49.8848</td>
+                                    <td>28.7378</td>
+                                    <td style="background-color: lavender;"><b>38.6541</b></td>
+                                    <td><a href="ggaziv_results_TS2.html" class="a-2021">Detailed Results</a></td>
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td>georginjacob</td>
+                                    <td>18.0934</td>
+                                    <td>27.2611</td>
+                                    <td style="background-color: lavender;"><b>22.9621</b></td>
+                                    <td><a href="georginjacob_results_TS2.html" class="a-2021">Detailed Results</a></td>
+                                </tr>
+                                <tr>
+                                    <td>6</td>
+                                    <td>mfonseca</td>
+                                    <td>11.6091</td>
+                                    <td>27.4629</td>
+                                    <td style="background-color: lavender;"><b>20.0287</b></td>
+                                    <td><a href="mfonseca_results_TS2.html" class="a-2021">Detailed Results</a></td>
+                                </tr>
+                                <tr>
+                                    <td>7</td>
+                                    <td>AlexNet-OrganizerBaseline</td>
+                                    <td>8.6216</td>
+                                    <td>23.8186</td>
+                                    <td style="background-color: lavender;"><b>16.6924</b></td>
+                                    <td><a href="AlexNet-OrganizerBaseline_results_TS2.html" class="a-2021">Detailed Results</a></td>
+                                </tr>
+                            </table>
                         </div>
+                        
                         <p class="intro-paragraph" style="font-size:18px">
                             The three main columns are <i>Early</i> and <i>Late Interval</i> (the two time intervals of interest), and <i>Score</i> (average of Early and Late). The entry with the highest <i>Score</i> is ranked first. 
                             <i>R<sup>2</sup></i> represents the submitted model RDM squared correlation (spearman) to the Early/Late Interval RDM. <i>Noise Normalized</i> represents the fact that R<sup>2</sup> values are normalized to the noise ceiling (see <a href="http://challenge.algonauts.csail.mit.edu/competitions/78#learn_the_details-evaluation">here</a> for more details). AlexNet is the organizer baseline.

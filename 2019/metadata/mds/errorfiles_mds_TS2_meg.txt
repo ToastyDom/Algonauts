@@ -1,0 +1,4 @@
+rmldj
+late.mat 
+
+Unable to decrease criterion along line search direction.

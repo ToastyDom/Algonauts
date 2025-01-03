@@ -1,0 +1,8 @@
+georginjacob
+
+Index exceeds matrix dimensions.
+
+
+rmldj
+
+Unable to decrease criterion along line search direction.

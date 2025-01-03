@@ -1257,6 +1257,13 @@ Team Section
     margin-bottom: 30px !important; /* Ensure there is space between rows */
 }
 
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
 .portfolio-box {
     width: 250px; /* Fixed width for consistent size */
     min-height: 350px; /* Optional: Ensures uniform height if needed */

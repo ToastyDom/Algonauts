@@ -1,0 +1,2 @@
+HY
+D is not a valid dissimilarity or similarity matrix.

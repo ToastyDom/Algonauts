@@ -136,34 +136,156 @@
         </div>
     </section>
 
-    <!-- SPEAKERS -->
     <section class="challenge intro-section-first-padding" id="speakers">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <h2 class="section-heading text-center" style="margin-bottom:1em">Invited Speakers</h2>
+        <div class="container-fluid text-center">
+            <div class="row justify-content-center">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading" style="margin-bottom:1em">Invited Speakers</h2>
                 </div>
             </div>
-            <!-- MEMBERS controller.js-->
-            <div class="row">
-                <div class="col-md-4 col-sm-4" ng-repeat="member in speakers">
-                    <div class="wow zoomIn">
-                        <a href="{{member.url}}" target="_blank">
-                            <img ng-cloak ng-src="../img/speakers/{{ member.photo }}" class="img-members">
-                        </a>
-                    </div>
+            <div class="row justify-content-center">
+                <!-- Speaker 1 -->
+                <div class="col-md-4 portfolio-box">
+                    <a href="https://deepmind.com/">
+                        <img src="../img/speakers/matthew.jpg" alt="Matt Botvinick" class="img-members">
+                    </a>
                     <div class="portfolio-box-caption">
-                        <div class="portfolio-box-name">
-                            <h4 ng-cloak>{{member.name}}</h4>
-                        </div>
-                        <div class="portfolio-box-affiliation">
-                            <h5 ng-cloak>{{member.affiliation}}</h5>
-                        </div>
+                        <h4>Matt Botvinick</h4>
+                        <h5>DeepMind</h5>
+                    </div>
+                </div>
+                <!-- Speaker 2 -->
+                <div class="col-md-4 portfolio-box">
+                    <a href="http://userpage.fu-berlin.de/rmcichy/">
+                        <img src="../img/speakers/radek.png" alt="Radoslaw Cichy" class="img-members">
+                    </a>
+                    <div class="portfolio-box-caption">
+                        <h4>Radoslaw Cichy</h4>
+                        <h5>FU Berlin</h5>
+                    </div>
+                </div>
+                <!-- Speaker 3 -->
+                <div class="col-md-4 portfolio-box">
+                    <a href="http://www.coxlab.org/">
+                        <img src="../img/speakers/david.jpg" alt="David Cox" class="img-members">
+                    </a>
+                    <div class="portfolio-box-caption">
+                        <h4>David Cox</h4>
+                        <h5>Harvard, IBM</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <!-- Speaker 4 -->
+                <div class="col-md-4 portfolio-box">
+                    <a href="http://dicarlolab.mit.edu/">
+                        <img src="../img/speakers/james.jpg" alt="James DiCarlo" class="img-members">
+                    </a>
+                    <div class="portfolio-box-caption">
+                        <h4>James DiCarlo</h4>
+                        <h5>MIT</h5>
+                    </div>
+                </div>
+                <!-- Speaker 5 -->
+                <div class="col-md-4 portfolio-box">
+                    <a href="http://dicarlolab.mit.edu/">
+                        <img src="../img/speakers/jackG.jpg" alt="Jack Gallant" class="img-members">
+                    </a>
+                    <div class="portfolio-box-caption">
+                        <h4>Jack Gallant</h4>
+                        <h5>UC Berkeley</h5>
+                    </div>
+                </div>
+                <!-- Speaker 6 -->
+                <div class="col-md-4 portfolio-box">
+                    <a href="http://dicarlolab.mit.edu/">
+                        <img src="../img/speakers/martin.jpg" alt="Martin Hebart" class="img-members">
+                    </a>
+                    <div class="portfolio-box-caption">
+                        <h4>Martin Hebart</h4>
+                        <h5>NIMH</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <!-- Speaker 7 -->
+                <div class="col-md-4 portfolio-box">
+                    <a href="http://dicarlolab.mit.edu/">
+                        <img src="../img/speakers/kkay.jpg" alt="Kendrick Kay" class="img-members">
+                    </a>
+                    <div class="portfolio-box-caption">
+                        <h4>Kendrick Kay</h4>
+                        <h5>UMN</h5>
+                    </div>
+                </div>
+                <!-- Speaker 8 -->
+                <div class="col-md-4 portfolio-box">
+                    <a href="http://dicarlolab.mit.edu/">
+                        <img src="../img/speakers/talia.jpg" alt="Talia Konkle" class="img-members">
+                    </a>
+                    <div class="portfolio-box-caption">
+                        <h4>Talia Konkle</h4>
+                        <h5>Harvard</h5>
+                    </div>
+                </div>
+                <!-- Speaker 9 -->
+                <div class="col-md-4 portfolio-box">
+                    <a href="https://zuckermaninstitute.columbia.edu/nikolaus-kriegeskorte-phd">
+                        <img src="../img/speakers/nikolaus.jpg" alt="Nikolaus Kriegeskorte" class="img-members">
+                    </a>
+                    <div class="portfolio-box-caption">
+                        <h4>Nikolaus Kriegeskorte</h4>
+                        <h5>Columbia</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <!-- Speaker 10 -->
+                <div class="col-md-4 portfolio-box">
+                    <a href="https://mohsenzadehlab.com/">
+                        <img src="../img/speakers/yalda.jpg" alt="Yalda Mohsenzadeh" class="img-members">
+                    </a>
+                    <div class="portfolio-box-caption">
+                        <h4>Yalda Mohsenzadeh</h4>
+                        <h5>MIT, Western University</h5>
+                    </div>
+                </div>
+                <!-- Speaker 11 -->
+                <div class="col-md-4 portfolio-box">
+                    <a href="https://mohsenzadehlab.com/">
+                        <img src="../img/speakers/tomN.jpg" alt="Thomas Naselaris" class="img-members">
+                    </a>
+                    <div class="portfolio-box-caption">
+                        <h4>Thomas Naselaris</h4>
+                        <h5>MUSC</h5>
+                    </div>
+                </div>
+                <!-- Speaker 12 -->
+                <div class="col-md-4 portfolio-box">
+                    <a href="http://olivalab.mit.edu/">
+                        <img src="../img/speakers/aude.jpg" alt="Aude Oliva" class="img-members">
+                    </a>
+                    <div class="portfolio-box-caption">
+                        <h4>Aude Oliva</h4>
+                        <h5>MIT</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <!-- Speaker 13 -->
+                <div class="col-md-4 portfolio-box">
+                    <a href="http://www.cvai.cs.uni-frankfurt.de/">
+                        <img src="../img/speakers/gemma.jpg" alt="Gemma Roig" class="img-members">
+                    </a>
+                    <div class="portfolio-box-caption">
+                        <h4>Gemma Roig</h4>
+                        <h5>SUTD</h5>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+    
 
 
 
@@ -182,13 +304,13 @@
                 <table class="tables">
                     <tr><th>Time</th><th>Event</th></tr>
                     <tr><td style="background: #3c9fb538">12:30 pm &ndash; 1:00 pm</td><td style="background: #3c9fb538">Registration and Refreshments / Opening Remarks</td>
-                    <tr><td>1:00 pm &ndash; 2:00 pm</td><td><a href="http://www.cvai.cs.uni-frankfurt.de/">Gemma Roig</a> &ndash; Introduction to Neural Networks <br>[<a href="../slides/Gemma_Roig-Introduction_to_Neural_Networks.pdf">Slides</a>]</td>
+                    <tr><td>1:00 pm &ndash; 2:00 pm</td><td><a href="http://www.cvai.cs.uni-frankfurt.de/">Gemma Roig</a> &ndash; Introduction to Neural Networks <br>[<a href="slides/Gemma_Roig-Introduction_to_Neural_Networks.pdf">Slides</a>]</td>
                     <tr><td style="background: #3c9fb538">2:00 pm &ndash; 2:15 pm</td><td style="background: #3c9fb538">Break and Refreshments</td>
-                    <tr><td>2:15 pm &ndash; 3:15 pm</td><td><a href="https://sites.google.com/site/dryaldamohsenzadeh/">Yalda Mohsenzadeh</a> &ndash; Introduction to Brain Imaging: fMRI and MEG/EEG <br>[<a href="../slides/Yalda_Mohsenzadeh-Introduction_to_Brain_Imaging.pdf">Slides</a>]</td></tr>
+                    <tr><td>2:15 pm &ndash; 3:15 pm</td><td><a href="https://sites.google.com/site/dryaldamohsenzadeh/">Yalda Mohsenzadeh</a> &ndash; Introduction to Brain Imaging: fMRI and MEG/EEG <br>[<a href="slides/Yalda_Mohsenzadeh-Introduction_to_Brain_Imaging.pdf">Slides</a>]</td></tr>
                     <tr><td style="background: #3c9fb538">3:15 pm &ndash; 3:30 pm</td><td style="background: #3c9fb538">Break and Refreshments</td></tr>
-                    <tr><td>3:30 pm &ndash; 4:30 pm</td><td><a href="http://martin-hebart.de/">Martin Hebart</a> &ndash; Comparing Brains and DNNs: Methods and Findings <br>[<a href="../slides/Martin_Hebart-Comparing_Brains_and_DNNs.pdf">Slides</a>]</td></tr>
+                    <tr><td>3:30 pm &ndash; 4:30 pm</td><td><a href="http://martin-hebart.de/">Martin Hebart</a> &ndash; Comparing Brains and DNNs: Methods and Findings <br>[<a href="slides/Martin_Hebart-Comparing_Brains_and_DNNs.pdf">Slides</a>]</td></tr>
                     <tr><td style="background: #3c9fb538">4:30 pm &ndash; 4:45 pm</td><td style="background: #3c9fb538">Break and Refreshments</td></tr>
-                    <tr><td>4:45 pm &ndash; 5:45 pm</td><td><a href="https://www.ewi-psy.fu-berlin.de/en/einrichtungen/arbeitsbereiche/neural_dyn_of_vis_cog">Radoslaw Cichy</a> &ndash; Comparing Brains and DNNs: Theory of Science <br>[<a href="../slides/Radek_Cichy-Comparing_Brains_and_DNNs.pdf">Slides</a>]</td></tr>
+                    <tr><td>4:45 pm &ndash; 5:45 pm</td><td><a href="https://www.ewi-psy.fu-berlin.de/en/einrichtungen/arbeitsbereiche/neural_dyn_of_vis_cog">Radoslaw Cichy</a> &ndash; Comparing Brains and DNNs: Theory of Science <br>[<a href="slides/Radek_Cichy-Comparing_Brains_and_DNNs.pdf">Slides</a>]</td></tr>
                     <tr><td>5:45 pm &ndash; 6:00 pm</td><td>Summary</td></tr>
                 </table>
 
@@ -205,20 +327,20 @@
                     <table class="tables">
                         <tr><th>Time</th><th>Event</th></tr>
                         <tr><td style="background: #3c9fb538; width: 25%">8:30 am &ndash; 9:00 am</td><td class="td-highpadding" style="background: #3c9fb538">Breakfast</td>
-                        <tr><td>9:00 am &ndash; 9:15 am</td><td class="td-highpadding">Introduction by <a href="https://www.ewi-psy.fu-berlin.de/en/einrichtungen/arbeitsbereiche/neural_dyn_of_vis_cog">Radoslaw Cichy</a> <br>[<a href="../slides/Algonauts2019_Radek_Cichy_Day_Intro.pdf">Slides</a>] [<a href="http://algonauts.csail.mit.edu/videos/3090_Algonauts_Project_Challenge_Radek_Cichy-Introduction.mp4">Video</a>]</td></tr>
-                        <tr><td>9:15 am &ndash; 9:35 am</td><td class="td-highpadding"><a href="#Botvinick">Matt Botvinick</a> &ndash; Toward Object-Oriented Deep Reinforcement Learning <br>[<a href="../slides/Algonauts2019_Matt_Botvinick.pdf">Slides</a>] [<a href="http://algonauts.csail.mit.edu/videos/3090_Algonauts_Project_Challenge_Matt_Botvinick-Toward_Object_Oriented_Deep_Reinforcement_Learning.mp4">Video</a>]</td></tr>
-                        <tr><td>9:35 am &ndash; 9:55 am</td><td class="td-highpadding"><a href="#Oliva">Aude Oliva</a> &ndash; Interpretability and Visualization of Deep Neural Networks <br>[<a href="../slides/Algonauts2019_Aude_Oliva.pdf">Slides</a>] [Video N/A]</td></tr>
-                        <tr><td>9:55 am &ndash; 10:15 am</td><td class="td-highpadding"><a href="#Naselaris">Thomas Naselaris</a> &ndash; Deep Generative Networks as Models of the Visual System <br>[<a href="../slides/Algonauts2019_Thomas_Naselaris.pdf">Slides</a>] [<a href="http://algonauts.csail.mit.edu/videos/3090_Algonauts_Project_Challenge_Thomas_Naselaris-Deep_Generative_Networks_as_Models_of_the_Visual_System.mp4">Video</a>]</td></tr>
+                        <tr><td>9:00 am &ndash; 9:15 am</td><td class="td-highpadding">Introduction by <a href="https://www.ewi-psy.fu-berlin.de/en/einrichtungen/arbeitsbereiche/neural_dyn_of_vis_cog">Radoslaw Cichy</a> <br>[<a href="slides/Algonauts2019_Radek_Cichy_Day_Intro.pdf">Slides</a>] [<a href="http://algonauts.csail.mit.edu/videos/3090_Algonauts_Project_Challenge_Radek_Cichy-Introduction.mp4">Video</a>]</td></tr>
+                        <tr><td>9:15 am &ndash; 9:35 am</td><td class="td-highpadding"><a href="#Botvinick">Matt Botvinick</a> &ndash; Toward Object-Oriented Deep Reinforcement Learning <br>[<a href="slides/Algonauts2019_Matt_Botvinick.pdf">Slides</a>] [<a href="http://algonauts.csail.mit.edu/videos/3090_Algonauts_Project_Challenge_Matt_Botvinick-Toward_Object_Oriented_Deep_Reinforcement_Learning.mp4">Video</a>]</td></tr>
+                        <tr><td>9:35 am &ndash; 9:55 am</td><td class="td-highpadding"><a href="#Oliva">Aude Oliva</a> &ndash; Interpretability and Visualization of Deep Neural Networks <br>[<a href="slides/Algonauts2019_Aude_Oliva.pdf">Slides</a>] [Video N/A]</td></tr>
+                        <tr><td>9:55 am &ndash; 10:15 am</td><td class="td-highpadding"><a href="#Naselaris">Thomas Naselaris</a> &ndash; Deep Generative Networks as Models of the Visual System <br>[<a href="slides/Algonauts2019_Thomas_Naselaris.pdf">Slides</a>] [<a href="http://algonauts.csail.mit.edu/videos/3090_Algonauts_Project_Challenge_Thomas_Naselaris-Deep_Generative_Networks_as_Models_of_the_Visual_System.mp4">Video</a>]</td></tr>
                         <tr><td style="background: #3c9fb538">10:15 am &ndash; 11:00 am</td><td class="td-highpadding" style="background: #3c9fb538">Posters and Coffee</td></tr>
                         <tr><td>11:00 am &ndash; 11:20 am</td><td class="td-highpadding"><a href="#Cox">David Cox</a> &ndash; Predictive Coding Models of Perception <br>[Slides N/A] [Video N/A]</td></tr>
                         <tr><td>11:20 am &ndash; 11:40 am</td><td class="td-highpadding"><a href="#DiCarlo">James DiCarlo</a> &ndash; Brain Benchmarking Our Way to an Understanding of Visual Intelligence <br>[Slides N/A] [Video N/A]</td></tr>
-                        <tr><td>11:40 am &ndash; 12:00 pm</td><td class="td-highpadding"><a href="#Kay">Kendrick Kay</a> &ndash; The Natural Scenes Dataset: Massive High-Quality Whole-Brain 7T fMRI Measurements During Visual Perception and Memory <br>[<a href="../slides/Algonauts2019_Kendrick_Kay.pdf">Slides</a>] [<a href="http://algonauts.csail.mit.edu/videos/3090_Algonauts_Project_Challenge_Kendrick_Kay-The_Natural_Scenes_Dataset.mp4">Video</a>]</td></tr>
+                        <tr><td>11:40 am &ndash; 12:00 pm</td><td class="td-highpadding"><a href="#Kay">Kendrick Kay</a> &ndash; The Natural Scenes Dataset: Massive High-Quality Whole-Brain 7T fMRI Measurements During Visual Perception and Memory <br>[<a href="slides/Algonauts2019_Kendrick_Kay.pdf">Slides</a>] [<a href="http://algonauts.csail.mit.edu/videos/3090_Algonauts_Project_Challenge_Kendrick_Kay-The_Natural_Scenes_Dataset.mp4">Video</a>]</td></tr>
                         <tr><td style="background: #3c9fb538">12:00 pm &ndash; 1:30 pm</td><td class="td-highpadding" style="background: #3c9fb538"><a href="https://institute-events.mit.edu/visit/where-to-eat">Lunch on Your Own</a></td></tr>
-                        <tr><td>1:30 pm &ndash; 1:50 pm</td><td class="td-highpadding">Introduction to the Algonauts Challenge by <a href="https://www.ewi-psy.fu-berlin.de/en/einrichtungen/arbeitsbereiche/neural_dyn_of_vis_cog">Radoslaw Cichy</a> <br>[<a href="../slides/Algonauts2019_Radek_Cichy_Challenge_Intro.pdf">Slides</a>] [<a href="http://algonauts.csail.mit.edu/videos/3090_Algonauts_Project_Challenge_Radek_Cichy-Introduction_to_the_Algonauts_Challenge.mp4">Video</a>]</td></tr>
-                        <tr><td>1:50 pm &ndash; 2:50 pm</td><td class="td-highpadding">Invited Talks: Challenge Winners <br>[<a href="http://algonauts.csail.mit.edu/videos/3090_Algonauts_Project_Challenge_Challenge_Winners_Invited_Talks-010.mp4">Video</a>]<br><br>Agustin Lage Castellanos (agustin) [<a href="../reports/agustin.pdf">Report</a>] [<a href="../slides/Algonauts2019_Agustin_Lage_Castellanos.pdf">Slides</a>] <br>Aakash Agrawal (Aakash) [<a href="https://arxiv.org/abs/1907.02591">Report</a>] [<a href="../slides/Algonauts2019_Aakash_Agrawal.pdf">Slides</a>] <br>Romuald Janik (rmldj) [<a href="https://arxiv.org/abs/1907.00950">Report</a>] [<a href="../slides/Algonauts2019_Romuald_Janik.pdf">Slides</a>]</td></tr>
+                        <tr><td>1:30 pm &ndash; 1:50 pm</td><td class="td-highpadding">Introduction to the Algonauts Challenge by <a href="https://www.ewi-psy.fu-berlin.de/en/einrichtungen/arbeitsbereiche/neural_dyn_of_vis_cog">Radoslaw Cichy</a> <br>[<a href="slides/Algonauts2019_Radek_Cichy_Challenge_Intro.pdf">Slides</a>] [<a href="http://algonauts.csail.mit.edu/videos/3090_Algonauts_Project_Challenge_Radek_Cichy-Introduction_to_the_Algonauts_Challenge.mp4">Video</a>]</td></tr>
+                        <tr><td>1:50 pm &ndash; 2:50 pm</td><td class="td-highpadding">Invited Talks: Challenge Winners <br>[<a href="http://algonauts.csail.mit.edu/videos/3090_Algonauts_Project_Challenge_Challenge_Winners_Invited_Talks-010.mp4">Video</a>]<br><br>Agustin Lage Castellanos (agustin) [<a href="reports/agustin.pdf">Report</a>] [<a href="slides/Algonauts2019_Agustin_Lage_Castellanos.pdf">Slides</a>] <br>Aakash Agrawal (Aakash) [<a href="https://arxiv.org/abs/1907.02591">Report</a>] [<a href="slides/Algonauts2019_Aakash_Agrawal.pdf">Slides</a>] <br>Romuald Janik (rmldj) [<a href="https://arxiv.org/abs/1907.00950">Report</a>] [<a href="slides/Algonauts2019_Romuald_Janik.pdf">Slides</a>]</td></tr>
                         <tr><td style="background: #3c9fb538">2:50 pm &ndash; 3:30 pm</td><td class="td-highpadding" style="background: #3c9fb538">Posters and Coffee</td></tr>
                         <tr><td>3:30 pm &ndash; 3:50 pm</td><td class="td-highpadding"><a href="#Konkle">Talia Konkle</a> &ndash; Response Preferences vs Patterns: Insights from Deep Neural Networks <br>[Slides N/A] [Video N/A]</td></tr>
-                        <tr><td>3:50 pm &ndash; 4:10 pm</td><td class="td-highpadding"><a href="#Kriegeskorte">Nikolaus Kriegeskorte</a> &ndash; Cognitive Computational Neuroscience of Vision <br>[<a href="../slides/Algonauts2019_Nikolaus_Kriegeskorte.pdf">Slides</a>] [<a href="http://algonauts.csail.mit.edu/videos/3090_Algonauts_Project_Challenge_Nikolaus Kriegeskorte-Cognitive_Computational_Neuroscience_of_Vision.mp4">Video</a>]</td></tr>
+                        <tr><td>3:50 pm &ndash; 4:10 pm</td><td class="td-highpadding"><a href="#Kriegeskorte">Nikolaus Kriegeskorte</a> &ndash; Cognitive Computational Neuroscience of Vision <br>[<a href="slides/Algonauts2019_Nikolaus_Kriegeskorte.pdf">Slides</a>] [<a href="http://algonauts.csail.mit.edu/videos/3090_Algonauts_Project_Challenge_Nikolaus Kriegeskorte-Cognitive_Computational_Neuroscience_of_Vision.mp4">Video</a>]</td></tr>
                         <tr><td>4:10 pm &ndash; 4:30 pm</td><td class="td-highpadding"><a href="#Gallant">Jack Gallant</a> &ndash; Taking Natural Scene Statistics into Account when Evaluating Brain Data and Models <br>[Slides N/A] [Video N/A]</td></tr>
                         <tr><td>4:30 pm &ndash; 5:00 pm</td><td class="td-highpadding">Panel Discussion with Speakers &ndash; Moderated by <a href="http://www.cvai.cs.uni-frankfurt.de/">Gemma Roig</a> & <a href="https://www.ewi-psy.fu-berlin.de/en/einrichtungen/arbeitsbereiche/neural_dyn_of_vis_cog">Radoslaw Cichy</a></td></tr>
                         <tr><td style="background: #3c9fb538">5:00 pm &ndash; 6:30 pm</td><td class="td-highpadding" style="background: #3c9fb538">Reception and Refreshments</td></tr>
