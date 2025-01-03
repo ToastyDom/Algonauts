@@ -1187,6 +1187,15 @@ Intro
     width: 40px;
 }
 
+.larger-icon {
+    width: 50px;
+    height: auto;
+}
+
+.larger-icon img {
+    height: 30px; /* Adjust size as needed */
+}
+
 .intro-paragraph {
     font-size: 20px;
     display: inline-block;
