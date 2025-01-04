@@ -573,6 +573,19 @@ Added by Alex L
     filter: invert(11%) sepia(100%) saturate(6335%) hue-rotate(268deg) brightness(93%) contrast(124%);
 }
 
+.video-row {
+    display: flex;
+    justify-content: space-between; /* Adds space between the videos */
+    flex-wrap: wrap; /* Ensures videos wrap on smaller screens */
+    gap: 1em; /* Optional: Adds a gap between videos */
+}
+
+.video-container {
+    flex: 1; /* Allows the videos to take equal space */
+    max-width: 30%; /* Ensures they fit in one row */
+    text-align: center; /* Centers the video in the container */
+}
+
 .responsive-youtube{
     position: relative;
     width: 100%;
