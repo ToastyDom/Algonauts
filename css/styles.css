@@ -764,6 +764,43 @@ Waypoinsts
 
 
 /* ==========================================================================
+Phone responsiveness
+========================================================================== */
+
+
+@media only screen and (max-width: 480px) {
+    body {
+        font-size: 14px; /* Smaller font size for readability */
+    }
+
+    .hero h1 {
+        font-size: 2rem; /* Adjust hero section font size */
+    }
+
+    .nav-logo-img {
+        height: 40px; /* Scale logo appropriately */
+        max-height: 40px;
+    }
+
+    .intro-section-padding {
+        padding: 20px 10px; /* Reduce padding */
+    }
+
+    .container {
+        width: 100%; /* Ensure full width usage */
+    }
+
+    .video-overlay h1 {
+        font-size: 1.5rem; /* Adjust text size for smaller screens */
+    }
+
+    .video-container {
+        max-width: 100%; /* Adjust videos to screen width */
+    }
+}
+
+
+/* ==========================================================================
 Navigation
 ========================================================================== */
 
