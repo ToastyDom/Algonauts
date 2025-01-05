@@ -1909,10 +1909,80 @@ html {
 }
 
 
+/* Hero video container mobile fixes */
 .hero-video-container {
     position: relative;
-    height: 100vh; /* Ensure the video section fills the viewport */
+    height: 60vh; /* Adjust for mobile */
+    max-height: 750px;
     overflow: hidden;
+}
+
+@media only screen and (max-width: 768px) {
+    .hero-video-container {
+        height: 40vh;
+    }
+    
+    .video-overlay h1 {
+        font-size: 24px !important;
+        margin-bottom: 10px !important;
+    }
+    
+    .video-overlay h1:nth-child(2) {
+        font-size: 18px !important;
+    }
+    
+    .full-screen-video {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+    
+    .intro-paragraph {
+        font-size: 16px !important;
+        line-height: 1.6 !important;
+        padding: 0 15px;
+    }
+    
+    .container {
+        padding: 0 15px;
+    }
+    
+    .section-padding {
+        padding: 40px 0;
+    }
+}
+
+/* Video row mobile optimization */
+@media only screen and (max-width: 768px) {
+    .video-row {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .video-container {
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+/* Navigation mobile fixes */
+@media only screen and (max-width: 768px) {
+    .nav-brand {
+        left: 15px;
+    }
+    
+    .nav-logo-img {
+        height: 40px;
+        max-height: 40px;
+    }
+    
+    .nav-text {
+        font-size: 16px;
+    }
+    
+    .header-content {
+        padding: 0 15px;
+    }
 }
 
 .video-wrapper {
