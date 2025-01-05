@@ -800,6 +800,37 @@ Phone responsiveness
 }
 
 
+@media only screen and (max-width: 768px) {
+    .nav-toggle {
+        display: block; /* Show toggle icon */
+    }
+
+    .primary-nav {
+        display: none; /* Hide main nav links */
+    }
+
+    .nav-overlay {
+        display: block; /* Show overlay for navigation */
+    }
+}
+
+
+@media only screen and (max-width: 480px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .full-screen-video {
+        object-fit: contain; /* Adjust video fit */
+    }
+}
+
+
+
 /* ==========================================================================
 Navigation
 ========================================================================== */
