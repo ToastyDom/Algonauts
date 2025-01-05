@@ -1921,46 +1921,90 @@ html {
    MOBILE RESPONSIVENESS FIXES 
    ================================== */
 
-/* Mobile styles with high specificity */
-@media only screen and (max-width: 768px) {
-    /* Force text content to stay within bounds */
-    body section.challenge .container .row .col-lg-12.col-md-12.col-sm-12 {
-        padding: 0 15px 0 30px !important;
-        margin: 0 !important;
-        width: 100% !important;
-        box-sizing: border-box !important;
+/* ==================================
+   MOBILE RESPONSIVENESS FIXES 
+   ================================== */
+
+   @media only screen and (max-width: 768px) {
+    /* Force all content to respect viewport boundaries */
+    body {
+        overflow-x: hidden;
+        width: 100%;
+        position: relative;
     }
 
-    /* Force intro paragraph to stay within container */
-    body section.challenge .intro-paragraph {
+    /* Fix left-side overflow issues */
+    .challenge {
+        padding-left: 25px !important;  /* Add significant left padding */
+        padding-right: 25px !important;
+        width: calc(100% - 50px) !important; /* Account for padding */
+        overflow-x: hidden;
+    }
+
+    /* Adjust intro paragraph to prevent left overflow */
+    .intro-paragraph {
+        margin-left: 0 !important;  /* Reset any left margin */
+        padding-left: 0 !important;  /* Reset any left padding */
         width: 100% !important;
         max-width: 100% !important;
-        margin: 0 !important;
-        padding: 10px 0 !important;
-        box-sizing: border-box !important;
+        box-sizing: border-box;
     }
 
-    /* Ensure container is full width but with padding */
-    body section.challenge .container {
-        width: 100% !important;
-        max-width: 100% !important;
-        padding: 0 !important;
-        margin: 0 !important;
-        box-sizing: border-box !important;
+    /* Container adjustments */
+    .container {
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        width: 90% !important;
+        max-width: 90% !important;
+        box-sizing: border-box;
     }
 
-    /* Ensure row doesn't add extra width */
-    body section.challenge .row {
-        margin: 0 !important;
+    /* Column adjustments */
+    .col-md-12, .col-lg-12, .col-sm-12 {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        margin-left: 0 !important;
+        width: 100% !important;
+        box-sizing: border-box;
+    }
+
+    /* Row adjustments */
+    .row {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        width: 100% !important;
+    }
+
+    /* Video container adjustments */
+    .hero-video-container {
         padding: 0 !important;
         width: 100% !important;
+        overflow: hidden;
+    }
+
+    /* Video overlay text */
+    .video-overlay {
+        width: 90%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 0;
     }
 }
 
-/* Even smaller screens */
+/* Extra small devices */
 @media only screen and (max-width: 480px) {
-    body section.challenge .container .row .col-lg-12.col-md-12.col-sm-12 {
-        padding: 0 15px !important;
+    .challenge {
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+        width: calc(100% - 30px) !important;
+    }
+    
+    .container {
+        width: 95% !important;
+        padding-left: 10px !important;
+        padding-right: 10px !important;
     }
 }
 
