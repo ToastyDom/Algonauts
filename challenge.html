@@ -199,11 +199,12 @@
                         response to multimodal naturalistic stimulation, and generalize outside their training distribution.
                     </p>
                     <p class="intro-paragraph" style="text-align: justify;">
-                        The Challenge data is based on the <a href="https://www.cneuromod.ca/" class="a-2021" target="_blank">CNeuroMod dataset</a> which, as of now, most intensively samples single subject 
-                        neural responses to a variety of controlled and naturalistic stimuli and tasks (over 160 hours per subject). 
-                        The CNeuroMod dataset’s unprecedented size, combined with the multimodal nature and diversity of its stimuli 
-                        and tasks, makes it an ideal training and testing ground to build robust encoding models of fMRI responses 
-                        to multimodal stimuli that generalize outside of their training distribution. <a href="braindata.html" class="a-2021" target="_blank">Learn more about the stimuli and fMRI dataset used in the 2025 Challenge.</a>
+                        The Challenge data is based on the <a href="https://www.cneuromod.ca/" class="a-2021" target="_blank">CNeuroMod dataset</a> which, 
+                        as of now, most intensively samples single subject neural responses to a variety of naturalistic tasks, including movie watching. 
+                        The CNeuroMod dataset’s unprecedented size, combined with the multimodal nature and diversity of its stimuli and tasks, 
+                        makes it an ideal training and testing ground to build robust encoding models of fMRI responses to multimodal stimuli 
+                        that generalize outside of their training distribution. <a href="braindata.html" class="a-2021" target="_blank">Learn more 
+                            about the stimuli and fMRI dataset used in the 2025 Challenge.</a>
                     </p>
                     <p class="intro-paragraph" style="text-align: justify; display: block; margin-bottom: 0;">
                         We provide:
@@ -240,7 +241,8 @@
 
     <section class="challenge intro-section-padding" id="ChallengeData">
         <div class="container">
-            <div class="row wow fadeInUp">
+            <div class="row wow fadeInUp" style="text-align: left; margin-top: 28px;">
+
                 <div class="col-md-12">
                     <h2 style="margin-bottom: 1em">Challenge Phases</h2>
                     <p class="intro-paragraph" style="text-align: justify;">
@@ -286,11 +288,12 @@
     
                     
 
-                    <h3>Model Building Phase (6 months, January 6 2025 - July 6 2025)</h3>
-                    <p class="intro-paragraph" style="text-align: justify;">
-                        During this first phase, challenge participants will train and test encoding models using movie stimuli and fMRI responses from the same distribution.
-                    </p>
-                    <ul>
+            <div class="row wow fadeInUp" style="margin-top: 28px;">
+                <h3 style="text-align: left;">Model Building Phase (6 months, January 6 2025 - July 6 2025)</h3>
+                <p class="intro-paragraph" style="text-align: justify;">
+                    During this first phase, challenge participants will train and test encoding models using movie stimuli and fMRI responses from the same distribution.
+                </p>
+                <ul>
                         <li style="margin-bottom: 0.5em">
                             <b style="font-weight: 600">Model Training:</b> For model training, we provide 65 hours of movie stimuli and 
                             corresponding fMRI responses: 55 hours for each of the four subjects for all episodes of seasons 1 to 6 of the sitcom <i>Friends</i>, 
@@ -306,43 +309,44 @@
                             the predicted fMRI responses for each parcel and subject with the recorded (withheld) fMRI responses across all 
                             Friends season 7 episodes, resulting in one correlation score for each parcel and subject. These correlation scores 
                             are averaged first across parcels and then across subjects, to obtain a single correlation score quantifying the performance of each submission.
-                        </li>                            
-                    </ul>
-
-                    <div class="text-center" style="margin-top: 3em;">
-                        <a href="https://www.codabench.org/competitions/4313/#/results-tab" 
-                           class="btn-2021 btn-accent btn-large" 
-                           style="padding: 0.8em 1.5em; font-size: 14px; font-weight: bold;" 
-                           target="_blank">MODEL BUILDING PHASE LEADERBOARD</a>
+                        </ul>
+                        <div class="text-center" style="width: 100%; margin-top: 3em;">
+                            <a href="https://www.codabench.org/competitions/4313/#/results-tab" 
+                               class="btn-2021 btn-accent btn-large" 
+                               style="padding: 0.8em 1.5em; font-size: 14px; font-weight: bold;" 
+                               target="_blank">MODEL BUILDING PHASE LEADERBOARD</a>
+                        </div>
                     </div>
                     
 
-                    <h3 style="margin-top: 2em">Model Selection Phase (1 week, July 6 2025 - July 13 2025)</h3>
-                    <p class="intro-paragraph" style="text-align: justify;">
-                        During this second phase, the winning models will be selected based on the accuracy of their predicted fMRI responses for withheld OOD movie stimuli.
-                    </p>
+                    <div class="row wow fadeInUp" style="margin-top: 28px;"></div>
+                        <h3 style="margin-top: 2em; text-align: left;">Model Selection Phase (1 week, July 6 2025 - July 13 2025)</h3>
+                        <p class="intro-paragraph" style="text-align: justify;">
+                            During this second phase, the winning models will be selected based on the accuracy of their predicted fMRI responses for withheld OOD movie stimuli.
+                        </p>
 
-                    <ul>
-                        <li style="margin-bottom: 0.5em">
-                            <b style="font-weight: 600">Model Testing:</b> At the beginning of the model selection phase, we will provide 2 hours of 
-                            OOD movie stimuli and withhold the corresponding fMRI responses for each of the four subjects. The nature of the OOD movie 
-                            stimuli will not be revealed until the beginning of the model selection phase. To participate in the winners selection process, 
-                            challenge participants can submit their encoding model’s predicted fMRI responses for the OOD movie stimuli to <a href="https://www.codabench.org/competitions/4313/" class="a-2021" target="_blank">Codabench</a>. 
-                            After each submission, the scoring program will correlate the predicted fMRI responses for each parcel and subject with the 
-                            recorded (withheld) fMRI responses, independently for each of the OOD movie stimuli, resulting in one correlation score for 
-                            each parcel, OOD movie and subject. These correlation scores are averaged first across parcels, then across OOD movies, and 
-                            finally across subjects, thus obtaining a single correlation score quantifying the performance of each submission.
-                        </li>
-                    </ul>
+                        <ul>
+                            <li style="margin-bottom: 0.5em">
+                                <b style="font-weight: 600">Model Testing:</b> At the beginning of the model selection phase, we will provide 2 hours of 
+                                OOD movie stimuli and withhold the corresponding fMRI responses for each of the four subjects. The nature of the OOD movie 
+                                stimuli will not be revealed until the beginning of the model selection phase. To participate in the winners selection process, 
+                                challenge participants can submit their encoding model’s predicted fMRI responses for the OOD movie stimuli to <a href="https://www.codabench.org/competitions/4313/" class="a-2021" target="_blank">Codabench</a>. 
+                                After each submission, the scoring program will correlate the predicted fMRI responses for each parcel and subject with the 
+                                recorded (withheld) fMRI responses, independently for each of the OOD movie stimuli, resulting in one correlation score for 
+                                each parcel, OOD movie and subject. These correlation scores are averaged first across parcels, then across OOD movies, and 
+                                finally across subjects, thus obtaining a single correlation score quantifying the performance of each submission.
+                            </li>
+                        </ul>
 
-                    <div class="text-center" style="margin-top: 3em;">
-                        <a href="https://www.codabench.org/competitions/4313/#/results-tab" 
-                           class="btn-2021 btn-accent btn-large" 
-                           style="padding: 0.8em 1.5em; font-size: 14px; font-weight: bold;" 
-                           target="_blank">MODEL SELECTION PHASE LEADERBOARD</a>
-                    </div>
+                        <div class="text-center" style="width: 100%; margin-top: 3em;">
+                            <a href="https://www.codabench.org/competitions/4313/#/results-tab" 
+                            class="btn-2021 btn-accent btn-large" 
+                            style="padding: 0.8em 1.5em; font-size: 14px; font-weight: bold;" 
+                            target="_blank">MODEL SELECTION PHASE LEADERBOARD</a>
+                        </div>
 
-                    <h3 style="margin-top: 2em">Post-Challenge Phase (indefinite)</h3>
+                    <div class="row wow fadeInUp" style="margin-top: 28px;">
+                    <h3 style="margin-top: 2em; text-align: left;">Post-Challenge Phase (indefinite)</h3>
                     <p class="intro-paragraph" style="text-align: justify;">
                         Once the challenge is over, we will open an indefinite post-challenge phase which will serve as a public benchmark. 
                         This benchmark will consist of two separate leaderboards that will rank encoding models based on their fMRI predictions 
@@ -355,32 +359,47 @@
                            style="padding: 0.8em 1.5em; font-size: 14px; font-weight: bold;" 
                            target="_blank">POST-CHALLENGE PHASE LEADERBOARD</a>
                     </div>
+                    </div>
 
-                    <h3 style="margin-top: 2em">Development Kit</h3>
-                    <p class="intro-paragraph" style="text-align: justify;">
-                        To facilitate participation, we provide a 
-                        <a href="https://colab.research.google.com/drive/1fop0zvaLBLBagvJRC-HDqGDSgQElNWZB?usp=sharing" class="a-2021" target="_blank">development kit</a> in
-                         Python which accompanies users through the challenge process, following four steps:
-                        </p>
-                        <ol class="intro-paragraph" style="text-align: justify; padding-left: 80px;">
-                            <li>Familiarizing with the challenge data.</li>
-                            <li>Extracting the stimulus features used to train and validate an fMRI encoding model.</li>
-                            <li>Training and validating an fMRI encoding model.</li>
-                            <li>Preparing the predicted fMRI responses for the test stimuli in the correct format for submission to Codabench.</li>
-                        </ol>
-
-
-                    <h3 style="margin-top: 1em">How to Predict Brain Data Using Computational Models?</h3>
-                    <p class="intro-paragraph" style="text-align: justify;">
-                        There are different ways to predict brain data using computational models. We put close to no restrictions on how you do so (see <a href="https://algonautsproject.com/challenge.html#Rules" class="a-2021">Challenge Rules</a>). 
-                        However, a commonly used approach is to use linearizing encoding models, and we provide a development kit to implement such a model.</p>
-                    <p class="intro-paragraph" style="text-align: justify;">
-                        <a href="encoding.html" class="a-2021">Click here to learn more about linearizing encoding.</a>
-                    </p>
+                </div> 
+            </section>
+            
+            <section class="challenge intro-section-padding" id="DevelopmentKit">
+                <div class="container">
+                    <div class="row wow fadeInUp">
+                        <div class="col-md-12">
+                            <h2 style="margin-top: 1em; text-align: left;">Development Kit</h2>
+                            <p class="intro-paragraph" style="text-align: justify;">
+                                To facilitate participation, we provide a 
+                                <a href="https://colab.research.google.com/drive/1fop0zvaLBLBagvJRC-HDqGDSgQElNWZB?usp=sharing" class="a-2021" target="_blank">development kit</a> in
+                                Python which accompanies users through the challenge process, following four steps:
+                            </p>
+                            <ol class="intro-paragraph" style="text-align: justify; padding-left: 80px;">
+                                <li>Familiarizing with the challenge data.</li>
+                                <li>Extracting the stimulus features used to train and validate an fMRI encoding model.</li>
+                                <li>Training and validating an fMRI encoding model.</li>
+                                <li>Preparing the predicted fMRI responses for the test stimuli in the correct format for submission to Codabench.</li>
+                            </ol>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </div>
-    </section>
+            </section>
+            
+            <section class="challenge intro-section-padding" id="PredictBrainData">
+                <div class="container">
+                    <div class="row wow fadeInUp">
+                        <div class="col-md-12">
+                            <h2 style="margin-top: 2em; text-align: left;">How to Predict Brain Data Using Computational Models?</h2>
+                            <p class="intro-paragraph" style="text-align: justify;">
+                                There are different ways to predict brain data using computational models. We put close to no restrictions on how you do so (see <a href="https://algonautsproject.com/challenge.html#Rules" class="a-2021">Challenge Rules</a>). 
+                                However, a commonly used approach is to use <a href="encoding.html" class="a-2021" target="_blank">linearizing encoding models</a>, and we provide a <a href="https://colab.research.google.com/drive/1fop0zvaLBLBagvJRC-HDqGDSgQElNWZB?usp=sharing" class="a-2021" target="_blank">development kit</a> 
+                                to implement such a model.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
     
     <section class="challenge intro-section-padding" id="Rules">
         <div class="container">
@@ -417,17 +436,19 @@
     </section>
 
     <section class="challenge intro-section-padding" id="Citation">
-        <div class="container">
+        <div class="container" style="display: block; text-align: left; margin-left: auto; margin-right: auto;"> <!-- Override flexbox -->
             <div class="row wow fadeInUp">
                 <div class="col-md-12">
-                    <h2 style="margin-bottom: 1em">Papers</h2>
-                    <p class="intro-paragraph" style="text-align: justify;">
+                    <h2 style="margin-bottom: 1em; text-align: left;">Papers</h2>
+                    <p class="intro-paragraph" style="text-align: justify; margin-left: 0;">
                         <a class="a-2021" href="index.html#cite">Click here to read the papers and for guidance on citation</a> 
                     </p>
                 </div>
             </div>
         </div>
     </section>
+    
+    
 
     <section class="challenge intro-section-padding" id="dates_table">
         <div class="container">
@@ -535,13 +556,13 @@
         </div>
     </section>
 
-    <footer>
-        <div class="container ">
-            <div class="row ">
-                <div class="col-md-7 ">
-                    <div class="footer-links ">
-                        <p>
-                            Copyright © The Algonauts Project | <a href="https://accessibility.mit.edu/">Accessibility</a>
+    <footer style="padding: 10px 0;">
+        <div class="container" style="text-align: center;">
+            <div class="row">
+                <div class="col-md-7" style="margin: 0 auto;">
+                    <div class="footer-links">
+                        <p style="margin: 0; padding: 0; line-height: normal; font-size: 14px; color: rgb(172, 177, 180); white-space: nowrap;">
+                            Copyright © The Algonauts Project
                         </p>
                     </div>
                 </div>

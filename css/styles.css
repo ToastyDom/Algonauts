@@ -1285,6 +1285,20 @@ Team Section
     align-items: center;
 }
 
+/* Fix flex alignment for the dates table container */
+#dates_table .container {
+    align-items: flex-start;
+}
+
+/* Ensure the header is left-aligned */
+#dates_table h2 {
+    text-align: left;
+}
+
+#ChallengeData .container {
+    align-items: flex-start;
+}
+
 
 .portfolio-box {
     width: 250px; /* Fixed width for consistent size */
@@ -1725,7 +1739,7 @@ Features-stack
 .prizes-container {
     display: flex;
     flex-direction: column;
-    align-items: center; /* Center items on the page */
+    align-items: left; /* Center items on the page */
     gap: 20px; /* Add space between prize items */
     margin-top: 1em;
 }
