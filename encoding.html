@@ -60,18 +60,22 @@
 </head>
 
 <body id="top" ng-controller="mainCtrl" ng-cloak>
-        <section class="hero-video-container hero" style="position: relative;">
-            <div class="video-wrapper">
-                <video class="full-screen-video" src="img/2024/movie_banner_mixed2.mp4" autoplay loop muted></video>
-                <div class="video-overlay">
-                    <h1 style="color: white; font-weight: bold; margin-bottom: 0;">Encoding Models</h1>
-                    <h1 style="font-size: 29px; margin-bottom: 25px; color: white; font-style: italic;">
-                        <b>The Algonauts Project 2025</b>
-                    </h1>
+    <section class="hero-video-container" style="position: relative;">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="video-wrapper col-12">
+                    <video class="full-screen-video" src="img/2024/movie_banner_mixed2.mp4" autoplay loop muted></video>
+                    <div class="video-overlay text-center">
+                        <h1 style="color: white; font-weight: bold; margin-bottom: 0;">Encoding Models</h1>
+                        <h1 style="font-size: 29px; margin-bottom: 25px; color: white; font-style: italic;">
+                            <b>The Algonauts Project 2025</b>
+                        </h1>
+                    </div>
                 </div>
             </div>
-        </section>
-
+        </div>
+    </section>
+    
 
 
         <body class="with-nav-text">
@@ -124,10 +128,10 @@
             </section>
         </body>
 
-    <section class="challenge intro-section-padding">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
+        <section class="challenge intro-section-padding">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12">
                     <p class="intro-paragraph" style="text-align: justify; margin-top: 2em">
                         In the 2025 challenge, we leave it up to the challenge participants to determine the approach to predict brain responses 
                         (see <a href="challenge.html#Rules" class="a-2021">Challenge Rules</a>). As an example, we guide the reader through one common approach called linearizing encoding 
@@ -145,14 +149,16 @@
                         <a href="https://colab.research.google.com/drive/1fop0zvaLBLBagvJRC-HDqGDSgQElNWZB?usp=sharing" class="a-2021">development kit</a>.
                     </p>
 
-                    <div class="row wow fadeInUp centered-content"> 
-                        <div class="col-md-8">
+                    <div class="container">
+                        <div class="row wow fadeInUp centered-content">
+                            <div class="col-lg-8 col-md-10 col-sm-12 mx-auto">
                             <img src="img/2024/linearizing_encoding_algorithm.png" alt="Figure 1" class="img-fluid fitted-image">
                             <p style="font-style: italic; color: #666; margin-top: 10px; font-size: 1.4em;"><b style="font-weight: 600;">Figure 1 | Linearizing encoding approach.</b>  <b style="font-weight: 600;">a)</b> First, we use a computational 
                                 model to extract the visual, audio and language features for the training movie stimuli. 
                                 <b style="font-weight: 600;">b)</b> Next, we  train a linear mapping (via regression) between these stimulus features and the
                                 brain parcel activity responses for the same training movie stimuli.  
                                 <b style="font-weight: 600;">c)</b> Finally, we use the trained linear mapping to predict (i.e., to encode) the brain parcel responses for the testing movie stimuli.</p>
+                        </div>
                         </div>
                     </div>
 
