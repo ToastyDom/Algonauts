@@ -1935,8 +1935,8 @@ html {
 
     /* Fix left-side overflow issues */
     .challenge {
-        padding-left: 25px !important;  /* Add significant left padding */
-        padding-right: 25px !important;
+        padding-left: 15px !important;  /* Add significant left padding */
+        padding-right: 15px !important;
         width: calc(100% - 30px) !important; /* Account for padding */
         overflow-x: hidden;
     }
