@@ -1944,7 +1944,23 @@ html {
     }
     
     .container {
+        padding: 0 25px;
+        max-width: 100%;
+        width: auto;
+        margin: 0 auto;
+    }
+    
+    .intro-paragraph {
+        width: 100%;
+        max-width: calc(100% - 30px);
+        margin: 0 auto;
+        padding: 10px 0;
+    }
+    
+    .col-md-12, .col-lg-12 {
         padding: 0 15px;
+        width: 100%;
+        box-sizing: border-box;
     }
     
     .section-padding {
@@ -1984,7 +2000,6 @@ html {
         padding: 0 15px;
     }
 }
-
 .video-wrapper {
     width: 100%;
     height: 100%; /* Ensure the wrapper matches the container */
