@@ -1917,62 +1917,71 @@ html {
     overflow: hidden;
 }
 
+/* ==================================
+   MOBILE RESPONSIVENESS FIXES 
+   ================================== */
+
+/* Hero video container adjustments for mobile */
 @media only screen and (max-width: 768px) {
+    /* Main video container sizing */
     .hero-video-container {
-        height: 40vh;
+        height: 40vh;  /* Reduced height on mobile */
+        min-height: 300px;
+        width: 100vw;  /* Full width of viewport */
+        overflow: hidden;
+    }
+
+    /* Video overlay text scaling */
+    .video-overlay {
+        width: 90%;  /* Narrower than screen width */
+        margin: 0 auto;  /* Center the overlay */
+        padding: 0 20px;  /* Add padding on sides */
     }
     
     .video-overlay h1 {
-        font-size: 24px !important;
-        margin-bottom: 10px !important;
+        font-size: 20px !important;  /* Much smaller font */
+        margin-bottom: 8px !important;
+        width: 100%;  /* Full width of parent */
+        padding: 0 10px;  /* Additional padding */
     }
-    
-    .video-overlay h1:nth-child(2) {
-        font-size: 18px !important;
-    }
-    
-    .full-screen-video {
-        height: 100%;
-        width: 100%;
-        object-fit: cover;
-    }
-    
-    .intro-paragraph {
-        font-size: 16px !important;
-        line-height: 1.6 !important;
-        padding: 0 15px;
-    }
-    
-    .container {
-        padding: 0 25px;
-        max-width: 100%;
-        width: auto;
-        margin: 0 auto;
-    }
-    
-    .intro-paragraph {
-        width: 100%;
-        max-width: calc(100% - 30px);
-        margin: 0 auto;
-        padding: 10px 0;
-    }
-    
-    .col-md-12, .col-lg-12 {
-        padding: 0 15px;
-        width: 100%;
-        box-sizing: border-box;
-    }
-    
-    .section-padding {
-        padding: 40px 0;
-    }
-}
 
-/* Video row mobile optimization */
-@media only screen and (max-width: 768px) {
+    /* ====== CONTENT WIDTH CONTROL ====== */
+    /* These are the main controls for text width on mobile */
+    
+    /* Main container width control */
+    .container {
+        width: 85% !important;  /* Much narrower than default */
+        max-width: 85% !important;  /* Force maximum width */
+        margin: 0 auto;  /* Center the container */
+        padding: 0;  /* Remove padding as we're using width control */
+    }
+
+    /* Paragraph text control */
+    .intro-paragraph {
+        font-size: 14px !important;  /* Smaller font size */
+        line-height: 1.6 !important;
+        width: 100% !important;  /* Full width of narrow container */
+        padding: 10px 0;  /* Vertical padding only */
+        margin: 0 auto;  /* Center the text block */
+    }
+
+    /* Column width control */
+    .col-md-12, .col-lg-12, .col-sm-12 {
+        width: 100% !important;
+        padding: 0 !important;  /* Remove padding */
+        margin: 0 auto;  /* Center content */
+    }
+
+    /* Content section padding */
+    .intro-section-padding {
+        padding: 20px 0;  /* Reduced padding on mobile */
+    }
+
+    /* ====== VIDEO GRID LAYOUT ====== */
     .video-row {
         flex-direction: column;
-        gap: 20px;
+        width: 90%;  /* Narrower than screen */
+        margin: 0 auto;
     }
     
     .video-container {
@@ -1981,25 +1990,27 @@ html {
     }
 }
 
-/* Navigation mobile fixes */
-@media only screen and (max-width: 768px) {
-    .nav-brand {
-        left: 15px;
+/* Extra narrow screens */
+@media only screen and (max-width: 480px) {
+    .container {
+        width: 90% !important;  /* Even narrower on very small screens */
+        padding: 0 15px;  /* Add some padding */
     }
     
-    .nav-logo-img {
-        height: 40px;
-        max-height: 40px;
-    }
-    
-    .nav-text {
-        font-size: 16px;
-    }
-    
-    .header-content {
-        padding: 0 15px;
+    .video-overlay h1 {
+        font-size: 18px !important;  /* Even smaller font */
     }
 }
+
+/* Ensure content never touches screen edges */
+.challenge .intro-paragraph {
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+
+
+
 .video-wrapper {
     width: 100%;
     height: 100%; /* Ensure the wrapper matches the container */
