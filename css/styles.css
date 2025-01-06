@@ -2048,6 +2048,20 @@ html {
     box-sizing: border-box;
 }
 
+/* Specifically target the cite section */
+#cite .intro-paragraph,
+#cite ul.intro-paragraph,
+#cite ul.intro-paragraph li {
+    font-weight: 300 !important;
+    font-size: 20px;
+    line-height: 29px;
+}
+
+/* Make sure lists inherit the correct weight */
+.intro-paragraph li {
+    font-weight: inherit !important;
+}
+
 
 .video-wrapper {
     width: 100%;
