@@ -1776,41 +1776,25 @@ Features-stack
     padding: 0;
 }
 
-/* Regular mobile devices */
+/* Mobile adjustments */
 @media only screen and (max-width: 768px) {
     .figure-container {
-        width: 100vw;
-        margin: 0 -15px;
+        width: 100vw;  /* Use viewport width */
+        margin: 0;
         padding: 0;
         overflow-x: hidden;
     }
     
     .figure-container img {
-        width: calc(100% + 30px);
-        max-width: none;
-        margin: 0 -15px;
-        padding: 0;
-    }
-}
-
-/* Extra small devices */
-@media only screen and (max-width: 480px) {
-    .figure-container {
-        width: 100vw;
-        margin: 0 -25px;  /* Increased negative margin for smaller screens */
-        padding: 0;
-        overflow-x: hidden;
-    }
-    
-    .figure-container img {
-        width: calc(100% + 50px);  /* Make image even wider on smaller screens */
-        max-width: none;
-        margin: 0 -25px;  /* Match the container margin */
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
         padding: 0;
     }
     
+    /* Caption adjustments */
     .figure-container p {
-        padding: 10px 25px;
+        padding: 10px 15px;
         margin: 0;
         font-size: 1em;
         line-height: 1.4;
