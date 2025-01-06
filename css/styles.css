@@ -1779,22 +1779,22 @@ Features-stack
 /* Mobile adjustments */
 @media only screen and (max-width: 768px) {
     .figure-container {
-        width: 100vw;  /* Use viewport width */
-        margin: 0;
+        width: 100vw;
+        margin: 0 -15px;  /* Negative margin to extend beyond container */
         padding: 0;
         overflow-x: hidden;
     }
     
     .figure-container img {
-        width: 100%;
-        max-width: 100%;
-        margin: 0;
+        width: calc(100% + 30px);  /* Extend the image 15px on each side */
+        max-width: none;  /* Allow image to be wider than container */
+        margin: 0 -15px;  /* Negative margin to match container */
         padding: 0;
     }
     
     /* Caption adjustments */
     .figure-container p {
-        padding: 10px 15px;
+        padding: 10px 20px;  /* Increased padding to match wider image */
         margin: 0;
         font-size: 1em;
         line-height: 1.4;
