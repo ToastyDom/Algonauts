@@ -2085,7 +2085,7 @@ html {
     
     /* Match padding with other pages */
     .challenge .col-xs-12 {
-        padding-left: 10px !important;
+        padding-left: 5px !important;
         padding-right: 5px !important;
     }
 
@@ -2105,7 +2105,7 @@ html {
         width: calc(100% - 20px) !important;  /* Reduced from 30px */
     }
     .challenge .col-xs-12 {
-        padding-left: 10px !important;
+        padding-left: 5px !important;
         padding-right: 5px !important;
     }
     
