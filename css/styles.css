@@ -1936,8 +1936,8 @@ html {
     /* Fix left-side overflow issues */
     .challenge {
         padding-left: 15px !important;  /* Add significant left padding */
-        padding-right: 15px !important;
-        width: calc(100% - 30px) !important; /* Account for padding */
+        padding-right: 10px !important;
+        width: calc(100% - 20px) !important; /* Account for padding */
         overflow-x: hidden;
     }
 
@@ -1953,11 +1953,11 @@ html {
     /* Container adjustments */
     .container {
         padding-left: 15px !important;
-        padding-right: 15px !important;
+        padding-right: 10px !important;
         margin-left: auto !important;
         margin-right: auto !important;
-        width: 90% !important;
-        max-width: 90% !important;
+        width: 95% !important;
+        max-width: 95% !important;
         box-sizing: border-box;
     }
 
@@ -2021,6 +2021,29 @@ html {
         width: 100%;
         height: 100%;
     }
+        /* Make all images full width on mobile */
+        img {
+            width: 100% !important;
+            height: auto !important;
+            max-width: 100% !important;
+        }
+    
+        /* If you have specific image classes, target those too */
+        .fitted-image,
+        .img-fluid,
+        .centered-img {
+            width: 100% !important;
+            height: auto !important;
+            max-width: 100% !important;
+        }
+    
+        /* Adjust any image containers */
+        .full-width-image,
+        .large-image-container {
+            width: 100% !important;
+            max-width: 100% !important;
+            padding: 0 15px !important;
+        }
 }
 
 
