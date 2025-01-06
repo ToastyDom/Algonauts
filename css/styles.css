@@ -2028,14 +2028,16 @@ html {
 @media only screen and (max-width: 480px) {
     .challenge {
         padding-left: 15px !important;
-        padding-right: 15px !important;
-        width: calc(100% - 30px) !important;
+        padding-right: 5px !important;     /* Reduced from 15px */
+        width: calc(100% - 20px) !important;  /* Reduced from 30px */
     }
     
     .container {
-        width: 95% !important;
-        padding-left: 10px !important;
-        padding-right: 10px !important;
+        width: 98% !important;             /* Increased from 95% */
+        padding-left: 15px !important;
+        padding-right: 5px !important;      /* Reduced from 10px */
+        margin-right: 0 !important;         /* Force no right margin */
+        margin-left: auto !important;
     }
 }
 
