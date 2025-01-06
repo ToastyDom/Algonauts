@@ -1754,6 +1754,55 @@ Features-stack
     margin: 0 auto; /* Center the image horizontally */
 }
 
+
+/* ==========================================================================
+.figure container for mobile images
+========================================================================== */
+
+/* Create a new class for figure containers */
+.figure-container {
+    width: 100%;
+    max-width: 100%;
+    margin: 2em auto;
+    padding: 0 15px;
+    box-sizing: border-box;
+}
+
+.figure-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.figure-container p {
+    width: 100%;
+    text-align: center;
+    padding: 15px 0;
+    margin: 0;
+    font-size: 1.2em;
+    line-height: 1.6;
+    color: #666;
+}
+
+/* Mobile adjustments */
+@media only screen and (max-width: 768px) {
+    .figure-container {
+        padding: 0 10px;
+    }
+    
+    .figure-container img {
+        width: 100%;
+        max-width: 100%;
+    }
+    
+    .figure-container p {
+        font-size: 1em;
+        padding: 10px 5px;
+    }
+}
+
+
 /* ==========================================================================
 .features-extra
 ========================================================================== */
