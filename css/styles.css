@@ -1776,6 +1776,15 @@ Features-stack
     padding: 0;
 }
 
+.figure-container p {
+    text-align: center !important;  /* Force center alignment */
+    width: 100%;
+    padding: 10px 25px;
+    margin: 0;
+    font-size: 1em;
+    line-height: 1.4;
+}
+
 /* Mobile adjustments */
 @media only screen and (max-width: 768px) {
     .figure-container {
@@ -1794,7 +1803,8 @@ Features-stack
     
     /* Caption adjustments */
     .figure-container p {
-        padding: 10px 15px;
+        text-align: center !important;
+        padding: 10px 25px;
         margin: 0;
         font-size: 1em;
         line-height: 1.4;
