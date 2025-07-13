@@ -1,0 +1,473 @@
+{
+    "Leaderboard - Phase 1: Model Building(7380)": {
+        "shreydixit-327814": {
+            "Phase 1: Model building (Friends s7)(10909)-Average Accuracy": "0.3197990283",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-01": "0.3426409364",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-02": "0.3244732022",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-03": "0.3337805867",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-05": "0.2783013880"
+        },
+        "sdascoli-321952": {
+            "Phase 1: Model building (Friends s7)(10909)-Average Accuracy": "0.3195224553",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-01": "0.3419134021",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-02": "0.3239009380",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-03": "0.3346830606",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-05": "0.2775924206"
+        },
+        "denizkucuk-325856": {
+            "Phase 1: Model building (Friends s7)(10909)-Average Accuracy": "0.3130437210",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-01": "0.3348021209",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-02": "0.3156608641",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-03": "0.3281527460",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-05": "0.2735591531"
+        },
+        "angelneer926-327713": {
+            "Phase 1: Model building (Friends s7)(10909)-Average Accuracy": "0.2961408049",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-01": "0.3171057105",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-02": "0.2965747118",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-03": "0.3114185035",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-05": "0.2594642937"
+        },
+        "ngxbac-318189": {
+            "Phase 1: Model building (Friends s7)(10909)-Average Accuracy": "0.2957914099",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-01": "0.3176717162",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-02": "0.2996469736",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-03": "0.3101123273",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-05": "0.2557346225"
+        },
+        "hosseinadeli-326229": {
+            "Phase 1: Model building (Friends s7)(10909)-Average Accuracy": "0.2946673706",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-01": "0.3144690394",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-02": "0.2968090475",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-03": "0.3104861975",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-05": "0.2569051981"
+        },
+        "clane9-321616": {
+            "Phase 1: Model building (Friends s7)(10909)-Average Accuracy": "0.2878484726",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-01": "0.3082821071",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-02": "0.2925089300",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-03": "0.2998220325",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-05": "0.2507808208"
+        },
+        "ckadirt-320766": {
+            "Phase 1: Model building (Friends s7)(10909)-Average Accuracy": "0.2730072662",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-01": "0.2896373868",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-02": "0.2737294137",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-03": "0.2905859649",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-05": "0.2380762994"
+        },
+        "corsi01-320837": {
+            "Phase 1: Model building (Friends s7)(10909)-Average Accuracy": "0.2658783309",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-01": "0.2828076184",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-02": "0.2652293742",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-03": "0.2822745442",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-05": "0.2332017869"
+        },
+        "jjjjjjjj-325689": {
+            "Phase 1: Model building (Friends s7)(10909)-Average Accuracy": "0.2626444958",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-01": "0.2813763320",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-02": "0.2610800266",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-03": "0.2821590602",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-05": "0.2259625643"
+        },
+        "alitafakkor-327636": {
+            "Phase 1: Model building (Friends s7)(10909)-Average Accuracy": "0.2622429579",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-01": "0.2801525891",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-02": "0.2659572065",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-03": "0.2766324282",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-05": "0.2262296081"
+        },
+        "cindyhfls-323694": {
+            "Phase 1: Model building (Friends s7)(10909)-Average Accuracy": "0.2578057423",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-01": "0.2761272490",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-02": "0.2593974471",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-03": "0.2750880122",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-05": "0.2206102610"
+        },
+        "aditisaxena-305338": {
+            "Phase 1: Model building (Friends s7)(10909)-Average Accuracy": "0.2551385872",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-01": "0.2738683522",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-02": "0.2589683235",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-03": "0.2695794702",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-05": "0.2181382030"
+        },
+        "jeremywei-313878": {
+            "Phase 1: Model building (Friends s7)(10909)-Average Accuracy": "0.2515390776",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-01": "0.2657093406",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-02": "0.2540947497",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-03": "0.2661949992",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-05": "0.2201572210"
+        },
+        "mainak09-313475": {
+            "Phase 1: Model building (Friends s7)(10909)-Average Accuracy": "0.2512311190",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-01": "0.2715498805",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-02": "0.2523229122",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-03": "0.2663366199",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-05": "0.2147150636"
+        },
+        "gabe_persson-327710": {
+            "Phase 1: Model building (Friends s7)(10909)-Average Accuracy": "0.2487531155",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-01": "0.2679947019",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-02": "0.2468282729",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-03": "0.2628939748",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-05": "0.2172955126"
+        },
+        "ryota1-318322": {
+            "Phase 1: Model building (Friends s7)(10909)-Average Accuracy": "0.2445660569",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-01": "0.2601856887",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-02": "0.2419213355",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-03": "0.2660101354",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-05": "0.2101470679"
+        },
+        "pcnlab-327255": {
+            "Phase 1: Model building (Friends s7)(10909)-Average Accuracy": "0.2409771085",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-01": "0.2560646236",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-02": "0.2419470549",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-03": "0.2598745823",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-05": "0.2060221732"
+        },
+        "liandan-297078": {
+            "Phase 1: Model building (Friends s7)(10909)-Average Accuracy": "0.2395740934",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-01": "0.2561559975",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-02": "0.2388380021",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-03": "0.2593204379",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-05": "0.2039819360"
+        },
+        "goodyourbro-297570": {
+            "Phase 1: Model building (Friends s7)(10909)-Average Accuracy": "0.2389091216",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-01": "0.2556411326",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-02": "0.2409019768",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-03": "0.2548151910",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-05": "0.2042781860"
+        },
+        "bagga005-314159": {
+            "Phase 1: Model building (Friends s7)(10909)-Average Accuracy": "0.2378190197",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-01": "0.2560048401",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-02": "0.2385498881",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-03": "0.2561084032",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-05": "0.2006129473"
+        },
+        "viacheus-327521": {
+            "Phase 1: Model building (Friends s7)(10909)-Average Accuracy": "0.2272200324",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-01": "0.2381834686",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-02": "0.2264240086",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-03": "0.2469291091",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-05": "0.1973435432"
+        },
+        "robertscholz-229623": {
+            "Phase 1: Model building (Friends s7)(10909)-Average Accuracy": "0.2271894179",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-01": "0.2406527698",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-02": "0.2278332263",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-03": "0.2458767146",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-05": "0.1943949610"
+        },
+        "hara_0707-300452": {
+            "Phase 1: Model building (Friends s7)(10909)-Average Accuracy": "0.2229566947",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-01": "0.2375017405",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-02": "0.2186779976",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-03": "0.2418465316",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-05": "0.1938005090"
+        },
+        "ss243-321535": {
+            "Phase 1: Model building (Friends s7)(10909)-Average Accuracy": "0.2228781879",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-01": "0.2397608012",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-02": "0.2265812755",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-03": "0.2344543487",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-05": "0.1907163262"
+        },
+        "sabertoaster-280469": {
+            "Phase 1: Model building (Friends s7)(10909)-Average Accuracy": "0.2218356878",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-01": "0.2345340550",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-02": "0.2213172615",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-03": "0.2394779623",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-05": "0.1920134723"
+        },
+        "arielbundy-268710": {
+            "Phase 1: Model building (Friends s7)(10909)-Average Accuracy": "0.2183743082",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-01": "0.2347640246",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-02": "0.2192654759",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-03": "0.2318396568",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-05": "0.1876280755"
+        },
+        "diorlab-aut-326251": {
+            "Phase 1: Model building (Friends s7)(10909)-Average Accuracy": "0.2180317007",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-01": "0.2145221233",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-02": "0.2196890265",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-03": "0.2422391325",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-05": "0.1956765205"
+        },
+        "msgastli-297724": {
+            "Phase 1: Model building (Friends s7)(10909)-Average Accuracy": "0.2111483328",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-01": "0.2262912542",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-02": "0.2101755738",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-03": "0.2264118642",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-05": "0.1817146391"
+        },
+        "hgz20-324831": {
+            "Phase 1: Model building (Friends s7)(10909)-Average Accuracy": "0.2058057971",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-01": "0.2184694856",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-02": "0.2070768625",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-03": "0.2210282683",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-05": "0.1766485721"
+        },
+        "shuxiao-244776": {
+            "Phase 1: Model building (Friends s7)(10909)-Average Accuracy": "0.2057267949",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-01": "0.2173425853",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-02": "0.2056938410",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-03": "0.2219668180",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-05": "0.1779039353"
+        },
+        "napkk-241483": {
+            "Phase 1: Model building (Friends s7)(10909)-Average Accuracy": "0.2041931823",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-01": "0.2161057144",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-02": "0.2042236328",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-03": "0.2198859453",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-05": "0.1765574366"
+        },
+        "yunruiz-298634": {
+            "Phase 1: Model building (Friends s7)(10909)-Average Accuracy": "0.2035031393",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-01": "0.2158940583",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-02": "0.2029529512",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-03": "0.2194743305",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-05": "0.1756912172"
+        },
+        "gifale95-184020": {
+            "Phase 1: Model building (Friends s7)(10909)-Average Accuracy": "0.2032802999",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-01": "0.2151917070",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-02": "0.2031263858",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-03": "0.2189281583",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-05": "0.1758749485"
+        },
+        "deleted_user_14577-209931": {
+            "Phase 1: Model building (Friends s7)(10909)-Average Accuracy": "0.2032802999",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-01": "0.2151917070",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-02": "0.2031263858",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-03": "0.2189281583",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-05": "0.1758749485"
+        },
+        "karim-231204": {
+            "Phase 1: Model building (Friends s7)(10909)-Average Accuracy": "0.2032802999",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-01": "0.2151917070",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-02": "0.2031263858",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-03": "0.2189281583",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-05": "0.1758749485"
+        },
+        "siler-242227": {
+            "Phase 1: Model building (Friends s7)(10909)-Average Accuracy": "0.2032802999",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-01": "0.2151917070",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-02": "0.2031263858",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-03": "0.2189281583",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-05": "0.1758749485"
+        },
+        "adrianrefe4-246238": {
+            "Phase 1: Model building (Friends s7)(10909)-Average Accuracy": "0.2032802999",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-01": "0.2151917070",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-02": "0.2031263858",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-03": "0.2189281583",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-05": "0.1758749485"
+        },
+        "genandlam-281778": {
+            "Phase 1: Model building (Friends s7)(10909)-Average Accuracy": "0.2032802999",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-01": "0.2151917070",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-02": "0.2031263858",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-03": "0.2189281583",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-05": "0.1758749485"
+        },
+        "guard-mann-298062": {
+            "Phase 1: Model building (Friends s7)(10909)-Average Accuracy": "0.2032802999",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-01": "0.2151917070",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-02": "0.2031263858",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-03": "0.2189281583",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-05": "0.1758749485"
+        },
+        "killz-298695": {
+            "Phase 1: Model building (Friends s7)(10909)-Average Accuracy": "0.2032802999",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-01": "0.2151917070",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-02": "0.2031263858",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-03": "0.2189281583",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-05": "0.1758749485"
+        },
+        "nekopara-309744": {
+            "Phase 1: Model building (Friends s7)(10909)-Average Accuracy": "0.2032802999",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-01": "0.2151917070",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-02": "0.2031263858",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-03": "0.2189281583",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-05": "0.1758749485"
+        },
+        "shem004-318323": {
+            "Phase 1: Model building (Friends s7)(10909)-Average Accuracy": "0.2032802999",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-01": "0.2151917070",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-02": "0.2031263858",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-03": "0.2189281583",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-05": "0.1758749485"
+        },
+        "richardkk-319484": {
+            "Phase 1: Model building (Friends s7)(10909)-Average Accuracy": "0.2032802999",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-01": "0.2151917070",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-02": "0.2031263858",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-03": "0.2189281583",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-05": "0.1758749485"
+        },
+        "harshvardhan-321840": {
+            "Phase 1: Model building (Friends s7)(10909)-Average Accuracy": "0.2032802999",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-01": "0.2151917070",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-02": "0.2031263858",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-03": "0.2189281583",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-05": "0.1758749485"
+        },
+        "20alicial-322337": {
+            "Phase 1: Model building (Friends s7)(10909)-Average Accuracy": "0.2032802999",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-01": "0.2151917070",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-02": "0.2031263858",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-03": "0.2189281583",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-05": "0.1758749485"
+        },
+        "jonathan2329-326108": {
+            "Phase 1: Model building (Friends s7)(10909)-Average Accuracy": "0.2032802999",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-01": "0.2151917070",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-02": "0.2031263858",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-03": "0.2189281583",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-05": "0.1758749485"
+        },
+        "hippocampusgirl-327762": {
+            "Phase 1: Model building (Friends s7)(10909)-Average Accuracy": "0.2032802999",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-01": "0.2151917070",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-02": "0.2031263858",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-03": "0.2189281583",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-05": "0.1758749485"
+        },
+        "mihirneal-303724": {
+            "Phase 1: Model building (Friends s7)(10909)-Average Accuracy": "0.2032711543",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-01": "0.2752701938",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-02": "0.1868760437",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-03": "0.1843560785",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-05": "0.1665823013"
+        },
+        "tinganli-327038": {
+            "Phase 1: Model building (Friends s7)(10909)-Average Accuracy": "0.1993124485",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-01": "0.2208362520",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-02": "0.2027254552",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-03": "0.2063910812",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-05": "0.1672970057"
+        },
+        "sivan-293311": {
+            "Phase 1: Model building (Friends s7)(10909)-Average Accuracy": "0.1986914203",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-01": "0.2158213258",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-02": "0.1945567727",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-03": "0.2171309292",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-05": "0.1672566533"
+        },
+        "zhangxiaolong-249021": {
+            "Phase 1: Model building (Friends s7)(10909)-Average Accuracy": "0.1961800493",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-01": "0.2058815360",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-02": "0.1989369541",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-03": "0.2099232823",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-05": "0.1699784249"
+        },
+        "testaccount2-309447": {
+            "Phase 1: Model building (Friends s7)(10909)-Average Accuracy": "0.1954537444",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-01": "0.2065479457",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-02": "0.1958606541",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-03": "0.2065497637",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-05": "0.1728566140"
+        },
+        "jessieccc-327340": {
+            "Phase 1: Model building (Friends s7)(10909)-Average Accuracy": "0.1932121925",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-01": "0.2041886002",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-02": "0.1897907555",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-03": "0.2122984678",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-05": "0.1665709466"
+        },
+        "joelsp19-309397": {
+            "Phase 1: Model building (Friends s7)(10909)-Average Accuracy": "0.1928530633",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-01": "0.2046567947",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-02": "0.1967381537",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-03": "0.1996020824",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-05": "0.1704152226"
+        },
+        "yuto_okuzawa-326575": {
+            "Phase 1: Model building (Friends s7)(10909)-Average Accuracy": "0.1909152865",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-01": "0.2025483996",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-02": "0.1926215589",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-03": "0.2095707804",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-05": "0.1589204073"
+        },
+        "victor_c_nardi-299512": {
+            "Phase 1: Model building (Friends s7)(10909)-Average Accuracy": "0.1842299476",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-01": "0.1969070435",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-02": "0.1855251193",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-03": "0.1937115639",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-05": "0.1607760638"
+        },
+        "wangyt-326984": {
+            "Phase 1: Model building (Friends s7)(10909)-Average Accuracy": "0.1789586134",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-01": "0.1929809749",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-02": "0.1781222820",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-03": "0.1984930336",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-05": "0.1462381631"
+        },
+        "yinghua19-259581": {
+            "Phase 1: Model building (Friends s7)(10909)-Average Accuracy": "0.1784627922",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-01": "0.1645472646",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-02": "0.1800249368",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-03": "0.2107725441",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-05": "0.1585064232"
+        },
+        "barbarioz-318637": {
+            "Phase 1: Model building (Friends s7)(10909)-Average Accuracy": "0.1774177179",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-01": "0.1904014200",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-02": "0.1771817356",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-03": "0.1903893650",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-05": "0.1516983509"
+        },
+        "gabrielkp-271193": {
+            "Phase 1: Model building (Friends s7)(10909)-Average Accuracy": "0.1674804315",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-01": "0.1771916598",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-02": "0.1612778455",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-03": "0.1841129810",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-05": "0.1473392397"
+        },
+        "sanpdy-307423": {
+            "Phase 1: Model building (Friends s7)(10909)-Average Accuracy": "0.1305962484",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-01": "0.1694741547",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-02": "0.1218236983",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-03": "0.1219785586",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-05": "0.1091085821"
+        },
+        "berthashipper-326207": {
+            "Phase 1: Model building (Friends s7)(10909)-Average Accuracy": "0.1096284874",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-01": "0.1129207462",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-02": "0.1153030694",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-03": "0.1164571047",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-05": "0.0938330293"
+        },
+        "yyyyyyyyyyy-309659": {
+            "Phase 1: Model building (Friends s7)(10909)-Average Accuracy": "0.0937413126",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-01": "0.1037711650",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-02": "0.1073205397",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-03": "0.0812272727",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-05": "0.0826462731"
+        },
+        "marroth93-240612": {
+            "Phase 1: Model building (Friends s7)(10909)-Average Accuracy": "0.0697136000",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-01": "0.0741123483",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-02": "0.0667755157",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-03": "0.0785119906",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-05": "0.0594545454"
+        },
+        "projectpioneer-275751": {
+            "Phase 1: Model building (Friends s7)(10909)-Average Accuracy": "0.0590108279",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-01": "0.0618321933",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-02": "0.0707705840",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-03": "0.0550471507",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-05": "0.0483933836"
+        },
+        "wurining-327411": {
+            "Phase 1: Model building (Friends s7)(10909)-Average Accuracy": "0.0024195196",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-01": "0.0002872868",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-02": "0.0015422434",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-03": "0.0047208308",
+            "Phase 1: Model building (Friends s7)(10909)-Accuracy sub-05": "0.0031277174"
+        }
+    }
+}

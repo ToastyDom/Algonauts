@@ -1,0 +1,193 @@
+{
+    "Leaderboard - Phase 2: model selection(15305)": {
+        "sdascoli-330308": {
+            "Phase 2: Model selection (OOD movies)(19626)-Average Accuracy": "0.2145510822",
+            "Phase 2: Model selection (OOD movies)(19626)-Accuracy sub-01": "0.2380909647",
+            "Phase 2: Model selection (OOD movies)(19626)-Accuracy sub-02": "0.2104787230",
+            "Phase 2: Model selection (OOD movies)(19626)-Accuracy sub-03": "0.2376463140",
+            "Phase 2: Model selection (OOD movies)(19626)-Accuracy sub-05": "0.1719883271"
+        },
+        "shreydixit-331550": {
+            "Phase 2: Model selection (OOD movies)(19626)-Average Accuracy": "0.2096135840",
+            "Phase 2: Model selection (OOD movies)(19626)-Accuracy sub-01": "0.2353159164",
+            "Phase 2: Model selection (OOD movies)(19626)-Accuracy sub-02": "0.2045625995",
+            "Phase 2: Model selection (OOD movies)(19626)-Accuracy sub-03": "0.2268098618",
+            "Phase 2: Model selection (OOD movies)(19626)-Accuracy sub-05": "0.1717659583"
+        },
+        "denizkucuk-331536": {
+            "Phase 2: Model selection (OOD movies)(19626)-Average Accuracy": "0.2093688548",
+            "Phase 2: Model selection (OOD movies)(19626)-Accuracy sub-01": "0.2233213360",
+            "Phase 2: Model selection (OOD movies)(19626)-Accuracy sub-02": "0.2072211926",
+            "Phase 2: Model selection (OOD movies)(19626)-Accuracy sub-03": "0.2271230991",
+            "Phase 2: Model selection (OOD movies)(19626)-Accuracy sub-05": "0.1798097913"
+        },
+        "ckadirt-331563": {
+            "Phase 2: Model selection (OOD movies)(19626)-Average Accuracy": "0.2085295959",
+            "Phase 2: Model selection (OOD movies)(19626)-Accuracy sub-01": "0.2295214335",
+            "Phase 2: Model selection (OOD movies)(19626)-Accuracy sub-02": "0.2003390864",
+            "Phase 2: Model selection (OOD movies)(19626)-Accuracy sub-03": "0.2299702341",
+            "Phase 2: Model selection (OOD movies)(19626)-Accuracy sub-05": "0.1742876296"
+        },
+        "ngxbac-331434": {
+            "Phase 2: Model selection (OOD movies)(19626)-Average Accuracy": "0.2054496302",
+            "Phase 2: Model selection (OOD movies)(19626)-Accuracy sub-01": "0.2306260740",
+            "Phase 2: Model selection (OOD movies)(19626)-Accuracy sub-02": "0.2009725571",
+            "Phase 2: Model selection (OOD movies)(19626)-Accuracy sub-03": "0.2239985714",
+            "Phase 2: Model selection (OOD movies)(19626)-Accuracy sub-05": "0.1662013183"
+        },
+        "angelneer926-331504": {
+            "Phase 2: Model selection (OOD movies)(19626)-Average Accuracy": "0.1986472206",
+            "Phase 2: Model selection (OOD movies)(19626)-Accuracy sub-01": "0.2222509533",
+            "Phase 2: Model selection (OOD movies)(19626)-Accuracy sub-02": "0.1939562969",
+            "Phase 2: Model selection (OOD movies)(19626)-Accuracy sub-03": "0.2113892784",
+            "Phase 2: Model selection (OOD movies)(19626)-Accuracy sub-05": "0.1669923539"
+        },
+        "jjjjjjjj-331530": {
+            "Phase 2: Model selection (OOD movies)(19626)-Average Accuracy": "0.1611813748",
+            "Phase 2: Model selection (OOD movies)(19626)-Accuracy sub-01": "0.1782356414",
+            "Phase 2: Model selection (OOD movies)(19626)-Accuracy sub-02": "0.1520232496",
+            "Phase 2: Model selection (OOD movies)(19626)-Accuracy sub-03": "0.1810512468",
+            "Phase 2: Model selection (OOD movies)(19626)-Accuracy sub-05": "0.1334153612"
+        },
+        "corsi01-331326": {
+            "Phase 2: Model selection (OOD movies)(19626)-Average Accuracy": "0.1576446208",
+            "Phase 2: Model selection (OOD movies)(19626)-Accuracy sub-01": "0.1712171100",
+            "Phase 2: Model selection (OOD movies)(19626)-Accuracy sub-02": "0.1522925881",
+            "Phase 2: Model selection (OOD movies)(19626)-Accuracy sub-03": "0.1724969770",
+            "Phase 2: Model selection (OOD movies)(19626)-Accuracy sub-05": "0.1345718081"
+        },
+        "alitafakkor-330493": {
+            "Phase 2: Model selection (OOD movies)(19626)-Average Accuracy": "0.1573612476",
+            "Phase 2: Model selection (OOD movies)(19626)-Accuracy sub-01": "0.1774701625",
+            "Phase 2: Model selection (OOD movies)(19626)-Accuracy sub-02": "0.1537714129",
+            "Phase 2: Model selection (OOD movies)(19626)-Accuracy sub-03": "0.1734452794",
+            "Phase 2: Model selection (OOD movies)(19626)-Accuracy sub-05": "0.1247581355"
+        },
+        "robertscholz-330134": {
+            "Phase 2: Model selection (OOD movies)(19626)-Average Accuracy": "0.1495698038",
+            "Phase 2: Model selection (OOD movies)(19626)-Accuracy sub-01": "0.1636380789",
+            "Phase 2: Model selection (OOD movies)(19626)-Accuracy sub-02": "0.1455419424",
+            "Phase 2: Model selection (OOD movies)(19626)-Accuracy sub-03": "0.1677834565",
+            "Phase 2: Model selection (OOD movies)(19626)-Accuracy sub-05": "0.1213157376"
+        },
+        "ryota1-330472": {
+            "Phase 2: Model selection (OOD movies)(19626)-Average Accuracy": "0.1405274899",
+            "Phase 2: Model selection (OOD movies)(19626)-Accuracy sub-01": "0.1534874067",
+            "Phase 2: Model selection (OOD movies)(19626)-Accuracy sub-02": "0.1350727503",
+            "Phase 2: Model selection (OOD movies)(19626)-Accuracy sub-03": "0.1613452882",
+            "Phase 2: Model selection (OOD movies)(19626)-Accuracy sub-05": "0.1122045144"
+        },
+        "jeremywei-330579": {
+            "Phase 2: Model selection (OOD movies)(19626)-Average Accuracy": "0.1302879887",
+            "Phase 2: Model selection (OOD movies)(19626)-Accuracy sub-01": "0.1389045330",
+            "Phase 2: Model selection (OOD movies)(19626)-Accuracy sub-02": "0.1251828199",
+            "Phase 2: Model selection (OOD movies)(19626)-Accuracy sub-03": "0.1430533777",
+            "Phase 2: Model selection (OOD movies)(19626)-Accuracy sub-05": "0.1140112244"
+        },
+        "pcnlab-330703": {
+            "Phase 2: Model selection (OOD movies)(19626)-Average Accuracy": "0.1299177256",
+            "Phase 2: Model selection (OOD movies)(19626)-Accuracy sub-01": "0.1395508523",
+            "Phase 2: Model selection (OOD movies)(19626)-Accuracy sub-02": "0.1253611421",
+            "Phase 2: Model selection (OOD movies)(19626)-Accuracy sub-03": "0.1466382680",
+            "Phase 2: Model selection (OOD movies)(19626)-Accuracy sub-05": "0.1081206401"
+        },
+        "gabe_persson-329980": {
+            "Phase 2: Model selection (OOD movies)(19626)-Average Accuracy": "0.1275766104",
+            "Phase 2: Model selection (OOD movies)(19626)-Accuracy sub-01": "0.1420579342",
+            "Phase 2: Model selection (OOD movies)(19626)-Accuracy sub-02": "0.1215055361",
+            "Phase 2: Model selection (OOD movies)(19626)-Accuracy sub-03": "0.1384489760",
+            "Phase 2: Model selection (OOD movies)(19626)-Accuracy sub-05": "0.1082939953"
+        },
+        "viacheus-329229": {
+            "Phase 2: Model selection (OOD movies)(19626)-Average Accuracy": "0.1136149994",
+            "Phase 2: Model selection (OOD movies)(19626)-Accuracy sub-01": "0.1218141144",
+            "Phase 2: Model selection (OOD movies)(19626)-Accuracy sub-02": "0.1111143058",
+            "Phase 2: Model selection (OOD movies)(19626)-Accuracy sub-03": "0.1308431923",
+            "Phase 2: Model selection (OOD movies)(19626)-Accuracy sub-05": "0.0906883851"
+        },
+        "ss243-331480": {
+            "Phase 2: Model selection (OOD movies)(19626)-Average Accuracy": "0.1124937758",
+            "Phase 2: Model selection (OOD movies)(19626)-Accuracy sub-01": "0.1240644517",
+            "Phase 2: Model selection (OOD movies)(19626)-Accuracy sub-02": "0.1115726580",
+            "Phase 2: Model selection (OOD movies)(19626)-Accuracy sub-03": "0.1281053536",
+            "Phase 2: Model selection (OOD movies)(19626)-Accuracy sub-05": "0.0862326398"
+        },
+        "yuto_okuzawa-330692": {
+            "Phase 2: Model selection (OOD movies)(19626)-Average Accuracy": "0.1066143538",
+            "Phase 2: Model selection (OOD movies)(19626)-Accuracy sub-01": "0.1177537007",
+            "Phase 2: Model selection (OOD movies)(19626)-Accuracy sub-02": "0.1024786712",
+            "Phase 2: Model selection (OOD movies)(19626)-Accuracy sub-03": "0.1207491395",
+            "Phase 2: Model selection (OOD movies)(19626)-Accuracy sub-05": "0.0854759036"
+        },
+        "diorlab-aut-330197": {
+            "Phase 2: Model selection (OOD movies)(19626)-Average Accuracy": "0.1052224397",
+            "Phase 2: Model selection (OOD movies)(19626)-Accuracy sub-01": "0.1153607257",
+            "Phase 2: Model selection (OOD movies)(19626)-Accuracy sub-02": "0.1002329290",
+            "Phase 2: Model selection (OOD movies)(19626)-Accuracy sub-03": "0.1169406287",
+            "Phase 2: Model selection (OOD movies)(19626)-Accuracy sub-05": "0.0883554754"
+        },
+        "tinganli-329345": {
+            "Phase 2: Model selection (OOD movies)(19626)-Average Accuracy": "0.0968931989",
+            "Phase 2: Model selection (OOD movies)(19626)-Accuracy sub-01": "0.1168515012",
+            "Phase 2: Model selection (OOD movies)(19626)-Accuracy sub-02": "0.1005628848",
+            "Phase 2: Model selection (OOD movies)(19626)-Accuracy sub-03": "0.1021788785",
+            "Phase 2: Model selection (OOD movies)(19626)-Accuracy sub-05": "0.0679795314"
+        },
+        "hgz20-331565": {
+            "Phase 2: Model selection (OOD movies)(19626)-Average Accuracy": "0.0920794155",
+            "Phase 2: Model selection (OOD movies)(19626)-Accuracy sub-01": "0.1012670522",
+            "Phase 2: Model selection (OOD movies)(19626)-Accuracy sub-02": "0.0902768833",
+            "Phase 2: Model selection (OOD movies)(19626)-Accuracy sub-03": "0.1003907534",
+            "Phase 2: Model selection (OOD movies)(19626)-Accuracy sub-05": "0.0763829729"
+        },
+        "gifale95-328074": {
+            "Phase 2: Model selection (OOD movies)(19626)-Average Accuracy": "0.0895205496",
+            "Phase 2: Model selection (OOD movies)(19626)-Accuracy sub-01": "0.0985515068",
+            "Phase 2: Model selection (OOD movies)(19626)-Accuracy sub-02": "0.0859439746",
+            "Phase 2: Model selection (OOD movies)(19626)-Accuracy sub-03": "0.1020855258",
+            "Phase 2: Model selection (OOD movies)(19626)-Accuracy sub-05": "0.0715011911"
+        },
+        "mainak09-331507": {
+            "Phase 2: Model selection (OOD movies)(19626)-Average Accuracy": "0.0889278348",
+            "Phase 2: Model selection (OOD movies)(19626)-Accuracy sub-01": "0.0948127471",
+            "Phase 2: Model selection (OOD movies)(19626)-Accuracy sub-02": "0.0849551099",
+            "Phase 2: Model selection (OOD movies)(19626)-Accuracy sub-03": "0.1010598838",
+            "Phase 2: Model selection (OOD movies)(19626)-Accuracy sub-05": "0.0748835982"
+        },
+        "killz-329198": {
+            "Phase 2: Model selection (OOD movies)(19626)-Average Accuracy": "0.0777365235",
+            "Phase 2: Model selection (OOD movies)(19626)-Accuracy sub-01": "0.0854458722",
+            "Phase 2: Model selection (OOD movies)(19626)-Accuracy sub-02": "0.0730384591",
+            "Phase 2: Model selection (OOD movies)(19626)-Accuracy sub-03": "0.0914366692",
+            "Phase 2: Model selection (OOD movies)(19626)-Accuracy sub-05": "0.0610250936"
+        },
+        "barbarioz-328390": {
+            "Phase 2: Model selection (OOD movies)(19626)-Average Accuracy": "0.0758832383",
+            "Phase 2: Model selection (OOD movies)(19626)-Accuracy sub-01": "0.0831280754",
+            "Phase 2: Model selection (OOD movies)(19626)-Accuracy sub-02": "0.0721514743",
+            "Phase 2: Model selection (OOD movies)(19626)-Accuracy sub-03": "0.0897300343",
+            "Phase 2: Model selection (OOD movies)(19626)-Accuracy sub-05": "0.0585233690"
+        },
+        "wangyt-331354": {
+            "Phase 2: Model selection (OOD movies)(19626)-Average Accuracy": "0.0541549794",
+            "Phase 2: Model selection (OOD movies)(19626)-Accuracy sub-01": "0.0652584794",
+            "Phase 2: Model selection (OOD movies)(19626)-Accuracy sub-02": "0.0547699508",
+            "Phase 2: Model selection (OOD movies)(19626)-Accuracy sub-03": "0.0559692973",
+            "Phase 2: Model selection (OOD movies)(19626)-Accuracy sub-05": "0.0406221903"
+        },
+        "nekopara-331564": {
+            "Phase 2: Model selection (OOD movies)(19626)-Average Accuracy": "0.0390880962",
+            "Phase 2: Model selection (OOD movies)(19626)-Accuracy sub-01": "0.0409844546",
+            "Phase 2: Model selection (OOD movies)(19626)-Accuracy sub-02": "0.0378593849",
+            "Phase 2: Model selection (OOD movies)(19626)-Accuracy sub-03": "0.0409549860",
+            "Phase 2: Model selection (OOD movies)(19626)-Accuracy sub-05": "0.0365535594"
+        },
+        "berthashipper-331053": {
+            "Phase 2: Model selection (OOD movies)(19626)-Average Accuracy": "0.0253399113",
+            "Phase 2: Model selection (OOD movies)(19626)-Accuracy sub-01": "0.0261946027",
+            "Phase 2: Model selection (OOD movies)(19626)-Accuracy sub-02": "0.0270558531",
+            "Phase 2: Model selection (OOD movies)(19626)-Accuracy sub-03": "0.0278649771",
+            "Phase 2: Model selection (OOD movies)(19626)-Accuracy sub-05": "0.0202442121"
+        }
+    }
+}
