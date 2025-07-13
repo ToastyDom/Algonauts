@@ -32,7 +32,7 @@ def generate_leaderboard_html(json_file_path, visualizations_path=None):
         if avg_accuracy_key:
             challenge_score = float(scores[avg_accuracy_key])
             # Convert to percentage and format to 4 decimal places
-            challenge_score_formatted = f"{challenge_score * 100:.4f}"
+            challenge_score_formatted = f"{challenge_score:.4f}"
         else:
             challenge_score_formatted = "N/A"
         
@@ -79,7 +79,7 @@ def generate_leaderboard_html(json_file_path, visualizations_path=None):
 # Example usage:
 if __name__ == "__main__":
     # Replace 'leaderboard_data.json' with your actual JSON file path
-    json_file = 'leaderboard_p2.json'
+    json_file = '/Users/domenicbersch/Documents/Repositories/Algonauts_2025_Website/helper_code/leaderboard_p2.json'
     
     # Optionally provide path to visualizations folder
     visualizations_folder = 'visualizations_2025_p2'  # Set to None to use placeholder links
