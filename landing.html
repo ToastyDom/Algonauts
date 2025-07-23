@@ -12,8 +12,6 @@
     
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
-
-        /* Add this et-line font definition */
         @font-face {
             font-family: 'et-line';
             src: url('https://cdnjs.cloudflare.com/ajax/libs/et-line/1.0.0/et-line.eot');
@@ -134,7 +132,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: #2d3748; /* Solid dark background */
+            background: #2d3748;
             z-index: 2000;
         }
 
@@ -144,11 +142,11 @@
 
         .overlay-nav {
             position: absolute;
-            top: 100px; /* Position below the navigation bar */
+            top: 100px;
             left: 0;
             right: 0;
             padding: 2rem;
-            background: #2d3748; /* Same continuous background */
+            background: #2d3748;
         }
 
         .overlay-nav ul {
@@ -175,11 +173,11 @@
             transition: all 0.3s ease;
             display: block;
             padding: 1.5rem 2rem;
-            background: transparent; /* No separate button background */
+            background: transparent; 
         }
 
         .overlay-nav ul li a:hover {
-            background: rgba(128, 85, 189, 0.3); /* Subtle purple highlight on hover */
+            background: rgba(128, 85, 189, 0.3); 
             transform: translateX(10px);
         }
 
@@ -196,7 +194,6 @@
                 background: #2d3748;
             }
             
-            /* When navbar is scrolled, change hamburger color to white */
             .nav-scrolled .nav-toggle span {
                 background: white;
             }
@@ -474,7 +471,7 @@
         .coming-soon-projects::before {
             content: '';
             position: absolute;
-            top: 3.3rem; /* Position the line to align with the title baseline */
+            top: 3.3rem;
             left: 0;
             right: 0;
             height: 1px;
@@ -506,7 +503,7 @@
         .coming-soon-projects::after {
             content: '⋯';
             position: absolute;
-            top: 1.2rem; /* Position above the line */
+            top: 1.2rem;
             left: 50%;
             transform: translateX(-50%);
             font-size: 2rem;
@@ -522,7 +519,6 @@
             100% { opacity: 0.8; transform: translateX(-50%) scale(1.1); }
         }
         
-        /* Icon font styles for feature icons */
         .icon {
             font-family: 'et-line';
             speak: none;
@@ -534,7 +530,7 @@
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
             display: inline-block;
-            font-size: 60px; /* increased from 40px */
+            font-size: 60px; 
             color: #667eea;
         }
 
@@ -549,7 +545,7 @@
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
             display: inline-block;
-            font-size: 60px; /* increased from 40px */
+            font-size: 60px; 
             color: #667eea;
         }
        
@@ -570,18 +566,18 @@
         .features-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1rem; /* decreased from 2rem */
+            gap: 1rem; 
             margin-top: 2rem;
         }
 
         .feature-item {
             text-align: center;
-            padding: 1.5rem; /* decreased from 2rem */
+            padding: 1.5rem; 
         }
         
         .feature-icon {
-            width: 80px;  /* increased from 60px */
-            height: 80px; /* increased from 60px */
+            width: 80px;
+            height: 80px;
             margin: 0 auto 1.5rem;
             display: flex;
             align-items: center;
@@ -589,7 +585,7 @@
         }
 
         .feature-icon img {
-            height: 60px; /* increased from 40px */
+            height: 60px;
             vertical-align: inherit;
         }
         
@@ -597,7 +593,7 @@
             color: #2d3748;
             margin-bottom: 1rem;
             font-weight: 600;
-            min-height: 3rem; /* Minimum height to accommodate 2 lines */
+            min-height: 3rem; 
             display: flex;
             align-items: center;
             justify-content: center;
@@ -621,85 +617,84 @@
             color: #2d3748;
             margin-bottom: 3rem;
         }
+            
+        .news-feed {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+            max-height: 500px;
+            overflow-y: auto;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .news-feed::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        .news-feed::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 10px;
+        }
+
+        .news-feed::-webkit-scrollbar-thumb {
+            background: #c1c1c1;
+            border-radius: 10px;
+        }
+
+        .news-feed::-webkit-scrollbar-thumb:hover {
+            background: #a8a8a8;
+        }
+
+        .news-feed-item {
+            padding: 2rem;
+            border-bottom: 1px solid #edf2f7;
+            transition: background-color 0.3s ease;
+        }
+
+        .news-feed-item:last-child {
+            border-bottom: none;
+        }
+
+        .news-feed-item:hover {
+            background-color: #f8f9fa;
+        }
+
+        .news-date {
+            color: #8055bd;
+            font-weight: 600;
+            font-size: 0.9rem;
+            margin-bottom: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .news-content p {
+            color: #4a5568;
+            line-height: 1.6;
+            margin: 0;
+            text-align: justify;
+        }
+
+        .news-link {
+            color: #8055bd;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .news-link:hover {
+            color: #6b46c1;
+            text-decoration: underline;
+        }
         
-    .news-feed {
-        max-width: 800px;
-        margin: 0 auto;
-        background: white;
-        border-radius: 15px;
-        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
-        max-height: 500px;
-        overflow-y: auto;
-        border: 1px solid rgba(0, 0, 0, 0.05);
-    }
-
-    .news-feed::-webkit-scrollbar {
-        width: 8px;
-    }
-
-    .news-feed::-webkit-scrollbar-track {
-        background: #f1f1f1;
-        border-radius: 10px;
-    }
-
-    .news-feed::-webkit-scrollbar-thumb {
-        background: #c1c1c1;
-        border-radius: 10px;
-    }
-
-    .news-feed::-webkit-scrollbar-thumb:hover {
-        background: #a8a8a8;
-    }
-
-    .news-feed-item {
-        padding: 2rem;
-        border-bottom: 1px solid #edf2f7;
-        transition: background-color 0.3s ease;
-    }
-
-    .news-feed-item:last-child {
-        border-bottom: none;
-    }
-
-    .news-feed-item:hover {
-        background-color: #f8f9fa;
-    }
-
-    .news-date {
-        color: #8055bd;
-        font-weight: 600;
-        font-size: 0.9rem;
-        margin-bottom: 0.8rem;
-        text-transform: uppercase;
-        letter-spacing: 0.5px;
-    }
-
-    .news-content p {
-        color: #4a5568;
-        line-height: 1.6;
-        margin: 0;
-        text-align: justify;
-    }
-
-    .news-link {
-        color: #8055bd;
-        text-decoration: none;
-        font-weight: 500;
-        transition: color 0.3s ease;
-    }
-
-    .news-link:hover {
-        color: #6b46c1;
-        text-decoration: underline;
-    }
-        
-        /* Coming Soon Section */
         /* Team Section */
         .team {
             padding: 6rem 0;
             background: white;
         }
-        
+
         .team h2 {
             text-align: center;
             font-size: clamp(2rem, 4vw, 3rem);
@@ -707,18 +702,18 @@
             color: #2d3748;
             margin-bottom: 3rem;
         }
-        
+
         .team-category {
             margin-bottom: 4rem;
         }
-        
+
         .team-category h3 {
             text-align: center;
             color: #4a5568;
             margin-bottom: 2rem;
             font-weight: 600;
         }
-        
+
         .founders-grid {
             display: flex;
             flex-wrap: wrap;
@@ -726,7 +721,7 @@
             margin-bottom: 3rem;
             justify-content: center;
         }
-        
+
         .collaborators-grid {
             display: flex;
             flex-wrap: wrap;
@@ -734,14 +729,14 @@
             margin-bottom: 3rem;
             justify-content: center;
         }
-        
+
         .past-collaborators-grid {
             display: flex;
             flex-wrap: wrap;
             gap: 1.5rem;
             justify-content: center;
         }
-        
+
         .team-member {
             text-align: center;
             background: white;
@@ -750,80 +745,94 @@
             box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
             transition: transform 0.3s ease;
             flex: 0 0 auto;
+            text-decoration: none;
+            color: inherit;
+            display: block;
         }
-        
+
         .team-member.founder {
             padding: 2.5rem;
             box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
-            width: 280px;
+            width: 300px; 
         }
-        
+
         .team-member:not(.founder):not(.past) {
-            width: 220px;
+            width: 240px; 
         }
-        
+
         .team-member.past {
             padding: 1.5rem;
             box-shadow: 0 3px 15px rgba(0, 0, 0, 0.06);
             width: 180px;
         }
-        
+
         .team-member:hover {
             transform: translateY(-5px);
+            text-decoration: none;
+            color: inherit;
         }
-        
+
         .team-avatar {
-            width: 100px;
-            height: 100px;
+            width: 140px; 
+            height: 140px; 
             border-radius: 50%;
-            background: linear-gradient(135deg, #667eea, #764ba2);
             margin: 0 auto 1.5rem;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 2rem;
-            color: white;
+            overflow: hidden;
+            background: linear-gradient(135deg, #667eea, #764ba2);
         }
-        
+
+        .team-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+
         .team-member.founder .team-avatar {
-            width: 120px;
-            height: 120px;
-            font-size: 2.5rem;
+            width: 160px; 
+            height: 160px; 
         }
-        
+
+        .team-member.founder .team-avatar img {
+            width: 160px;
+            height: 160px;
+        }
+
         .team-member.past .team-avatar {
-            width: 80px;
-            height: 80px;
-            font-size: 1.5rem;
+            width: 100px; 
+            height: 100px;
         }
-        
+
+        .team-member.past .team-avatar img {
+            width: 100px; 
+            height: 100px; 
+        }
+
         .team-member h4 {
             color: #2d3748;
-            margin-bottom: 0.5rem;
+            margin-bottom: 1rem; 
         }
-        
+
         .team-member.founder h4 {
-            font-size: 1.3rem;
+            font-size: 1.4rem; 
         }
-        
+
         .team-member.past h4 {
             font-size: 1rem;
         }
-        
-        .team-role {
-            color: #8055bd;
-            font-weight: 500;
-            margin-bottom: 1rem;
-        }
-        
+
         .team-member p {
             color: #4a5568;
-            font-size: 0.9rem;
+            font-size: 0.95rem; 
             line-height: 1.5;
+            text-align: center; 
         }
-        
+
         .team-member.past p {
-            font-size: 0.8rem;
+            font-size: 0.85rem; 
         }
         
         /* Footer */
@@ -891,7 +900,7 @@
     <nav class="nav" id="navbar">
         <div class="nav-container">
             <a href="#" class="logo">
-                <img src="img/2024/logo_icon_light.png" alt="Algonauts Logo" style="filter: invert(1);">
+                <img src="img/2024/logo_icon_dark.png" alt="Algonauts Logo" style="filter: invert(1);">
                 The Algonauts Project
             </a>
             <ul class="nav-links">
@@ -929,7 +938,7 @@
         <div class="hero-content">
             <h1>The Algonauts Project</h1>
             <p class="hero-subtitle">
-                Bringing biological and and artificial intelligence researchers together.
+                Bringing biological and artificial intelligence researchers together.
             </p>
             <a href="#projects" class="cta-button">Explore Our Initiatives</a>
         </div>
@@ -1028,7 +1037,7 @@
                                     In collaboration with Conference on Cognitive Computational Neuroscience  <a href="https://ccneuro.org/" class="a-2021" target="_blank">(CCN)</a> and the Courtois Project on Neuronal Modelling <a href="https://www.cneuromod.ca/" class="a-2021" target="_blank">(CNeuroMod)</a>, 
                                     it uses the largest human brain dataset available to model neural responses to naturalistic stimulation.
                                 </p>
-                                <a href="challenge.html" class="project-link">Join the Challenge</a>
+                                <a href="index.html" class="project-link">Join the Challenge</a>
                             </div>
                         </div>
                     </div>
@@ -1058,9 +1067,9 @@
                             <div class="project-description">
                                 <p>
                                     The Brain Encoding Response Generator (BERG) is a resource consisting 
-                                    of of multiple pre-trained encoding models of the brain and an accompanying Python package to generate accurate in silico neural responses to arbitrary stimuli with just a few lines of code.
+                                    of multiple pre-trained encoding models of the brain and an accompanying Python package to generate accurate in silico neural responses to arbitrary stimuli with just a few lines of code.
                                 </p>
-                                <a href="https://berg-lab.github.io/" class="project-link" target="_blank">Visit BERG</a>
+                                <a href="https://github.com/gifale95/BERG" class="project-link" target="_blank">Explore BERG</a>
                             </div>
                         </div>
                     </div>
@@ -1135,65 +1144,86 @@
             <h2 class="fade-in">Our Team</h2>
             
             <div class="team-category">
-                <h3>Founders</h3>
-                <div class="founders-grid">
-                    <div class="team-member founder fade-in">
-                        <div class="team-avatar">RC</div>
-                        <h4>Radoslaw Cichy</h4>
-                        <div class="team-role">Founder</div>
-                        <p>Professor at Freie Universität Berlin, Neural Dynamics of Visual Cognition</p>
+            <h3>Founders</h3>
+            <div class="founders-grid">
+                <a href="https://www.ewi-psy.fu-berlin.de/en/einrichtungen/arbeitsbereiche/neural_dyn_of_vis_cog/index.html" class="team-member founder fade-in">
+                    <div class="team-avatar">
+                        <img src="img/2024/team/radek.png" alt="Radoslaw Cichy">
                     </div>
-                    
-                    <div class="team-member founder fade-in">
-                        <div class="team-avatar">GR</div>
-                        <h4>Gemma Roig</h4>
-                        <div class="team-role">Founder</div>
-                        <p>Professor at Goethe University Frankfurt, Computer Vision & AI</p>
+                    <h4>Radoslaw Cichy</h4>
+                    <p>Professor at Freie Universität Berlin, Neural Dynamics of Visual Cognition</p>
+                </a>
+                
+                <a href="http://www.cvai.cs.uni-frankfurt.de/" class="team-member founder fade-in">
+                    <div class="team-avatar">
+                        <img src="img/2024/team/gemma.jpg" alt="Gemma Roig">
                     </div>
-                    
-                    <div class="team-member founder fade-in">
-                        <div class="team-avatar">AO</div>
-                        <h4>Aude Oliva</h4>
-                        <div class="team-role">Founder</div>
-                        <p>Senior Research Scientist at MIT CSAIL and Director of MIT-IBM Watson AI Lab</p>
+                    <h4>Gemma Roig</h4>
+                    <p>Professor at Goethe University Frankfurt, Computer Vision & AI</p>
+                </a>
+                
+                <a href="http://olivalab.mit.edu/" class="team-member founder fade-in">
+                    <div class="team-avatar">
+                        <img src="img/2024/team/aude.jpg" alt="Aude Oliva">
                     </div>
-                </div>
+                    <h4>Aude Oliva</h4>
+                    <p>Senior Research Scientist at MIT CSAIL and Director of MIT-IBM Watson AI Lab</p>
+                </a>
             </div>
-            
-            <div class="team-category">
-                <h3>Current Collaborators</h3>
-                <div class="collaborators-grid">
-                    <div class="team-member fade-in">
-                        <div class="team-avatar">AG</div>
-                        <h4>Alessandro Gifford</h4>
+        </div>
+
+        <div class="team-category">
+            <h3>Current Collaborators</h3>
+            <div class="collaborators-grid">
+                <a href="https://www.alegifford.com/" class="team-member fade-in">
+                    <div class="team-avatar">
+                        <img src="img/2024/team/ale.png" alt="Alessandro Gifford">
                     </div>
-                    
-                    <div class="team-member fade-in">
-                        <div class="team-avatar">DB</div>
-                        <h4>Domenic Bersch</h4>
+                    <h4>Alessandro Gifford</h4>
+                    <p>PhD Student, Freie Universität Berlin</p>
+                </a>
+                
+                <a href="https://toastydom.github.io/" class="team-member fade-in">
+                    <div class="team-avatar">
+                        <img src="img/2024/team/domenic_2.png" alt="Domenic Bersch">
                     </div>
-                    
-                    <div class="team-member fade-in">
-                        <div class="team-avatar">MS</div>
-                        <h4>Marie St-Laurent</h4>
+                    <h4>Domenic Bersch</h4>
+                    <p>PhD Student, Goethe University Frankfurt</p>
+                </a>
+                
+                <a href="https://simexp.github.io" class="team-member fade-in">
+                    <div class="team-avatar">
+                        <img src="img/2024/team/marie.png" alt="Marie St-Laurent">
                     </div>
-                    
-                    <div class="team-member fade-in">
-                        <div class="team-avatar">BP</div>
-                        <h4>Basile Pinsard</h4>
+                    <h4>Marie St-Laurent</h4>
+                    <p>Research Professional, CRIUGM</p>
+                </a>
+                
+                <a href="https://github.com/bpinsard" class="team-member fade-in">
+                    <div class="team-avatar">
+                        <img src="img/2024/team/basile.jpg" alt="Basile Pinsard">
                     </div>
-                    
-                    <div class="team-member fade-in">
-                        <div class="team-avatar">JB</div>
-                        <h4>Julie Boyle</h4>
+                    <h4>Basile Pinsard</h4>
+                    <p>Data Manager, CRIUGM</p>
+                </a>
+                
+                <a href="https://simexp.github.io" class="team-member fade-in">
+                    <div class="team-avatar">
+                        <img src="img/2024/team/julie.png" alt="Julie Boyle">
                     </div>
-                    
-                    <div class="team-member fade-in">
-                        <div class="team-avatar">LB</div>
-                        <h4>Lune Bellec</h4>
+                    <h4>Julie Boyle</h4>
+                    <p>Project Manager, Université de Montréal</p>
+                </a>
+                
+                <a href="https://simexp.github.io" class="team-member fade-in">
+                    <div class="team-avatar">
+                        <img src="img/2024/team/lune.jpeg" alt="Lune Bellec">
                     </div>
-                </div>
+                    <h4>Lune Bellec</h4>
+                    <p>Associate Professor, Université de Montréal</p>
+                </a>
             </div>
+        </div>
             
             <div class="team-category">
                 <h3>Past Collaborators</h3>
