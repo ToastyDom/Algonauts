@@ -109,9 +109,12 @@
                     <div class="hero-content text-center">
                         <h1 style="margin-bottom: 25px; color: white;"><b>The Algonauts Project 2023 Challenge</b></h1>
                         <h1 style="font-size: 29px; margin-bottom: 25px; color: white; font-style: italic;"><b>How the Human Brain Makes Sense of Natural Scenes</b></h1>
-                        <a style="margin-top: 2em; font-weight: bold; font-size:14px;" href="challenge.html" class="btn-2021 btn-accent btn-large">Explore the Challenge</a>
-                        <br>
-                        <a style="margin-top: 2em; font-weight: bold; font-size:14px;" href="#CCN" class="btn-2021 btn-accent btn-large">Session @ CCN 2023</a>
+                        
+                        <!-- Button row container to place buttons side by side -->
+                        <div class="button-row">
+                            <a style="font-weight: bold; font-size:14px;" href="challenge.html" class="btn-2021 btn-accent btn-large">Explore the Challenge</a>
+                            <a style="font-weight: bold; font-size:14px;" href="#CCN" class="btn-2021 btn-accent btn-large">Session @ CCN 2023</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -247,7 +250,6 @@
             <div class="row wow fadeInUp">
                 <div class="col-md-12">
                     <h2 style="margin-bottom: 1em">The 2023 Challenge</h2>   
-                    <h3>2023 Challenge</h3>
                     <p class="intro-paragraph" style="text-align: justify;">
                         The Algonauts Project 2023 Challenge will evaluate computational models on how well they predict human visual brain data
                         recorded while humans perceive images of complex natural scenes, using a massive human brain dataset collected for that
@@ -272,66 +274,57 @@
                         the second video will guide you through the CodaLab competition submission process.
                     </p>
 
-                    <p class="intro-paragraph" style="text-align: justify;">
-                        <b style="font-weight: 600"><a href="challenge.html" class="a-2021">Learn more about the Challenge</a></b>
-                    </p>
+                    <div style="text-align: center; margin-top: 20px;">
+                        <a href="challenge.html" class="btn-2021 btn-accent btn-large" style="font-size: 14px; font-weight: bold;">Learn more about the Challenge</a>
+                    </div>
 
-                    <h3 style="margin-top: 0.5em" id="prizes">Prizes</h3>
+                    <h3 class="text-left" style="margin-bottom: 1em; text-align: left;">Prizes</h3>
                     <p class="intro-paragraph" style="text-align: justify;">
                         <b style="font-weight: 600">1st place:</b> 1500€ prize and travel reimbursement up to 1500€ to present at CCN 2023.<br>
                         <b style="font-weight: 600">2nd place:</b> 1500€ prize.<br>
                         <b style="font-weight: 600">3rd place:</b> 1500€ prize.
                     </p>
-                    <p class="intro-paragraph" id="CCN" style="text-align: justify; margin-bottom: 2em">
+                    <p class="intro-paragraph" id="CCN" style="text-align: justify;">
                         The top three entries will be invited to <b style="font-weight: 600">co-author a paper</b> with the Algonauts organizers about the 2023 Challenge. 
                     </p>
 
-                    <h3 style="margin-top: 0.5em">Sessions at CCN 2023</h3>
+                    <h3 class="text-left" style="margin-bottom: 1em; text-align: left;">Sessions at CCN 2023</h3>
                     <p class="intro-paragraph" style="text-align: justify;">
                         The Algonauts Project 2023 Challenge will conclude with two sessions at the <a href="https://ccneuro.org/"
                         class="a-2021">2023 Conference on Cognitive Computational Neuroscience</a>. The schedule for the sessions is below.
                     </p>
 
-                    <div class="container" id="ccn_schedule">
-                        <div class="row wow fadeInUp">
-                            <div class="col-md-12">
-                                <p class="intro-paragraph" style="text-align: justify; padding-bottom: 0em; margin-bottom: 0em">
-                                    <b style="font-weight: 600">Algonauts Main Session:</b> August 25th, 5pm&ndash;7pm (UTC+1)
-                                </p>
-                                <table class="tables-2021">
-                                    <tr class="boxkey-challenge-2021">
-                                        <td>15 min</td>
-                                        <td>Introduction to the Algonauts 2023 Challenge</td>
-                                    <tr class="boxkey-challenge-2021">
-                                        <td>45 min</td>
-                                        <td>Talks by the three best performing teams</td>
-                                    <tr class="boxkey-challenge-2021">
-                                        <td>60 min</td>
-                                        <td>Panel discussion on the potential of benchmarks and challenges</td>
-                                </table>
-                            </div>
-                        </div>
-                    </div>
+                    <p class="intro-paragraph" style="text-align: justify; padding-bottom: 0em; margin-bottom: 0em">
+                        <b style="font-weight: 600">Algonauts Main Session:</b> August 25th, 5pm&ndash;7pm (UTC+1)
+                    </p>
+                    <table class="tables-2021" style="margin-left: 0 !important;">
+                        <tr class="boxkey-challenge-2021">
+                            <td>15 min</td>
+                            <td>Introduction to the Algonauts 2023 Challenge</td>
+                        </tr>
+                        <tr class="boxkey-challenge-2021">
+                            <td>45 min</td>
+                            <td>Talks by the three best performing teams</td>
+                        </tr>
+                        <tr class="boxkey-challenge-2021">
+                            <td>60 min</td>
+                            <td>Panel discussion on the potential of benchmarks and challenges</td>
+                        </tr>
+                    </table>
 
                     <p class="intro-paragraph" style="text-align: justify;">
                         <a href="https://www.youtube.com/live/9Xh55mcWJeE?si=lTWBzIlH4jgTFigQ" class="a-2021">Click here to watch the recording of the Algonauts main session at CCN 2023</a>.
                     </p>
 
-                    <div class="container" id="ccn_schedule_2">
-                        <div class="row wow fadeInUp">
-                            <div class="col-md-12">
-                                <p class="intro-paragraph" style="text-align: justify;  padding-bottom: 0em; margin-bottom: 0em">
-                                    <b style="font-weight: 600">Algonauts Hackathon Session:</b> August 26th, 10:45am&ndash;12:30pm (UTC+1)
-                                </p>
-                                <table class="tables-2021">
-                                    <tr class="boxkey-challenge-2021">
-                                        <td>105 min</td>
-                                        <td>Hands-on hackathon on building a brain encoding model and submitting it to the Algonauts Challenge platform for evaluation.</td>
-                                </table>
-                            </div>
-                        </div>
-                    </div>
-                    
+                    <p class="intro-paragraph" style="text-align: justify; padding-bottom: 0em; margin-bottom: 0em">
+                        <b style="font-weight: 600">Algonauts Hackathon Session:</b> August 26th, 10:45am&ndash;12:30pm (UTC+1)
+                    </p>
+                    <table class="tables-2021" style="margin-left: 0 !important;">
+                        <tr class="boxkey-challenge-2021">
+                            <td>105 min</td>
+                            <td>Hands-on hackathon on building a brain encoding model and submitting it to the Algonauts Challenge platform for evaluation.</td>
+                        </tr>
+                    </table>
                 </div>
             </div>
         </div>
@@ -340,58 +333,62 @@
     <section class="challenge intro-section-padding" id="dates_table">
         <div class="container">
             <div class="row wow fadeInUp">
-                    <div class="col-md-8">
-                        <h3 style="margin-bottom: 1em">Important Dates</h3>
-                        <table class="tables-2021">
-                            <tr class="boxkey-challenge-2021">
-                                <td>Train data, test stimuli, and development kit released:</td>
-                                <td>January 14th, 2023</td>
-                            <tr class="boxkey-challenge-2021">
-                                <td>Challenge submission deadline:</td>
-                                <td>July 26th, 2023 at 11:59pm (UTC-4)</td>
-                            <tr class="boxkey-challenge-2021">
-                                <td>Challenge report/code submission deadline:</td>
-                                <td>August 2nd, 2023</td>
-                            <tr class="boxkey-challenge-2021">
-                                <td>Challenge results released:</td>
-                                <td>August 10th, 2023</td>
-                            <tr class="boxkey-challenge-2021">
-                                <td><a href="https://ccneuro.org/" class="a-2021">Sessions at CCN 2023</a>:</td>
-                                <td>August 25&ndash;26th, 2023</td>
-                        </table>
-                    </div>
+                <div class="col-md-12">
+                    <h3 class="text-left" style="margin-bottom: 1em; text-align: left;">Important Dates</h3>
+                    <table class="tables-2021" style="margin-left: 0 !important;">
+                        <tr class="boxkey-challenge-2021">
+                            <td>Train data, test stimuli, and development kit released:</td>
+                            <td>January 14th, 2023</td>
+                        </tr>
+                        <tr class="boxkey-challenge-2021">
+                            <td>Challenge submission deadline:</td>
+                            <td>July 26th, 2023 at 11:59pm (UTC-4)</td>
+                        </tr>
+                        <tr class="boxkey-challenge-2021">
+                            <td>Challenge report/code submission deadline:</td>
+                            <td>August 2nd, 2023</td>
+                        </tr>
+                        <tr class="boxkey-challenge-2021">
+                            <td>Challenge results released:</td>
+                            <td>August 10th, 2023</td>
+                        </tr>
+                        <tr class="boxkey-challenge-2021">
+                            <td><a href="https://ccneuro.org/" class="a-2021">Sessions at CCN 2023</a>:</td>
+                            <td>August 25&ndash;26th, 2023</td>
+                        </tr>
+                    </table>
+                    <p class="intro-paragraph" style="text-align: justify;">
+                        <b style="font-weight: 600">If you participate in the Challenge, use <a
+                        href="https://docs.google.com/forms/d/e/1FAIpQLSeUvAKMq65WZ0_-hy4WgCi72Hiljk9JQbI63UnOoUnjvOHmWQ/viewform?usp=sf_link"
+                        class="a-2021">this form</a> to submit the Challenge report and code.</b>
+                    </p>
                 </div>
-                <p class="intro-paragraph" style="text-align: justify;">
-                    <b style="font-weight: 600">If you participate in the Challenge, use <a
-                    href="https://docs.google.com/forms/d/e/1FAIpQLSeUvAKMq65WZ0_-hy4WgCi72Hiljk9JQbI63UnOoUnjvOHmWQ/viewform?usp=sf_link"
-                    class="a-2021">this form</a> to submit the Challenge report and code.</b>
-                </p>
             </div>
         </div>
     </section>
-
 
     <section class="challenge intro-section-padding" id="cite">
         <div class="container">
             <div class="row wow fadeInUp">
                 <div class="col-md-12">
-                    <h3 style="margin-bottom: 1em">Papers</h3>
-                    <p class="intro-paragraph" style="text-align: justify;">
+                    <h3 class="text-left" style="margin-bottom: 1em; text-align: left;">Papers</h3>
+                    <p class="intro-paragraph" style="text-align: justify; font-weight: normal;">
                         If you use the data provided for the Algonauts Project 2023 Challenge, please cite the following papers:
-                        <ol>
-                            <li>
-                                Gifford AT, Lahner B, Saba-Sadiya S, Vilas MG, Lascelles A, Oliva A, Kay K, Roig G, Cichy RM. 2023. <i>The Algonauts
-                                Project 2023 Challenge: How the Human Brain Makes Sense of Natural Scenes</i>. arXiv preprint, arXiv:2301.03198. DOI: 
-                                <a href="https://doi.org/10.48550/arXiv.2301.03198" class="a-2021">https://doi.org/10.48550/arXiv.2301.03198</a>
-                            </li>
-                            <li style="margin-top:1em">
-                                Allen EJ, St-Yves G, Wu Y, Breedlove JL, Prince JS, Dowdle LT, Nau M, Caron B, Pestilli F, Charest I, Hutchinson JB,
-                                Naselaris T, Kay K. 2022. <i>A massive 7T fMRI dataset to bridge cognitive neuroscience and computational intelligence</i>.
-                                Nature Neuroscience, 25(1):116&ndash;126. DOI: <a href="https://doi.org/10.1038/s41593-021-00962-x"
-                                class="a-2021">https://doi.org/10.1038/s41593-021-00962-x</a>
-                            </li>
-                        </ol>                    
                     </p>
+                    <ul class="intro-paragraph" style="list-style-type: disc; margin-left: 20px; font-weight: normal;">
+                        <li>
+                            Gifford AT, Lahner B, Saba-Sadiya S, Vilas MG, Lascelles A, Oliva A, Kay K, Roig G, Cichy RM. 2023. 
+                            <i>The Algonauts Project 2023 Challenge: How the Human Brain Makes Sense of Natural Scenes</i>. 
+                            arXiv preprint, arXiv:2301.03198. DOI: 
+                            <a href="https://doi.org/10.48550/arXiv.2301.03198" class="a-2021">https://doi.org/10.48550/arXiv.2301.03198</a>
+                        </li>
+                        <li style="margin-top:1em">
+                            Allen EJ, St-Yves G, Wu Y, Breedlove JL, Prince JS, Dowdle LT, Nau M, Caron B, Pestilli F, Charest I, Hutchinson JB,
+                            Naselaris T, Kay K. 2022. <i>A massive 7T fMRI dataset to bridge cognitive neuroscience and computational intelligence</i>.
+                            Nature Neuroscience, 25(1):116&ndash;126. DOI: <a href="https://doi.org/10.1038/s41593-021-00962-x"
+                            class="a-2021">https://doi.org/10.1038/s41593-021-00962-x</a>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>

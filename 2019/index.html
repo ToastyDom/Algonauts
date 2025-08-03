@@ -54,6 +54,7 @@
         <div style="max-height: 750px;  position: absolute; top: 0; bottom: 0; width: 100%; height: 100%; background-color: black; overflow: hidden;">
             <img src="../img/index_background_compressedv2.jpg" style="width: inherit; opacity: 0.7">
         </div>
+        
         <body class="with-nav-text">
             <section class="navigation">
                 <header>
@@ -66,41 +67,48 @@
                                 <a href="index.html">The Algonauts Project Challenge</a>
                             </div>
                         </div>
-                    <div class="header-nav navbar-right">
-                        <nav>
-                            <ul class="primary-nav">
-                                <li><a href="index.html#about">About</a></li>
-                                <li><a href="challenge.html">Challenge</a></li>
-                                <li><a href="workshop.html">Workshop</a></li>
-                                <li><a href="download.html">Download</a></li>
-                                <li><a href="AlgonautsProject2019_arXiv.pdf">Paper</a></li>
-                                <li><a href="index.html#contact">Contact</a></li>
-                                <li><a href="index.html#team">Team</a></li>
-                                <li><a href="../archive.html">Archive</a></li>
-                            </ul>
-                        </nav>
+                        
+                        <!-- Fixed Navigation Links -->
+                        <div class="header-nav">
+                            <nav>
+                                <ul class="primary-nav">
+                                    <li><a href="index.html#about">About</a></li>
+                                    <li><a href="challenge.html">Challenge</a></li>
+                                    <li><a href="workshop.html">Workshop</a></li>
+                                    <li><a href="download.html">Download</a></li>
+                                    <li><a href="AlgonautsProject2019_arXiv.pdf">Paper</a></li>
+                                    <li><a href="index.html#contact">Contact</a></li>
+                                    <li><a href="index.html#team">Team</a></li>
+                                    <li><a href="../archive.html">Archive</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                        
+                        <!-- Overlay Navigation -->
+                        <div class="nav-overlay">
+                            <nav class="overlay-nav">
+                                <ul>
+                                    <li><a href="index.html#about">About</a></li>
+                                    <li><a href="challenge.html">Challenge</a></li>
+                                    <li><a href="workshop.html">Workshop</a></li>
+                                    <li><a href="download.html">Download</a></li>
+                                    <li><a href="AlgonautsProject2019_arXiv.pdf">Paper</a></li>
+                                    <li><a href="index.html#contact">Contact</a></li>
+                                    <li><a href="index.html#team">Team</a></li>
+                                    <li><a href="../archive.html">Archive</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                        
+                        <!-- Hamburger Icon -->
+                        <div class="navicon">
+                            <a class="nav-toggle" href="#"><span></span></a>
+                        </div>
                     </div>
-                    <div class="nav-overlay">
-                        <nav class="overlay-nav">
-                            <ul>
-                                <li><a href="index.html#about">About</a></li>
-                                <li><a href="challenge.html">Challenge</a></li>
-                                <li><a href="workshop.html">Workshop</a></li>
-                                <li><a href="download.html">Download</a></li>
-                                <li><a href="AlgonautsProject2019_arXiv.pdf">Paper</a></li>
-                                <li><a href="index.html#contact">Contact</a></li>
-                                <li><a href="index.html#team">Team</a></li>
-                                <li><a href="../archive.html">Archive</a></li>
-                            </ul>
-                        </nav>
-                    </div>
-                    <div class="navicon">
-                        <a class="nav-toggle" href="#"><span></span></a>
-                    </div>
-                </div>
-            </header>
-        </section>
+                </header>
+            </section>
         </body>
+        
         <div class="container">
             <div class="row">
                 <div class="col-md-10 col-md-offset-1">
@@ -110,14 +118,17 @@
                         <h2 style="font-size: 22px; color: white;"><b>Workshop and Challenge</b></h2>
                         <h2 style="font-size: 18px; color: white;"><b>Dates: July 19-20, 2019</b></h2>
                         <h2 style="font-size: 18px; color: white;"><b>Place: MIT, Cambridge, MA</b></h2>
-                        <a style="margin-top: 2em; font-weight: bold; font-size:14px;" href="challenge.html" class="btn-2019 btn-accent btn-large">Explore the Challenge</a>
-                        <a style="margin-top: 2em; font-weight: bold; font-size:14px;" href="workshop.html" class="btn-2021 btn-accent btn-large">Explore the Workshop</a>
+
+                        <div class="button-row" style="margin-top: 2em;">
+                            <a style="font-weight: bold; font-size:14px;" href="challenge.html" class="btn-2019 btn-accent btn-large">Explore the Challenge</a>
+                            <a style="font-weight: bold; font-size:14px;" href="workshop.html" class="btn-2021 btn-accent btn-large">Explore the Workshop</a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
+    
     <section class="logo-section" style="margin: 50px 0; text-align: center;">
         <img src="../img/2024/logo_light.png" alt="Algonauts Logo" style="max-width: 350px; height: auto;">
     </section>
@@ -210,91 +221,113 @@
 
     <section class="challenge intro-section-padding" id="callforparticipation">
         <div class="container">
-            <h2 style="margin-bottom: 1em">The 2019 Challenge</h2>
             <div class="row">
-                <div class="col-md-12">   
-                    <h3>Challenge</h3>
+                <div class="col-md-12">
+                    <h2 style="margin-bottom: 1em">The 2019 Challenge</h2>
                     <p class="intro-paragraph" style="text-align: justify;">
-                        The first Algonauts Project challenge will evaluate computational models based on human visual brain data.<br><a href="challenge.html">Learn more about the challenge</a> <br>
+                        The first Algonauts Project challenge will evaluate computational models based on human visual brain data.
                     </p>
 
+                    <div style="text-align: center; margin-top: 20px;">
+                        <a href="challenge.html" class="btn-2021 btn-accent btn-large" style="font-size: 14px; font-weight: bold;">Learn more about the Challenge</a>
+                    </div>
+
+                    <h3 class="text-left" style="margin-bottom: 1em; text-align: left;">Prizes</h3>
                     <p class="intro-paragraph" style="text-align: justify;">
-                        <b style='font-weight: 400'>PRIZES FOR WINNERS:</b> top 1 and top 2 entries for each track will receive a travel reimbursement for one attendee to present their method at the <a href="http://algonauts.csail.mit.edu/workshop.html">Algonauts Workshop</a> at MIT on 19-20 July 2019. Top 1 entries for each track will receive a gift.
+                        <b style="font-weight: 600">PRIZES FOR WINNERS:</b> top 1 and top 2 entries for each track will receive a travel reimbursement for one attendee to present their method at the <a href="http://algonauts.csail.mit.edu/workshop.html" class="a-2021">Algonauts Workshop</a> at MIT on 19-20 July 2019. Top 1 entries for each track will receive a gift.
                     </p>
                     <p class="intro-paragraph" style="text-align: justify;">
                         Teams with best submission results will receive an invitation to participate in the Algonauts Workshop, held at MIT on July 19-20, to give a talk about their method during the workshop.
                     </p>
-                </div>
-            </div>
-                    
-            <div class="row">
-                <div class="col-md-12"> 
-                    <h3 style="margin-top: 1em">Two-Day Workshop, July 19-20, 2019</h3>
+
+                    <h3 class="text-left" style="margin-bottom: 1em; text-align: left;">Two-Day Workshop, July 19-20, 2019</h3>
                     <p class="intro-paragraph" style="text-align: justify;">
-                        The first day, <a href="workshop.html#schedule_friday">July 19</a>, features introductory tutorials on how the human brain processes visual 
+                        The first day, <a href="workshop.html#schedule_friday" class="a-2021">July 19</a>, features introductory tutorials on how the human brain processes visual 
                         stimuli; state-of-the-art object recognition models in computer vision; an overview of methods 
                         for studying human visual brain function. 
                     </p>
 
                     <p class="intro-paragraph" style="text-align: justify;">
-                        The second day, <a href="workshop.html#schedule_saturday">July 20</a>, features keynote talks by leading experts at the intersection of human 
+                        The second day, <a href="workshop.html#schedule_saturday" class="a-2021">July 20</a>, features keynote talks by leading experts at the intersection of human 
                         and machine vision, and a poster session. Challenge winners will be invited to present their models.
                     </p>
 
                     <p class="intro-paragraph" style="text-align: justify;">
-                        <a href="workshop.html">Learn more about the workshop and abstract submission</a> <br>
+                        <a href="workshop.html" class="a-2021">Learn more about the workshop and abstract submission</a>
                     </p>
-
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="challenge intro-section-padding" id="dates_table" >
+    <section class="challenge intro-section-padding" id="dates_table">
         <div class="container">
-            <h3 style="margin-bottom: 1em">Important Dates</h3>
-
             <div class="row">
-                <div class="col-md-6">
-                    <h3 style="margin-bottom: 1em; text-align:center">Challenge</h3>
-                    <table class="tables">
-                        <tr class="boxkey-challenge"><td>Training data, test data, and development kit released:</td><td>April 1, 2019</td>
-                        <tr class="boxkey-challenge"><td>Challenge submission deadline:</td><td>July 1, 2019 at 11:59pm (UTC-4)</td>
-                        <tr class="boxkey-challenge"><td>Challenge results released:</td><td>July 5, 2019</td>
-                    </table>
-                </div>
-            
-                <div class="col-md-6">
-                    <h3 style="margin-bottom: 1em; text-align:center">Workshop</h3>
-                    <table class="tables">
-                        <tr class="boxkey-workshop"><td>Workshop registration opens:</td><td>June 7, 2019</td>
-                        <tr class="boxkey-workshop"><td>Abstract submission deadline:</td><td>July 16, 2019</td>
-                        <tr class="boxkey-workshop"><td>Workshop registration deadline:</td><td>July 19, 2019</td></tr>
-                        <tr class="boxkey-workshop"><td>Workshop:</td><td>July 19&ndash;20, 2019</td></tr>
-                    </table>
-                </div> 
-            </div>
+                <div class="col-md-12">
+                    <h3 class="text-left" style="margin-bottom: 1em; text-align: left;">Important Dates</h3>
+                    
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h4 style="margin-bottom: 1em; text-align: center; color: #3D4351;">Challenge</h4>
+                            <table class="tables-2021" style="margin-left: 0 !important;">
+                                <tr class="boxkey-challenge-2021">
+                                    <td>Training data, test data, and development kit released:</td>
+                                    <td>April 1, 2019</td>
+                                </tr>
+                                <tr class="boxkey-challenge-2021">
+                                    <td>Challenge submission deadline:</td>
+                                    <td>July 1, 2019 at 11:59pm (UTC-4)</td>
+                                </tr>
+                                <tr class="boxkey-challenge-2021">
+                                    <td>Challenge results released:</td>
+                                    <td>July 5, 2019</td>
+                                </tr>
+                            </table>
+                        </div>
+                    
+                        <div class="col-md-6">
+                            <h4 style="margin-bottom: 1em; text-align: center; color: #3D4351;">Workshop</h4>
+                            <table class="tables-2021" style="margin-left: 0 !important;">
+                                <tr class="boxkey-challenge-2021">
+                                    <td>Workshop registration opens:</td>
+                                    <td>June 7, 2019</td>
+                                </tr>
+                                <tr class="boxkey-challenge-2021">
+                                    <td>Abstract submission deadline:</td>
+                                    <td>July 16, 2019</td>
+                                </tr>
+                                <tr class="boxkey-challenge-2021">
+                                    <td>Workshop registration deadline:</td>
+                                    <td>July 19, 2019</td>
+                                </tr>
+                                <tr class="boxkey-challenge-2021">
+                                    <td>Workshop:</td>
+                                    <td>July 19&ndash;20, 2019</td>
+                                </tr>
+                            </table>
+                        </div> 
+                    </div>
 
-            <p class="intro-paragraph" style="text-align: justify;">
-                Use <a href="https://forms.gle/hjn2t5crMWztMvQ27">this form</a> to <b style="font-weight:400">register for the workshop</b>. <br>
-                Use <a href="https://forms.gle/uvqY7pWSqjf6C7K59">this form</a> to <b style="font-weight:400">submit an abstract to present a poster at the workshop</b>. <br>
-                If you participated in the <a href="http://algonauts.csail.mit.edu/challenge.html">Challenge</a>, use <a href="https://forms.gle/oPNpaL3Pw9ARKwCG8">this form</a> to <b style="font-weight:400">submit the challenge report</b>. <br>
-            </p>
+                    <p class="intro-paragraph" style="text-align: justify;">
+                        Use <a href="https://forms.gle/hjn2t5crMWztMvQ27" class="a-2021">this form</a> to <b style="font-weight: 600">register for the workshop</b>.<br>
+                        Use <a href="https://forms.gle/uvqY7pWSqjf6C7K59" class="a-2021">this form</a> to <b style="font-weight: 600">submit an abstract to present a poster at the workshop</b>.<br>
+                        If you participated in the <a href="http://algonauts.csail.mit.edu/challenge.html" class="a-2021">Challenge</a>, use <a href="https://forms.gle/oPNpaL3Pw9ARKwCG8" class="a-2021">this form</a> to <b style="font-weight: 600">submit the challenge report</b>.
+                    </p>
+                </div>
+            </div>
         </div>
     </section>
-
 
     <section class="challenge intro-section-padding" id="cite">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-
-                    <h3 style="margin-bottom: 1em">Paper and Citation</h3>
-                    <p class="intro-paragraph" style="text-align: justify;">
-                        Please refer to <a href="download.html#Citation">this page</a> for guidance on citation if you have used any data associated with the Algonauts Project 2019.
+                    <h3 class="text-left" style="margin-bottom: 1em; text-align: left;">Paper and Citation</h3>
+                    <p class="intro-paragraph" style="text-align: justify; font-weight: normal;">
+                        Please refer to <a href="download.html#Citation" class="a-2021">this page</a> for guidance on citation if you have used any data associated with the Algonauts Project 2019.
                     </p>
-                    <p class="intro-paragraph" style="text-align: justify;">
-                        We will provide a more extensive paper including the results of the challenge at a later time point. When published, news will be announced via an update on our <a href="index.html">homepage</a>.
+                    <p class="intro-paragraph" style="text-align: justify; font-weight: normal;">
+                        We will provide a more extensive paper including the results of the challenge at a later time point. When published, news will be announced via an update on our <a href="index.html" class="a-2021">homepage</a>.
                     </p>
                 </div>
             </div>

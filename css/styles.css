@@ -392,9 +392,8 @@ section.blog {
     margin: 30px;
     width: 400px;
 }
-
 /* ==========================================================================
-   NAVIGATION
+   NAVIGATION - FIXED VERSION
    ========================================================================== */
 .navigation {
     -webkit-transition: all 300ms ease-in-out;
@@ -405,7 +404,7 @@ section.blog {
 }
 
 header {
-    padding: 20px 0;
+    padding: 25px 0; /* Increased padding to prevent logo cutoff */
     border-bottom: solid 1px rgba(255, 255, 255, 0.2);
     position: fixed;
     top: 0;
@@ -417,6 +416,7 @@ header {
     background: rgba(0, 0, 0, 0);
     -webkit-transition: all 300ms ease-in-out;
     transition: all 300ms ease-in-out;
+    min-height: 80px; /* Ensure minimum height */
 }
 
 header.nav-scrolled {
@@ -455,17 +455,24 @@ header .logo {
 
 /* Navigation Lists */
 header ul.primary-nav {
-    margin: 0 0 0 75px;
+    margin: 0;
     padding: 0;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: flex-end; /* Right align the navigation items */
 }
 
 header ul.primary-nav li {
-    display: inline;
+    display: inline-block;
+    margin: 0 8px; /* Reduced margin for better fit */
 }
 
 header ul.primary-nav li a {
     color: #fff;
-    padding-right: 25px;
+    padding: 5px 8px; /* Added padding for better click area */
+    font-size: 13px; /* Slightly smaller font */
+    white-space: nowrap; /* Prevent text wrapping */
 }
 
 header ul.primary-nav li a:hover {
@@ -473,7 +480,7 @@ header ul.primary-nav li a:hover {
 }
 
 header ul.primary-nav li:last-child a {
-    padding-right: 0px;
+    padding-right: 8px;
 }
 
 header ul.primary-nav-2021 {
@@ -512,6 +519,10 @@ header ul.member-actions li a:hover {
 
 header .header-nav {
     display: inline-block;
+    position: absolute;
+    right: 80px; /* Leave space for hamburger menu */
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 header .member-actions {
@@ -532,26 +543,99 @@ header .member-actions {
     left: 20px;
     transform: translateY(-50%);
     z-index: 10;
+    max-width: 400px; /* Increased width for longer text */
 }
 
 .nav-logo-img {
     height: 60px;
     width: auto;
     max-height: 60px;
-    max-width: 200px;
+    max-width: 60px;
     transition: height 0.3s ease, max-height 0.3s ease;
+    flex-shrink: 0; /* Prevent logo from shrinking */
 }
 
 .nav-text {
-    font-size: 18px;
+    font-size: 16px;
     font-weight: bold;
     color: white;
     text-decoration: none;
     display: none;
+    white-space: nowrap; /* Prevent text wrapping */
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 body.with-nav-text .nav-text {
     display: block;
+}
+
+/* Responsive Navigation */
+@media only screen and (max-width: 1400px) {
+    header ul.primary-nav li {
+        margin: 0 6px;
+    }
+    
+    header ul.primary-nav li a {
+        font-size: 12px;
+        padding: 5px 6px;
+    }
+    
+    .nav-text {
+        font-size: 14px;
+    }
+    
+    .nav-brand {
+        max-width: 350px; /* Adjust for smaller screens */
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    header ul.primary-nav li {
+        margin: 0 4px;
+    }
+    
+    header ul.primary-nav li a {
+        padding: 5px 4px;
+        font-size: 11px;
+    }
+    
+    .header-nav {
+        right: 70px; /* Adjust spacing on smaller screens */
+    }
+    
+    .nav-brand {
+        max-width: 300px; /* Further reduce on smaller screens */
+    }
+    
+    .nav-text {
+        font-size: 13px;
+    }
+}
+
+@media only screen and (max-width: 1100px) {
+    /* Hide primary nav on smaller screens, show hamburger menu */
+    header ul.primary-nav {
+        display: none;
+    }
+    
+    .navicon {
+        visibility: visible;
+    }
+    
+    .header-nav.navbar-center {
+        display: none;
+    }
+    
+    .header-nav {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 1101px) {
+    .header-nav {
+        display: inline-block;
+    }
 }
 
 /* Mobile Navigation */
@@ -669,11 +753,18 @@ body.with-nav-text .nav-text {
 .navicon {
     position: absolute;
     height: 26px;
-    right: 10px;
-    top: 48px;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
     visibility: hidden;
     -webkit-transition: all 300ms ease-in-out;
     transition: all 300ms ease-in-out;
+}
+
+@media only screen and (max-width: 1100px) {
+    .navicon {
+        visibility: visible;
+    }
 }
 
 .fixed {
@@ -684,7 +775,7 @@ body.with-nav-text .nav-text {
 }
 
 /* ==========================================================================
-   HERO SECTION
+   HERO SECTION 
    ========================================================================== */
 .hero {
     min-height: 800px;
@@ -694,16 +785,92 @@ body.with-nav-text .nav-text {
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero .container {
+    position: relative;
+    z-index: 10;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.hero .row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 0;
+}
+
+.hero .col-md-10.col-md-offset-1 {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
 }
 
 .hero .hero-content {
-    padding-top: 26%;
+    text-align: center;
+    padding: 40px 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .hero h1 {
     font-size: 6rem;
     color: #fff;
     margin-bottom: 40px;
+    text-align: center;
+    width: 100%;
+    line-height: 1.2;
+}
+
+.hero h2 {
+    color: #fff;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+/* Button container for flexible layouts */
+.hero .hero-content .button-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin: 10px 0;
+    width: 100%;
+}
+
+/* Individual buttons */
+.hero .hero-content a.btn-2019,
+.hero .hero-content a.btn-2021 {
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    flex-shrink: 0;
+    white-space: nowrap;
+}
+
+/* When buttons are directly in hero-content (not in button-row) */
+.hero .hero-content > a.btn-2019,
+.hero .hero-content > a.btn-2021 {
+    margin: 10px 15px;
+}
+
+/* For buttons that should break to new lines */
+.hero .hero-content br + a.btn-2019,
+.hero .hero-content br + a.btn-2021 {
+    margin-top: 20px;
 }
 
 .hero p.intro {
@@ -711,6 +878,8 @@ body.with-nav-text .nav-text {
     font-size: 20px;
     font-weight: 300;
     margin-bottom: 80px;
+    text-align: center;
+    width: 100%;
 }
 
 .hero .down-arrow a {
@@ -764,6 +933,7 @@ video.hero-background-explore {
     z-index: 5;
     text-align: center;
     color: white;
+    width: 90%;
 }
 
 .down-arrow {
@@ -777,47 +947,84 @@ video.hero-background-explore {
     transform: translateX(-50%);
 }
 
-/* Hero Strip */
-.hero-strip {
-    background: #333844 url("../img/polygonal-bg.jpg") no-repeat center center;
+/* Responsive adjustments for hero */
+@media only screen and (max-width: 1023px) {
+    .hero h1 {
+        font-size: 4rem;
+    }
+
+    .hero img {
+        height: 100%;
+        object-fit: cover;
+    }
 }
 
-.hero-strip i {
-    color: #F69D52;
+@media only screen and (max-width: 768px) {
+    .hero {
+        min-height: 600px;
+    }
+    
+    .hero h1 {
+        font-size: 3rem;
+        margin-bottom: 30px;
+    }
+    
+    .hero h1[style*="font-size: 29px"] {
+        font-size: 1.5rem !important;
+    }
+    
+    .hero .hero-content {
+        padding: 20px 15px;
+    }
+    
+    .hero .hero-content a.btn-2021,
+    .hero .hero-content a.btn-2019 {
+        margin: 8px 5px;
+        font-size: 12px !important;
+        padding: 10px 20px;
+    }
+
+    /* Stack buttons on mobile */
+    .hero .hero-content .button-row {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .video-overlay {
+        width: 95%;
+        padding: 0 10px;
+    }
 }
 
-.hero-strip h4 {
-    font-family: "Nunito", sans-serif;
-    font-weight: 300;
-    font-size: 25px;
-    color: #F69D52;
-    vertical-align: top;
-    margin-left: -8px;
-    font-style: normal;
-}
+@media only screen and (max-width: 480px) {
+    .hero {
+        min-height: 500px;
+    }
+    
+    .hero h1 {
+        font-size: 2rem;
+        margin-bottom: 20px;
+    }
 
-.hero-strip h2 {
-    color: #fff;
-    margin: 0 0 20px 0;
-}
+    .hero h2 {
+        font-size: 1rem;
+        margin-bottom: 15px;
+    }
 
-.hero-strip p {
-    color: #ACB1B4;
-}
+    .hero .hero-content {
+        padding: 15px 10px;
+    }
+    
+    .hero .hero-content a.btn-2021,
+    .hero .hero-content a.btn-2019 {
+        margin: 5px 3px;
+        font-size: 11px !important;
+        padding: 8px 16px;
+    }
 
-.hero-strip .btn {
-    margin-top: 10px;
-}
-
-.hero-strip .logo-placeholder {
-    width: 230px;
-    height: 230px;
-    position: absolute;
-    bottom: -285px;
-    left: 50%;
-    -webkit-transform: translateX(-50%);
-    -ms-transform: translateX(-50%);
-    transform: translateX(-50%);
+    .video-overlay h1 {
+        font-size: 1.5rem;
+    }
 }
 
 /* ==========================================================================
@@ -1227,6 +1434,7 @@ body {
 .challenge .intro-paragraph {
     margin-bottom: 20px;
 }
+
 
 /* ==========================================================================
    TEAM SECTION
@@ -2080,8 +2288,57 @@ footer .footer-links {
     }
 }
 
+
+@media only screen and (max-width: 1200px) {
+    header ul.primary-nav li {
+        margin: 0 5px;
+    }
+    
+    header ul.primary-nav li a {
+        padding: 0 5px;
+        font-size: 13px;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    /* Hide primary nav on smaller screens, show hamburger menu */
+    header ul.primary-nav {
+        display: none;
+    }
+    
+    .navicon {
+        visibility: visible;
+    }
+    
+    .header-nav.navbar-center {
+        display: none;
+    }
+}
+
+
+@media only screen and (min-width: 1025px) {
+    .header-nav.navbar-center {
+        margin-left: 200px; /* Adjust based on your logo width */
+        margin-right: 100px; /* Leave space on the right */
+    }
+}
+
+
 /* Tablet */
 @media only screen and (max-width: 768px) {
+    .hero h1 {
+        font-size: 3rem;
+    }
+    
+    .hero h1[style*="font-size: 29px"] {
+        font-size: 1.5rem !important;
+    }
+    
+    .hero .hero-content a.btn-2021 {
+        margin: 8px 3px;
+        font-size: 12px !important;
+    }
+
     .nav-toggle {
         display: block;
     }
