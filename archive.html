@@ -39,6 +39,7 @@
         to left justify single line equations in code cells. displayAlign: 'center', "HTML-CSS": { styles: {'.MathJax_Display':
         {"margin": 0}}, linebreaks: { automatic: true } } });
     </script>
+    
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const favicon = document.getElementById('favicon');
@@ -72,8 +73,7 @@
         </div>
         <div class="hero-explore-content text-center"
             style="display: flex; justify-content: center; align-items: center; height: 100%; width: 100%; flex-direction: column; padding-top: 0; position: absolute;">
-            <h1 style="margin-bottom: 25px; color: white;"><b>The Algonauts Project<br>Challenge Archives</b></h1>
-           
+            <h1 style="margin-bottom: 15px; color: white;"><b>The Algonauts Project<br>Challenge Archives</b></h1>
         </div>
         <section class="navigation">
             <header>
@@ -116,86 +116,95 @@
         </section>
     </section>
 
-    
     <section class="challenge intro-section-padding">
         <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <p class="intro-paragraph" style="text-align: justify; margin-top: 2em">
-                        Below you will find links to all editions of the Algonauts Project challenge.
-                    </p>
+            <!-- Current Challenge Section -->
+            <div class="current-challenge">
+                <h3>Current Challenge</h3>
+                <div class="current-challenge-card">
+                    <div class="current-challenge-image">
+                        <img src="img/2024/algonauts_2025_banner_plain.png" alt="Algonauts 2025 Challenge">
+                        <div class="live-badge">LIVE</div>
+                    </div>
+                    <div class="current-challenge-content">
+                        <h4>The Algonauts Project 2025 Challenge: <br> How the Human Brain Makes Sense of Multimodal Movies</h4>
+                            <p class="intro-paragraph" style="text-align: justify;">
+                                The 2025 challenge edition focuses on explaining responses in the human brain as participants perceive complex multimodal movies. 
+                                Through collaboration with the <a href="https://www.cneuromod.ca/" class="a-2021" target="_blank">Courtois Project on Neuronal Modelling (CNeuroMod)</a>, 
+                                the challenge runs on the largest human brain dataset available, opening new venues for accurate models of 
+                                neural responses to multimodal naturalistic stimulation. To promote more robust models of the brain, 
+                                the 2025 challenge features a selection process based on out-of-distribution generalization. 
+                                The challenge is organized in partnership with the <a href="https://ccneuro.org/" class="a-2021" target="_blank">Conference on Cognitive Computational Neuroscience (CCN)</a>.
+                            </p>
+                        <a href="index.html" class="challenge-cta">Join the Challenge</a>
+                    </div>
                 </div>
             </div>
 
+            <!-- Past Challenges Section -->
+            <div class="past-challenges">
+                <h3>Past Challenges</h3>
+                <div class="past-challenges-grid">
+                    
+                    <!-- 2023 Challenge -->
+                    <div class="past-challenge-card">
+                        <div class="past-challenge-image">
+                            <img src="img/index_background_compressedv2.jpg" alt="Algonauts 2023 Challenge" class="filter-me-2023">
+                        </div>
+                        <div class="past-challenge-content">
+                            <div class="past-challenge-title-container">
+                                <h4>The Algonauts Project 2023 Challenge: How the Human Brain Makes Sense of Natural Scenes</h4>
+                            </div>
+                            <div class="past-challenge-description">
+                                <p class="intro-paragraph" style="text-align: justify;">
+                                    The 2023 challenge edition focuses on explaining responses in the human brain as participants perceive complex natural visual
+                                    scenes. Through collaboration with the <a href="https://naturalscenesdataset.org/" class="a-2021">Natural Scenes
+                                        Dataset (NSD)</a> team, this challenge runs on the largest suitable brain
+                                    dataset available, opening new venues for data-hungry modeling. The challenge is organized in partnership with the
+                                    <a href="https://2023.ccneuro.org/" class="a-2021">Conference on Cognitive Computational Neuroscience (CCN)
+                                </p>
+                                <a href="2023/index.html" class="past-challenge-link">Explore 2023 Challenge</a>
+                            </div>
+                        </div>
+                    </div>
 
+                    <!-- 2021 Challenge -->
+                    <div class="past-challenge-card">
+                        <div class="past-challenge-image">
+                            <img src="img/index_background_compressedv2.jpg" alt="Algonauts 2021 Challenge" class="filter-me">>
+                        </div>
+                        <div class="past-challenge-content">
+                            <div class="past-challenge-title-container">
+                                <h4>The Algonauts Project 2021 Challenge: How the Human Brain Makes Sense of a World in Motion</h4>
+                            </div>
+                            <div class="past-challenge-description">
+                                <p class="intro-paragraph" style="text-align: justify;">
+                                    The 2021 challenge edition was centered around video perception and event understanding. The challenge focused on explaining
+                                    responses in the human brain as subjects watched short video clips of everyday events.
+                                </p>
+                                <a href="2021/index.html" class="past-challenge-link">Explore 2021 Challenge</a>
+                            </div>
+                        </div>
+                    </div>
 
+                    <!-- 2019 Challenge -->
+                    <div class="past-challenge-card">
+                        <div class="past-challenge-image">
+                            <img src="img/index_background_compressedv2.jpg" alt="Algonauts 2019 Challenge">
+                        </div>
+                        <div class="past-challenge-content">
+                            <div class="past-challenge-title-container">
+                                <h4>The Algonauts Project 2019 Challenge: Explaining the Human Visual Brain</h4>
+                            </div>
+                            <div class="past-challenge-description">
+                                <p class="intro-paragraph" style="text-align: justify;">
+                                The first challenge edition focused on explaining brain responses as human subjects studied still images of everyday objects.
+                            </p>
+                                <a href="2019/index.html" class="past-challenge-link">Explore 2019 Challenge</a>
+                            </div>
+                        </div>
+                    </div>
 
-            <div class="row content-flex-wrap wow fadeInUp" style="margin-top: 1em;">
-                <div class="col-xs-12 col-md-4 img-align">
-                    <a href="index.html" class="a-2021">
-                        <img src="img/2024/algonauts_2025_banner_plain.png" style="max-width: 100%; opacity: 0.9">
-                    </a>
-                </div>
-                <div class="col-xs-12 col-md-8">
-                    <h3><a href="index.html" class="a-2021">The Algonauts Project 2025 Challenge: How the Human Brain Makes Sense of Multimodal Movies</a>   <a href="index.html" class="a-2021"><img src="img/live.png" style="height: 0.7em; width: auto"></a></h3>
-                    <p class="intro-paragraph" style="text-align: justify;">
-                        The 2025 challenge edition focuses on explaining responses in the human brain as participants perceive complex multimodal movies. 
-                        Through collaboration with the <a href="https://www.cneuromod.ca/" class="a-2021" target="_blank">Courtois Project on Neuronal Modelling (CNeuroMod)</a>, 
-                        the challenge runs on the largest human brain dataset available, opening new venues for accurate models of 
-                        neural responses to multimodal naturalistic stimulation. To promote more robust models of the brain, 
-                        the 2025 challenge features a selection process based on out-of-distribution generalization. 
-                        The challenge is organized in partnership with the <a href="https://ccneuro.org/" class="a-2021" target="_blank">Conference on Cognitive Computational Neuroscience (CCN)</a>.
-                    </p>
-                </div>
-            </div>
-
-
-
-            <div class="row content-flex-wrap wow fadeInUp" style="margin-top: 5em;">
-                <div class="col-xs-12 col-md-4 img-align">
-                    <a href="2023/index.html" class="a-2021">
-                        <img src="img/index_background_compressedv2.jpg" style="max-width: 100%; opacity: 0.9" class="filter-me-2023">
-                    </a>
-                </div>
-                <div class="col-xs-12 col-md-8">
-                    <h3><a href="2023/index.html" class="a-2021">The Algonauts Project 2023 Challenge: How the Human Brain Makes Sense of Natural Scenes</a></h3>
-                    <p class="intro-paragraph" style="text-align: justify;">
-                        The 2023 challenge edition focuses on explaining responses in the human brain as participants perceive complex natural visual
-                        scenes. Through collaboration with the <a href="https://naturalscenesdataset.org/" class="a-2021">Natural Scenes
-                            Dataset (NSD)</a> team, this challenge runs on the largest suitable brain
-                        dataset available, opening new venues for data-hungry modeling. The challenge is organized in partnership with the
-                        <a href="https://2023.ccneuro.org/" class="a-2021">Conference on Cognitive Computational Neuroscience (CCN)
-                    </p>
-                </div>
-            </div>
-            
-
-
-
-            <div class="row content-flex-wrap wow fadeInUp" style="margin-top: 5em;">
-                <div class="col-xs-12 col-md-4 img-align">
-                    <a href="2021/index.html" class="a-2021">
-                        <img src="img/index_background_compressedv2.jpg" style="max-width: 100%; opacity: 0.9" class="filter-me">
-                    </a>
-                </div>
-                <div class="col-xs-12 col-md-8">
-                    <h3><a href="2021/index.html" class="a-2021">The Algonauts Project 2021 Challenge: How the Human Brain Makes Sense of a World in Motion</a></h3>
-                    <p class="intro-paragraph" style="text-align: justify;">
-                        The 2021 challenge edition was centered around video perception and event understanding. The challenge focused on explaining
-                        responses in the human brain as subjects watched short video clips of everyday events.
-                    </p>
-                </div>
-            </div>
-
-            <div class="row content-flex-wrap wow fadeInUp" style="margin-top: 5em; margin-bottom: 3em;">
-                <div class="col-xs-12 col-md-4 img-align">
-                    <a href="2019/index.html" class="a-2021"><img src="img/index_background_compressedv2.jpg" style="max-width: 100%; opacity: 0.9"></a>
-                </div>
-                <div class="col-xs-12 col-md-8">
-                    <h3><a href="2019/index.html" class="a-2021">The Algonauts Project 2019 Challange: Explaining the Human Visual Brain</a></h3>
-                    <p class="intro-paragraph" style="text-align: justify;">
-                        The first challenge edition focused on explaining brain responses as human subjects studied still images of everyday objects.
-                    </p>
                 </div>
             </div>
         </div>
