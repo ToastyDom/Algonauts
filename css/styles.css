@@ -4021,6 +4021,172 @@ html {
 }
 
 
+
+/* ==========================================================================
+   INDEX PAGE NAVIGATION - Transparent at top, dark when scrolled
+   ========================================================================== */
+.index-nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: transparent; /* Transparent at top */
+    backdrop-filter: none;
+    z-index: 1000;
+    padding: 1rem 0;
+    transition: all 0.3s ease;
+    border-bottom: none;
+}
+
+.index-nav-scrolled {
+    background: rgba(45, 55, 72, 0.95) !important; /* Dark background when scrolled */
+    backdrop-filter: blur(10px);
+    box-shadow: (0 2px 20px rgba0, 0, 0, 0.3);
+    border-bottom: none;
+}
+
+/* Logo styling for index nav */
+.index-nav .landing-logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #ffffff; /* White text */
+    text-decoration: none;
+}
+
+.index-nav .landing-logo img {
+    height: 40px;
+    width: auto;
+    content: url('../img/2024/logo_icon_dark.png'); /* Use dark logo for better contrast */
+}
+
+/* Navigation links are white by default */
+.index-nav .landing-nav-links a {
+    color: #e2e8f0; /* Light gray-white for good contrast */
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.index-nav .landing-nav-links a:hover {
+    color: #a855f7; /* Purple hover effect */
+}
+
+/* When scrolled, maintain white links */
+.index-nav-scrolled .landing-nav-links a {
+    color: white;
+}
+
+.index-nav-scrolled .landing-nav-links a:hover {
+    color: #8055bd; /* Original purple hover */
+}
+
+/* Mobile hamburger for index nav */
+.index-nav .landing-nav-toggle span {
+    background: #ffffff; /* White hamburger lines */
+}
+
+.index-nav-scrolled .landing-nav-toggle span {
+    background: #ffffff;
+}
+
+.index-nav .landing-nav-toggle.landing-active span {
+    background: #ffffff;
+}
+
+.index-nav .landing-nav-toggle.landing-active span:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+    background: #ffffff;
+}
+
+.index-nav .landing-nav-toggle.landing-active span:nth-child(2) {
+    opacity: 0;
+}
+
+.index-nav .landing-nav-toggle.landing-active span:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+    background: #ffffff;
+}
+
+/* Mobile overlay for index nav */
+.index-nav .landing-nav-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(15, 3, 25, 0.98);
+    z-index: 2000;
+}
+
+.index-nav .landing-nav-overlay.landing-open {
+    display: block;
+}
+
+.index-nav .landing-overlay-nav {
+    position: absolute;
+    top: 100px;
+    left: 0;
+    right: 0;
+    padding: 2rem;
+    background: rgba(15, 3, 25, 0.98);
+}
+
+.index-nav .landing-overlay-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.index-nav .landing-overlay-nav ul li {
+    margin: 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.index-nav .landing-overlay-nav ul li:last-child {
+    border-bottom: none;
+}
+
+.index-nav .landing-overlay-nav ul li a {
+    color: #ffffff;
+    font-size: 1.5rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: block;
+    padding: 1.5rem 2rem;
+    background: transparent;
+}
+
+.index-nav .landing-overlay-nav ul li a:hover {
+    background: rgba(168, 85, 247, 0.3);
+    transform: translateX(10px);
+}
+
+/* Mobile responsive for index nav */
+@media (max-width: 768px) {
+    .index-nav .landing-nav-links {
+        display: none;
+    }
+    
+    .index-nav .landing-nav-toggle {
+        display: flex;
+    }
+}
+
+/* Force Inter font for index navigation only */
+.index-nav {
+    font-family: 'Inter', sans-serif;
+}
+
+.index-nav * {
+    font-family: inherit;
+}
+
+
 /* ==========================================================================
    ICON FONT
    ========================================================================== */

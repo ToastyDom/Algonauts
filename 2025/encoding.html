@@ -78,55 +78,46 @@
     
 
 
-        <body class="with-nav-text">
-            <section class="navigation">
-                <header>
-                    <div class="header-content">
-                        <div class="nav-brand">
-                            <a href="index.html">
-                                <img src="../img/2024/logo_icon_dark.png" alt="Algonauts Logo" class="nav-logo-img">
-                            </a>
-                            <div class="nav-text">
-                                <a href="index.html">The Algonauts Project</a>
-                            </div>
-                        </div>     
-                        <div class="header-nav navbar-right">
-                            <nav>
-                                <ul class="primary-nav">
-                                    <li><a href="index.html#about">About</a></li>
-                                    <li><a href="challenge.html">Challenge</a></li>
-                                    <li><a href="braindata.html">Brain Data</a></li>
-                                    <li><a href="encoding.html">Encoding Models</a></li>
-                                    <li><a href="index.html#cite">Papers</a></li>
-                                    <li><a href="index.html#team">Team</a></li>
-                                    <li><a href="index.html#contact">Contact</a></li>
-                                    <li><a href="archive.html">Archive</a></li>
-                                </ul>
-                            </nav>
-                        </div>
-                        <div class="nav-overlay">
-                            <nav class="overlay-nav">
-                                <ul>
-                                    <li><a href="index.html#about">About</a></li>
-                                    <li><a href="challenge.html">Challenge</a></li>
-                                    <li><a href="braindata.html">Brain Data</a></li>
-                                    <li><a href="encoding.html">Encoding Models</a></li>
-                                    <li><a href="index.html#cite">Papers</a></li>
-                                    <li><a href="index.html#team">Team</a></li>
-                                    <li><a href="index.html#contact">Contact</a></li>
-                                    <li><a href="archive.html">Archive</a></li>
-                                </ul>
-                            </nav>
-                        </div>
-                        <div class="navicon">
-                            <a class="nav-toggle" href="#">
-                                <span></span>
-                            </a>
-                        </div>
-                    </div>
-                </header>
-            </section>
-        </body>
+        <!-- Navigation -->
+        <nav class="index-nav" id="index-navbar">
+            <div class="landing-nav-container">
+                <a href="../index.html" class="landing-logo">
+                    <img src="../img/2024/logo_icon_dark.png" alt="Algonauts Logo">
+                    The Algonauts Project
+                </a>
+                <ul class="landing-nav-links">
+                    <li><a href="index.html">About</a></li>
+                    <li><a href="challenge.html">Challenge</a></li>
+                    <li><a href="braindata.html">Brain Data</a></li>
+                    <li><a href="encoding.html">Encoding</a></li>
+                    <li><a href="index.html#cite">Papers</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                    <li><a href="index.html#team">Team</a></li>
+                    <li><a href="archive.html">Archive</a></li>
+                </ul>
+                <div class="landing-nav-toggle" id="index-nav-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+            
+            <!-- Mobile overlay -->
+            <div class="landing-nav-overlay" id="index-nav-overlay">
+                <div class="landing-overlay-nav">
+                    <ul>
+                        <li><a href="index.html">About</a></li>
+                        <li><a href="challenge.html">Challenge</a></li>
+                        <li><a href="braindata.html">Brain Data</a></li>
+                        <li><a href="encoding.html">Encoding</a></li>
+                        <li><a href="index.html#cite">Papers</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
+                        <li><a href="index.html#team">Team</a></li>
+                        <li><a href="archive.html">Archive</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
 
         <section class="challenge intro-section-padding">
             <div class="container">
@@ -262,44 +253,59 @@
     <script src="node_modules/angular-messages/angular-messages.min.js"></script>
     <script src="js/ng/src/app.js"></script>
     <script src="js/ng/src/controller.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const navToggle = document.querySelector('.nav-toggle');
-            const navOverlay = document.querySelector('.nav-overlay');
-            const navLinks = document.querySelectorAll('.overlay-nav ul li a');
+<script>
+// Navbar scroll effect for index page
+window.addEventListener('scroll', function() {
+    const navbar = document.getElementById('index-navbar');
+    if (window.scrollY > 50) {
+        navbar.classList.add('index-nav-scrolled');
+    } else {
+        navbar.classList.remove('index-nav-scrolled');
+    }
+});
 
-            // Toggle the overlay when hamburger menu is clicked
-            navToggle.addEventListener('click', function (event) {
-                event.preventDefault();
-                navOverlay.classList.toggle('open');
-                navToggle.classList.toggle('active');
-            });
+// Mobile navigation toggle for index page
+document.addEventListener('DOMContentLoaded', function() {
+    const navToggle = document.getElementById('index-nav-toggle');
+    const navOverlay = document.getElementById('index-nav-overlay');
+    const overlayLinks = document.querySelectorAll('.index-nav .landing-overlay-nav a');
 
-            // Close the overlay when a navigation link is clicked
-            navLinks.forEach(function (link) {
-                link.addEventListener('click', function () {
-                    navOverlay.classList.remove('open');
-                    navToggle.classList.remove('active');
-                });
-            });
+    function toggleMenu() {
+        navOverlay.classList.toggle('landing-open');
+        navToggle.classList.toggle('landing-active');
+    }
+
+    if (navToggle) {
+        navToggle.addEventListener('click', toggleMenu);
+    }
+
+    // Close overlay when clicking on a link
+    overlayLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            navOverlay.classList.remove('landing-open');
+            navToggle.classList.remove('landing-active');
         });
-    </script>
-    <script>
-        // Scroll event listener to toggle 'nav-scrolled' class
-        // Add 'nav-scrolled' when the user scrolls beyond the hero section
-        window.addEventListener('scroll', function() {
-            const header = document.querySelector('header');
-            const heroSection = document.querySelector('.hero-video-container');
-            const heroHeight = heroSection.offsetHeight;
+    });
 
-            if (window.scrollY > heroHeight - 100) {
-                header.classList.add('nav-scrolled');
-            } else {
-                header.classList.remove('nav-scrolled');
+    // Close overlay when clicking outside
+    if (navOverlay) {
+        navOverlay.addEventListener('click', function(e) {
+            if (e.target === navOverlay) {
+                navOverlay.classList.remove('landing-open');
+                navToggle.classList.remove('landing-active');
             }
         });
+    }
 
-    </script>
+    // Close overlay with escape key
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && navOverlay && navOverlay.classList.contains('landing-open')) {
+            navOverlay.classList.remove('landing-open');
+            navToggle.classList.remove('landing-active');
+        }
+    });
+});
+</script>
     <script> function externalLinks() { for (var c = document.getElementsByTagName("a"), a = 0; a < c.length; a++) { var b = c[a]; b.getAttribute("href") && b.hostname !== location.hostname && (b.target = "_blank") } }; externalLinks();</script>
 </body>
 
