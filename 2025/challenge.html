@@ -18,15 +18,15 @@
     <meta name="description" content="Challenge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="author" content="Alex Lascelles">
-    <link rel="icon" id="favicon" type="image/png" href="img/2024/logo_icon_light.png" sizes="32x32" />
-    <link rel="stylesheet" href="css/normalize.min.css">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/jquery.fancybox.css">
-    <link rel="stylesheet" href="css/flexslider.css">
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/angulargrid.css">
-    <link rel="stylesheet" href="css/queries.css">
-    <link rel="stylesheet" href="css/etline-font.css">
+    <link rel="icon" id="favicon" type="image/png" href="../img/2024/logo_icon_light.png" sizes="32x32" />
+    <link rel="stylesheet" href="../css/normalize.min.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/jquery.fancybox.css">
+    <link rel="stylesheet" href="../css/flexslider.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/angulargrid.css">
+    <link rel="stylesheet" href="../css/queries.css">
+    <link rel="stylesheet" href="../css/etline-font.css">
     <link rel="stylesheet" href="node_modules/angular-material/angular-material.min.css">
     <link rel="stylesheet" href="bower_components/animate.css/animate.min.css">
     <link href="https://use.fontawesome.com/releases/v5.0.3/css/all.css" rel="stylesheet">
@@ -44,9 +44,9 @@
             const favicon = document.getElementById('favicon');
             const updateFavicon = () => {
                 if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-                    favicon.href = 'img/2024/logo_icon_dark.png';
+                    favicon.href = '../img/2024/logo_icon_dark.png';
                 } else {
-                    favicon.href = 'img/2024/logo_icon_light.png';
+                    favicon.href = '../img/2024/logo_icon_light.png';
                 }
             };
 
@@ -62,7 +62,7 @@
 <body id="top" ng-controller="mainCtrl">
     <section class="hero-video-container" style="position: relative;">
         <div class="video-wrapper">
-            <video class="full-screen-video" src="img/2024/movie_banner_mixed2.mp4" autoplay loop muted></video>
+            <video class="full-screen-video" src="../img/2024/movie_banner_mixed2.mp4" autoplay loop muted></video>
             <div class="video-overlay">
                 <h1 style="color: white; font-weight: bold; margin-bottom: 0;">The 2025 Challenge:</h1>
                 <h1 style="font-size: 29px; margin-bottom: 25px; color: white; font-style: italic;">
@@ -79,7 +79,7 @@
                 <div class="header-content">
                     <div class="nav-brand">
                         <a href="index.html">
-                            <img src="img/2024/logo_icon_dark.png" alt="Algonauts Logo" class="nav-logo-img">
+                            <img src="../img/2024/logo_icon_dark.png" alt="Algonauts Logo" class="nav-logo-img">
                         </a>
                         <div class="nav-text">
                             <a href="index.html">The Algonauts Project</a>
@@ -129,7 +129,7 @@
                 <div class="col-md-12">
                     <h2 style="margin-bottom: 1em" id="challenge_overview">Challenge Overview</h2>
                     <div style="vertical-align:middle; text-align:center">
-                        <video src="img/2024/2025_challenge_overview.mp4" style="height: auto; width: auto; max-width: 100%;" autoplay loop muted playsinline>
+                        <video src="../img/2024/2025_challenge_overview.mp4" style="height: auto; width: auto; max-width: 100%;" autoplay loop muted playsinline>
                             Your browser does not support the video tag.
                         </video>
                     </div>    
@@ -188,7 +188,7 @@
                 <div class="col-md-12">
                     <div class="challenge-icon">
                         <span class="icon filter-purple">
-                            <img src="img/trophy3.svg" class="icon" style="height:55px;">
+                            <img src="../img/trophy3.svg" class="icon" style="height:55px;">
                         </span>
                     </div>
                     <h2 style="margin-bottom: 1em">Competition</h2>
@@ -266,7 +266,7 @@
             </div>
             <div class="row justify-content-center text-center" style="margin-top: 2em;">
                 <div class="large-image-container" style="text-align: center;">
-                    <img src="img/2024/figure_2_panel_c.png" alt="Figure 1" class="large-image">
+                    <img src="../img/2024/figure_2_panel_c.png" alt="Figure 1" class="large-image">
                     <p style="font-style: italic; color: #666; font-size: 1.4em; margin-top: 10px;">
                         <b style="font-weight: 600;">Figure 1 | Challenge phases.</b> 
                         During the model building phase, models are trained using stimuli and corresponding fMRI responses for 
@@ -1314,42 +1314,42 @@
             <div class="row content-flex-wrap">
                 <div class="col-xs-12 col-md-4 img-align">
                     <a href="https://mitibmwatsonailab.mit.edu/">
-                        <img class="img-logo-alt" style="height:140px; width:auto"  src="img/logo_mitibm.png">
+                        <img class="img-logo-alt" style="height:140px; width:auto"  src="../img/logo_mitibm.png">
                     </a>
                 </div>
                 <div class="col-xs-12 col-md-4 img-align">
                     <a href="https://erc.europa.eu/homepage">
-                        <img class="img-sponsor" src="img/logo_erc.png">
+                        <img class="img-sponsor" src="../img/logo_erc.png">
                     </a>
                 </div>
                 <div class="col-xs-12 col-md-4 img-align">
                     <a href="https://www.dfg.de/en">
-                        <img class="img-sponsor" style="height:70px" src="img/logo_dfg.jpg">
+                        <img class="img-sponsor" style="height:70px" src="../img/logo_dfg.jpg">
                     </a>
                 </div>
                 <div class="col-xs-12 col-md-4 img-align">
                     <a href="https://hessian.ai/">
-                        <img class="img-sponsor" style="height:70px" src="img/logo_hessian-ai.svg">
+                        <img class="img-sponsor" style="height:70px" src="../img/logo_hessian-ai.svg">
                     </a>
                 </div>
                 <div class="col-xs-12 col-md-4 img-align">
                     <a href="https://www.unique.quebec/">
-                        <img class="img-sponsor" style="height:120px; width:auto" src="img/2024/unique_logo_logo.png">
+                        <img class="img-sponsor" style="height:120px; width:auto" src="../img/2024/unique_logo_logo.png">
                     </a>
                 </div>                
                 <div class="col-xs-12 col-md-4 img-align">
                     <a href="https://2025.ccneuro.org/">
-                        <img class="img-sponsor" style="height:50px" src="img/2024/ccn_logo.png">
+                        <img class="img-sponsor" style="height:50px" src="../img/2024/ccn_logo.png">
                     </a>
                 </div>
                 <div class="col-xs-12 col-md-4 img-align">
                     <a href="https://conp.ca/">
-                        <img class="img-sponsor" style="height:100px" src="img/2024/conp_logo.png">
+                        <img class="img-sponsor" style="height:100px" src="../img/2024/conp_logo.png">
                     </a>
                 </div>
                 <div class="col-xs-12 col-md-4 img-align">
                     <a href="https://criugm.qc.ca/en/">
-                        <img class="img-sponsor" style="height:100px" src="img/2024/CRIUGM_logo.png">
+                        <img class="img-sponsor" style="height:100px" src="../img/2024/CRIUGM_logo.png">
                     </a>
                 </div>
             </div>

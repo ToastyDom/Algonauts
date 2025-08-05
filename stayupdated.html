@@ -1,6 +1,5 @@
 <!doctype html>
-<html ng-app="momentsApp" lang="en">
-
+<html lang="en">
 <head>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-VCQ9D4SNB4"></script>
@@ -16,195 +15,205 @@
     <title>Stay Updated &ndash; The Algonauts Project</title>
     <meta name="description" content="Subscribe to the Algonauts Project newsletter">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="css/normalize.min.css">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/jquery.fancybox.css">
-    <link rel="stylesheet" href="css/flexslider.css">
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/queries.css">
-    <link rel="stylesheet" href="css/etline-font.css">
-    <link rel="stylesheet" href="bower_components/animate.css/animate.min.css">
-    <link href="https://use.fontawesome.com/releases/v5.0.3/css/all.css" rel="stylesheet">
-    <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+    <meta name="author" content="The Algonauts Project">
     <link rel="icon" id="favicon" type="image/png" href="img/2024/logo_icon_light.png" sizes="32x32" />
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const favicon = document.getElementById('favicon');
-            const updateFavicon = () => {
-                if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-                    favicon.href = 'img/2024/logo_icon_dark.png';
-                } else {
-                    favicon.href = 'img/2024/logo_icon_light.png';
-                }
-            };
-
-            // Initial check
-            updateFavicon();
-
-            // Listen for changes in the color scheme
-            window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', updateFavicon);
-        });
-    </script>
+    <link rel="stylesheet" href="css/etline-font.css">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 
-<body id="top" ng-controller="mainCtrl">
-    </section>
-    <section class="hero" style="min-height: 400px;">
+<body class="landing-body">
+
+    <!-- Navigation -->
+    <nav class="landing-nav" id="landing-navbar">
+        <div class="landing-nav-container">
+            <a href="index.html" class="landing-logo">
+                <img src="img/2024/logo_icon_light.png" alt="Algonauts Logo">
+                The Algonauts Project
+            </a>
+            <ul class="landing-nav-links">
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#projects">Initiatives</a></li>
+                <li><a href="index.html#news">News</a></li>
+                <li><a href="index.html#team">Team</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+                <li><a href="stayupdated.html">Stay Updated</a></li>
+            </ul>
+            <div class="landing-nav-toggle" id="landing-nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        
+        <!-- Mobile overlay -->
+        <div class="landing-nav-overlay" id="landing-nav-overlay">
+            <div class="landing-overlay-nav">
+                <ul>
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="index.html#projects">Initiatives</a></li>
+                    <li><a href="index.html#news">News</a></li>
+                    <li><a href="index.html#team">Team</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                    <li><a href="stayupdated.html">Stay Updated</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" style="min-height: 400px; position: relative;">
         <div style="max-height: 750px; position: absolute; top: 0; bottom: 0; width: 100%; height: 100%; background-color: black; overflow: hidden;">
-            <img src="img/2024/algonauts_2025_banner_plain.png" style="width: inherit; opacity: 0.9">
+            <img src="img_AP/geo_banner_smaller.png" style="width: inherit; opacity: 0.9">
         </div>
         <div class="hero-explore-content text-center"
             style="display: flex; justify-content: center; align-items: center; height: 100%; width: 100%; flex-direction: column; padding-top: 0; position: absolute;">
-            <h1 style="margin-bottom: 25px; color: white;"><b>Stay Updated with the Algonauts Project</b></h1>
+            <h1 style="margin-bottom: 2px; margin-top: 60px; color: white; font-weight: bold; font-size: 3rem;">Stay Updated with the <br> Algonauts Project</h1>
+            <p style="color: white; font-size: 1.1rem; margin-top: 15px;">
+                Receive updates on present and future challenges!
+            </p>
         </div>
     </section>
 
-    <body class="with-nav-text">
-        <section class="navigation">
-            <header>
-                <div class="header-content">
-                    <div class="nav-brand">
-                        <a href="index.html">
-                            <img src="img/2024/logo_icon_dark.png" alt="Algonauts Logo" class="nav-logo-img">
-                        </a>
-                        <div class="nav-text">
-                            <a href="index.html">The Algonauts Project</a>
-                        </div>
-                    </div>     
-                    <div class="header-nav navbar-right">
-                        <nav>
-                            <ul class="primary-nav">
-                                <li><a href="index.html#about">About</a></li>
-                                <li><a href="challenge.html">Challenge</a></li>
-                                <li><a href="braindata.html">Brain Data</a></li>
-                                <li><a href="encoding.html">Encoding Models</a></li>
-                                <li><a href="index.html#cite">Papers</a></li>
-                                <li><a href="index.html#team">Team</a></li>
-                                <li><a href="index.html#contact">Contact</a></li>
-                                <li><a href="archive.html">Archive</a></li>
-                            </ul>
-                        </nav>
-                    </div>
-                    <div class="nav-overlay">
-                        <nav class="overlay-nav">
-                            <ul>
-                                <li><a href="index.html#about">About</a></li>
-                                <li><a href="challenge.html">Challenge</a></li>
-                                <li><a href="braindata.html">Brain Data</a></li>
-                                <li><a href="encoding.html">Encoding Models</a></li>
-                                <li><a href="index.html#cite">Papers</a></li>
-                                <li><a href="index.html#team">Team</a></li>
-                                <li><a href="index.html#contact">Contact</a></li>
-                                <li><a href="archive.html">Archive</a></li>
-                            </ul>
-                        </nav>
-                    </div>
-                    <div class="navicon">
-                        <a class="nav-toggle" href="#">
-                            <span></span>
-                        </a>
-                    </div>
-                </div>
-            </header>
-        </section>
-    </body>
-
+    <!-- Newsletter Section -->
     <section class="challenge intro-section-padding">
         <div class="container">
             <div class="newsletter-form-container" style="text-align: center; margin: 2em auto;">
-                <h2 style="text-align: center;">Sign Up to join our mailing list</h2>
-                <p style="text-align: center; font-size: 18px; margin-bottom: 1em;">
+                <h2 style="text-align: center;">Join Our Mailing List</h2>
+                <p style="text-align: center; font-size: 18px; margin-bottom: 1em; color: #666;">
                     Receive updates on the Algonauts Project, including present and future challenges!
                 </p>
-                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSckFheQH88lZ5q_WxoAwn2WJs_nVs7NhITD7ZBsmSGFAuD2-Q/viewform?embedded=true" 
-                        width="100%" height="700" frameborder="0" marginheight="0" marginwidth="0" style="max-width: 1100px; border: none;">
-                    Loading…
-                </iframe>
-            </div>
-            <p style="text-align: center; font-size: 18px; margin-top: 0em;">
-                You can also follow us on <a href="https://bsky.app/profile/algonautsproject.bsky.social" target="_blank" style="color: #007bff; text-decoration: underline;">Bluesky</a> or 
-                <a href="https://x.com/AlgonautsProj" target="_blank" style="color: #007bff; text-decoration: underline;">X</a>.
-            </p>
-            <div class="social-media-logos" style="text-align: center; margin-top: 20px;">
-                <div style="display: inline-block; margin-right: 15px;">
-                    <a href="https://bsky.app/profile/algonautsproject.bsky.social" target="_blank">
-                        <img src="img/2024/bluesky_logo.png" alt="Bluesky Logo" style="height: 50px;">
-                    </a>
-                    <p style="margin: 5px 0 0; font-size: 14px; color: #444;">Bluesky</p>
+
+                <div style="margin: 3em 0;">
+                    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSckFheQH88lZ5q_WxoAwn2WJs_nVs7NhITD7ZBsmSGFAuD2-Q/viewform?embedded=true" 
+                            width="100%" height="700" frameborder="0" marginheight="0" marginwidth="0" 
+                            style="max-width: 1100px; border: none;">
+                        Loading…
+                    </iframe>
                 </div>
-                <div style="display: inline-block;">
-                    <a href="https://x.com/AlgonautsProj" target="_blank">
-                        <img src="img/2024/x_logo.png" alt="X Logo" style="height: 50px;">
-                    </a>
-                    <p style="margin: 5px 0 0; font-size: 14px; color: #444;">X</p>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <footer style="padding: 10px 0;">
-        <div class="container" style="text-align: center;">
-            <div class="row">
-                <div class="col-md-7" style="margin: 0 auto;">
-                    <div class="footer-links">
-                        <p style="margin: 0; padding: 0; line-height: normal; font-size: 14px; color: rgb(172, 177, 180); white-space: nowrap;">
-                            Copyright © The Algonauts Project
-                        </p>
+
+                <p style="text-align: center; margin-top: 2em;">
+                    You can also follow us on social media:
+                </p>
+                <div class="social-media-logos" style="text-align: center; margin-top: 20px;">
+                    <div style="display: inline-block; margin-right: 15px;">
+                        <a href="https://bsky.app/profile/algonautsproject.bsky.social" target="_blank">
+                            <img src="img/2024/bluesky_logo.png" alt="Bluesky Logo" style="height: 50px;">
+                        </a>
+                        <p style="margin: 5px 0 0; font-size: 14px; color: #444;">Bluesky</p>
+                    </div>
+                    <div style="display: inline-block;">
+                        <a href="https://x.com/AlgonautsProj" target="_blank">
+                            <img src="img/2024/x_logo.png" alt="X Logo" style="height: 50px;">
+                        </a>
+                        <p style="margin: 5px 0 0; font-size: 14px; color: #444;">X</p>
                     </div>
                 </div>
             </div>
         </div>
-    </footer>
+    </section>
 
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <!-- Footer -->
+    <!-- Footer -->
+        <footer class="landing-footer">
+            <div class="landing-container">
+                <p>&copy; 2025 The Algonauts Project. All rights reserved.</p>
+            </div>
+        </footer>
+
     <script>
-        window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')
-    </script>
-    <script src="js/jquery.fancybox.pack.js"></script>
-    <script src="js/vendor/bootstrap.min.js"></script>
-    <script src="js/vendor/wow.min.js"></script>
-    <script src="js/scripts.js"></script>
-    <script src="js/jquery.flexslider-min.js"></script>
-    <script src="bower_components/classie/classie.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const navToggle = document.querySelector('.nav-toggle');
-            const navOverlay = document.querySelector('.nav-overlay');
-            const navLinks = document.querySelectorAll('.overlay-nav ul li a');
+    // Navbar scroll effect
+    window.addEventListener('scroll', function() {
+        const navbar = document.getElementById('landing-navbar');
+        if (window.scrollY > 50) {
+            navbar.classList.add('landing-nav-scrolled');
+        } else {
+            navbar.classList.remove('landing-nav-scrolled');
+        }
+    });
 
-            // Toggle the overlay when hamburger menu is clicked
-            navToggle.addEventListener('click', function (event) {
-                event.preventDefault();
-                navOverlay.classList.toggle('open');
-                navToggle.classList.toggle('active');
-            });
+    // Fade in animation
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
 
-            // Close the overlay when a navigation link is clicked
-            navLinks.forEach(function (link) {
-                link.addEventListener('click', function () {
-                    navOverlay.classList.remove('open');
-                    navToggle.classList.remove('active');
+    const observer = new IntersectionObserver(function(entries) {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('landing-visible');
+            }
+        });
+    }, observerOptions);
+
+    document.querySelectorAll('.landing-fade-in').forEach(el => {
+        observer.observe(el);
+    });
+
+    // Smooth scrolling for navigation links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({
+                    behavior: 'smooth'
                 });
+            }
+        });
+    });
+
+    // Dynamic favicon based on color scheme
+    document.addEventListener('DOMContentLoaded', () => {
+        const favicon = document.getElementById('favicon');
+        const updateFavicon = () => {
+            if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                favicon.href = 'img/2024/logo_icon_dark.png';
+            } else {
+                favicon.href = 'img/2024/logo_icon_light.png';
+            }
+        };
+
+        updateFavicon();
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', updateFavicon);
+    });
+
+    // Mobile navigation toggle
+    document.addEventListener('DOMContentLoaded', function() {
+        const navToggle = document.getElementById('landing-nav-toggle');
+        const navOverlay = document.getElementById('landing-nav-overlay');
+        const overlayLinks = document.querySelectorAll('.landing-overlay-nav a');
+
+        function toggleMenu() {
+            navOverlay.classList.toggle('landing-open');
+            navToggle.classList.toggle('landing-active');
+        }
+
+        navToggle.addEventListener('click', toggleMenu);
+
+        // Close overlay when clicking on a link
+        overlayLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                navOverlay.classList.remove('landing-open');
+                navToggle.classList.remove('landing-active');
             });
         });
-    </script>
-    <script>
-        // Scroll event listener to toggle 'nav-scrolled' class
-        // Add 'nav-scrolled' when the user scrolls beyond the hero section
-        window.addEventListener('scroll', function() {
-            const header = document.querySelector('header');
-            const heroSection = document.querySelector('.hero-video-container');
-            const heroHeight = heroSection.offsetHeight;
 
-            if (window.scrollY > heroHeight - 100) {
-                header.classList.add('nav-scrolled');
-            } else {
-                header.classList.remove('nav-scrolled');
+        // Close overlay when clicking the close button or outside
+        navOverlay.addEventListener('click', function(e) {
+            if (e.target === navOverlay || e.target.textContent === '×') {
+                navOverlay.classList.remove('landing-open');
+                navToggle.classList.remove('landing-active');
             }
         });
 
+        // Close overlay with escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && navOverlay.classList.contains('landing-open')) {
+                navOverlay.classList.remove('landing-open');
+                navToggle.classList.remove('landing-active');
+            }
+        });
+    });
     </script>
-    <script src="bower_components/jquery-waypoints/lib/jquery.waypoints.min.js"></script>
 </body>
-
 </html>

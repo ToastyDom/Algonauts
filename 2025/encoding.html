@@ -18,15 +18,15 @@
     <meta name="description" content="Challenge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="author" content="Alex Lascelles">
-    <link rel="icon" id="favicon" type="image/png" href="img/2024/logo_icon_light.png" sizes="32x32" />
-    <link rel="stylesheet" href="css/normalize.min.css">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/jquery.fancybox.css">
-    <link rel="stylesheet" href="css/flexslider.css">
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/angulargrid.css">
-    <link rel="stylesheet" href="css/queries.css">
-    <link rel="stylesheet" href="css/etline-font.css">
+    <link rel="icon" id="favicon" type="image/png" href="../img/2024/logo_icon_light.png" sizes="32x32" />
+    <link rel="stylesheet" href="../css/normalize.min.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/jquery.fancybox.css">
+    <link rel="stylesheet" href="../css/flexslider.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/angulargrid.css">
+    <link rel="stylesheet" href="../css/queries.css">
+    <link rel="stylesheet" href="../css/etline-font.css">
     <link rel="stylesheet" href="node_modules/angular-material/angular-material.min.css">
     <link href="https://use.fontawesome.com/releases/v5.0.3/css/all.css" rel="stylesheet">
     <link rel="stylesheet" href="bower_components/animate.css/animate.min.css">
@@ -44,9 +44,9 @@
             const favicon = document.getElementById('favicon');
             const updateFavicon = () => {
                 if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-                    favicon.href = 'img/2024/logo_icon_dark.png';
+                    favicon.href = '../img/2024/logo_icon_dark.png';
                 } else {
-                    favicon.href = 'img/2024/logo_icon_light.png';
+                    favicon.href = '../img/2024/logo_icon_light.png';
                 }
             };
 
@@ -64,7 +64,7 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="video-wrapper col-12">
-                    <video class="full-screen-video" src="img/2024/movie_banner_mixed2.mp4" autoplay loop muted></video>
+                    <video class="full-screen-video" src="../img/2024/movie_banner_mixed2.mp4" autoplay loop muted></video>
                     <div class="video-overlay text-center">
                         <h1 style="color: white; font-weight: bold; margin-bottom: 0;">Encoding Models</h1>
                         <h1 style="font-size: 29px; margin-bottom: 25px; color: white; font-style: italic;">
@@ -84,7 +84,7 @@
                     <div class="header-content">
                         <div class="nav-brand">
                             <a href="index.html">
-                                <img src="img/2024/logo_icon_dark.png" alt="Algonauts Logo" class="nav-logo-img">
+                                <img src="../img/2024/logo_icon_dark.png" alt="Algonauts Logo" class="nav-logo-img">
                             </a>
                             <div class="nav-text">
                                 <a href="index.html">The Algonauts Project</a>
@@ -152,7 +152,7 @@
                     <div class="container">
                         <div class="row wow fadeInUp centered-content">
                             <div class="col-lg-8 col-md-10 col-sm-12 mx-auto">
-                            <img src="img/2024/linearizing_encoding_algorithm.png" alt="Figure 1" class="img-fluid fitted-image">
+                            <img src="../img/2024/linearizing_encoding_algorithm.png" alt="Figure 1" class="img-fluid fitted-image">
                             <p style="font-style: italic; color: #666; margin-top: 10px; font-size: 1.4em; text-align: center;"><b style="font-weight: 600;">Figure 1 | Linearizing encoding approach.</b>  <b style="font-weight: 600;">a)</b> First, we use a computational 
                                 model to extract the visual, audio and language features for the training movie stimuli. 
                                 <b style="font-weight: 600;">b)</b> Next, we  train a linear mapping (via regression) between these stimulus features and the
