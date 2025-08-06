@@ -4021,10 +4021,9 @@ html {
 }
 
 
-
 /* ==========================================================================
-   INDEX PAGE NAVIGATION - Transparent at top, dark when scrolled
-   ========================================================================== */
+ INDEX PAGE NAVIGATION - Transparent at top, dark when scrolled
+ ========================================================================== */
 .index-nav {
     position: fixed;
     top: 0;
@@ -4040,7 +4039,7 @@ html {
 .index-nav-scrolled {
     background: rgba(45, 55, 72, 0.95) !important; /* Dark background when scrolled */
     backdrop-filter: blur(10px);
-    box-shadow: (0 2px 20px rgba0, 0, 0, 0.3);
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
     border-bottom: none;
 }
 
@@ -4049,23 +4048,24 @@ html {
     display: flex;
     align-items: center;
     gap: 12px;
-    font-size: 1.5rem;
+    font-size: 2.3rem; /* Increased from 1.5rem */
     font-weight: 600;
     color: #ffffff; /* White text */
     text-decoration: none;
 }
 
 .index-nav .landing-logo img {
-    height: 40px;
+    height: 45px; /* Slightly increased to match larger text */
     width: auto;
     content: url('../img/2024/logo_icon_dark.png'); /* Use dark logo for better contrast */
 }
 
-/* Navigation links are white by default */
+/* Navigation links with increased font size */
 .index-nav .landing-nav-links a {
     color: #e2e8f0; /* Light gray-white for good contrast */
     text-decoration: none;
     font-weight: 500;
+    font-size: 1.5rem; /* Added explicit font size - increase this value for larger text */
     transition: color 0.3s ease;
 }
 
@@ -4076,6 +4076,7 @@ html {
 /* When scrolled, maintain white links */
 .index-nav-scrolled .landing-nav-links a {
     color: white;
+    font-size: 1.1rem; /* Ensure consistent size when scrolled */
 }
 
 .index-nav-scrolled .landing-nav-links a:hover {
@@ -4153,7 +4154,7 @@ html {
 
 .index-nav .landing-overlay-nav ul li a {
     color: #ffffff;
-    font-size: 1.5rem;
+    font-size: 1.6rem; /* Increased mobile overlay font size */
     text-decoration: none;
     transition: all 0.3s ease;
     display: block;
@@ -4171,7 +4172,6 @@ html {
     .index-nav .landing-nav-links {
         display: none;
     }
-    
     .index-nav .landing-nav-toggle {
         display: flex;
     }
