@@ -3209,11 +3209,11 @@ body:not(.index-page):not(.landing-body) {
 
 .landing-hero-logo {
     text-align: center;
-    margin-bottom: -4.5rem;
+    margin-bottom: 1.5rem;
 }
 
 .landing-hero-logo img {
-    height: 600px;
+    height: 400px;
     width: auto;
     filter: drop-shadow(0 4px 20px rgba(0, 0, 0, 0.3));
     transition: transform 0.3s ease;
@@ -4228,6 +4228,106 @@ html {
     -moz-osx-font-smoothing: grayscale;
     display: inline-block;
 }
+
+
+/* Simple fix for logo click when scrolled */
+.landing-nav-scrolled .landing-logo {
+    z-index: 1001;
+    position: relative;
+}
+
+.landing-nav-scrolled .landing-logo:hover {
+    color: rgb(172, 50, 74); /* Custom hover color when scrolled */
+}
+
+
+/* Simple fix for logo click when scrolled */
+.landing-nav-scrolled .landing-logo {
+    z-index: 1001;
+    position: relative;
+}
+
+.landing-nav-scrolled .landing-logo:hover {
+    color: rgb(172, 50, 74); /* Custom hover color when scrolled */
+}
+
+
+.intro-icon {
+    display: inline-block;
+    vertical-align: top;
+    padding: 6px 0 0 0;
+    margin-right: 10px; /* Keep your original margin */
+    width: 40px;
+}
+
+/* Move just the image inside the icon container */
+.intro-icon img {
+    margin-left: 75px !important; /* Adjust this value as needed */
+}
+
+/* Move just the font icon inside the icon container */
+.intro-icon [data-icon]:before {
+    margin-left: 75px !important; /* Adjust this value as needed */
+}
+
+
+/* Make sure the intro-feature containers are flex containers with equal heights */
+.intro-feature {
+    display: flex !important;
+    flex-direction: column !important;
+    height: 100% !important;
+}
+
+/* Make the intro-content a flex container */
+.intro-content {
+    display: flex !important;
+    flex-direction: column !important;
+    flex-grow: 1 !important;
+    height: 100% !important;
+}
+
+/* Give titles a fixed height so they all take up the same space, but align text to TOP */
+.intro-content h5 {
+    text-align: center !important;
+    height: 60px !important; /* Fixed height for consistent spacing */
+    display: flex !important;
+    align-items: flex-start !important; /* Align to TOP, not center */
+    justify-content: center !important; /* Still center horizontally */
+    margin-bottom: 20px !important;
+    line-height: 1.2 !important;
+}
+
+/* Make paragraphs fill remaining space and start at same height */
+.intro-content p {
+    text-align: justify !important;
+    flex-grow: 1 !important;
+    margin-top: 0 !important;
+}
+
+/* Ensure the row container uses flexbox properly */
+.row {
+    display: flex !important;
+    align-items: stretch !important;
+}
+
+/* Specific fix for the image icon column */
+.intro-feature:first-child .intro-icon {
+    margin-bottom: 0 !important; /* Remove any extra bottom margin */
+    padding-bottom: 0 !important; /* Remove any extra bottom padding */
+    height: auto !important; /* Let it adjust naturally */
+}
+
+.intro-feature:first-child .intro-icon img {
+    margin-bottom: -9px !important; /* Remove any extra space below image */
+    vertical-align: top !important; /* Align to top */
+}
+
+
+/* OR, if the above doesn't work, try adjusting the intro-content positioning for the first column */
+.intro-feature:first-child .intro-content {
+    margin-top: 25px !important; /* Nudge up by 5px - adjust as needed */
+}
+
 
 /* Icon Content */
 .icon-mobile:before { content: "\e000"; }

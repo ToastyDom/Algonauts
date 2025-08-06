@@ -197,8 +197,8 @@
                         participants will devise computational models which predict brain activity, which will be used to predict the brain activity for a brand new set of images.
                     </p>
   
+                    <!-- First row for TRACK 1 content -->
                     <div class="row">
-                        <!-- TRACK 1 (fMRI) -->
                         <div class="col-md-12 intro-feature" style="margin-bottom: 1em">
                             <div class="challenge-icon">
                                 <span class="icon">
@@ -218,30 +218,32 @@
                                     <li> <i>Test</i> Image Set: 78 images.</li>
                                 </ul>
                                 <br>
-
                             </div>
                         </div>
-                        
+                    </div>
 
-                        <h3 style="margin-bottom: 1em; margin-top: 1em; text-align:center" id="Track1Leaderboard_challenge">Track 1 <b>Challenge Test Set</b> Leaderboard (<a href="leaderboard_fmri.html">see detailed table</a>)</h3>
-                        <div style="overflow-x:auto;">
-                            <table class="tables-ll">
-                                <tr>
-                                    <th></th>
-                                    <th></th>
-                                    <th class="table-ll-headers">EVC</th>
-                                    <th class="table-ll-headers">IT</th>
-                                    <th class="table-ll-headers">Score</th>
-                                </tr>
-                                <tr>
-                                    <th class="table-ll-headers-2" style="border-left: 0px;">Rank</th>
-                                    <th class="table-ll-headers-2">Team Name</th>
-                                    <th class="table-ll-headers-2">Noise Normalized R<sup>2</sup> (%)</th>
-                                    <th class="table-ll-headers-2">Noise Normalized R<sup>2</sup> (%)</th>
-                                    <th class="table-ll-headers-2">Average Noise Normalized R<sup>2</sup> (%)</th>
-                                    <th class="table-ll-headers-2">Detailed Results</th>
-                                </tr>
-                                <tr>
+                    <!-- Second row for the leaderboard -->
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h3 style="margin-bottom: 0em; margin-top: 1em; text-align:center" id="Track1Leaderboard_challenge">Track 1 <b>Challenge Test Set</b> Leaderboard (<a href="leaderboard_fmri.html">see detailed table</a>)</h3>
+                            <div class="table-responsive" style="display: flex; justify-content: center;">
+                                <table class="tables-ll table-condensed" style="font-size: 12px; margin: 0 auto; margin-top: 2em; margin-bottom: 2em;">
+                                    <tr>
+                                        <th></th>
+                                        <th></th>
+                                        <th class="table-ll-headers">EVC</th>
+                                        <th class="table-ll-headers">IT</th>
+                                        <th class="table-ll-headers">Score</th>
+                                    </tr>
+                                    <tr>
+                                        <th class="table-ll-headers-2" style="border-left: 0px;">Rank</th>
+                                        <th class="table-ll-headers-2">Team Name</th>
+                                        <th class="table-ll-headers-2">Noise Normalized R<sup>2</sup> (%)</th>
+                                        <th class="table-ll-headers-2">Noise Normalized R<sup>2</sup> (%)</th>
+                                        <th class="table-ll-headers-2">Average Noise Normalized R<sup>2</sup> (%)</th>
+                                        <th class="table-ll-headers-2">Detailed Results</th>
+                                    </tr>
+                                    <tr>
                                     <td></td>
                                     <td><i>Noise Ceiling</i></td>
                                     <td><i>100</i></td>
@@ -477,9 +479,11 @@
 
 
                         <!-- TRACK 1 (fMRI) ----------------------- TWIN SET 2-->
-                        <h3 style="margin-bottom: 1em; margin-top: 0em; text-align: center" id="Track1Leaderboard_challenge">Track 1 <b>Hidden Test Set</b> Leaderboard (<a href="leaderboard_fmri_TS2.html">see detailed table</a>)</h3>
-                        <div style="overflow-x:auto;">
-                            <table class="tables-ll">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h3 style="margin-bottom: 0em; margin-top: 0em; text-align: center" id="Track1Leaderboard_challenge">Track 1 <b>Hidden Test Set</b> Leaderboard (<a href="leaderboard_fmri_TS2.html">see detailed table</a>)</h3>
+                        <div class="table-responsive" style="display: flex; justify-content: center;">
+                            <table class="tables-ll table-condensed" style="font-size: 12px; margin: 0 auto; margin-top: 2em; margin-bottom: 2em;">
                                 <tr>
                                     <th></th>
                                     <th></th>
@@ -593,6 +597,9 @@
                                 </tr>
                             </table>
                         </div>
+                     </div>
+                  </div>
+
                         
                         <p class="intro-paragraph" style="font-size:18px; margin-bottom:60px;" id="Track2">
                             The three main columns are <i>EVC</i> and <i>IT</i> (the two brain regions of interest), and <i>Score</i> (average of EVC and IT). The entry with the highest <i>Score</i> is ranked first. 
@@ -604,33 +611,38 @@
 
 
                         <!-- TRACK 2 (MEG) -->
-                        <div class="col-md-12 intro-feature" style="margin-bottom: 1em">
-                            <div class="challenge-icon">
-                                <span class="icon">
-                                    <img src="../img/meg.png" class="icon" style="height:55px;"></img>
-                                </span>
-                            </div>
-                            <div class="challenge-content">
-                                <h5 style="font-size: 24px"><a href="http://challenge.algonauts.csail.mit.edu/competitions/78">TRACK 2 (MEG)</a></h5>
-                                <p class="challenge-paragraph">The goal of Track 2 (MEG) is to construct models that best predict brain data from 2 time intervals, <b>early</b> and <b>late</b> 
-                                    stages of visual processing with respect to onset of an image. Participants submit their model responses to a test image set which we will compare against held-out MEG data. 
-                                    The <a href="rsa.html">representational similarity analysis</a> approach (a technique that maps models and MEG data to a common similarity space to enable comparison) will be used to score your submissions. 
-                                    Time intervals of 20ms are defined based on the peak latency of MEG/fMRI fusion time series (0&ndash;200ms) in EVC and IT, and are shown with the corresponding image sets below (see Cichy et al. 2014, 2016; Mohsenzadeh et al. 2019 for MEG/fMRI fusion method).</p>
-                                <p class="challenge-paragraph">We provide the following data <b>(available for download <a href="https://forms.gle/VajU1XNMe1EEWFmJA">here</a>)</b>:</p>
-                                <ul>
-                                    <li> <i>Training</i> Set A: 92 images + MEG human brain data RDMs from 2 time intervals, i.e. early (70&ndash;90ms) and late (140&ndash;160ms) in visual processing, in response to viewing images from this set. Peak latencies = 82ms (early) and 150ms (late).</li>
-                                    <li> <i>Training</i> Set B: 118 images + MEG human brain data RDMs from 2 time intervals, i.e. early (100&ndash;120ms) and late (165&ndash;185ms) in visual processing, in response to viewing images from this set. Peak latencies = 108ms (early) and 176ms (late).</li>
-                                    <li> Development Kit: Sample code for generating activations from AlexNet/VGG/ResNet, computing RDMs from these networks, and evaluating model RDMs.</li>
-                                    <li> <i>Test</i> Set: 78 images.</li>
-                                </ul>
-                                <br>
-                                <p class="challenge-paragraph"><b>Learn more and participate in Track 2 <a href="http://challenge.algonauts.csail.mit.edu/competitions/78">here</a></b></p>
+                        <!-- First row for TRACK 2 content -->
+                        <div class="row">
+                            <div class="col-md-12 intro-feature" style="margin-bottom: 1em">
+                                <div class="challenge-icon">
+                                    <span class="icon">
+                                        <img src="../img/meg.png" class="icon" style="height:55px;"></img>
+                                    </span>
+                                </div>
+                                <div class="challenge-content">
+                                    <h5 style="font-size: 24px"><a href="http://challenge.algonauts.csail.mit.edu/competitions/78">TRACK 2 (MEG)</a></h5>
+                                    <p class="challenge-paragraph">The goal of Track 2 (MEG) is to construct models that best predict brain data from 2 time intervals, <b>early</b> and <b>late</b> 
+                                        stages of visual processing with respect to onset of an image. Participants submit their model responses to a test image set which we will compare against held-out MEG data. 
+                                        The <a href="rsa.html">representational similarity analysis</a> approach (a technique that maps models and MEG data to a common similarity space to enable comparison) will be used to score your submissions. 
+                                        Time intervals of 20ms are defined based on the peak latency of MEG/fMRI fusion time series (0&ndash;200ms) in EVC and IT, and are shown with the corresponding image sets below (see Cichy et al. 2014, 2016; Mohsenzadeh et al. 2019 for MEG/fMRI fusion method).</p>
+                                    <p class="challenge-paragraph">We provide the following data <b>(available for download <a href="https://forms.gle/VajU1XNMe1EEWFmJA">here</a>)</b>:</p>
+                                    <ul>
+                                        <li> <i>Training</i> Set A: 92 images + MEG human brain data RDMs from 2 time intervals, i.e. early (70&ndash;90ms) and late (140&ndash;160ms) in visual processing, in response to viewing images from this set. Peak latencies = 82ms (early) and 150ms (late).</li>
+                                        <li> <i>Training</i> Set B: 118 images + MEG human brain data RDMs from 2 time intervals, i.e. early (100&ndash;120ms) and late (165&ndash;185ms) in visual processing, in response to viewing images from this set. Peak latencies = 108ms (early) and 176ms (late).</li>
+                                        <li> Development Kit: Sample code for generating activations from AlexNet/VGG/ResNet, computing RDMs from these networks, and evaluating model RDMs.</li>
+                                        <li> <i>Test</i> Set: 78 images.</li>
+                                    </ul>
+                                    <br>
+                                    <p class="challenge-paragraph"><b>Learn more and participate in Track 2 <a href="http://challenge.algonauts.csail.mit.edu/competitions/78">here</a></b></p>
+                                </div>
                             </div>
                         </div>
 
-                        <h3 style="margin-bottom: 1em; margin-top: 5em; text-align: center" id="Track2Leaderboard_challenge">Track 2 <b>Challenge Test Set</b> Leaderboard (<a href="leaderboard_meg.html">see detailed table</a>)</h3>
-                        <div style="overflow-x:auto;">
-                            <table class="tables-ll">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h3 style="margin-bottom: 0em; margin-top: 5em; text-align: center" id="Track2Leaderboard_challenge">Track 2 <b>Challenge Test Set</b> Leaderboard (<a href="leaderboard_meg.html">see detailed table</a>)</h3>
+                        <div class="table-responsive" style="display: flex; justify-content: center;">
+                            <table class="tables-ll table-condensed" style="font-size: 12px; margin: 0 auto; margin-top: 2em; margin-bottom: 2em;">
                                 <tr>
                                     <th></th>
                                     <th></th>
@@ -789,12 +801,16 @@
                             The three main columns are <i>Early</i> and <i>Late Interval</i> (the two time intervals of interest), and <i>Score</i> (average of Early and Late). The entry with the highest <i>Score</i> is ranked first. 
                             <i>R<sup>2</sup></i> represents the submitted model RDM squared correlation (spearman) to the Early/Late Interval RDM. <i>Noise Normalized</i> represents the fact that R<sup>2</sup> values are normalized to the noise ceiling (see <a href="http://challenge.algonauts.csail.mit.edu/competitions/78#learn_the_details-evaluation">here</a> for more details). AlexNet is the organizer baseline.
                         </p>
+                        </div>
+                    </div>
 
 
-                        <!-- TRACK 2 (MEG) ----------------------- TWIN SET 2-->
-                        <h3 style="margin-bottom: 1em; margin-top: 0em; text-align: center" id="Track2Leaderboard_hidden">Track 2 <b>Hidden Test Set</b> Leaderboard (<a href="leaderboard_meg_TS2.html">see detailed table</a>)</h3>
-                        <div style="overflow-x:auto;">
-                            <table class="tables-ll">
+                <!-- Third row for Hidden Test Set leaderboard -->
+                <div class="row">
+                    <div class="col-md-12">
+                        <h3 style="margin-bottom: 0em; margin-top: 0em; text-align: center" id="Track2Leaderboard_hidden">Track 2 <b>Hidden Test Set</b> Leaderboard (<a href="leaderboard_meg_TS2.html">see detailed table</a>)</h3>
+                        <div class="table-responsive" style="display: flex; justify-content: center;">
+                            <table class="tables-ll table-condensed" style="font-size: 12px; margin: 0 auto; margin-top: 2em; margin-bottom: 2em;">
                                 <tr>
                                     <th></th>
                                     <th></th>
@@ -880,13 +896,10 @@
                         <p class="intro-paragraph" style="font-size:18px">
                             The three main columns are <i>Early</i> and <i>Late Interval</i> (the two time intervals of interest), and <i>Score</i> (average of Early and Late). The entry with the highest <i>Score</i> is ranked first. 
                             <i>R<sup>2</sup></i> represents the submitted model RDM squared correlation (spearman) to the Early/Late Interval RDM. <i>Noise Normalized</i> represents the fact that R<sup>2</sup> values are normalized to the noise ceiling (see <a href="http://challenge.algonauts.csail.mit.edu/competitions/78#learn_the_details-evaluation">here</a> for more details). AlexNet is the organizer baseline.
-                        </p>
-
+                            </p>
+                        </div>
                     </div>
 
-                </div>
-            </div>  
-        </div>
     </section>
 
     <!-- BRAIN ACTIVITY AND ANALYSIS -->

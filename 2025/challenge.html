@@ -278,30 +278,33 @@
                     
     
                     
-
-            <div class="row wow fadeInUp" style="margin-top: 28px;">
-                <h3 style="text-align: left;">Model Building Phase (6 months, January 6 2025 - July 6 2025)</h3>
-                <p class="intro-paragraph" style="text-align: justify;">
-                    During this first phase, challenge participants will train and test encoding models using movie stimuli and fMRI responses from the same distribution.
-                </p>
-                <ul>
-                        <li style="margin-bottom: 0.5em">
-                            <b style="font-weight: 600">Model Training:</b> For model training, we provide 65 hours of movie stimuli and 
-                            corresponding fMRI responses: 55 hours for each of the four subjects for all episodes of seasons 1 to 6 of the sitcom <i>Friends</i>, 
-                            and 10 hours for the following  four movies: <i>The Bourne Supremacy</i>, <i>Hidden Figures</i>, <i>Life</i> (a BBC nature documentary), 
-                            and <i>The Wolf of Wall Street</i>. Each movie was presented to each of the 4 subjects once, 
-                            except for <i>Life</i> and <i>Hidden Figures</i> which were presented twice. Challenge participants can 
-                            train their encoding models using these data.
-                        <li>
-                            <b style="font-weight: 600">Model Testing:</b> For model testing, we provide 10 hours of movie stimuli for all episodes of seasons 
-                            7 of the Friends dataset, and withhold the corresponding fMRI responses for each subject. Challenge participants 
-                            can test their encoding models against the withheld fMRI responses by submitting predicted fMRI responses for 
-                            Friends season 7 to <a href="https://www.codabench.org/competitions/4313/" class="a-2021" target="_blank">Codabench</a>. After each submission, the scoring program will correlate (Pearson’s <i>r</i>) 
-                            the predicted fMRI responses for each parcel and subject with the recorded (withheld) fMRI responses across all 
-                            Friends season 7 episodes, resulting in one correlation score for each parcel and subject. These correlation scores 
-                            are averaged first across parcels and then across subjects, to obtain a single correlation score quantifying the performance of each submission.
+                <div class="row wow fadeInUp" style="margin-top: 28px;">
+                    <div class="col-md-12">
+                        <h3 style="text-align: left;">Model Building Phase (6 months, January 6 2025 - July 6 2025)</h3>
+                        <p class="intro-paragraph" style="text-align: justify;">
+                            During this first phase, challenge participants will train and test encoding models using movie stimuli and fMRI responses from the same distribution.
+                        </p>
+                        <ul class="intro-paragraph" style="list-style-type: disc; margin-left: 20px;">
+                            <li style="margin-bottom: 0.5em">
+                                <b style="font-weight: 600">Model Training:</b> For model training, we provide 65 hours of movie stimuli and 
+                                corresponding fMRI responses: 55 hours for each of the four subjects for all episodes of seasons 1 to 6 of the sitcom <i>Friends</i>, 
+                                and 10 hours for the following four movies: <i>The Bourne Supremacy</i>, <i>Hidden Figures</i>, <i>Life</i> (a BBC nature documentary), 
+                                and <i>The Wolf of Wall Street</i>. Each movie was presented to each of the 4 subjects once, 
+                                except for <i>Life</i> and <i>Hidden Figures</i> which were presented twice. Challenge participants can 
+                                train their encoding models using these data.
+                            </li>
+                            <li>
+                                <b style="font-weight: 600">Model Testing:</b> For model testing, we provide 10 hours of movie stimuli for all episodes of seasons 
+                                7 of the Friends dataset, and withhold the corresponding fMRI responses for each subject. Challenge participants 
+                                can test their encoding models against the withheld fMRI responses by submitting predicted fMRI responses for 
+                                Friends season 7 to <a href="https://www.codabench.org/competitions/4313/" class="a-2021" target="_blank">Codabench</a>. After each submission, the scoring program will correlate (Pearson's <i>r</i>) 
+                                the predicted fMRI responses for each parcel and subject with the recorded (withheld) fMRI responses across all 
+                                Friends season 7 episodes, resulting in one correlation score for each parcel and subject. These correlation scores 
+                                are averaged first across parcels and then across subjects, to obtain a single correlation score quantifying the performance of each submission.
+                            </li>
                         </ul>
                     </div>
+                </div>
 
 
                     <!-- Leaderboard -->
@@ -1133,25 +1136,27 @@
                             </div>
                         </section>
 
-                    <div class="row wow fadeInUp" style="margin-top: 28px;">
-                    <h3 style="margin-top: 2em; text-align: left;">Post-Challenge Phase (indefinite)</h3>
-                    <p class="intro-paragraph" style="text-align: justify;">
-                        Once the challenge is over, we will open an indefinite post-challenge phase which will serve as a public benchmark. 
-                        This benchmark will consist of two separate leaderboards that will rank encoding models based on their fMRI predictions 
-                        for ID (Friends season 7) or OOD (OOD movies) multimodal movie stimuli, respectively.
-                    </p>
+                <div class="row wow fadeInUp" style="margin-top: 28px;">
+                    <div class="col-md-12">
+                        <h3 style="margin-top: 2em; text-align: left;">Post-Challenge Phase (indefinite)</h3>
+                        <p class="intro-paragraph" style="text-align: justify;">
+                            Once the challenge is over, we will open an indefinite post-challenge phase which will serve as a public benchmark. 
+                            This benchmark will consist of two separate leaderboards that will rank encoding models based on their fMRI predictions 
+                            for ID (Friends season 7) or OOD (OOD movies) multimodal movie stimuli, respectively.
+                        </p>
 
-                    <div class="text-center" style="margin-top: 3em;">
-                        <a href="https://www.codabench.org/competitions/9482/"
-                           class="btn-2021 btn-accent btn-large"
-                           style="padding: 0.8em 1.5em; font-size: 14px; font-weight: bold; margin-right: 10px;"
-                           target="_blank">POST-CHALLENGE PHASE LEADERBOARD <br> FRIENDS SEASON 7 (ID)</a>
-                        <a href="https://www.codabench.org/competitions/9483/"
-                           class="btn-2021 btn-accent btn-large"
-                           style="padding: 0.8em 1.5em; font-size: 14px; font-weight: bold;"
-                           target="_blank">POST-CHALLENGE PHASE LEADERBOARD <br> OUT-OF-DISTRIBUTION MOVIES (OOD)</a>
+                        <div class="text-center" style="margin-top: 3em;">
+                            <a href="https://www.codabench.org/competitions/9482/"
+                            class="btn-2021 btn-accent btn-large"
+                            style="padding: 0.8em 1.5em; font-size: 14px; font-weight: bold; margin-right: 10px;"
+                            target="_blank">POST-CHALLENGE PHASE LEADERBOARD <br> FRIENDS SEASON 7 (ID)</a>
+                            <a href="https://www.codabench.org/competitions/9483/"
+                            class="btn-2021 btn-accent btn-large"
+                            style="padding: 0.8em 1.5em; font-size: 14px; font-weight: bold;"
+                            target="_blank">POST-CHALLENGE PHASE LEADERBOARD <br> OUT-OF-DISTRIBUTION MOVIES (OOD)</a>
+                        </div>
                     </div>
-                    </div>
+                </div>
 
                 </div> 
             </section>
@@ -1183,7 +1188,7 @@
                         <div class="col-md-12">
                             <h2 style="margin-top: 2em; text-align: left;">How to Predict Brain Data Using Computational Models?</h2>
                             <p class="intro-paragraph" style="text-align: justify;">
-                                There are different ways to predict brain data using computational models. We put close to no restrictions on how you do so (see <a href="https://algonautsproject.com/challenge.html#Rules" class="a-2021">Challenge Rules</a>). 
+                                There are different ways to predict brain data using computational models. We put close to no restrictions on how you do so (see <a href="challenge.html#Rules" class="a-2021">Challenge Rules</a>). 
                                 However, a commonly used approach is to use <a href="encoding.html" class="a-2021" target="_blank">linearizing encoding models</a>, and we provide a <a href="https://colab.research.google.com/drive/1fop0zvaLBLBagvJRC-HDqGDSgQElNWZB?usp=sharing" class="a-2021" target="_blank">development kit</a> 
                                 to implement such a model.
                             </p>
