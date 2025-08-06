@@ -858,7 +858,7 @@ body.with-nav-text .nav-text {
     text-align: center;
     vertical-align: middle;
     flex: 1;
-    max-width: 350px;
+    max-width: 320px;
     min-width: 250px;
     white-space: normal;
 }
