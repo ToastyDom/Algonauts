@@ -4254,80 +4254,89 @@ html {
 }
 
 
-.intro-icon {
-    display: inline-block;
-    vertical-align: top;
-    padding: 6px 0 0 0;
-    margin-right: 10px; /* Keep your original margin */
-    width: 40px;
+.features-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
 }
 
-/* Move just the image inside the icon container */
-.intro-icon img {
-    margin-left: 75px !important; /* Adjust this value as needed */
+.feature-card {
+    text-align: center;
+    padding: 1.5rem;
+    background: rgba(255, 255, 255, 0.02);
+    border-radius: 8px;
+    transition: transform 0.3s ease;
 }
 
-/* Move just the font icon inside the icon container */
-.intro-icon [data-icon]:before {
-    margin-left: 75px !important; /* Adjust this value as needed */
+.feature-card:hover {
+    transform: translateY(-2px);
 }
 
-
-/* Make sure the intro-feature containers are flex containers with equal heights */
-.intro-feature {
-    display: flex !important;
-    flex-direction: column !important;
-    height: 100% !important;
+.feature-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80px;
+    margin-bottom: 1.5rem;
 }
 
-/* Make the intro-content a flex container */
-.intro-content {
-    display: flex !important;
-    flex-direction: column !important;
-    flex-grow: 1 !important;
-    height: 100% !important;
+.feature-icon img {
+    height: 70px;
+    width: auto;
 }
 
-/* Give titles a fixed height so they all take up the same space, but align text to TOP */
-.intro-content h5 {
-    text-align: center !important;
-    height: 60px !important; /* Fixed height for consistent spacing */
-    display: flex !important;
-    align-items: flex-start !important; /* Align to TOP, not center */
-    justify-content: center !important; /* Still center horizontally */
-    margin-bottom: 20px !important;
-    line-height: 1.2 !important;
+.feature-icon .icon {
+    font-size: 60px;
+    line-height: 1;
+    color: #667eea;
 }
 
-/* Make paragraphs fill remaining space and start at same height */
-.intro-content p {
-    text-align: justify !important;
-    flex-grow: 1 !important;
-    margin-top: 0 !important;
+.feature-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    line-height: 1.3;
+    min-height: 6.5rem;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
 }
 
-/* Ensure the row container uses flexbox properly */
-.row {
-    display: flex !important;
-    align-items: stretch !important;
+.feature-text {
+    font-size: 20px;
+    line-height: inherit;
+    text-align: justify;
+    margin: 0;
 }
 
-/* Specific fix for the image icon column */
-.intro-feature:first-child .intro-icon {
-    margin-bottom: 0 !important; /* Remove any extra bottom margin */
-    padding-bottom: 0 !important; /* Remove any extra bottom padding */
-    height: auto !important; /* Let it adjust naturally */
+/* Desktop layout - 4 columns */
+@media (min-width: 992px) {
+    .features-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 2rem;
+    }
+    
+    .feature-card {
+        padding: 2rem 1.5rem;
+    }
 }
 
-.intro-feature:first-child .intro-icon img {
-    margin-bottom: -9px !important; /* Remove any extra space below image */
-    vertical-align: top !important; /* Align to top */
+/* Tablet layout - 2 columns */
+@media (min-width: 768px) and (max-width: 991px) {
+    .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
 }
 
-
-/* OR, if the above doesn't work, try adjusting the intro-content positioning for the first column */
-.intro-feature:first-child .intro-content {
-    margin-top: 25px !important; /* Nudge up by 5px - adjust as needed */
+/* Dark mode adjustments (if your site supports it) */
+@media (prefers-color-scheme: dark) {
+    .feature-card {
+        background: rgba(255, 255, 255, 0.05);
+    }
 }
 
 
