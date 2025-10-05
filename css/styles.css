@@ -3582,7 +3582,6 @@ body:not(.index-page):not(.landing-body) {
     max-width: 500px;
     margin: 0 auto;
     text-align: center;
-    font-style: italic;
     opacity: 0.8;
 }
 
