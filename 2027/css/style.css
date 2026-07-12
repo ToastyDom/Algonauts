@@ -111,6 +111,8 @@ img { max-width: 100%; display: block; }
     border: 0;
     cursor: pointer;
     padding: 6px;
+    position: relative;
+    z-index: 110;   /* stay above the overlay (99) so the X is visible & tappable */
 }
 .nav-2027-toggle span {
     display: block;
@@ -138,6 +140,7 @@ img { max-width: 100%; display: block; }
     z-index: 99;
 }
 .nav-2027-overlay.open { opacity: 1; pointer-events: auto; }
+body.menu-open { overflow: hidden; }
 .nav-2027-overlay ul { list-style: none; margin: 0; padding: 0; text-align: center; }
 .nav-2027-overlay li { margin: 22px 0; }
 .nav-2027-overlay a { color: var(--c-text); font-size: 1.4rem; font-weight: 600; }

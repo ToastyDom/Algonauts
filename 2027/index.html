@@ -40,16 +40,17 @@
                 <span></span>
             </button>
         </div>
-
-        <!-- Mobile overlay -->
-        <div class="nav-2027-overlay" id="nav-2027-overlay">
-            <ul>
-                <li><a href="../index.html">Algonauts Project</a></li>
-                <li><a href="../2025/archive.html">Challenge Archive</a></li>
-                <li><a href="#signup">Stay Updated</a></li>
-            </ul>
-        </div>
     </nav>
+
+    <!-- Mobile overlay (kept outside <nav> so the nav's backdrop-filter can't
+         trap its position:fixed to the nav bar when scrolled) -->
+    <div class="nav-2027-overlay" id="nav-2027-overlay">
+        <ul>
+            <li><a href="../index.html">Algonauts Project</a></li>
+            <li><a href="../2025/archive.html">Challenge Archive</a></li>
+            <li><a href="#signup">Stay Updated</a></li>
+        </ul>
+    </div>
 
     <!-- Hero -->
     <header class="hero-2027">
@@ -169,14 +170,21 @@
             function closeMenu() {
                 navOverlay.classList.remove('open');
                 navToggle.classList.remove('active');
+                document.body.classList.remove('menu-open');
             }
 
             navToggle.addEventListener('click', function () {
-                navOverlay.classList.toggle('open');
-                navToggle.classList.toggle('active');
+                const open = navOverlay.classList.toggle('open');
+                navToggle.classList.toggle('active', open);
+                document.body.classList.toggle('menu-open', open);
             });
 
             overlayLinks.forEach(link => link.addEventListener('click', closeMenu));
+
+            // Tap the overlay background (not a link) to close
+            navOverlay.addEventListener('click', function (e) {
+                if (e.target === navOverlay) closeMenu();
+            });
 
             document.addEventListener('keydown', function (e) {
                 if (e.key === 'Escape') closeMenu();
