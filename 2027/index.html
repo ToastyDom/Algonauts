@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VCQ9D4SNB4"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-VCQ9D4SNB4');
+    </script>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>The Algonauts Project Challenge 2027</title>
+    <meta name="description" content="The Algonauts Project Challenge 2027 — launching in November 2026. Sign up to stay updated.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="The Algonauts Project">
+    <link rel="icon" id="favicon" type="image/png" href="../img/2024/logo_icon_light.png" sizes="32x32" />
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="nav-2027" id="nav-2027">
+        <div class="nav-2027-container">
+            <a href="../index.html" class="nav-2027-logo">
+                <img src="../img/2024/logo_icon_light.png" alt="The Algonauts Project logo">
+                <span class="full">The Algonauts Project</span>
+            </a>
+            <ul class="nav-2027-links">
+                <li><a href="../index.html">Algonauts Project</a></li>
+                <li><a href="../2025/archive.html">Challenge Archive</a></li>
+                <li><a href="#signup">Stay Updated</a></li>
+            </ul>
+            <button class="nav-2027-toggle" id="nav-2027-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+
+        <!-- Mobile overlay -->
+        <div class="nav-2027-overlay" id="nav-2027-overlay">
+            <ul>
+                <li><a href="../index.html">Algonauts Project</a></li>
+                <li><a href="../2025/archive.html">Challenge Archive</a></li>
+                <li><a href="#signup">Stay Updated</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <header class="hero-2027">
+        <!-- Pixel "wave" that sweeps across the aurora — hints at the games theme -->
+        <div class="pixel-wave" aria-hidden="true"></div>
+
+        <!-- Floating particles (populated by JS) -->
+        <div class="hero-particles" id="hero-particles" aria-hidden="true"></div>
+
+        <img class="hero-2027-logo" src="../img_AP/logo_text_dark.png" alt="The Algonauts Project logo">
+        <h1>The Algonauts Project Challenge 2027</h1>
+        <p class="launch">Launching in <strong>November 2026</strong></p>
+        <p class="lead">
+            Be the first to know when it goes live — sign up below to stay in the loop.
+        </p>
+        <div class="hero-hosts">
+            <span class="hero-hosts-label">Hosted at CCN 2027</span>
+            <div class="hero-hosts-logos">
+                <a href="https://ccneuro.org/" target="_blank" rel="noopener" class="host-logo" aria-label="Conference on Cognitive Computational Neuroscience (CCN)">
+                    <img src="../img/2024/ccn_logo.png" alt="Cognitive Computational Neuroscience (CCN)">
+                </a>
+            </div>
+        </div>
+
+        <a href="#signup" class="hero-2027-cta">Notify me &rarr;</a>
+    </header>
+
+    <!-- Signup -->
+    <section class="signup-2027" id="signup">
+        <div class="signup-2027-inner">
+            <h2>Stay Updated</h2>
+            <p class="sub">
+                Join our mailing list to receive the launch announcement and updates on the
+                2027 challenge.
+            </p>
+
+            <div class="signup-card">
+                <iframe
+                    src="https://docs.google.com/forms/d/e/1FAIpQLSckFheQH88lZ5q_WxoAwn2WJs_nVs7NhITD7ZBsmSGFAuD2-Q/viewform?embedded=true"
+                    width="100%" height="700" frameborder="0" marginheight="0" marginwidth="0"
+                    title="Algonauts Project mailing list signup">
+                    Loading…
+                </iframe>
+            </div>
+
+            <div class="social-2027">
+                <p>You can also follow us on social media:</p>
+                <div class="social-2027-logos">
+                    <a href="https://bsky.app/profile/algonautsproject.bsky.social" target="_blank" rel="noopener">
+                        <img src="../img/2024/bluesky_logo.png" alt="Bluesky logo">
+                        Bluesky
+                    </a>
+                    <a href="https://x.com/AlgonautsProj" target="_blank" rel="noopener">
+                        <img src="../img/2024/x_logo.png" alt="X logo">
+                        X
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-2027">
+        <p>&copy; 2026 The Algonauts Project. All rights reserved. &middot;
+            <a href="../index.html">algonautsproject.com</a></p>
+    </footer>
+
+    <script>
+        // Floating particles in the hero
+        (function () {
+            const layer = document.getElementById('hero-particles');
+            if (!layer || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+            const colors = ['124, 245, 255', '182, 168, 255', '255, 255, 255', '150, 235, 255'];
+            const N = 30;
+            for (let i = 0; i < N; i++) {
+                const p = document.createElement('span');
+                p.className = 'p';
+                const size = 2 + Math.random() * 5;
+                const dur = 16 + Math.random() * 18;
+                const col = colors[i % colors.length];
+                p.style.width = size + 'px';
+                p.style.height = size + 'px';
+                p.style.left = (Math.random() * 100) + '%';
+                p.style.background = 'radial-gradient(circle, rgba(' + col + ', 0.95), rgba(' + col + ', 0) 70%)';
+                p.style.animationDuration = dur + 's';
+                p.style.animationDelay = (-Math.random() * dur) + 's';
+                p.style.setProperty('--pdx', (Math.random() * 140 - 70) + 'px');
+                p.style.setProperty('--pmax', (0.35 + Math.random() * 0.5).toFixed(2));
+                layer.appendChild(p);
+            }
+        })();
+
+        // Navbar background on scroll
+        window.addEventListener('scroll', function () {
+            const navbar = document.getElementById('nav-2027');
+            navbar.classList.toggle('scrolled', window.scrollY > 50);
+        });
+
+        // Dynamic favicon based on color scheme
+        document.addEventListener('DOMContentLoaded', () => {
+            const favicon = document.getElementById('favicon');
+            const updateFavicon = () => {
+                favicon.href = window.matchMedia('(prefers-color-scheme: dark)').matches
+                    ? '../img/2024/logo_icon_dark.png'
+                    : '../img/2024/logo_icon_light.png';
+            };
+            updateFavicon();
+            window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', updateFavicon);
+        });
+
+        // Mobile navigation toggle
+        document.addEventListener('DOMContentLoaded', function () {
+            const navToggle = document.getElementById('nav-2027-toggle');
+            const navOverlay = document.getElementById('nav-2027-overlay');
+            const overlayLinks = navOverlay.querySelectorAll('a');
+
+            function closeMenu() {
+                navOverlay.classList.remove('open');
+                navToggle.classList.remove('active');
+            }
+
+            navToggle.addEventListener('click', function () {
+                navOverlay.classList.toggle('open');
+                navToggle.classList.toggle('active');
+            });
+
+            overlayLinks.forEach(link => link.addEventListener('click', closeMenu));
+
+            document.addEventListener('keydown', function (e) {
+                if (e.key === 'Escape') closeMenu();
+            });
+        });
+    </script>
+</body>
+</html>

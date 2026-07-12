@@ -58,6 +58,62 @@
             window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', updateFavicon);
         });
     </script>
+
+    <!-- 2027 upcoming card: calm teaser echoing the 2027 landing page -->
+    <style>
+        .arc27-hero {
+            background:
+                radial-gradient(ellipse 72% 62% at 50% 34%, rgba(125, 75, 220, 0.5), transparent 74%),
+                radial-gradient(ellipse 140% 95% at 50% 116%, rgba(80, 145, 210, 0.5), transparent 72%),
+                linear-gradient(180deg, #1c1348 0%, #382a7c 100%);
+            overflow: hidden;
+        }
+        /* soft glow behind the logo — the only motion (a slow breathe) */
+        .arc27-hero::before {
+            content: ''; position: absolute; z-index: 1;
+            top: 40%; left: 50%; width: 240px; height: 240px;
+            transform: translate(-50%, -50%);
+            background: radial-gradient(circle, rgba(124, 245, 255, 0.38), transparent 62%);
+            filter: blur(6px);
+            animation: arc27-glow 5s ease-in-out infinite;
+        }
+        /* faint static pixel "floor" fading up from the bottom — quiet games hint */
+        .arc27-hero::after {
+            content: ''; position: absolute; inset: 0; z-index: 1; pointer-events: none;
+            background-image:
+                linear-gradient(45deg, rgba(255,255,255,.06) 25%, transparent 25%, transparent 75%, rgba(255,255,255,.06) 75%),
+                linear-gradient(45deg, rgba(124,245,255,.07) 25%, transparent 25%, transparent 75%, rgba(124,245,255,.07) 75%);
+            background-size: 24px 24px, 24px 24px;
+            background-position: 0 0, 12px 12px;
+            -webkit-mask-image: linear-gradient(to top, #000, transparent 55%);
+            mask-image: linear-gradient(to top, #000, transparent 55%);
+        }
+        .current-challenge-image img.arc27-logo {
+            position: absolute; top: 40%; left: 50%;
+            transform: translate(-50%, -50%);
+            width: auto; height: 50%;
+            object-fit: contain;
+            opacity: 1; z-index: 2;
+            filter: drop-shadow(0 6px 20px rgba(124, 245, 255, 0.4));
+        }
+        .arc27-launch {
+            position: absolute; z-index: 2; left: 0; right: 0; bottom: 24px;
+            text-align: center;
+            color: #cfe9ff;
+            font-size: 1.25rem; letter-spacing: 3px; text-transform: uppercase; font-weight: 600;
+        }
+        .arc27-launch b { color: #7cf5ff; font-weight: 700; }
+        .current-challenge-card:hover .current-challenge-image img.arc27-logo {
+            transform: translate(-50%, -50%) scale(1.05);
+        }
+        @keyframes arc27-glow {
+            0%, 100% { opacity: 0.5; transform: translate(-50%, -50%) scale(0.9); }
+            50%      { opacity: 1;   transform: translate(-50%, -50%) scale(1.1); }
+        }
+        @media (prefers-reduced-motion: reduce) {
+            .arc27-hero::before { animation: none; }
+        }
+    </style>
 </head>
 
 <body class="with-nav-text" id="top" ng-controller="mainCtrl" ng-cloak>
@@ -69,6 +125,7 @@
                 The Algonauts Project
             </a>
             <ul class="landing-nav-links">
+                <li><a href="../2027/index.html">2027</a></li>
                 <li><a href="index.html">2025</a></li>
                 <li><a href="../2023/index.html">2023</a></li>
                 <li><a href="../2021/index.html">2021</a></li>
@@ -85,6 +142,7 @@
         <div class="landing-nav-overlay" id="index-nav-overlay">
             <div class="landing-overlay-nav">
                 <ul>
+                    <li><a href="../2027/index.html">2027</a></li>
                     <li><a href="index.html">2025</a></li>
                     <li><a href="../2023/index.html">2023</a></li>
                     <li><a href="../2021/index.html">2021</a></li>
@@ -112,25 +170,22 @@
 
     <section class="challenge intro-section-padding">
         <div class="container">
-            <!-- Current Challenge Section -->
+            <!-- Upcoming Challenge Section -->
             <div class="current-challenge">
-                <h3>Current Challenge</h3>
+                <h3>Upcoming</h3>
                 <div class="current-challenge-card">
-                    <div class="current-challenge-image">
-                        <img src="../img/2024/algonauts_2025_banner_plain.png" alt="Algonauts 2025 Challenge">
-                        <div class="live-badge">LIVE</div>
+                    <div class="current-challenge-image arc27-hero">
+                        <img src="../img_AP/logo_brain_cropped.png" alt="The Algonauts Project logo" class="arc27-logo">
+                        <span class="arc27-launch">Launching <b>November 2026</b></span>
+                        <div class="live-badge" style="background: linear-gradient(135deg, #6d3bd1, #b13ad1); box-shadow: 0 4px 15px rgba(109, 59, 209, 0.3);">COMING SOON</div>
                     </div>
                     <div class="current-challenge-content">
-                        <h4>The Algonauts Project 2025 Challenge: <br> How the Human Brain Makes Sense of Multimodal Movies</h4>
+                        <h4 style="text-align: center; justify-content: center;">The Algonauts Project 2027 Challenge</h4>
                             <p class="intro-paragraph" style="text-align: justify;">
-                                The 2025 challenge edition focuses on explaining responses in the human brain as participants perceive complex multimodal movies. 
-                                Through collaboration with the <a href="https://www.cneuromod.ca/" class="a-2021" target="_blank">Courtois Project on Neuronal Modelling (CNeuroMod)</a>, 
-                                the challenge runs on the largest human brain dataset available, opening new venues for accurate models of 
-                                neural responses to multimodal naturalistic stimulation. To promote more robust models of the brain, 
-                                the 2025 challenge features a selection process based on out-of-distribution generalization. 
-                                The challenge is organized in partnership with the <a href="https://ccneuro.org/" class="a-2021" target="_blank">Conference on Cognitive Computational Neuroscience (CCN)</a>.
+                                The next edition of the Algonauts Project challenge is on its way, launching in November 2026.
+                                Sign up to be the first to know when it goes live and to receive updates as details are announced.
                             </p>
-                        <a href="index.html" class="challenge-cta">Join the Challenge</a>
+                        <a href="../2027/index.html" class="challenge-cta">Learn More</a>
                     </div>
                 </div>
             </div>
@@ -139,7 +194,29 @@
             <div class="past-challenges">
                 <h3>Past Challenges</h3>
                 <div class="past-challenges-grid">
-                    
+
+                    <!-- 2025 Challenge -->
+                    <div class="past-challenge-card">
+                        <div class="past-challenge-image">
+                            <img src="../img/2024/algonauts_2025_banner_plain.png" alt="Algonauts 2025 Challenge">
+                        </div>
+                        <div class="past-challenge-content">
+                            <div class="past-challenge-title-container">
+                                <h4>The Algonauts Project 2025 Challenge: How the Human Brain Makes Sense of Multimodal Movies</h4>
+                            </div>
+                            <div class="past-challenge-description">
+                                <p class="intro-paragraph" style="text-align: justify;">
+                                    The 2025 challenge edition focused on explaining responses in the human brain as participants perceive complex multimodal movies.
+                                    Through collaboration with the <a href="https://www.cneuromod.ca/" class="a-2021" target="_blank">Courtois Project on Neuronal Modelling (CNeuroMod)</a>,
+                                    the challenge ran on the largest human brain dataset available, opening new venues for accurate models of
+                                    neural responses to multimodal naturalistic stimulation. The challenge was organized in partnership with the
+                                    <a href="https://ccneuro.org/" class="a-2021" target="_blank">Conference on Cognitive Computational Neuroscience (CCN)</a>.
+                                </p>
+                                <a href="index.html" class="past-challenge-link">Explore 2025 Challenge</a>
+                            </div>
+                        </div>
+                    </div>
+
                     <!-- 2023 Challenge -->
                     <div class="past-challenge-card">
                         <div class="past-challenge-image">
