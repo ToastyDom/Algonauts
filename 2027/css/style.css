@@ -368,7 +368,10 @@ body.menu-open { overflow: hidden; }
     width: 100%;
     border: none;
     border-radius: var(--radius-sm);
-    background: #fff;   /* Google Form is light — keep it readable */
+    background: #1b1233;
+    /* Google Forms has no dark embed mode, so fake it: invert the light form
+       and hue-rotate to keep colors roughly correct. */
+    filter: invert(0.92) hue-rotate(180deg);
 }
 
 /* Social */

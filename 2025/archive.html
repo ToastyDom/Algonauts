@@ -113,6 +113,71 @@
         @media (prefers-reduced-motion: reduce) {
             .arc27-hero::before { animation: none; }
         }
+
+        /* ---- Archive polish (light) ---- */
+        /* soft page background instead of stark white */
+        .challenge.intro-section-padding {
+            background: linear-gradient(180deg, #faf9ff 0%, #f1ecfb 100%);
+        }
+
+        /* richer heading color + brand underline */
+        .past-challenges h3, .current-challenge h3 { color: #241a4d; }
+        .past-challenges h3::after,
+        .current-challenge h3::after {
+            background: linear-gradient(90deg, #6d3bd1, #22c3c9);
+            width: 72px;
+            height: 4px;
+        }
+
+        /* brand accent bar on cards */
+        .past-challenge-card::before,
+        .current-challenge-card::before {
+            background: linear-gradient(90deg, #6d3bd1, #22c3c9);
+            height: 4px;
+        }
+
+        /* softer, brand-tinted cards */
+        .past-challenge-card {
+            border-radius: 18px;
+            border: 1px solid rgba(109, 59, 209, 0.10);
+            box-shadow: 0 10px 34px rgba(36, 26, 77, 0.08);
+        }
+        .past-challenge-card:hover {
+            box-shadow: 0 22px 55px rgba(109, 59, 209, 0.18);
+        }
+        .past-challenge-image { height: 210px; }
+        .past-challenge-image img { opacity: 1; }
+
+        /* pill buttons in the brand gradient */
+        .past-challenge-link,
+        .challenge-cta {
+            background: linear-gradient(135deg, #6d3bd1, #22c3c9);
+            border-radius: 999px;
+            box-shadow: 0 6px 18px rgba(109, 59, 209, 0.28);
+        }
+        .past-challenge-link:hover,
+        .challenge-cta:hover {
+            background: linear-gradient(135deg, #5b2fb8, #1aa9af);
+            box-shadow: 0 10px 26px rgba(109, 59, 209, 0.38);
+        }
+
+        /* in-text links use the brand purple */
+        .challenge .intro-paragraph .a-2021,
+        .past-challenge-description .a-2021 { color: #6d3bd1; }
+        .challenge .intro-paragraph .a-2021:hover,
+        .past-challenge-description .a-2021:hover { color: #22c3c9; }
+
+        /* hero: soften the harsh banner with a brand gradient wash */
+        .hero { position: relative; }
+        .hero::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(36, 20, 92, 0.62), rgba(34, 195, 201, 0.30));
+            z-index: 1;
+            pointer-events: none;
+        }
+        .hero-explore-content { z-index: 3; }
     </style>
 </head>
 
@@ -181,7 +246,7 @@
                     </div>
                     <div class="current-challenge-content">
                         <h4 style="text-align: center; justify-content: center;">The Algonauts Project 2027 Challenge</h4>
-                            <p class="intro-paragraph" style="text-align: justify;">
+                            <p class="intro-paragraph" style="text-align: left;">
                                 The next edition of the Algonauts Project challenge is on its way, launching end of 2026.
                                 Sign up to be the first to know when it goes live and to receive updates as details are announced.
                             </p>
@@ -205,7 +270,7 @@
                                 <h4>The Algonauts Project 2025 Challenge: How the Human Brain Makes Sense of Multimodal Movies</h4>
                             </div>
                             <div class="past-challenge-description">
-                                <p class="intro-paragraph" style="text-align: justify;">
+                                <p class="intro-paragraph" style="text-align: left;">
                                     The 2025 challenge edition focused on explaining responses in the human brain as participants perceive complex multimodal movies.
                                     Through collaboration with the <a href="https://www.cneuromod.ca/" class="a-2021" target="_blank">Courtois Project on Neuronal Modelling (CNeuroMod)</a>,
                                     the challenge ran on the largest human brain dataset available, opening new venues for accurate models of
@@ -220,14 +285,14 @@
                     <!-- 2023 Challenge -->
                     <div class="past-challenge-card">
                         <div class="past-challenge-image">
-                            <img src="../img/index_background_compressedv2.jpg" alt="Algonauts 2023 Challenge" class="filter-me-2023">
+                            <img src="../img/algonauts2023_website_background.png" alt="Algonauts 2023 Challenge">
                         </div>
                         <div class="past-challenge-content">
                             <div class="past-challenge-title-container">
                                 <h4>The Algonauts Project 2023 Challenge: How the Human Brain Makes Sense of Natural Scenes</h4>
                             </div>
                             <div class="past-challenge-description">
-                                <p class="intro-paragraph" style="text-align: justify;">
+                                <p class="intro-paragraph" style="text-align: left;">
                                     The 2023 challenge edition focuses on explaining responses in the human brain as participants perceive complex natural visual
                                     scenes. Through collaboration with the <a href="https://naturalscenesdataset.org/" class="a-2021">Natural Scenes
                                         Dataset (NSD)</a> team, this challenge runs on the largest suitable brain
@@ -242,14 +307,14 @@
                     <!-- 2021 Challenge -->
                     <div class="past-challenge-card">
                         <div class="past-challenge-image">
-                            <img src="../img/index_background_compressedv2.jpg" alt="Algonauts 2021 Challenge" class="filter-me">>
+                            <img src="../img/algonauts2021_website_background.png" alt="Algonauts 2021 Challenge">
                         </div>
                         <div class="past-challenge-content">
                             <div class="past-challenge-title-container">
                                 <h4>The Algonauts Project 2021 Challenge: How the Human Brain Makes Sense of a World in Motion</h4>
                             </div>
                             <div class="past-challenge-description">
-                                <p class="intro-paragraph" style="text-align: justify;">
+                                <p class="intro-paragraph" style="text-align: left;">
                                     The 2021 challenge edition was centered around video perception and event understanding. The challenge focused on explaining
                                     responses in the human brain as subjects watched short video clips of everyday events.
                                 </p>
@@ -261,14 +326,14 @@
                     <!-- 2019 Challenge -->
                     <div class="past-challenge-card">
                         <div class="past-challenge-image">
-                            <img src="../img/index_background_compressedv2.jpg" alt="Algonauts 2019 Challenge">
+                            <img src="../img/algonauts2019_website_background.png" alt="Algonauts 2019 Challenge">
                         </div>
                         <div class="past-challenge-content">
                             <div class="past-challenge-title-container">
                                 <h4>The Algonauts Project 2019 Challenge: Explaining the Human Visual Brain</h4>
                             </div>
                             <div class="past-challenge-description">
-                                <p class="intro-paragraph" style="text-align: justify;">
+                                <p class="intro-paragraph" style="text-align: left;">
                                 The first challenge edition focused on explaining brain responses as human subjects studied still images of everyday objects.
                             </p>
                                 <a href="../2019/index.html" class="past-challenge-link">Explore 2019 Challenge</a>
