@@ -406,20 +406,21 @@ body.menu-open { overflow: hidden; }
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 14px;
-}
-.hero-hosts-label {
-    font-size: 0.75rem;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    color: var(--c-text-dim);
 }
 .hero-hosts-logos {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    align-items: flex-start;   /* chips top-align; captions wrap beneath */
+    gap: 28px;
+}
+/* the anchor: a column of [ white chip ] + [ caption ] */
+.host-item {
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    gap: 18px;
+    gap: 10px;
+    text-decoration: none;
 }
 .host-logo {
     display: inline-flex;
@@ -428,10 +429,12 @@ body.menu-open { overflow: hidden; }
     background: #fff;
     border-radius: 12px;
     padding: 13px 22px;
+    height: 70px;              /* fixed so both chips match regardless of logo shape */
+    min-width: 150px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
-.host-logo:hover {
+.host-item:hover .host-logo {
     transform: translateY(-3px);
     box-shadow: 0 14px 38px rgba(124, 245, 255, 0.22);
 }
@@ -439,6 +442,19 @@ body.menu-open { overflow: hidden; }
     height: 30px;
     width: auto;
     display: block;
+}
+/* per-logo optical sizing — the two lockups have very different proportions
+   (CNeuroMod ~4.6:1 with a 2-line subtitle, CCN ~8.4:1) */
+.host-item--cneuromod .host-logo img { height: 38px; }
+.host-item--ccn .host-logo img { height: 26px; }
+.host-caption {
+    font-size: 0.7rem;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: var(--c-text-dim);
+    text-align: center;
+    max-width: 200px;   /* wide enough that only the explicit <br> wraps the text */
+    line-height: 1.5;
 }
 
 /* ---------------------------------------------------------------------
