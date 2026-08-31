@@ -347,6 +347,157 @@ body.menu-open { overflow: hidden; }
 }
 
 /* ---------------------------------------------------------------------
+   Team
+   --------------------------------------------------------------------- */
+.team-2027 {
+    position: relative;
+    padding: 96px var(--gutter) 90px;
+    overflow: hidden;
+    background:
+        radial-gradient(closest-side at 50% 0%, rgba(34, 195, 201, 0.20), transparent 72%),
+        linear-gradient(180deg, #160d33 0%, #120a2a 55%, #0d0722 100%);
+    box-shadow: inset 0 -1px 0 var(--c-card-brd);
+}
+
+/* faint pixel mosaic — the same motif as the hero's pixel wave, held way back */
+.team-2027::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    background-image:
+        linear-gradient(45deg, rgba(150, 235, 255, 0.05) 25%, transparent 25%,
+                        transparent 75%, rgba(150, 235, 255, 0.05) 75%);
+    background-size: 46px 46px;
+    -webkit-mask-image: radial-gradient(120% 90% at 50% 0%, #000 20%, transparent 78%);
+    mask-image: radial-gradient(120% 90% at 50% 0%, #000 20%, transparent 78%);
+}
+
+.team-2027-inner {
+    position: relative;
+    z-index: 1;
+    max-width: var(--maxw);
+    margin: 0 auto;
+    text-align: center;
+}
+
+.team-2027 h2 {
+    font-size: clamp(1.8rem, 4vw, 2.6rem);
+    font-weight: 800;
+    margin: 0 0 12px;
+    letter-spacing: -.5px;
+}
+
+.team-2027 p.sub {
+    color: var(--c-text-dim);
+    font-size: 1.1rem;
+    max-width: 46ch;
+    margin: 0 auto 48px;
+}
+
+/* Card grids — two leads on top, the rest in a 4-up grid below */
+.team-grid {
+    display: grid;
+    max-width: 1000px;
+    margin: 0 auto;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: clamp(18px, 2.2vw, 26px) clamp(10px, 1.4vw, 18px);
+    justify-items: center;
+}
+.team-grid--lead {
+    max-width: 640px;
+    margin: 0 auto 34px;
+    gap: clamp(18px, 4vw, 44px);
+    position: relative;
+    padding-bottom: 34px;
+}
+/* hairline that separates the leads from the rest of the team */
+.team-grid--lead::after {
+    content: "";
+    position: absolute;
+    left: 15%;
+    right: 15%;
+    bottom: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--c-card-brd), transparent);
+}
+
+.team-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    max-width: 262px;
+    padding: 14px 10px 16px;
+    border-radius: var(--radius);
+    border: 1px solid transparent;
+    color: var(--c-text);
+    transition: transform .22s ease, background-color .22s ease, border-color .22s ease;
+}
+a.team-card:hover {
+    color: var(--c-text);
+    transform: translateY(-4px);
+    background: var(--c-card);
+    border-color: var(--c-card-brd);
+}
+
+/* Circular portrait with a gradient ring */
+.team-photo {
+    display: block;
+    width: clamp(104px, 12.5vw, 130px);
+    height: clamp(104px, 12.5vw, 130px);
+    border-radius: 50%;
+    padding: 3px;
+    background: linear-gradient(135deg, var(--c-accent), var(--c-violet) 55%, var(--c-magenta));
+    box-shadow: 0 10px 26px rgba(0, 0, 0, .38);
+    transition: box-shadow .22s ease;
+}
+.team-photo img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    background: var(--c-bg-2);
+}
+a.team-card:hover .team-photo {
+    box-shadow: 0 12px 30px rgba(124, 245, 255, .3);
+}
+
+.team-name {
+    margin-top: 14px;
+    font-weight: 600;
+    font-size: 1rem;
+    line-height: 1.3;
+}
+.team-aff {
+    margin-top: 6px;
+    color: var(--c-text-dim);
+    font-size: .88rem;
+    line-height: 1.4;
+}
+
+/* Leads: larger portrait and name */
+.team-card--lead { max-width: 300px; }
+.team-card--lead .team-photo {
+    width: clamp(132px, 15.5vw, 164px);
+    height: clamp(132px, 15.5vw, 164px);
+    padding: 4px;
+}
+.team-card--lead .team-name { margin-top: 18px; font-size: 1.2rem; }
+.team-card--lead .team-aff { font-size: .95rem; }
+
+@media (min-width: 620px) {
+    .team-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .team-grid--lead { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (min-width: 900px) {
+    .team-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+    .team-grid--lead { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+/* ---------------------------------------------------------------------
    Signup section
    --------------------------------------------------------------------- */
 .signup-2027 {
