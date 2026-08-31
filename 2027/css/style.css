@@ -319,11 +319,18 @@ body.menu-open { overflow: hidden; }
     margin-left: .35em;
 }
 
+/* Status + call to action, in one brighter line under the launch badge */
 .hero-2027 .lead {
     margin: clamp(16px, 2.4vw, 22px) auto 0;
-    max-width: 52ch;
-    color: var(--c-text-dim);
-    font-size: 1.1rem;
+    max-width: 50ch;
+    color: rgba(244, 242, 251, 0.88);
+    font-size: clamp(1.05rem, 1.9vw, 1.25rem);
+    line-height: 1.55;
+    text-wrap: balance;
+}
+.hero-2027 .lead strong {
+    color: var(--c-accent);
+    font-weight: 600;
 }
 
 .hero-2027-cta {
