@@ -48,7 +48,7 @@
         var layer = document.getElementById('hero-particles');
         if (!layer || reduceMotion) return;
         var colors = ['124, 245, 255', '182, 168, 255', '255, 255, 255', '150, 235, 255'];
-        for (var i = 0; i < 26; i++) {
+        for (var i = 0; i < 18; i++) {
             var p = document.createElement('span');
             p.className = 'p';
             var size = 2 + Math.random() * 5;
@@ -295,6 +295,23 @@
         });
     }
 
+    /* ---------------- Hero stage: click the blocks or Mario to replay ----------------
+       The scene plays once via CSS (class "play"). Replaying restarts the CSS
+       animations without a start delay. CSS turns all of it off on small
+       screens and with reduced motion. */
+    function initStage() {
+        var stage = document.getElementById('hero-stage');
+        if (!stage || reduceMotion) return;
+        function replay() {
+            if (window.matchMedia && window.matchMedia('(max-width: 960px)').matches) return;
+            stage.classList.remove('play');
+            stage.style.setProperty('--D', '0s');
+            void stage.offsetWidth;          // restart animations
+            stage.classList.add('play');
+        }
+        stage.querySelectorAll('.hs-blk-a, .hs-m').forEach(function (el) { el.addEventListener('click', replay); });
+    }
+
     function init() {
         initNav();
         initFavicon();
@@ -303,6 +320,7 @@
         initTabs();
         initPlaceholders();
         initVideos();
+        initStage();
     }
     if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init);
     else init();

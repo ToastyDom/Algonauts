@@ -54,14 +54,6 @@
         <div class="pixel-wave" aria-hidden="true"></div>
         <div class="hero-particles" id="hero-particles" aria-hidden="true"></div>
 
-        <!-- Sprites cut from the challenge gameplay recordings -->
-        <div class="sprites" aria-hidden="true">
-            <img class="sprite s-block"   src="img/sprites/question_block.png" alt="" width="54" height="54">
-            <img class="sprite s-mario"   src="img/sprites/mario3_jump.png"    alt="" width="60" height="87">
-            <img class="sprite s-goomba"  src="img/sprites/goomba.png"         alt="" width="54" height="48">
-            <img class="sprite s-piranha" src="img/sprites/piranha_plant.png"  alt="" width="54" height="99">
-        </div>
-
         <div class="hero-content">
             <h1>The Algonauts Project 2027 Challenge</h1>
             <p class="tagline">How the Human Brain Makes Sense of Video Games</p>
@@ -71,6 +63,32 @@
             <div class="btn-row">
                 <a href="#" class="btn btn-primary">Challenge Paper</a><!-- TODO: paper link -->
                 <a href="#" class="btn btn-ghost">Development Kit</a><!-- TODO: Colab link -->
+            </div>
+        </div>
+
+        <!-- Hero stage along the bottom edge: Mario runs in, bumps a ? block (a coin pops out),
+             lands and waits; the second ? block keeps flashing. Plays once; click the blocks
+             or Mario to replay. Still image on small screens and with reduced motion.
+             Sprites cut from the challenge recordings (sub-01). -->
+        <div class="hero-stage play" id="hero-stage" aria-hidden="true">
+            <div class="hs-ground"></div>
+            <img class="hs-coin" src="img/sprites/coin.png" alt="" width="42" height="60">
+            <div class="hs-blk hs-blk-a">
+                <img class="hs-q" src="img/sprites/question_block.png" alt="" width="48" height="48">
+                <img class="hs-used" src="img/sprites/used_block.png" alt="" width="48" height="48">
+            </div>
+            <div class="hs-blk hs-blk-b">
+                <img class="hs-q" src="img/sprites/question_block.png" alt="" width="48" height="48">
+            </div>
+            <div class="hs-m">
+                <div class="hs-my">
+                    <div class="hs-run">
+                        <img class="hs-r1" src="img/sprites/mario_run1.png" alt="" width="51" height="48">
+                        <img class="hs-r2" src="img/sprites/mario_run2.png" alt="" width="51" height="48">
+                    </div>
+                    <img class="hs-stand" src="img/sprites/mario_stand.png" alt="" width="45" height="48">
+                    <img class="hs-jump" src="img/sprites/mario_jump.png" alt="" width="48" height="48">
+                </div>
             </div>
         </div>
     </header>
@@ -123,7 +141,7 @@
     </section>
 
     <!-- About the Algonauts Project -->
-    <section class="section section--alt" id="about">
+    <section class="section" id="about">
         <div class="section-inner">
             <h2 class="h2 about-head">The Algonauts Project</h2>
             <div class="about-grid">
@@ -142,7 +160,7 @@
                     <li class="edition"><a href="../../2021/index.html"><span class="ed-year">2021</span><span class="ed-title">How the Human Brain Makes Sense of a World in Motion</span><span class="ed-go" aria-hidden="true">&rsaquo;</span></a></li>
                     <li class="edition"><a href="../../2023/index.html"><span class="ed-year">2023</span><span class="ed-title">How the Human Brain Makes Sense of Natural Scenes</span><span class="ed-go" aria-hidden="true">&rsaquo;</span></a></li>
                     <li class="edition"><a href="../../2025/index.html"><span class="ed-year">2025</span><span class="ed-title">How the Human Brain Makes Sense of Multimodal Movies</span><span class="ed-go" aria-hidden="true">&rsaquo;</span></a></li>
-                    <li class="edition edition--now"><span aria-current="true"><span class="ed-year">2027</span><span class="ed-title">How the Human Brain Makes Sense of Video Games</span><span class="ed-go" aria-hidden="true">&#9664;</span></span></li>
+                    <li class="edition edition--now"><span aria-current="true"><span class="ed-year">2027</span><span class="ed-title">How the Human Brain Makes Sense of Video Games</span><span class="ed-here">This edition</span></span></li>
                 </ol>
             </div>
 
@@ -194,7 +212,7 @@
     </section>
 
     <!-- Resources: each tile pairs a resource with its video -->
-    <section class="section section--alt" id="resources">
+    <section class="section" id="resources">
         <div class="section-inner">
             <div class="section-title">
                 <h2>Challenge resources</h2>
@@ -210,7 +228,7 @@
                 </div>
                 <div class="res">
                     <a class="res-main" href="#"><span class="px-icon" data-px="data"></span><span class="res-title">Challenge Data</span></a><!-- TODO: repository link, or the data access form if the repository is only shared after the form -->
-                    <a class="res-sub" href="data.html"><span class="info" aria-hidden="true">i</span>About the data</a>
+                    <a class="res-sub" href="data.html">About the data</a>
                 </div>
                 <div class="res">
                     <a class="res-main" href="#"><span class="px-icon" data-px="trophy"></span><span class="res-title">CodaBench</span></a><!-- TODO -->
@@ -234,19 +252,19 @@
                     <h3>Development Phase</h3>
                     <p>Training data, Development Kit and the in-distribution leaderboard open.</p>
                 </li>
-                <li class="road-node road-node--gen">
+                <li class="road-node">
                     <span class="road-dot" aria-hidden="true"></span>
                     <time datetime="2027-07-05">Jul 5, 2027</time>
                     <h3>Generalization Phase</h3>
                     <p>The unseen games are revealed. One week of out-of-distribution testing.</p>
                 </li>
-                <li class="road-node road-node--win">
+                <li class="road-node">
                     <span class="road-dot" aria-hidden="true"></span>
                     <time datetime="2027-07-12">Jul 12, 2027</time>
                     <h3>Winners announced</h3>
                     <p>Final ranking based on the Generalization Phase.</p>
                 </li>
-                <li class="road-node road-node--goal">
+                <li class="road-node">
                     <span class="road-dot" aria-hidden="true"><span class="road-flag"></span></span>
                     <time datetime="2027-07-26">Jul 26, 2027</time>
                     <h3>Session at CCN 2027</h3>
@@ -261,7 +279,7 @@
     </section>
 
     <!-- Papers + contact -->
-    <section class="section section--alt" id="papers">
+    <section class="section" id="papers">
         <div class="section-inner two-col">
             <div>
                 <h3>Papers</h3>
@@ -341,13 +359,13 @@
     </section>
 
     <!-- Stay updated -->
-    <section class="section section--alt" id="signup">
+    <section class="section" id="signup">
         <div class="section-inner">
             <div class="section-title">
                 <h2>Stay Updated</h2>
                 <p>Join our mailing list to receive the launch announcement and updates on the 2027 challenge.</p>
             </div>
-            <div class="signup-card">
+            <div class="signup-frame">
                 <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSckFheQH88lZ5q_WxoAwn2WJs_nVs7NhITD7ZBsmSGFAuD2-Q/viewform?embedded=true"
                     width="100%" height="700" loading="lazy" title="Algonauts Project mailing list signup">Loading…</iframe>
             </div>

@@ -63,11 +63,11 @@
         <div class="dates-strip-inner">
             <div class="dates-strip-head"><h2 id="dates-title">Important dates</h2><span>Provisional</span></div>
             <dl class="dates-list">
-                <div><dt><span class="dot" style="background:#45c2a6"></span>Development Phase</dt><dd>Dec 1, 2026 – Jul 4, 2027</dd></div>
-                <div><dt><span class="dot" style="background:#a78cf2"></span>Generalization Phase</dt><dd>Jul 5 – Jul 11, 2027</dd></div>
-                <div><dt><span class="dot" style="background:#ffd166"></span>Winners announced</dt><dd>Jul 12, 2027</dd></div>
-                <div><dt><span class="dot" style="background:#ff7ad9"></span>Session at CCN 2027</dt><dd>Jul 26, 2027</dd></div>
-                <div><dt><span class="dot" style="background:#bdb8cc"></span>Report and code deadline</dt><dd>To be announced</dd></div>
+                <div><dt>Development Phase</dt><dd>Dec 1, 2026 – Jul 4, 2027</dd></div>
+                <div><dt>Generalization Phase</dt><dd>Jul 5 – Jul 11, 2027</dd></div>
+                <div><dt>Winners announced</dt><dd>Jul 12, 2027</dd></div>
+                <div><dt>Session at CCN 2027</dt><dd>Jul 26, 2027</dd></div>
+                <div><dt>Report and code deadline</dt><dd>To be announced</dd></div>
             </dl>
         </div>
     </section>
@@ -91,6 +91,38 @@
                 Algonauts challenge proposes an open and quantitative test of how well computational models do today. The
                 2027 challenge targets brain responses during active video game play, where subjects’ decisions and
                 actions shape what they see and hear next.</p>
+            </div>
+
+            <!-- Figure 1 from the paper (light figure on a white mat; only the PNG is available) -->
+            <figure class="figure fig1-full">
+                <a class="figure-mat" href="img/fig1_challenge_overview.png" target="_blank" rel="noopener">
+                    <img src="img/fig1_challenge_overview.png" alt="Figure 1: Overview of the Algonauts Project 2027 challenge. Panel A: gameplay video, audio, controller actions and game events from Super Mario Bros., Super Mario All-Stars, Super Mario Bros. 3 and Shinobi III feed an encoding model that predicts fMRI responses in 1,134 brain parcels. Panel B: the Development Phase (model building and in-distribution testing), the Generalization Phase (out-of-distribution testing on unseen games and final ranking) and the Post-challenge Phase (ongoing public benchmark), with a timeline from launch at the end of 2026 to the winner showcase at CCN 2027." width="2200" height="1850">
+                </a>
+                <figcaption><strong>Figure 1 | Overview of the challenge.</strong> (A) Video, audio, controller actions and
+                game events from four development games serve as input to encoding models that predict fMRI responses
+                across 1,134 brain parcels. (B) Models are tested in-distribution during the Development Phase and
+                out-of-distribution during the Generalization Phase, which determines the final ranking. Both evaluations
+                continue as public benchmarks after the challenge.
+                <br><a class="fig-open" href="img/fig1_challenge_overview.png" target="_blank" rel="noopener">Open full size &#8599;</a></figcaption>
+            </figure>
+
+            <!-- Phones: a simpler, text-based version of Figure 1 with the same inputs and phases -->
+            <div class="fig-web" role="group" aria-label="Figure 1, simplified">
+                <p class="label">Figure 1, simplified</p>
+                <ol class="fw-flow">
+                    <li><span class="fw-k">Input</span><strong>Gameplay</strong><span>Video, audio, controller actions and game events from Super Mario Bros., Super Mario All-Stars, Super Mario Bros. 3 and Shinobi III</span></li>
+                    <li><span class="fw-k">Model</span><strong>Encoding model</strong></li>
+                    <li><span class="fw-k">Output</span><strong>Predicted fMRI</strong><span>1,134 brain parcels</span></li>
+                </ol>
+                <ol class="fw-phases">
+                    <li><span class="fw-k">Phase 1</span><strong>Development Phase</strong><span>Model building and in-distribution (ID) testing on held-out Super Mario Bros. 3 levels and Super Mario All-Stars runs</span></li>
+                    <li><span class="fw-k">Phase 2</span><strong>Generalization Phase</strong><span>Out-of-distribution (OOD) testing on unseen games and final ranking</span></li>
+                    <li><span class="fw-k">After the challenge</span><strong>Post-Challenge Phase</strong><span>Ongoing public ID and OOD benchmark</span></li>
+                </ol>
+                <p style="margin-top:14px"><a class="text-link" href="img/fig1_challenge_overview.png" target="_blank" rel="noopener">Open the original Figure 1 &#8599;</a></p>
+            </div>
+
+            <div class="prose block">
                 <p>We provide gameplay video, audio, controller actions and annotated game events from four retro video
                 games, together with the corresponding fMRI responses of six subjects. Challenge participants build
                 encoding models that predict brain responses for held-out gameplay from these games (in-distribution, ID)
@@ -101,16 +133,6 @@
                     <a href="#" class="btn btn-ghost">Participate on CodaBench</a><!-- TODO -->
                 </div>
             </div>
-            <figure class="figure">
-                <a href="img/fig1_challenge_overview.png" target="_blank" rel="noopener">
-                    <img src="img/fig1_challenge_overview.png" alt="Figure 1: Overview of the Algonauts Project 2027 challenge, showing the development games and stimulus modalities feeding an encoding model, and the Development, Generalization and Post-challenge phases." width="2200" height="1850" loading="lazy">
-                </a>
-                <figcaption><strong>Figure 1 | Overview of the challenge.</strong> (A) Video, audio, controller actions and
-                game events from four development games serve as input to encoding models that predict fMRI responses
-                across 1,134 brain parcels. (B) Models are tested in-distribution during the Development Phase and
-                out-of-distribution during the Generalization Phase, which determines the final ranking. Both evaluations
-                continue as public benchmarks after the challenge.</figcaption>
-            </figure>
         </div>
     </section>
 
@@ -122,9 +144,9 @@
                 <table class="table">
                     <thead><tr><th>Phase</th><th>Dates</th><th>Test data (fMRI withheld)</th><th>Submissions</th></tr></thead>
                     <tbody>
-                        <tr><td><span class="dot" style="background:#45c2a6"></span>Development Phase</td><td>Dec 1, 2026 – Jul 4, 2027</td><td>Held-out levels of Super Mario Bros. 3 and held-out runs of Super Mario All-Stars (ID)</td><td>Unlimited</td></tr>
-                        <tr><td><span class="dot" style="background:#a78cf2"></span>Generalization Phase</td><td>Jul 5 – Jul 11, 2027</td><td>Previously unseen games (OOD), determines the final ranking</td><td>Up to 10</td></tr>
-                        <tr><td><span class="dot" style="background:#bdb8cc"></span>Post-Challenge Benchmark</td><td>Indefinite</td><td>ID and OOD test sets, separate leaderboards</td><td>Unlimited</td></tr>
+                        <tr><td>Development Phase</td><td>Dec 1, 2026 – Jul 4, 2027</td><td>Held-out levels of Super Mario Bros. 3 and held-out runs of Super Mario All-Stars (ID)</td><td>Unlimited</td></tr>
+                        <tr><td>Generalization Phase</td><td>Jul 5 – Jul 11, 2027</td><td>Previously unseen games (OOD), determines the final ranking</td><td>Up to 10</td></tr>
+                        <tr><td>Post-Challenge Benchmark</td><td>Indefinite</td><td>ID and OOD test sets, separate leaderboards</td><td>Unlimited</td></tr>
                     </tbody>
                 </table>
             </div>
