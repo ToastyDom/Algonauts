@@ -53,8 +53,7 @@
         <div class="page-head-inner">
             <nav class="crumbs" aria-label="Breadcrumb"><a href="index.html">2027 Challenge</a> / <span>Challenge Details</span></nav>
             <h1>Challenge Details</h1>
-            <p class="lead">How the Algonauts Project 2027 challenge works: phases and dates, evaluation, rules, and the
-            baseline model.</p>
+            <p class="lead">Challenge phases and dates, prediction accuracy, submission rules, and the baseline encoding model.</p>
         </div>
     </header>
 
@@ -87,10 +86,7 @@
         <div class="panel-inner">
             <div class="prose">
                 <h2>Challenge overview</h2>
-                <p>Understanding how the human brain works is one of the key challenges that science and society face. The
-                Algonauts challenge proposes an open and quantitative test of how well computational models do today. The
-                2027 challenge targets brain responses during active video game play, where subjects’ decisions and
-                actions shape what they see and hear next.</p>
+                <p>The 2027 challenge evaluates how well encoding models predict brain responses during active video game play. Players’ decisions and actions shape what they subsequently see and hear, linking sensory input to behavior.</p>
             </div>
 
             <!-- Figure 1 from the paper (light figure on a white mat; only the PNG is available) -->
@@ -117,7 +113,7 @@
                 <ol class="fw-phases">
                     <li><span class="fw-k">Phase 1</span><strong>Development Phase</strong><span>Model building and in-distribution (ID) testing on held-out Super Mario Bros. 3 levels and Super Mario All-Stars runs</span></li>
                     <li><span class="fw-k">Phase 2</span><strong>Generalization Phase</strong><span>Out-of-distribution (OOD) testing on unseen games and final ranking</span></li>
-                    <li><span class="fw-k">After the challenge</span><strong>Post-Challenge Phase</strong><span>Ongoing public ID and OOD benchmark</span></li>
+                    <li><span class="fw-k">After the challenge</span><strong>Post-Challenge Benchmark</strong><span>Ongoing public ID and OOD benchmark</span></li>
                 </ol>
                 <p style="margin-top:14px"><a class="text-link" href="img/fig1_challenge_overview.png" target="_blank" rel="noopener">Open the original Figure 1 &#8599;</a></p>
             </div>
@@ -153,11 +149,10 @@
             <div class="prose block">
                 <p><strong>Development Phase.</strong> Challenge participants train their encoding models on gameplay and
                 fMRI responses from all four games, and test them in-distribution on held-out gameplay: selected levels of
-                Super Mario Bros. 3 and selected runs of Super Mario All-Stars. The gameplay of these is released, while
-                the fMRI responses are withheld. A public leaderboard gives feedback on submissions.</p>
+                Super Mario Bros. 3 and selected runs of Super Mario All-Stars. We release the gameplay data for these levels and runs and withhold the corresponding fMRI responses. Participants receive prediction accuracy scores through a public leaderboard.</p>
                 <p><strong>Generalization Phase.</strong> At the beginning of this phase, we release about two hours of
                 gameplay per subject from games that are not part of the development data, and withhold the corresponding
-                fMRI responses. The identities of these games are not revealed before the phase begins. They were selected
+                fMRI responses. We reveal the identities of these games when the Generalization Phase begins. They were selected
                 to differ from the Mario-family games in visual appearance, behavioral demands and cognitive demands.
                 Performance in this phase determines the final ranking.</p>
                 <p><strong>Post-Challenge Benchmark.</strong> Once the challenge is over, both leaderboards remain open
@@ -170,15 +165,11 @@
     <section class="panel" id="evaluation" role="tabpanel" aria-labelledby="tab-evaluation">
         <div class="panel-inner prose">
             <h2>Evaluation</h2>
-            <p>After each submission, the scoring program correlates (Pearson’s <em>r</em>) the predicted and withheld fMRI
-            responses for each of the 1,134 brain parcels, separately for each subject and game. Predictions are joined
-            across all evaluated gameplay recordings into one continuous sequence, so longer recordings contribute more time
-            points. These correlation scores are averaged first across parcels, then across subjects, and finally across
+            <p>For each subject and game, the scoring program concatenates the predicted and withheld fMRI responses across evaluated gameplay recordings. Longer recordings contribute more time points. It then computes Pearson’s correlation coefficient (<em>r</em>) between the two time series for each of the 1,134 brain parcels. These correlation scores are averaged first across parcels, then across subjects, and finally across
             games with equal weight, resulting in a single score for each submission.</p>
             <p>Five subjects are evaluated: <span class="subj">sub-01</span>, <span class="subj">sub-02</span>,
             <span class="subj">sub-03</span>, <span class="subj">sub-05</span> and <span class="subj">sub-06</span>.
-            Subject <span class="subj">sub-04</span>, who only played Shinobi III, is not evaluated; its data are provided
-            as additional training data.</p>
+            Subject <span class="subj">sub-04</span> played only Shinobi III. Data from this subject are provided for training only.</p>
         </div>
     </section>
 
@@ -206,26 +197,24 @@
         <div class="panel-inner">
             <div class="prose">
                 <h2>Development Kit</h2>
-                <p>To facilitate participation, we provide a Python Development Kit as an interactive notebook, which runs on
-                Google Colab or locally in Jupyter. It accompanies users through the challenge in five steps:</p>
+                <p>The Development Kit is an interactive Python notebook that runs on Google Colab or locally in Jupyter. It introduces the challenge data, walks through the baseline encoding model, and explains how to prepare a submission.</p>
             </div>
             <ol class="num-list num-list--zero">
                 <li><strong>Setup:</strong> install the required libraries and access the tutorial data.</li>
                 <li><strong>Data familiarization:</strong> explore gameplay recordings, controller actions, game events and fMRI responses.</li>
                 <li><strong>Feature extraction:</strong> extract visual, audio, controller-action and game-event features.</li>
-                <li><strong>Encoding model:</strong> train and test an fMRI encoding model.</li>
-                <li><strong>Submission:</strong> prepare predicted fMRI responses for CodaBench.</li>
+                <li><strong>Encoding model training:</strong> train and test an fMRI encoding model using the supplied features.</li>
+                <li><strong>Challenge submission:</strong> prepare and format predicted fMRI responses for submission to CodaBench.</li>
             </ol>
             <div class="btn-row" style="margin-top:10px">
                 <a href="#" class="btn btn-primary">Development Kit</a><!-- TODO -->
-                <a href="#" class="btn btn-ghost">Development Kit video</a><!-- TODO -->
+                <a href="#" class="btn btn-ghost">Development Kit tutorial video</a><!-- TODO -->
             </div>
 
             <div class="block">
                 <div class="prose">
                     <h2>Baseline model</h2>
-                    <p>The challenge baseline is a simple multimodal encoding model and an accessible starting point, not a
-                    restriction on your methods. Features from four stimulus modalities are aligned to the 1.49-second fMRI
+                    <p>The baseline is a multimodal encoding model provided as an educational starting point. Participants may use their own features, model architectures, and training strategies. Features from four stimulus modalities are aligned to the 1.49-second fMRI
                     sampling grid, combined across a window of recent gameplay shifted for the hemodynamic delay, and mapped
                     onto each of the 1,134 parcels with ridge regression. Baseline accuracy: <em>to be announced</em>.</p>
                 </div>
@@ -243,10 +232,10 @@
             </div>
 
             <div class="block prose">
-                <h2>How to predict brain data?</h2>
-                <p>We put close to no restrictions on how you predict brain data (see <a href="#rules">Rules</a>). A commonly
-                used approach is the linearizing encoding model, where the response of each brain parcel is independently
-                predicted from stimulus features of a computational model, typically with linear regression
+                <h2>Encoding models for fMRI prediction</h2>
+                <p>Participants may choose their modeling approach within the <a href="#rules">challenge rules</a>.
+                One common approach is a linearizing encoding model. It predicts the fMRI response of each brain parcel
+                independently from features extracted by a computational model, typically using linear regression
                 (<a href="https://doi.org/10.1146/annurev.neuro.29.051605.113024" target="_blank" rel="noopener">Wu et al., 2006</a>;
                 <a href="https://doi.org/10.1016/j.neuroimage.2010.07.073" target="_blank" rel="noopener">Naselaris et al., 2011</a>;
                 <a href="https://doi.org/10.1016/j.conb.2019.04.002" target="_blank" rel="noopener">Kriegeskorte &amp; Douglas, 2019</a>).
@@ -260,7 +249,7 @@
         <div class="section-inner two-col">
             <div>
                 <h3>Acknowledgements</h3>
-                <p class="small">The Algonauts Project 2027 challenge is supported by <em>[funding acknowledgements to be
+                <p class="small">The Algonauts Project 2027 Challenge is supported by <em>[funding acknowledgements to be
                 confirmed]</em>. The Courtois project on neural modelling was made possible by a generous donation from the
                 Courtois foundation, administered by the Fondation Institut Gériatrie Montréal at CIUSSS du
                 Centre-Sud-de-l’île-de-Montréal and University of Montreal.</p>

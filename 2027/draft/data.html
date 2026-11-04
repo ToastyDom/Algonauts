@@ -54,8 +54,7 @@
             <div>
                 <nav class="crumbs" aria-label="Breadcrumb"><a href="index.html">2027 Challenge</a> / <span>Challenge Data</span></nav>
                 <h1>Challenge Data</h1>
-                <p class="lead">Gameplay recordings, annotations and whole-brain fMRI responses from the Courtois NeuroMod
-                Project, recorded while subjects played four retro video games.</p>
+                <p class="lead">The Courtois NeuroMod Project recorded gameplay video, audio, controller actions, game events, and corresponding whole-brain fMRI responses while subjects played four retro video games.</p>
                 <div class="btn-row">
                     <a href="#" class="btn btn-primary">Request data access</a><!-- TODO: data access form -->
                 </div>
@@ -171,8 +170,7 @@
                 <div>
                     <span class="phase-label">Generalization Phase · out-of-distribution testing</span>
                     <h2 id="unseen-title">Unseen games</h2>
-                    <p>The games used for out-of-distribution testing are not part of the development data. Their titles are
-                    revealed when the Generalization Phase begins.</p>
+                    <p>The Generalization Phase evaluates out-of-distribution (OOD) generalization to games absent from the development data. We reveal the game titles at the start of the phase.</p>
                     <p>About two hours of gameplay per subject will then be released, with the fMRI responses withheld.
                     Performance on these games determines the final ranking.</p>
                 </div>
@@ -183,8 +181,7 @@
                 <div class="prose">
                     <h2>Subjects</h2>
                     <p>Subject coverage differs across games. Five subjects played the three Mario games and four played
-                    Shinobi III. Subject <span class="subj">sub-04</span> only played Shinobi III; it is not evaluated, but its
-                    data can be used for training.</p>
+                    Shinobi III. Subject <span class="subj">sub-04</span> played only Shinobi III. Data from this subject are provided for training only.</p>
                 </div>
                 <div class="table-wrap">
                     <table class="coverage">
@@ -226,8 +223,7 @@
         <div class="panel-inner">
             <div class="prose">
                 <h2>Gameplay recordings and annotations</h2>
-                <p>Every gameplay recording comes with timestamped controller actions and game events on the same timeline
-                as the fMRI data. Here is one real moment from the data.</p>
+                <p>The events table for each fMRI run contains timestamped controller actions and game events. The example below aligns three video frames with annotations from the same gameplay recording.</p>
             </div>
 
             <!-- Real aligned example: frames from the recording, values from its events table -->
@@ -303,13 +299,13 @@ Enemy_defeated/Stomp/Goomba   9.763   0.0       586          586</pre>
 
             <!-- Compact inventory of modalities -->
             <div class="block-rule">
-                <h2>What every recording includes</h2>
+                <h2>Gameplay data and timing</h2>
                 <dl class="dl">
                     <dt>Video and audio</dt>
                     <dd>One <code>.mp4</code> file per gameplay repetition, a single attempt at a level, at 60 frames per second.
                     In Super Mario Bros. 3, each repetition corresponds to one life, so an attempt can span several recordings.</dd>
                     <dt>Controller actions</dt>
-                    <dd>The player’s button presses and how long they were held, labelled <code>Action/Right</code>,
+                    <dd>Button presses and their durations, labeled <code>Action/Right</code>,
                     <code>Action/Jump</code>, <code>Action/Attack</code>, …</dd>
                     <dt>Game events</dt>
                     <dd>Occurrences such as <code>Item_collected/Coin</code>, <code>Enemy_defeated/Stomp/Goomba</code>,
@@ -346,11 +342,8 @@ Enemy_defeated/Stomp/Goomba   9.763   0.0       586          586</pre>
     <section class="panel" id="brain" role="tabpanel" aria-labelledby="tab-brain">
         <div class="panel-inner">
             <div class="prose">
-                <h2>Brain response measurement: fMRI</h2>
-                <p>We provide measurements of brain responses using functional magnetic resonance imaging (fMRI), which
-                measures brain activity indirectly by detecting changes in blood flow. fMRI is a core technique in cognitive
-                neuroscience to observe the human brain in action noninvasively. The response is delayed: it typically peaks
-                around 5–6 seconds after a neural event.</p>
+                <h2>fMRI responses</h2>
+                <p>We provide functional magnetic resonance imaging (fMRI) responses recorded during gameplay. The blood oxygenation level dependent (BOLD) signal measures brain activity indirectly through changes in blood oxygenation. The hemodynamic response typically peaks about 5–6 seconds after a brief neural event.</p>
                 <p>The neural data were derived from preprocessed BOLD images in MNI template space using the CNeuroMod time
                 series extraction pipeline. The voxel time series were denoised for motion, tissue and global signal
                 contributions and slow drift, smoothed with a 5 mm FWHM kernel and standardized within each run, then

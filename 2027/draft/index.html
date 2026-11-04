@@ -58,8 +58,7 @@
             <h1>The Algonauts Project 2027 Challenge</h1>
             <p class="tagline">How the Human Brain Makes Sense of Video Games</p>
             <p class="launch-badge">Launching <strong>end of 2026</strong></p>
-            <p class="lead">Build models that predict human brain activity during video game play, and test whether
-            they generalize to new levels and entirely new games.</p>
+            <p class="lead">Build encoding models that predict brain responses during video game play and test how well they generalize to new levels and games.</p>
             <div class="btn-row">
                 <a href="#" class="btn btn-primary">Challenge Paper</a><!-- TODO: paper link -->
                 <a href="#" class="btn btn-ghost">Development Kit</a><!-- TODO: Colab link -->
@@ -125,13 +124,13 @@
                 <ul class="news-list">
                     <li>
                         <time datetime="2026-11">Nov 2026</time>
-                        <p><strong>The Algonauts Project 2027 challenge will be online soon!</strong> The challenge paper,
-                        Development Kit and data will be released at the end of 2026. <a href="#signup">Join our mailing
+                        <p><strong>The Algonauts Project 2027 Challenge will launch at the end of 2026.</strong> The challenge paper,
+                        Development Kit and challenge data will be released at launch. <a href="#signup">Join our mailing
                         list</a> to be notified.</p>
                     </li>
                     <li>
                         <time datetime="2026-07">Jul 2026</time>
-                        <p>We announced the Algonauts Project 2027 challenge, <em>How the Human Brain Makes Sense of Video
+                        <p>We announced the Algonauts Project 2027 Challenge, <em>How the Human Brain Makes Sense of Video
                         Games</em>, in collaboration with the Courtois NeuroMod Project, concluding with a session at
                         CCN 2027 in Edinburgh.</p>
                     </li>
@@ -178,20 +177,15 @@
         <div class="section-inner">
             <div class="section-title">
                 <h2>The 2027 Challenge</h2>
-                <p>From watching movies to playing games.</p>
+                <p>Predicting brain responses during active video game play</p>
             </div>
             <div class="challenge-grid">
                 <div class="prose">
                     <p class="big">Video gameplay brings together perception, decision making, and action in dynamic
                     environments.</p>
-                    <p>Subjects interpret audiovisual information, influence their subsequent sensory experience through their
-                    decisions and actions, and respond to events such as encountering enemies, collecting items, or taking
-                    damage. The goal of the Algonauts Project 2027 challenge is to develop fMRI encoding models that predict
-                    brain responses during video game play and that generalize to new levels and games.</p>
+                    <p>During gameplay, players’ decisions and actions shape what they subsequently see and hear. The challenge asks participants to predict functional magnetic resonance imaging (fMRI) responses in this setting and test whether their models generalize to new levels and games.</p>
                     <p>In collaboration with the <a href="https://www.cneuromod.ca/" target="_blank" rel="noopener">Courtois
-                    NeuroMod Project (CNeuroMod)</a>, the challenge provides large scale fMRI recordings acquired while
-                    subjects played Super Mario Bros., Super Mario All-Stars, Super Mario Bros. 3 and Shinobi III. Final
-                    rankings are based on how well models generalize to previously unseen games.</p>
+                    NeuroMod Project (CNeuroMod)</a>, the challenge provides gameplay video, audio, controller actions, annotated game events, and corresponding fMRI responses from subjects who played Super Mario Bros., Super Mario All-Stars, Super Mario Bros. 3 and Shinobi III. Performance on previously unseen games determines the final challenge ranking.</p>
                     <div class="btn-row">
                         <a href="challenge.html" class="btn btn-primary">Challenge details &rarr;</a>
                     </div>
@@ -205,7 +199,7 @@
                             <span class="vt">Introduction to the 2027 challenge</span>
                         </a>
                     </div>
-                    <p class="video-cap">Introduction video to the Algonauts Project 2027 challenge.</p>
+                    <p class="video-cap">Challenge overview video.</p>
                 </div>
             </div>
         </div>
@@ -220,11 +214,11 @@
             <div class="res-grid">
                 <div class="res">
                     <a class="res-main" href="#"><span class="px-icon" data-px="paper"></span><span class="res-title">Challenge Paper</span></a><!-- TODO -->
-                    <a class="res-sub" href="#"><span class="tri" aria-hidden="true"></span>Introduction video</a><!-- TODO -->
+                    <a class="res-sub" href="#"><span class="tri" aria-hidden="true"></span>Challenge overview video</a><!-- TODO -->
                 </div>
                 <div class="res">
                     <a class="res-main" href="#"><span class="px-icon" data-px="kit"></span><span class="res-title">Development Kit</span></a><!-- TODO -->
-                    <a class="res-sub" href="#"><span class="tri" aria-hidden="true"></span>Development Kit video</a><!-- TODO -->
+                    <a class="res-sub" href="#"><span class="tri" aria-hidden="true"></span>Development Kit tutorial video</a><!-- TODO -->
                 </div>
                 <div class="res">
                     <a class="res-main" href="#"><span class="px-icon" data-px="data"></span><span class="res-title">Challenge Data</span></a><!-- TODO: repository link, or the data access form if the repository is only shared after the form -->
@@ -232,7 +226,7 @@
                 </div>
                 <div class="res">
                     <a class="res-main" href="#"><span class="px-icon" data-px="trophy"></span><span class="res-title">CodaBench</span></a><!-- TODO -->
-                    <a class="res-sub" href="#"><span class="tri" aria-hidden="true"></span>Submission video</a><!-- TODO -->
+                    <a class="res-sub" href="#"><span class="tri" aria-hidden="true"></span>CodaBench submission walkthrough</a><!-- TODO -->
                 </div>
             </div>
         </div>
@@ -250,13 +244,13 @@
                     <span class="road-dot" aria-hidden="true"></span>
                     <time datetime="2026-12-01">Dec 1, 2026</time>
                     <h3>Development Phase</h3>
-                    <p>Training data, Development Kit and the in-distribution leaderboard open.</p>
+                    <p>Training data and the Development Kit are released, and the in-distribution leaderboard opens.</p>
                 </li>
                 <li class="road-node">
                     <span class="road-dot" aria-hidden="true"></span>
                     <time datetime="2027-07-05">Jul 5, 2027</time>
                     <h3>Generalization Phase</h3>
-                    <p>The unseen games are revealed. One week of out-of-distribution testing.</p>
+                    <p>The unseen games are revealed for one week of out-of-distribution evaluation.</p>
                 </li>
                 <li class="road-node">
                     <span class="road-dot" aria-hidden="true"></span>
@@ -283,7 +277,7 @@
         <div class="section-inner two-col">
             <div>
                 <h3>Papers</h3>
-                <p>If you use the resources provided for the Algonauts Project 2027 challenge, please cite the following papers:</p>
+                <p>If you use the resources provided for the Algonauts Project 2027 Challenge, please cite the following papers:</p>
                 <p class="cite">Bersch D, Gifford AT, St-Laurent M, Pinsard B, Harel Y, Boyle J, Bellec L, Oliva A, Roig G,
                 Cichy RM. The Algonauts Project 2027 Challenge: How the Human Brain Makes Sense of Video Games.
                 <em>Preprint link to be added.</em></p>
@@ -293,7 +287,7 @@
                 <h3>Contact</h3>
                 <p>For general inquiries about the Algonauts Project, please contact
                 <a href="mailto:algonauts.mit@gmail.com">algonauts.mit@gmail.com</a>.</p>
-                <p>For specific questions about the Algonauts Project 2027 challenge, please use the
+                <p>For specific questions about the Algonauts Project 2027 Challenge, please use the
                 <a href="#">CodaBench Forum</a>.</p><!-- TODO -->
                 <p>To stay updated on present and future challenges, <a href="#signup">join our mailing list</a> or follow
                 us on <a href="https://bsky.app/profile/algonautsproject.bsky.social" target="_blank" rel="noopener">Bluesky</a>
