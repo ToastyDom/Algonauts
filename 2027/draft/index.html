@@ -1,0 +1,386 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>The Algonauts Project 2027 Challenge</title>
+    <meta name="description" content="The Algonauts Project 2027 Challenge: How the Human Brain Makes Sense of Video Games. Build encoding models that predict fMRI responses during video game play and generalize to new levels and unseen games.">
+    <meta name="author" content="The Algonauts Project">
+    <!-- DRAFT: keep out of search engines and analytics until this replaces 2027/index.html -->
+    <meta name="robots" content="noindex, nofollow">
+    <link rel="icon" id="favicon" data-base="../../img/2024/" type="image/png" href="../../img/2024/logo_icon_light.png" sizes="32x32">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/draft.css">
+</head>
+
+<body class="page-home">
+    <div class="draft-ribbon" aria-hidden="true">Draft preview</div>
+
+    <nav class="nav" id="nav" aria-label="Main">
+        <div class="nav-inner">
+            <a href="../../index.html" class="nav-logo">
+                <img src="../../img/2024/logo_icon_dark.png" alt="">
+                <span>The Algonauts Project</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active" aria-current="page">2027 Challenge</a></li>
+                <li><a href="challenge.html">Challenge Details</a></li>
+                <li><a href="data.html">Challenge Data</a></li>
+                <li><a href="#team">Team</a></li>
+                <li><a href="#signup">Stay Updated</a></li>
+                <li><a href="../../2025/archive.html">Archive</a></li>
+            </ul>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-overlay">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+    <div class="nav-overlay" id="nav-overlay">
+        <ul>
+            <li><a href="index.html" class="active">2027 Challenge</a></li>
+            <li><a href="challenge.html">Challenge Details</a></li>
+            <li><a href="data.html">Challenge Data</a></li>
+            <li><a href="#team">Team</a></li>
+            <li><a href="#signup">Stay Updated</a></li>
+            <li><a href="../../2025/archive.html">Archive</a></li>
+            <li><a href="../../index.html">Algonauts Project</a></li>
+        </ul>
+    </div>
+
+    <!-- Hero -->
+    <header class="hero" id="top">
+        <div class="pixel-wave" aria-hidden="true"></div>
+        <div class="hero-particles" id="hero-particles" aria-hidden="true"></div>
+
+        <!-- Sprites cut from the challenge gameplay recordings -->
+        <div class="sprites" aria-hidden="true">
+            <img class="sprite s-block"   src="img/sprites/question_block.png" alt="" width="54" height="54">
+            <img class="sprite s-mario"   src="img/sprites/mario3_jump.png"    alt="" width="60" height="87">
+            <img class="sprite s-goomba"  src="img/sprites/goomba.png"         alt="" width="54" height="48">
+            <img class="sprite s-piranha" src="img/sprites/piranha_plant.png"  alt="" width="54" height="99">
+        </div>
+
+        <div class="hero-content">
+            <h1>The Algonauts Project 2027 Challenge</h1>
+            <p class="tagline">How the Human Brain Makes Sense of Video Games</p>
+            <p class="launch-badge">Launching <strong>end of 2026</strong></p>
+            <p class="lead">Build models that predict human brain activity during video game play, and test whether
+            they generalize to new levels and entirely new games.</p>
+            <div class="btn-row">
+                <a href="#" class="btn btn-primary">Challenge Paper</a><!-- TODO: paper link -->
+                <a href="#" class="btn btn-ghost">Development Kit</a><!-- TODO: Colab link -->
+            </div>
+        </div>
+    </header>
+
+    <!-- HUD strip: challenge at a glance -->
+    <div class="hud" role="region" aria-label="Challenge at a glance">
+        <div class="hud-inner">
+            <div class="hud-item"><span class="hud-k">Status</span><span class="hud-v">Launching end of 2026</span></div>
+            <div class="hud-item"><span class="hud-k">Games</span><span class="hud-v">4 + unseen</span></div>
+            <div class="hud-item"><span class="hud-k">Subjects</span><span class="hud-v">6</span></div>
+            <div class="hud-item"><span class="hud-k">Brain parcels</span><span class="hud-v">1,134</span></div>
+            <div class="hud-item"><span class="hud-k">Finale</span><span class="hud-v">CCN 2027 · Edinburgh</span></div>
+        </div>
+    </div>
+
+    <!-- Logo + news -->
+    <section class="section" id="news">
+        <div class="section-inner news-grid">
+            <div class="news-brand">
+                <img class="brand-logo" src="../../img_AP/logo_text_dark.png" alt="The Algonauts Project logo">
+                <div class="hosts">
+                    <a class="host host--cneuromod" href="https://www.cneuromod.ca/" target="_blank" rel="noopener">
+                        <span class="host-chip"><img src="../img/CneuroMod.png" alt="CNeuroMod — The Courtois Project on Neuronal Modelling"></span>
+                        <span class="host-cap">In collaboration with</span>
+                    </a>
+                    <a class="host host--ccn" href="http://2027.ccneuro.org/" target="_blank" rel="noopener">
+                        <span class="host-chip"><img src="../../img/2024/ccn_logo.png" alt="Cognitive Computational Neuroscience (CCN)"></span>
+                        <span class="host-cap">Hosted at CCN 2027</span>
+                    </a>
+                </div>
+            </div>
+            <div class="news">
+                <h2>News</h2>
+                <ul class="news-list">
+                    <li>
+                        <time datetime="2026-11">Nov 2026</time>
+                        <p><strong>The Algonauts Project 2027 challenge will be online soon!</strong> The challenge paper,
+                        Development Kit and data will be released at the end of 2026. <a href="#signup">Join our mailing
+                        list</a> to be notified.</p>
+                    </li>
+                    <li>
+                        <time datetime="2026-07">Jul 2026</time>
+                        <p>We announced the Algonauts Project 2027 challenge, <em>How the Human Brain Makes Sense of Video
+                        Games</em>, in collaboration with the Courtois NeuroMod Project, concluding with a session at
+                        CCN 2027 in Edinburgh.</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- About the Algonauts Project -->
+    <section class="section section--alt" id="about">
+        <div class="section-inner">
+            <h2 class="h2 about-head">The Algonauts Project</h2>
+            <div class="about-grid">
+                <div class="prose">
+                    <p class="big">The Algonauts Project, first launched in 2019, is on a mission to bring biological and
+                    machine intelligence researchers together on a common platform to exchange ideas and explore the
+                    intelligence frontier.</p>
+                    <p>Inspired by astronauts’ exploration of space, “algonauts” explore biological and artificial
+                    intelligence with state-of-the-art algorithmic tools, advancing both fields. Previous challenges studied
+                    brain responses to images, short videos and multimodal movies. The 2027 challenge extends this
+                    progression to active video game play.</p>
+                    <a href="../../index.html" class="text-link">More about the Algonauts Project &rarr;</a>
+                </div>
+                <ol class="editions" aria-label="Challenge editions">
+                    <li class="edition"><a href="../../2019/index.html"><span class="ed-year">2019</span><span class="ed-title">Explaining the Human Visual Brain</span><span class="ed-go" aria-hidden="true">&rsaquo;</span></a></li>
+                    <li class="edition"><a href="../../2021/index.html"><span class="ed-year">2021</span><span class="ed-title">How the Human Brain Makes Sense of a World in Motion</span><span class="ed-go" aria-hidden="true">&rsaquo;</span></a></li>
+                    <li class="edition"><a href="../../2023/index.html"><span class="ed-year">2023</span><span class="ed-title">How the Human Brain Makes Sense of Natural Scenes</span><span class="ed-go" aria-hidden="true">&rsaquo;</span></a></li>
+                    <li class="edition"><a href="../../2025/index.html"><span class="ed-year">2025</span><span class="ed-title">How the Human Brain Makes Sense of Multimodal Movies</span><span class="ed-go" aria-hidden="true">&rsaquo;</span></a></li>
+                    <li class="edition edition--now"><span aria-current="true"><span class="ed-year">2027</span><span class="ed-title">How the Human Brain Makes Sense of Video Games</span><span class="ed-go" aria-hidden="true">&#9664;</span></span></li>
+                </ol>
+            </div>
+
+            <ul class="pillars">
+                <li class="pillar"><span class="px-icon" data-px="rocket"></span><h3>An Algorithmic Exploration</h3><p>Exploring human and machine intelligence with the latest algorithmic tools.</p></li>
+                <li class="pillar"><span class="px-icon" data-px="bolt"></span><h3>Faster Innovation</h3><p>Bringing intelligence researchers in both domains together to accelerate innovation.</p></li>
+                <li class="pillar"><span class="px-icon" data-px="people"></span><h3>Collaborative Science</h3><p>Committed to a spirit of open collaboration, with valid and reproducible results.</p></li>
+                <li class="pillar"><span class="px-icon" data-px="star"></span><h3>The Future</h3><p>Growing, in content and methods, with the communities that shape this endeavor.</p></li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- The 2027 challenge -->
+    <section class="section" id="challenge">
+        <div class="section-inner">
+            <div class="section-title">
+                <h2>The 2027 Challenge</h2>
+                <p>From watching movies to playing games.</p>
+            </div>
+            <div class="challenge-grid">
+                <div class="prose">
+                    <p class="big">Video gameplay brings together perception, decision making, and action in dynamic
+                    environments.</p>
+                    <p>Subjects interpret audiovisual information, influence their subsequent sensory experience through their
+                    decisions and actions, and respond to events such as encountering enemies, collecting items, or taking
+                    damage. The goal of the Algonauts Project 2027 challenge is to develop fMRI encoding models that predict
+                    brain responses during video game play and that generalize to new levels and games.</p>
+                    <p>In collaboration with the <a href="https://www.cneuromod.ca/" target="_blank" rel="noopener">Courtois
+                    NeuroMod Project (CNeuroMod)</a>, the challenge provides large scale fMRI recordings acquired while
+                    subjects played Super Mario Bros., Super Mario All-Stars, Super Mario Bros. 3 and Shinobi III. Final
+                    rankings are based on how well models generalize to previously unseen games.</p>
+                    <div class="btn-row">
+                        <a href="challenge.html" class="btn btn-primary">Challenge details &rarr;</a>
+                    </div>
+                </div>
+                <div>
+                    <div class="video-frame">
+                        <!-- Replace the placeholder with the YouTube embed when the video is online, e.g.
+                             <iframe src="https://www.youtube.com/embed/VIDEO_ID?rel=0" title="Introduction to the Algonauts Project 2027 challenge" allowfullscreen></iframe> -->
+                        <a class="video-placeholder" href="#" aria-label="Introduction video">
+                            <span class="play-btn" aria-hidden="true"></span>
+                            <span class="vt">Introduction to the 2027 challenge</span>
+                        </a>
+                    </div>
+                    <p class="video-cap">Introduction video to the Algonauts Project 2027 challenge.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resources: each tile pairs a resource with its video -->
+    <section class="section section--alt" id="resources">
+        <div class="section-inner">
+            <div class="section-title">
+                <h2>Challenge resources</h2>
+            </div>
+            <div class="res-grid">
+                <div class="res">
+                    <a class="res-main" href="#"><span class="px-icon" data-px="paper"></span><span class="res-title">Challenge Paper</span></a><!-- TODO -->
+                    <a class="res-sub" href="#"><span class="tri" aria-hidden="true"></span>Introduction video</a><!-- TODO -->
+                </div>
+                <div class="res">
+                    <a class="res-main" href="#"><span class="px-icon" data-px="kit"></span><span class="res-title">Development Kit</span></a><!-- TODO -->
+                    <a class="res-sub" href="#"><span class="tri" aria-hidden="true"></span>Development Kit video</a><!-- TODO -->
+                </div>
+                <div class="res">
+                    <a class="res-main" href="#"><span class="px-icon" data-px="data"></span><span class="res-title">Challenge Data</span></a><!-- TODO: repository link, or the data access form if the repository is only shared after the form -->
+                    <a class="res-sub" href="data.html"><span class="info" aria-hidden="true">i</span>About the data</a>
+                </div>
+                <div class="res">
+                    <a class="res-main" href="#"><span class="px-icon" data-px="trophy"></span><span class="res-title">CodaBench</span></a><!-- TODO -->
+                    <a class="res-sub" href="#"><span class="tri" aria-hidden="true"></span>Submission video</a><!-- TODO -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Important dates -->
+    <section class="section" id="dates">
+        <div class="section-inner">
+            <div class="section-title">
+                <h2>Important dates</h2>
+                <p>The challenge concludes with a session at CCN 2027 in Edinburgh.</p>
+            </div>
+            <ol class="road">
+                <li class="road-node">
+                    <span class="road-dot" aria-hidden="true"></span>
+                    <time datetime="2026-12-01">Dec 1, 2026</time>
+                    <h3>Development Phase</h3>
+                    <p>Training data, Development Kit and the in-distribution leaderboard open.</p>
+                </li>
+                <li class="road-node road-node--gen">
+                    <span class="road-dot" aria-hidden="true"></span>
+                    <time datetime="2027-07-05">Jul 5, 2027</time>
+                    <h3>Generalization Phase</h3>
+                    <p>The unseen games are revealed. One week of out-of-distribution testing.</p>
+                </li>
+                <li class="road-node road-node--win">
+                    <span class="road-dot" aria-hidden="true"></span>
+                    <time datetime="2027-07-12">Jul 12, 2027</time>
+                    <h3>Winners announced</h3>
+                    <p>Final ranking based on the Generalization Phase.</p>
+                </li>
+                <li class="road-node road-node--goal">
+                    <span class="road-dot" aria-hidden="true"><span class="road-flag"></span></span>
+                    <time datetime="2027-07-26">Jul 26, 2027</time>
+                    <h3>Session at CCN 2027</h3>
+                    <p>Results and talks by the winning teams, in Edinburgh.</p>
+                </li>
+            </ol>
+            <div class="road-foot">
+                <span>Dates are provisional.</span>
+                <a href="challenge.html#phases" class="text-link">Challenge phases &rarr;</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Papers + contact -->
+    <section class="section section--alt" id="papers">
+        <div class="section-inner two-col">
+            <div>
+                <h3>Papers</h3>
+                <p>If you use the resources provided for the Algonauts Project 2027 challenge, please cite the following papers:</p>
+                <p class="cite">Bersch D, Gifford AT, St-Laurent M, Pinsard B, Harel Y, Boyle J, Bellec L, Oliva A, Roig G,
+                Cichy RM. The Algonauts Project 2027 Challenge: How the Human Brain Makes Sense of Video Games.
+                <em>Preprint link to be added.</em></p>
+                <p class="cite">CNeuroMod publication. <em>To be added.</em></p>
+            </div>
+            <div id="contact">
+                <h3>Contact</h3>
+                <p>For general inquiries about the Algonauts Project, please contact
+                <a href="mailto:algonauts.mit@gmail.com">algonauts.mit@gmail.com</a>.</p>
+                <p>For specific questions about the Algonauts Project 2027 challenge, please use the
+                <a href="#">CodaBench Forum</a>.</p><!-- TODO -->
+                <p>To stay updated on present and future challenges, <a href="#signup">join our mailing list</a> or follow
+                us on <a href="https://bsky.app/profile/algonautsproject.bsky.social" target="_blank" rel="noopener">Bluesky</a>
+                and <a href="https://x.com/AlgonautsProj" target="_blank" rel="noopener">X</a>.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team -->
+    <section class="section" id="team">
+        <div class="section-inner">
+            <div class="section-title">
+                <h2>Team</h2>
+                <p>The people behind the 2027 challenge.</p>
+            </div>
+            <div class="team-grid team-grid--lead">
+                <a href="https://toastydom.github.io/" target="_blank" rel="noopener" class="team-card team-card--lead">
+                    <span class="team-photo"><img src="../img/team/domenic_2.png" alt="Domenic Bersch" loading="lazy"></span>
+                    <span class="team-name">Domenic Bersch</span>
+                    <span class="team-aff">Goethe University Frankfurt</span>
+                </a>
+                <a href="https://www.alegifford.com/" target="_blank" rel="noopener" class="team-card team-card--lead">
+                    <span class="team-photo"><img src="../img/team/ale.png" alt="Alessandro Gifford" loading="lazy"></span>
+                    <span class="team-name">Alessandro Gifford</span>
+                    <span class="team-aff">Freie Universität Berlin</span>
+                </a>
+            </div>
+            <div class="team-grid">
+                <a href="https://simexp.github.io" target="_blank" rel="noopener" class="team-card">
+                    <span class="team-photo"><img src="../img/team/marie.png" alt="Marie St-Laurent" loading="lazy"></span>
+                    <span class="team-name">Marie St-Laurent</span><span class="team-aff">CRIUGM</span>
+                </a>
+                <a href="https://github.com/bpinsard" target="_blank" rel="noopener" class="team-card">
+                    <span class="team-photo"><img src="../img/team/basile.jpg" alt="Basile Pinsard" loading="lazy"></span>
+                    <span class="team-name">Basile Pinsard</span><span class="team-aff">CRIUGM</span>
+                </a>
+                <a href="https://scholar.google.com/citations?user=2K-2LacAAAAJ&amp;hl=fr" target="_blank" rel="noopener" class="team-card">
+                    <span class="team-photo"><img src="../img/team/yann.jpg" alt="Yann Harel" loading="lazy"></span>
+                    <span class="team-name">Yann Harel</span><span class="team-aff">Boston College</span>
+                </a>
+                <a href="https://simexp.github.io" target="_blank" rel="noopener" class="team-card">
+                    <span class="team-photo"><img src="../img/team/julie.png" alt="Julie Boyle" loading="lazy"></span>
+                    <span class="team-name">Julie Boyle</span><span class="team-aff">Université de Montréal</span>
+                </a>
+                <a href="https://simexp.github.io" target="_blank" rel="noopener" class="team-card">
+                    <span class="team-photo"><img src="../img/team/lune.jpeg" alt="Lune Bellec" loading="lazy"></span>
+                    <span class="team-name">Lune Bellec</span><span class="team-aff">Université de Montréal</span>
+                </a>
+                <a href="http://olivalab.mit.edu/" target="_blank" rel="noopener" class="team-card">
+                    <span class="team-photo"><img src="../img/team/aude.jpg" alt="Aude Oliva" loading="lazy"></span>
+                    <span class="team-name">Aude Oliva</span><span class="team-aff">Massachusetts Institute of Technology</span>
+                </a>
+                <a href="http://www.cvai.cs.uni-frankfurt.de/" target="_blank" rel="noopener" class="team-card">
+                    <span class="team-photo"><img src="../img/team/gemma_new.png" alt="Gemma Roig" loading="lazy"></span>
+                    <span class="team-name">Gemma Roig</span><span class="team-aff">Goethe University Frankfurt</span>
+                </a>
+                <a href="https://www.ewi-psy.fu-berlin.de/en/einrichtungen/arbeitsbereiche/neural_dyn_of_vis_cog/index.html" target="_blank" rel="noopener" class="team-card">
+                    <span class="team-photo"><img src="../img/team/radek.png" alt="Radoslaw Cichy" loading="lazy"></span>
+                    <span class="team-name">Radoslaw Cichy</span><span class="team-aff">Freie Universität Berlin</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stay updated -->
+    <section class="section section--alt" id="signup">
+        <div class="section-inner">
+            <div class="section-title">
+                <h2>Stay Updated</h2>
+                <p>Join our mailing list to receive the launch announcement and updates on the 2027 challenge.</p>
+            </div>
+            <div class="signup-card">
+                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSckFheQH88lZ5q_WxoAwn2WJs_nVs7NhITD7ZBsmSGFAuD2-Q/viewform?embedded=true"
+                    width="100%" height="700" loading="lazy" title="Algonauts Project mailing list signup">Loading…</iframe>
+            </div>
+            <div class="social">
+                <p>You can also follow us on social media:</p>
+                <div class="social-logos">
+                    <a href="https://bsky.app/profile/algonautsproject.bsky.social" target="_blank" rel="noopener"><img src="../../img/2024/bluesky_logo.png" alt="">Bluesky</a>
+                    <a href="https://x.com/AlgonautsProj" target="_blank" rel="noopener"><img src="../../img/2024/x_logo.png" alt="">X</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="pixel-divider" aria-hidden="true"></div>
+    <footer class="footer">
+        <div class="footer-inner">
+            <div>
+                <ul class="footer-links">
+                    <li><a href="index.html">2027 Challenge</a></li>
+                    <li><a href="challenge.html">Challenge Details</a></li>
+                    <li><a href="data.html">Challenge Data</a></li>
+                    <li><a href="../../2025/archive.html">Challenge Archive</a></li>
+                    <li><a href="../../index.html">algonautsproject.com</a></li>
+                </ul>
+                <p class="footer-copy">&copy; 2026 The Algonauts Project. All rights reserved.</p>
+            </div>
+            <div class="footer-partners">
+                <a href="https://www.cneuromod.ca/" target="_blank" rel="noopener"><img src="../img/CneuroMod.png" alt="CNeuroMod"></a>
+                <a href="http://2027.ccneuro.org/" target="_blank" rel="noopener"><img src="../../img/2024/ccn_logo.png" alt="CCN"></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/draft.js"></script>
+</body>
+</html>

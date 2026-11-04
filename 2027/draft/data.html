@@ -1,0 +1,321 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Challenge Data – Algonauts Project 2027</title>
+    <meta name="description" content="The Algonauts Project 2027 challenge data: gameplay video, audio, controller actions, game events and fMRI responses from the Courtois NeuroMod Project.">
+    <meta name="author" content="The Algonauts Project">
+    <meta name="robots" content="noindex, nofollow">
+    <link rel="icon" id="favicon" data-base="../../img/2024/" type="image/png" href="../../img/2024/logo_icon_light.png" sizes="32x32">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/draft.css">
+</head>
+
+<body class="page-sub">
+    <div class="draft-ribbon" aria-hidden="true">Draft preview</div>
+
+    <nav class="nav" id="nav" aria-label="Main">
+        <div class="nav-inner">
+            <a href="../../index.html" class="nav-logo">
+                <img src="../../img/2024/logo_icon_dark.png" alt="">
+                <span>The Algonauts Project</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">2027 Challenge</a></li>
+                <li><a href="challenge.html">Challenge Details</a></li>
+                <li><a href="data.html" class="active" aria-current="page">Challenge Data</a></li>
+                <li><a href="index.html#team">Team</a></li>
+                <li><a href="index.html#signup">Stay Updated</a></li>
+                <li><a href="../../2025/archive.html">Archive</a></li>
+            </ul>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-overlay">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+    <div class="nav-overlay" id="nav-overlay">
+        <ul>
+            <li><a href="index.html">2027 Challenge</a></li>
+            <li><a href="challenge.html">Challenge Details</a></li>
+            <li><a href="data.html" class="active">Challenge Data</a></li>
+            <li><a href="index.html#team">Team</a></li>
+            <li><a href="index.html#signup">Stay Updated</a></li>
+            <li><a href="../../2025/archive.html">Archive</a></li>
+            <li><a href="../../index.html">Algonauts Project</a></li>
+        </ul>
+    </div>
+
+    <header class="page-head page-head--split">
+        <div class="pixel-wave" aria-hidden="true"></div>
+        <div class="page-head-inner">
+            <div>
+                <nav class="crumbs" aria-label="Breadcrumb"><a href="index.html">2027 Challenge</a> / <span>Challenge Data</span></nav>
+                <h1>Challenge Data</h1>
+                <p class="lead">Gameplay recordings, annotations and whole-brain fMRI responses from the Courtois NeuroMod
+                Project, recorded while subjects played four retro video games.</p>
+                <div class="btn-row">
+                    <a href="#" class="btn btn-primary">Request data access</a><!-- TODO: data access form -->
+                </div>
+            </div>
+            <div>
+                <div class="loop">
+                    <video data-loop autoplay muted loop playsinline preload="metadata" poster="img/gameplay_loop_poster.jpg" aria-label="Gameplay from the four development games">
+                        <source src="img/gameplay_loop.mp4" type="video/mp4">
+                    </video>
+                    <div class="ql" aria-hidden="true">
+                        <span>Super Mario Bros.</span><span>Super Mario All-Stars</span>
+                        <span>Super Mario Bros. 3</span><span>Shinobi III</span>
+                    </div>
+                    <button class="loop-toggle" type="button" aria-label="Pause gameplay video"><span class="i-pause" aria-hidden="true"></span><span class="i-play" aria-hidden="true"></span></button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="hud" role="region" aria-label="Dataset at a glance">
+        <div class="hud-inner">
+            <div class="hud-item"><span class="hud-k">Gameplay</span><span class="hud-v">~187 h</span></div>
+            <div class="hud-item"><span class="hud-k">fMRI</span><span class="hud-v">212.5 h</span></div>
+            <div class="hud-item"><span class="hud-k">Games</span><span class="hud-v">4 + unseen</span></div>
+            <div class="hud-item"><span class="hud-k">Subjects</span><span class="hud-v">6</span></div>
+            <div class="hud-item"><span class="hud-k">Brain parcels</span><span class="hud-v">1,134</span></div>
+            <div class="hud-item"><span class="hud-k">Sampling (TR)</span><span class="hud-v">1.49 s</span></div>
+        </div>
+    </div>
+
+    <!-- How to access -->
+    <section class="section" id="access" style="padding-bottom:clamp(40px,5vw,60px)">
+        <div class="section-inner access">
+            <div class="prose">
+                <h2 class="h2" style="margin-bottom:14px">Access the data</h2>
+                <p>The challenge data are collected and curated by the
+                <a href="https://www.cneuromod.ca/" target="_blank" rel="noopener">Courtois NeuroMod Project (CNeuroMod)</a>.
+                Please read the README in each game’s folder before exploring its data: it explains the recording setup,
+                the available files and game-specific caveats.</p>
+            </div>
+            <ol class="num-list" style="margin-top:6px">
+                <li>Fill out the <a href="#">data access form</a>.</li><!-- TODO -->
+                <li>You receive the link to the repository with the <strong>full challenge data</strong>, and to a tutorial
+                subset with <span class="subj">sub-01</span> used by the Development Kit.</li>
+                <li>Follow the <a href="challenge.html#baseline">Development Kit</a> to load, align and model the data.</li>
+            </ol>
+        </div>
+    </section>
+
+    <nav class="tabs" data-tabs aria-label="Challenge data">
+        <div class="tabs-inner" role="tablist">
+            <a class="tab" role="tab" href="#games" id="tab-games" aria-controls="games" aria-selected="true">Games &amp; subjects</a>
+            <a class="tab" role="tab" href="#gameplay" id="tab-gameplay" aria-controls="gameplay" aria-selected="false">Gameplay<span class="tab-long"> &amp; annotations</span></a>
+            <a class="tab" role="tab" href="#brain" id="tab-brain" aria-controls="brain" aria-selected="false">Brain data</a>
+            <a class="tab" role="tab" href="#files" id="tab-files" aria-controls="files" aria-selected="false">Files &amp; license</a>
+        </div>
+    </nav>
+
+    <!-- Games & subjects -->
+    <section class="panel" id="games" role="tabpanel" aria-labelledby="tab-games">
+        <div class="panel-inner">
+            <div class="prose">
+                <h2>Development games</h2>
+                <p>Three games from the Mario family provide related environments with differences in visual appearance,
+                level design and game mechanics. Shinobi III differs more substantially in its visual content, actions,
+                event structure and behavioral demands.</p>
+            </div>
+            <div class="games">
+                <article class="game game--mario">
+                    <div class="game-shot"><img src="img/games/mario.png" alt="Super Mario Bros. gameplay: Mario jumps above a Goomba in World 1-1" width="240" height="224" loading="lazy"></div>
+                    <div class="game-body">
+                        <span class="game-meta">NES · 1985 · <code>mario</code></span>
+                        <h3>Super Mario Bros.</h3>
+                        <p>The first Super Mario game: a side-scrolling platformer in which players navigate obstacles, collect items and avoid or defeat enemies.</p>
+                        <div class="game-stats"><span><b>22</b> levels</span><span><b>3,374</b> attempts</span></div>
+                    </div>
+                </article>
+                <article class="game game--allstars">
+                    <div class="game-shot"><img src="img/games/mariostars.png" alt="Super Mario All-Stars gameplay: Mario jumps above a question block" width="256" height="224" loading="lazy"></div>
+                    <div class="game-body">
+                        <span class="game-meta">SNES · 1993 · <code>mariostars</code></span>
+                        <h3>Super Mario All-Stars</h3>
+                        <p>A visually and acoustically updated version of Super Mario Bros. with its original level layouts.</p>
+                        <span class="game-flag">Held-out runs for ID testing</span>
+                        <div class="game-stats"><span><b>22</b> levels</span><span><b>1,232</b> attempts</span></div>
+                    </div>
+                </article>
+                <article class="game game--mario3">
+                    <div class="game-shot"><img src="img/games/mario3.png" alt="Super Mario Bros. 3 gameplay: Mario jumps past a Piranha Plant" width="240" height="224" loading="lazy"></div>
+                    <div class="game-body">
+                        <span class="game-meta">NES · 1988 · <code>mario3</code></span>
+                        <h3>Super Mario Bros. 3</h3>
+                        <p>A new visual style, new environments and additional mechanics, including power-ups that let Mario fly.</p>
+                        <span class="game-flag">Held-out levels for ID testing</span>
+                        <div class="game-stats"><span><b>80</b> levels</span><span><b>1,589</b> attempts</span></div>
+                    </div>
+                </article>
+                <article class="game game--shinobi">
+                    <div class="game-shot"><img src="img/games/shinobi.png" alt="Shinobi III gameplay: the ninja jumps through a forest" width="320" height="224" loading="lazy"></div>
+                    <div class="game-body">
+                        <span class="game-meta">Sega Genesis · 1993 · <code>shinobi</code></span>
+                        <h3>Shinobi III: Return of the Ninja Master</h3>
+                        <p>An action platformer in which a ninja fights enemies with throwing weapons, close-range attacks and special abilities.</p>
+                        <div class="game-stats"><span><b>3</b> levels</span><span><b>666</b> attempts</span></div>
+                    </div>
+                </article>
+            </div>
+
+            <div class="unseen" id="unseen">
+                <div class="mystery-row" aria-label="Hidden games"><span class="mystery">?</span><span class="mystery">?</span><span class="mystery">?</span></div>
+                <p><strong>Unseen games.</strong> The games used for out-of-distribution testing are not revealed until the
+                Generalization Phase begins. About two hours of gameplay per subject will then be released, with the fMRI
+                responses withheld.</p>
+            </div>
+
+            <div class="block coverage-wrap" id="subjects">
+                <div class="prose">
+                    <h2>Subjects</h2>
+                    <p>Subject coverage differs across games. Five subjects played the three Mario games and four played
+                    Shinobi III. Subject <span class="subj">sub-04</span> only played Shinobi III; it is not evaluated, but its
+                    data can be used for training.</p>
+                </div>
+                <div class="table-wrap">
+                    <table class="coverage">
+                        <thead><tr><th></th><th scope="col">SMB</th><th scope="col">All-Stars</th><th scope="col">SMB3</th><th scope="col">Shinobi</th><th scope="col"></th></tr></thead>
+                        <tbody>
+                            <tr><th scope="row">sub-01</th><td class="m"></td><td class="ms"></td><td class="m3"></td><td class="sh"></td><td class="role eval">Evaluated</td></tr>
+                            <tr><th scope="row">sub-02</th><td class="m"></td><td class="ms"></td><td class="m3"></td><td class="sh"></td><td class="role eval">Evaluated</td></tr>
+                            <tr><th scope="row">sub-03</th><td class="m"></td><td class="ms"></td><td class="m3"></td><td>–</td><td class="role eval">Evaluated</td></tr>
+                            <tr><th scope="row">sub-04</th><td>–</td><td>–</td><td>–</td><td class="sh"></td><td class="role">Training only</td></tr>
+                            <tr><th scope="row">sub-05</th><td class="m"></td><td class="ms"></td><td class="m3"></td><td>–</td><td class="role eval">Evaluated</td></tr>
+                            <tr><th scope="row">sub-06</th><td class="m"></td><td class="ms"></td><td class="m3"></td><td class="sh"></td><td class="role eval">Evaluated</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <figure class="figure block">
+                <a href="img/fig2_dataset_overview.png" target="_blank" rel="noopener">
+                    <img src="img/fig2_dataset_overview.png" alt="Figure 2: Scale and coverage of the gameplay and fMRI data: hours per game, fMRI hours per subject and game, button presses and annotated events per game, and level exposure across scanning sessions for sub-01." width="2560" height="1350" loading="lazy">
+                </a>
+                <figcaption><strong>Figure 2 | Scale and coverage of the data.</strong> (A) Hours, levels, attempts and
+                annotation types per game. (B) fMRI hours per subject and game. (C) Button presses per minute and annotated
+                game events. (D) Level exposure across scanning sessions for sub-01.</figcaption>
+            </figure>
+        </div>
+    </section>
+
+    <!-- Gameplay & annotations -->
+    <section class="panel" id="gameplay" role="tabpanel" aria-labelledby="tab-gameplay">
+        <div class="panel-inner">
+            <h2>Gameplay recordings and annotations</h2>
+            <dl class="dl">
+                <dt>Video and audio</dt>
+                <dd>One <code>.mp4</code> file per gameplay repetition, a single attempt at a level. In Super Mario Bros. 3,
+                each repetition corresponds to one life, so an attempt can span several recordings.</dd>
+                <dt>Controller actions</dt>
+                <dd>The player’s button presses and how long they were held, labelled <code>Action/Right</code>,
+                <code>Action/Jump</code>, <code>Action/Attack</code>, …</dd>
+                <dt>Game events</dt>
+                <dd>Occurrences such as <code>Item_collected/Coin</code>, <code>Enemy_defeated/Stomp/Goomba</code>,
+                <code>Player_damaged</code> or <code>Level_completed</code>: 266 distinct labels across the four games, each
+                described in natural language in <code>task-&lt;game&gt;_events.json</code>.</dd>
+                <dt>Timing</dt>
+                <dd>A scanning session contains several fMRI runs, and each run contains several gameplay repetitions. Each run
+                has one events table, and all its timestamps are measured from the start of the run, shared with the fMRI
+                data. Rows labelled <code>gym-retro_game</code> give each recording’s onset and duration.</dd>
+            </dl>
+
+<pre class="codeblock block" aria-label="Illustrative excerpt of an events table"><span class="c"># sub-01_ses-001_task-mario_run-01_desc-annotated_events.tsv (illustrative excerpt)</span>
+<span class="h">trial_type                    onset   duration  level</span>
+<span class="g">gym-retro_game</span>                120.00     48.30   w1l1
+Action/Right                  121.35      2.10
+Action/Jump                   122.02      0.38
+Item_collected/Coin           125.40      0.00
+Enemy_defeated/Stomp/Goomba   127.92      0.00</pre>
+
+            <figure class="figure block">
+                <a href="img/fig3_gameplay_features.png" target="_blank" rel="noopener">
+                    <img src="img/fig3_gameplay_features.png" alt="Figure 3: Gameplay features across the four development games: PCA projections of video and audio features, controller use, and an MDS map of game-event description embeddings." width="2560" height="750" loading="lazy">
+                </a>
+                <figcaption><strong>Figure 3 | How the development games differ.</strong> (A) Visual and (B) audio features
+                per level of sub-01, projected onto two principal components. (C) Controller use across all subjects.
+                (D) Sentence embeddings of the game-event descriptions. Proximity in these projections does not by itself
+                establish that neural predictions transfer between games.</figcaption>
+            </figure>
+        </div>
+    </section>
+
+    <!-- Brain data -->
+    <section class="panel" id="brain" role="tabpanel" aria-labelledby="tab-brain">
+        <div class="panel-inner">
+            <div class="prose">
+                <h2>Brain response measurement: fMRI</h2>
+                <p>We provide measurements of brain responses using functional magnetic resonance imaging (fMRI), which
+                measures brain activity indirectly by detecting changes in blood flow. fMRI is a core technique in cognitive
+                neuroscience to observe the human brain in action noninvasively. The response is delayed: it typically peaks
+                around 5–6 seconds after a neural event.</p>
+                <p>The neural data were derived from preprocessed BOLD images in MNI template space using the CNeuroMod time
+                series extraction pipeline. The voxel time series were denoised for motion, tissue and global signal
+                contributions and slow drift, smoothed with a 5 mm FWHM kernel and standardized within each run, then
+                averaged within the 1,134 parcels of the CNeuroMod 2026 atlas.</p>
+            </div>
+            <dl class="dl block">
+                <dt>Format</dt><dd>One <code>.h5</code> file per subject and game, with one array per fMRI run</dd>
+                <dt>Run array</dt><dd><code>(N samples, 1134 parcels)</code>, one sample every 1.49 seconds (TR)</dd>
+                <dt>Space</dt><dd>MNI152NLin2009cAsym</dd>
+                <dt>Atlas</dt><dd>CNeuroMod 2026 atlas with cortical, subcortical and cerebellar parcels, in the shared <code>atlases/</code> folder</dd>
+            </dl>
+        </div>
+    </section>
+
+    <!-- Files & license -->
+    <section class="panel" id="files" role="tabpanel" aria-labelledby="tab-files">
+        <div class="panel-inner">
+            <h2>File structure</h2>
+<pre class="codeblock">algonauts_2027.competitors/
+├── README.md
+├── <span class="h">mario/</span>
+│   ├── gamelogs/
+│   │   ├── task-mario_events.json                         <span class="c"># event label descriptions</span>
+│   │   └── sub-01/ses-001/
+│   │       ├── sub-01_ses-001_task-mario_run-01_desc-annotated_events.tsv
+│   │       └── sub-01_ses-001_task-mario_level-w1l1_rep-000_recording.mp4
+│   └── fmri/
+│       └── sub-01_task-mario_space-MNI152NLin2009cAsym_atlas-cneuromod26_desc-1134Parcels_timeseries.h5
+├── <span class="h">mariostars/</span> · <span class="h">mario3/</span> · <span class="h">shinobi/</span>                 <span class="c"># same structure</span>
+└── <span class="g">atlases/</span>                                               <span class="c"># parcellations + parcel metadata</span></pre>
+
+            <div class="prose block">
+                <h2>License</h2>
+                <p>The data were collected and curated by the Courtois NeuroMod Project. Subjects who chose to openly share
+                their data did so under a <a href="https://creativecommons.org/public-domain/cc0/" target="_blank" rel="noopener">Creative
+                Commons CC0 license</a>; third-party video game material remains subject to its original copyright. See the
+                dataset READMEs and <a href="https://docs.cneuromod.ca/contents/license.html" target="_blank" rel="noopener">CNeuroMod’s
+                licensing documentation</a> for details.</p>
+            </div>
+        </div>
+    </section>
+
+    <div class="pixel-divider" aria-hidden="true"></div>
+    <footer class="footer">
+        <div class="footer-inner">
+            <div>
+                <ul class="footer-links">
+                    <li><a href="index.html">2027 Challenge</a></li>
+                    <li><a href="challenge.html">Challenge Details</a></li>
+                    <li><a href="data.html">Challenge Data</a></li>
+                    <li><a href="../../2025/archive.html">Challenge Archive</a></li>
+                    <li><a href="../../index.html">algonautsproject.com</a></li>
+                </ul>
+                <p class="footer-copy">&copy; 2026 The Algonauts Project. All rights reserved.</p>
+            </div>
+            <div class="footer-partners">
+                <a href="https://www.cneuromod.ca/" target="_blank" rel="noopener"><img src="../img/CneuroMod.png" alt="CNeuroMod"></a>
+                <a href="http://2027.ccneuro.org/" target="_blank" rel="noopener"><img src="../../img/2024/ccn_logo.png" alt="CCN"></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/draft.js"></script>
+</body>
+</html>

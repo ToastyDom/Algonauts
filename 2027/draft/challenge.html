@@ -1,0 +1,279 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Challenge Details – Algonauts Project 2027</title>
+    <meta name="description" content="Challenge phases, dates, evaluation, rules, baseline model and Development Kit of the Algonauts Project 2027 challenge.">
+    <meta name="author" content="The Algonauts Project">
+    <meta name="robots" content="noindex, nofollow">
+    <link rel="icon" id="favicon" data-base="../../img/2024/" type="image/png" href="../../img/2024/logo_icon_light.png" sizes="32x32">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/draft.css">
+</head>
+
+<body class="page-sub">
+    <div class="draft-ribbon" aria-hidden="true">Draft preview</div>
+
+    <nav class="nav" id="nav" aria-label="Main">
+        <div class="nav-inner">
+            <a href="../../index.html" class="nav-logo">
+                <img src="../../img/2024/logo_icon_dark.png" alt="">
+                <span>The Algonauts Project</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">2027 Challenge</a></li>
+                <li><a href="challenge.html" class="active" aria-current="page">Challenge Details</a></li>
+                <li><a href="data.html">Challenge Data</a></li>
+                <li><a href="index.html#team">Team</a></li>
+                <li><a href="index.html#signup">Stay Updated</a></li>
+                <li><a href="../../2025/archive.html">Archive</a></li>
+            </ul>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-overlay">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+    <div class="nav-overlay" id="nav-overlay">
+        <ul>
+            <li><a href="index.html">2027 Challenge</a></li>
+            <li><a href="challenge.html" class="active">Challenge Details</a></li>
+            <li><a href="data.html">Challenge Data</a></li>
+            <li><a href="index.html#team">Team</a></li>
+            <li><a href="index.html#signup">Stay Updated</a></li>
+            <li><a href="../../2025/archive.html">Archive</a></li>
+            <li><a href="../../index.html">Algonauts Project</a></li>
+        </ul>
+    </div>
+
+    <header class="page-head">
+        <div class="pixel-wave" aria-hidden="true"></div>
+        <div class="page-head-inner">
+            <nav class="crumbs" aria-label="Breadcrumb"><a href="index.html">2027 Challenge</a> / <span>Challenge Details</span></nav>
+            <h1>Challenge Details</h1>
+            <p class="lead">How the Algonauts Project 2027 challenge works: phases and dates, evaluation, rules, and the
+            baseline model.</p>
+        </div>
+    </header>
+
+    <!-- Important dates: always visible, whichever tab is open -->
+    <section class="dates-strip" id="dates" aria-labelledby="dates-title">
+        <div class="dates-strip-inner">
+            <div class="dates-strip-head"><h2 id="dates-title">Important dates</h2><span>Provisional</span></div>
+            <dl class="dates-list">
+                <div><dt><span class="dot" style="background:#45c2a6"></span>Development Phase</dt><dd>Dec 1, 2026 – Jul 4, 2027</dd></div>
+                <div><dt><span class="dot" style="background:#a78cf2"></span>Generalization Phase</dt><dd>Jul 5 – Jul 11, 2027</dd></div>
+                <div><dt><span class="dot" style="background:#ffd166"></span>Winners announced</dt><dd>Jul 12, 2027</dd></div>
+                <div><dt><span class="dot" style="background:#ff7ad9"></span>Session at CCN 2027</dt><dd>Jul 26, 2027</dd></div>
+                <div><dt><span class="dot" style="background:#bdb8cc"></span>Report and code deadline</dt><dd>To be announced</dd></div>
+            </dl>
+        </div>
+    </section>
+
+    <nav class="tabs" data-tabs aria-label="Challenge details">
+        <div class="tabs-inner" role="tablist">
+            <a class="tab" role="tab" href="#overview" id="tab-overview" aria-controls="overview" aria-selected="true">Overview</a>
+            <a class="tab" role="tab" href="#phases" id="tab-phases" aria-controls="phases" aria-selected="false">Phases</a>
+            <a class="tab" role="tab" href="#evaluation" id="tab-evaluation" aria-controls="evaluation" aria-selected="false">Evaluation</a>
+            <a class="tab" role="tab" href="#rules" id="tab-rules" aria-controls="rules" aria-selected="false">Rules</a>
+            <a class="tab" role="tab" href="#baseline" id="tab-baseline" aria-controls="baseline" aria-selected="false">Baseline &amp; Development Kit</a>
+        </div>
+    </nav>
+
+    <!-- Overview -->
+    <section class="panel" id="overview" role="tabpanel" aria-labelledby="tab-overview">
+        <div class="panel-inner">
+            <div class="prose">
+                <h2>Challenge overview</h2>
+                <p>Understanding how the human brain works is one of the key challenges that science and society face. The
+                Algonauts challenge proposes an open and quantitative test of how well computational models do today. The
+                2027 challenge targets brain responses during active video game play, where subjects’ decisions and
+                actions shape what they see and hear next.</p>
+                <p>We provide gameplay video, audio, controller actions and annotated game events from four retro video
+                games, together with the corresponding fMRI responses of six subjects. Challenge participants build
+                encoding models that predict brain responses for held-out gameplay from these games (in-distribution, ID)
+                and for previously unseen games (out-of-distribution, OOD), for which the brain data are withheld.
+                Submissions are scored on CodaBench.</p>
+                <div class="btn-row" style="margin-top:22px">
+                    <a href="data.html" class="btn btn-primary">Challenge data</a>
+                    <a href="#" class="btn btn-ghost">Participate on CodaBench</a><!-- TODO -->
+                </div>
+            </div>
+            <figure class="figure">
+                <a href="img/fig1_challenge_overview.png" target="_blank" rel="noopener">
+                    <img src="img/fig1_challenge_overview.png" alt="Figure 1: Overview of the Algonauts Project 2027 challenge, showing the development games and stimulus modalities feeding an encoding model, and the Development, Generalization and Post-challenge phases." width="2200" height="1850" loading="lazy">
+                </a>
+                <figcaption><strong>Figure 1 | Overview of the challenge.</strong> (A) Video, audio, controller actions and
+                game events from four development games serve as input to encoding models that predict fMRI responses
+                across 1,134 brain parcels. (B) Models are tested in-distribution during the Development Phase and
+                out-of-distribution during the Generalization Phase, which determines the final ranking. Both evaluations
+                continue as public benchmarks after the challenge.</figcaption>
+            </figure>
+        </div>
+    </section>
+
+    <!-- Phases & dates -->
+    <section class="panel" id="phases" role="tabpanel" aria-labelledby="tab-phases">
+        <div class="panel-inner">
+            <h2>Challenge phases</h2>
+            <div class="table-wrap">
+                <table class="table">
+                    <thead><tr><th>Phase</th><th>Dates</th><th>Test data (fMRI withheld)</th><th>Submissions</th></tr></thead>
+                    <tbody>
+                        <tr><td><span class="dot" style="background:#45c2a6"></span>Development Phase</td><td>Dec 1, 2026 – Jul 4, 2027</td><td>Held-out levels of Super Mario Bros. 3 and held-out runs of Super Mario All-Stars (ID)</td><td>Unlimited</td></tr>
+                        <tr><td><span class="dot" style="background:#a78cf2"></span>Generalization Phase</td><td>Jul 5 – Jul 11, 2027</td><td>Previously unseen games (OOD), determines the final ranking</td><td>Up to 10</td></tr>
+                        <tr><td><span class="dot" style="background:#bdb8cc"></span>Post-Challenge Benchmark</td><td>Indefinite</td><td>ID and OOD test sets, separate leaderboards</td><td>Unlimited</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="prose block">
+                <p><strong>Development Phase.</strong> Challenge participants train their encoding models on gameplay and
+                fMRI responses from all four games, and test them in-distribution on held-out gameplay: selected levels of
+                Super Mario Bros. 3 and selected runs of Super Mario All-Stars. The gameplay of these is released, while
+                the fMRI responses are withheld. A public leaderboard gives feedback on submissions.</p>
+                <p><strong>Generalization Phase.</strong> At the beginning of this phase, we release about two hours of
+                gameplay per subject from games that are not part of the development data, and withhold the corresponding
+                fMRI responses. The identities of these games are not revealed before the phase begins. They were selected
+                to differ from the Mario-family games in visual appearance, behavioral demands and cognitive demands.
+                Performance in this phase determines the final ranking.</p>
+                <p><strong>Post-Challenge Benchmark.</strong> Once the challenge is over, both leaderboards remain open
+                indefinitely as public benchmarks for ID and OOD generalization.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Evaluation -->
+    <section class="panel" id="evaluation" role="tabpanel" aria-labelledby="tab-evaluation">
+        <div class="panel-inner prose">
+            <h2>Evaluation</h2>
+            <p>After each submission, the scoring program correlates (Pearson’s <em>r</em>) the predicted and withheld fMRI
+            responses for each of the 1,134 brain parcels, separately for each subject and game. Predictions are joined
+            across all evaluated gameplay recordings into one continuous sequence, so longer recordings contribute more time
+            points. These correlation scores are averaged first across parcels, then across subjects, and finally across
+            games with equal weight, resulting in a single score for each submission.</p>
+            <p>Five subjects are evaluated: <span class="subj">sub-01</span>, <span class="subj">sub-02</span>,
+            <span class="subj">sub-03</span>, <span class="subj">sub-05</span> and <span class="subj">sub-06</span>.
+            Subject <span class="subj">sub-04</span>, who only played Shinobi III, is not evaluated; its data are provided
+            as additional training data.</p>
+        </div>
+    </section>
+
+    <!-- Rules -->
+    <section class="panel" id="rules" role="tabpanel" aria-labelledby="tab-rules">
+        <div class="panel-inner">
+            <h2>Challenge rules</h2>
+            <ol class="num-list">
+                <li>Challenge participants can use any encoding model, pretrained representation or external training data.
+                Using the withheld fMRI responses of the test data is prohibited.</li>
+                <li>The winners are determined by performance in predicting fMRI responses for the unseen games during the
+                Generalization Phase.</li>
+                <li>Teams can make unlimited submissions during the Development Phase and up to ten during the
+                Generalization Phase. Each team can only compete using one account; creating multiple accounts results in
+                disqualification.</li>
+                <li>To be considered for the final ranking, teams submit a short report describing their encoding model.
+                The top three teams must make their code publicly available and are invited to present their approach at
+                CCN 2027 in Edinburgh.</li>
+            </ol>
+        </div>
+    </section>
+
+    <!-- Baseline & Development Kit -->
+    <section class="panel" id="baseline" role="tabpanel" aria-labelledby="tab-baseline">
+        <div class="panel-inner">
+            <div class="prose">
+                <h2>Development Kit</h2>
+                <p>To facilitate participation, we provide a Python Development Kit as an interactive notebook, which runs on
+                Google Colab or locally in Jupyter. It accompanies users through the challenge in five steps:</p>
+            </div>
+            <ol class="num-list num-list--zero">
+                <li><strong>Setup:</strong> install the required libraries and access the tutorial data.</li>
+                <li><strong>Data familiarization:</strong> explore gameplay recordings, controller actions, game events and fMRI responses.</li>
+                <li><strong>Feature extraction:</strong> extract visual, audio, controller-action and game-event features.</li>
+                <li><strong>Encoding model:</strong> train and test an fMRI encoding model.</li>
+                <li><strong>Submission:</strong> prepare predicted fMRI responses for CodaBench.</li>
+            </ol>
+            <div class="btn-row" style="margin-top:10px">
+                <a href="#" class="btn btn-primary">Development Kit</a><!-- TODO -->
+                <a href="#" class="btn btn-ghost">Development Kit video</a><!-- TODO -->
+            </div>
+
+            <div class="block">
+                <div class="prose">
+                    <h2>Baseline model</h2>
+                    <p>The challenge baseline is a simple multimodal encoding model and an accessible starting point, not a
+                    restriction on your methods. Features from four stimulus modalities are aligned to the 1.49-second fMRI
+                    sampling grid, combined across a window of recent gameplay shifted for the hemodynamic delay, and mapped
+                    onto each of the 1,134 parcels with ridge regression. Baseline accuracy: <em>to be announced</em>.</p>
+                </div>
+                <div class="table-wrap" style="max-width:var(--textw)">
+                    <table class="table">
+                        <thead><tr><th>Modality</th><th>Features</th></tr></thead>
+                        <tbody>
+                            <tr><td>Video</td><td>Slow R50 video network, 100 principal components</td></tr>
+                            <tr><td>Audio</td><td>Mel frequency cepstral coefficients, 10 principal components</td></tr>
+                            <tr><td>Controller actions</td><td>Fraction of each interval a button is held, 9 actions</td></tr>
+                            <tr><td>Game events</td><td>Event activity weighted by sentence embeddings of the event descriptions, 385 features</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="block prose">
+                <h2>How to predict brain data?</h2>
+                <p>We put close to no restrictions on how you predict brain data (see <a href="#rules">Rules</a>). A commonly
+                used approach is the linearizing encoding model, where the response of each brain parcel is independently
+                predicted from stimulus features of a computational model, typically with linear regression
+                (<a href="https://doi.org/10.1146/annurev.neuro.29.051605.113024" target="_blank" rel="noopener">Wu et al., 2006</a>;
+                <a href="https://doi.org/10.1016/j.neuroimage.2010.07.073" target="_blank" rel="noopener">Naselaris et al., 2011</a>;
+                <a href="https://doi.org/10.1016/j.conb.2019.04.002" target="_blank" rel="noopener">Kriegeskorte &amp; Douglas, 2019</a>).
+                The Development Kit implements such a model.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Acknowledgements + sponsors (always visible, at the bottom) -->
+    <section class="section section--alt" id="acknowledgements">
+        <div class="section-inner two-col">
+            <div>
+                <h3>Acknowledgements</h3>
+                <p class="small">The Algonauts Project 2027 challenge is supported by <em>[funding acknowledgements to be
+                confirmed]</em>. The Courtois project on neural modelling was made possible by a generous donation from the
+                Courtois foundation, administered by the Fondation Institut Gériatrie Montréal at CIUSSS du
+                Centre-Sud-de-l’île-de-Montréal and University of Montreal.</p>
+            </div>
+            <div>
+                <h3>Partners and sponsors</h3>
+                <div class="logo-wall">
+                    <a class="logo-tile" href="https://www.cneuromod.ca/" target="_blank" rel="noopener"><img src="../img/CneuroMod.png" alt="CNeuroMod"></a>
+                    <a class="logo-tile" href="http://2027.ccneuro.org/" target="_blank" rel="noopener"><img src="../../img/2024/ccn_logo.png" alt="CCN" style="max-height:26px"></a>
+                    <div class="logo-tile logo-tile--tba">Sponsors to be announced</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="pixel-divider" aria-hidden="true"></div>
+    <footer class="footer">
+        <div class="footer-inner">
+            <div>
+                <ul class="footer-links">
+                    <li><a href="index.html">2027 Challenge</a></li>
+                    <li><a href="challenge.html">Challenge Details</a></li>
+                    <li><a href="data.html">Challenge Data</a></li>
+                    <li><a href="../../2025/archive.html">Challenge Archive</a></li>
+                    <li><a href="../../index.html">algonautsproject.com</a></li>
+                </ul>
+                <p class="footer-copy">&copy; 2026 The Algonauts Project. All rights reserved.</p>
+            </div>
+            <div class="footer-partners">
+                <a href="https://www.cneuromod.ca/" target="_blank" rel="noopener"><img src="../img/CneuroMod.png" alt="CNeuroMod"></a>
+                <a href="http://2027.ccneuro.org/" target="_blank" rel="noopener"><img src="../../img/2024/ccn_logo.png" alt="CCN"></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/draft.js"></script>
+</body>
+</html>
