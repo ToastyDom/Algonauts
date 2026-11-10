@@ -114,7 +114,7 @@
                     <li><span class="fw-k">Output</span><strong>Predicted fMRI</strong><span>1,134 brain parcels</span></li>
                 </ol>
                 <ol class="fw-phases">
-                    <li><span class="fw-k">Phase 1</span><strong>Development Phase</strong><span>Model building and in-distribution (ID) testing on held-out runs from Super Mario All-Stars and Super Mario Bros. 3</span></li>
+                    <li><span class="fw-k">Phase 1</span><strong>Development Phase</strong><span>Model training and in-distribution (ID) testing on held-out runs from Super Mario All-Stars and Super Mario Bros. 3</span></li>
                     <li><span class="fw-k">Phase 2</span><strong>Generalization Phase</strong><span>Out-of-distribution (OOD) testing on unseen games and final ranking</span></li>
                     <li><span class="fw-k">After the challenge</span><strong>Post-Challenge Benchmark</strong><span>Ongoing public ID and OOD benchmark</span></li>
                 </ol>
@@ -150,9 +150,9 @@
                 </table>
             </div>
             <div class="prose block">
-                <p><strong>Development Phase.</strong> Participants train their encoding models on gameplay data and corresponding fMRI responses from all four games. For in-distribution testing, we reserve selected runs from Super Mario All-Stars and Super Mario Bros. 3 (see the <a href="data.html#id-split">in-distribution test split</a>). We release all model input modalities for these test runs and keep the corresponding fMRI responses hidden. Participants submit predicted fMRI responses to Codabench and can compare model variants using their prediction accuracy scores on a public leaderboard.</p>
+                <p><strong>Development Phase.</strong> Participants train their encoding models on gameplay data and corresponding fMRI responses from all four games. For in-distribution testing, we reserve selected runs from Super Mario All-Stars and Super Mario Bros. 3 (see the <a href="data.html#id-split">in-distribution test split</a>). We release all gameplay data for these test runs and keep the corresponding fMRI responses hidden. Participants submit predicted fMRI responses to Codabench and can compare model variants using their prediction accuracy scores on a public leaderboard.</p>
                 <p><strong>Generalization Phase.</strong> At the beginning of this phase, we release about two hours of
-                gameplay per subject from games that are not part of the model training data, and withhold the corresponding
+                gameplay data per subject from previously unseen games, and withhold the corresponding
                 fMRI responses. We reveal the identities of these games when the Generalization Phase begins. They were selected
                 to differ from the Mario-family games in visual appearance, behavioral demands and cognitive demands.
                 Performance in this phase determines the final ranking.</p>
@@ -198,7 +198,7 @@
         <div class="panel-inner">
             <h2>Challenge rules</h2>
             <ol class="num-list">
-                <li>Challenge participants can use any encoding model, pretrained representation or external training data.
+                <li>Challenge participants can use any encoding model, pretrained representation or <a href="data.html#external-data">external training data</a>.
                 Using the withheld fMRI responses of the test data is prohibited.</li>
                 <li>The winners are determined by performance in predicting fMRI responses for the unseen games during the
                 Generalization Phase.</li>
@@ -236,13 +236,13 @@
             <div class="block">
                 <div class="prose">
                     <h2>Baseline model</h2>
-                    <p>We provide a challenge baseline model as a working example and a reference point for prediction accuracy. Participants may use their own features, model architectures, and training strategies. Features from four stimulus modalities are aligned to the 1.49-second fMRI
+                    <p>We provide a challenge baseline model as a working example and a reference point for prediction accuracy. Participants may use their own features, model architectures, and training strategies. Features extracted from the gameplay data are aligned to the 1.49-second fMRI
                     sampling grid, combined across a window of recent gameplay shifted for the hemodynamic delay, and mapped
                     onto each of the 1,134 parcels with ridge regression. Baseline accuracy: <em>to be announced</em>.</p>
                 </div>
                 <div class="table-wrap" style="max-width:var(--textw)">
                     <table class="table">
-                        <thead><tr><th>Modality</th><th>Features</th></tr></thead>
+                        <thead><tr><th>Gameplay data</th><th>Features</th></tr></thead>
                         <tbody>
                             <tr><td>Video</td><td>Slow R50 video network, 100 principal components</td></tr>
                             <tr><td>Audio</td><td>Mel frequency cepstral coefficients, 10 principal components</td></tr>
@@ -266,7 +266,22 @@
         </div>
     </section>
 
-    <!-- Acknowledgements + sponsors (always visible, at the bottom) -->
+    <!-- Sponsors (always visible, below the tabs). Same list as on the home page; add a <li> per new sponsor
+         (logos in 2027/img/sponsors/). Organizing institutions and groups are listed under Team on the home page. -->
+    <section class="section section--after-tabs" id="sponsors">
+        <div class="section-inner">
+            <div class="section-title">
+                <h2>Sponsors</h2>
+                <p>We thank our sponsors for supporting the 2027 challenge.</p>
+            </div>
+            <ul class="sponsor-mat">
+                <li><a href="https://www.unique.quebec/" target="_blank" rel="noopener"><img class="sp-unique" src="../img/sponsors/unique_logo_logo.png" alt="UNIQUE – Unifying Neuroscience and Artificial Intelligence, Québec" width="1174" height="1320"></a></li>
+                <li><a href="https://ivado.ca/en/" target="_blank" rel="noopener"><img class="sp-ivado" src="../img/sponsors/ivado_logo.png" alt="IVADO" width="928" height="436"></a></li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Acknowledgements + partners (always visible, at the bottom) -->
     <section class="section section--alt" id="acknowledgements">
         <div class="section-inner two-col">
             <div>
@@ -277,11 +292,19 @@
                 Centre-Sud-de-l’île-de-Montréal and University of Montreal.</p>
             </div>
             <div>
-                <h3>Partners and sponsors</h3>
-                <div class="logo-wall">
-                    <a class="logo-tile" href="https://www.cneuromod.ca/" target="_blank" rel="noopener"><img src="../img/CneuroMod.png" alt="CNeuroMod"></a>
-                    <a class="logo-tile" href="http://2027.ccneuro.org/" target="_blank" rel="noopener"><img src="../../img/2024/ccn_logo.png" alt="CCN" style="max-height:26px"></a>
-                    <div class="logo-tile logo-tile--tba">Sponsors to be announced</div>
+                <!-- Data collaboration and conference host: kept apart from the sponsors -->
+                <div class="partners">
+                    <h3>Partners</h3>
+                    <div class="hosts hosts--start">
+                        <a class="host host--cneuromod" href="https://www.cneuromod.ca/" target="_blank" rel="noopener">
+                            <span class="host-chip"><img src="../img/CneuroMod.png" alt="CNeuroMod — The Courtois Project on Neuronal Modelling"></span>
+                            <span class="host-cap">In collaboration with</span>
+                        </a>
+                        <a class="host host--ccn" href="http://2027.ccneuro.org/" target="_blank" rel="noopener">
+                            <span class="host-chip"><img src="../../img/2024/ccn_logo.png" alt="Cognitive Computational Neuroscience (CCN)"></span>
+                            <span class="host-cap">Hosted at CCN 2027</span>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>

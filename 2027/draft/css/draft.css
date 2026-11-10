@@ -306,6 +306,10 @@ body.menu-open { overflow: hidden; }
 .section-title p { margin: 10px auto 0; color: var(--text-dim); font-size: 1.08rem; max-width: 56ch; }
 .prose p { color: var(--text-2); }
 .prose p.big { font-size: clamp(1.12rem, 1.9vw, 1.3rem); line-height: 1.5; color: var(--text); }
+.prose p.muted { color: var(--text-dim); }
+.section--tight { padding-top: clamp(40px, 5vw, 60px); padding-bottom: clamp(40px, 5vw, 60px); }
+.section--tight .prose { max-width: var(--textw); }
+.h-sub { font-size: clamp(1.3rem, 2.4vw, 1.55rem); font-weight: 800; letter-spacing: -.3px; margin-bottom: 12px; }
 .muted { color: var(--text-dim); }
 .small { font-size: .9rem; }
 
@@ -498,6 +502,17 @@ body.menu-open { overflow: hidden; }
 .logo-tile { display: grid; place-items: center; min-width: 170px; height: 76px; padding: 12px 22px; border-radius: var(--r); background: #fff; }
 .logo-tile img { max-height: 36px; width: auto; }
 .logo-tile--tba { background: transparent; border: 1px dashed var(--line-2); color: var(--text-dim); font-size: .9rem; text-align: center; line-height: 1.4; }
+/* Sponsors (home, after Prizes; Challenge Details, below the tabs). One white panel, one cell per sponsor;
+   the row wraps as sponsors are added. Logo heights are set per logo for comparable visual weight. */
+.sponsor-mat { list-style: none; margin: 0 auto; padding: clamp(16px, 3vw, 32px); max-width: 960px; display: flex; flex-wrap: wrap; justify-content: center; gap: 8px clamp(16px, 4vw, 56px); background: #fff; border-radius: var(--r); }
+.sponsor-mat li { flex: 0 1 260px; display: grid; place-items: center; min-height: 150px; }
+.sponsor-mat a { display: grid; place-items: center; padding: 10px; border-radius: 4px; }
+.sponsor-mat a:focus-visible { outline-color: #0a0616; }
+.sponsor-mat img { width: auto; max-width: 100%; object-fit: contain; }
+.sponsor-mat .sp-unique { height: 120px; }
+.sponsor-mat .sp-ivado { height: 94px; }
+.section--after-tabs { border-top: 1px solid var(--line); }
+.hosts--start { justify-content: flex-start; margin-top: 0; }
 
 /* ---------------------------------------------------------------------
    Challenge Data
@@ -627,6 +642,21 @@ a.team-card:hover .team-photo { border-color: var(--accent); }
 .team-card--lead { max-width: 300px; }
 .team-card--lead .team-photo { width: clamp(132px, 15.5vw, 164px); height: clamp(132px, 15.5vw, 164px); }
 .team-card--lead .team-name { margin-top: 18px; font-size: 1.2rem; }
+/* Organizing institutions and groups: white tiles like the partner logos; per-logo heights balance visual weight */
+.orgs { max-width: 1000px; margin: clamp(40px, 5vw, 56px) auto 0; padding-top: clamp(32px, 4vw, 44px); border-top: 1px solid var(--line); text-align: center; }
+.orgs h3 { font-size: 1rem; font-weight: 700; margin-bottom: 20px; }
+.org-row { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; justify-content: center; gap: 18px 16px; }
+.org-row li { width: 168px; }
+.org { display: flex; flex-direction: column; align-items: center; gap: 8px; color: var(--text-dim); font-size: .82rem; line-height: 1.35; }
+.org:hover { color: #fff; text-decoration: none; }
+.org-tile { display: grid; place-items: center; width: 100%; height: 84px; padding: 10px 16px; background: #fff; border: 2px solid transparent; border-radius: var(--r); transition: border-color .15s ease; }
+.org:hover .org-tile { border-color: var(--accent); }
+.org-tile img { width: auto; max-width: 100%; height: 44px; object-fit: contain; }
+.org-tile .org-cvai { height: 60px; }
+.org-tile .org-fu { height: 46px; }
+.org-tile .org-goethe { height: 50px; }
+.org-tile .org-cneuromod { height: 30px; }
+.org-tile .org-mitibm { height: 62px; }
 @media (min-width: 620px) { .team-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } .team-grid--lead { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 @media (min-width: 900px) { .team-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); } .team-grid--lead { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 
@@ -708,6 +738,13 @@ a.team-card:hover .team-photo { border-color: var(--accent); }
     .table tr { display: block; padding: 12px 0; border-bottom: 1px solid var(--line); }
     .table td { display: block; padding: 2px 0; border: 0; }
     .hud-inner { display: grid; grid-template-columns: 1fr 1fr; }
+    .org-row { gap: 14px 12px; }
+    .sponsor-mat { gap: 8px 12px; }
+    .sponsor-mat li { flex-basis: calc(50% - 6px); min-height: 112px; }
+    .sponsor-mat a { padding: 6px; }
+    .sponsor-mat .sp-unique { height: 88px; }
+    .sponsor-mat .sp-ivado { height: 66px; }
+    .org-row li { width: calc(50% - 6px); max-width: 168px; }
     /* dates as compact label / date rows */
     .dates-list { grid-template-columns: 1fr; gap: 0; }
     .dates-list > div { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; padding: 7px 0; border-left: 0; border-top: 1px solid var(--line); }

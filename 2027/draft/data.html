@@ -102,6 +102,26 @@
         </div>
     </section>
 
+    <!-- Optional external training data. Documentation links only; these datasets are NOT part of the
+         model training games or of the ID/OOD test sets. Linked from Challenge Details → Rules. -->
+    <section class="section section--tight" id="external-data" aria-labelledby="external-data-title">
+        <div class="section-inner">
+            <div class="prose">
+                <h2 class="h-sub" id="external-data-title">Optional external training data</h2>
+                <p>Participants may use external data for model training. Two examples from the Courtois NeuroMod Project
+                are <a href="https://docs.cneuromod.ca/datasets/friends.html" target="_blank" rel="noopener">Friends</a> and
+                <a href="https://docs.cneuromod.ca/datasets/movie10.html" target="_blank" rel="noopener">Movie10</a>.
+                The fMRI time series from both datasets have also been extracted using the CNeuroMod 2026 atlas, the same
+                parcellation used for the Algonauts Project 2027 challenge.</p>
+                <!-- TODO: access link for the Friends and Movie10 time series extracted with the CNeuroMod 2026 atlas.
+                     Add it only once confirmed, as a separate and clearly labelled link, e.g.
+                     <p><a href="…">Access the Friends and Movie10 time series (CNeuroMod 2026 atlas)</a></p> -->
+                <p class="small muted">These datasets are optional and separate from the challenge data: they are not
+                part of the official challenge training data or the ID and OOD test sets.</p>
+            </div>
+        </div>
+    </section>
+
     <nav class="tabs" data-tabs aria-label="Challenge data">
         <div class="tabs-inner" role="tablist">
             <a class="tab" role="tab" href="#games" id="tab-games" aria-controls="games" aria-selected="true">Games &amp; subjects</a>
@@ -169,8 +189,8 @@
                 <div class="prose">
                     <h2 id="id-split-title">In-distribution test split</h2>
                     <p>For in-distribution (ID) testing during the Development Phase, we reserve selected whole runs from
-                    Super Mario All-Stars and Super Mario Bros. 3. For these test runs, we release all four model input
-                    modalities: gameplay video, audio, controller actions and game event annotations. The corresponding fMRI
+                    Super Mario All-Stars and Super Mario Bros. 3. For these test runs, we release all gameplay data, including
+                    video, audio, controller actions, and game event annotations. The corresponding fMRI
                     responses are hidden.</p>
                 </div>
                 <div class="split">
@@ -203,8 +223,8 @@
                 <div>
                     <span class="phase-label">Generalization Phase · out-of-distribution testing</span>
                     <h2 id="unseen-title">Unseen games</h2>
-                    <p>The Generalization Phase evaluates out-of-distribution (OOD) generalization to games absent from the model training data. We reveal the game titles at the start of the phase.</p>
-                    <p>We provide approximately two hours of gameplay per subject, with the same four input modalities as during the Development Phase. We keep the corresponding fMRI responses hidden.
+                    <p>The Generalization Phase evaluates out-of-distribution (OOD) generalization to previously unseen games. We reveal the game titles at the start of the phase.</p>
+                    <p>We provide approximately two hours of gameplay data per subject, with the same gameplay data modalities as during the Development Phase. We keep the corresponding fMRI responses hidden.
                     Performance on these games determines the final ranking.</p>
                 </div>
             </section>
