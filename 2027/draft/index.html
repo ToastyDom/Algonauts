@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>The Algonauts Project 2027 Challenge</title>
-    <meta name="description" content="The Algonauts Project 2027 Challenge: How the Human Brain Makes Sense of Video Games. Build encoding models that predict fMRI responses during video game play and generalize to new levels and unseen games.">
+    <meta name="description" content="The Algonauts Project 2027 Challenge: How the Human Brain Makes Sense of Video Games. Build encoding models that predict fMRI responses during video game play and generalize within and across games.">
     <meta name="author" content="The Algonauts Project">
     <!-- DRAFT: keep out of search engines and analytics until this replaces 2027/index.html -->
     <meta name="robots" content="noindex, nofollow">
@@ -16,8 +16,6 @@
 </head>
 
 <body class="page-home">
-    <div class="draft-ribbon" aria-hidden="true">Draft preview</div>
-
     <nav class="nav" id="nav" aria-label="Main">
         <div class="nav-inner">
             <a href="../../index.html" class="nav-logo">
@@ -58,7 +56,7 @@
             <h1>The Algonauts Project 2027 Challenge</h1>
             <p class="tagline">How the Human Brain Makes Sense of Video Games</p>
             <p class="launch-badge">Launching <strong>end of 2026</strong></p>
-            <p class="lead">Build encoding models that predict brain responses during video game play and test how well they generalize to new levels and games.</p>
+            <p class="lead">Build encoding models that predict brain responses during video game play and test how well they generalize within and across games.</p>
             <div class="btn-row">
                 <a href="#" class="btn btn-primary">Challenge Paper</a><!-- TODO: paper link -->
                 <a href="#" class="btn btn-ghost">Development Kit</a><!-- TODO: Colab link -->
@@ -177,15 +175,19 @@
         <div class="section-inner">
             <div class="section-title">
                 <h2>The 2027 Challenge</h2>
-                <p>Predicting brain responses during active video game play</p>
+                <p>From passive viewing to active interaction</p>
             </div>
             <div class="challenge-grid">
                 <div class="prose">
-                    <p class="big">Video gameplay brings together perception, decision making, and action in dynamic
-                    environments.</p>
-                    <p>During gameplay, players’ decisions and actions shape what they subsequently see and hear. The challenge asks participants to predict functional magnetic resonance imaging (fMRI) responses in this setting and test whether their models generalize to new levels and games.</p>
+                    <p class="big">A central goal of computational neuroscience is to predict the brain activity underlying perception, decision-making, and interaction with the environment.</p>
+                    <p>Earlier Algonauts challenges compared models predicting neural responses during passive viewing. The 2025 challenge broadened this focus to multimodal movies combining visual and auditory input. The 2027 challenge moves from passive viewing to active interaction through video gameplay. In this setting, perception and action form a closed loop. What players see and hear guides their decisions and actions, and those actions shape the sensory input they receive next.</p>
+                    <p>Video games have an established role in both artificial intelligence and cognitive neuroscience.
+                    In artificial intelligence, they provide reproducible environments for comparing how agents learn and
+                    generalize. In cognitive neuroscience, researchers use games to study how the brain represents task
+                    states, learns rules, and responds to prediction errors. The 2027 challenge brings these research
+                    directions together.</p>
                     <p>In collaboration with the <a href="https://www.cneuromod.ca/" target="_blank" rel="noopener">Courtois
-                    NeuroMod Project (CNeuroMod)</a>, the challenge provides gameplay video, audio, controller actions, annotated game events, and corresponding fMRI responses from subjects who played Super Mario Bros., Super Mario All-Stars, Super Mario Bros. 3 and Shinobi III. Performance on previously unseen games determines the final challenge ranking.</p>
+                    NeuroMod Project (CNeuroMod)</a>, we release gameplay video, audio, controller actions, and game event annotations aligned with functional magnetic resonance imaging (fMRI) measurements. We ask teams to develop encoding models that predict brain activity during gameplay and generalize within and across games. Performance on previously unseen games determines the final challenge ranking.</p>
                     <div class="btn-row">
                         <a href="challenge.html" class="btn btn-primary">Challenge details &rarr;</a>
                     </div>
@@ -225,8 +227,9 @@
                     <a class="res-sub" href="data.html">About the data</a>
                 </div>
                 <div class="res">
-                    <a class="res-main" href="#"><span class="px-icon" data-px="trophy"></span><span class="res-title">CodaBench</span></a><!-- TODO -->
-                    <a class="res-sub" href="#"><span class="tri" aria-hidden="true"></span>CodaBench submission walkthrough</a><!-- TODO -->
+                    <a class="res-main" href="#"><span class="px-icon" data-px="trophy"></span><span class="res-title">Codabench</span></a><!-- TODO -->
+                    <!-- 2025 walkthrough (Codabench upload steps only); the 2027 prediction format is explained in the Development Kit -->
+                    <a class="res-sub" href="https://www.youtube.com/watch?v=w7zpnoKtusE" target="_blank" rel="noopener"><span class="tri" aria-hidden="true"></span>Codabench submission walkthrough (2025)</a>
                 </div>
             </div>
         </div>
@@ -239,22 +242,24 @@
                 <h2>Important dates</h2>
                 <p>The challenge concludes with a session at CCN 2027 in Edinburgh.</p>
             </div>
+            <!-- Times: once confirmed, fill each empty <span class="when"></span> with time and time zone,
+                 e.g. <span class="when">00:00 UTC</span>. Empty slots are hidden. -->
             <ol class="road">
                 <li class="road-node">
                     <span class="road-dot" aria-hidden="true"></span>
-                    <time datetime="2026-12-01">Dec 1, 2026</time>
+                    <time datetime="2026-12-01">Dec 1, 2026<span class="when"></span></time>
                     <h3>Development Phase</h3>
                     <p>Training data and the Development Kit are released, and the in-distribution leaderboard opens.</p>
                 </li>
                 <li class="road-node">
                     <span class="road-dot" aria-hidden="true"></span>
-                    <time datetime="2027-07-05">Jul 5, 2027</time>
+                    <time datetime="2027-07-05">Jul 5, 2027<span class="when"></span></time>
                     <h3>Generalization Phase</h3>
                     <p>The unseen games are revealed for one week of out-of-distribution evaluation.</p>
                 </li>
                 <li class="road-node">
                     <span class="road-dot" aria-hidden="true"></span>
-                    <time datetime="2027-07-12">Jul 12, 2027</time>
+                    <time datetime="2027-07-12">Jul 12, 2027<span class="when"></span></time>
                     <h3>Winners announced</h3>
                     <p>Final ranking based on the Generalization Phase.</p>
                 </li>
@@ -263,12 +268,33 @@
                     <time datetime="2027-07-26">Jul 26, 2027</time>
                     <h3>Session at CCN 2027</h3>
                     <p>Results and talks by the winning teams, in Edinburgh.</p>
+                    <dl class="road-meta">
+                        <div><dt>Time (local)</dt><dd>To be announced</dd></div><!-- TODO: e.g. 10:00–12:00 BST -->
+                        <div><dt>Room</dt><dd>To be announced</dd></div><!-- TODO -->
+                        <div><dt>Session program</dt><dd>To be announced</dd></div><!-- TODO: replace with <a href="…">Session program</a> -->
+                    </dl>
                 </li>
             </ol>
             <div class="road-foot">
                 <span>Dates are provisional.</span>
                 <a href="challenge.html#phases" class="text-link">Challenge phases &rarr;</a>
             </div>
+        </div>
+    </section>
+
+    <!-- Prizes: fill in when confirmed -->
+    <section class="section" id="prizes">
+        <div class="section-inner">
+            <div class="section-title">
+                <h2>Prizes</h2>
+                <p>The top three teams are invited to present at CCN 2027.</p>
+            </div>
+            <dl class="prize-list">
+                <div><dt>1st place</dt><dd>To be announced</dd></div>
+                <div><dt>2nd place</dt><dd>To be announced</dd></div>
+                <div><dt>3rd place</dt><dd>To be announced</dd></div>
+                <div><dt>Travel and registration support</dt><dd>To be announced</dd></div>
+            </dl>
         </div>
     </section>
 
@@ -288,7 +314,7 @@
                 <p>For general inquiries about the Algonauts Project, please contact
                 <a href="mailto:algonauts.mit@gmail.com">algonauts.mit@gmail.com</a>.</p>
                 <p>For specific questions about the Algonauts Project 2027 Challenge, please use the
-                <a href="#">CodaBench Forum</a>.</p><!-- TODO -->
+                <a href="#">Codabench Forum</a>.</p><!-- TODO -->
                 <p>To stay updated on present and future challenges, <a href="#signup">join our mailing list</a> or follow
                 us on <a href="https://bsky.app/profile/algonautsproject.bsky.social" target="_blank" rel="noopener">Bluesky</a>
                 and <a href="https://x.com/AlgonautsProj" target="_blank" rel="noopener">X</a>.</p>

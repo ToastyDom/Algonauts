@@ -60,12 +60,6 @@ code { font-family: var(--font-mono); font-size: .86em; color: var(--text); back
 .pixelated { image-rendering: pixelated; image-rendering: crisp-edges; }
 .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
 
-.draft-ribbon {
-    position: fixed; left: 14px; bottom: 14px; z-index: 200;
-    font-family: var(--font-pixel); font-size: .5rem; letter-spacing: .5px; text-transform: uppercase;
-    color: #0a0616; background: #ffd166; border-radius: 3px; padding: 6px 8px 5px; pointer-events: none;
-}
-
 /* ---------------------------------------------------------------------
    Buttons and links
    --------------------------------------------------------------------- */
@@ -95,7 +89,7 @@ code { font-family: var(--font-mono); font-size: .86em; color: var(--text); back
 .nav.scrolled, .page-sub .nav {
     background: rgba(10, 6, 22, .9);
     -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px);
-    padding-top: 11px; padding-bottom: 11px;
+    padding-top: 12px; padding-bottom: 13px;   /* 12 + 38 + 13 + 1 border = --nav-h, so the sticky tab bar meets it */
     border-bottom-color: var(--line);
 }
 .nav-inner { max-width: var(--maxw); margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
@@ -402,6 +396,21 @@ body.menu-open { overflow: hidden; }
 .road-node h3 { font-size: 1.05rem; font-weight: 700; margin-bottom: 6px; }
 .road-node p { margin: 0; color: var(--text-dim); font-size: .9rem; line-height: 1.5; }
 .road-foot { margin-top: 32px; display: flex; flex-wrap: wrap; gap: 12px 24px; justify-content: space-between; color: var(--text-dim); font-size: .9rem; }
+.road-meta { margin: 10px 0 0; display: grid; gap: 2px; font-size: .86rem; line-height: 1.45; }
+.road-meta > div { display: flex; flex-wrap: wrap; gap: 0 6px; }
+.road-meta dt { color: var(--text-dim); }
+.road-meta dt::after { content: ":"; }
+.road-meta dd { margin: 0; color: var(--text-2); }
+
+/* Time and time zone of a deadline, filled in when confirmed (empty slots stay hidden) */
+.when { display: block; font-size: .82em; font-weight: 500; color: var(--text-dim); }
+.when:empty { display: none; }
+
+/* Prizes (home) */
+.prize-list { max-width: 560px; margin: 0 auto; border-top: 1px solid var(--line); }
+.prize-list > div { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; padding: 13px 2px; border-bottom: 1px solid var(--line); }
+.prize-list dt { min-width: 0; font-weight: 600; color: var(--text); }
+.prize-list dd { margin: 0; color: var(--text-dim); text-align: right; white-space: nowrap; }
 
 /* Citation / contact */
 .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(28px, 5vw, 64px); }
@@ -431,6 +440,10 @@ body.menu-open { overflow: hidden; }
     display: inline-block; margin: 0 0 10px;
     font-size: .78rem; font-weight: 700; letter-spacing: .6px; text-transform: uppercase; color: var(--text-dim);
 }
+.aside-note { padding-left: 18px; border-left: 2px solid var(--line-2); }
+.aside-note h3 .muted { font-weight: 500; font-size: .92rem; }
+.rule-action { margin-top: 6px; }
+.rule-note { margin: 10px 0 0; }
 
 /* Tables */
 .table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
@@ -519,6 +532,27 @@ body.menu-open { overflow: hidden; }
 .cat-stats b { color: var(--text); font-variant-numeric: tabular-nums; }
 .cat-split { margin: 10px 0 0; font-size: .9rem; font-weight: 600; color: var(--text); }
 .cat-split::before { content: ""; display: inline-block; width: 8px; height: 8px; margin-right: 8px; background: var(--text); vertical-align: 1px; }
+.cat-split a { color: var(--text); text-decoration: underline; text-decoration-color: var(--line-2); text-underline-offset: 3px; }
+.cat-split a:hover { color: var(--accent); text-decoration-color: currentColor; }
+
+/* In-distribution test split: one 100 % bar per game; the held-out part is hatched and labelled in text */
+.split { margin-top: 24px; max-width: 880px; }
+.split-head { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; padding-bottom: 10px; border-bottom: 1px solid var(--line-2); }
+.panel .split-head h3 { margin: 0; font-size: .95rem; font-weight: 700; line-height: 1.35; }
+.split-head span { font-size: .82rem; color: var(--text-dim); white-space: nowrap; }
+.split-list { list-style: none; margin: 0; padding: 0; }
+.split-list li { padding: 18px 0; border-bottom: 1px solid var(--line); }
+.split-game { margin: 0 0 8px; font-weight: 700; color: var(--text); }
+.split-bar { position: relative; height: 22px; border: 1px solid var(--line-2); border-radius: 3px; background: rgba(255, 255, 255, .07); overflow: hidden; }
+.split-bar span { position: absolute; left: 0; top: 0; bottom: 0; border-right: 2px solid var(--text);
+                  background: repeating-linear-gradient(135deg, var(--text) 0 3px, rgba(244, 242, 251, .22) 3px 7px); }
+.split-vals { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 4px 16px; margin: 8px 0 0; font-size: .92rem; color: var(--text-dim); font-variant-numeric: tabular-nums; }
+.split-vals b { color: var(--text); font-weight: 700; }
+.split-held::before, .split-train::before { content: ""; display: inline-block; width: 11px; height: 11px; margin-right: 7px; vertical-align: -1px; border: 1px solid var(--line-2); }
+.split-held::before { background: repeating-linear-gradient(135deg, var(--text) 0 2px, rgba(244, 242, 251, .22) 2px 4px); border-color: var(--text); }
+.split-train::before { background: rgba(255, 255, 255, .07); }
+.split-note { margin: 6px 0 0; font-size: .92rem; color: var(--text-2); }
+.split-foot { margin: 12px 0 0; font-size: .86rem; color: var(--text-dim); max-width: 72ch; }
 
 /* Unseen games */
 .unseen { margin-top: clamp(40px, 5.5vw, 60px); display: grid; grid-template-columns: auto 1fr; gap: 28px; align-items: center; padding: clamp(24px, 3.5vw, 36px); background: var(--bg-raise); border: 1px solid var(--line-2); border-radius: var(--r); }
