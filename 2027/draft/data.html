@@ -7,7 +7,7 @@
     <meta name="description" content="The Algonauts Project 2027 challenge data: gameplay video, audio, controller actions, game events and fMRI responses from the Courtois NeuroMod Project.">
     <meta name="author" content="The Algonauts Project">
     <meta name="robots" content="noindex, nofollow">
-    <link rel="icon" id="favicon" data-base="../../img/2024/" type="image/png" href="../../img/2024/logo_icon_light.png" sizes="32x32">
+    <link rel="icon" id="favicon" data-base="img/logos/" type="image/png" href="img/logos/logo_icon_light.png" sizes="32x32">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Press+Start+2P&display=swap" rel="stylesheet">
@@ -17,8 +17,8 @@
 <body class="page-sub">
     <nav class="nav" id="nav" aria-label="Main">
         <div class="nav-inner">
-            <a href="../../index.html" class="nav-logo">
-                <img src="../../img/2024/logo_icon_dark.png" alt="">
+            <a href="https://algonautsproject.com/" class="nav-logo">
+                <img src="img/logos/logo_icon_dark.png" alt="">
                 <span>The Algonauts Project</span>
             </a>
             <ul class="nav-links">
@@ -27,7 +27,7 @@
                 <li><a href="data.html" class="active" aria-current="page">Challenge Data</a></li>
                 <li><a href="index.html#team">Team</a></li>
                 <li><a href="index.html#signup">Stay Updated</a></li>
-                <li><a href="../../2025/archive.html">Archive</a></li>
+                <li><a href="https://algonautsproject.com/2025/archive.html">Archive</a></li>
             </ul>
             <button class="nav-toggle" id="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-overlay">
                 <span></span><span></span><span></span>
@@ -41,8 +41,8 @@
             <li><a href="data.html" class="active">Challenge Data</a></li>
             <li><a href="index.html#team">Team</a></li>
             <li><a href="index.html#signup">Stay Updated</a></li>
-            <li><a href="../../2025/archive.html">Archive</a></li>
-            <li><a href="../../index.html">Algonauts Project</a></li>
+            <li><a href="https://algonautsproject.com/2025/archive.html">Archive</a></li>
+            <li><a href="https://algonautsproject.com/">Algonauts Project</a></li>
         </ul>
     </div>
 
@@ -80,6 +80,9 @@
             <div class="hud-item"><span class="hud-k">Subjects</span><span class="hud-v">6</span></div>
             <div class="hud-item"><span class="hud-k">Brain parcels</span><span class="hud-v">1,134</span></div>
             <div class="hud-item"><span class="hud-k">Sampling (TR)</span><span class="hud-v">1.49 s</span></div>
+            <!-- Totals verified against the four game READMEs: 187.4 h gameplay, 212.5 h acquired fMRI -->
+            <p class="hud-note">The 212.5 h are all recorded fMRI time, including periods outside active gameplay such as
+            loading screens and fixation. Six subjects contribute data; five are evaluated.</p>
         </div>
     </div>
 
@@ -93,31 +96,23 @@
                 Please read the README in each game’s folder before exploring its data: it explains the recording setup,
                 the available files and game-specific caveats.</p>
             </div>
+            <div>
             <ol class="num-list" style="margin-top:6px">
                 <li>Fill out the <a href="#">data access form</a>.</li><!-- TODO -->
                 <li>You receive the link to the repository with the <strong>full challenge data</strong>, and to a tutorial
                 subset with <span class="subj">sub-01</span> used by the Development Kit.</li>
                 <li>Follow the <a href="challenge.html#baseline">Development Kit</a> to load, align and model the data.</li>
             </ol>
-        </div>
-    </section>
-
-    <!-- Optional external training data. Documentation links only; these datasets are NOT part of the
-         model training games or of the ID/OOD test sets. Linked from Challenge Details → Rules. -->
-    <section class="section section--tight" id="external-data" aria-labelledby="external-data-title">
-        <div class="section-inner">
-            <div class="prose">
-                <h2 class="h-sub" id="external-data-title">Optional external training data</h2>
-                <p>Participants may use external data for model training. Two examples from the Courtois NeuroMod Project
-                are <a href="https://docs.cneuromod.ca/datasets/friends.html" target="_blank" rel="noopener">Friends</a> and
-                <a href="https://docs.cneuromod.ca/datasets/movie10.html" target="_blank" rel="noopener">Movie10</a>.
-                The fMRI time series from both datasets have also been extracted using the CNeuroMod 2026 atlas, the same
-                parcellation used for the Algonauts Project 2027 challenge.</p>
-                <!-- TODO: access link for the Friends and Movie10 time series extracted with the CNeuroMod 2026 atlas.
-                     Add it only once confirmed, as a separate and clearly labelled link, e.g.
-                     <p><a href="…">Access the Friends and Movie10 time series (CNeuroMod 2026 atlas)</a></p> -->
-                <p class="small muted">These datasets are optional and separate from the challenge data: they are not
-                part of the official challenge training data or the ID and OOD test sets.</p>
+            <!-- Optional external training data (linked from Challenge Details → Rules). Documentation links only;
+                 these datasets are NOT part of the model training games or of the ID/OOD test sets.
+                 TODO: access link for the Friends and Movie10 time series extracted with the CNeuroMod 2026 atlas;
+                 add it only once confirmed, as a separate, clearly labelled link. -->
+            <p class="access-note" id="external-data"><strong>Optional external training data.</strong> Participants may
+            also train on external data, for example the CNeuroMod
+            <a href="https://docs.cneuromod.ca/datasets/friends.html" target="_blank" rel="noopener">Friends</a> and
+            <a href="https://docs.cneuromod.ca/datasets/movie10.html" target="_blank" rel="noopener">Movie10</a> datasets,
+            whose fMRI time series have also been extracted with the CNeuroMod 2026 atlas used in this challenge. They are
+            not part of the official challenge training data or the ID and OOD test sets.</p>
             </div>
         </div>
     </section>
@@ -213,7 +208,9 @@
                         </li>
                     </ul>
                     <p class="split-foot">Percentages refer to each game’s fMRI time during gameplay, not to all fMRI time or
-                    all runs. The split and the percentages are provisional and may change before launch.</p>
+                    all runs. The split and the percentages are provisional and may change before launch. Held-out and
+                    training volumes in hours: to be announced.</p><!-- TODO: add hours once published (paper: "[add actual amount]"); use fMRI time during gameplay as the denominator, as for the percentages -->
+
                 </div>
             </section>
 
@@ -300,7 +297,8 @@
                     </figure></li>
                 </ul>
 
-<svg class="ex-timeline" viewBox="0 0 640 218" role="img" aria-labelledby="ex-tl-title ex-tl-desc">
+<!-- Timeline: wide version (tablet/desktop) and a narrow version for phones with the labels above each track, so they stay legible -->
+<svg class="ex-timeline ex-timeline--wide" viewBox="0 0 640 218" role="img" aria-labelledby="ex-tl-title ex-tl-desc">
 <title id="ex-tl-title">Annotations around the first Goomba stomp</title>
 <desc id="ex-tl-desc">Timeline from 8.3 to 10.2 seconds into the recording. Right and Run are held from 8.60 and 8.50 seconds onward. Jump is held from 9.02 to 9.33 seconds. A Goomba is on screen until 10.10 seconds. The stomp is annotated at 9.75 seconds. Frames A, B and C are at 8.90, 9.40 and 9.75 seconds.</desc>
 <line class="mk" x1="332.4" y1="18" x2="332.4" y2="184"/>
@@ -336,16 +334,59 @@
 <line class="tick" x1="582.5" y1="186" x2="582.5" y2="192"/>
 <text class="ax" x="582.5" y="206" text-anchor="middle">10.0 s</text>
 </svg>
+<svg class="ex-timeline ex-timeline--narrow" viewBox="0 0 360 250" role="img" aria-labelledby="ex-tl-title-n ex-tl-desc-n">
+<title id="ex-tl-title-n">Annotations around the first Goomba stomp</title>
+<desc id="ex-tl-desc-n">Timeline from 8.3 to 10.2 seconds into the recording. Right and Run are held from 8.60 and 8.50 seconds onward. Jump is held from 9.02 to 9.33 seconds. A Goomba is on screen until 10.10 seconds. The stomp is annotated at 9.75 seconds. Frames A, B and C are at 8.90, 9.40 and 9.75 seconds.</desc>
+<line class="mk" x1="116.1" y1="18" x2="116.1" y2="218"/>
+<text class="mk-l" x="116.1" y="13" text-anchor="middle">A</text>
+<line class="mk" x1="204.5" y1="18" x2="204.5" y2="218"/>
+<text class="mk-l" x="204.5" y="13" text-anchor="middle">B</text>
+<line class="mk" x1="266.4" y1="18" x2="266.4" y2="218"/>
+<text class="mk-l" x="266.4" y="13" text-anchor="middle">C</text>
+<text class="lab" x="10" y="36">Action/Right</text>
+<line class="track" x1="10" y1="50" x2="346" y2="50"/>
+<rect class="action" x="63.4" y="44" width="282.6" height="12"/>
+<text class="more" x="349" y="54">›</text>
+<text class="lab" x="10" y="76">Action/Run</text>
+<line class="track" x1="10" y1="90" x2="346" y2="90"/>
+<rect class="action" x="45.7" y="84" width="300.3" height="12"/>
+<text class="more" x="349" y="94">›</text>
+<text class="lab" x="10" y="116">Action/Jump</text>
+<line class="track" x1="10" y1="130" x2="346" y2="130"/>
+<rect class="action" x="137.0" y="124" width="55.9" height="12"/>
+<text class="lab" x="10" y="156">Enemy_on_screen/Goomba</text>
+<line class="track" x1="10" y1="170" x2="346" y2="170"/>
+<rect class="event" x="10.0" y="164" width="318.3" height="12"/>
+<text class="more" x="7" y="174" text-anchor="end">‹</text>
+<text class="lab" x="10" y="196">Enemy_defeated/Stomp/Goomba</text>
+<line class="track" x1="10" y1="210" x2="346" y2="210"/>
+<rect class="inst" x="260.4" y="204" width="12" height="12" transform="rotate(45 266.4 210)"/>
+<line class="tick" x1="45.4" y1="220" x2="45.4" y2="226"/>
+<text class="ax" x="45.4" y="242" text-anchor="middle">8.5 s</text>
+<line class="tick" x1="133.8" y1="220" x2="133.8" y2="226"/>
+<text class="ax" x="133.8" y="242" text-anchor="middle">9.0 s</text>
+<line class="tick" x1="222.2" y1="220" x2="222.2" y2="226"/>
+<text class="ax" x="222.2" y="242" text-anchor="middle">9.5 s</text>
+<line class="tick" x1="310.6" y1="220" x2="310.6" y2="226"/>
+<text class="ax" x="310.6" y="242" text-anchor="middle">10.0 s</text>
+</svg>
                 <p class="ex-legend"><span class="l-a">Controller action held</span><span class="l-e">Sustained game event</span><span class="l-i">Instantaneous game event</span><span>A–C: frames above · seconds into the recording</span></p>
 
-<pre class="codeblock block" style="margin-top:22px"><span class="c"># sub-01_ses-001_task-mario_run-01_desc-annotated_events.tsv (rows for this moment; onsets from the start of the run)</span>
-<span class="h">trial_type                    onset   duration  frame_start  frame_stop  button</span>
-gym-retro_game                0.013   80.383    0            4831
-Enemy_on_screen/Goomba        7.151   2.962     429          607
-Action/Run                    8.515   9.351     511          1073        B
-Action/Right                  8.615   6.539     517          910         RIGHT
-Action/Jump                   9.031   0.316     542          561         A
-Enemy_defeated/Stomp/Goomba   9.763   0.0       586          586</pre>
+<!-- Events table excerpt: a table styled like a code block; on phones each row stacks (column names from data-k) -->
+<div class="codeblock tsv-block block" style="margin-top:22px">
+<p class="c"># sub-01_ses-001_task-mario_run-01_desc-annotated_events.tsv (rows for this moment; onsets from the start of the run)</p>
+<table class="tsv">
+<thead><tr><th scope="col">trial_type</th><th scope="col">onset</th><th scope="col">duration</th><th scope="col">frame_start</th><th scope="col">frame_stop</th><th scope="col">button</th></tr></thead>
+<tbody>
+<tr><td>gym-retro_game</td><td data-k="onset">0.013</td><td data-k="duration">80.383</td><td data-k="frame_start">0</td><td data-k="frame_stop">4831</td><td data-k="button"></td></tr>
+<tr><td>Enemy_on_screen/Goomba</td><td data-k="onset">7.151</td><td data-k="duration">2.962</td><td data-k="frame_start">429</td><td data-k="frame_stop">607</td><td data-k="button"></td></tr>
+<tr><td>Action/Run</td><td data-k="onset">8.515</td><td data-k="duration">9.351</td><td data-k="frame_start">511</td><td data-k="frame_stop">1073</td><td data-k="button">B</td></tr>
+<tr><td>Action/Right</td><td data-k="onset">8.615</td><td data-k="duration">6.539</td><td data-k="frame_start">517</td><td data-k="frame_stop">910</td><td data-k="button">RIGHT</td></tr>
+<tr><td>Action/Jump</td><td data-k="onset">9.031</td><td data-k="duration">0.316</td><td data-k="frame_start">542</td><td data-k="frame_stop">561</td><td data-k="button">A</td></tr>
+<tr><td>Enemy_defeated/Stomp/Goomba</td><td data-k="onset">9.763</td><td data-k="duration">0.0</td><td data-k="frame_start">586</td><td data-k="frame_stop">586</td><td data-k="button"></td></tr>
+</tbody>
+</table>
+</div>
                 <p class="codeblock-cap">Rows copied from the events table, other columns omitted. The <code>gym-retro_game</code>
                 row places the recording in the run; frame indices count from the start of that recording.</p>
             </div>
@@ -371,17 +412,17 @@ Enemy_defeated/Stomp/Goomba   9.763   0.0       586          586</pre>
                 </dl>
             </div>
 
-            <!-- Figure 3 as optional detail -->
+            <!-- Optional website-only figure (no longer in the revised paper, which has Figures 1 and 2 only) -->
             <details class="optional" id="feature-figure">
                 <summary>
-                    <span><span class="s-t">How the model training games differ</span><span class="s-d">Figure 3 of the paper: visual, audio, controller and game-event features per game</span></span>
+                    <span><span class="s-t">Gameplay features across the model training games</span><span class="s-d">Optional figure: visual, audio, controller and game-event features per game</span></span>
                     <span class="s-i"><span class="s-show">Show</span><span class="s-hide">Hide</span></span>
                 </summary>
                 <figure class="figure">
                     <a class="figure-mat" href="img/fig3_gameplay_features.png" target="_blank" rel="noopener">
-                        <img src="img/fig3_gameplay_features.png" alt="Figure 3: Gameplay features across the four model training games: PCA projections of video and audio features per level, controller use, and a map of game-event description embeddings." width="2560" height="750" loading="lazy">
+                        <img src="img/fig3_gameplay_features.png" alt="Gameplay features across the four model training games: PCA projections of video and audio features per level, controller use, and a map of game-event description embeddings." width="2560" height="750" loading="lazy">
                     </a>
-                    <figcaption><strong>Figure 3 | How the model training games differ.</strong> (A) Visual and (B) audio
+                    <figcaption><strong>Gameplay features across the model training games.</strong> (A) Visual and (B) audio
                     features per level of sub-01, projected onto two principal components. (C) Controller use across all
                     subjects. (D) Sentence embeddings of the game-event descriptions. Proximity in these projections does not
                     by itself establish that neural predictions transfer between games.
@@ -447,14 +488,14 @@ Enemy_defeated/Stomp/Goomba   9.763   0.0       586          586</pre>
                     <li><a href="index.html">2027 Challenge</a></li>
                     <li><a href="challenge.html">Challenge Details</a></li>
                     <li><a href="data.html">Challenge Data</a></li>
-                    <li><a href="../../2025/archive.html">Challenge Archive</a></li>
-                    <li><a href="../../index.html">algonautsproject.com</a></li>
+                    <li><a href="https://algonautsproject.com/2025/archive.html">Challenge Archive</a></li>
+                    <li><a href="https://algonautsproject.com/">algonautsproject.com</a></li>
                 </ul>
                 <p class="footer-copy">&copy; 2026 The Algonauts Project. All rights reserved.</p>
             </div>
             <div class="footer-partners">
-                <a href="https://www.cneuromod.ca/" target="_blank" rel="noopener"><img src="../img/CneuroMod.png" alt="CNeuroMod"></a>
-                <a href="http://2027.ccneuro.org/" target="_blank" rel="noopener"><img src="../../img/2024/ccn_logo.png" alt="CCN"></a>
+                <a href="https://www.cneuromod.ca/" target="_blank" rel="noopener"><img src="img/CneuroMod.png" alt="CNeuroMod"></a>
+                <a href="http://2027.ccneuro.org/" target="_blank" rel="noopener"><img src="img/logos/ccn_logo.png" alt="CCN"></a>
             </div>
         </div>
     </footer>

@@ -7,7 +7,7 @@
     <meta name="description" content="Challenge phases, dates, evaluation, rules, baseline model and Development Kit of the Algonauts Project 2027 challenge.">
     <meta name="author" content="The Algonauts Project">
     <meta name="robots" content="noindex, nofollow">
-    <link rel="icon" id="favicon" data-base="../../img/2024/" type="image/png" href="../../img/2024/logo_icon_light.png" sizes="32x32">
+    <link rel="icon" id="favicon" data-base="img/logos/" type="image/png" href="img/logos/logo_icon_light.png" sizes="32x32">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Press+Start+2P&display=swap" rel="stylesheet">
@@ -17,8 +17,8 @@
 <body class="page-sub">
     <nav class="nav" id="nav" aria-label="Main">
         <div class="nav-inner">
-            <a href="../../index.html" class="nav-logo">
-                <img src="../../img/2024/logo_icon_dark.png" alt="">
+            <a href="https://algonautsproject.com/" class="nav-logo">
+                <img src="img/logos/logo_icon_dark.png" alt="">
                 <span>The Algonauts Project</span>
             </a>
             <ul class="nav-links">
@@ -27,7 +27,7 @@
                 <li><a href="data.html">Challenge Data</a></li>
                 <li><a href="index.html#team">Team</a></li>
                 <li><a href="index.html#signup">Stay Updated</a></li>
-                <li><a href="../../2025/archive.html">Archive</a></li>
+                <li><a href="https://algonautsproject.com/2025/archive.html">Archive</a></li>
             </ul>
             <button class="nav-toggle" id="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-overlay">
                 <span></span><span></span><span></span>
@@ -41,8 +41,8 @@
             <li><a href="data.html">Challenge Data</a></li>
             <li><a href="index.html#team">Team</a></li>
             <li><a href="index.html#signup">Stay Updated</a></li>
-            <li><a href="../../2025/archive.html">Archive</a></li>
-            <li><a href="../../index.html">Algonauts Project</a></li>
+            <li><a href="https://algonautsproject.com/2025/archive.html">Archive</a></li>
+            <li><a href="https://algonautsproject.com/">Algonauts Project</a></li>
         </ul>
     </div>
 
@@ -58,7 +58,7 @@
     <!-- Important dates: always visible, whichever tab is open -->
     <section class="dates-strip" id="dates" aria-labelledby="dates-title">
         <div class="dates-strip-inner">
-            <div class="dates-strip-head"><h2 id="dates-title">Important dates</h2><span>Provisional</span></div>
+            <div class="dates-strip-head"><h2 id="dates-title">Important dates</h2></div>
             <!-- Times: once confirmed, fill each empty <span class="when"></span> with time and time zone,
                  e.g. <span class="when">23:59 UTC</span>. Empty slots are hidden.
                  REVIEW (organizers): reports are required for the final ranking, so report eligibility has to be
@@ -78,7 +78,7 @@
         <div class="tabs-inner" role="tablist">
             <a class="tab" role="tab" href="#overview" id="tab-overview" aria-controls="overview" aria-selected="true">Overview</a>
             <a class="tab" role="tab" href="#phases" id="tab-phases" aria-controls="phases" aria-selected="false">Phases</a>
-            <a class="tab" role="tab" href="#evaluation" id="tab-evaluation" aria-controls="evaluation" aria-selected="false">Evaluation</a>
+            <a class="tab" role="tab" href="#evaluation" id="tab-evaluation" aria-controls="evaluation" aria-selected="false">Evaluation<span class="tab-long"> &amp; Submission</span></a>
             <a class="tab" role="tab" href="#rules" id="tab-rules" aria-controls="rules" aria-selected="false">Rules</a>
             <a class="tab" role="tab" href="#baseline" id="tab-baseline" aria-controls="baseline" aria-selected="false">Baseline &amp; Development Kit</a>
         </div>
@@ -92,7 +92,9 @@
                 <p>Our goal is to provide a platform where participants can develop and train brain encoding models for active gameplay, then test how well the models generalize within and across games. An encoding model uses a subject’s gameplay data to predict the corresponding fMRI time series.</p>
             </div>
 
-            <!-- Figure 1 from the paper (light figure on a white mat; only the PNG is available) -->
+            <!-- Figure 1 from the paper (light figure on a white mat; only the PNG is available).
+                 NOTE: the PNG still shows "Held-out levels for SMB3" as the only ID test set and a preliminary r = 0.126;
+                 a dark, updated version is planned. Replace the PNG (both links below) when it exists. -->
             <figure class="figure fig1-full">
                 <a class="figure-mat" href="img/fig1_challenge_overview.png" target="_blank" rel="noopener">
                     <img src="img/fig1_challenge_overview.png" alt="Figure 1: Overview of the Algonauts Project 2027 challenge. Panel A: gameplay video, audio, controller actions and game events from Super Mario Bros., Super Mario All-Stars, Super Mario Bros. 3 and Shinobi III feed an encoding model that predicts fMRI responses in 1,134 brain parcels. Panel B: the Development Phase (model building and in-distribution testing), the Generalization Phase (out-of-distribution testing on unseen games and final ranking) and the Post-Challenge Benchmark, with a timeline from launch at the end of 2026 to the winner showcase at CCN 2027." width="2200" height="1850">
@@ -150,7 +152,7 @@
                 </table>
             </div>
             <div class="prose block">
-                <p><strong>Development Phase.</strong> Participants train their encoding models on gameplay data and corresponding fMRI responses from all four games. For in-distribution testing, we reserve selected runs from Super Mario All-Stars and Super Mario Bros. 3 (see the <a href="data.html#id-split">in-distribution test split</a>). We release all gameplay data for these test runs and keep the corresponding fMRI responses hidden. Participants submit predicted fMRI responses to Codabench and can compare model variants using their prediction accuracy scores on a public leaderboard.</p>
+                <p><strong>Development Phase.</strong> Participants train their encoding models on gameplay data and corresponding fMRI responses from all four games. For in-distribution testing, we reserve selected runs from Super Mario All-Stars and Super Mario Bros. 3 (see the <a href="data.html#id-split">in-distribution test split</a>). We release all gameplay data for these test runs and keep the corresponding fMRI responses hidden. Participants submit predicted fMRI responses to Codabench (see <a href="#submission">Prepare a submission</a>) and can compare model variants using their prediction accuracy scores on a public leaderboard.</p>
                 <p><strong>Generalization Phase.</strong> At the beginning of this phase, we release about two hours of
                 gameplay data per subject from previously unseen games, and withhold the corresponding
                 fMRI responses. We reveal the identities of these games when the Generalization Phase begins. They were selected
@@ -162,10 +164,11 @@
         </div>
     </section>
 
-    <!-- Evaluation -->
+    <!-- Evaluation & Submission -->
     <section class="panel" id="evaluation" role="tabpanel" aria-labelledby="tab-evaluation">
-        <div class="panel-inner prose">
-            <h2>Evaluation</h2>
+        <div class="panel-inner">
+        <div class="prose">
+            <h2>Evaluation and submission</h2>
             <p>For each subject and game, the scoring program concatenates the predicted and withheld fMRI responses across evaluated gameplay recordings. Longer recordings contribute more time points. It then computes Pearson’s correlation coefficient (<em>r</em>) between the two time series for each of the 1,134 brain parcels. We average the parcel correlations to obtain one score per subject and game. We then average game scores within each subject, weighting games equally. Finally, we average the subject scores to obtain a single prediction accuracy score per submission. We apply this procedure to both the ID and OOD test sets.</p>
             <p>Five subjects are evaluated: <span class="subj">sub-01</span>, <span class="subj">sub-02</span>,
             <span class="subj">sub-03</span>, <span class="subj">sub-05</span> and <span class="subj">sub-06</span>.
@@ -190,6 +193,7 @@
                 <p>This validation is something you run yourself on the released model training data. It is separate from
                 the official ID and OOD test sets, whose fMRI responses stay hidden and which are scored only on Codabench.</p>
             </div>
+        </div>
         </div>
     </section>
 
@@ -266,66 +270,41 @@
         </div>
     </section>
 
-    <!-- Sponsors (always visible, below the tabs). Same list as on the home page; add a <li> per new sponsor
-         (logos in 2027/img/sponsors/). Organizing institutions and groups are listed under Team on the home page. -->
-    <section class="section section--after-tabs" id="sponsors">
-        <div class="section-inner">
-            <div class="section-title">
-                <h2>Sponsors</h2>
-                <p>We thank our sponsors for supporting the 2027 challenge.</p>
-            </div>
-            <ul class="sponsor-mat">
-                <li><a href="https://www.unique.quebec/" target="_blank" rel="noopener"><img class="sp-unique" src="../img/sponsors/unique_logo_logo.png" alt="UNIQUE – Unifying Neuroscience and Artificial Intelligence, Québec" width="1174" height="1320"></a></li>
-                <li><a href="https://ivado.ca/en/" target="_blank" rel="noopener"><img class="sp-ivado" src="../img/sponsors/ivado_logo.png" alt="IVADO" width="928" height="436"></a></li>
-            </ul>
-        </div>
-    </section>
-
-    <!-- Acknowledgements + partners (always visible, at the bottom) -->
-    <section class="section section--alt" id="acknowledgements">
-        <div class="section-inner two-col">
-            <div>
-                <h3>Acknowledgements</h3>
-                <p class="small">The Algonauts Project 2027 Challenge is supported by <em>[funding acknowledgements to be
-                confirmed]</em>. The Courtois project on neural modelling was made possible by a generous donation from the
-                Courtois foundation, administered by the Fondation Institut Gériatrie Montréal at CIUSSS du
-                Centre-Sud-de-l’île-de-Montréal and University of Montreal.</p>
-            </div>
-            <div>
-                <!-- Data collaboration and conference host: kept apart from the sponsors -->
-                <div class="partners">
-                    <h3>Partners</h3>
-                    <div class="hosts hosts--start">
-                        <a class="host host--cneuromod" href="https://www.cneuromod.ca/" target="_blank" rel="noopener">
-                            <span class="host-chip"><img src="../img/CneuroMod.png" alt="CNeuroMod — The Courtois Project on Neuronal Modelling"></span>
-                            <span class="host-cap">In collaboration with</span>
-                        </a>
-                        <a class="host host--ccn" href="http://2027.ccneuro.org/" target="_blank" rel="noopener">
-                            <span class="host-chip"><img src="../../img/2024/ccn_logo.png" alt="Cognitive Computational Neuroscience (CCN)"></span>
-                            <span class="host-cap">Hosted at CCN 2027</span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <div class="pixel-divider" aria-hidden="true"></div>
     <footer class="footer">
+        <!-- Sponsors, partners and acknowledgements sit in the footer on this page, so only the tab content changes
+             when switching tabs (the home page keeps the large Sponsors section). Same sponsor list as on the home
+             page: add a <li> per new sponsor (logos in img/sponsors/). -->
+        <div class="footer-credits">
+            <div class="fc-groups">
+                <div class="fc-group" id="sponsors">
+                    <h2 class="fc-k">Sponsors</h2>
+                    <ul class="fc-logos">
+                        <li><a href="https://www.unique.quebec/" target="_blank" rel="noopener"><span class="fc-tile"><img class="fc-unique" src="img/sponsors/unique_logo_logo.png" alt="UNIQUE – Unifying Neuroscience and Artificial Intelligence, Québec" width="1174" height="1320"></span></a></li>
+                        <li><a href="https://ivado.ca/en/" target="_blank" rel="noopener"><span class="fc-tile"><img class="fc-ivado" src="img/sponsors/ivado_logo.png" alt="IVADO" width="928" height="436"></span></a></li>
+                    </ul>
+                </div>
+                <!-- Data collaboration and conference host: kept apart from the sponsors -->
+                <div class="fc-group">
+                    <h2 class="fc-k">Partners</h2>
+                    <ul class="fc-logos">
+                        <li><a href="https://www.cneuromod.ca/" target="_blank" rel="noopener"><span class="fc-tile"><img class="fc-cneuromod" src="img/CneuroMod.png" alt="CNeuroMod — The Courtois Project on Neuronal Modelling"></span><span class="fc-cap">In collaboration with</span></a></li>
+                        <li><a href="http://2027.ccneuro.org/" target="_blank" rel="noopener"><span class="fc-tile"><img class="fc-ccn" src="img/logos/ccn_logo.png" alt="Cognitive Computational Neuroscience (CCN)"></span><span class="fc-cap">Hosted at CCN 2027</span></a></li>
+                    </ul>
+                </div>
+            </div>
+            <p class="fc-ack" id="acknowledgements"><strong>Acknowledgements.</strong> The Algonauts Project 2027 Challenge is supported by <em>[funding acknowledgements to be confirmed]</em>. The Courtois project on neural modelling was made possible by a generous donation from the Courtois foundation, administered by the Fondation Institut Gériatrie Montréal at CIUSSS du Centre-Sud-de-l’île-de-Montréal and University of Montreal.</p>
+        </div>
         <div class="footer-inner">
             <div>
                 <ul class="footer-links">
                     <li><a href="index.html">2027 Challenge</a></li>
                     <li><a href="challenge.html">Challenge Details</a></li>
                     <li><a href="data.html">Challenge Data</a></li>
-                    <li><a href="../../2025/archive.html">Challenge Archive</a></li>
-                    <li><a href="../../index.html">algonautsproject.com</a></li>
+                    <li><a href="https://algonautsproject.com/2025/archive.html">Challenge Archive</a></li>
+                    <li><a href="https://algonautsproject.com/">algonautsproject.com</a></li>
                 </ul>
                 <p class="footer-copy">&copy; 2026 The Algonauts Project. All rights reserved.</p>
-            </div>
-            <div class="footer-partners">
-                <a href="https://www.cneuromod.ca/" target="_blank" rel="noopener"><img src="../img/CneuroMod.png" alt="CNeuroMod"></a>
-                <a href="http://2027.ccneuro.org/" target="_blank" rel="noopener"><img src="../../img/2024/ccn_logo.png" alt="CCN"></a>
             </div>
         </div>
     </footer>

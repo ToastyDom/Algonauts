@@ -37,7 +37,7 @@
     function initFavicon() {
         var fav = document.getElementById('favicon');
         if (!fav || !window.matchMedia) return;
-        var base = fav.getAttribute('data-base') || '../../img/2024/';
+        var base = fav.getAttribute('data-base') || 'img/logos/';
         var mq = window.matchMedia('(prefers-color-scheme: dark)');
         var update = function () { fav.href = base + (mq.matches ? 'logo_icon_dark.png' : 'logo_icon_light.png'); };
         update();
