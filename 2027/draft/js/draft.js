@@ -44,6 +44,38 @@
         if (mq.addEventListener) mq.addEventListener('change', update);
     }
 
+    /* ---------------- Colour theme (dark / light) ----------------
+       The inline script in <head> applies the theme before first paint (from ?theme=, else localStorage,
+       else dark). The toggle switches it and stores it. Links to the other draft pages carry ?theme=, because
+       pages opened as local files (zip review) cannot share localStorage in Safari and Firefox. */
+    function initTheme() {
+        var root = document.documentElement;
+        var btn = document.getElementById('theme-toggle');
+        function current() { return root.getAttribute('data-theme') === 'light' ? 'light' : 'dark'; }
+        function apply(mode) {
+            root.setAttribute('data-theme', mode);
+            if (btn) {
+                var other = mode === 'light' ? 'dark' : 'light';
+                btn.setAttribute('aria-label', 'Switch to ' + other + ' theme');
+                btn.title = 'Switch to ' + other + ' theme';
+            }
+        }
+        apply(current());
+        if (btn) btn.addEventListener('click', function () {
+            var mode = current() === 'light' ? 'dark' : 'light';
+            try { localStorage.setItem('ap27-theme', mode); } catch (e) {}
+            apply(mode);
+        });
+        document.addEventListener('click', function (e) {
+            var a = e.target.closest ? e.target.closest('a[href]') : null;
+            if (!a) return;
+            var href = a.getAttribute('href');
+            var m = /^((?:index|challenge|data)\.html)(\?[^#]*)?(#.*)?$/.exec(href);
+            if (!m) return;
+            a.setAttribute('href', m[1] + '?theme=' + current() + (m[3] || ''));
+        }, true);
+    }
+
     function initParticles() {
         var layer = document.getElementById('hero-particles');
         if (!layer || reduceMotion) return;
@@ -315,6 +347,7 @@
     function init() {
         initNav();
         initFavicon();
+        initTheme();
         initParticles();
         initIcons();
         initTabs();

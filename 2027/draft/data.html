@@ -7,6 +7,9 @@
     <meta name="description" content="The Algonauts Project 2027 challenge data: gameplay video, audio, controller actions, game events and fMRI responses from the Courtois NeuroMod Project.">
     <meta name="author" content="The Algonauts Project">
     <meta name="robots" content="noindex, nofollow">
+    <!-- Colour theme before first paint: ?theme= (carried by links between the draft pages), else the stored
+         choice, else dark. The URL parameter is removed from the address bar again. -->
+    <script>(function(){var m=null,q=/[?&]theme=(light|dark)/.exec(location.search);if(q){m=q[1];try{localStorage.setItem('ap27-theme',m);}catch(e){}try{history.replaceState(null,'',location.pathname+location.hash);}catch(e){}}if(!m){try{m=localStorage.getItem('ap27-theme');}catch(e){}}document.documentElement.setAttribute('data-theme',m==='light'?'light':'dark');})();</script>
     <link rel="icon" id="favicon" data-base="img/logos/" type="image/png" href="img/logos/logo_icon_light.png" sizes="32x32">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,10 +28,16 @@
                 <li><a href="index.html">2027 Challenge</a></li>
                 <li><a href="challenge.html">Challenge Details</a></li>
                 <li><a href="data.html" class="active" aria-current="page">Challenge Data</a></li>
+                <li><a href="index.html#cite">Cite</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
                 <li><a href="index.html#team">Team</a></li>
                 <li><a href="index.html#signup">Stay Updated</a></li>
                 <li><a href="https://algonautsproject.com/2025/archive.html">Archive</a></li>
             </ul>
+            <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch colour theme">
+                <svg class="ti ti-light" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2.5M12 19v2.5M2.5 12H5M19 12h2.5M5.3 5.3l1.8 1.8M16.9 16.9l1.8 1.8M5.3 18.7l1.8-1.8M16.9 7.1l1.8-1.8"/></svg>
+                <svg class="ti ti-dark" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a7 7 0 0 0 10.5 10.5z"/></svg>
+            </button>
             <button class="nav-toggle" id="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-overlay">
                 <span></span><span></span><span></span>
             </button>
@@ -39,6 +48,8 @@
             <li><a href="index.html">2027 Challenge</a></li>
             <li><a href="challenge.html">Challenge Details</a></li>
             <li><a href="data.html" class="active">Challenge Data</a></li>
+            <li><a href="index.html#cite">Cite</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
             <li><a href="index.html#team">Team</a></li>
             <li><a href="index.html#signup">Stay Updated</a></li>
             <li><a href="https://algonautsproject.com/2025/archive.html">Archive</a></li>
@@ -76,7 +87,7 @@
         <div class="hud-inner">
             <div class="hud-item"><span class="hud-k">Gameplay</span><span class="hud-v">~187 h</span></div>
             <div class="hud-item"><span class="hud-k">fMRI</span><span class="hud-v">212.5 h</span></div>
-            <div class="hud-item"><span class="hud-k">Games</span><span class="hud-v">4 + unseen</span></div>
+            <div class="hud-item"><span class="hud-k">Games</span><span class="hud-v">4 + hidden</span></div>
             <div class="hud-item"><span class="hud-k">Subjects</span><span class="hud-v">6</span></div>
             <div class="hud-item"><span class="hud-k">Brain parcels</span><span class="hud-v">1,134</span></div>
             <div class="hud-item"><span class="hud-k">Sampling (TR)</span><span class="hud-v">1.49 s</span></div>
@@ -179,7 +190,7 @@
 
             <!-- In-distribution test split. PROVISIONAL: game-level summary of §8 "Challenge split" in the
                  mariostars and mario3 game READMEs (21.6 % and 22.9 % of the fMRI time covered by each game's gameplay).
-                 Update the bars (width) and the numbers together when the split is final. -->
+                 Update the bar widths and the numbers together when the split is final. -->
             <section class="block-rule id-split" id="id-split" aria-labelledby="id-split-title">
                 <div class="prose">
                     <h2 id="id-split-title">In-distribution test split</h2>
@@ -188,39 +199,36 @@
                     video, audio, controller actions, and game event annotations. The corresponding fMRI
                     responses are hidden.</p>
                 </div>
+                <!-- One calm row per game: name, thin solid bar (share held out), value, one note. The training
+                     share is implied (100 % minus the held-out share). -->
                 <div class="split">
-                    <div class="split-head">
-                        <h3>Share of fMRI time during gameplay held out for ID testing</h3>
-                        <span>Provisional</span>
-                    </div>
                     <ul class="split-list">
                         <li>
-                            <p class="split-game">Super Mario All-Stars</p>
-                            <div class="split-bar" aria-hidden="true"><span style="width:21.6%"></span></div>
-                            <p class="split-vals"><span class="split-held"><b>21.6%</b> held out for ID testing</span><span class="split-train"><b>78.4%</b> for training</span></p>
-                            <p class="split-note">Selected whole runs are held out. Every level remains represented in training.</p>
+                            <span class="split-game">Super Mario All-Stars</span>
+                            <span class="split-bar" aria-hidden="true"><span style="width:21.6%"></span></span>
+                            <span class="split-val"><b>21.6%</b> held out</span>
+                            <span class="split-note">Every level remains represented in training.</span>
                         </li>
                         <li>
-                            <p class="split-game">Super Mario Bros. 3</p>
-                            <div class="split-bar" aria-hidden="true"><span style="width:22.9%"></span></div>
-                            <p class="split-vals"><span class="split-held"><b>22.9%</b> held out for ID testing</span><span class="split-train"><b>77.1%</b> for training</span></p>
-                            <p class="split-note">Selected whole runs are held out. Four levels are held out entirely for every subject.</p>
+                            <span class="split-game">Super Mario Bros. 3</span>
+                            <span class="split-bar" aria-hidden="true"><span style="width:22.9%"></span></span>
+                            <span class="split-val"><b>22.9%</b> held out</span>
+                            <span class="split-note">Four levels are held out entirely for every subject.</span>
                         </li>
                     </ul>
-                    <p class="split-foot">Percentages refer to each game’s fMRI time during gameplay, not to all fMRI time or
-                    all runs. The split and the percentages are provisional and may change before launch. Held-out and
-                    training volumes in hours: to be announced.</p><!-- TODO: add hours once published (paper: "[add actual amount]"); use fMRI time during gameplay as the denominator, as for the percentages -->
-
+                    <p class="split-foot">Share of each game’s fMRI time during gameplay held out for ID testing. Provisional;
+                    volumes in hours to be announced.</p><!-- TODO: add hours once published (paper: "[add actual amount]"); use fMRI time during gameplay as the denominator, as for the percentages -->
                 </div>
             </section>
 
-            <!-- Unseen games: one wide panel, no game count implied -->
-            <section class="unseen" id="unseen" aria-labelledby="unseen-title">
+            <!-- OOD games (hidden until the Generalization Phase): one wide panel, no game count implied.
+                 "Unseen" is avoided on purpose: the subjects did play these games; they are hidden from participants. -->
+            <section class="unseen" id="ood-games" aria-labelledby="ood-games-title">
                 <img class="unseen-art" src="img/sprites/question_block.png" alt="" width="48" height="48">
                 <div>
                     <span class="phase-label">Generalization Phase · out-of-distribution testing</span>
-                    <h2 id="unseen-title">Unseen games</h2>
-                    <p>The Generalization Phase evaluates out-of-distribution (OOD) generalization to previously unseen games. We reveal the game titles at the start of the phase.</p>
+                    <h2 id="ood-games-title">OOD games</h2>
+                    <p>The Generalization Phase evaluates out-of-distribution (OOD) generalization to games that are kept hidden until then. We reveal the game titles at the start of the phase.</p>
                     <p>We provide approximately two hours of gameplay data per subject, with the same gameplay data modalities as during the Development Phase. We keep the corresponding fMRI responses hidden.
                     Performance on these games determines the final ranking.</p>
                 </div>

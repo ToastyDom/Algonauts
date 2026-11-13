@@ -8,6 +8,9 @@
     <meta name="author" content="The Algonauts Project">
     <!-- DRAFT: keep out of search engines and analytics until this replaces 2027/index.html -->
     <meta name="robots" content="noindex, nofollow">
+    <!-- Colour theme before first paint: ?theme= (carried by links between the draft pages), else the stored
+         choice, else dark. The URL parameter is removed from the address bar again. -->
+    <script>(function(){var m=null,q=/[?&]theme=(light|dark)/.exec(location.search);if(q){m=q[1];try{localStorage.setItem('ap27-theme',m);}catch(e){}try{history.replaceState(null,'',location.pathname+location.hash);}catch(e){}}if(!m){try{m=localStorage.getItem('ap27-theme');}catch(e){}}document.documentElement.setAttribute('data-theme',m==='light'?'light':'dark');})();</script>
     <link rel="icon" id="favicon" data-base="img/logos/" type="image/png" href="img/logos/logo_icon_light.png" sizes="32x32">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -26,10 +29,16 @@
                 <li><a href="index.html" class="active" aria-current="page">2027 Challenge</a></li>
                 <li><a href="challenge.html">Challenge Details</a></li>
                 <li><a href="data.html">Challenge Data</a></li>
+                <li><a href="#cite">Cite</a></li>
+                <li><a href="#contact">Contact</a></li>
                 <li><a href="#team">Team</a></li>
                 <li><a href="#signup">Stay Updated</a></li>
                 <li><a href="https://algonautsproject.com/2025/archive.html">Archive</a></li>
             </ul>
+            <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch colour theme">
+                <svg class="ti ti-light" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2.5M12 19v2.5M2.5 12H5M19 12h2.5M5.3 5.3l1.8 1.8M16.9 16.9l1.8 1.8M5.3 18.7l1.8-1.8M16.9 7.1l1.8-1.8"/></svg>
+                <svg class="ti ti-dark" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a7 7 0 0 0 10.5 10.5z"/></svg>
+            </button>
             <button class="nav-toggle" id="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-overlay">
                 <span></span><span></span><span></span>
             </button>
@@ -40,6 +49,8 @@
             <li><a href="index.html" class="active">2027 Challenge</a></li>
             <li><a href="challenge.html">Challenge Details</a></li>
             <li><a href="data.html">Challenge Data</a></li>
+            <li><a href="#cite">Cite</a></li>
+            <li><a href="#contact">Contact</a></li>
             <li><a href="#team">Team</a></li>
             <li><a href="#signup">Stay Updated</a></li>
             <li><a href="https://algonautsproject.com/2025/archive.html">Archive</a></li>
@@ -94,7 +105,7 @@
     <div class="hud" role="region" aria-label="Challenge at a glance">
         <div class="hud-inner">
             <div class="hud-item"><span class="hud-k">Status</span><span class="hud-v">Launching end of 2026</span></div>
-            <div class="hud-item"><span class="hud-k">Games</span><span class="hud-v">4 + unseen</span></div>
+            <div class="hud-item"><span class="hud-k">Games</span><span class="hud-v">4 + hidden</span></div>
             <div class="hud-item"><span class="hud-k">Subjects</span><span class="hud-v">6</span></div>
             <div class="hud-item"><span class="hud-k">Brain parcels</span><span class="hud-v">1,134</span></div>
             <div class="hud-item"><span class="hud-k">Finale</span><span class="hud-v">CCN 2027 · Edinburgh</span></div>
@@ -105,7 +116,7 @@
     <section class="section" id="news">
         <div class="section-inner news-grid">
             <div class="news-brand">
-                <img class="brand-logo" src="img/logos/logo_text_dark.png" alt="The Algonauts Project logo">
+                <img class="brand-logo logo-c" src="img/logos/logo_text_light.png" alt="The Algonauts Project logo"><img class="brand-logo logo-w" src="img/logos/logo_text_dark.png" alt="The Algonauts Project logo">
                 <div class="hosts">
                     <a class="host host--cneuromod" href="https://www.cneuromod.ca/" target="_blank" rel="noopener">
                         <span class="host-chip"><img src="img/CneuroMod.png" alt="CNeuroMod — The Courtois Project on Neuronal Modelling"></span>
@@ -187,7 +198,7 @@
                     states, learns rules, and responds to prediction errors. The 2027 challenge brings these research
                     directions together.</p>
                     <p>In collaboration with the <a href="https://www.cneuromod.ca/" target="_blank" rel="noopener">Courtois
-                    NeuroMod Project (CNeuroMod)</a>, we release gameplay data (video, audio, controller actions, and game event annotations) aligned with functional magnetic resonance imaging (fMRI) measurements. We ask teams to develop encoding models that predict brain activity during gameplay and generalize within and across games. Performance on previously unseen games determines the final challenge ranking.</p>
+                    NeuroMod Project (CNeuroMod)</a>, we release gameplay data (video, audio, controller actions, and game event annotations) aligned with functional magnetic resonance imaging (fMRI) measurements. We ask teams to develop encoding models that predict brain activity during gameplay and generalize within and across games. Performance on out-of-distribution (OOD) games, kept hidden until the final phase, determines the final challenge ranking.</p>
                     <div class="btn-row">
                         <a href="challenge.html" class="btn btn-primary">Challenge details &rarr;</a>
                     </div>
@@ -255,7 +266,7 @@
                     <span class="road-dot" aria-hidden="true"></span>
                     <time datetime="2027-07-05">Jul 5, 2027<span class="when"></span></time>
                     <h3>Generalization Phase</h3>
-                    <p>The unseen games are revealed for one week of out-of-distribution evaluation.</p>
+                    <p>The hidden games are revealed for one week of out-of-distribution evaluation.</p>
                 </li>
                 <li class="road-node">
                     <span class="road-dot" aria-hidden="true"></span>
@@ -297,26 +308,11 @@
         </div>
     </section>
 
-    <!-- Sponsors: one tile per sponsor on a white panel; add a <li> per new sponsor (logos in img/sponsors/).
-         Same list as in the challenge.html footer (#sponsors). -->
-    <section class="section" id="sponsors">
-        <div class="section-inner">
-            <div class="section-title">
-                <h2>Sponsors</h2>
-                <p>We thank our sponsors for supporting the 2027 challenge.</p>
-            </div>
-            <ul class="sponsor-mat">
-                <li><a href="https://www.unique.quebec/" target="_blank" rel="noopener"><img class="sp-unique" src="img/sponsors/unique_logo_logo.png" alt="UNIQUE – Unifying Neuroscience and Artificial Intelligence, Québec" width="1174" height="1320"></a></li>
-                <li><a href="https://ivado.ca/en/" target="_blank" rel="noopener"><img class="sp-ivado" src="img/sponsors/ivado_logo.png" alt="IVADO" width="928" height="436"></a></li>
-            </ul>
-        </div>
-    </section>
-
-    <!-- Papers + contact -->
-    <section class="section" id="papers">
+    <!-- Cite + contact -->
+    <section class="section" id="cite">
         <div class="section-inner two-col">
             <div>
-                <h3>Papers</h3>
+                <h2 class="h2 col-title">Cite</h2>
                 <p>If you use the resources provided for the Algonauts Project 2027 Challenge, please cite the following papers:</p>
                 <p class="cite">Bersch D, Gifford AT, St-Laurent M, Pinsard B, Harel Y, Boyle J, Bellec L, Oliva A, Roig G,
                 Cichy RM. The Algonauts Project 2027 Challenge: How the Human Brain Makes Sense of Video Games.
@@ -324,7 +320,7 @@
                 <p class="cite">CNeuroMod publication. <em>To be added.</em></p>
             </div>
             <div id="contact">
-                <h3>Contact</h3>
+                <h2 class="h2 col-title">Contact</h2>
                 <p>For general inquiries about the Algonauts Project, please contact
                 <a href="mailto:algonauts.mit@gmail.com">algonauts.mit@gmail.com</a>.</p>
                 <p>For specific questions about the Algonauts Project 2027 Challenge, please use the
@@ -410,7 +406,19 @@
                     <li><a class="org" href="https://mitibm.mit.edu/" target="_blank" rel="noopener">
                         <span class="org-tile"><img class="org-mitibm" src="img/logos/logo_mitibm.png" alt="MIT-IBM Watson AI Lab" width="656" height="654" loading="lazy"></span>
                         <span class="org-name" aria-hidden="true">MIT-IBM Watson AI Lab</span></a></li>
-                </ul>            </div>
+                </ul>
+            </div>
+
+            <!-- Sponsors: same list as in the challenge.html footer (#sponsors); add a <li> per new sponsor
+                 (logos in img/sponsors/). Title styled like "Organizing institutions and groups". -->
+            <div class="orgs sponsors" id="sponsors">
+                <h3>Sponsors</h3>
+                <p class="orgs-note">We thank our sponsors for supporting the 2027 challenge.</p>
+                <ul class="sponsor-mat">
+                    <li><a href="https://www.unique.quebec/" target="_blank" rel="noopener"><img class="sp-unique" src="img/sponsors/unique_logo_logo.png" alt="UNIQUE – Unifying Neuroscience and Artificial Intelligence, Québec" width="1174" height="1320"></a></li>
+                    <li><a href="https://ivado.ca/en/" target="_blank" rel="noopener"><img class="sp-ivado" src="img/sponsors/ivado_logo.png" alt="IVADO" width="928" height="436"></a></li>
+                </ul>
+            </div>
         </div>
     </section>
 
