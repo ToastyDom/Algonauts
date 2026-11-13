@@ -28,6 +28,8 @@ html[data-theme="light"] :is(.hero, .page-head, .nav, .nav-overlay) {
     --text-hi:   #fff;      /* hover / emphasis */
     --on-accent: #0a0616;   /* text on solid accent */
     --soft:      rgba(255, 255, 255, 0.07);   /* faint fills (code, bars) */
+    --test-bg:   rgba(255, 84, 84, 0.22);     /* ID test runs in the split matrix (semantic, not an action colour) */
+    --test-fg:   #ff9a9a;
     --ghost-line: rgba(255, 255, 255, 0.6);
     --tabs-bg:   rgba(14, 9, 34, 0.96);
     --dash:      rgba(255, 255, 255, 0.35);
@@ -71,6 +73,8 @@ html[data-theme="light"] {
     --text-hi:   #000;
     --on-accent: #fff;
     --soft:      rgba(23, 15, 60, 0.06);
+    --test-bg:   rgba(214, 40, 40, 0.13);
+    --test-fg:   #b3261e;
     --ghost-line: rgba(23, 15, 60, 0.45);
     --tabs-bg:   rgba(247, 245, 251, 0.96);
     --dash:      rgba(23, 15, 60, 0.3);
@@ -364,6 +368,8 @@ body.menu-open { overflow: hidden; }
 .section-title { text-align: center; max-width: 720px; margin: 0 auto clamp(28px, 4vw, 44px); }
 .section-title h2, .h2 { font-size: clamp(1.75rem, 3.8vw, 2.4rem); font-weight: 800; letter-spacing: -.5px; }
 .section-title p { margin: 10px auto 0; color: var(--text-dim); font-size: 1.08rem; max-width: 56ch; }
+.section-title--left { text-align: left; margin-left: 0; }   /* The 2027 Challenge: heading on the reading line of the text below */
+.section-title--left p { margin-left: 0; }
 .prose p { color: var(--text-2); }
 .prose p.big { font-size: clamp(1.12rem, 1.9vw, 1.3rem); line-height: 1.5; color: var(--text); }
 .prose p.muted { color: var(--text-dim); }
@@ -405,7 +411,7 @@ body.menu-open { overflow: hidden; }
 .edition--now .ed-year { color: var(--text-hi); }
 .edition--now .ed-title { font-weight: 700; }
 .ed-here { font-size: .78rem; font-weight: 600; color: var(--text-dim); white-space: nowrap; }
-.pillars { list-style: none; margin: clamp(44px, 6vw, 64px) 0 0; padding: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.pillars { list-style: none; margin: clamp(36px, 4.5vw, 48px) 0 0; padding: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); }
 .pillar { padding: 4px 24px; border-left: 1px solid var(--line); }
 .pillar:first-child { border-left: 0; padding-left: 0; }
 .pillar h3 { font-size: 1rem; font-weight: 700; margin: 12px 0 6px; }
@@ -419,7 +425,8 @@ body.menu-open { overflow: hidden; }
 /* ---------------------------------------------------------------------
    Home — The 2027 challenge
    --------------------------------------------------------------------- */
-.challenge-grid { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(28px, 5vw, 60px); align-items: center; }
+.challenge-grid { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(28px, 5vw, 60px); align-items: start; }
+.challenge-grid .video-frame { margin-top: 6px; }
 .challenge-grid .prose p { font-size: 1.04rem; }
 .challenge-grid .btn-row { margin-top: 26px; }
 .video-frame { position: relative; aspect-ratio: 16 / 9; border-radius: var(--r); overflow: hidden; background: var(--bg-band); border: 1px solid var(--line-2); }
@@ -539,6 +546,9 @@ body.menu-open { overflow: hidden; }
 .optional[open] > summary .s-show { display: none; }
 .optional:not([open]) > summary .s-hide { display: none; }
 .optional .figure { margin: 4px 0 22px; }
+.optional--inline { margin-top: 22px; }   /* "View source rows" under the gameplay example */
+.optional--inline > summary { padding: 13px 0; }
+.optional--inline .codeblock-cap { margin-bottom: 18px; }
 
 /* Simplified responsive version of Figure 1 (phones) */
 .fig-web { display: none; margin-top: 24px; }
@@ -591,53 +601,79 @@ body.menu-open { overflow: hidden; }
 .access-note { margin: 20px 0 0; padding-top: 14px; border-top: 1px solid var(--line); font-size: .86rem; line-height: 1.55; color: var(--text-dim); }
 .access-note strong { color: var(--text-2); font-weight: 600; }
 
-/* Game catalogue */
-.catalog { list-style: none; margin: 28px 0 0; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 40px 32px; }
+/* Games & subjects, top row: the model training games (left, wider, the focus) and a compact ID split (right),
+   headings top-aligned. Stacked below 1100 px (games first): there the 2×2 tiles and the matrix get cramped. */
+.games-top { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr); gap: clamp(40px, 4.5vw, 64px); align-items: start; }
+.games-top > * { min-width: 0; }
+.games-top h2 { margin-top: 0; }
+.split-intro, .games-intro { color: var(--text-2); max-width: 62ch; }
+.games-intro { font-size: 1rem; line-height: 1.6; }
+.id-split h2 { font-size: clamp(1.25rem, 2.2vw, 1.5rem); margin-bottom: 10px; }   /* secondary to the games */
+.split-intro { font-size: .92rem; line-height: 1.55; }
+
+/* Game catalogue: compact tiles (thumbnail, title, one metadata line) */
+.catalog { list-style: none; margin: 22px 0 0; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px 20px; }
 .cat-shot { aspect-ratio: 16 / 9; background: #000; overflow: hidden; border-radius: 2px; }
 .cat-shot img { width: 100%; height: 100%; object-fit: cover; image-rendering: pixelated; image-rendering: crisp-edges; }
-.cat-body { padding-top: 14px; }
-.cat-body h3 { font-size: 1.2rem; font-weight: 700; line-height: 1.25; margin: 0 0 4px; }
-.cat-meta { margin: 0; font-size: .9rem; color: var(--text-dim); }
-.cat-meta code { font-size: .82rem; }
-.cat-desc { margin: 8px 0 0; color: var(--text-2); font-size: .95rem; line-height: 1.55; }
-.cat-stats { margin: 10px 0 0; display: flex; flex-wrap: wrap; gap: 4px 20px; font-size: .9rem; color: var(--text-dim); }
-.cat-stats b { color: var(--text); font-variant-numeric: tabular-nums; }
-.cat-split { margin: 10px 0 0; font-size: .9rem; font-weight: 600; color: var(--text); }
-.cat-split::before { content: ""; display: inline-block; width: 8px; height: 8px; margin-right: 8px; background: var(--text); vertical-align: 1px; }
-.cat-split a { color: var(--text); text-decoration: underline; text-decoration-color: var(--line-2); text-underline-offset: 3px; }
-.cat-split a:hover { color: var(--accent); text-decoration-color: currentColor; }
+.cat-item h3 { margin: 12px 0 0; font-size: 1.1rem; font-weight: 700; line-height: 1.3; }
+.cat-meta { margin: 4px 0 0; font-size: .9rem; color: var(--text-dim); font-variant-numeric: tabular-nums; }   /* levels · attempts */
+.cat-meta span { white-space: nowrap; }   /* on the narrowest phones it breaks between the two parts, not inside one */
 
-/* In-distribution test split: one calm row per game (thin solid bar = share held out, value, one note) */
-.split { margin-top: 26px; max-width: 880px; }
-.split-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 22px; }
-.split-list li { display: grid; grid-template-columns: 210px minmax(0, 1fr) auto; align-items: center; gap: 4px 20px; }
+/* In-distribution test split: an illustrative levels × (sessions × runs) matrix (after Figure 2D of the paper):
+   levels appear in order and recur; ID test runs are red columns, also labelled "test" in the header, so the split
+   does not depend on colour alone. Then a short takeaway and the real split at game level as two plain rows. */
+.runs-wrap { margin-top: 18px; overflow-x: auto; }
+.runs { border-collapse: separate; border-spacing: 0; font-size: .8rem; line-height: 1.3; font-variant-numeric: tabular-nums; }
+.runs caption { caption-side: top; text-align: left; max-width: 56ch; padding: 0 0 12px; font-size: .82rem; line-height: 1.5; color: var(--text-dim); }
+.runs caption strong { color: var(--text); }
+.runs th, .runs td { padding: 0; text-align: center; vertical-align: middle; }
+.runs thead tr:first-child th { padding: 0 4px 6px; font-weight: 700; color: var(--text); white-space: nowrap;
+    background: linear-gradient(var(--line-2), var(--line-2)) bottom right / 100% 1px no-repeat; }
+.runs thead tr:first-child th.s-gap { background-size: calc(100% - 12px) 1px; }
+.runs thead tr + tr th { width: 32px; height: 40px; padding: 6px 0 4px; vertical-align: top; font-weight: 600; color: var(--text-2); }
+.runs thead tr + tr th span { display: block; margin-top: 0; font-size: .66rem; font-weight: 600; color: var(--test-fg); }
+.runs .runs-axis { padding: 6px 12px 4px 0; vertical-align: top; text-align: left; font-size: .76rem; color: var(--text-dim); }
+.runs .s-gap { padding-left: 12px !important; }   /* a little air between sessions */
+.runs thead tr + tr th.s-gap { width: 44px; }      /* border-box: the gap is added to the column, not taken from it */
+.runs tbody th { padding: 0 12px 0 0; text-align: left; font-weight: 600; color: var(--text); white-space: nowrap; }
+.runs tbody td { height: 26px; }
+.runs tbody td::before { content: ""; display: inline-block; width: 12px; height: 12px; vertical-align: middle; border: 1px solid var(--line-2); }
+.runs tbody td.on::before { background: var(--text); border-color: var(--text); }
+.runs .test { background: var(--test-bg); }
+.runs thead th.test { color: var(--test-fg); }
+.split-h { margin: 22px 0 6px !important; font-size: .95rem !important; }
+.split-rows { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--line); }
+.split-rows li { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: baseline; gap: 1px 16px; padding: 7px 0; border-bottom: 1px solid var(--line); font-size: .9rem; }
 .split-game { font-weight: 600; color: var(--text); }
-.split-bar { position: relative; height: 8px; border-radius: 4px; background: var(--soft); overflow: hidden; }
-.split-bar span { position: absolute; left: 0; top: 0; bottom: 0; border-radius: 4px; background: var(--text-2); }
-.split-val { font-size: .95rem; color: var(--text-dim); font-variant-numeric: tabular-nums; white-space: nowrap; }
+.split-val { color: var(--text-dim); font-variant-numeric: tabular-nums; white-space: nowrap; }
 .split-val b { color: var(--text); font-weight: 700; }
-.split-note { grid-column: 2 / -1; font-size: .9rem; color: var(--text-dim); }
-.split-foot { margin: 22px 0 0; font-size: .86rem; color: var(--text-dim); max-width: 72ch; }
+.split-note { grid-column: 1 / -1; font-size: .84rem; color: var(--text-dim); }
+.split-foot { margin: 10px 0 0; font-size: .8rem; color: var(--text-dim); max-width: 62ch; }
 
-/* Unseen games */
-.unseen { margin-top: clamp(40px, 5.5vw, 60px); display: grid; grid-template-columns: auto 1fr; gap: 28px; align-items: center; padding: clamp(24px, 3.5vw, 36px); background: var(--bg-raise); border: 1px solid var(--line-2); border-radius: var(--r); }
+/* OOD games (class name kept from an earlier version) */
+.unseen { margin-top: clamp(64px, 8vw, 96px); display: grid; grid-template-columns: auto 1fr; gap: 28px; align-items: center; padding: clamp(24px, 3.5vw, 36px); background: var(--bg-raise); border: 1px solid var(--line-2); border-radius: var(--r); }
 .unseen-art { width: 108px; height: 108px; image-rendering: pixelated; image-rendering: crisp-edges; }
 .unseen h2 { margin: 0 0 10px; }
 .unseen p { margin: 0 0 .7em; color: var(--text-2); max-width: 66ch; }
 .unseen p:last-child { margin-bottom: 0; }
-.phase-label { display: inline-block; margin-bottom: 10px; padding: 4px 10px; border: 1px solid var(--line-2); border-radius: 3px; font-size: .78rem; font-weight: 700; letter-spacing: .5px; text-transform: uppercase; color: var(--text); }
 
-/* Subjects coverage */
-.coverage-wrap { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(24px, 4vw, 48px); align-items: center; }
-.coverage { width: 100%; table-layout: fixed; border-collapse: collapse; font-size: .9rem; }
-.coverage th, .coverage td { padding: 9px 4px; border-bottom: 1px solid var(--line); text-align: center; }
-.coverage thead th { font-weight: 600; color: var(--text-dim); font-size: .82rem; border-bottom-color: var(--line-2); }
-.coverage thead th:first-child { width: 64px; }
-.coverage thead th:last-child { width: 104px; }
-.coverage th[scope="row"] { text-align: left; font-family: var(--font-mono); color: var(--text); font-weight: 500; }
-.coverage td { color: var(--text-dim); }
-.coverage td.on::before { content: ""; display: inline-block; width: 12px; height: 12px; background: var(--text); vertical-align: -1px; }
-.coverage td.role { text-align: left; padding-left: 10px; font-size: .86rem; }
+/* Subjects coverage: same columns as the games / ID split row above (table under the split), and the same
+   vocabulary as the ID grid: filled square = played, outlined square = not played, no row rules, compact rows. */
+.coverage-wrap { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr); gap: clamp(40px, 4.5vw, 64px); align-items: start; }
+.coverage-wrap h2 { margin-top: 0; }
+.coverage-wrap .prose p:last-child { margin-bottom: 0; }
+.coverage { border-collapse: separate; border-spacing: 0; font-size: .86rem; line-height: 1.3; font-variant-numeric: tabular-nums; }
+.coverage th, .coverage td { padding: 0; text-align: center; vertical-align: middle; }
+.coverage thead th { width: 64px; padding: 0 4px 8px; font-size: .8rem; font-weight: 700; color: var(--text); white-space: nowrap;
+    background: linear-gradient(var(--line-2), var(--line-2)) bottom / calc(100% - 8px) 1px no-repeat; }
+.coverage thead th:first-child { width: auto; background: none; }
+.coverage thead th.role { width: auto; padding-left: 16px; text-align: left; background-position: bottom right; background-size: calc(100% - 16px) 1px; }
+.coverage tbody th { padding: 0 14px 0 0; height: 30px; text-align: left; font-weight: 600; color: var(--text); white-space: nowrap; }
+.coverage tbody tr:first-child > * { height: 36px; padding-top: 6px; }   /* air below the header rule, rows keep an even pitch */
+.coverage td::before { content: ""; display: inline-block; width: 12px; height: 12px; vertical-align: middle; border: 1px solid var(--line-2); }
+.coverage td.on::before { background: var(--text); border-color: var(--text); }
+.coverage td.role { padding-left: 16px; text-align: left; font-size: .84rem; color: var(--text-dim); white-space: nowrap; }
+.coverage td.role::before { display: none; }
 .coverage td.eval { color: var(--text); font-weight: 600; }
 
 /* Gameplay example (real aligned data) */
@@ -795,11 +831,20 @@ html[data-theme="light"] .social-logos img { filter: brightness(0); opacity: .85
     .nav-toggle { display: flex; }
     .theme-toggle { margin-left: auto; }
 }
+@media (max-width: 1099px) {
+    .games-top { grid-template-columns: 1fr; gap: 0; }
+    .coverage-wrap { grid-template-columns: 1fr; gap: 24px; }
+    .games-top > .id-split { max-width: var(--textw); margin-top: clamp(40px, 5.5vw, 60px); padding-top: clamp(40px, 5.5vw, 60px); border-top: 1px solid var(--line); }   /* stacked: games first, split on the prose width */
+    .games-intro { max-width: var(--textw); }
+}
+@media (min-width: 760px) and (max-width: 1099px) {
+    .catalog { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+}
 @media (max-width: 960px) {
     .nav-links { display: none; }
     .nav-toggle { display: flex; }
     .theme-toggle { margin-left: auto; }
-    .news-grid, .about-grid, .challenge-grid, .access, .coverage-wrap, .page-head--split .page-head-inner { grid-template-columns: 1fr; }
+    .news-grid, .about-grid, .challenge-grid, .access, .page-head--split .page-head-inner { grid-template-columns: 1fr; }
     .res-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     .pillars { grid-template-columns: repeat(2, minmax(0, 1fr)); row-gap: 28px; }
     .pillar:nth-child(3) { border-left: 0; padding-left: 0; }
@@ -862,18 +907,28 @@ html[data-theme="light"] .social-logos img { filter: brightness(0); opacity: .85
     .tab[aria-selected="true"] { color: var(--on-accent); background: var(--accent); border-color: var(--accent); }
     .tab-long { display: none; }
     /* catalogue, example, figure */
-    .catalog { grid-template-columns: 1fr; gap: 32px; }
     .unseen { grid-template-columns: 1fr; gap: 16px; }
-    .split-list li { grid-template-columns: minmax(0, 1fr) auto; gap: 6px 14px; }
-    .split-game { grid-column: 1 / -1; }
-    .split-note { grid-column: 1 / -1; }
+    .catalog { gap: 18px 12px; }
+    .cat-item h3 { font-size: .95rem; }
+    .cat-meta { font-size: .8rem; }
+    .runs { font-size: .8rem; }
+    .runs thead tr + tr th { width: 29px; }
+    .runs thead tr + tr th span { font-size: .64rem; }
+    .runs .s-gap { padding-left: 8px !important; }   /* 9 × 29 px + gaps fit at 360 px */
+    .runs thead tr + tr th.s-gap { width: 37px; }
+    .runs thead tr:first-child th.s-gap { background-size: calc(100% - 8px) 1px; }
+    .runs .runs-axis { padding-right: 8px; }
+    .runs tbody th { padding-right: 8px; }
+    .runs tbody th .lv { display: none; }   /* "A" instead of "Level A": nine run columns must fit at 360 px */
+    .runs tbody td { height: 26px; }
     .unseen-art { width: 72px; height: 72px; }
     .frames { grid-template-columns: 1fr; gap: 18px; }
     .coverage { font-size: .8rem; }
-    .coverage thead th { font-size: .72rem; }
-    .coverage thead th:first-child { width: 52px; }
-    .coverage thead th:last-child { width: 74px; }
-    .coverage td.role { font-size: .74rem; padding-left: 4px; }
+    .coverage thead th { width: 44px; padding: 0 2px 8px; font-size: .7rem; background-size: calc(100% - 4px) 1px; }
+    .coverage thead th.role, .coverage td.role { padding-left: 10px; }
+    .coverage thead th.role { background-size: calc(100% - 10px) 1px; }
+    .coverage tbody th { padding-right: 8px; }
+    .coverage td.role { font-size: .74rem; }
     .fig1-full { display: none; }
     .fig-web { display: block; }
     .ex-timeline--wide { display: none; }

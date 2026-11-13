@@ -163,14 +163,17 @@
                 </table>
             </div>
             <div class="prose block">
-                <p><strong>Development Phase.</strong> Participants train their encoding models on gameplay data and corresponding fMRI responses from all four games. For in-distribution testing, we reserve selected runs from Super Mario All-Stars and Super Mario Bros. 3 (see the <a href="data.html#id-split">in-distribution test split</a>). We release all gameplay data for these test runs and keep the corresponding fMRI responses hidden. Participants submit predicted fMRI responses to Codabench (see <a href="#submission">Prepare a submission</a>) and can compare model variants using their prediction accuracy scores on a public leaderboard.</p>
-                <p><strong>Generalization Phase.</strong> At the beginning of this phase, we release about two hours of
-                gameplay data per subject from the OOD games, and withhold the corresponding
-                fMRI responses. We reveal the identities of these games when the Generalization Phase begins. They were selected
-                to differ from the Mario-family games in visual appearance, behavioral demands and cognitive demands.
-                Performance in this phase determines the final ranking.</p>
-                <p><strong>Post-Challenge Benchmark.</strong> Once the challenge is over, both leaderboards remain open
-                indefinitely as public benchmarks for ID and OOD generalization.</p>
+                <p><strong>Development Phase.</strong> We release gameplay data and the corresponding fMRI responses from
+                all four model training games for training. For the ID test runs (see the
+                <a href="data.html#id-split">in-distribution test split</a>), we release the gameplay data and keep the
+                fMRI responses hidden. Participants submit predicted fMRI responses for these runs to Codabench (see
+                <a href="#submission">Prepare a submission</a>) and compare model variants on a public leaderboard.</p>
+                <p><strong>Generalization Phase.</strong> We reveal the OOD games and release about two hours of gameplay
+                data per subject from them, keeping the corresponding fMRI responses hidden. These games were selected to
+                differ from the Mario-family games in visual appearance, behavioral demands and cognitive demands.
+                Participants submit predicted fMRI responses for the OOD games.</p>
+                <p><strong>Post-Challenge Benchmark.</strong> Both leaderboards remain open as public benchmarks, so
+                participants can keep submitting predictions for the ID and OOD test sets.</p>
             </div>
         </div>
     </section>
