@@ -72,9 +72,9 @@
             <div class="dates-strip-head"><h2 id="dates-title">Important dates</h2></div>
             <!-- Times: once confirmed, fill each empty <span class="when"></span> with time and time zone,
                  e.g. <span class="when">23:59 UTC</span>. Empty slots are hidden.
-                 REVIEW (organizers): reports are required for the final ranking, so report eligibility has to be
-                 checked before the winners announcement (Jul 12, 2027, one day after the Generalization Phase ends).
-                 Set the report and code deadline, or move the announcement, accordingly. -->
+                 REVIEW (organizers): only the top three teams submit a report and code (2026-11-14). Set the report
+                 and code deadline after the winners announcement (Jul 12, 2027) and before the CCN session (Jul 26),
+                 and decide what happens if a top-three team does not deliver. -->
             <dl class="dates-list">
                 <div><dt>Development Phase</dt><dd>Dec 1, 2026 – Jul 4, 2027<span class="when"></span></dd></div>
                 <div><dt>Generalization Phase</dt><dd>Jul 5 – Jul 11, 2027<span class="when"></span></dd></div>
@@ -183,8 +183,8 @@
         <div class="panel-inner">
         <div class="prose">
             <h2>Evaluation and submission</h2>
-            <p>For each subject and game, the scoring program concatenates the predicted and withheld fMRI responses across evaluated gameplay recordings. Longer recordings contribute more time points. It then computes Pearson’s correlation coefficient (<em>r</em>) between the two time series for each of the 1,134 brain parcels. We average the parcel correlations to obtain one score per subject and game. We then average game scores within each subject, weighting games equally. Finally, we average the subject scores to obtain a single prediction accuracy score per submission. We apply this procedure to both the ID and OOD test sets.</p>
-            <p>Five subjects are evaluated: <span class="subj">sub-01</span>, <span class="subj">sub-02</span>,
+            <p>For each subject and game, the scoring program concatenates the predicted and withheld fMRI responses across the test gameplay recordings. Longer recordings contribute more time points. It then computes Pearson’s correlation coefficient (<em>r</em>) between the two time series for each of the 1,134 brain parcels. We average the parcel correlations to obtain one score per subject and game. We then average game scores within each subject, weighting games equally. Finally, we average the subject scores to obtain a single prediction accuracy score per submission. We apply this procedure to both the ID and OOD test sets.</p>
+            <p>Five subjects are tested: <span class="subj">sub-01</span>, <span class="subj">sub-02</span>,
             <span class="subj">sub-03</span>, <span class="subj">sub-05</span> and <span class="subj">sub-06</span>.
             Subject <span class="subj">sub-04</span> played only Shinobi III. Data from this subject are provided for training only.</p>
 
@@ -217,18 +217,19 @@
             <h2>Challenge rules</h2>
             <ol class="num-list">
                 <li>Challenge participants can use any encoding model, pretrained representation or <a href="data.html#external-data">external training data</a>.
-                Using the withheld fMRI responses of the test data is prohibited.</li>
+                It is forbidden to train models on <strong>any</strong> neural responses to the test stimuli, that is, the
+                gameplay of the ID test runs and of the OOD games.</li>
                 <li>The winners are determined by performance in predicting fMRI responses for the OOD games during the
                 Generalization Phase.</li>
-                <li>We allow unlimited submissions per team during both competitive phases. Each team may participate using only one account. Using hidden test fMRI responses or participating with multiple accounts results in disqualification.</li>
-                <li>To be considered for the final ranking, teams must publish a short report (approximately 4–8 pages) describing their encoding model and methodology on a preprint server.
-                The top three teams must make their code publicly available and are invited to present their approach at
-                CCN 2027 in Edinburgh.</li>
+                <li>We allow unlimited submissions per team during both competitive phases. Each team may participate using only one account. Training on neural responses to the test stimuli or participating with multiple accounts results in disqualification.</li>
+                <li>Only the top three teams must publish a short report (approximately 4–8 pages) describing their encoding
+                model and methodology on a preprint server, and make their code publicly available. They are invited to
+                present their approach at CCN 2027 in Edinburgh.</li>
             </ol>
             <div class="btn-row rule-action">
                 <a href="#" class="btn btn-ghost">Submit report and code links</a><!-- TODO: report and code submission form -->
             </div>
-            <p class="small muted rule-note">Form link to be added. The report and code deadline is listed under Important dates.</p>
+            <p class="small muted rule-note">For the top three teams. Form link to be added. The report and code deadline is listed under Important dates.</p>
         </div>
     </section>
 
