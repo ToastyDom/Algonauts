@@ -447,34 +447,42 @@ body.menu-open { overflow: hidden; }
 .res-sub .tri { width: 0; height: 0; border-style: solid; border-width: 5px 0 5px 8px; border-color: transparent transparent transparent currentColor; }
 
 /* ---------------------------------------------------------------------
-   World-map timeline (home)
+   Important dates + Prizes (home)
    --------------------------------------------------------------------- */
-.road { list-style: none; margin: 0; padding: 0; position: relative; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 20px; }
-.road::before { content: ""; position: absolute; top: 11px; left: 12px; right: 12px; height: 2px; background: repeating-linear-gradient(90deg, var(--dash) 0 6px, transparent 6px 12px); }
-.road-node { position: relative; padding-top: 42px; }
-.road-dot { position: absolute; top: 0; left: 0; width: 24px; height: 24px; background: var(--bg); border: 2px solid var(--text); }
-.road-dot::after { content: ""; position: absolute; inset: 5px; background: var(--text); }
-.road-flag { position: absolute; top: -28px; left: 9px; width: 3px; height: 30px; background: var(--text); }
-.road-flag::after { content: ""; position: absolute; top: 0; left: 3px; width: 16px; height: 11px; background: var(--accent); clip-path: polygon(0 0, 100% 0, 70% 50%, 100% 100%, 0 100%); }
-.road-node time { display: block; font-weight: 700; font-size: .95rem; color: var(--text); margin-bottom: 4px; font-variant-numeric: tabular-nums; }
-.road-node h3 { font-size: 1.05rem; font-weight: 700; margin-bottom: 6px; }
-.road-node p { margin: 0; color: var(--text-dim); font-size: .9rem; line-height: 1.5; }
-.road-foot { margin-top: 32px; display: flex; flex-wrap: wrap; gap: 12px 24px; justify-content: space-between; color: var(--text-dim); font-size: .9rem; }
-.road-meta { margin: 10px 0 0; display: grid; gap: 2px; font-size: .86rem; line-height: 1.45; }
-.road-meta > div { display: flex; flex-wrap: wrap; gap: 0 6px; }
-.road-meta dt { color: var(--text-dim); }
-.road-meta dt::after { content: ":"; }
-.road-meta dd { margin: 0; color: var(--text-2); }
 
 /* Time and time zone of a deadline, filled in when confirmed (empty slots stay hidden) */
+/* Important dates + Prizes (home): two columns, dates left. Dates as a plain table; prizes as a calm podium
+   (2nd · 1st · 3rd) on soft steps; colour only from the small pixel medals. */
+.dates-prizes { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(40px, 6vw, 88px); align-items: start; }
+.dates-prizes > * { min-width: 0; }
+.dates-table { width: 100%; border-collapse: collapse; border-top: 1px solid var(--line); font-variant-numeric: tabular-nums; }
+.dates-table th, .dates-table td { padding: 13px 0; border-bottom: 1px solid var(--line); vertical-align: baseline; }
+.dates-table th { padding-right: 20px; text-align: left; font-weight: 600; color: var(--text); }
+.dates-table td { text-align: right; color: var(--text-2); }
+.dates-table time { white-space: nowrap; }
+.dates-note { margin: 14px 0 0; font-size: .9rem; color: var(--text-dim); }
+.dates-note + .dates-note { margin-top: 8px; }
+.prize-grand { margin: 0 0 22px; color: var(--text-2); line-height: 1.5; }
+.prize-grand strong { color: var(--text); }
+.podium { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; align-items: end; border-bottom: 2px solid var(--line-2); }
+.pd { display: flex; flex-direction: column; align-items: center; gap: 8px; padding: 20px 8px 18px; background: var(--soft); border-radius: 3px 3px 0 0; text-align: center; }
+.pd--1 { order: 2; min-height: 206px; --medal: #f4c430; --medal-t: #f4c430; }
+.pd--2 { order: 1; min-height: 176px; --medal: #cdd2dc; --medal-t: #cdd2dc; }
+.pd--3 { order: 3; min-height: 150px; --medal: #d98a4b; --medal-t: #e39a5e; }
+.pd-medal { width: 36px; height: 45px; color: var(--medal); --px-accent: #8a63f0; }
+.px-icon .b { fill: #fff; opacity: .75; }
+.pd-rank { font-family: var(--font-pixel); font-size: .68rem; line-height: 1; color: var(--medal-t); text-transform: uppercase; }
+.pd-amount { font-size: clamp(1.25rem, 2.3vw, 1.6rem); font-weight: 800; letter-spacing: -.3px; color: var(--text); font-variant-numeric: tabular-nums; }
+.pd--1 .pd-amount { font-size: clamp(1.4rem, 2.7vw, 1.95rem); }
+.pd--1 .pd-medal { width: 44px; height: 55px; }
+html[data-theme="light"] .pd--1 { --medal-t: #946c00; }
+html[data-theme="light"] .pd--2 { --medal-t: #5f6675; }
+html[data-theme="light"] .pd--3 { --medal-t: #9a5420; }
+html[data-theme="light"] .pd--2 .pd-medal { --medal: #b9bfcb; }
+.prize-note { margin: 14px 0 0; font-size: .9rem; color: var(--text-dim); }
 .when { display: block; font-size: .82em; font-weight: 500; color: var(--text-dim); }
 .when:empty { display: none; }
 
-/* Prizes (home) */
-.prize-list { max-width: 560px; margin: 0 auto; border-top: 1px solid var(--line); }
-.prize-list > div { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; padding: 13px 2px; border-bottom: 1px solid var(--line); }
-.prize-list dt { min-width: 0; font-weight: 600; color: var(--text); }
-.prize-list dd { margin: 0; color: var(--text-dim); text-align: right; white-space: nowrap; }
 
 /* Citation / contact */
 .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(28px, 5vw, 64px); }
@@ -573,7 +581,7 @@ body.menu-open { overflow: hidden; }
 .sponsor-mat a:focus-visible { outline-color: var(--accent); }
 .sponsor-mat img { width: auto; max-width: 100%; object-fit: contain; }
 .sponsor-mat .sp-unique { height: 120px; }
-.sponsor-mat .sp-ivado { height: 94px; }
+.sponsor-mat .sp-karavela { width: 220px; height: auto; }
 
 /* ---------------------------------------------------------------------
    Challenge Data
@@ -774,7 +782,7 @@ html[data-theme="light"] .social-logos img { filter: brightness(0); opacity: .85
 .fc-logos a:focus-visible { outline-color: var(--accent); }
 .fc-logos img { width: auto; height: 30px; }
 .fc-logos .fc-unique { height: 62px; }
-.fc-logos .fc-ivado { height: 60px; }   /* the PNG has wide built-in margins */
+.fc-logos .fc-karavela { width: 150px; height: auto; }
 .fc-logos .fc-cneuromod { height: 36px; }
 .fc-logos .fc-ccn { height: 24px; }
 .fc-cap { font-size: .78rem; color: var(--text-dim); }
@@ -815,11 +823,10 @@ html[data-theme="light"] .social-logos img { filter: brightness(0); opacity: .85
     .nav-toggle { display: flex; }
     .theme-toggle { margin-left: auto; }
     .news-grid, .about-grid, .challenge-grid, .access, .page-head--split .page-head-inner { grid-template-columns: 1fr; }
+    .dates-prizes { grid-template-columns: 1fr; gap: 56px; }
     .res-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     .pillars { grid-template-columns: repeat(2, minmax(0, 1fr)); row-gap: 28px; }
     .pillar:nth-child(3) { border-left: 0; padding-left: 0; }
-    .road { grid-template-columns: 1fr 1fr; row-gap: 34px; }
-    .road::before { display: none; }
     .dates-list { grid-template-columns: repeat(3, minmax(0, 1fr)); }
     /* still scene below desktop widths */
     .hero { padding-bottom: 164px; }
@@ -838,8 +845,12 @@ html[data-theme="light"] .social-logos img { filter: brightness(0); opacity: .85
     .res-main .px-icon { width: 50px; height: 50px; }
     .res-title { font-size: .98rem; }
     .res-sub { font-size: .8rem; padding: 10px 8px; }
-    .road { grid-template-columns: 1fr; }
     .two-col { grid-template-columns: 1fr; }
+    .pd { padding: 16px 4px 14px; gap: 6px; }
+    .pd--1 { min-height: 176px; } .pd--2 { min-height: 152px; } .pd--3 { min-height: 132px; }
+    .pd-medal { width: 28px; height: 35px; }
+    .pd--1 .pd-medal { width: 34px; height: 42.5px; }
+    .pd-rank { font-size: .6rem; }
     .dl { grid-template-columns: 1fr; }
     .dl dt { padding-bottom: 2px; }
     .dl dd { border-top: 0; padding-top: 0; }
@@ -853,7 +864,7 @@ html[data-theme="light"] .social-logos img { filter: brightness(0); opacity: .85
     .sponsor-mat li { flex-basis: calc(50% - 6px); min-height: 112px; }
     .sponsor-mat a { padding: 6px; }
     .sponsor-mat .sp-unique { height: 88px; }
-    .sponsor-mat .sp-ivado { height: 66px; }
+    .sponsor-mat .sp-karavela { width: 132px; }
     .fc-groups { gap: 22px; }
     .fc-group { flex: 1 1 100%; }
     .fc-logos { gap: 10px; }
@@ -861,7 +872,7 @@ html[data-theme="light"] .social-logos img { filter: brightness(0); opacity: .85
     .fc-logos a, .fc-tile { width: 100%; }
     .fc-tile { min-width: 0; height: 68px; padding: 8px 10px; }
     .fc-logos .fc-unique { height: 54px; }
-    .fc-logos .fc-ivado { height: 52px; }
+    .fc-logos .fc-karavela { width: 128px; }
     .fc-logos .fc-cneuromod { height: 30px; }
     .fc-logos .fc-ccn { height: 20px; }
     .org-row li { width: calc(50% - 6px); max-width: 168px; }

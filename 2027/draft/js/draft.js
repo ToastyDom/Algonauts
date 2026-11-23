@@ -198,6 +198,23 @@
             'xxxxxaaaa',
             '.........'
         ],
+        medal: [
+            '.aaa....aaa.',
+            '..aaa..aaa..',
+            '...aaaaaa...',
+            '....aaaa....',
+            '....xxxx....',
+            '..xxxxxxxx..',
+            '.xxbbxxxxxx.',
+            '.xbbxxxxxxx.',
+            'xxbxxxxxxxxx',
+            'xxxxxxxxxxxx',
+            'xxxxxxxxxxxx',
+            '.xxxxxxxxxx.',
+            '.xxxxxxxxxx.',
+            '..xxxxxxxx..',
+            '....xxxx....'
+        ],
         star: [
             '....x....',
             '....x....',
@@ -220,7 +237,7 @@
                 if (ch === '.') { x++; continue; }
                 var x0 = x;
                 while (x < w && row.charAt(x) === ch) x++;
-                out += '<rect class="' + (ch === 'a' ? 'a' : 'x') + '" x="' + x0 + '" y="' + y + '" width="' + (x - x0) + '" height="1"/>';
+                out += '<rect class="' + (ch === 'a' || ch === 'b' ? ch : 'x') + '" x="' + x0 + '" y="' + y + '" width="' + (x - x0) + '" height="1"/>';
             }
         }
         return '<svg viewBox="0 0 ' + w + ' ' + h + '" aria-hidden="true" focusable="false">' + out + '</svg>';

@@ -417,8 +417,8 @@
             <div class="prose">
                 <h2>fMRI responses</h2>
                 <p>We provide functional magnetic resonance imaging (fMRI) responses recorded during gameplay. The blood oxygenation level dependent (BOLD) signal measures brain activity indirectly through changes in blood oxygenation. The hemodynamic response typically peaks about 5–6 seconds after a brief neural event.</p>
-                <p>The neural data were derived from preprocessed BOLD images in MNI template space using the CNeuroMod time
-                series extraction pipeline. The voxel time series were denoised for motion, tissue and global signal
+                <p>The neural data were derived from preprocessed BOLD images in MNI template space using the <a href="https://docs.cneuromod.ca/contents/timeseries.html#code" target="_blank" rel="noopener">CNeuroMod time
+                series extraction pipeline</a>. The voxel time series were denoised for motion, tissue and global signal
                 contributions and slow drift, smoothed with a 5 mm FWHM kernel and standardized within each run, then
                 averaged within the 1,134 parcels of the CNeuroMod 2026 atlas.</p>
             </div>
@@ -426,7 +426,7 @@
                 <dt>Format</dt><dd>One <code>.h5</code> file per subject and game, with one array per fMRI run</dd>
                 <dt>Run array</dt><dd><code>(N samples, 1134 parcels)</code>, one sample every 1.49 seconds (TR)</dd>
                 <dt>Space</dt><dd>MNI152NLin2009cAsym</dd>
-                <dt>Atlas</dt><dd>CNeuroMod 2026 atlas with cortical, subcortical and cerebellar parcels, in the shared <code>atlases/</code> folder</dd>
+                <dt>Atlas</dt><dd><a href="https://docs.cneuromod.ca/contents/timeseries.html#file-details" target="_blank" rel="noopener">CNeuroMod 2026 atlas</a> with cortical, subcortical and cerebellar parcels, in the shared <code>atlases/</code> folder</dd>
             </dl>
         </div>
     </section>
@@ -456,6 +456,7 @@
                 Commons CC0 license</a>; third-party video game material remains subject to its original copyright. See the
                 dataset READMEs and <a href="https://docs.cneuromod.ca/contents/license.html" target="_blank" rel="noopener">CNeuroMod’s
                 licensing documentation</a> for details.</p>
+                <p>For information about ethics oversight and participant consent documentation, see <a href="https://docs.cneuromod.ca/contents/ethics.html" target="_blank" rel="noopener">CNeuroMod’s ethics documentation</a>.</p>
             </div>
         </div>
     </section>

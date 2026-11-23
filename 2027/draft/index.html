@@ -244,65 +244,42 @@
         </div>
     </section>
 
-    <!-- Important dates -->
+    <!-- Important dates + Prizes: one section, two columns like Cite + Contact (user, 2026-11-23); dates left and
+         first when stacked. Times: once confirmed, fill each empty <span class="when"></span> with time and time zone,
+         e.g. <span class="when">23:59 UTC</span>. Empty slots are hidden. Same dates as the challenge.html dates strip. -->
     <section class="section" id="dates">
-        <div class="section-inner">
-            <div class="section-title">
-                <h2>Important dates</h2>
-                <p>The challenge concludes with a session at CCN 2027 in Edinburgh.</p>
+        <div class="section-inner dates-prizes">
+            <div class="dates-col">
+                <h2 class="h2 col-title">Important dates</h2>
+                <table class="dates-table">
+                    <caption class="sr-only">Important dates of the Algonauts Project 2027 challenge</caption>
+                    <tbody>
+                        <tr><th scope="row">Development Phase</th><td><time datetime="2026-12-14">Dec 14, 2026</time> – <time datetime="2027-06-20">Jun 20, 2027</time><span class="when"></span></td></tr>
+                        <tr><th scope="row">Generalization Phase</th><td><time datetime="2027-06-21">Jun 21</time> – <time datetime="2027-06-27">Jun 27, 2027</time><span class="when"></span></td></tr>
+                        <tr><th scope="row">Report and code deadline</th><td><time datetime="2027-07-09">Jul 9, 2027</time><span class="when"></span></td></tr>
+                        <tr><th scope="row">Results announced</th><td><time datetime="2027-07-20">Jul 20, 2027</time><span class="when"></span></td></tr>
+                        <tr><th scope="row">CCN 2027, Edinburgh</th><td><time datetime="2027-07-26">Jul 26–29, 2027</time></td></tr>
+                    </tbody>
+                </table>
+                <p class="dates-note">The challenge concludes with a session at CCN 2027; its date, time and room will be
+                announced.</p><!-- TODO: session date, time (local), room and program link -->
+                <p class="dates-note"><a class="text-link" href="challenge.html#phases">Challenge phases &rarr;</a></p>
             </div>
-            <!-- Times: once confirmed, fill each empty <span class="when"></span> with time and time zone,
-                 e.g. <span class="when">00:00 UTC</span>. Empty slots are hidden. -->
-            <ol class="road">
-                <li class="road-node">
-                    <span class="road-dot" aria-hidden="true"></span>
-                    <time datetime="2026-12-14">Dec 14, 2026<span class="when"></span></time>
-                    <h3>Development Phase</h3>
-                    <p>Model training data and the Development Kit are released, and the in-distribution leaderboard opens.</p>
-                </li>
-                <li class="road-node">
-                    <span class="road-dot" aria-hidden="true"></span>
-                    <time datetime="2027-07-05">Jul 5, 2027<span class="when"></span></time>
-                    <h3>Generalization Phase</h3>
-                    <p>The hidden games are revealed for one week of out-of-distribution evaluation.</p>
-                </li>
-                <li class="road-node">
-                    <span class="road-dot" aria-hidden="true"></span>
-                    <time datetime="2027-07-12">Jul 12, 2027<span class="when"></span></time>
-                    <h3>Winners announced</h3>
-                    <p>Final ranking based on the Generalization Phase.</p>
-                </li>
-                <li class="road-node">
-                    <span class="road-dot" aria-hidden="true"><span class="road-flag"></span></span>
-                    <time datetime="2027-07-26">Jul 26, 2027</time>
-                    <h3>Session at CCN 2027</h3>
-                    <p>Results and talks by the winning teams, in Edinburgh.</p>
-                    <dl class="road-meta">
-                        <div><dt>Time (local)</dt><dd>To be announced</dd></div><!-- TODO: e.g. 10:00–12:00 BST -->
-                        <div><dt>Room</dt><dd>To be announced</dd></div><!-- TODO -->
-                        <div><dt>Session program</dt><dd>To be announced</dd></div><!-- TODO: replace with <a href="…">Session program</a> -->
-                    </dl>
-                </li>
-            </ol>
-            <div class="road-foot">
-                <a href="challenge.html#phases" class="text-link">Challenge phases &rarr;</a>
-            </div>
-        </div>
-    </section>
 
-    <!-- Prizes: fill in when confirmed -->
-    <section class="section" id="prizes">
-        <div class="section-inner">
-            <div class="section-title">
-                <h2>Prizes</h2>
-                <p>The top three teams are invited to present at CCN 2027.</p>
+            <!-- Prizes: amounts from the organizers' slides (2026-11-23), still being finalized. Karavela (platinum
+                 sponsor) names the Grand Prize. Podium order on screen 2nd · 1st · 3rd; source order 1st, 2nd, 3rd. -->
+            <div class="prizes-col" id="prizes">
+                <h2 class="h2 col-title">Prizes</h2>
+                <p class="prize-grand"><strong>The Algonauts Challenge 2027 Grand Prize</strong> sponsored by
+                <a href="https://karavela.ai/en" target="_blank" rel="noopener">Karavela</a></p>
+                <ol class="podium">
+                    <li class="pd pd--1"><span class="px-icon pd-medal" data-px="medal"></span><span class="pd-rank">1st<span class="sr-only"> place</span></span><span class="pd-amount">€9,000</span></li>
+                    <li class="pd pd--2"><span class="px-icon pd-medal" data-px="medal"></span><span class="pd-rank">2nd<span class="sr-only"> place</span></span><span class="pd-amount">€5,500</span></li>
+                    <li class="pd pd--3"><span class="px-icon pd-medal" data-px="medal"></span><span class="pd-rank">3rd<span class="sr-only"> place</span></span><span class="pd-amount">€3,500</span></li>
+                </ol>
+                <p class="prize-note">Each of the top three teams also receives €1,500 travel reimbursement and is invited to
+                present at CCN 2027. Prize amounts are still being finalized.</p>
             </div>
-            <dl class="prize-list">
-                <div><dt>1st place</dt><dd>To be announced</dd></div>
-                <div><dt>2nd place</dt><dd>To be announced</dd></div>
-                <div><dt>3rd place</dt><dd>To be announced</dd></div>
-                <div><dt>Travel and registration support</dt><dd>To be announced</dd></div>
-            </dl>
         </div>
     </section>
 
@@ -413,8 +390,8 @@
                 <h3>Sponsors</h3>
                 <p class="orgs-note">We thank our sponsors for supporting the 2027 challenge.</p>
                 <ul class="sponsor-mat">
+                    <li><a href="https://karavela.ai/en" target="_blank" rel="noopener"><img class="sp-karavela" src="img/sponsors/karavela_logo.svg" alt="Karavela" width="1538" height="258"></a></li><!-- platinum sponsor, listed first -->
                     <li><a href="https://www.unique.quebec/" target="_blank" rel="noopener"><img class="sp-unique" src="img/sponsors/unique_logo_logo.png" alt="UNIQUE – Unifying Neuroscience and Artificial Intelligence, Québec" width="1174" height="1320"></a></li>
-                    <li><a href="https://ivado.ca/en/" target="_blank" rel="noopener"><img class="sp-ivado" src="img/sponsors/ivado_logo.png" alt="IVADO" width="928" height="436"></a></li>
                 </ul>
             </div>
         </div>

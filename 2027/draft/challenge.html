@@ -72,15 +72,14 @@
             <div class="dates-strip-head"><h2 id="dates-title">Important dates</h2></div>
             <!-- Times: once confirmed, fill each empty <span class="when"></span> with time and time zone,
                  e.g. <span class="when">23:59 UTC</span>. Empty slots are hidden.
-                 REVIEW (organizers): only the top three teams submit a report and code (2026-11-14). Set the report
-                 and code deadline after the winners announcement (Jul 12, 2027) and before the CCN session (Jul 26),
-                 and decide what happens if a top-three team does not deliver. -->
+                 Dates (user, 2026-11-23): the report and code deadline falls between the end of the Generalization
+                 Phase and the results announcement, so reports can be checked before the results. -->
             <dl class="dates-list">
-                <div><dt>Development Phase</dt><dd>Dec 14, 2026 – Jul 4, 2027<span class="when"></span></dd></div>
-                <div><dt>Generalization Phase</dt><dd>Jul 5 – Jul 11, 2027<span class="when"></span></dd></div>
-                <div><dt>Winners announced</dt><dd>Jul 12, 2027<span class="when"></span></dd></div>
-                <div><dt>Session at CCN 2027</dt><dd>Jul 26, 2027<span class="when"></span></dd></div>
-                <div><dt>Report and code deadline</dt><dd>To be announced<span class="when"></span></dd></div>
+                <div><dt>Development Phase</dt><dd>Dec 14, 2026 – Jun 20, 2027<span class="when"></span></dd></div>
+                <div><dt>Generalization Phase</dt><dd>Jun 21 – Jun 27, 2027<span class="when"></span></dd></div>
+                <div><dt>Report and code deadline</dt><dd>Jul 9, 2027<span class="when"></span></dd></div>
+                <div><dt>Results announced</dt><dd>Jul 20, 2027<span class="when"></span></dd></div>
+                <div><dt>CCN 2027, Edinburgh</dt><dd>Jul 26–29, 2027</dd></div>
             </dl>
         </div>
     </section>
@@ -158,8 +157,8 @@
                 <table class="table">
                     <thead><tr><th>Phase</th><th>Dates</th><th>Test data (fMRI withheld)</th><th>Submissions</th></tr></thead>
                     <tbody>
-                        <tr><td>Development Phase</td><td>Dec 14, 2026 – Jul 4, 2027</td><td>Super Mario All-Stars (ID)</td><td>Unlimited</td></tr>
-                        <tr><td>Generalization Phase</td><td>Jul 5 – Jul 11, 2027</td><td>OOD games, hidden until this phase; determines the final ranking</td><td>Up to 10</td></tr>
+                        <tr><td>Development Phase</td><td>Dec 14, 2026 – Jun 20, 2027</td><td>Super Mario All-Stars (ID)</td><td>Unlimited</td></tr>
+                        <tr><td>Generalization Phase</td><td>Jun 21 – Jun 27, 2027</td><td>OOD games, hidden until this phase; determines the final ranking</td><td>Up to 10</td></tr>
                         <tr><td>Post-Challenge Benchmark</td><td>Indefinite</td><td>ID and OOD test sets, separate leaderboards</td><td>Unlimited</td></tr>
                     </tbody>
                 </table>
@@ -198,6 +197,7 @@
 
             <div class="block aside-note" id="validate">
                 <h3>Validate before submitting <span class="muted">(optional)</span></h3>
+                <p>Before submitting predictions, you can divide the released model training data into training and validation partitions. Fit the model using only the training partition, then compare its predictions with the recorded fMRI responses in the validation partition to assess model choices.</p>
                 <p>To check cross-game generalization before the Generalization Phase, you can train on Super Mario Bros.
                 and Super Mario Bros. 3 and reserve Shinobi III for validation. This tests transfer beyond the related Mario games
                 to a game with different sensory content, actions and game events. This split is available for
@@ -218,13 +218,13 @@
                 <li>Challenge participants may use any encoding model, pretrained representation, or <a href="data.html#external-data">external training data</a>. Training models on any neural responses for the ID or OOD test gameplay data is prohibited.</li>
                 <li>We allow unlimited submissions per team during the Development Phase and up to ten submissions per team during the Generalization Phase. Each team may participate using only one account.</li>
                 <li>Training on neural responses for the test gameplay data, exceeding the submission limit, or participating using multiple accounts will result in disqualification.</li>
-                <li>To be considered for the final ranking, teams must publish a report of approximately 4–8 pages describing their encoding model and methodology on a preprint server by the report deadline.</li>
-                <li>The top three teams must additionally make their code publicly available by the code deadline. They will receive monetary prizes and be invited to present their methods at CCN 2027 in Edinburgh.</li>
+                <li>To be considered for the final ranking, teams must publish a report of approximately 4–8 pages describing their encoding model and methodology on a preprint server by the <a href="#dates">report deadline</a>.</li>
+                <li>The top three teams must additionally make their code publicly available by the <a href="#dates">code deadline</a>. They will receive monetary prizes and be invited to present their methods at CCN 2027 in Edinburgh.</li>
             </ol>
             <div class="btn-row rule-action">
                 <a href="#" class="btn btn-ghost">Submit report and code links</a><!-- TODO: report and code submission form -->
             </div>
-            <p class="small muted rule-note">Form link to be added. The report and code deadline is listed under Important dates.</p>
+            <p class="small muted rule-note">Form link to be added. The report and code deadline is listed under <a href="#dates">Important dates</a>.</p>
         </div>
     </section>
 
@@ -275,7 +275,8 @@
                 (<a href="https://doi.org/10.1146/annurev.neuro.29.051605.113024" target="_blank" rel="noopener">Wu et al., 2006</a>;
                 <a href="https://doi.org/10.1016/j.neuroimage.2010.07.073" target="_blank" rel="noopener">Naselaris et al., 2011</a>;
                 <a href="https://doi.org/10.1016/j.conb.2019.04.002" target="_blank" rel="noopener">Kriegeskorte &amp; Douglas, 2019</a>).
-                The Development Kit implements such a model.</p>
+                Gameplay features describe the sensory input, controller actions, and game events used to predict brain responses. Using paired gameplay features and fMRI responses from the training data, ridge regression learns a weighted combination of features for each brain parcel. The trained mapping is then applied to features from the test gameplay data to predict the corresponding fMRI responses. The Development Kit implements this approach.</p>
+                <p>If you use the challenge resources, see the <a href="index.html#cite">papers and citation guidance</a>.</p>
             </div>
         </div>
     </section>
@@ -290,9 +291,9 @@
                 <div class="fc-group" id="sponsors">
                     <h2 class="fc-k">Sponsors</h2>
                     <ul class="fc-logos">
+                        <li><a href="https://karavela.ai/en" target="_blank" rel="noopener"><span class="fc-tile"><img class="fc-karavela" src="img/sponsors/karavela_logo.svg" alt="Karavela" width="1538" height="258"></span></a></li><!-- platinum sponsor, listed first -->
                         <li><a href="https://www.unique.quebec/" target="_blank" rel="noopener"><span class="fc-tile"><img class="fc-unique" src="img/sponsors/unique_logo_logo.png" alt="UNIQUE – Unifying Neuroscience and Artificial Intelligence, Québec" width="1174" height="1320"></span></a></li>
-                        <li><a href="https://ivado.ca/en/" target="_blank" rel="noopener"><span class="fc-tile"><img class="fc-ivado" src="img/sponsors/ivado_logo.png" alt="IVADO" width="928" height="436"></span></a></li>
-                    </ul>
+                            </ul>
                 </div>
                 <!-- Data collaboration and conference host: kept apart from the sponsors -->
                 <div class="fc-group">
