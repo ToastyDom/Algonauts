@@ -76,7 +76,7 @@
                  and code deadline after the winners announcement (Jul 12, 2027) and before the CCN session (Jul 26),
                  and decide what happens if a top-three team does not deliver. -->
             <dl class="dates-list">
-                <div><dt>Development Phase</dt><dd>Dec 1, 2026 – Jul 4, 2027<span class="when"></span></dd></div>
+                <div><dt>Development Phase</dt><dd>Dec 14, 2026 – Jul 4, 2027<span class="when"></span></dd></div>
                 <div><dt>Generalization Phase</dt><dd>Jul 5 – Jul 11, 2027<span class="when"></span></dd></div>
                 <div><dt>Winners announced</dt><dd>Jul 12, 2027<span class="when"></span></dd></div>
                 <div><dt>Session at CCN 2027</dt><dd>Jul 26, 2027<span class="when"></span></dd></div>
@@ -100,7 +100,7 @@
         <div class="panel-inner">
             <div class="prose">
                 <h2>Challenge overview</h2>
-                <p>Our goal is to provide a platform where participants can develop and train brain encoding models for active gameplay, then test how well the models generalize within and across games. An encoding model uses a subject’s gameplay data to predict the corresponding fMRI time series.</p>
+                <p>The goal of the Algonauts Project 2027 challenge is to provide a platform where participants can train encoding models of human fMRI responses during gameplay, and then test these models’ generalization both in-distribution (ID) and out-of-distribution (OOD).</p>
             </div>
 
             <!-- Figure 1 from the paper (light figure on a white mat; only the PNG is available).
@@ -158,8 +158,8 @@
                 <table class="table">
                     <thead><tr><th>Phase</th><th>Dates</th><th>Test data (fMRI withheld)</th><th>Submissions</th></tr></thead>
                     <tbody>
-                        <tr><td>Development Phase</td><td>Dec 1, 2026 – Jul 4, 2027</td><td>Super Mario All-Stars (ID)</td><td>Unlimited</td></tr>
-                        <tr><td>Generalization Phase</td><td>Jul 5 – Jul 11, 2027</td><td>OOD games, hidden until this phase; determines the final ranking</td><td>Unlimited</td></tr>
+                        <tr><td>Development Phase</td><td>Dec 14, 2026 – Jul 4, 2027</td><td>Super Mario All-Stars (ID)</td><td>Unlimited</td></tr>
+                        <tr><td>Generalization Phase</td><td>Jul 5 – Jul 11, 2027</td><td>OOD games, hidden until this phase; determines the final ranking</td><td>Up to 10</td></tr>
                         <tr><td>Post-Challenge Benchmark</td><td>Indefinite</td><td>ID and OOD test sets, separate leaderboards</td><td>Unlimited</td></tr>
                     </tbody>
                 </table>
@@ -170,10 +170,7 @@
                 <a href="data.html#id-test">in-distribution test game</a>, Super Mario All-Stars, we release the gameplay
                 data and keep the fMRI responses hidden. Participants submit predicted fMRI responses for it to Codabench (see
                 <a href="#submission">Prepare a submission</a>) and compare model variants on a public leaderboard.</p>
-                <p><strong>Generalization Phase.</strong> We reveal the OOD games and release about two hours of gameplay
-                data per subject from them, keeping the corresponding fMRI responses hidden. These games were selected to
-                differ from the Mario-family games in visual appearance, behavioral demands and cognitive demands.
-                Participants submit predicted fMRI responses for the OOD games.</p>
+                <p><strong>Generalization Phase.</strong> We withhold the OOD game identities until this phase begins to limit game-specific preparation. We provide approximately two hours of gameplay data per subject, with the same gameplay data modalities as during the Development Phase, and keep the corresponding fMRI responses hidden. Participants submit predicted fMRI responses to Codabench for automatic scoring and leaderboard updates. This leaderboard determines the final challenge ranking.</p>
                 <p><strong>Post-Challenge Benchmark.</strong> Both leaderboards remain open as public benchmarks, so
                 participants can keep submitting predictions for the ID and OOD test sets.</p>
             </div>
@@ -185,7 +182,7 @@
         <div class="panel-inner">
         <div class="prose">
             <h2>Evaluation and submission</h2>
-            <p>For each subject and game, the scoring program concatenates the predicted and withheld fMRI responses across the test gameplay recordings. Longer recordings contribute more time points. It then computes Pearson’s correlation coefficient (<em>r</em>) between the two time series for each of the 1,134 brain parcels. We average the parcel correlations to obtain one score per subject and game. We then average game scores within each subject, weighting games equally. Finally, we average the subject scores to obtain a single prediction accuracy score per submission. We apply this procedure to both the ID and OOD test sets.</p>
+            <p>For each subject and game, Codabench concatenates the predicted and measured fMRI time series across all corresponding gameplay videos in the test set. It then calculates Pearson’s correlation coefficient (<em>r</em>) between the predicted and measured sequences separately for each of the 1,134 brain parcels. The platform averages the parcel correlations to obtain one score per subject and game. For the OOD test set, which contains multiple games, it averages game scores within each subject, weighting games equally. It then averages the scores across subjects to obtain a single prediction accuracy score per submission for each test set. Codabench uses the ID scores to rank submissions on the public leaderboard during the Development Phase, and the OOD scores to determine the final challenge ranking.</p>
             <p>Five subjects are tested: <span class="subj">sub-01</span>, <span class="subj">sub-02</span>,
             <span class="subj">sub-03</span>, <span class="subj">sub-05</span> and <span class="subj">sub-06</span>.
             Subject <span class="subj">sub-04</span> played only Shinobi III. Data from this subject are provided for training only.</p>
@@ -218,20 +215,16 @@
         <div class="panel-inner">
             <h2>Challenge rules</h2>
             <ol class="num-list">
-                <li>Challenge participants can use any encoding model, pretrained representation or <a href="data.html#external-data">external training data</a>.
-                It is forbidden to train models on <strong>any</strong> neural responses to the test stimuli, that is, the
-                gameplay of Super Mario All-Stars and of the OOD games.</li>
-                <li>The winners are determined by performance in predicting fMRI responses for the OOD games during the
-                Generalization Phase.</li>
-                <li>We allow unlimited submissions per team during both competitive phases. Each team may participate using only one account. Training on neural responses to the test stimuli or participating with multiple accounts results in disqualification.</li>
-                <li>Only the top three teams must publish a short report (approximately 4–8 pages) describing their encoding
-                model and methodology on a preprint server, and make their code publicly available. They are invited to
-                present their approach at CCN 2027 in Edinburgh.</li>
+                <li>Challenge participants may use any encoding model, pretrained representation, or <a href="data.html#external-data">external training data</a>. Training models on any neural responses for the ID or OOD test gameplay data is prohibited.</li>
+                <li>We allow unlimited submissions per team during the Development Phase and up to ten submissions per team during the Generalization Phase. Each team may participate using only one account.</li>
+                <li>Training on neural responses for the test gameplay data, exceeding the submission limit, or participating using multiple accounts will result in disqualification.</li>
+                <li>To be considered for the final ranking, teams must publish a report of approximately 4–8 pages describing their encoding model and methodology on a preprint server by the report deadline.</li>
+                <li>The top three teams must additionally make their code publicly available by the code deadline. They will receive monetary prizes and be invited to present their methods at CCN 2027 in Edinburgh.</li>
             </ol>
             <div class="btn-row rule-action">
                 <a href="#" class="btn btn-ghost">Submit report and code links</a><!-- TODO: report and code submission form -->
             </div>
-            <p class="small muted rule-note">For the top three teams. Form link to be added. The report and code deadline is listed under Important dates.</p>
+            <p class="small muted rule-note">Form link to be added. The report and code deadline is listed under Important dates.</p>
         </div>
     </section>
 
@@ -259,7 +252,7 @@
                     <h2>Baseline model</h2>
                     <p>We provide a challenge baseline model as a working example and a reference point for prediction accuracy. Participants may use their own features, model architectures, and training strategies. Features extracted from the gameplay data are aligned to the 1.49-second fMRI
                     sampling grid, combined across a window of recent gameplay shifted for the hemodynamic delay, and mapped
-                    onto each of the 1,134 parcels with ridge regression. Baseline accuracy: <em>to be announced</em>.</p>
+                    onto each of the 1,134 parcels with ridge regression. ID prediction score on Super Mario All-Stars: <em>r</em> = 0.209.</p>
                 </div>
                 <div class="table-wrap" style="max-width:var(--textw)">
                     <table class="table">

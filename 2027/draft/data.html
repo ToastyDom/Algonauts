@@ -85,15 +85,14 @@
 
     <div class="hud" role="region" aria-label="Dataset at a glance">
         <div class="hud-inner">
-            <div class="hud-item"><span class="hud-k">Gameplay</span><span class="hud-v">~187 h</span></div>
+            <div class="hud-item"><span class="hud-k">Gameplay</span><span class="hud-v">~174 h</span></div>
             <div class="hud-item"><span class="hud-k">fMRI</span><span class="hud-v">212.5 h</span></div>
             <div class="hud-item"><span class="hud-k">Games</span><span class="hud-v">4 + hidden</span></div>
             <div class="hud-item"><span class="hud-k">Subjects</span><span class="hud-v">6</span></div>
             <div class="hud-item"><span class="hud-k">Brain parcels</span><span class="hud-v">1,134</span></div>
             <div class="hud-item"><span class="hud-k">Sampling (TR)</span><span class="hud-v">1.49 s</span></div>
-            <!-- Totals verified against the four game READMEs: 187.4 h gameplay, 212.5 h acquired fMRI -->
-            <p class="hud-note">The 212.5 h are all recorded fMRI time, including periods outside active gameplay such as
-            loading screens and fixation. Six subjects contribute data; five are tested.</p>
+            <!-- Totals from the current paper: approximately 174 h gameplay (144 h training, 30 h ID testing), 212.5 h recorded fMRI. -->
+            <p class="hud-note">The four challenge games contain approximately 174 hours of gameplay, with about 144 hours for model training and 30 hours for ID testing. The 212.5 hours of fMRI include periods outside active gameplay, such as loading screens and fixation periods. For ID and OOD testing, participants predict only fMRI responses corresponding to gameplay. Six subjects contribute data, and five are tested.</p>
         </div>
     </div>
 
@@ -179,9 +178,7 @@
                     <div class="tg-title"><h3>Super Mario All-Stars</h3>
                     <p class="cat-meta"><span>22 levels</span> · <span>1,232 attempts</span></p></div>
                     <div class="tg-text">
-                        <p>Super Mario All-Stars is a collection of remade Mario games. We use its remake of Super Mario
-                        Bros., which provides the in-distribution (ID) test set of the Development Phase. We release the
-                        gameplay data and keep the corresponding fMRI responses hidden.</p>
+                        <p>For ID testing, we use the visually enhanced remake of Super Mario Bros. from Super Mario All-Stars, a collection of four Mario remakes. This remake preserves the original levels and basic actions. We release gameplay data for all 22 recorded levels, comprising approximately 30 hours across subjects, and keep the corresponding fMRI responses hidden.</p>
                     </div>
                 </section>
 
