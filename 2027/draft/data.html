@@ -70,7 +70,7 @@
             </div>
             <div>
                 <div class="loop">
-                    <video data-loop autoplay muted loop playsinline preload="metadata" poster="img/gameplay_loop_poster.jpg" aria-label="Gameplay from the four model training games">
+                    <video data-loop autoplay muted loop playsinline preload="metadata" poster="img/gameplay_loop_poster.jpg" aria-label="Gameplay from the four released games">
                         <source src="img/gameplay_loop.mp4" type="video/mp4">
                     </video>
                     <div class="ql" aria-hidden="true">
@@ -140,103 +140,68 @@
     <!-- ===================== Games & subjects ===================== -->
     <section class="panel" id="games" role="tabpanel" aria-labelledby="tab-games">
         <div class="panel-inner">
-            <!-- Catalogue (left, wider, first on tablet/phone) and compact ID split (right) share one top-aligned row on wide screens.
-                 In-distribution test split. PROVISIONAL: game-level summary of §8 "Challenge split" in the
-                 mariostars and mario3 game READMEs (21.6 % and 22.9 % of the fMRI time covered by each game's gameplay).
-                 The matrix is a generic, illustrative example (levels × sessions/runs, progression after Figure 2D of the
-                 paper; ID test runs as red columns); it is NOT the real split. The real numbers stay outside it, at game level. -->
-            <div class="games-top">
-                <!-- Model training games (left, wider, first when stacked): 2×2 catalogue (thumbnail, title, one metadata line) -->
-                <section class="games" id="training-games" aria-labelledby="games-title">
-                    <h2 id="games-title">Model training games</h2>
-                    <p class="games-intro">Three games from the Mario family provide related environments with differences in
-                    visual appearance, level design and game mechanics. Shinobi III differs more substantially in its visual
-                    content, actions, event structure and behavioral demands.</p>
-                    <ul class="catalog">
-                        <li class="cat-item">
-                            <div class="cat-shot"><img src="img/games/cat_mario.png" alt="Super Mario Bros. gameplay: Mario jumps toward a Goomba standing on a row of bricks" width="720" height="405" loading="lazy"></div>
-                            <h3>Super Mario Bros.</h3>
-                            <p class="cat-meta"><span>22 levels</span> · <span>3,374 attempts</span></p>
-                        </li>
-                        <li class="cat-item">
-                            <div class="cat-shot"><img src="img/games/cat_mariostars.png" alt="Super Mario All-Stars gameplay: Mario jumps past a green pipe with two Goombas below" width="768" height="432" loading="lazy"></div>
-                            <h3>Super Mario All-Stars</h3>
-                            <p class="cat-meta"><span>22 levels</span> · <span>1,232 attempts</span></p>
-                        </li>
-                        <li class="cat-item">
-                            <div class="cat-shot"><img src="img/games/cat_mario3.png" alt="Super Mario Bros. 3 gameplay: Mario jumps past a Piranha Plant in a pipe" width="720" height="405" loading="lazy"></div>
-                            <h3>Super Mario Bros. 3</h3>
-                            <p class="cat-meta"><span>80 levels</span> · <span>1,589 attempts</span></p>
-                        </li>
-                        <li class="cat-item">
-                            <div class="cat-shot"><img src="img/games/cat_shinobi.png" alt="Shinobi III gameplay: the ninja jumps through a forest toward an enemy" width="640" height="360" loading="lazy"></div>
-                            <h3>Shinobi III: Return of the Ninja Master</h3>
-                            <p class="cat-meta"><span>3 levels</span> · <span>666 attempts</span></p>
-                        </li>
-                    </ul>
+            <!-- Games (2026-11-16): the three model training games are released in full (gameplay + fMRI, all levels);
+                 the Super Mario Bros. remake from the Super Mario All-Stars collection is the in-distribution (ID) test game (gameplay
+                 released, fMRI hidden); the OOD games stay hidden until the Generalization Phase. The ID and OOD rows
+                 share one shape: tile on the left (aligned with the catalogue's first column), text on the right.
+                 The SMB and All-Stars tiles show the same spot of World 1-1 (sub-01; SMB ses-011 rep-000 at ~6.93 s,
+                 All-Stars ses-001 rep-000 at ~6.57 s), cropped to the same 224×126 window and scaled 3×. -->
+            <section class="games" id="training-games" aria-labelledby="games-title">
+                <h2 id="games-title">Model training games</h2>
+                <p class="games-intro">We release gameplay data and the corresponding fMRI responses for all levels of three
+                games. Super Mario Bros. and Super Mario Bros. 3 provide related environments with differences in visual
+                appearance, level design and game mechanics. Shinobi III differs more substantially in its visual content,
+                actions, event structure and behavioral demands.</p>
+                <ul class="catalog">
+                    <li class="cat-item">
+                        <div class="cat-shot"><img src="img/games/cat_mario_w1l1.png" alt="Super Mario Bros. gameplay in World 1-1: Mario stands on a row of bricks and ? blocks, a Goomba walks below" width="672" height="378" loading="lazy"></div>
+                        <div><h3>Super Mario Bros.</h3>
+                        <p class="cat-meta"><span>22 levels</span> · <span>3,374 attempts</span></p></div>
+                    </li>
+                    <li class="cat-item">
+                        <div class="cat-shot"><img src="img/games/cat_mario3.png" alt="Super Mario Bros. 3 gameplay: Mario jumps past a Piranha Plant in a pipe" width="720" height="405" loading="lazy"></div>
+                        <div><h3>Super Mario Bros. 3</h3>
+                        <p class="cat-meta"><span>80 levels</span> · <span>1,589 attempts</span></p></div>
+                    </li>
+                    <li class="cat-item">
+                        <div class="cat-shot"><img src="img/games/cat_shinobi.png" alt="Shinobi III gameplay: the ninja jumps through a forest toward an enemy" width="640" height="360" loading="lazy"></div>
+                        <div><h3>Shinobi III: Return of the Ninja Master</h3>
+                        <p class="cat-meta"><span>3 levels</span> · <span>666 attempts</span></p></div>
+                    </li>
+                </ul>
+            </section>
+
+            <div class="block-rule test-games">
+                <!-- In-distribution test game -->
+                <section class="test-game" id="id-test" aria-labelledby="id-test-title">
+                    <h2 id="id-test-title">In-distribution test game</h2>
+                    <div class="cat-shot"><img src="img/games/cat_mariostars_w1l1.png" alt="Super Mario All-Stars gameplay at the same spot in World 1-1, with remade graphics: Mario stands on a row of bricks and ? blocks, a Goomba walks below" width="672" height="378" loading="lazy"></div>
+                    <div class="tg-title"><h3>Super Mario All-Stars</h3>
+                    <p class="cat-meta"><span>22 levels</span> · <span>1,232 attempts</span></p></div>
+                    <div class="tg-text">
+                        <p>Super Mario All-Stars is a collection of remade Mario games. We use its remake of Super Mario
+                        Bros., which provides the in-distribution (ID) test set of the Development Phase. We release the
+                        gameplay data and keep the corresponding fMRI responses hidden.</p>
+                    </div>
                 </section>
 
-                <section class="id-split" id="id-split" aria-labelledby="id-split-title">
-                    <h2 id="id-split-title">In-distribution test split</h2>
-                    <p class="split-intro">For in-distribution (ID) testing during the Development Phase, we hold out
-                    selected whole runs of Super Mario All-Stars and Super Mario Bros. 3: their gameplay data are released,
-                    their fMRI responses stay hidden. Super Mario Bros. and Shinobi III are training-only.</p>
-                    <div class="runs-wrap">
-                        <table class="runs">
-                            <caption><strong>Illustrative example.</strong> Filled squares mark the levels played in each run; red runs
-                            are held out for ID testing. Level E, played only in a test run, is held out entirely.</caption>
-                            <thead>
-                                <tr>
-                                    <td class="runs-corner"></td>
-                                    <th scope="colgroup" colspan="3">Session 1</th>
-                                    <th scope="colgroup" colspan="3" class="s-gap">Session 2</th>
-                                    <th scope="colgroup" colspan="3" class="s-gap">Session 3</th>
-                                </tr>
-                                <tr>
-                                    <td class="runs-corner runs-axis">Run</td>
-                                    <th scope="col" aria-label="Session 1, run 1">1</th>
-                                    <th scope="col" aria-label="Session 1, run 2">2</th>
-                                    <th scope="col" aria-label="Session 1, run 3">3</th>
-                                    <th scope="col" class="s-gap" aria-label="Session 2, run 1">1</th>
-                                    <th scope="col" class="test" aria-label="Session 2, run 2, ID test run">2<span>test</span></th>
-                                    <th scope="col" aria-label="Session 2, run 3">3</th>
-                                    <th scope="col" class="s-gap" aria-label="Session 3, run 1">1</th>
-                                    <th scope="col" aria-label="Session 3, run 2">2</th>
-                                    <th scope="col" class="test" aria-label="Session 3, run 3, ID test run">3<span>test</span></th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr><th scope="row"><span class="lv">Level </span>A</th><td class="on"><span class="sr-only">played</span></td><td class="on"><span class="sr-only">played</span></td><td><span class="sr-only">not played</span></td><td class="s-gap on"><span class="sr-only">played</span></td><td class="test"><span class="sr-only">not played</span></td><td><span class="sr-only">not played</span></td><td class="s-gap on"><span class="sr-only">played</span></td><td><span class="sr-only">not played</span></td><td class="test"><span class="sr-only">not played</span></td></tr>
-                                <tr><th scope="row"><span class="lv">Level </span>B</th><td><span class="sr-only">not played</span></td><td class="on"><span class="sr-only">played</span></td><td class="on"><span class="sr-only">played</span></td><td class="s-gap on"><span class="sr-only">played</span></td><td class="test on"><span class="sr-only">played</span></td><td><span class="sr-only">not played</span></td><td class="s-gap"><span class="sr-only">not played</span></td><td><span class="sr-only">not played</span></td><td class="test"><span class="sr-only">not played</span></td></tr>
-                                <tr><th scope="row"><span class="lv">Level </span>C</th><td><span class="sr-only">not played</span></td><td><span class="sr-only">not played</span></td><td class="on"><span class="sr-only">played</span></td><td class="s-gap"><span class="sr-only">not played</span></td><td class="test on"><span class="sr-only">played</span></td><td class="on"><span class="sr-only">played</span></td><td class="s-gap on"><span class="sr-only">played</span></td><td class="on"><span class="sr-only">played</span></td><td class="test"><span class="sr-only">not played</span></td></tr>
-                                <tr><th scope="row"><span class="lv">Level </span>D</th><td><span class="sr-only">not played</span></td><td><span class="sr-only">not played</span></td><td><span class="sr-only">not played</span></td><td class="s-gap"><span class="sr-only">not played</span></td><td class="test"><span class="sr-only">not played</span></td><td class="on"><span class="sr-only">played</span></td><td class="s-gap"><span class="sr-only">not played</span></td><td class="on"><span class="sr-only">played</span></td><td class="test on"><span class="sr-only">played</span></td></tr>
-                                <tr><th scope="row"><span class="lv">Level </span>E</th><td><span class="sr-only">not played</span></td><td><span class="sr-only">not played</span></td><td><span class="sr-only">not played</span></td><td class="s-gap"><span class="sr-only">not played</span></td><td class="test"><span class="sr-only">not played</span></td><td><span class="sr-only">not played</span></td><td class="s-gap"><span class="sr-only">not played</span></td><td><span class="sr-only">not played</span></td><td class="test on"><span class="sr-only">played</span></td></tr>
-                            </tbody>
-                        </table>
+                <!-- OOD games (hidden until the Generalization Phase); no game count implied.
+                     "Unseen" is avoided on purpose: the subjects did play these games; they are hidden from participants. -->
+                <section class="test-game" id="ood-games" aria-labelledby="ood-games-title">
+                    <h2 id="ood-games-title">OOD games</h2>
+                    <div class="cat-shot cat-shot--hidden"><img src="img/sprites/question_block.png" alt="" width="48" height="48"></div>
+                    <div class="tg-title"><h3>Hidden games</h3>
+                    <p class="cat-meta">Revealed at the start of the Generalization Phase</p></div>
+                    <div class="tg-text">
+                        <p>The Generalization Phase tests out-of-distribution (OOD) generalization to games that are kept hidden
+                        until then. We provide approximately two hours of gameplay data per subject, with the same gameplay data
+                        modalities, and keep the corresponding fMRI responses hidden. Performance on these games determines the
+                        final ranking.</p>
                     </div>
-                    <h3 class="split-h">Held out per game</h3>
-                    <ul class="split-rows">
-                        <li><span class="split-game">Super Mario All-Stars</span><span class="split-val"><b>21.6%</b> held out</span><span class="split-note">Every level remains in training.</span></li>
-                        <li><span class="split-game">Super Mario Bros. 3</span><span class="split-val"><b>22.9%</b> held out</span><span class="split-note">Four levels are held out entirely for every subject.</span></li>
-                    </ul>
-                    <p class="split-foot">Provisional shares of each game’s fMRI time during gameplay; hours will be
-                    announced.</p><!-- TODO: add hours once published (paper: "[add actual amount]"); use fMRI time during gameplay as the denominator, as for the percentages -->
                 </section>
             </div>
 
-            <!-- OOD games (hidden until the Generalization Phase): one wide panel, no game count implied.
-                 "Unseen" is avoided on purpose: the subjects did play these games; they are hidden from participants. -->
-            <section class="unseen" id="ood-games" aria-labelledby="ood-games-title">
-                <img class="unseen-art" src="img/sprites/question_block.png" alt="" width="48" height="48">
-                <div>
-                    <h2 id="ood-games-title">OOD games</h2>
-                    <p>The Generalization Phase evaluates out-of-distribution (OOD) generalization to games that are kept hidden until then. We reveal the game titles at the start of the phase.</p>
-                    <p>We provide approximately two hours of gameplay data per subject, with the same gameplay data modalities as during the Development Phase. We keep the corresponding fMRI responses hidden.
-                    Performance on these games determines the final ranking.</p>
-                </div>
-            </section>
-
-            <!-- Subjects: same column split as the games/ID split row above; the table uses the ID grid's square vocabulary -->
+            <!-- Subjects: model training games first, then the ID test game (All-Stars) after a small gap -->
             <div class="block-rule coverage-wrap" id="subjects">
                 <div class="prose">
                     <h2>Subjects</h2>
@@ -246,14 +211,14 @@
                 <div class="table-wrap">
                     <table class="coverage">
                         <caption class="sr-only">Games played by each subject</caption>
-                        <thead><tr><th></th><th scope="col">SMB</th><th scope="col">All-Stars</th><th scope="col">SMB3</th><th scope="col">Shinobi</th><th scope="col" class="role">Role</th></tr></thead>
+                        <thead><tr><th></th><th scope="col">SMB</th><th scope="col">SMB3</th><th scope="col">Shinobi</th><th scope="col" class="c-gap">All-Stars</th><th scope="col" class="role">Role</th></tr></thead>
                         <tbody>
-                            <tr><th scope="row">sub-01</th><td class="on"><span class="sr-only">played</span></td><td class="on"><span class="sr-only">played</span></td><td class="on"><span class="sr-only">played</span></td><td class="on"><span class="sr-only">played</span></td><td class="role eval">Tested</td></tr>
-                            <tr><th scope="row">sub-02</th><td class="on"><span class="sr-only">played</span></td><td class="on"><span class="sr-only">played</span></td><td class="on"><span class="sr-only">played</span></td><td class="on"><span class="sr-only">played</span></td><td class="role eval">Tested</td></tr>
-                            <tr><th scope="row">sub-03</th><td class="on"><span class="sr-only">played</span></td><td class="on"><span class="sr-only">played</span></td><td class="on"><span class="sr-only">played</span></td><td><span class="sr-only">not played</span></td><td class="role eval">Tested</td></tr>
-                            <tr><th scope="row">sub-04</th><td><span class="sr-only">not played</span></td><td><span class="sr-only">not played</span></td><td><span class="sr-only">not played</span></td><td class="on"><span class="sr-only">played</span></td><td class="role">Training only</td></tr>
-                            <tr><th scope="row">sub-05</th><td class="on"><span class="sr-only">played</span></td><td class="on"><span class="sr-only">played</span></td><td class="on"><span class="sr-only">played</span></td><td><span class="sr-only">not played</span></td><td class="role eval">Tested</td></tr>
-                            <tr><th scope="row">sub-06</th><td class="on"><span class="sr-only">played</span></td><td class="on"><span class="sr-only">played</span></td><td class="on"><span class="sr-only">played</span></td><td class="on"><span class="sr-only">played</span></td><td class="role eval">Tested</td></tr>
+                            <tr><th scope="row">sub-01</th><td class="on"><span class="sr-only">played</span></td><td class="on"><span class="sr-only">played</span></td><td class="on"><span class="sr-only">played</span></td><td class="on c-gap"><span class="sr-only">played</span></td><td class="role eval">Tested</td></tr>
+                            <tr><th scope="row">sub-02</th><td class="on"><span class="sr-only">played</span></td><td class="on"><span class="sr-only">played</span></td><td class="on"><span class="sr-only">played</span></td><td class="on c-gap"><span class="sr-only">played</span></td><td class="role eval">Tested</td></tr>
+                            <tr><th scope="row">sub-03</th><td class="on"><span class="sr-only">played</span></td><td class="on"><span class="sr-only">played</span></td><td><span class="sr-only">not played</span></td><td class="on c-gap"><span class="sr-only">played</span></td><td class="role eval">Tested</td></tr>
+                            <tr><th scope="row">sub-04</th><td><span class="sr-only">not played</span></td><td><span class="sr-only">not played</span></td><td class="on"><span class="sr-only">played</span></td><td class="c-gap"><span class="sr-only">not played</span></td><td class="role">Training only</td></tr>
+                            <tr><th scope="row">sub-05</th><td class="on"><span class="sr-only">played</span></td><td class="on"><span class="sr-only">played</span></td><td><span class="sr-only">not played</span></td><td class="on c-gap"><span class="sr-only">played</span></td><td class="role eval">Tested</td></tr>
+                            <tr><th scope="row">sub-06</th><td class="on"><span class="sr-only">played</span></td><td class="on"><span class="sr-only">played</span></td><td class="on"><span class="sr-only">played</span></td><td class="on c-gap"><span class="sr-only">played</span></td><td class="role eval">Tested</td></tr>
                         </tbody>
                     </table>
                 </div>
@@ -432,14 +397,14 @@
             <!-- Optional website-only figure (no longer in the revised paper, which has Figures 1 and 2 only) -->
             <details class="optional" id="feature-figure">
                 <summary>
-                    <span><span class="s-t">Gameplay features across the model training games</span><span class="s-d">Optional figure: visual, audio, controller and game-event features per game</span></span>
+                    <span><span class="s-t">Gameplay features across the four games</span><span class="s-d">Optional figure: visual, audio, controller and game-event features per game</span></span>
                     <span class="s-i"><span class="s-show">Show</span><span class="s-hide">Hide</span></span>
                 </summary>
                 <figure class="figure">
                     <a class="figure-mat" href="img/fig3_gameplay_features.png" target="_blank" rel="noopener">
-                        <img src="img/fig3_gameplay_features.png" alt="Gameplay features across the four model training games: PCA projections of video and audio features per level, controller use, and a map of game-event description embeddings." width="2560" height="750" loading="lazy">
+                        <img src="img/fig3_gameplay_features.png" alt="Gameplay features across the four games: PCA projections of video and audio features per level, controller use, and a map of game-event description embeddings." width="2560" height="750" loading="lazy">
                     </a>
-                    <figcaption><strong>Gameplay features across the model training games.</strong> (A) Visual and (B) audio
+                    <figcaption><strong>Gameplay features across the four games.</strong> (A) Visual and (B) audio
                     features per level of sub-01, projected onto two principal components. (C) Controller use across all
                     subjects. (D) Sentence embeddings of the game-event descriptions. Proximity in these projections does not
                     by itself establish that neural predictions transfer between games.
@@ -483,7 +448,8 @@
 │   │       └── sub-01_ses-001_task-mario_level-w1l1_rep-000_recording.mp4
 │   └── fmri/
 │       └── sub-01_task-mario_space-MNI152NLin2009cAsym_atlas-cneuromod26_desc-1134Parcels_timeseries.h5
-├── <span class="h">mariostars/</span> · <span class="h">mario3/</span> · <span class="h">shinobi/</span>                 <span class="c"># same structure</span>
+├── <span class="h">mario3/</span> · <span class="h">shinobi/</span>                                     <span class="c"># same structure</span>
+├── <span class="h">mariostars/</span>                                            <span class="c"># gamelogs/ only: fMRI hidden (ID test)</span>
 └── <span class="h">atlases/</span>                                               <span class="c"># parcellations + parcel metadata</span></pre>
 
             <div class="prose block">
