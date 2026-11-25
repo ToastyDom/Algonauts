@@ -1,15 +1,22 @@
 <!doctype html>
 <html lang="en">
 <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VCQ9D4SNB4"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-VCQ9D4SNB4');
+    </script>
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Challenge Details – Algonauts Project 2027</title>
     <meta name="description" content="Challenge phases, dates, evaluation, rules, baseline model and Development Kit of the Algonauts Project 2027 challenge.">
     <meta name="author" content="The Algonauts Project">
-    <meta name="robots" content="noindex, nofollow">
-    <!-- Colour theme before first paint: ?theme= (carried by links between the draft pages), else the stored
-         choice, else dark. The URL parameter is removed from the address bar again. -->
-    <script>(function(){var m=null,q=/[?&]theme=(light|dark)/.exec(location.search);if(q){m=q[1];try{localStorage.setItem('ap27-theme',m);}catch(e){}try{history.replaceState(null,'',location.pathname+location.hash);}catch(e){}}if(!m){try{m=localStorage.getItem('ap27-theme');}catch(e){}}document.documentElement.setAttribute('data-theme',m==='light'?'light':'dark');})();</script>
+    <!-- Colour theme -->
+    <script>(function(){var r=document.documentElement,m=null,q=/[?&]theme=(light|dark|system)/.exec(location.search);if(q){m=q[1];try{if(m==='system')localStorage.removeItem('ap27-theme');else localStorage.setItem('ap27-theme',m);}catch(e){}try{history.replaceState(null,'',location.pathname+location.hash);}catch(e){}}else{try{m=localStorage.getItem('ap27-theme');}catch(e){}}if(m!=='light'&&m!=='dark')m='system';var t=m!=='system'?m:(window.matchMedia&&matchMedia('(prefers-color-scheme: light)').matches?'light':'dark');r.setAttribute('data-theme',t);r.setAttribute('data-theme-pref',m);})();</script>
     <link rel="icon" id="favicon" data-base="img/logos/" type="image/png" href="img/logos/logo_icon_light.png" sizes="32x32">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -34,7 +41,8 @@
                 <li><a href="index.html#signup">Stay Updated</a></li>
                 <li><a href="https://algonautsproject.com/2025/archive.html">Archive</a></li>
             </ul>
-            <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch colour theme">
+            <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Colour theme">
+                <svg class="ti ti-system" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4.5" width="18" height="12" rx="1.5"/><path d="M8.5 20h7M12 16.5V20"/></svg>
                 <svg class="ti ti-light" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2.5M12 19v2.5M2.5 12H5M19 12h2.5M5.3 5.3l1.8 1.8M16.9 16.9l1.8 1.8M5.3 18.7l1.8-1.8M16.9 7.1l1.8-1.8"/></svg>
                 <svg class="ti ti-dark" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a7 7 0 0 0 10.5 10.5z"/></svg>
             </button>
@@ -66,14 +74,11 @@
         </div>
     </header>
 
-    <!-- Important dates: always visible, whichever tab is open -->
+    <!-- Important dates -->
     <section class="dates-strip" id="dates" aria-labelledby="dates-title">
         <div class="dates-strip-inner">
             <div class="dates-strip-head"><h2 id="dates-title">Important dates</h2></div>
-            <!-- Times: once confirmed, fill each empty <span class="when"></span> with time and time zone,
-                 e.g. <span class="when">23:59 UTC</span>. Empty slots are hidden.
-                 Dates (user, 2026-11-23): the report and code deadline falls between the end of the Generalization
-                 Phase and the results announcement, so reports can be checked before the results. -->
+            <!-- TODO: deadline times and time zone -->
             <dl class="dates-list">
                 <div><dt>Development Phase</dt><dd>Dec 14, 2026 – Jun 20, 2027<span class="when"></span></dd></div>
                 <div><dt>Generalization Phase</dt><dd>Jun 21 – Jun 27, 2027<span class="when"></span></dd></div>
@@ -102,10 +107,7 @@
                 <p>The goal of the Algonauts Project 2027 challenge is to provide a platform where participants can train encoding models of human fMRI responses during gameplay, and then test these models’ generalization both in-distribution (ID) and out-of-distribution (OOD).</p>
             </div>
 
-            <!-- Figure 1 from the paper (light figure on a white mat; only the PNG is available).
-                 NOTE (2026-11-16): the PNG is outdated. It still shows held-out runs from All-Stars and SMB3 as the ID test
-                 set (now: Super Mario All-Stars as the ID test game, the other three games fully for training) and a
-                 preliminary r = 0.126. Replace the PNG (both links below) when an updated version exists. -->
+            <!-- Figure 1 -->
             <figure class="figure fig1-full">
                 <a class="figure-mat" href="img/fig1_challenge_overview.png" target="_blank" rel="noopener">
                     <img src="img/fig1_challenge_overview.png" alt="Figure 1: Overview of the Algonauts Project 2027 challenge. Panel A: gameplay video, audio, controller actions and game events from Super Mario Bros., Super Mario All-Stars, Super Mario Bros. 3 and Shinobi III feed an encoding model that predicts fMRI responses in 1,134 brain parcels. Panel B: the Development Phase (model building and in-distribution testing), the Generalization Phase (out-of-distribution testing on hidden OOD test games and final ranking) and the Post-Challenge Benchmark, with a timeline from launch at the end of 2026 to the winner showcase at CCN 2027." width="2200" height="1850">
@@ -118,7 +120,7 @@
                 <br><a class="fig-open" href="img/fig1_challenge_overview.png" target="_blank" rel="noopener">Open full size &#8599;</a></figcaption>
             </figure>
 
-            <!-- Phones: a simpler, text-based version of Figure 1 with the same inputs and phases -->
+            <!-- Figure 1, phone version -->
             <div class="fig-web" role="group" aria-label="Figure 1, simplified">
                 <p class="label">Figure 1, simplified</p>
                 <ol class="fw-flow">
@@ -283,19 +285,16 @@
 
     <div class="pixel-divider" aria-hidden="true"></div>
     <footer class="footer">
-        <!-- Sponsors, partners and acknowledgements sit in the footer on this page, so only the tab content changes
-             when switching tabs (the home page keeps the large Sponsors section). Same sponsor list as on the home
-             page: add a <li> per new sponsor (logos in img/sponsors/). -->
+        <!-- Sponsor, partners and acknowledgements -->
         <div class="footer-credits">
             <div class="fc-groups">
                 <div class="fc-group" id="sponsors">
-                    <h2 class="fc-k">Sponsors</h2>
+                    <h2 class="fc-k">Sponsor</h2>
                     <ul class="fc-logos">
-                        <li><a href="https://karavela.ai/en" target="_blank" rel="noopener"><span class="fc-tile"><img class="fc-karavela" src="img/sponsors/karavela_logo.svg" alt="Karavela" width="1538" height="258"></span></a></li><!-- platinum sponsor, listed first -->
-                        <li><a href="https://www.unique.quebec/" target="_blank" rel="noopener"><span class="fc-tile"><img class="fc-unique" src="img/sponsors/unique_logo_logo.png" alt="UNIQUE – Unifying Neuroscience and Artificial Intelligence, Québec" width="1174" height="1320"></span></a></li>
+                        <li><a href="https://karavela.ai/en" target="_blank" rel="noopener"><span class="fc-tile"><img class="fc-karavela" src="img/sponsors/karavela_logo.svg" alt="Karavela" width="1538" height="258"></span></a></li>
                             </ul>
                 </div>
-                <!-- Data collaboration and conference host: kept apart from the sponsors -->
+                <!-- Partners -->
                 <div class="fc-group">
                     <h2 class="fc-k">Partners</h2>
                     <ul class="fc-logos">

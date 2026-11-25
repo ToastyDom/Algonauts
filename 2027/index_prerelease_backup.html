@@ -1,0 +1,343 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VCQ9D4SNB4"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-VCQ9D4SNB4');
+    </script>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>The Algonauts Project 2027 Challenge</title>
+    <meta name="description" content="The Algonauts Project 2027 Challenge: How the Human Brain Makes Sense of Video Games. Launching December 14, 2026. Build encoding models that predict fMRI responses during video gameplay.">
+    <meta name="author" content="The Algonauts Project">
+    <!-- Colour theme -->
+    <script>(function(){var r=document.documentElement,m=null,q=/[?&]theme=(light|dark|system)/.exec(location.search);if(q){m=q[1];try{if(m==='system')localStorage.removeItem('ap27-theme');else localStorage.setItem('ap27-theme',m);}catch(e){}try{history.replaceState(null,'',location.pathname+location.hash);}catch(e){}}else{try{m=localStorage.getItem('ap27-theme');}catch(e){}}if(m!=='light'&&m!=='dark')m='system';var t=m!=='system'?m:(window.matchMedia&&matchMedia('(prefers-color-scheme: light)').matches?'light':'dark');r.setAttribute('data-theme',t);r.setAttribute('data-theme-pref',m);})();</script>
+    <link rel="icon" id="favicon" data-base="img/logos/" type="image/png" href="img/logos/logo_icon_light.png" sizes="32x32">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/draft.css">
+    <style>
+        .pre-games .catalog { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+        @media (max-width: 759px) {
+            .pre-games .catalog { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px 12px; }
+            .pre-games .cat-item { display: block; }
+            .pre-games .cat-item h3 { margin-top: 10px; }
+        }
+        .pre-about .news-grid { align-items: start; }
+        .pre-about .news-brand { padding-top: 12px; }
+        .pre-about .prose p:last-child { margin-bottom: 0; }
+        .pre-about .about-join { margin-top: 18px; }
+        .sponsors-col .sponsor-mat { justify-content: flex-start; margin: 0; flex-wrap: nowrap; }
+        .sponsors-col .sponsor-mat li { flex: 1 1 0; min-width: 0; min-height: 150px; }
+        @media (max-width: 640px) { .sponsors-col .sponsor-mat li { min-height: 112px; } }
+        .sponsors-col .orgs-note { margin: 0 0 22px; color: var(--text-2); }
+        .org-tile .org-udem { height: 48px; }
+        @media (min-width: 961px) { .org-row li { width: calc((100% - 80px) / 6); max-width: 168px; } }
+        @media (min-width: 641px) and (max-width: 960px) { .org-row { max-width: 560px; margin: 0 auto; } }
+        .hero .soon { width: fit-content; max-width: 100%; margin: clamp(16px, 2.2vw, 20px) auto 0; font-size: clamp(1.15rem, 2.2vw, 1.45rem);
+            font-weight: 700; letter-spacing: .2px; line-height: 1.3; color: #7cf5ff;
+            background: linear-gradient(90deg, #7cf5ff, #ffb0f4); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+        .hero .soon + .btn-row { margin-top: clamp(22px, 3vw, 30px); }
+        /* Hero fills the screen */
+        .hero { min-height: 100vh; min-height: 100svh; }
+        /* Sponsor card stands on the podium floor */
+        @media (min-width: 961px) {
+            .dates-prizes { grid-template-rows: repeat(4, auto); row-gap: 0; }
+            .prizes-col, .sponsors-col { display: grid; grid-row: 1 / span 4; grid-template-rows: subgrid; }
+            .sponsors-col .sponsor-mat { align-self: end; }
+        }
+        /* Section backgrounds */
+        .section + .section { border-top: 0; }
+        #games, #team { background: var(--bg-band); }
+    </style>
+</head>
+
+<body class="page-home">
+    <nav class="nav" id="nav" aria-label="Main">
+        <div class="nav-inner">
+            <a href="https://algonautsproject.com/" class="nav-logo">
+                <img src="img/logos/logo_icon_dark.png" alt="">
+                <span>The Algonauts Project</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#about">The Challenge</a></li>
+                <li><a href="#games">Games</a></li>
+                <li><a href="#prizes">Prizes</a></li>
+                <li><a href="#sponsors">Sponsor</a></li>
+                <li><a href="#team">Team</a></li>
+                <li><a href="#signup">Stay Updated</a></li>
+                <li><a href="https://algonautsproject.com/2025/archive.html">Archive</a></li>
+            </ul>
+            <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Colour theme">
+                <svg class="ti ti-system" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4.5" width="18" height="12" rx="1.5"/><path d="M8.5 20h7M12 16.5V20"/></svg>
+                <svg class="ti ti-light" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2.5M12 19v2.5M2.5 12H5M19 12h2.5M5.3 5.3l1.8 1.8M16.9 16.9l1.8 1.8M5.3 18.7l1.8-1.8M16.9 7.1l1.8-1.8"/></svg>
+                <svg class="ti ti-dark" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a7 7 0 0 0 10.5 10.5z"/></svg>
+            </button>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-overlay">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+    <div class="nav-overlay" id="nav-overlay">
+        <ul>
+            <li><a href="#about">The Challenge</a></li>
+            <li><a href="#games">Games</a></li>
+            <li><a href="#prizes">Prizes</a></li>
+            <li><a href="#sponsors">Sponsor</a></li>
+            <li><a href="#team">Team</a></li>
+            <li><a href="#signup">Stay Updated</a></li>
+            <li><a href="https://algonautsproject.com/2025/archive.html">Archive</a></li>
+            <li><a href="https://algonautsproject.com/">Algonauts Project</a></li>
+        </ul>
+    </div>
+
+    <!-- Hero -->
+    <header class="hero" id="top">
+        <div class="pixel-wave" aria-hidden="true"></div>
+        <div class="hero-particles" id="hero-particles" aria-hidden="true"></div>
+
+        <div class="hero-content">
+            <h1>The Algonauts Project 2027 Challenge</h1>
+            <p class="tagline">How the Human Brain Makes Sense of Video Games</p>
+            <p class="launch-badge">Launching <strong>December 14, 2026</strong></p>
+            <p class="lead">Build encoding models that predict the fMRI responses of subjects playing video games, and test how well they generalize within and across games.</p>
+            <p class="soon">More details coming soon.</p>
+            <div class="btn-row">
+                <a href="#signup" class="btn btn-primary">Get notified at launch</a>
+                <a href="#games" class="btn btn-ghost">See the games</a>
+            </div>
+        </div>
+
+        <!-- Hero animation -->
+        <div class="hero-stage play" id="hero-stage" aria-hidden="true">
+            <div class="hs-ground"></div>
+            <img class="hs-coin" src="img/sprites/coin.png" alt="" width="42" height="60">
+            <div class="hs-blk hs-blk-a">
+                <img class="hs-q" src="img/sprites/question_block.png" alt="" width="48" height="48">
+                <img class="hs-used" src="img/sprites/used_block.png" alt="" width="48" height="48">
+            </div>
+            <div class="hs-blk hs-blk-b">
+                <img class="hs-q" src="img/sprites/question_block.png" alt="" width="48" height="48">
+            </div>
+            <div class="hs-m">
+                <div class="hs-my">
+                    <div class="hs-run">
+                        <img class="hs-r1" src="img/sprites/mario_run1.png" alt="" width="51" height="48">
+                        <img class="hs-r2" src="img/sprites/mario_run2.png" alt="" width="51" height="48">
+                    </div>
+                    <img class="hs-stand" src="img/sprites/mario_stand.png" alt="" width="45" height="48">
+                    <img class="hs-jump" src="img/sprites/mario_jump.png" alt="" width="48" height="48">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- The 2027 Challenge -->
+    <section class="section pre-about" id="about">
+        <div class="section-inner news-grid">
+            <div class="news-brand">
+                <img class="brand-logo logo-c" src="img/logos/logo_text_light.png" alt="The Algonauts Project logo"><img class="brand-logo logo-w" src="img/logos/logo_text_dark.png" alt="The Algonauts Project logo">
+                <div class="hosts">
+                    <a class="host host--cneuromod" href="https://www.cneuromod.ca/" target="_blank" rel="noopener">
+                        <span class="host-chip"><img src="img/CneuroMod.png" alt="CNeuroMod — The Courtois Project on Neuronal Modelling"></span>
+                        <span class="host-cap">In collaboration with</span>
+                    </a>
+                    <a class="host host--ccn" href="http://2027.ccneuro.org/" target="_blank" rel="noopener">
+                        <span class="host-chip"><img src="img/logos/ccn_logo.png" alt="Cognitive Computational Neuroscience (CCN)"></span>
+                        <span class="host-cap">Hosted at CCN 2027</span>
+                    </a>
+                </div>
+            </div>
+            <div class="news prose">
+                <h2>The 2027 Challenge</h2>
+                <p>The Algonauts Project 2027 Challenge moves from passive perception to active interaction through video
+                gameplay. In collaboration with <a href="https://www.cneuromod.ca/" target="_blank" rel="noopener">CNeuroMod</a>,
+                we provide gameplay video, audio, controller actions, and game event annotations aligned with over 180 hours
+                of fMRI responses from six subjects. Participants will build encoding models that predict brain responses
+                during gameplay.</p>
+                <p class="about-join"><a href="#signup">Join our mailing list</a> to receive the launch announcement,
+                challenge data, and Development Kit links.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Challenge games -->
+    <section class="section pre-games" id="games">
+        <div class="section-inner">
+            <h2 class="h2">Challenge games</h2>
+            <ul class="catalog">
+                <li class="cat-item">
+                    <div class="cat-shot"><img src="img/games/cat_mario_w1l1.png" alt="Super Mario Bros. gameplay in World 1-1: Mario stands on a row of bricks and ? blocks, a Goomba walks below" width="672" height="378" loading="lazy"></div>
+                    <h3>Super Mario Bros.</h3>
+                </li>
+                <li class="cat-item">
+                    <div class="cat-shot"><img src="img/games/cat_mariostars_w1l1.png" alt="Super Mario All-Stars gameplay at the same spot in World 1-1, with remade graphics: Mario stands on a row of bricks and ? blocks, a Goomba walks below" width="672" height="378" loading="lazy"></div>
+                    <h3>Super Mario All-Stars</h3>
+                </li>
+                <li class="cat-item">
+                    <div class="cat-shot"><img src="img/games/cat_mario3.png" alt="Super Mario Bros. 3 gameplay: Mario jumps past a Piranha Plant in a pipe" width="720" height="405" loading="lazy"></div>
+                    <h3>Super Mario Bros. 3</h3>
+                </li>
+                <li class="cat-item">
+                    <div class="cat-shot"><img src="img/games/cat_shinobi.png" alt="Shinobi III gameplay: the ninja jumps through a forest toward an enemy" width="640" height="360" loading="lazy"></div>
+                    <h3>Shinobi III: Return of the Ninja Master</h3>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Prizes and sponsor -->
+    <section class="section" id="prizes">
+        <div class="section-inner dates-prizes">
+            <div class="prizes-col">
+                <h2 class="h2 col-title">Prizes</h2>
+                <p class="prize-grand"><strong>The Algonauts Challenge 2027 Grand Prize</strong> sponsored by
+                <a href="https://karavela.ai/en" target="_blank" rel="noopener">Karavela</a></p>
+                <ol class="podium">
+                    <li class="pd pd--1"><span class="px-icon pd-medal" data-px="medal"></span><span class="pd-rank">1st<span class="sr-only"> place</span></span><span class="pd-amount">€7,500</span></li>
+                    <li class="pd pd--2"><span class="px-icon pd-medal" data-px="medal"></span><span class="pd-rank">2nd<span class="sr-only"> place</span></span><span class="pd-amount">€4,500</span></li>
+                    <li class="pd pd--3"><span class="px-icon pd-medal" data-px="medal"></span><span class="pd-rank">3rd<span class="sr-only"> place</span></span><span class="pd-amount">€3,000</span></li>
+                </ol>
+                <p class="prize-note">Each of the top three teams also receives €1,500 travel reimbursement and is invited to
+                present at CCN 2027. Prize amounts are still being finalized.</p>
+            </div>
+
+            <!-- Sponsor -->
+            <div class="sponsors-col" id="sponsors">
+                <h2 class="h2 col-title">Sponsor</h2>
+                <p class="orgs-note">We thank our sponsor for supporting the 2027 challenge.</p>
+                <ul class="sponsor-mat">
+                    <li><a href="https://karavela.ai/en" target="_blank" rel="noopener"><img class="sp-karavela" src="img/sponsors/karavela_logo.svg" alt="Karavela" width="1538" height="258"></a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team -->
+    <section class="section" id="team">
+        <div class="section-inner">
+            <div class="section-title">
+                <h2>Team</h2>
+                <p>The people behind the 2027 challenge.</p>
+            </div>
+            <div class="team-grid team-grid--lead">
+                <a href="https://toastydom.github.io/" target="_blank" rel="noopener" class="team-card team-card--lead">
+                    <span class="team-photo"><img src="img/team/domenic_2.png" alt="Domenic Bersch" loading="lazy"></span>
+                    <span class="team-name">Domenic Bersch</span>
+                    <span class="team-aff">Goethe University Frankfurt</span>
+                </a>
+                <a href="https://www.alegifford.com/" target="_blank" rel="noopener" class="team-card team-card--lead">
+                    <span class="team-photo"><img src="img/team/ale.png" alt="Alessandro Gifford" loading="lazy"></span>
+                    <span class="team-name">Alessandro Gifford</span>
+                    <span class="team-aff">Freie Universität Berlin</span>
+                </a>
+            </div>
+            <div class="team-grid">
+                <a href="https://simexp.github.io" target="_blank" rel="noopener" class="team-card">
+                    <span class="team-photo"><img src="img/team/marie.png" alt="Marie St-Laurent" loading="lazy"></span>
+                    <span class="team-name">Marie St-Laurent</span><span class="team-aff">CRIUGM</span>
+                </a>
+                <a href="https://github.com/bpinsard" target="_blank" rel="noopener" class="team-card">
+                    <span class="team-photo"><img src="img/team/basile.jpg" alt="Basile Pinsard" loading="lazy"></span>
+                    <span class="team-name">Basile Pinsard</span><span class="team-aff">CRIUGM</span>
+                </a>
+                <a href="https://scholar.google.com/citations?user=2K-2LacAAAAJ&amp;hl=fr" target="_blank" rel="noopener" class="team-card">
+                    <span class="team-photo"><img src="img/team/yann.jpg" alt="Yann Harel" loading="lazy"></span>
+                    <span class="team-name">Yann Harel</span><span class="team-aff">Boston College</span>
+                </a>
+                <a href="https://simexp.github.io" target="_blank" rel="noopener" class="team-card">
+                    <span class="team-photo"><img src="img/team/julie.png" alt="Julie Boyle" loading="lazy"></span>
+                    <span class="team-name">Julie Boyle</span><span class="team-aff">Université de Montréal</span>
+                </a>
+                <a href="https://simexp.github.io" target="_blank" rel="noopener" class="team-card">
+                    <span class="team-photo"><img src="img/team/lune.jpeg" alt="Lune Bellec" loading="lazy"></span>
+                    <span class="team-name">Lune Bellec</span><span class="team-aff">Université de Montréal</span>
+                </a>
+                <a href="http://olivalab.mit.edu/" target="_blank" rel="noopener" class="team-card">
+                    <span class="team-photo"><img src="img/team/aude.jpg" alt="Aude Oliva" loading="lazy"></span>
+                    <span class="team-name">Aude Oliva</span><span class="team-aff">Massachusetts Institute of Technology</span>
+                </a>
+                <a href="http://www.cvai.cs.uni-frankfurt.de/" target="_blank" rel="noopener" class="team-card">
+                    <span class="team-photo"><img src="img/team/gemma_new.png" alt="Gemma Roig" loading="lazy"></span>
+                    <span class="team-name">Gemma Roig</span><span class="team-aff">Goethe University Frankfurt</span>
+                </a>
+                <a href="https://www.ewi-psy.fu-berlin.de/en/einrichtungen/arbeitsbereiche/neural_dyn_of_vis_cog/index.html" target="_blank" rel="noopener" class="team-card">
+                    <span class="team-photo"><img src="img/team/radek.png" alt="Radoslaw Cichy" loading="lazy"></span>
+                    <span class="team-name">Radoslaw Cichy</span><span class="team-aff">Freie Universität Berlin</span>
+                </a>
+            </div>
+
+            <!-- Organizing institutions and groups -->
+            <div class="orgs">
+                <h3>Organizing institutions and groups</h3>
+                <ul class="org-row">
+                    <li><a class="org" href="https://www.cvai.cs.uni-frankfurt.de/" target="_blank" rel="noopener">
+                        <span class="org-tile"><img class="org-cvai" src="img/initiatives/CVAI.png" alt="Computational Vision &amp; Artificial Intelligence (CVAI), Goethe University Frankfurt" width="124" height="146" loading="lazy"></span>
+                        <span class="org-name" aria-hidden="true">CVAI</span></a></li>
+                    <li><a class="org" href="https://www.ewi-psy.fu-berlin.de/en/psychologie/arbeitsbereiche/neural_dyn_of_vis_cog/index.html" target="_blank" rel="noopener">
+                        <span class="org-tile"><img class="org-fu" src="img/initiatives/fu_berlin.png" alt="Freie Universität Berlin" width="736" height="314" loading="lazy"></span>
+                        <span class="org-name" aria-hidden="true">Freie Universität Berlin</span></a></li>
+                    <li><a class="org" href="https://www.uni-frankfurt.de/en" target="_blank" rel="noopener">
+                        <span class="org-tile"><img class="org-goethe" src="img/initiatives/Goethe.png" alt="Goethe University Frankfurt" width="3840" height="2093" loading="lazy"></span>
+                        <span class="org-name" aria-hidden="true">Goethe University Frankfurt</span></a></li>
+                    <li><a class="org" href="https://www.umontreal.ca/en/" target="_blank" rel="noopener">
+                        <span class="org-tile"><img class="org-udem" src="img/initiatives/udem.png" alt="Université de Montréal" width="1786" height="692" loading="lazy"></span>
+                        <span class="org-name" aria-hidden="true">Université de Montréal</span></a></li>
+                    <li><a class="org" href="https://docs.cneuromod.ca/" target="_blank" rel="noopener">
+                        <span class="org-tile"><img class="org-cneuromod" src="img/initiatives/CneuroMod.png" alt="Courtois NeuroMod Project (CNeuroMod)" width="474" height="106" loading="lazy"></span>
+                        <span class="org-name" aria-hidden="true">CNeuroMod</span></a></li>
+                    <li><a class="org" href="https://mitibm.mit.edu/" target="_blank" rel="noopener">
+                        <span class="org-tile"><img class="org-mitibm" src="img/logos/logo_mitibm.png" alt="MIT-IBM Watson AI Lab" width="656" height="654" loading="lazy"></span>
+                        <span class="org-name" aria-hidden="true">MIT-IBM Watson AI Lab</span></a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stay updated -->
+    <section class="section" id="signup">
+        <div class="section-inner">
+            <div class="section-title">
+                <h2>Stay Updated</h2>
+            </div>
+            <div class="signup-frame">
+                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSckFheQH88lZ5q_WxoAwn2WJs_nVs7NhITD7ZBsmSGFAuD2-Q/viewform?embedded=true"
+                    width="100%" height="700" loading="lazy" title="Algonauts Project mailing list signup">Loading…</iframe>
+            </div>
+            <div class="social">
+                <p>You can also follow us on social media:</p>
+                <div class="social-logos">
+                    <a href="https://bsky.app/profile/algonautsproject.bsky.social" target="_blank" rel="noopener"><img src="img/logos/bluesky_logo.png" alt="">Bluesky</a>
+                    <a href="https://x.com/AlgonautsProj" target="_blank" rel="noopener"><img src="img/logos/x_logo.png" alt="">X</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="pixel-divider" aria-hidden="true"></div>
+    <footer class="footer">
+        <div class="footer-inner">
+            <div>
+                <ul class="footer-links">
+                    <li><a href="https://algonautsproject.com/">The Algonauts Project</a></li>
+                    <li><a href="https://algonautsproject.com/2025/archive.html">Challenge Archive</a></li>
+                    <li><a href="mailto:algonauts.mit@gmail.com">Contact</a></li>
+                </ul>
+                <p class="footer-copy">&copy; 2026 The Algonauts Project. All rights reserved.</p>
+            </div>
+            <div class="footer-partners">
+                <a href="https://www.cneuromod.ca/" target="_blank" rel="noopener"><img src="img/CneuroMod.png" alt="CNeuroMod"></a>
+                <a href="http://2027.ccneuro.org/" target="_blank" rel="noopener"><img src="img/logos/ccn_logo.png" alt="CCN"></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/draft.js"></script>
+</body>
+</html>

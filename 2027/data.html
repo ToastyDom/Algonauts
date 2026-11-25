@@ -1,15 +1,22 @@
 <!doctype html>
 <html lang="en">
 <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VCQ9D4SNB4"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-VCQ9D4SNB4');
+    </script>
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Challenge Data – Algonauts Project 2027</title>
     <meta name="description" content="The Algonauts Project 2027 challenge data: gameplay video, audio, controller actions, game events and fMRI responses from the Courtois NeuroMod Project.">
     <meta name="author" content="The Algonauts Project">
-    <meta name="robots" content="noindex, nofollow">
-    <!-- Colour theme before first paint: ?theme= (carried by links between the draft pages), else the stored
-         choice, else dark. The URL parameter is removed from the address bar again. -->
-    <script>(function(){var m=null,q=/[?&]theme=(light|dark)/.exec(location.search);if(q){m=q[1];try{localStorage.setItem('ap27-theme',m);}catch(e){}try{history.replaceState(null,'',location.pathname+location.hash);}catch(e){}}if(!m){try{m=localStorage.getItem('ap27-theme');}catch(e){}}document.documentElement.setAttribute('data-theme',m==='light'?'light':'dark');})();</script>
+    <!-- Colour theme -->
+    <script>(function(){var r=document.documentElement,m=null,q=/[?&]theme=(light|dark|system)/.exec(location.search);if(q){m=q[1];try{if(m==='system')localStorage.removeItem('ap27-theme');else localStorage.setItem('ap27-theme',m);}catch(e){}try{history.replaceState(null,'',location.pathname+location.hash);}catch(e){}}else{try{m=localStorage.getItem('ap27-theme');}catch(e){}}if(m!=='light'&&m!=='dark')m='system';var t=m!=='system'?m:(window.matchMedia&&matchMedia('(prefers-color-scheme: light)').matches?'light':'dark');r.setAttribute('data-theme',t);r.setAttribute('data-theme-pref',m);})();</script>
     <link rel="icon" id="favicon" data-base="img/logos/" type="image/png" href="img/logos/logo_icon_light.png" sizes="32x32">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -34,7 +41,8 @@
                 <li><a href="index.html#signup">Stay Updated</a></li>
                 <li><a href="https://algonautsproject.com/2025/archive.html">Archive</a></li>
             </ul>
-            <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch colour theme">
+            <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Colour theme">
+                <svg class="ti ti-system" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4.5" width="18" height="12" rx="1.5"/><path d="M8.5 20h7M12 16.5V20"/></svg>
                 <svg class="ti ti-light" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2.5M12 19v2.5M2.5 12H5M19 12h2.5M5.3 5.3l1.8 1.8M16.9 16.9l1.8 1.8M5.3 18.7l1.8-1.8M16.9 7.1l1.8-1.8"/></svg>
                 <svg class="ti ti-dark" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a7 7 0 0 0 10.5 10.5z"/></svg>
             </button>
@@ -91,7 +99,6 @@
             <div class="hud-item"><span class="hud-k">Subjects</span><span class="hud-v">6</span></div>
             <div class="hud-item"><span class="hud-k">Brain parcels</span><span class="hud-v">1,134</span></div>
             <div class="hud-item"><span class="hud-k">Sampling (TR)</span><span class="hud-v">1.49 s</span></div>
-            <!-- Totals from the current paper: approximately 174 h gameplay (144 h training, 30 h ID testing), 212.5 h recorded fMRI. -->
             <p class="hud-note">The four challenge games contain approximately 174 hours of gameplay, with about 144 hours for model training and 30 hours for ID testing. The 212.5 hours of fMRI include periods outside active gameplay, such as loading screens and fixation periods. For ID and OOD testing, participants predict only fMRI responses corresponding to gameplay. Six subjects contribute data, and five are tested.</p>
         </div>
     </div>
@@ -113,10 +120,7 @@
                 subset with <span class="subj">sub-01</span> used by the Development Kit.</li>
                 <li>Follow the <a href="challenge.html#baseline">Development Kit</a> to load, align and model the data.</li>
             </ol>
-            <!-- Optional external training data (linked from Challenge Details → Rules). Documentation links only;
-                 these datasets are NOT part of the model training games or of the ID/OOD test sets.
-                 TODO: access link for the Friends and Movie10 time series extracted with the CNeuroMod 2026 atlas;
-                 add it only once confirmed, as a separate, clearly labelled link. -->
+            <!-- Optional external training data -->
             <p class="access-note" id="external-data"><strong>Optional external training data.</strong> Participants may
             also train on external data, for example the CNeuroMod
             <a href="https://docs.cneuromod.ca/datasets/friends.html" target="_blank" rel="noopener">Friends</a> and
@@ -139,12 +143,7 @@
     <!-- ===================== Games & subjects ===================== -->
     <section class="panel" id="games" role="tabpanel" aria-labelledby="tab-games">
         <div class="panel-inner">
-            <!-- Games (2026-11-16): the three model training games are released in full (gameplay + fMRI, all levels);
-                 the Super Mario Bros. remake from the Super Mario All-Stars collection is the in-distribution (ID) test game (gameplay
-                 released, fMRI hidden); the OOD games stay hidden until the Generalization Phase. The ID and OOD rows
-                 share one shape: tile on the left (aligned with the catalogue's first column), text on the right.
-                 The SMB and All-Stars tiles show the same spot of World 1-1 (sub-01; SMB ses-011 rep-000 at ~6.93 s,
-                 All-Stars ses-001 rep-000 at ~6.57 s), cropped to the same 224×126 window and scaled 3×. -->
+            <!-- Model training games -->
             <section class="games" id="training-games" aria-labelledby="games-title">
                 <h2 id="games-title">Model training games</h2>
                 <p class="games-intro">We release gameplay data and the corresponding fMRI responses for all levels of three
@@ -182,8 +181,7 @@
                     </div>
                 </section>
 
-                <!-- OOD games (hidden until the Generalization Phase); no game count implied.
-                     "Unseen" is avoided on purpose: the subjects did play these games; they are hidden from participants. -->
+                <!-- OOD games -->
                 <section class="test-game" id="ood-games" aria-labelledby="ood-games-title">
                     <h2 id="ood-games-title">OOD games</h2>
                     <div class="cat-shot cat-shot--hidden"><img src="img/sprites/question_block.png" alt="" width="48" height="48"></div>
@@ -198,7 +196,7 @@
                 </section>
             </div>
 
-            <!-- Subjects: model training games first, then the ID test game (All-Stars) after a small gap -->
+            <!-- Subjects -->
             <div class="block-rule coverage-wrap" id="subjects">
                 <div class="prose">
                     <h2>Subjects</h2>
@@ -221,7 +219,7 @@
                 </div>
             </div>
 
-            <!-- Figure 2 as optional detail -->
+            <!-- Figure 2 -->
             <details class="optional" id="coverage-figure">
                 <summary>
                     <span><span class="s-t">Dataset coverage figure</span><span class="s-d">Figure 2 of the paper: hours, levels, attempts, fMRI hours per subject, controller use and level exposure</span></span>
@@ -248,7 +246,7 @@
                 <p>Video and audio document the visual and auditory stimulation presented to the subjects. Controller action annotations describe button presses and holds, while game event annotations identify events such as collecting items, taking damage, defeating enemies, and completing levels. The events table for each fMRI run contains timestamped controller actions and game events. The example below aligns three video frames with annotations from the same gameplay recording.</p>
             </div>
 
-            <!-- Real aligned example: frames from the recording, values from its events table -->
+            <!-- Gameplay example -->
             <div class="example">
                 <div class="example-head">
                     <h3>Mario stomps his first Goomba</h3>
@@ -269,7 +267,7 @@
                     </figure></li>
                 </ul>
 
-<!-- Timeline: wide version (tablet/desktop) and a narrow version for phones with the labels above each track, so they stay legible -->
+<!-- Timeline: wide and narrow versions -->
 <svg class="ex-timeline ex-timeline--wide" viewBox="0 0 640 218" role="img" aria-labelledby="ex-tl-title ex-tl-desc">
 <title id="ex-tl-title">Annotations around the first Goomba stomp</title>
 <desc id="ex-tl-desc">Timeline from 8.3 to 10.2 seconds into the recording. Right and Run are held from 8.60 and 8.50 seconds onward. Jump is held from 9.02 to 9.33 seconds. A Goomba is on screen until 10.10 seconds. The stomp is annotated at 9.75 seconds. Frames A, B and C are at 8.90, 9.40 and 9.75 seconds.</desc>
@@ -344,13 +342,12 @@
 </svg>
                 <p class="ex-legend"><span class="l-a">Controller action held</span><span class="l-e">Sustained game event</span><span class="l-i">Instantaneous game event</span><span>A–C: frames above · seconds into the recording</span></p>
 
-<!-- Raw events-table rows behind the example: optional, collapsed by default -->
+<!-- Source rows -->
                 <details class="optional optional--inline" id="source-rows">
                     <summary>
                         <span><span class="s-t">View source rows</span><span class="s-d">The events-table rows behind this example</span></span>
                         <span class="s-i"><span class="s-show">Show</span><span class="s-hide">Hide</span></span>
                     </summary>
-<!-- Events table excerpt: a table styled like a code block; on phones each row stacks (column names from data-k) -->
 <div class="codeblock tsv-block">
 <p class="c"># sub-01_ses-001_task-mario_run-01_desc-annotated_events.tsv (rows for this moment; onsets from the start of the run)</p>
 <table class="tsv">
@@ -370,7 +367,7 @@
                 </details>
             </div>
 
-            <!-- Compact inventory of modalities (no rule: the disclosure above already ends with one) -->
+            <!-- Modalities -->
             <div class="block">
                 <h2>Gameplay data and timing</h2>
                 <dl class="dl">
@@ -391,7 +388,7 @@
                 </dl>
             </div>
 
-            <!-- Optional website-only figure (no longer in the revised paper, which has Figures 1 and 2 only) -->
+            <!-- Gameplay features figure -->
             <details class="optional" id="feature-figure">
                 <summary>
                     <span><span class="s-t">Gameplay features across the four games</span><span class="s-d">Optional figure: visual, audio, controller and game-event features per game</span></span>
