@@ -146,7 +146,7 @@
             <!-- Model training games -->
             <section class="games" id="training-games" aria-labelledby="games-title">
                 <h2 id="games-title">Model training games</h2>
-                <p class="games-intro">We release gameplay data and the corresponding fMRI responses for all levels of three
+                <p class="games-intro">We release gameplay data and the corresponding fMRI responses for all recorded levels of three
                 games. Super Mario Bros. and Super Mario Bros. 3 provide related environments with differences in visual
                 appearance, level design and game mechanics. Shinobi III differs more substantially in its visual content,
                 actions, event structure and behavioral demands.</p>
@@ -222,16 +222,16 @@
             <!-- Figure 2 -->
             <details class="optional" id="coverage-figure">
                 <summary>
-                    <span><span class="s-t">Dataset coverage figure</span><span class="s-d">Figure 2 of the paper: hours, levels, attempts, fMRI hours per subject, controller use and level exposure</span></span>
+                    <span><span class="s-t">Dataset coverage figure</span><span class="s-d">Levels, attempts, subject coverage and controller use. The image shows earlier data totals.</span></span>
                     <span class="s-i"><span class="s-show">Show</span><span class="s-hide">Hide</span></span>
                 </summary>
                 <figure class="figure">
                     <a class="figure-mat" href="img/fig2_dataset_overview.png" target="_blank" rel="noopener">
-                        <img src="img/fig2_dataset_overview.png" alt="Figure 2: Scale and coverage of the gameplay and fMRI data. A: hours, levels, attempts, clear rate and annotation types per game. B: fMRI hours per subject and game. C: button presses per minute and annotated game events per game. D: level exposure across scanning sessions for sub-01." width="2560" height="1350" loading="lazy">
+                        <img src="img/fig2_dataset_overview.png" alt="Dataset coverage by game and subject, controller use and level exposure for sub-01. Panels A and B show earlier counts. The caption gives the current totals." width="2560" height="1350" loading="lazy">
                     </a>
-                    <figcaption><strong>Figure 2 | Scale and coverage of the data.</strong> (A) Hours, levels, attempts and
-                    annotation types per game. (B) fMRI hours per subject and game. (C) Button presses per minute and
-                    annotated game events. (D) Level exposure across scanning sessions for sub-01.
+                    <figcaption><strong>Figure 2 | Scale and coverage of the data.</strong> (A) Gameplay by game. (B) fMRI hours by subject and game.
+                    The counts in A and B differ from the paper’s text, which reports approximately 174 hours of gameplay, 212.5 hours of fMRI and 266 distinct game-event labels across the four games.
+                    (C) Button presses per minute and annotated game events. (D) Level exposure across scanning sessions for sub-01.
                     <br><a class="fig-open" href="img/fig2_dataset_overview.png" target="_blank" rel="noopener">Open full size &#8599;</a></figcaption>
                 </figure>
             </details>
@@ -372,8 +372,7 @@
                 <h2>Gameplay data and timing</h2>
                 <dl class="dl">
                     <dt>Video and audio</dt>
-                    <dd>One <code>.mp4</code> file per gameplay repetition, a single attempt at a level, at 60 frames per second.
-                    In Super Mario Bros. 3, each repetition corresponds to one life, so an attempt can span several recordings.</dd>
+                    <dd>One <code>.mp4</code> file per gameplay repetition at 60 frames per second. A repetition is one attempt at a level in Super Mario Bros., Super Mario All-Stars and Shinobi III. In Super Mario Bros. 3, each repetition corresponds to one life, so an attempt can span several recordings.</dd>
                     <dt>Controller actions</dt>
                     <dd>Button presses and their durations, labeled <code>Action/Right</code>,
                     <code>Action/Jump</code>, <code>Action/Attack</code>, …</dd>
@@ -399,7 +398,7 @@
                         <img src="img/fig3_gameplay_features.png" alt="Gameplay features across the four games: PCA projections of video and audio features per level, controller use, and a map of game-event description embeddings." width="2560" height="750" loading="lazy">
                     </a>
                     <figcaption><strong>Gameplay features across the four games.</strong> (A) Visual and (B) audio
-                    features per level of sub-01, projected onto two principal components. (C) Controller use across all
+                    features per level of sub-01, projected onto two principal components. Panel A is labeled SlowFast R50. The Development Kit uses Slow R50 for the challenge baseline. (C) Controller use across all
                     subjects. (D) Sentence embeddings of the game-event descriptions. Proximity in these projections does not
                     by itself establish that neural predictions transfer between games.
                     <br><a class="fig-open" href="img/fig3_gameplay_features.png" target="_blank" rel="noopener">Open full size &#8599;</a></figcaption>
@@ -413,14 +412,14 @@
         <div class="panel-inner">
             <div class="prose">
                 <h2>fMRI responses</h2>
-                <p>We provide functional magnetic resonance imaging (fMRI) responses recorded during gameplay. The blood oxygenation level dependent (BOLD) signal measures brain activity indirectly through changes in blood oxygenation. The hemodynamic response typically peaks about 5–6 seconds after a brief neural event.</p>
+                <p>We provide functional magnetic resonance imaging (fMRI) responses recorded during gameplay. The blood-oxygen-level-dependent (BOLD) signal measures brain activity indirectly through changes in blood oxygenation. The hemodynamic response typically peaks about 5–6 seconds after a brief neural event.</p>
                 <p>The neural data were derived from preprocessed BOLD images in MNI template space using the <a href="https://docs.cneuromod.ca/contents/timeseries.html#code" target="_blank" rel="noopener">CNeuroMod time
                 series extraction pipeline</a>. The voxel time series were denoised for motion, tissue and global signal
                 contributions and slow drift, smoothed with a 5 mm FWHM kernel and standardized within each run, then
                 averaged within the 1,134 parcels of the CNeuroMod 2026 atlas.</p>
             </div>
             <dl class="dl block">
-                <dt>Format</dt><dd>One <code>.h5</code> file per subject and game, with one array per fMRI run</dd>
+                <dt>Format</dt><dd>One <code>.h5</code> file per subject and model training game they played, with one array per fMRI run</dd>
                 <dt>Run array</dt><dd><code>(N samples, 1134 parcels)</code>, one sample every 1.49 seconds (TR)</dd>
                 <dt>Space</dt><dd>MNI152NLin2009cAsym</dd>
                 <dt>Atlas</dt><dd><a href="https://docs.cneuromod.ca/contents/timeseries.html#file-details" target="_blank" rel="noopener">CNeuroMod 2026 atlas</a> with cortical, subcortical and cerebellar parcels, in the shared <code>atlases/</code> folder</dd>

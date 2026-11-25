@@ -13,7 +13,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>The Algonauts Project 2027 Challenge</title>
-    <meta name="description" content="The Algonauts Project 2027 Challenge: How the Human Brain Makes Sense of Video Games. Build encoding models that predict fMRI responses during video game play and generalize within and across games.">
+    <meta name="description" content="The Algonauts Project 2027 Challenge: How the Human Brain Makes Sense of Video Games. Build encoding models that predict fMRI responses during gameplay and generalize across games.">
     <meta name="author" content="The Algonauts Project">
     <!-- Colour theme -->
     <script>(function(){var r=document.documentElement,m=null,q=/[?&]theme=(light|dark|system)/.exec(location.search);if(q){m=q[1];try{if(m==='system')localStorage.removeItem('ap27-theme');else localStorage.setItem('ap27-theme',m);}catch(e){}try{history.replaceState(null,'',location.pathname+location.hash);}catch(e){}}else{try{m=localStorage.getItem('ap27-theme');}catch(e){}}if(m!=='light'&&m!=='dark')m='system';var t=m!=='system'?m:(window.matchMedia&&matchMedia('(prefers-color-scheme: light)').matches?'light':'dark');r.setAttribute('data-theme',t);r.setAttribute('data-theme-pref',m);})();</script>
@@ -74,7 +74,7 @@
             <h1>The Algonauts Project 2027 Challenge</h1>
             <p class="tagline">How the Human Brain Makes Sense of Video Games</p>
             <p class="launch-badge">Launching <strong>December 14, 2026</strong></p>
-            <p class="lead">Build encoding models that predict the fMRI responses of the person playing a video game, and test how well they generalize within and across games.</p>
+            <p class="lead">Build encoding models that predict the fMRI responses of the person playing a video game, and test how well they generalize across games.</p>
             <div class="btn-row">
                 <a href="#" class="btn btn-primary">Challenge Paper</a><!-- TODO: paper link -->
                 <a href="#" class="btn btn-ghost">Development Kit</a><!-- TODO: Colab link -->
@@ -137,8 +137,8 @@
                 <ul class="news-list">
                     <li>
                         <time datetime="2026-11">Nov 2026</time>
-                        <p><strong>The Algonauts Project 2027 Challenge will launch at the December 14, 2026.</strong> The challenge paper,
-                        Development Kit and challenge data will be released at launch. <a href="#signup">Join our mailing
+                        <p><strong>The Algonauts Project 2027 Challenge will launch on December 14, 2026.</strong> The challenge paper,
+                        Development Kit and Development Phase data will be released at launch. <a href="#signup">Join our mailing
                         list</a> to be notified.</p>
                     </li>
                     <li>
@@ -200,7 +200,7 @@
                     states, learns rules, and responds to prediction errors. The 2027 challenge brings these research
                     directions together.</p>
                     <p>In collaboration with the <a href="https://www.cneuromod.ca/" target="_blank" rel="noopener">Courtois
-                    NeuroMod Project (CNeuroMod)</a>, we release gameplay data (video, audio, controller actions, and game event annotations) aligned with functional magnetic resonance imaging (fMRI) measurements. We ask teams to develop encoding models that predict brain activity during gameplay and generalize within and across games. Performance on out-of-distribution (OOD) games, kept hidden until the final phase, determines the final challenge ranking.</p>
+                    NeuroMod Project (CNeuroMod)</a>, we release gameplay data (video, audio, controller actions, and game event annotations) aligned with functional magnetic resonance imaging (fMRI) measurements. We ask teams to develop encoding models that predict brain activity during gameplay. We test these models on the Super Mario Bros. remake in Super Mario All-Stars for in-distribution (ID) generalization and on hidden games for out-of-distribution (OOD) generalization. Only prediction accuracy on the OOD games determines the final ranking.</p>
                     <div class="btn-row">
                         <a href="challenge.html" class="btn btn-primary">Challenge details &rarr;</a>
                     </div>
@@ -255,10 +255,10 @@
                 <table class="dates-table">
                     <caption class="sr-only">Important dates of the Algonauts Project 2027 challenge</caption>
                     <tbody>
-                        <tr><th scope="row">Development Phase</th><td><time datetime="2026-12-14">Dec 14, 2026</time> – <time datetime="2027-06-20">Jun 20, 2027</time><span class="when"></span></td></tr>
-                        <tr><th scope="row">Generalization Phase</th><td><time datetime="2027-06-21">Jun 21</time> – <time datetime="2027-06-27">Jun 27, 2027</time><span class="when"></span></td></tr>
-                        <tr><th scope="row">Report and code deadline</th><td><time datetime="2027-07-09">Jul 9, 2027</time><span class="when"></span></td></tr>
-                        <tr><th scope="row">Results announced</th><td><time datetime="2027-07-20">Jul 20, 2027</time><span class="when"></span></td></tr>
+                        <tr><th scope="row">Development Phase</th><td><time datetime="2026-12-14">Dec 14, 2026</time> – <time datetime="2027-06-13">Jun 13, 2027</time><span class="when"></span></td></tr>
+                        <tr><th scope="row">Generalization Phase</th><td><time datetime="2027-06-14">Jun 14</time> – <time datetime="2027-06-20">Jun 20, 2027</time><span class="when"></span></td></tr>
+                        <tr><th scope="row">Report and code deadline</th><td><time datetime="2027-06-30">Jun 30, 2027</time><span class="when"></span></td></tr>
+                        <tr><th scope="row">Results announced</th><td><time datetime="2027-07-07">Jul 7, 2027</time><span class="when"></span></td></tr>
                         <tr><th scope="row">CCN 2027, Edinburgh</th><td><time datetime="2027-07-26">Jul 26–29, 2027</time></td></tr>
                     </tbody>
                 </table>
@@ -289,7 +289,7 @@
             <div>
                 <h2 class="h2 col-title">Cite</h2>
                 <p>If you use the resources provided for the Algonauts Project 2027 Challenge, please cite the following papers:</p>
-                <p class="cite">Bersch D, Gifford AT, St-Laurent M, Pinsard B, Harel Y, Boyle J, Bellec L, Oliva A, Roig G,
+                <p class="cite">Bersch D, Gifford A, St-Laurent M, Harel Y, Pinsard B, Boyle J, Oliva A, Bellec L, Roig G,
                 Cichy RM. The Algonauts Project 2027 Challenge: How the Human Brain Makes Sense of Video Games.
                 <em>Preprint link to be added.</em></p>
                 <p class="cite">CNeuroMod publication. <em>To be added.</em></p>
@@ -347,7 +347,7 @@
                     <span class="team-photo"><img src="img/team/lune.jpeg" alt="Lune Bellec" loading="lazy"></span>
                     <span class="team-name">Lune Bellec</span><span class="team-aff">Université de Montréal</span>
                 </a>
-                <a href="http://olivalab.mit.edu/" target="_blank" rel="noopener" class="team-card">
+                <a href="https://www.csail.mit.edu/person/aude-oliva" target="_blank" rel="noopener" class="team-card">
                     <span class="team-photo"><img src="img/team/aude.jpg" alt="Aude Oliva" loading="lazy"></span>
                     <span class="team-name">Aude Oliva</span><span class="team-aff">Massachusetts Institute of Technology</span>
                 </a>
