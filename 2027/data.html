@@ -69,7 +69,6 @@
         <div class="pixel-wave" aria-hidden="true"></div>
         <div class="page-head-inner">
             <div>
-                <nav class="crumbs" aria-label="Breadcrumb"><a href="index.html">2027 Challenge</a> / <span>Challenge Data</span></nav>
                 <h1>Challenge Data</h1>
                 <p class="lead">The Courtois NeuroMod Project recorded gameplay video, audio, controller actions, game events, and corresponding whole-brain fMRI responses while subjects played four retro video games.</p>
                 <div class="btn-row">
@@ -226,13 +225,16 @@
                     <span class="s-i"><span class="s-show">Show</span><span class="s-hide">Hide</span></span>
                 </summary>
                 <figure class="figure">
-                    <a class="figure-mat" href="img/fig2_dataset_overview.png" target="_blank" rel="noopener">
+                    <a class="figure-mat fig2-mat only-dark" href="img/Algonauts%202027%20dataset%20overview%20figure%20dark.png" target="_blank" rel="noopener">
+                        <img src="img/Algonauts%202027%20dataset%20overview%20figure%20dark.png" alt="Dataset coverage by game and subject, controller use and level exposure for sub-01. Panels A and B show earlier counts. The caption gives the current totals." width="2560" height="1350" loading="lazy">
+                    </a>
+                    <a class="figure-mat fig2-mat only-light" href="img/fig2_dataset_overview.png" target="_blank" rel="noopener">
                         <img src="img/fig2_dataset_overview.png" alt="Dataset coverage by game and subject, controller use and level exposure for sub-01. Panels A and B show earlier counts. The caption gives the current totals." width="2560" height="1350" loading="lazy">
                     </a>
                     <figcaption><strong>Figure 2 | Scale and coverage of the data.</strong> (A) Gameplay by game. (B) fMRI hours by subject and game.
                     The counts in A and B differ from the paper’s text, which reports approximately 174 hours of gameplay, 212.5 hours of fMRI and 266 distinct game-event labels across the four games.
                     (C) Button presses per minute and annotated game events. (D) Level exposure across scanning sessions for sub-01.
-                    <br><a class="fig-open" href="img/fig2_dataset_overview.png" target="_blank" rel="noopener">Open full size &#8599;</a></figcaption>
+                    <br><a class="fig-open only-dark" href="img/Algonauts%202027%20dataset%20overview%20figure%20dark.png" target="_blank" rel="noopener">Open full size &#8599;</a><a class="fig-open only-light" href="img/fig2_dataset_overview.png" target="_blank" rel="noopener">Open full size &#8599;</a></figcaption>
                 </figure>
             </details>
         </div>
@@ -386,24 +388,6 @@
                     data. Rows labelled <code>gym-retro_game</code> give each recording’s onset and duration.</dd>
                 </dl>
             </div>
-
-            <!-- Gameplay features figure -->
-            <details class="optional" id="feature-figure">
-                <summary>
-                    <span><span class="s-t">Gameplay features across the four games</span><span class="s-d">Optional figure: visual, audio, controller and game-event features per game</span></span>
-                    <span class="s-i"><span class="s-show">Show</span><span class="s-hide">Hide</span></span>
-                </summary>
-                <figure class="figure">
-                    <a class="figure-mat" href="img/fig3_gameplay_features.png" target="_blank" rel="noopener">
-                        <img src="img/fig3_gameplay_features.png" alt="Gameplay features across the four games: PCA projections of video and audio features per level, controller use, and a map of game-event description embeddings." width="2560" height="750" loading="lazy">
-                    </a>
-                    <figcaption><strong>Gameplay features across the four games.</strong> (A) Visual and (B) audio
-                    features per level of sub-01, projected onto two principal components. Panel A is labeled SlowFast R50. The Development Kit uses Slow R50 for the challenge baseline. (C) Controller use across all
-                    subjects. (D) Sentence embeddings of the game-event descriptions. Proximity in these projections does not
-                    by itself establish that neural predictions transfer between games.
-                    <br><a class="fig-open" href="img/fig3_gameplay_features.png" target="_blank" rel="noopener">Open full size &#8599;</a></figcaption>
-                </figure>
-            </details>
         </div>
     </section>
 

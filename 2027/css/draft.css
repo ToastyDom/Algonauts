@@ -28,6 +28,8 @@ html[data-theme="light"] :is(.hero, .page-head, .nav, .nav-overlay) {
     --tl-event:  #8f88b0;
     --logo-bg:   #f3f2f8;       /* logo cards */
     --logo-line: transparent;
+    --cal-dev:   #6c6880;
+    --cal-mark:  #f4f2fb;
 
     /* hero palette */
     --h-bg: #0a0616; --h-indigo: #2a1b6b; --h-violet: #6d3bd1; --h-magenta: #b13ad1;
@@ -70,6 +72,8 @@ html[data-theme="light"] {
     --tl-event:  #9a93bb;
     --logo-bg:   #fff;
     --logo-line: rgba(23, 15, 60, 0.10);
+    --cal-dev:   #a9a3b9;
+    --cal-mark:  #16112a;
 }
 /* Logos: colour version in the light theme, white version in the dark theme */
 .logo-w { display: none !important; }
@@ -309,10 +313,6 @@ body.menu-open { overflow: hidden; }
 /* Page header (sub pages) */
 .page-head { padding: calc(var(--nav-h) + clamp(40px, 6vw, 64px)) var(--gutter) clamp(40px, 6vw, 60px); }
 .page-head-inner { position: relative; z-index: 1; max-width: var(--maxw); margin: 0 auto; }
-.crumbs { font-size: .88rem; color: rgba(244, 242, 251, .75); margin-bottom: 14px; }
-.crumbs a { color: rgba(244, 242, 251, .75); }
-.crumbs a:hover { color: #fff; }
-.crumbs span { color: #fff; }
 .page-head h1 { font-size: clamp(2.2rem, 5vw, 3.4rem); font-weight: 800; letter-spacing: -1px; line-height: 1.08; }
 .page-head .lead { margin: 14px 0 0; max-width: 58ch; font-size: clamp(1.02rem, 1.7vw, 1.15rem); color: rgba(244, 242, 251, .92); }
 .page-head .btn-row { margin-top: 26px; }
@@ -333,10 +333,32 @@ body.menu-open { overflow: hidden; }
 .dates-strip-head { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; margin-bottom: 12px; }
 .dates-strip-head h2 { font-size: .8rem; font-weight: 700; letter-spacing: .6px; text-transform: uppercase; color: var(--text); }
 .dates-strip-head span { font-size: .82rem; color: var(--text-dim); }
-.dates-list { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 12px 24px; margin: 0; }
+.dates-list { display: grid; grid-template-columns: auto repeat(3, minmax(0, 1fr)) auto; gap: 12px 24px; margin: 0; }
 .dates-list > div { min-width: 0; border-left: 1px solid var(--line-2); padding-left: 12px; }
+.dates-list > div:first-child dd { white-space: nowrap; }
 .dates-list dt { font-size: .84rem; font-weight: 500; color: var(--text-dim); }
 .dates-list dd { margin: 2px 0 0; font-weight: 700; font-size: .96rem; color: var(--text); font-variant-numeric: tabular-nums; }
+.dates-list .dur { display: none; }
+
+/* Dates timeline (calendar scale) */
+.cal { position: relative; margin: 4px 0 18px; font-size: .7rem; line-height: 1; color: var(--text-dim); }
+.cal-dur, .cal-months { position: relative; height: 1em; }
+.cal-dur { margin-bottom: 6px; }
+.cal-dur span, .cal-months span { position: absolute; left: var(--x); transform: translateX(-50%); white-space: nowrap; }
+.cal-bar { position: relative; height: 6px; background: linear-gradient(var(--line-2), var(--line-2)) 0 50% / 100% 1px no-repeat; }
+.cal-bar > span { position: absolute; top: 0; bottom: 0; left: var(--s); width: calc(var(--e) - var(--s)); }
+.cal-dev { background: var(--cal-dev); }
+.cal-gen { background: var(--cal-mark); }
+.cal-ccn { box-shadow: inset 0 0 0 1.5px var(--cal-mark); }
+.cal-bar > .cal-pt { left: var(--x); width: 8px; height: 8px; top: -1px; margin-left: -4px; border-radius: 50%; background: var(--cal-mark); }
+.cal-months { margin-top: 6px; height: 1.6em; }
+.cal-months span { top: .5em; }
+.cal-months i { position: absolute; left: var(--x); top: -4px; width: 1px; height: 7px; background: var(--line-2); }
+.cal-key { display: inline-block; width: 14px; height: 6px; margin-right: 7px; vertical-align: .12em; }
+.cal-key--dev { background: var(--cal-dev); }
+.cal-key--gen { background: var(--cal-mark); width: 6px; }
+.cal-key--pt { width: 8px; height: 8px; vertical-align: .06em; border-radius: 50%; background: var(--cal-mark); }
+.cal-key--ccn { width: 9px; box-shadow: inset 0 0 0 1.5px var(--cal-mark); }
 
 /* ---------------------------------------------------------------------
    Sections
@@ -518,6 +540,11 @@ html[data-theme="light"] .pd--2 .pd-medal { --medal: #b9bfcb; }
 .figure figcaption { margin-top: 12px; color: var(--text-dim); font-size: .9rem; max-width: 96ch; }
 .figure figcaption strong { color: var(--text); }
 .fig-open { display: inline-block; margin-top: 6px; font-weight: 600; font-size: .9rem; }
+.fig1-full { max-width: 920px; }
+.fig1-full figcaption { max-width: none; }
+.fig1-mat.only-dark, .fig2-mat.only-dark { background: #2a2346; }
+/* Theme-specific versions of a figure */
+html[data-theme="light"] .only-dark, html:not([data-theme="light"]) .only-light { display: none !important; }
 
 /* Collapsible details */
 .optional { margin-top: clamp(36px, 5vw, 52px); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
@@ -803,7 +830,7 @@ html[data-theme="light"] .social-logos img { filter: brightness(0); opacity: .85
     .res-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     .pillars { grid-template-columns: repeat(2, minmax(0, 1fr)); row-gap: 28px; }
     .pillar:nth-child(3) { border-left: 0; padding-left: 0; }
-    .dates-list { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .dates-list { grid-template-columns: auto repeat(2, minmax(0, 1fr)); }
     /* still scene below desktop widths */
     .hero { padding-bottom: 164px; }
     .hero-stage { --u: 2px; --rx: 20px; }
@@ -854,9 +881,11 @@ html[data-theme="light"] .social-logos img { filter: brightness(0); opacity: .85
     .org-row li { width: calc(50% - 6px); max-width: 168px; }
     /* dates as compact label / date rows */
     .dates-list { grid-template-columns: 1fr; gap: 0; }
-    .dates-list > div { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; padding: 7px 0; border-left: 0; border-top: 1px solid var(--line); }
+    .dates-list > div { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; padding: 7px 0; border-left: 0; border-top: 1px solid var(--line); }
     .dates-list dt { font-size: .8rem; }
-    .dates-list dd { margin: 0; font-size: .86rem; text-align: right; white-space: nowrap; }
+    .dates-list dd { margin: 0; font-size: .84rem; text-align: right; white-space: nowrap; }
+    .dates-list .dur { display: inline-block; white-space: nowrap; }
+    .cal, .cal-key { display: none; }
     /* tabs wrap onto two rows, so every tab stays visible */
     .tabs { position: static; padding: 14px var(--gutter); }
     .tabs-inner { flex-wrap: wrap; gap: 8px; overflow: visible; }
