@@ -146,7 +146,8 @@ code { font-family: var(--font-mono); font-size: .86em; color: var(--text); back
 .theme-toggle svg { width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
 .theme-toggle .fill { fill: currentColor; stroke: none; }
 .theme-toggle .ti { display: none; }
-html:not([data-theme="light"]) .ti-light, html[data-theme="light"] .ti-dark { display: block; }   /* icon = theme you switch to */
+html:not([data-theme-pref="light"]):not([data-theme-pref="dark"]) .theme-toggle .ti-system,
+html[data-theme-pref="light"] .theme-toggle .ti-light, html[data-theme-pref="dark"] .theme-toggle .ti-dark { display: block; }   /* icon = current setting */
 /* Logo cards */
 :is(.org-tile, .fc-tile, .host-chip, .footer-partners a, .sponsor-mat li, .logo-tile) img { mix-blend-mode: multiply; }
 .nav-toggle { display: none; flex-direction: column; gap: 5px; background: none; border: 0; cursor: pointer; padding: 8px; position: relative; z-index: 110; }

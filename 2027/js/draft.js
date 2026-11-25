@@ -37,24 +37,39 @@
         if (mq.addEventListener) mq.addEventListener('change', update);
     }
 
-    /* ---------------- Colour theme (dark / light) ---------------- */
+    /* ---------------- Colour theme (system / light / dark) ---------------- */
     function initTheme() {
         var root = document.documentElement;
         var btn = document.getElementById('theme-toggle');
+        var sys = window.matchMedia ? window.matchMedia('(prefers-color-scheme: light)') : null;
+        var names = { system: 'System', light: 'Light', dark: 'Dark' };
+        var next = { system: 'light', light: 'dark', dark: 'system' };
+        var pref = root.getAttribute('data-theme-pref');
+        if (pref !== 'light' && pref !== 'dark') pref = 'system';
         function current() { return root.getAttribute('data-theme') === 'light' ? 'light' : 'dark'; }
-        function apply(mode) {
+        function apply() {
+            var mode = pref !== 'system' ? pref : (sys && sys.matches ? 'light' : 'dark');
             root.setAttribute('data-theme', mode);
+            root.setAttribute('data-theme-pref', pref);
             if (btn) {
-                var other = mode === 'light' ? 'dark' : 'light';
-                btn.setAttribute('aria-label', 'Switch to ' + other + ' theme');
-                btn.title = 'Switch to ' + other + ' theme';
+                var label = 'Colour theme: ' + names[pref] + ' (click for ' + names[next[pref]] + ')';
+                btn.setAttribute('aria-label', label);
+                btn.title = label;
             }
         }
-        apply(current());
+        apply();
+        if (sys) {
+            var follow = function () { if (pref === 'system') apply(); };
+            if (sys.addEventListener) sys.addEventListener('change', follow);
+            else if (sys.addListener) sys.addListener(follow);
+        }
         if (btn) btn.addEventListener('click', function () {
-            var mode = current() === 'light' ? 'dark' : 'light';
-            try { localStorage.setItem('ap27-theme', mode); } catch (e) {}
-            apply(mode);
+            pref = next[pref];
+            try {
+                if (pref === 'system') localStorage.removeItem('ap27-theme');
+                else localStorage.setItem('ap27-theme', pref);
+            } catch (err) {}
+            apply();
         });
         document.addEventListener('click', function (e) {
             var a = e.target.closest ? e.target.closest('a[href]') : null;
@@ -62,7 +77,7 @@
             var href = a.getAttribute('href');
             var m = /^((?:index|challenge|data)\.html)(\?[^#]*)?(#.*)?$/.exec(href);
             if (!m) return;
-            a.setAttribute('href', m[1] + '?theme=' + current() + (m[3] || ''));
+            a.setAttribute('href', m[1] + '?theme=' + (pref === 'system' ? 'system' : current()) + (m[3] || ''));
         }, true);
     }
 

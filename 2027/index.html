@@ -16,7 +16,7 @@
     <meta name="description" content="The Algonauts Project 2027 Challenge: How the Human Brain Makes Sense of Video Games. Launching December 14, 2026. Build encoding models that predict fMRI responses during video gameplay.">
     <meta name="author" content="The Algonauts Project">
     <!-- Colour theme -->
-    <script>(function(){var m=null,q=/[?&]theme=(light|dark)/.exec(location.search);if(q){m=q[1];try{localStorage.setItem('ap27-theme',m);}catch(e){}try{history.replaceState(null,'',location.pathname+location.hash);}catch(e){}}if(!m){try{m=localStorage.getItem('ap27-theme');}catch(e){}}document.documentElement.setAttribute('data-theme',m==='light'?'light':'dark');})();</script>
+    <script>(function(){var r=document.documentElement,m=null,q=/[?&]theme=(light|dark|system)/.exec(location.search);if(q){m=q[1];try{if(m==='system')localStorage.removeItem('ap27-theme');else localStorage.setItem('ap27-theme',m);}catch(e){}try{history.replaceState(null,'',location.pathname+location.hash);}catch(e){}}else{try{m=localStorage.getItem('ap27-theme');}catch(e){}}if(m!=='light'&&m!=='dark')m='system';var t=m!=='system'?m:(window.matchMedia&&matchMedia('(prefers-color-scheme: light)').matches?'light':'dark');r.setAttribute('data-theme',t);r.setAttribute('data-theme-pref',m);})();</script>
     <link rel="icon" id="favicon" data-base="img/logos/" type="image/png" href="img/logos/logo_icon_light.png" sizes="32x32">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -66,7 +66,8 @@
                 <li><a href="#signup">Stay Updated</a></li>
                 <li><a href="https://algonautsproject.com/2025/archive.html">Archive</a></li>
             </ul>
-            <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch colour theme">
+            <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Colour theme">
+                <svg class="ti ti-system" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4.5" width="18" height="12" rx="1.5"/><path d="M8.5 20h7M12 16.5V20"/></svg>
                 <svg class="ti ti-light" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2.5M12 19v2.5M2.5 12H5M19 12h2.5M5.3 5.3l1.8 1.8M16.9 16.9l1.8 1.8M5.3 18.7l1.8-1.8M16.9 7.1l1.8-1.8"/></svg>
                 <svg class="ti ti-dark" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a7 7 0 0 0 10.5 10.5z"/></svg>
             </button>
