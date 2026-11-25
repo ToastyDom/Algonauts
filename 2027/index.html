@@ -15,18 +15,14 @@
     <title>The Algonauts Project 2027 Challenge</title>
     <meta name="description" content="The Algonauts Project 2027 Challenge: How the Human Brain Makes Sense of Video Games. Launching December 14, 2026. Build encoding models that predict fMRI responses during video gameplay.">
     <meta name="author" content="The Algonauts Project">
-    <!-- PRE-RELEASE page (2026-11-23): one page announcing the launch date, games, prizes and sponsors. Built from the
-         2027/draft design (css/draft.css and js/draft.js are copies of the draft files; images under img/ use the
-         draft's layout). The previous announcement page is kept in index_announcement_backup.html. -->
-    <!-- Colour theme before first paint: ?theme=, else the stored choice, else dark. -->
-    <script>(function(){var m=null,q=/[?&]theme=(light|dark)/.exec(location.search);if(q){m=q[1];try{localStorage.setItem('ap27-theme',m);}catch(e){}try{history.replaceState(null,'',location.pathname+location.hash);}catch(e){}}if(!m){try{m=localStorage.getItem('ap27-theme');}catch(e){}}document.documentElement.setAttribute('data-theme',m==='light'?'light':'dark');})();</script>
+    <!-- Colour theme -->
+    <script>(function(){var r=document.documentElement,m=null,q=/[?&]theme=(light|dark|system)/.exec(location.search);if(q){m=q[1];try{if(m==='system')localStorage.removeItem('ap27-theme');else localStorage.setItem('ap27-theme',m);}catch(e){}try{history.replaceState(null,'',location.pathname+location.hash);}catch(e){}}else{try{m=localStorage.getItem('ap27-theme');}catch(e){}}if(m!=='light'&&m!=='dark')m='system';var t=m!=='system'?m:(window.matchMedia&&matchMedia('(prefers-color-scheme: light)').matches?'light':'dark');r.setAttribute('data-theme',t);r.setAttribute('data-theme-pref',m);})();</script>
     <link rel="icon" id="favicon" data-base="img/logos/" type="image/png" href="img/logos/logo_icon_light.png" sizes="32x32">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Press+Start+2P&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/draft.css">
     <style>
-        /* Pre-release page only (kept out of draft.css so that file stays a plain copy of the draft) */
         .pre-games .catalog { grid-template-columns: repeat(4, minmax(0, 1fr)); }
         @media (max-width: 759px) {
             .pre-games .catalog { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px 12px; }
@@ -41,6 +37,24 @@
         .sponsors-col .sponsor-mat li { flex: 1 1 0; min-width: 0; min-height: 150px; }
         @media (max-width: 640px) { .sponsors-col .sponsor-mat li { min-height: 112px; } }
         .sponsors-col .orgs-note { margin: 0 0 22px; color: var(--text-2); }
+        .org-tile .org-udem { height: 48px; }
+        @media (min-width: 961px) { .org-row li { width: calc((100% - 80px) / 6); max-width: 168px; } }
+        @media (min-width: 641px) and (max-width: 960px) { .org-row { max-width: 560px; margin: 0 auto; } }
+        .hero .soon { width: fit-content; max-width: 100%; margin: clamp(16px, 2.2vw, 20px) auto 0; font-size: clamp(1.15rem, 2.2vw, 1.45rem);
+            font-weight: 700; letter-spacing: .2px; line-height: 1.3; color: #7cf5ff;
+            background: linear-gradient(90deg, #7cf5ff, #ffb0f4); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+        .hero .soon + .btn-row { margin-top: clamp(22px, 3vw, 30px); }
+        /* Hero fills the screen */
+        .hero { min-height: 100vh; min-height: 100svh; }
+        /* Sponsor card stands on the podium floor */
+        @media (min-width: 961px) {
+            .dates-prizes { grid-template-rows: repeat(4, auto); row-gap: 0; }
+            .prizes-col, .sponsors-col { display: grid; grid-row: 1 / span 4; grid-template-rows: subgrid; }
+            .sponsors-col .sponsor-mat { align-self: end; }
+        }
+        /* Section backgrounds */
+        .section + .section { border-top: 0; }
+        #games, #team { background: var(--bg-band); }
     </style>
 </head>
 
@@ -55,12 +69,13 @@
                 <li><a href="#about">The Challenge</a></li>
                 <li><a href="#games">Games</a></li>
                 <li><a href="#prizes">Prizes</a></li>
-                <li><a href="#sponsors">Sponsors</a></li>
+                <li><a href="#sponsors">Sponsor</a></li>
                 <li><a href="#team">Team</a></li>
                 <li><a href="#signup">Stay Updated</a></li>
                 <li><a href="https://algonautsproject.com/2025/archive.html">Archive</a></li>
             </ul>
-            <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch colour theme">
+            <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Colour theme">
+                <svg class="ti ti-system" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4.5" width="18" height="12" rx="1.5"/><path d="M8.5 20h7M12 16.5V20"/></svg>
                 <svg class="ti ti-light" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2.5M12 19v2.5M2.5 12H5M19 12h2.5M5.3 5.3l1.8 1.8M16.9 16.9l1.8 1.8M5.3 18.7l1.8-1.8M16.9 7.1l1.8-1.8"/></svg>
                 <svg class="ti ti-dark" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a7 7 0 0 0 10.5 10.5z"/></svg>
             </button>
@@ -74,7 +89,7 @@
             <li><a href="#about">The Challenge</a></li>
             <li><a href="#games">Games</a></li>
             <li><a href="#prizes">Prizes</a></li>
-            <li><a href="#sponsors">Sponsors</a></li>
+            <li><a href="#sponsors">Sponsor</a></li>
             <li><a href="#team">Team</a></li>
             <li><a href="#signup">Stay Updated</a></li>
             <li><a href="https://algonautsproject.com/2025/archive.html">Archive</a></li>
@@ -92,16 +107,14 @@
             <p class="tagline">How the Human Brain Makes Sense of Video Games</p>
             <p class="launch-badge">Launching <strong>December 14, 2026</strong></p>
             <p class="lead">Build encoding models that predict the fMRI responses of subjects playing video games, and test how well they generalize within and across games.</p>
+            <p class="soon">More details coming soon.</p>
             <div class="btn-row">
                 <a href="#signup" class="btn btn-primary">Get notified at launch</a>
                 <a href="#games" class="btn btn-ghost">See the games</a>
             </div>
         </div>
 
-        <!-- Hero stage along the bottom edge: Mario runs in, bumps a ? block (a coin pops out),
-             lands and waits; the second ? block keeps flashing. Plays once; click the blocks
-             or Mario to replay. Still image on small screens and with reduced motion.
-             Sprites cut from the challenge recordings (sub-01). -->
+        <!-- Hero animation -->
         <div class="hero-stage play" id="hero-stage" aria-hidden="true">
             <div class="hs-ground"></div>
             <img class="hs-coin" src="img/sprites/coin.png" alt="" width="42" height="60">
@@ -125,7 +138,7 @@
         </div>
     </header>
 
-    <!-- The 2027 challenge: logo and partners left; a short introduction and the mailing-list invitation right -->
+    <!-- The 2027 Challenge -->
     <section class="section pre-about" id="about">
         <div class="section-inner news-grid">
             <div class="news-brand">
@@ -154,8 +167,7 @@
         </div>
     </section>
 
-    <!-- Challenge games: the four released games in one grid (All-Stars right after Super Mario Bros.), titles only (roles, level and attempt counts stay on
-         the full challenge site). The SMB and All-Stars tiles show the same spot of World 1-1. -->
+    <!-- Challenge games -->
     <section class="section pre-games" id="games">
         <div class="section-inner">
             <h2 class="h2">Challenge games</h2>
@@ -180,8 +192,7 @@
         </div>
     </section>
 
-    <!-- Prizes + Sponsors: two columns, prizes left. Prize amounts from the organizers' slides (2026-11-23), still
-         being finalized. Karavela (platinum sponsor) names the Grand Prize. Podium order on screen 2nd · 1st · 3rd. -->
+    <!-- Prizes and sponsor -->
     <section class="section" id="prizes">
         <div class="section-inner dates-prizes">
             <div class="prizes-col">
@@ -189,21 +200,20 @@
                 <p class="prize-grand"><strong>The Algonauts Challenge 2027 Grand Prize</strong> sponsored by
                 <a href="https://karavela.ai/en" target="_blank" rel="noopener">Karavela</a></p>
                 <ol class="podium">
-                    <li class="pd pd--1"><span class="px-icon pd-medal" data-px="medal"></span><span class="pd-rank">1st<span class="sr-only"> place</span></span><span class="pd-amount">€9,000</span></li>
-                    <li class="pd pd--2"><span class="px-icon pd-medal" data-px="medal"></span><span class="pd-rank">2nd<span class="sr-only"> place</span></span><span class="pd-amount">€5,500</span></li>
-                    <li class="pd pd--3"><span class="px-icon pd-medal" data-px="medal"></span><span class="pd-rank">3rd<span class="sr-only"> place</span></span><span class="pd-amount">€3,500</span></li>
+                    <li class="pd pd--1"><span class="px-icon pd-medal" data-px="medal"></span><span class="pd-rank">1st<span class="sr-only"> place</span></span><span class="pd-amount">€7,500</span></li>
+                    <li class="pd pd--2"><span class="px-icon pd-medal" data-px="medal"></span><span class="pd-rank">2nd<span class="sr-only"> place</span></span><span class="pd-amount">€4,500</span></li>
+                    <li class="pd pd--3"><span class="px-icon pd-medal" data-px="medal"></span><span class="pd-rank">3rd<span class="sr-only"> place</span></span><span class="pd-amount">€3,000</span></li>
                 </ol>
                 <p class="prize-note">Each of the top three teams also receives €1,500 travel reimbursement and is invited to
                 present at CCN 2027. Prize amounts are still being finalized.</p>
             </div>
 
-            <!-- Sponsors: Karavela (platinum) first; add one <li> per new sponsor (logos in img/sponsors/) -->
+            <!-- Sponsor -->
             <div class="sponsors-col" id="sponsors">
-                <h2 class="h2 col-title">Sponsors</h2>
-                <p class="orgs-note">We thank our sponsors for supporting the 2027 challenge.</p>
+                <h2 class="h2 col-title">Sponsor</h2>
+                <p class="orgs-note">We thank our sponsor for supporting the 2027 challenge.</p>
                 <ul class="sponsor-mat">
                     <li><a href="https://karavela.ai/en" target="_blank" rel="noopener"><img class="sp-karavela" src="img/sponsors/karavela_logo.svg" alt="Karavela" width="1538" height="258"></a></li>
-                    <li><a href="https://www.unique.quebec/" target="_blank" rel="noopener"><img class="sp-unique" src="img/sponsors/unique_logo_logo.png" alt="UNIQUE – Unifying Neuroscience and Artificial Intelligence, Québec" width="1174" height="1320"></a></li>
                 </ul>
             </div>
         </div>
@@ -263,7 +273,7 @@
                 </a>
             </div>
 
-            <!-- Organizing institutions and groups (as in the draft home page) -->
+            <!-- Organizing institutions and groups -->
             <div class="orgs">
                 <h3>Organizing institutions and groups</h3>
                 <ul class="org-row">
@@ -276,6 +286,9 @@
                     <li><a class="org" href="https://www.uni-frankfurt.de/en" target="_blank" rel="noopener">
                         <span class="org-tile"><img class="org-goethe" src="img/initiatives/Goethe.png" alt="Goethe University Frankfurt" width="3840" height="2093" loading="lazy"></span>
                         <span class="org-name" aria-hidden="true">Goethe University Frankfurt</span></a></li>
+                    <li><a class="org" href="https://www.umontreal.ca/en/" target="_blank" rel="noopener">
+                        <span class="org-tile"><img class="org-udem" src="img/initiatives/udem.png" alt="Université de Montréal" width="1786" height="692" loading="lazy"></span>
+                        <span class="org-name" aria-hidden="true">Université de Montréal</span></a></li>
                     <li><a class="org" href="https://docs.cneuromod.ca/" target="_blank" rel="noopener">
                         <span class="org-tile"><img class="org-cneuromod" src="img/initiatives/CneuroMod.png" alt="Courtois NeuroMod Project (CNeuroMod)" width="474" height="106" loading="lazy"></span>
                         <span class="org-name" aria-hidden="true">CNeuroMod</span></a></li>

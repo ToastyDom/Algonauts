@@ -1,19 +1,10 @@
 /* =====================================================================
-   Algonauts 2027 — draft site (v3, visual refinement)
-   - The hero keeps the announcement page's aurora, pixel wave and
-     particles. Everything below it is quiet: one dark reading surface,
-     thin rules between sections, flat tiles and figures.
-   - One accent (--accent) is reserved for actions: buttons, links,
-     the active tab and focus rings.
-   - Gameplay screenshots carry the colour; pixel styling is limited to
-     small decorative details (HUD labels, resource icons, the hero scene,
-     the timeline flag, the pixel divider).
-   The live 2027/css/style.css is not touched by this file.
+   The Algonauts Project 2027
    ===================================================================== */
 
 :root,
 html[data-theme="light"] :is(.hero, .page-head, .nav, .nav-overlay) {
-    /* Dark theme (default). The hero, page headers, nav and mobile menu stay dark in the light theme too. */
+    /* Dark theme (default) */
     color-scheme: dark;
     --bg:        #0e0922;   /* reading surface */
     --bg-band:   #07040f;   /* HUD, dates strip, footer */
@@ -35,10 +26,10 @@ html[data-theme="light"] :is(.hero, .page-head, .nav, .nav-overlay) {
     --code-c:    #8a83a8;
     --tl-action: #e3dff0;
     --tl-event:  #8f88b0;
-    --logo-bg:   #f3f2f8;       /* logo cards: partner logos are shown unaltered, each on its own soft light card */
+    --logo-bg:   #f3f2f8;       /* logo cards */
     --logo-line: transparent;
 
-    /* hero palette (announcement page) */
+    /* hero palette */
     --h-bg: #0a0616; --h-indigo: #2a1b6b; --h-violet: #6d3bd1; --h-magenta: #b13ad1;
 
     --font-sans:  'Inter', 'Segoe UI', system-ui, -apple-system, Roboto, Helvetica, Arial, sans-serif;
@@ -54,8 +45,7 @@ html[data-theme="light"] :is(.hero, .page-head, .nav, .nav-overlay) {
 }
 .hero, .page-head, .nav, .nav-overlay { color: var(--text); }
 
-/* Light theme: html[data-theme="light"], set before first paint by the inline script in each page head
-   (default dark). Partner logos are never altered; only our own text logo has a light-theme version (.logo-c / .logo-w). */
+/* Light theme */
 html[data-theme="light"] {
     color-scheme: light;
     --bg:        #f7f5fb;
@@ -130,14 +120,14 @@ code { font-family: var(--font-mono); font-size: .86em; color: var(--text); back
    --------------------------------------------------------------------- */
 .nav {
     position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-    padding: 16px clamp(16px, 2.5vw, 40px);   /* full-width bar: logo at the left edge, links get the room */
+    padding: 16px clamp(16px, 2.5vw, 40px);
     border-bottom: 1px solid transparent;
     transition: background-color .3s ease, padding .3s ease;
 }
 .nav.scrolled, .page-sub .nav {
     background: rgba(10, 6, 22, .9);
     -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px);
-    padding-top: 12px; padding-bottom: 13px;   /* 12 + 38 + 13 + 1 border = --nav-h, so the sticky tab bar meets it */
+    padding-top: 12px; padding-bottom: 13px;   /* = --nav-h */
     border-bottom-color: var(--line);
 }
 .nav-inner { margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
@@ -148,7 +138,7 @@ code { font-family: var(--font-mono); font-size: .86em; color: var(--text); back
 .nav-links a { color: var(--text-dim); font-weight: 500; font-size: .94rem; white-space: nowrap; }
 .nav-links a:hover, .nav-links a.active { color: #fff; text-decoration: none; }
 .nav-links a.active { box-shadow: 0 2px 0 var(--accent); padding-bottom: 4px; }
-/* Theme toggle (dark <-> light) */
+/* Theme toggle */
 .nav-links { margin-left: auto; }
 .theme-toggle { display: grid; place-items: center; width: 36px; height: 36px; flex: none; padding: 0; border: 1px solid var(--line-2); border-radius: 50%;
     background: none; color: var(--text-dim); cursor: pointer; transition: color .15s ease, border-color .15s ease; }
@@ -156,8 +146,9 @@ code { font-family: var(--font-mono); font-size: .86em; color: var(--text); back
 .theme-toggle svg { width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
 .theme-toggle .fill { fill: currentColor; stroke: none; }
 .theme-toggle .ti { display: none; }
-html:not([data-theme="light"]) .ti-light, html[data-theme="light"] .ti-dark { display: block; }   /* icon = theme you switch to */
-/* Logo cards: white logo backgrounds blend into the card (multiply), the logos themselves stay as supplied */
+html:not([data-theme-pref="light"]):not([data-theme-pref="dark"]) .theme-toggle .ti-system,
+html[data-theme-pref="light"] .theme-toggle .ti-light, html[data-theme-pref="dark"] .theme-toggle .ti-dark { display: block; }   /* icon = current setting */
+/* Logo cards */
 :is(.org-tile, .fc-tile, .host-chip, .footer-partners a, .sponsor-mat li, .logo-tile) img { mix-blend-mode: multiply; }
 .nav-toggle { display: none; flex-direction: column; gap: 5px; background: none; border: 0; cursor: pointer; padding: 8px; position: relative; z-index: 110; }
 .nav-toggle span { display: block; width: 26px; height: 2px; background: var(--text); transition: transform .3s ease, opacity .3s ease; }
@@ -173,7 +164,7 @@ body.menu-open { overflow: hidden; }
 .nav-overlay a.active { color: var(--accent); }
 
 /* ---------------------------------------------------------------------
-   Hero and page headers — aurora from the announcement page
+   Hero and page headers
    --------------------------------------------------------------------- */
 .hero, .page-head { position: relative; overflow: hidden; isolation: isolate; }
 .hero::before, .page-head::before {
@@ -216,7 +207,7 @@ body.menu-open { overflow: hidden; }
 }
 
 .hero {
-    min-height: calc(100vh - 80px);           /* the HUD strip peeks into view */
+    min-height: calc(100vh - 80px);
     min-height: calc(100svh - 80px);
     display: flex; align-items: center; justify-content: center; text-align: center;
     padding: 110px var(--gutter) 80px;
@@ -233,14 +224,7 @@ body.menu-open { overflow: hidden; }
 .hero .lead { margin: clamp(16px, 2.4vw, 22px) auto 0; max-width: 58ch; color: rgba(244, 242, 251, .92); font-size: clamp(1.02rem, 1.9vw, 1.2rem); line-height: 1.55; text-wrap: balance; }
 .hero .btn-row { margin-top: clamp(26px, 3.6vw, 38px); justify-content: center; }
 
-/* Hero stage: Mario runs in along a ground strip across the bottom of the
-   hero, stops under a ? block, bumps it (coin pops out, block turns into a
-   used block), lands and waits. A second ? block keeps flashing. Plays once;
-   clicking the blocks or Mario replays it (draft.js). Static on small
-   screens and with reduced motion.
-   Geometry is in game pixels: 1 game px = var(--u) CSS px (3 on desktop).
-   Sprites are cut from the challenge recordings: Super Mario Bros. 3 Mario,
-   ground, used block and coin; Super Mario Bros. ? block. */
+/* Hero stage: Mario animation along the bottom of the hero */
 .hero-stage {
     --u: 3px;                                        /* CSS px per game px */
     --rx: clamp(24px, 7vw, 120px);                   /* blocks' distance from the right edge */
@@ -254,7 +238,6 @@ body.menu-open { overflow: hidden; }
     position: absolute; left: 0; right: 0; bottom: 0; height: calc(16 * var(--u));
     background: url("../img/sprites/ground.png") repeat-x left bottom / calc(48 * var(--u)) calc(16 * var(--u));
 }
-/* both blocks are 16 game px; the used block replaces the ? block in exactly the same box */
 .hs-blk { position: absolute; bottom: calc(47 * var(--u)); width: calc(16 * var(--u)); height: calc(16 * var(--u)); }
 .hs-blk img { position: absolute; left: 0; top: 0; width: 100%; height: 100%; }
 .hs-blk-a { right: calc(var(--rx) + 16 * var(--u)); pointer-events: auto; cursor: pointer; }
@@ -280,7 +263,7 @@ body.menu-open { overflow: hidden; }
 .hero-stage.play .hs-stand { animation: hs-p-stand var(--T) var(--D) 1 both step-end; }
 .hero-stage.play .hs-jump { animation: hs-p-jump var(--T) var(--D) 1 both step-end; }
 .hero-stage.play .hs-blk-a { animation: hs-bump var(--T) var(--D) 1 both; }
-/* both ? blocks flash in sync (as in the game); block A stops when it turns into the used block */
+/* ? blocks flash in sync */
 .hero-stage.play .hs-blk-b .hs-q { animation: hs-flash 1.6s step-end infinite; }
 .hero-stage.play .hs-blk-a .hs-q { animation: hs-p-q var(--T) var(--D) 1 both step-end, hs-flash 1.6s step-end infinite; }
 .hero-stage.play .hs-used { animation: hs-p-used var(--T) var(--D) 1 both step-end; }
@@ -356,7 +339,7 @@ body.menu-open { overflow: hidden; }
 .dates-list dd { margin: 2px 0 0; font-weight: 700; font-size: .96rem; color: var(--text); font-variant-numeric: tabular-nums; }
 
 /* ---------------------------------------------------------------------
-   Sections — one surface, separated by rules
+   Sections
    --------------------------------------------------------------------- */
 .section { position: relative; padding: var(--section-y) var(--gutter); }
 .section + .section { border-top: 1px solid var(--line); }
@@ -364,7 +347,7 @@ body.menu-open { overflow: hidden; }
 .section-title { text-align: center; max-width: 720px; margin: 0 auto clamp(28px, 4vw, 44px); }
 .section-title h2, .h2 { font-size: clamp(1.75rem, 3.8vw, 2.4rem); font-weight: 800; letter-spacing: -.5px; }
 .section-title p { margin: 10px auto 0; color: var(--text-dim); font-size: 1.08rem; max-width: 56ch; }
-.section-title--left { text-align: left; margin-left: 0; }   /* The 2027 Challenge: heading on the reading line of the text below */
+.section-title--left { text-align: left; margin-left: 0; }
 .section-title--left p { margin-left: 0; }
 .prose p { color: var(--text-2); }
 .prose p.big { font-size: clamp(1.12rem, 1.9vw, 1.3rem); line-height: 1.5; color: var(--text); }
@@ -373,7 +356,7 @@ body.menu-open { overflow: hidden; }
 .small { font-size: .9rem; }
 
 /* ---------------------------------------------------------------------
-   Home — logo + news
+   Home: logo and news
    --------------------------------------------------------------------- */
 .news-grid { display: grid; grid-template-columns: .85fr 1.15fr; gap: clamp(32px, 5vw, 72px); align-items: center; }
 .news-brand { display: flex; flex-direction: column; align-items: center; text-align: center; }
@@ -393,7 +376,7 @@ body.menu-open { overflow: hidden; }
 .news-list p { margin: 0; color: var(--text-2); }
 
 /* ---------------------------------------------------------------------
-   Home — About
+   Home: about
    --------------------------------------------------------------------- */
 .about-head { margin-bottom: 26px; }
 .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(32px, 5vw, 64px); align-items: start; }
@@ -419,7 +402,7 @@ body.menu-open { overflow: hidden; }
 .px-icon .a { fill: var(--px-accent); }
 
 /* ---------------------------------------------------------------------
-   Home — The 2027 challenge
+   Home: the 2027 challenge
    --------------------------------------------------------------------- */
 .challenge-grid { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(28px, 5vw, 60px); align-items: start; }
 .challenge-grid .video-frame { margin-top: 6px; }
@@ -434,7 +417,7 @@ body.menu-open { overflow: hidden; }
 .video-placeholder .vt { font-weight: 600; font-size: .98rem; }
 .video-cap { margin: 10px 2px 0; font-size: .88rem; color: var(--text-dim); }
 
-/* Resources — flat icon tiles, each with its companion link */
+/* Resources */
 .res-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; }
 .res { display: flex; flex-direction: column; border: 1px solid var(--line-2); border-radius: var(--r); overflow: hidden; transition: border-color .15s ease; }
 .res:hover { border-color: var(--accent); }
@@ -447,12 +430,10 @@ body.menu-open { overflow: hidden; }
 .res-sub .tri { width: 0; height: 0; border-style: solid; border-width: 5px 0 5px 8px; border-color: transparent transparent transparent currentColor; }
 
 /* ---------------------------------------------------------------------
-   Important dates + Prizes (home)
+   Important dates and prizes
    --------------------------------------------------------------------- */
 
-/* Time and time zone of a deadline, filled in when confirmed (empty slots stay hidden) */
-/* Important dates + Prizes (home): two columns, dates left. Dates as a plain table; prizes as a calm podium
-   (2nd · 1st · 3rd) on soft steps; colour only from the small pixel medals. */
+/* deadline time */
 .dates-prizes { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(40px, 6vw, 88px); align-items: start; }
 .dates-prizes > * { min-width: 0; }
 .dates-table { width: 100%; border-collapse: collapse; border-top: 1px solid var(--line); font-variant-numeric: tabular-nums; }
@@ -530,7 +511,7 @@ html[data-theme="light"] .pd--2 .pd-medal { --medal: #b9bfcb; }
 .num-list li::before { content: counter(n); position: absolute; left: 0; top: 0; font-weight: 800; color: var(--text-dim); font-variant-numeric: tabular-nums; }
 .num-list--zero { counter-reset: n -1; }
 
-/* Figures from the paper: light figures on a deliberate white mat */
+/* Figures */
 .figure { margin: 28px 0 0; }
 .figure-mat { display: block; background: #fff; border-radius: var(--r); padding: clamp(8px, 1.4vw, 16px); }
 .figure-mat img { width: 100%; height: auto; }
@@ -538,7 +519,7 @@ html[data-theme="light"] .pd--2 .pd-medal { --medal: #b9bfcb; }
 .figure figcaption strong { color: var(--text); }
 .fig-open { display: inline-block; margin-top: 6px; font-weight: 600; font-size: .9rem; }
 
-/* Optional detail (collapsible figures) */
+/* Collapsible details */
 .optional { margin-top: clamp(36px, 5vw, 52px); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
 .optional > summary { list-style: none; cursor: pointer; display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 16px 0; }
 .optional > summary::-webkit-details-marker { display: none; }
@@ -550,11 +531,11 @@ html[data-theme="light"] .pd--2 .pd-medal { --medal: #b9bfcb; }
 .optional[open] > summary .s-show { display: none; }
 .optional:not([open]) > summary .s-hide { display: none; }
 .optional .figure { margin: 4px 0 22px; }
-.optional--inline { margin-top: 22px; }   /* "View source rows" under the gameplay example */
+.optional--inline { margin-top: 22px; }   /* Source rows */
 .optional--inline > summary { padding: 13px 0; }
 .optional--inline .codeblock-cap { margin-bottom: 18px; }
 
-/* Simplified responsive version of Figure 1 (phones) */
+/* Figure 1, phone version */
 .fig-web { display: none; margin-top: 24px; }
 .fig-web ol { list-style: none; margin: 0; padding: 0; }
 .fw-flow li { padding: 12px 0 12px 16px; border-left: 2px solid var(--line-2); position: relative; }
@@ -568,13 +549,11 @@ html[data-theme="light"] .pd--2 .pd-medal { --medal: #b9bfcb; }
 
 .subj { font-family: var(--font-mono); font-size: .88em; color: var(--text); white-space: nowrap; }
 
-/* Sponsors / partners */
+/* Sponsors and partners */
 .logo-wall { display: flex; flex-wrap: wrap; gap: 14px; }
 .logo-tile { display: grid; place-items: center; min-width: 170px; height: 76px; padding: 12px 22px; border-radius: var(--r); background: var(--logo-bg); border: 1px solid var(--logo-line); }
 .logo-tile img { max-height: 36px; width: auto; }
 .logo-tile--tba { background: transparent; border: 1px dashed var(--line-2); color: var(--text-dim); font-size: .9rem; text-align: center; line-height: 1.4; }
-/* Sponsors (home, after Prizes; Challenge Details, below the tabs). One white panel, one cell per sponsor;
-   the row wraps as sponsors are added. Logo heights are set per logo for comparable visual weight. */
 .sponsor-mat { list-style: none; margin: 0 auto; padding: 0; max-width: 960px; display: flex; flex-wrap: wrap; justify-content: center; gap: 16px; background: none; border-radius: var(--r); }
 .sponsor-mat li { flex: 0 1 280px; display: grid; place-items: center; min-height: 150px; background: var(--logo-bg); border: 1px solid var(--logo-line); border-radius: var(--r); }
 .sponsor-mat a { display: grid; place-items: center; padding: 10px; border-radius: 4px; }
@@ -605,9 +584,7 @@ html[data-theme="light"] .pd--2 .pd-medal { --medal: #b9bfcb; }
 .access-note { margin: 20px 0 0; padding-top: 14px; border-top: 1px solid var(--line); font-size: .86rem; line-height: 1.55; color: var(--text-dim); }
 .access-note strong { color: var(--text-2); font-weight: 600; }
 
-/* Games & subjects: the three model training games as one row of tiles; below a rule, the ID test game and the
-   OOD games as two rows of the same shape (tile in the catalogue's first column, text across the other two).
-   On phones every game becomes a row: thumbnail left, title right. */
+/* Games and subjects */
 .games-intro { color: var(--text-2); max-width: 66ch; line-height: 1.6; }
 .games h2, .test-game h2 { margin-top: 0; }
 .catalog { list-style: none; margin: 24px 0 0; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px 20px; }
@@ -615,7 +592,7 @@ html[data-theme="light"] .pd--2 .pd-medal { --medal: #b9bfcb; }
 .cat-shot img { width: 100%; height: 100%; object-fit: cover; image-rendering: pixelated; image-rendering: crisp-edges; }
 .cat-item h3, .tg-title h3 { margin: 12px 0 0; font-size: 1.1rem; font-weight: 700; line-height: 1.3; }
 .cat-meta { margin: 4px 0 0; font-size: .9rem; color: var(--text-dim); font-variant-numeric: tabular-nums; }   /* levels · attempts */
-.cat-meta span { white-space: nowrap; }   /* on the narrowest phones it breaks between the two parts, not inside one */
+.cat-meta span { white-space: nowrap; }
 
 .test-game { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); grid-template-rows: auto auto 1fr; column-gap: 20px; align-items: start; }
 .test-game + .test-game { margin-top: clamp(40px, 5vw, 56px); }
@@ -629,8 +606,7 @@ html[data-theme="light"] .pd--2 .pd-medal { --medal: #b9bfcb; }
 .cat-shot--hidden { display: grid; place-items: center; }
 .cat-shot--hidden img { width: clamp(48px, 24%, 96px); height: auto; }
 
-/* Subjects coverage: text left, table right. Filled square = played, outlined square = not played, no row
-   rules, compact rows; the ID test game (All-Stars) sits after a small gap. */
+/* Subjects table */
 .coverage-wrap { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: clamp(40px, 4.5vw, 64px); align-items: start; }
 .coverage-wrap h2 { margin-top: 0; }
 .coverage-wrap .prose p:last-child { margin-bottom: 0; }
@@ -641,7 +617,7 @@ html[data-theme="light"] .pd--2 .pd-medal { --medal: #b9bfcb; }
 .coverage thead th:first-child { width: auto; background: none; }
 .coverage thead th.role { width: auto; padding-left: 16px; text-align: left; background-position: bottom right; background-size: calc(100% - 16px) 1px; }
 .coverage tbody th { padding: 0 14px 0 0; height: 30px; text-align: left; font-weight: 600; color: var(--text); white-space: nowrap; }
-.coverage tbody tr:first-child > * { height: 36px; padding-top: 6px; }   /* air below the header rule, rows keep an even pitch */
+.coverage tbody tr:first-child > * { height: 36px; padding-top: 6px; }
 .coverage td::before { content: ""; display: inline-block; width: 12px; height: 12px; vertical-align: middle; border: 1px solid var(--line-2); }
 .coverage td.on::before { background: var(--text); border-color: var(--text); }
 .coverage td.role { padding-left: 16px; text-align: left; font-size: .84rem; color: var(--text-dim); white-space: nowrap; }
@@ -650,7 +626,7 @@ html[data-theme="light"] .pd--2 .pd-medal { --medal: #b9bfcb; }
 .coverage .c-gap { padding-left: 14px; }
 .coverage thead th.c-gap { width: 78px; background-position: bottom right; background-size: calc(100% - 18px) 1px; }
 
-/* Gameplay example (real aligned data) */
+/* Gameplay example */
 .example { margin-top: 24px; }
 .example-head { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 6px 20px; margin-bottom: 14px; }
 .example-head h3 { margin: 0; }
@@ -673,7 +649,7 @@ html[data-theme="light"] .pd--2 .pd-medal { --medal: #b9bfcb; }
 .ex-timeline .mk-l { font: 700 11px var(--font-sans); fill: var(--text-hi); }
 .ex-timeline--narrow { display: none; max-width: 520px; }
 .ex-timeline--narrow .lab, .ex-timeline--narrow .ax { font-size: 12px; }
-.ex-timeline--narrow .lab { paint-order: stroke; stroke: var(--bg); stroke-width: 4px; stroke-linejoin: round; }   /* knocks the frame markers out behind the labels */
+.ex-timeline--narrow .lab { paint-order: stroke; stroke: var(--bg); stroke-width: 4px; stroke-linejoin: round; }
 .ex-legend { display: flex; flex-wrap: wrap; gap: 6px 22px; margin: 10px 0 0; font-size: .84rem; color: var(--text-dim); }
 .ex-legend span::before { content: ""; display: inline-block; width: 14px; height: 9px; margin-right: 7px; vertical-align: 0; }
 .ex-legend .l-a::before { background: var(--tl-action); }
@@ -689,7 +665,7 @@ html[data-theme="light"] .pd--2 .pd-medal { --medal: #b9bfcb; }
 .codeblock .c { color: var(--code-c); }
 .codeblock .h { color: var(--text-hi); font-weight: 700; }
 .codeblock-cap { margin: 8px 2px 0; font-size: .84rem; color: var(--text-dim); }
-/* Events table excerpt: looks like the code block on wide screens, one stacked record per row on phones */
+/* Events table */
 .tsv-block { white-space: normal; }
 .tsv-block > .c { margin: 0 0 2px; }
 .tsv { border-collapse: collapse; font: inherit; }
@@ -698,7 +674,7 @@ html[data-theme="light"] .pd--2 .pd-medal { --medal: #b9bfcb; }
 .tsv td:last-child, .tsv th:last-child { padding-right: 0; }
 
 /* ---------------------------------------------------------------------
-   Team + signup
+   Team and signup
    --------------------------------------------------------------------- */
 .team-grid { display: grid; max-width: 1000px; margin: 0 auto; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(18px, 2.2vw, 26px) clamp(10px, 1.4vw, 18px); justify-items: center; }
 .team-grid--lead { max-width: 640px; margin: 0 auto 34px; gap: clamp(18px, 4vw, 44px); padding-bottom: 34px; border-bottom: 1px solid var(--line); }
@@ -712,11 +688,11 @@ a.team-card:hover .team-photo { border-color: var(--accent); }
 .team-card--lead { max-width: 300px; }
 .team-card--lead .team-photo { width: clamp(132px, 15.5vw, 164px); height: clamp(132px, 15.5vw, 164px); }
 .team-card--lead .team-name { margin-top: 18px; font-size: 1.2rem; }
-/* Organizing institutions and groups: white tiles like the partner logos; per-logo heights balance visual weight */
+/* Organizing institutions */
 .orgs { max-width: 1000px; margin: clamp(40px, 5vw, 56px) auto 0; padding-top: clamp(32px, 4vw, 44px); border-top: 1px solid var(--line); text-align: center; }
 .orgs h3 { font-size: 1rem; font-weight: 700; margin-bottom: 20px; }
 .orgs-note { margin: -12px 0 18px; font-size: .9rem; color: var(--text-dim); }
-.col-title { margin-bottom: 16px; }      /* Cite / Contact: same size as the Team title */
+.col-title { margin-bottom: 16px; }      /* Cite and contact */
 .brand-logo.logo-w { opacity: 1 !important; }
 .org-row { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; justify-content: center; gap: 18px 16px; }
 .org-row li { width: 168px; }
@@ -735,9 +711,7 @@ a.team-card:hover .team-photo { border-color: var(--accent); }
 
 .signup-frame { max-width: 760px; margin: 0 auto; }
 .signup-frame iframe { width: 100%; border: 0; border-radius: var(--r); background: #fff; }
-/* Dark theme: Google's form cannot be styled from here, so it is rendered dark: invert + hue-rotate turns the
-   white form dark and keeps its accent hue; a pass-through overlay lifts the darkest pixels to the site
-   background (mix-blend-mode: lighten leaves text and lines untouched). */
+/* Google Form in the dark theme */
 .signup-frame { position: relative; }
 html:not([data-theme="light"]) .signup-frame iframe { filter: invert(.95) hue-rotate(180deg); }
 html:not([data-theme="light"]) .signup-frame::after { content: ""; position: absolute; inset: 0; pointer-events: none;
@@ -751,7 +725,7 @@ html:not([data-theme="light"]) .signup-frame::after { content: ""; position: abs
 html[data-theme="light"] .social-logos img { filter: brightness(0); opacity: .85; }
 
 /* ---------------------------------------------------------------------
-   Pixel divider + footer
+   Pixel divider and footer
    --------------------------------------------------------------------- */
 .pixel-divider {
     height: 24px;
@@ -771,7 +745,7 @@ html[data-theme="light"] .social-logos img { filter: brightness(0); opacity: .85
 .footer-partners { display: flex; gap: 12px; align-items: center; }
 .footer-partners a { display: grid; place-items: center; height: 48px; padding: 8px 14px; border-radius: var(--r); background: var(--logo-bg); border: 1px solid var(--logo-line); }
 .footer-partners img { height: 24px; width: auto; }
-/* Challenge Details: sponsors, partners and acknowledgements in the footer (stays put while the tabs change) */
+/* Footer credits */
 .footer-credits { max-width: var(--maxw); margin: 0 auto 28px; padding-bottom: 28px; border-bottom: 1px solid var(--line); }
 .fc-groups { display: flex; flex-wrap: wrap; gap: 24px 56px; }
 .fc-k { margin: 0 0 12px; font-size: .9rem; font-weight: 700; letter-spacing: 0; color: var(--text); }
@@ -789,7 +763,6 @@ html[data-theme="light"] .social-logos img { filter: brightness(0); opacity: .85
 .fc-ack { margin: 22px 0 0; max-width: 92ch; font-size: .84rem; line-height: 1.55; color: var(--text-dim); }
 .fc-ack strong { color: var(--text-2); font-weight: 600; }
 
-/* grid children may shrink below their content (e.g. <pre>) */
 .news-grid > *, .about-grid > *, .challenge-grid > *, .two-col > *, .access > *,
 .coverage-wrap > *, .catalog > *, .test-game > *, .page-head--split .page-head-inner > * { min-width: 0; }
 
@@ -799,7 +772,7 @@ html[data-theme="light"] .social-logos img { filter: brightness(0); opacity: .85
 @media (max-width: 1100px) {
     .hero-stage { --rx: 24px; }
 }
-/* Eight menu links + the theme button need ~1050 px (full-width bar): at 1120 px and below, the menu button and overlay take over */
+/* Menu button from 1120 px down */
 @media (max-width: 1120px) {
     .nav-links { display: none; }
     .nav-toggle { display: flex; }
