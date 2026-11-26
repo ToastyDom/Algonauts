@@ -507,6 +507,7 @@ html[data-theme="light"] .pd--2 .pd-medal { --medal: #b9bfcb; }
 .panel[hidden] { display: none; }
 .panel-inner { max-width: var(--maxw); margin: 0 auto; }
 .panel h2 { font-size: clamp(1.5rem, 3vw, 2rem); font-weight: 800; letter-spacing: -.3px; margin-bottom: 14px; }
+.panel .prose h2:not(:first-child) { margin-top: clamp(36px, 5vw, 52px); }
 .panel h3 { font-size: 1.15rem; font-weight: 700; margin: 0 0 8px; }
 .panel .prose { max-width: var(--textw); }
 .block { margin-top: clamp(40px, 5.5vw, 60px); }

@@ -69,7 +69,6 @@
         <div class="pixel-wave" aria-hidden="true"></div>
         <div class="page-head-inner">
             <h1>Challenge Details</h1>
-            <p class="lead">Challenge phases and dates, prediction accuracy, submission rules, and the baseline encoding model.</p>
         </div>
     </header>
 
@@ -127,9 +126,21 @@
     <section class="panel" id="overview" role="tabpanel" aria-labelledby="tab-overview">
         <div class="panel-inner">
             <div class="prose">
+                <h2>Challenge motivation</h2>
+                <p>Understanding how the human brain works is one of the key challenges that science and society face. The Algonauts challenge proposes a test of how well computational models do today. This test is intrinsically <strong>open</strong> and <strong>quantitative</strong>. This will allow us to precisely assess the progress in explaining the human brain.</p>
+                <p>In a video game, perception and action form a closed loop: what players see and hear guides their decisions and actions, and those actions shape the sensory input they receive next. The primary target of the 2027 Challenge is predicting human brain responses during this active interaction.</p>
+                <p>We pose the question: How well does your computational model account for brain activity during gameplay?</p>
+
                 <h2>Challenge overview</h2>
-                <p>Participants train encoding models to predict brain responses from gameplay video, audio, controller actions and game events. We measure the responses with functional magnetic resonance imaging (fMRI) and average the signal within each of 1,134 brain regions, called parcels.</p>
-                <p>How well does a model trained on three games predict brain responses during other games? We test in-distribution (ID) generalization using a remake that preserves the levels and basic actions of Super Mario Bros. We test out-of-distribution (OOD) generalization using a separate set of hidden games.</p>
+                <p>The goal of the 2027 challenge is to provide a platform for biological and artificial intelligence scientists to cooperate and compete in developing cutting-edge brain encoding models. Specifically, these models should predict brain responses during video gameplay, and generalize outside their training distribution.</p>
+                <p>In collaboration with the <a href="https://www.cneuromod.ca/" target="_blank" rel="noopener">Courtois NeuroMod Project (CNeuroMod)</a>, we provide:</p>
+                <ul>
+                    <li>gameplay data from four retro video games: video, audio, controller actions and game event annotations,</li>
+                    <li>the corresponding functional magnetic resonance imaging (fMRI) responses in 1,134 brain parcels for the three model training games, from five subjects for the Mario games and three for Shinobi III, and</li>
+                    <li>all gameplay data for both test sets, with the corresponding fMRI responses kept hidden.</li>
+                </ul>
+                <p>With that, challenge participants are expected to build computational models that predict brain responses during gameplay for which the brain data are withheld. How well does a model trained on three games predict brain responses during other games? We test in-distribution (ID) generalization using a remake that preserves the levels and basic actions of Super Mario Bros. We test out-of-distribution (OOD) generalization using a separate set of hidden games.</p>
+                <p>Challenge participants submit <strong>predicted fMRI responses</strong> in the format described in the <a href="#">Development Kit</a><!-- TODO: Development Kit link --> to the challenge platform, Codabench, for automatic scoring (see <a href="#evaluation">Evaluation and submission</a>).</p>
             </div>
 
             <!-- Figure 1 -->
@@ -167,9 +178,7 @@
             </figure>
 
             <div class="prose block">
-                <p>We release gameplay data and the corresponding fMRI responses for the three model training games. The Mario games have recordings from all five subjects and Shinobi III has recordings from three. For both test sets, we release all gameplay data and keep the corresponding fMRI responses hidden.
-                Participants submit predicted fMRI responses to the challenge platform, Codabench, for automatic scoring.</p>
-                <div class="btn-row" style="margin-top:22px">
+                <div class="btn-row">
                     <a href="data.html" class="btn btn-primary">Challenge data</a>
                     <a href="#" class="btn btn-ghost">Participate on Codabench</a><!-- TODO -->
                 </div>
