@@ -733,7 +733,8 @@ a.team-card:hover .team-photo { border-color: var(--accent); }
 .org-tile .org-fu { height: 46px; }
 .org-tile .org-goethe { height: 50px; }
 .org-tile .org-cneuromod { height: 30px; }
-.org-tile .org-mit { height: 40px; }
+.org-tile--mit { padding: 0; background: #f2f4f8; }
+.org-tile .org-mit { width: 100%; height: auto; mix-blend-mode: normal; }
 .org-tile .org-udem { height: 48px; }
 @media (min-width: 961px) { .org-row li { width: calc((100% - 80px) / 6); max-width: 168px; } }
 @media (min-width: 641px) and (max-width: 960px) { .org-row { max-width: 560px; margin: 0 auto; } }
