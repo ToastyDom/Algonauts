@@ -128,44 +128,47 @@
         <div class="panel-inner">
             <div class="prose">
                 <h2>Challenge overview</h2>
-                <p>The goal of the Algonauts Project 2027 challenge is to provide a platform where participants can train encoding models of human fMRI responses during gameplay, and then test these models’ generalization both in-distribution (ID) and out-of-distribution (OOD).</p>
+                <p>Participants train encoding models to predict brain responses from gameplay video, audio, controller actions and game events. We measure the responses with functional magnetic resonance imaging (fMRI) and average the signal within each of 1,134 brain regions, called parcels.</p>
+                <p>How well does a model trained on three games predict brain responses during other games? We test in-distribution (ID) generalization using a remake that preserves the levels and basic actions of Super Mario Bros. We test out-of-distribution (OOD) generalization using a separate set of hidden games.</p>
             </div>
 
             <!-- Figure 1 -->
-            <figure class="figure fig1-full">
-                <a class="figure-mat fig1-mat only-dark" href="img/Algonauts%202027%20challenge%20overview%20(wide%20dark).png" target="_blank" rel="noopener">
-                    <img src="img/Algonauts%202027%20challenge%20overview%20(wide%20dark).png" alt="Panels A–C show the training games, the Super Mario All-Stars ID test game and how gameplay data are used to predict fMRI responses in 1,134 parcels. Panels D–F show the baseline brain maps, OOD testing and the public ID and OOD benchmarks." width="2200" height="1850" loading="lazy">
-                </a>
-                <a class="figure-mat fig1-mat only-light" href="img/Algonauts%202027%20challenge%20overview%20(wide).png" target="_blank" rel="noopener">
-                    <img src="img/Algonauts%202027%20challenge%20overview%20(wide).png" alt="Panels A–C show the training games, the Super Mario All-Stars ID test game and how gameplay data are used to predict fMRI responses in 1,134 parcels. Panels D–F show the baseline brain maps, OOD testing and the public ID and OOD benchmarks." width="2200" height="1850" loading="lazy">
-                </a>
-                <figcaption><strong>Figure 1 | Overview of the challenge.</strong> (A–C) Encoding models use gameplay video, audio, controller actions and game event annotations to predict fMRI responses across 1,134 brain parcels.
-                (D) Models train on Super Mario Bros., Super Mario Bros. 3 and Shinobi III. ID testing uses all recorded levels from Super Mario All-Stars. The maps show the baseline model’s per-parcel prediction accuracy averaged across the five test subjects (overall <em>r</em> = 0.209).
-                (E) OOD prediction accuracy determines the final ranking. The question marks represent the OOD games, whose number is undisclosed.
-                (F) ID and OOD testing continue as public benchmarks.
-                <br><a class="fig-open only-dark" href="img/Algonauts%202027%20challenge%20overview%20(wide%20dark).png" target="_blank" rel="noopener">Open full size &#8599;</a><a class="fig-open only-light" href="img/Algonauts%202027%20challenge%20overview%20(wide).png" target="_blank" rel="noopener">Open full size &#8599;</a></figcaption>
+            <figure class="figure">
+                <div class="fig1-full">
+                    <a class="figure-mat fig1-mat only-dark" href="img/Algonauts%202027%20challenge%20overview%20(wide%20dark).png" target="_blank" rel="noopener">
+                        <img src="img/Algonauts%202027%20challenge%20overview%20(wide%20dark).png" alt="Panels A–C show the training games, the Super Mario All-Stars ID test game and how gameplay data are used to predict fMRI responses in 1,134 parcels. Panels D–F show the baseline brain maps, OOD testing and the public ID and OOD benchmarks." width="2200" height="1950" loading="lazy">
+                    </a>
+                    <a class="figure-mat fig1-mat only-light" href="img/Algonauts%202027%20challenge%20overview%20(wide).png" target="_blank" rel="noopener">
+                        <img src="img/Algonauts%202027%20challenge%20overview%20(wide).png" alt="Panels A–C show the training games, the Super Mario All-Stars ID test game and how gameplay data are used to predict fMRI responses in 1,134 parcels. Panels D–F show the baseline brain maps, OOD testing and the public ID and OOD benchmarks." width="2200" height="1950" loading="lazy">
+                    </a>
+                    <a class="fig-open only-dark" href="img/Algonauts%202027%20challenge%20overview%20(wide%20dark).png" target="_blank" rel="noopener">Open full size &#8599;</a><a class="fig-open only-light" href="img/Algonauts%202027%20challenge%20overview%20(wide).png" target="_blank" rel="noopener">Open full size &#8599;</a>
+                </div>
+                <!-- Figure 1, phone version -->
+                <div class="fig-web" role="group" aria-label="Figure 1, simplified">
+                    <p class="label">Figure 1, simplified</p>
+                    <ol class="fw-flow">
+                        <li><span class="fw-k">Input</span><strong>Gameplay data</strong><span>Video, audio, controller actions and game events</span></li>
+                        <li><span class="fw-k">Model</span><strong>Encoding model</strong></li>
+                        <li><span class="fw-k">Output</span><strong>Predicted fMRI</strong><span>1,134 brain parcels</span></li>
+                    </ol>
+                    <ol class="fw-phases">
+                        <li><span class="fw-k">Phase 1</span><strong>Development Phase</strong><span>Model training on Super Mario Bros., Super Mario Bros. 3 and Shinobi III. In-distribution (ID) testing on all recorded levels from Super Mario All-Stars. Baseline <em>r</em> = 0.209.</span></li>
+                        <li><span class="fw-k">Phase 2</span><strong>Generalization Phase</strong><span>Out-of-distribution (OOD) testing on hidden games and final ranking</span></li>
+                        <li><span class="fw-k">After the challenge</span><strong>Post-Challenge Benchmark</strong><span>Ongoing public ID and OOD benchmark</span></li>
+                    </ol>
+                    <p style="margin-top:14px"><a class="text-link only-dark" href="img/Algonauts%202027%20challenge%20overview%20(wide%20dark).png" target="_blank" rel="noopener">Open the original Figure 1 &#8599;</a><a class="text-link only-light" href="img/Algonauts%202027%20challenge%20overview%20(wide).png" target="_blank" rel="noopener">Open the original Figure 1 &#8599;</a></p>
+                </div>
+                <figcaption><strong>Figure 1 | Overview of the Algonauts Project 2027 challenge</strong>.
+                <strong>(A-B)</strong> Challenge participants receive gameplay data in the form of video, audio, controller actions, and game events from four challenge games: <em>Super Mario Bros.</em> (SMB), <em>Super Mario All-Stars</em>, <em>Super Mario Bros. 3</em> (SMB3), and <em>Shinobi III: Return of the Ninja Master</em>.
+                <strong>(C)</strong> This data serves as input to encoding models that predict fMRI responses across 1,134 brain parcels.
+                <strong>(D)</strong> During the challenge Development Phase, models are trained on released fMRI data from SMB, SMB3, and Shinobi III, and tested on all recorded levels from <em>Super Mario All-Stars</em> for in-distribution (ID) generalization. The brain maps show the prediction accuracy of the challenge baseline model on the ID test data, measured as Pearson's <em>r</em> for each brain parcel and averaged across the five test subjects.
+                <strong>(E)</strong> During the Generalization Phase, models are tested on out-of-distribution (OOD) games for OOD generalization, with performance determining the final challenge ranking. All gameplay data are released for both test sets, while the corresponding fMRI responses remain hidden.
+                <strong>(F)</strong> During the Post-Challenge Phase, both ID and OOD testing continue as public benchmarks using the same held-out sets and hidden fMRI responses.</figcaption>
             </figure>
 
-            <!-- Figure 1, phone version -->
-            <div class="fig-web" role="group" aria-label="Figure 1, simplified">
-                <p class="label">Figure 1, simplified</p>
-                <ol class="fw-flow">
-                    <li><span class="fw-k">Input</span><strong>Gameplay data</strong><span>Video, audio, controller actions and game events</span></li>
-                    <li><span class="fw-k">Model</span><strong>Encoding model</strong></li>
-                    <li><span class="fw-k">Output</span><strong>Predicted fMRI</strong><span>1,134 brain parcels</span></li>
-                </ol>
-                <ol class="fw-phases">
-                    <li><span class="fw-k">Phase 1</span><strong>Development Phase</strong><span>Model training on Super Mario Bros., Super Mario Bros. 3 and Shinobi III. In-distribution (ID) testing on all recorded levels from Super Mario All-Stars. Baseline <em>r</em> = 0.209.</span></li>
-                    <li><span class="fw-k">Phase 2</span><strong>Generalization Phase</strong><span>Out-of-distribution (OOD) testing on hidden games and final ranking</span></li>
-                    <li><span class="fw-k">After the challenge</span><strong>Post-Challenge Benchmark</strong><span>Ongoing public ID and OOD benchmark</span></li>
-                </ol>
-                <p style="margin-top:14px"><a class="text-link only-dark" href="img/Algonauts%202027%20challenge%20overview%20(wide%20dark).png" target="_blank" rel="noopener">Open the original Figure 1 &#8599;</a><a class="text-link only-light" href="img/Algonauts%202027%20challenge%20overview%20(wide).png" target="_blank" rel="noopener">Open the original Figure 1 &#8599;</a></p>
-            </div>
-
             <div class="prose block">
-                <p>We provide gameplay video, audio, controller actions and game event annotations aligned with fMRI responses from five subjects.
-                We release both gameplay data and fMRI responses for the three model training games. For both test sets, we release all gameplay data and keep the corresponding fMRI responses hidden.
-                Participants submit predicted fMRI responses to Codabench for scoring.</p>
+                <p>We release gameplay data and the corresponding fMRI responses for the three model training games. The Mario games have recordings from all five subjects and Shinobi III has recordings from three. For both test sets, we release all gameplay data and keep the corresponding fMRI responses hidden.
+                Participants submit predicted fMRI responses to the challenge platform, Codabench, for automatic scoring.</p>
                 <div class="btn-row" style="margin-top:22px">
                     <a href="data.html" class="btn btn-primary">Challenge data</a>
                     <a href="#" class="btn btn-ghost">Participate on Codabench</a><!-- TODO -->
@@ -178,6 +181,7 @@
     <section class="panel" id="phases" role="tabpanel" aria-labelledby="tab-phases">
         <div class="panel-inner">
             <h2>Challenge phases</h2>
+            <p class="prose">The challenge has two competitive phases. During the Development Phase, participants compare models on the in-distribution (ID) test game. During the Generalization Phase, prediction accuracy on the out-of-distribution (OOD) games determines the final ranking. The two tests remain available after the competition.</p>
             <div class="table-wrap">
                 <table class="table">
                     <thead><tr><th>Phase</th><th>Dates</th><th>Test data (fMRI withheld)</th><th>Submissions per team</th></tr></thead>
@@ -193,8 +197,8 @@
                 <p><strong>Model training.</strong> The three <a href="data.html#training-games">model training games</a> are Super Mario Bros., Super Mario Bros. 3 and Shinobi III: Return of the Ninja Master. We provide approximately 144 hours of gameplay data and the corresponding fMRI responses for model training.</p>
                 <p><strong>ID testing.</strong> We use the Super Mario Bros. remake in <a href="data.html#id-test">Super Mario All-Stars</a>, which preserves the original levels and basic actions. We release approximately 30 hours of gameplay data across all 22 recorded levels and five test subjects. The corresponding fMRI responses remain hidden. Participants <a href="#submission">submit predicted fMRI responses</a> to Codabench, where they are scored against the hidden responses. Participants can use their ID scores to compare model variants during this phase.</p>
                 <h3>Generalization Phase</h3>
-                <p><strong>OOD testing.</strong> At the start of this phase, we reveal the <a href="data.html#ood-games">OOD games</a> and release approximately two hours of gameplay data per test subject. We provide the same gameplay data modalities as during the Development Phase and keep the corresponding fMRI responses hidden. Withholding the game identities until this phase begins limits game-specific preparation.</p>
-                <p>Participants submit predicted fMRI responses for the OOD games to Codabench. Game scores are averaged within each subject, weighting games equally, and then averaged across subjects. Only OOD prediction accuracy determines the final ranking among teams that meet the <a href="#rules">requirements for the final ranking</a>. The <a href="#evaluation">Evaluation and submission</a> section describes the scoring procedure.</p>
+                <p><strong>OOD testing.</strong> At the start of this phase, we reveal the <a href="data.html#ood-games">OOD games</a> and release approximately two hours of gameplay data per test subject. We provide the same gameplay data modalities as during the Development Phase and keep the corresponding fMRI responses hidden. Withholding the game identities until this phase begins limits game-specific preparation. The number of question marks in Figure 1 does not indicate how many OOD games will be released.</p>
+                <p>Participants submit predicted fMRI responses for the OOD games to Codabench. Game scores are averaged within each subject, weighting games equally, and then averaged across subjects. Only OOD prediction accuracy determines the final ranking among <a href="#rules">eligible teams</a>. The <a href="#evaluation">Evaluation and submission</a> section describes the scoring procedure.</p>
                 <h3>Post-Challenge Benchmark</h3>
                 <p>Following the competitive phases, the ID and OOD tests remain open as public benchmarks. Participants can submit predictions for the same test gameplay data to compare future models with submissions from the official challenge. The corresponding fMRI responses remain hidden.</p>
             </div>
@@ -206,7 +210,7 @@
         <div class="panel-inner">
         <div class="prose">
             <h2>Evaluation and submission</h2>
-            <p>For each subject and game, Codabench concatenates the predicted and measured fMRI time series across all corresponding gameplay videos in the test set. It then calculates Pearson’s correlation coefficient (<em>r</em>) between the predicted and measured sequences separately for each of the 1,134 brain parcels. The platform averages the parcel correlations to obtain one score per subject and game. For the OOD test set, which contains multiple games, it averages game scores within each subject, weighting games equally. It then averages the scores across subjects to obtain a single prediction accuracy score per submission for each test set. Codabench uses the ID scores to rank submissions on the public leaderboard during the Development Phase, and the OOD scores to determine the final challenge ranking.</p>
+            <p>For each subject and game, Codabench joins the predicted and measured fMRI responses across all corresponding gameplay videos to form two time series. For each of the 1,134 brain parcels, it calculates Pearson’s correlation coefficient (<em>r</em>), which measures how closely the two series vary together over time. The platform averages the parcel correlations to obtain one score per subject and game. For the OOD test set, which contains multiple games, it averages game scores within each subject, weighting games equally. It then averages the scores across subjects to obtain a single prediction accuracy score per submission for each test set. Codabench uses the ID scores to rank submissions on the public leaderboard during the Development Phase, and the OOD scores to determine the final challenge ranking.</p>
             <p>All five subjects are tested: <span class="subj">sub-01</span>, <span class="subj">sub-02</span>,
             <span class="subj">sub-03</span>, <span class="subj">sub-05</span> and <span class="subj">sub-06</span>.</p>
 
@@ -273,18 +277,16 @@
             <div class="block">
                 <div class="prose">
                     <h2>Baseline model</h2>
-                    <p>We provide a challenge baseline model as a working example and a reference point for prediction accuracy. Participants may use their own features, model architectures, and training strategies. Features extracted from the gameplay data are aligned to the 1.49-second fMRI
-                    sampling grid, combined across a window of recent gameplay shifted for the hemodynamic delay, and mapped
-                    onto each of the 1,134 parcels with ridge regression. ID prediction score on Super Mario All-Stars: <em>r</em> = 0.209.</p>
+                    <p>We provide a challenge baseline model as a working example and a reference point for prediction accuracy. Participants may use their own features, model architectures, and training strategies. The model summarizes each gameplay input as a set of numerical features for each 1.49-second fMRI sampling interval. It uses features from recent intervals to account for the delay between neural activity and the measured fMRI response. For each brain parcel, ridge regression fits a weighted combination of these features and penalizes large weights. On the in-distribution test game, Super Mario All-Stars, the baseline achieved a prediction score of <em>r</em> = 0.209.</p>
                 </div>
                 <div class="table-wrap" style="max-width:var(--textw)">
                     <table class="table">
                         <thead><tr><th>Gameplay data</th><th>Features</th></tr></thead>
                         <tbody>
-                            <tr><td>Video</td><td>Slow R50 video network, 100 principal components</td></tr>
-                            <tr><td>Audio</td><td>Mel frequency cepstral coefficients, 10 principal components</td></tr>
-                            <tr><td>Controller actions</td><td>Fraction of each interval a button is held, 9 actions</td></tr>
-                            <tr><td>Game events</td><td>Event activity weighted by sentence embeddings of the event descriptions, 385 features</td></tr>
+                            <tr><td>Video</td><td>Visual features from the Slow R50 video network, summarized by the 100 principal components that capture the most variation</td></tr>
+                            <tr><td>Audio</td><td>Mel-frequency cepstral coefficients, which describe the sound spectrum, summarized by 10 principal components</td></tr>
+                            <tr><td>Controller actions</td><td>Fraction of each interval that each action is held. The Development Kit uses nine action labels, including <code>Action/Other</code>.</td></tr>
+                            <tr><td>Game events</td><td>Each event description is encoded as 384 numbers and weighted by the activity of that event in the interval. Combining these vectors and adding total event activity gives 385 features.</td></tr>
                         </tbody>
                     </table>
                 </div>
@@ -300,7 +302,7 @@
                 <a href="https://doi.org/10.1016/j.conb.2019.04.002" target="_blank" rel="noopener">Kriegeskorte &amp; Douglas, 2019</a>).
                 The Development Kit illustrates the three steps below.</p>
                 <ol class="num-list">
-                    <li><strong>Feature extraction.</strong> Extract features from the gameplay video, audio, controller actions and game event annotations for the model training games.</li>
+                    <li><strong>Feature extraction.</strong> Convert gameplay video, audio, controller actions and game event annotations from the model training games into numerical features.</li>
                     <li><strong>Model training.</strong> Use the paired gameplay features and measured fMRI responses to fit a linear mapping for each brain parcel. The challenge baseline model uses ridge regression.</li>
                     <li><strong>Model testing.</strong> Apply the trained mapping to features from the test gameplay data to predict the corresponding fMRI responses. Codabench compares these predictions with the hidden measured responses.</li>
                 </ol>

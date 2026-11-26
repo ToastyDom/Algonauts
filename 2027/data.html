@@ -70,7 +70,7 @@
         <div class="page-head-inner">
             <div>
                 <h1>Challenge Data</h1>
-                <p class="lead">The Courtois NeuroMod Project recorded gameplay video, audio, controller actions, game events, and corresponding whole-brain fMRI responses while subjects played four retro video games.</p>
+                <p class="lead">The Courtois NeuroMod Project (CNeuroMod) recorded gameplay video, audio, controller actions and game events while five subjects played retro video games. Functional magnetic resonance imaging (fMRI) measured their brain responses during play.</p>
                 <div class="btn-row">
                     <a href="#" class="btn btn-primary">Request data access</a><!-- TODO: data access form -->
                 </div>
@@ -92,13 +92,13 @@
 
     <div class="hud" role="region" aria-label="Dataset at a glance">
         <div class="hud-inner">
-            <div class="hud-item"><span class="hud-k">Gameplay</span><span class="hud-v">~174 h</span></div>
-            <div class="hud-item"><span class="hud-k">fMRI</span><span class="hud-v">~192 h</span></div>
+            <div class="hud-item"><span class="hud-k">Gameplay</span><span class="hud-v">174.9 h</span></div>
+            <div class="hud-item"><span class="hud-k">fMRI</span><span class="hud-v">192.9 h</span></div>
             <div class="hud-item"><span class="hud-k">Games</span><span class="hud-v">4 + hidden</span></div>
             <div class="hud-item"><span class="hud-k">Subjects</span><span class="hud-v">5</span></div>
             <div class="hud-item"><span class="hud-k">Brain parcels</span><span class="hud-v">1,134</span></div>
-            <div class="hud-item"><span class="hud-k">Sampling (TR)</span><span class="hud-v">1.49 s</span></div>
-            <p class="hud-note">The four challenge games contain approximately 174 hours of gameplay, with about 144 hours for model training and 30 hours for ID testing. The 192 hours of fMRI include periods outside active gameplay, such as loading screens and fixation periods. For ID and OOD testing, participants predict only fMRI responses corresponding to gameplay. All five subjects are tested.</p>
+            <div class="hud-item"><span class="hud-k">fMRI sampling interval</span><span class="hud-v">1.49 s</span></div>
+            <p class="hud-note">The four named games contain about 144 hours of gameplay for model training and 30 hours for in-distribution (ID) testing on the Super Mario Bros. remake. The fMRI recordings also include loading screens and fixation periods, so they are longer than the gameplay recordings. For both ID testing and out-of-distribution (OOD) testing on hidden games, participants predict only the responses during gameplay. Each prediction gives one value per brain region (parcel) every 1.49 seconds.</p>
         </div>
     </div>
 
@@ -108,7 +108,7 @@
             <div class="prose">
                 <h2 class="h2" style="margin-bottom:14px">Access the data</h2>
                 <p>The challenge data are collected and curated by the
-                <a href="https://www.cneuromod.ca/" target="_blank" rel="noopener">Courtois NeuroMod Project (CNeuroMod)</a>.
+                <a href="https://www.cneuromod.ca/" target="_blank" rel="noopener">Courtois NeuroMod Project</a>.
                 Please read the README in each game’s folder before exploring its data: it explains the recording setup,
                 the available files and game-specific caveats.</p>
             </div>
@@ -116,7 +116,7 @@
             <ol class="num-list" style="margin-top:6px">
                 <li>Fill out the <a href="#">data access form</a>.</li><!-- TODO -->
                 <li>You receive the link to the repository with the <strong>challenge data released for the current phase</strong>, and to a tutorial
-                subset with <span class="subj">sub-01</span> used by the Development Kit.</li>
+                subset for one subject (<span class="subj">sub-01</span>) used by the Development Kit.</li>
                 <li>Follow the <a href="challenge.html#baseline">Development Kit</a> to load, align and model the data.</li>
             </ol>
             <!-- Optional external training data -->
@@ -124,7 +124,7 @@
             also train on external data, for example the CNeuroMod
             <a href="https://docs.cneuromod.ca/datasets/friends.html" target="_blank" rel="noopener">Friends</a> and
             <a href="https://docs.cneuromod.ca/datasets/movie10.html" target="_blank" rel="noopener">Movie10</a> datasets,
-            whose fMRI time series have also been extracted with the CNeuroMod 2026 atlas used in this challenge. They are
+            whose fMRI time series have also been extracted with the CNeuroMod 2026 atlas that defines the brain parcels used in this challenge. They are
             not part of the official challenge training data or the ID and OOD test sets.</p>
             </div>
         </div>
@@ -146,9 +146,8 @@
             <section class="games" id="training-games" aria-labelledby="games-title">
                 <h2 id="games-title">Model training games</h2>
                 <p class="games-intro">We release gameplay data and the corresponding fMRI responses for all recorded levels of three
-                games. Super Mario Bros. and Super Mario Bros. 3 provide related environments with differences in visual
-                appearance, level design and game mechanics. Shinobi III differs more substantially in its visual content,
-                actions, event structure and behavioral demands.</p>
+                games. In Super Mario Bros. (SMB) and Super Mario Bros. 3 (SMB3), subjects navigate levels by running, jumping and avoiding or defeating enemies. Shinobi III combines platform navigation with ninja combat.</p>
+                <p class="games-intro">The counts below include attempts across all subjects. An attempt starts when a subject plays a level from the beginning. An attempt can span several lives. Restarting the level from the beginning counts as a new attempt.</p>
                 <ul class="catalog">
                     <li class="cat-item">
                         <div class="cat-shot"><img src="img/games/cat_mario_w1l1.png" alt="Super Mario Bros. gameplay in World 1-1: Mario stands on a row of bricks and ? blocks, a Goomba walks below" width="672" height="378" loading="lazy"></div>
@@ -199,19 +198,18 @@
             <div class="block-rule coverage-wrap" id="subjects">
                 <div class="prose">
                     <h2>Subjects</h2>
-                    <p>Subject coverage differs across games. All five subjects played the three Mario games, and
-                    three of them also played Shinobi III. All five subjects are tested.</p>
+                    <p>Subject coverage differs across games. All five subjects have recordings for the three Mario games. Three of them (sub-01, sub-02 and sub-06) also have recordings for Shinobi III. Both the ID and OOD test sets include all five subjects.</p>
                 </div>
                 <div class="table-wrap">
                     <table class="coverage">
-                        <caption class="sr-only">Games played by each subject</caption>
-                        <thead><tr><th></th><th scope="col">SMB</th><th scope="col">SMB3</th><th scope="col">Shinobi</th><th scope="col" class="c-gap">All-Stars</th></tr></thead>
+                        <caption class="sr-only">Available game recordings for each subject</caption>
+                        <thead><tr><th></th><th scope="col">SMB</th><th scope="col">SMB3</th><th scope="col">Shinobi III</th><th scope="col" class="c-gap">All-Stars</th></tr></thead>
                         <tbody>
-                            <tr><th scope="row">sub-01</th><td class="on"><span class="sr-only">played</span></td><td class="on"><span class="sr-only">played</span></td><td class="on"><span class="sr-only">played</span></td><td class="on c-gap"><span class="sr-only">played</span></td></tr>
-                            <tr><th scope="row">sub-02</th><td class="on"><span class="sr-only">played</span></td><td class="on"><span class="sr-only">played</span></td><td class="on"><span class="sr-only">played</span></td><td class="on c-gap"><span class="sr-only">played</span></td></tr>
-                            <tr><th scope="row">sub-03</th><td class="on"><span class="sr-only">played</span></td><td class="on"><span class="sr-only">played</span></td><td><span class="sr-only">not played</span></td><td class="on c-gap"><span class="sr-only">played</span></td></tr>
-                            <tr><th scope="row">sub-05</th><td class="on"><span class="sr-only">played</span></td><td class="on"><span class="sr-only">played</span></td><td><span class="sr-only">not played</span></td><td class="on c-gap"><span class="sr-only">played</span></td></tr>
-                            <tr><th scope="row">sub-06</th><td class="on"><span class="sr-only">played</span></td><td class="on"><span class="sr-only">played</span></td><td class="on"><span class="sr-only">played</span></td><td class="on c-gap"><span class="sr-only">played</span></td></tr>
+                            <tr><th scope="row">sub-01</th><td class="on"><span class="sr-only">recorded</span></td><td class="on"><span class="sr-only">recorded</span></td><td class="on"><span class="sr-only">recorded</span></td><td class="on c-gap"><span class="sr-only">recorded</span></td></tr>
+                            <tr><th scope="row">sub-02</th><td class="on"><span class="sr-only">recorded</span></td><td class="on"><span class="sr-only">recorded</span></td><td class="on"><span class="sr-only">recorded</span></td><td class="on c-gap"><span class="sr-only">recorded</span></td></tr>
+                            <tr><th scope="row">sub-03</th><td class="on"><span class="sr-only">recorded</span></td><td class="on"><span class="sr-only">recorded</span></td><td><span class="sr-only">not recorded</span></td><td class="on c-gap"><span class="sr-only">recorded</span></td></tr>
+                            <tr><th scope="row">sub-05</th><td class="on"><span class="sr-only">recorded</span></td><td class="on"><span class="sr-only">recorded</span></td><td><span class="sr-only">not recorded</span></td><td class="on c-gap"><span class="sr-only">recorded</span></td></tr>
+                            <tr><th scope="row">sub-06</th><td class="on"><span class="sr-only">recorded</span></td><td class="on"><span class="sr-only">recorded</span></td><td class="on"><span class="sr-only">recorded</span></td><td class="on c-gap"><span class="sr-only">recorded</span></td></tr>
                         </tbody>
                     </table>
                 </div>
@@ -230,9 +228,12 @@
                     <a class="figure-mat fig2-mat only-light" href="img/Algonauts%202027%20dataset%20overview%20figure.png" target="_blank" rel="noopener">
                         <img src="img/Algonauts%202027%20dataset%20overview%20figure.png" alt="Gameplay hours and level statistics per game, fMRI hours per subject and game (192.9 hours in total), button presses per minute and annotated game events per game, and level exposure across scanning sessions for sub-01." width="2560" height="1350" loading="lazy">
                     </a>
-                    <figcaption><strong>Figure 2 | Scale and coverage of the data.</strong> (A) Gameplay hours per game, with levels, level attempts, level completion rate, controller action types and game event types. (B) fMRI hours per subject and game.
-                    (C) Button presses per minute and total annotated game events per game. (D) Level exposure across scanning sessions for sub-01.
-                    <br><a class="fig-open only-dark" href="img/Algonauts%202027%20dataset%20overview%20figure%20dark.png" target="_blank" rel="noopener">Open full size &#8599;</a><a class="fig-open only-light" href="img/Algonauts%202027%20dataset%20overview%20figure.png" target="_blank" rel="noopener">Open full size &#8599;</a></figcaption>
+                    <a class="fig-open only-dark" href="img/Algonauts%202027%20dataset%20overview%20figure%20dark.png" target="_blank" rel="noopener">Open full size &#8599;</a><a class="fig-open only-light" href="img/Algonauts%202027%20dataset%20overview%20figure.png" target="_blank" rel="noopener">Open full size &#8599;</a>
+                    <figcaption><strong>Figure 2 | Scale and coverage of the gameplay and fMRI data</strong>.
+                    <strong>(A)</strong> Recorded gameplay hours for each game, together with the number of levels, level attempts, level completion rate, controller action types, and game event types. A level attempt starts when a level is started from the beginning and can span several lives. The level completion rate is the percentage of attempts completed successfully. Controller action types are distinct buttons or directional inputs, while game event types are distinct annotation labels describing player events, visible objects, and game states.
+                    <strong>(B)</strong> Available fMRI hours for each subject and game, with totals across games shown for each subject. Grey cells indicate that a game was not recorded for a subject.
+                    <strong>(C)</strong> Button presses per minute of recorded gameplay and the total number of annotated game events for each game.
+                    <strong>(D)</strong> Level exposure across scanning sessions for subject 1 (sub-01). Levels in the Mario games are grouped by world (e.g., W1 denotes World 1). The darkest shade marks the first session in which each level was played. Other shades indicate the number of recorded repetitions per session. Plots for all subjects are provided in the challenge GitHub repository.</figcaption>
                 </figure>
             </details>
         </div>
@@ -243,7 +244,7 @@
         <div class="panel-inner">
             <div class="prose">
                 <h2>Gameplay recordings and annotations</h2>
-                <p>The data are organized by subject, session and run. A run can contain several attempts at a level, and the same level can be repeated within or across runs.</p>
+                <p>The data are organized by subject, scanning session and run. A run is one continuous fMRI recording within a session. During a run, a subject may start several level attempts. The same level can be repeated within or across runs.</p>
                 <p>Video and audio document the visual and auditory stimulation presented to the subjects. Controller action annotations describe button presses and holds, while game event annotations identify events such as collecting items, taking damage, defeating enemies, and completing levels. The events table for each fMRI run contains timestamped controller actions and game events. The example below aligns three video frames with annotations from the same gameplay recording.</p>
             </div>
 
@@ -363,8 +364,7 @@
 </tbody>
 </table>
 </div>
-                <p class="codeblock-cap">Rows copied from the events table, other columns omitted. The <code>gym-retro_game</code>
-                row places the recording in the run; frame indices count from the start of that recording.</p>
+                <p class="codeblock-cap">Selected rows and columns from the events table. Onset and duration are in seconds. The <code>gym-retro_game</code> row gives the recording’s start time within the run. Frame indices count from the start of that recording.</p>
                 </details>
             </div>
 
@@ -379,8 +379,7 @@
                     <code>Action/Jump</code>, <code>Action/Attack</code>, …</dd>
                     <dt>Game events</dt>
                     <dd>Occurrences such as <code>Item_collected/Coin</code>, <code>Enemy_defeated/Stomp/Goomba</code>,
-                    <code>Player_damaged</code> or <code>Level_completed</code>: 258 distinct labels across the four games, each
-                    described in natural language in <code>task-&lt;game&gt;_events.json</code>.</dd>
+                    <code>Player_damaged</code> or <code>Level_completed</code>. Across the four games there are 258 distinct game-event labels, excluding controller actions and gameplay video boundary markers. Each game’s <code>task-&lt;game&gt;_events.json</code> describes its labels.</dd>
                     <dt>Timing</dt>
                     <dd>A scanning session contains several fMRI runs, and each run contains several gameplay repetitions. Each run
                     has one events table, and all its timestamps are measured from the start of the run, shared with the fMRI
@@ -396,14 +395,14 @@
             <div class="prose">
                 <h2>fMRI responses</h2>
                 <p>We provide functional magnetic resonance imaging (fMRI) responses recorded during gameplay. The blood-oxygen-level-dependent (BOLD) signal measures brain activity indirectly through changes in blood oxygenation. The hemodynamic response typically peaks about 5–6 seconds after a brief neural event.</p>
-                <p>The neural data were derived from preprocessed BOLD images in MNI template space using the <a href="https://docs.cneuromod.ca/contents/timeseries.html#code" target="_blank" rel="noopener">CNeuroMod time
+                <p>The neural data were derived from preprocessed BOLD images aligned to the Montreal Neurological Institute (MNI) anatomical template using the <a href="https://docs.cneuromod.ca/contents/timeseries.html#code" target="_blank" rel="noopener">CNeuroMod time
                 series extraction pipeline</a>. The voxel time series were denoised for motion, tissue and global signal
-                contributions and slow drift, smoothed with a 5 mm FWHM kernel and standardized within each run, then
+                contributions and slow drift, smoothed with a kernel with a full width at half maximum (FWHM) of 5 mm and standardized within each run, then
                 averaged within the 1,134 parcels of the CNeuroMod 2026 atlas.</p>
             </div>
             <dl class="dl block">
                 <dt>Format</dt><dd>One <code>.h5</code> file per subject and model training game they played, with one array per fMRI run</dd>
-                <dt>Run array</dt><dd><code>(N samples, 1134 parcels)</code>, one sample every 1.49 seconds (TR)</dd>
+                <dt>Run array</dt><dd><code>(N samples, 1134 parcels)</code>, where N is the number of time points in the run. The interval between samples (repetition time, TR) is 1.49 seconds.</dd>
                 <dt>Space</dt><dd>MNI152NLin2009cAsym</dd>
                 <dt>Atlas</dt><dd><a href="https://docs.cneuromod.ca/contents/timeseries.html#file-details" target="_blank" rel="noopener">CNeuroMod 2026 atlas</a> with cortical, subcortical and cerebellar parcels, in the shared <code>atlases/</code> folder</dd>
             </dl>
@@ -414,6 +413,7 @@
     <section class="panel" id="files" role="tabpanel" aria-labelledby="tab-files">
         <div class="panel-inner">
             <h2>File structure</h2>
+            <p class="prose">Each game has a <code>gamelogs/</code> folder for gameplay recordings and annotations. For the model training games, <code>fmri/</code> contains the corresponding brain responses. In the example below, <code>sub-01</code> identifies the subject and <code>ses-001</code> identifies the scanning session.</p>
 <pre class="codeblock">algonauts_2027.competitors/
 ├── README.md
 ├── <span class="h">mario/</span>
