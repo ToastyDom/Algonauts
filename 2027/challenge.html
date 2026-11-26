@@ -135,11 +135,12 @@
                 <p>The goal of the 2027 challenge is to provide a platform for biological and artificial intelligence scientists to cooperate and compete in developing cutting-edge brain encoding models. Specifically, these models should predict brain responses during video gameplay, and generalize outside their training distribution.</p>
                 <p>In collaboration with the <a href="https://www.cneuromod.ca/" target="_blank" rel="noopener">Courtois NeuroMod Project (CNeuroMod)</a>, we provide:</p>
                 <ul>
-                    <li>gameplay data from four retro video games: video, audio, controller actions and game event annotations,</li>
-                    <li>the corresponding functional magnetic resonance imaging (fMRI) responses in 1,134 brain parcels for the three model training games, from five subjects for the Mario games and three for Shinobi III, and</li>
-                    <li>all gameplay data for both test sets, with the corresponding fMRI responses kept hidden.</li>
+                    <li>gameplay video, audio, controller actions and game events from four retro video games,</li>
+                    <li>the corresponding fMRI responses for the three model training games, and</li>
+                    <li>a <a href="#baseline">Development Kit</a> with a video tutorial to help you get familiar with the data.</li>
                 </ul>
-                <p>With that, challenge participants are expected to build computational models that predict brain responses during gameplay for which the brain data are withheld. How well does a model trained on three games predict brain responses during other games? We test in-distribution (ID) generalization using a remake that preserves the levels and basic actions of Super Mario Bros. We test out-of-distribution (OOD) generalization using a separate set of hidden games.</p>
+                <p>With that, challenge participants are expected to build computational models that predict brain responses during gameplay for which the brain data are withheld.</p>
+                <p>How well does a model trained on three games predict brain responses during other games? To answer this question, we test in-distribution (ID) generalization on a remake that preserves the levels and basic actions of Super Mario Bros., and out-of-distribution (OOD) generalization on a separate set of hidden games.</p>
                 <p>Challenge participants submit <strong>predicted fMRI responses</strong> in the format described in the <a href="#">Development Kit</a><!-- TODO: Development Kit link --> to the challenge platform, Codabench, for automatic scoring (see <a href="#evaluation">Evaluation and submission</a>).</p>
             </div>
 
