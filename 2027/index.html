@@ -163,8 +163,6 @@
                     intelligence frontier.</p>
                     <p>Inspired by astronauts’ exploration of space, “algonauts” explore biological and artificial
                     intelligence with state-of-the-art algorithmic tools.</p>
-                    <p>A central goal of computational neuroscience is to predict the brain activity underlying perception, decision-making, and interaction with the environment.</p>
-                    <p>Earlier Algonauts challenges used shared datasets and evaluation procedures to compare models predicting neural responses to images and videos during passive perception. The 2025 challenge broadened this perceptual focus to multimodal processing with movies combining visual and auditory input. Because cognition involves much more than perception, the 2027 challenge takes a leap from passive perception to active interaction through video gameplay. In this setting, perception and action form a closed loop. What players see and hear guides their decisions and actions, and those actions shape the sensory input they receive next.</p>
                     <a href="https://algonautsproject.com/" class="text-link">More about the Algonauts Project &rarr;</a>
                 </div>
                 <ol class="editions" aria-label="Challenge editions">
@@ -194,13 +192,8 @@
             </div>
             <div class="challenge-grid">
                 <div class="prose">
-                    <p>Video games have an established role in both artificial intelligence and cognitive neuroscience.
-                    In artificial intelligence, they provide reproducible environments for comparing how agents learn and
-                    generalize. In cognitive neuroscience, researchers use games to study how the brain represents task
-                    states, learns rules, and responds to prediction errors. The 2027 challenge brings these research
-                    directions together.</p>
-                    <p>In collaboration with the <a href="https://www.cneuromod.ca/" target="_blank" rel="noopener">Courtois
-                    NeuroMod Project (CNeuroMod)</a>, we release gameplay data (video, audio, controller actions, and game event annotations) aligned with functional magnetic resonance imaging (fMRI) measurements. We ask teams to develop encoding models that predict brain activity during gameplay. We test these models on the Super Mario Bros. remake in Super Mario All-Stars for in-distribution (ID) generalization and on hidden games for out-of-distribution (OOD) generalization. Only prediction accuracy on the OOD games determines the final ranking.</p>
+                    <p>In earlier Algonauts challenges, participants built models that predicted brain responses while people viewed images, videos and, in 2025, multimodal movies. During gameplay, perception and action form a closed loop. What players see and hear guides their decisions and actions, and those actions shape what they see and hear next.</p>
+                    <p>The 2027 challenge asks teams to predict human brain activity during gameplay. In collaboration with the <a href="https://www.cneuromod.ca/" target="_blank" rel="noopener">Courtois NeuroMod Project (CNeuroMod)</a>, we provide gameplay video, audio, controller actions and game event annotations aligned with functional magnetic resonance imaging (fMRI) measurements. We test the models on the Super Mario Bros. remake in Super Mario All-Stars for in-distribution (ID) generalization and on hidden games for out-of-distribution (OOD) generalization. Only prediction accuracy on the OOD games determines the final ranking.</p>
                     <div class="btn-row">
                         <a href="challenge.html" class="btn btn-primary">Challenge details &rarr;</a>
                     </div>
@@ -224,6 +217,7 @@
         <div class="section-inner">
             <div class="section-title">
                 <h2>Challenge resources</h2>
+                <p>The challenge is open to all. Request access to the challenge data, use the Development Kit to train and test an encoding model, then submit predicted fMRI responses to Codabench.</p>
             </div>
             <div class="res-grid">
                 <div class="res">
@@ -262,8 +256,8 @@
                         <tr><th scope="row">CCN 2027, Edinburgh</th><td><time datetime="2027-07-26">Jul 26–29, 2027</time></td></tr>
                     </tbody>
                 </table>
-                <p class="dates-note">The challenge concludes with a session at CCN 2027; its date, time and room will be
-                announced.</p><!-- TODO: session date, time, room and program link -->
+                <p class="dates-note">Submission deadlines are at 23:59 Anywhere on Earth (AoE, UTC−12) on the dates listed. This also applies to the report and code deadline.</p>
+                <p class="dates-note">The challenge concludes with a session at CCN 2027 in Edinburgh featuring an overview of the results, presentations by the invited teams and discussion. The session date, time and room will be announced.</p><!-- TODO: session date, time, room and program link -->
                 <p class="dates-note"><a class="text-link" href="challenge.html#phases">Challenge phases &rarr;</a></p>
             </div>
 
@@ -331,33 +325,43 @@
                     <span class="team-photo"><img src="img/team/marie.png" alt="Marie St-Laurent" loading="lazy"></span>
                     <span class="team-name">Marie St-Laurent</span><span class="team-aff">CRIUGM</span>
                 </a>
-                <a href="https://github.com/bpinsard" target="_blank" rel="noopener" class="team-card">
-                    <span class="team-photo"><img src="img/team/basile.jpg" alt="Basile Pinsard" loading="lazy"></span>
-                    <span class="team-name">Basile Pinsard</span><span class="team-aff">CRIUGM</span>
-                </a>
                 <a href="https://scholar.google.com/citations?user=2K-2LacAAAAJ&amp;hl=fr" target="_blank" rel="noopener" class="team-card">
                     <span class="team-photo"><img src="img/team/yann.jpg" alt="Yann Harel" loading="lazy"></span>
                     <span class="team-name">Yann Harel</span><span class="team-aff">Boston College</span>
+                </a>
+                <a href="https://github.com/bpinsard" target="_blank" rel="noopener" class="team-card">
+                    <span class="team-photo"><img src="img/team/basile.jpg" alt="Basile Pinsard" loading="lazy"></span>
+                    <span class="team-name">Basile Pinsard</span><span class="team-aff">CRIUGM</span>
                 </a>
                 <a href="https://simexp.github.io" target="_blank" rel="noopener" class="team-card">
                     <span class="team-photo"><img src="img/team/julie.png" alt="Julie Boyle" loading="lazy"></span>
                     <span class="team-name">Julie Boyle</span><span class="team-aff">Université de Montréal</span>
                 </a>
-                <a href="https://simexp.github.io" target="_blank" rel="noopener" class="team-card">
-                    <span class="team-photo"><img src="img/team/lune.jpeg" alt="Lune Bellec" loading="lazy"></span>
-                    <span class="team-name">Lune Bellec</span><span class="team-aff">Université de Montréal</span>
+                <a href="https://www.linkedin.com/in/cl%C3%A9o-lam-07699a2b2/" target="_blank" rel="noopener" class="team-card">
+                    <span class="team-photo"><img src="img/team/cleo.jpg" alt="Cléo Lam" loading="lazy"></span>
+                    <span class="team-name">Cléo Lam</span><span class="team-aff">Université de Montréal</span>
+                </a>
+                <a href="https://www.linkedin.com/in/hugo-delhaye-5362022a5/" target="_blank" rel="noopener" class="team-card">
+                    <span class="team-photo"><img src="img/team/hugo.png" alt="Hugo Delhaye" loading="lazy"></span>
+                    <span class="team-name">Hugo Delhaye</span><span class="team-aff">Université de Montréal</span>
                 </a>
                 <a href="https://www.csail.mit.edu/person/aude-oliva" target="_blank" rel="noopener" class="team-card">
                     <span class="team-photo"><img src="img/team/aude.jpg" alt="Aude Oliva" loading="lazy"></span>
                     <span class="team-name">Aude Oliva</span><span class="team-aff">Massachusetts Institute of Technology</span>
                 </a>
-                <a href="http://www.cvai.cs.uni-frankfurt.de/" target="_blank" rel="noopener" class="team-card">
-                    <span class="team-photo"><img src="img/team/gemma_new.png" alt="Gemma Roig" loading="lazy"></span>
-                    <span class="team-name">Gemma Roig</span><span class="team-aff">Goethe University Frankfurt</span>
+            </div>
+            <div class="team-grid team-grid--last">
+                <a href="https://simexp.github.io" target="_blank" rel="noopener" class="team-card">
+                    <span class="team-photo"><img src="img/team/lune.jpeg" alt="Lune Bellec" loading="lazy"></span>
+                    <span class="team-name">Lune Bellec</span><span class="team-aff">Université de Montréal</span>
                 </a>
                 <a href="https://www.ewi-psy.fu-berlin.de/en/einrichtungen/arbeitsbereiche/neural_dyn_of_vis_cog/index.html" target="_blank" rel="noopener" class="team-card">
                     <span class="team-photo"><img src="img/team/radek.png" alt="Radoslaw Cichy" loading="lazy"></span>
                     <span class="team-name">Radoslaw Cichy</span><span class="team-aff">Freie Universität Berlin</span>
+                </a>
+                <a href="http://www.cvai.cs.uni-frankfurt.de/" target="_blank" rel="noopener" class="team-card">
+                    <span class="team-photo"><img src="img/team/gemma_new.png" alt="Gemma Roig" loading="lazy"></span>
+                    <span class="team-name">Gemma Roig</span><span class="team-aff">Goethe University Frankfurt</span>
                 </a>
             </div>
 
@@ -365,24 +369,24 @@
             <div class="orgs">
                 <h3>Organizing institutions and groups</h3>
                 <ul class="org-row">
-                    <li><a class="org" href="https://www.cvai.cs.uni-frankfurt.de/" target="_blank" rel="noopener">
-                        <span class="org-tile"><img class="org-cvai" src="img/initiatives/CVAI.png" alt="Computational Vision &amp; Artificial Intelligence (CVAI), Goethe University Frankfurt" width="124" height="146" loading="lazy"></span>
-                        <span class="org-name" aria-hidden="true">CVAI</span></a></li>
-                    <li><a class="org" href="https://www.ewi-psy.fu-berlin.de/en/psychologie/arbeitsbereiche/neural_dyn_of_vis_cog/index.html" target="_blank" rel="noopener">
-                        <span class="org-tile"><img class="org-fu" src="img/initiatives/fu_berlin.png" alt="Freie Universität Berlin" width="736" height="314" loading="lazy"></span>
-                        <span class="org-name" aria-hidden="true">Freie Universität Berlin</span></a></li>
                     <li><a class="org" href="https://www.uni-frankfurt.de/en" target="_blank" rel="noopener">
                         <span class="org-tile"><img class="org-goethe" src="img/initiatives/Goethe.png" alt="Goethe University Frankfurt" width="3840" height="2093" loading="lazy"></span>
                         <span class="org-name" aria-hidden="true">Goethe University Frankfurt</span></a></li>
+                    <li><a class="org" href="https://www.ewi-psy.fu-berlin.de/en/psychologie/arbeitsbereiche/neural_dyn_of_vis_cog/index.html" target="_blank" rel="noopener">
+                        <span class="org-tile"><img class="org-fu" src="img/initiatives/fu_berlin.png" alt="Freie Universität Berlin" width="736" height="314" loading="lazy"></span>
+                        <span class="org-name" aria-hidden="true">Freie Universität Berlin</span></a></li>
+                    <li><a class="org" href="https://hessian.ai/" target="_blank" rel="noopener">
+                        <span class="org-tile"><img class="org-hessian" src="img/initiatives/hessian_ai.svg" alt="hessian.AI" width="308" height="63" loading="lazy"></span>
+                        <span class="org-name" aria-hidden="true">hessian.AI</span></a></li>
                     <li><a class="org" href="https://www.umontreal.ca/en/" target="_blank" rel="noopener">
                         <span class="org-tile"><img class="org-udem" src="img/initiatives/udem.png" alt="Université de Montréal" width="1786" height="692" loading="lazy"></span>
                         <span class="org-name" aria-hidden="true">Université de Montréal</span></a></li>
                     <li><a class="org" href="https://docs.cneuromod.ca/" target="_blank" rel="noopener">
                         <span class="org-tile"><img class="org-cneuromod" src="img/initiatives/CneuroMod.png" alt="Courtois NeuroMod Project (CNeuroMod)" width="474" height="106" loading="lazy"></span>
                         <span class="org-name" aria-hidden="true">CNeuroMod</span></a></li>
-                    <li><a class="org" href="https://mitibm.mit.edu/" target="_blank" rel="noopener">
-                        <span class="org-tile"><img class="org-mitibm" src="img/logos/logo_mitibm.png" alt="MIT-IBM Watson AI Lab" width="656" height="654" loading="lazy"></span>
-                        <span class="org-name" aria-hidden="true">MIT-IBM Watson AI Lab</span></a></li>
+                    <li><a class="org" href="https://www.mit.edu/" target="_blank" rel="noopener">
+                        <span class="org-tile org-tile--mit"><img class="org-mit" src="img/initiatives/MIT-lockup-3line-red.png" alt="Massachusetts Institute of Technology (MIT)" width="750" height="230" loading="lazy"></span>
+                        <span class="org-name" aria-hidden="true">MIT</span></a></li>
                 </ul>
             </div>
 
