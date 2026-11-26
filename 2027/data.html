@@ -93,12 +93,12 @@
     <div class="hud" role="region" aria-label="Dataset at a glance">
         <div class="hud-inner">
             <div class="hud-item"><span class="hud-k">Gameplay</span><span class="hud-v">~174 h</span></div>
-            <div class="hud-item"><span class="hud-k">fMRI</span><span class="hud-v">212.5 h</span></div>
+            <div class="hud-item"><span class="hud-k">fMRI</span><span class="hud-v">~192 h</span></div>
             <div class="hud-item"><span class="hud-k">Games</span><span class="hud-v">4 + hidden</span></div>
-            <div class="hud-item"><span class="hud-k">Subjects</span><span class="hud-v">6</span></div>
+            <div class="hud-item"><span class="hud-k">Subjects</span><span class="hud-v">5</span></div>
             <div class="hud-item"><span class="hud-k">Brain parcels</span><span class="hud-v">1,134</span></div>
             <div class="hud-item"><span class="hud-k">Sampling (TR)</span><span class="hud-v">1.49 s</span></div>
-            <p class="hud-note">The four challenge games contain approximately 174 hours of gameplay, with about 144 hours for model training and 30 hours for ID testing. The 212.5 hours of fMRI include periods outside active gameplay, such as loading screens and fixation periods. For ID and OOD testing, participants predict only fMRI responses corresponding to gameplay. Six subjects contribute data, and five are tested.</p>
+            <p class="hud-note">The four challenge games contain approximately 174 hours of gameplay, with about 144 hours for model training and 30 hours for ID testing. The 192 hours of fMRI include periods outside active gameplay, such as loading screens and fixation periods. For ID and OOD testing, participants predict only fMRI responses corresponding to gameplay. All five subjects are tested.</p>
         </div>
     </div>
 
@@ -153,17 +153,17 @@
                     <li class="cat-item">
                         <div class="cat-shot"><img src="img/games/cat_mario_w1l1.png" alt="Super Mario Bros. gameplay in World 1-1: Mario stands on a row of bricks and ? blocks, a Goomba walks below" width="672" height="378" loading="lazy"></div>
                         <div><h3>Super Mario Bros.</h3>
-                        <p class="cat-meta"><span>22 levels</span> · <span>3,374 attempts</span></p></div>
+                        <p class="cat-meta"><span>22 levels</span> · <span>3,221 attempts</span></p></div>
                     </li>
                     <li class="cat-item">
                         <div class="cat-shot"><img src="img/games/cat_mario3.png" alt="Super Mario Bros. 3 gameplay: Mario jumps past a Piranha Plant in a pipe" width="720" height="405" loading="lazy"></div>
                         <div><h3>Super Mario Bros. 3</h3>
-                        <p class="cat-meta"><span>80 levels</span> · <span>1,589 attempts</span></p></div>
+                        <p class="cat-meta"><span>80 levels</span> · <span>1,574 attempts</span></p></div>
                     </li>
                     <li class="cat-item">
                         <div class="cat-shot"><img src="img/games/cat_shinobi.png" alt="Shinobi III gameplay: the ninja jumps through a forest toward an enemy" width="640" height="360" loading="lazy"></div>
                         <div><h3>Shinobi III: Return of the Ninja Master</h3>
-                        <p class="cat-meta"><span>3 levels</span> · <span>666 attempts</span></p></div>
+                        <p class="cat-meta"><span>3 levels</span> · <span>484 attempts</span></p></div>
                     </li>
                 </ul>
             </section>
@@ -174,7 +174,7 @@
                     <h2 id="id-test-title">In-distribution test game</h2>
                     <div class="cat-shot"><img src="img/games/cat_mariostars_w1l1.png" alt="Super Mario All-Stars gameplay at the same spot in World 1-1, with remade graphics: Mario stands on a row of bricks and ? blocks, a Goomba walks below" width="672" height="378" loading="lazy"></div>
                     <div class="tg-title"><h3>Super Mario All-Stars</h3>
-                    <p class="cat-meta"><span>22 levels</span> · <span>1,232 attempts</span></p></div>
+                    <p class="cat-meta"><span>22 levels</span> · <span>1,212 attempts</span></p></div>
                     <div class="tg-text">
                         <p>For ID testing, we use the visually enhanced remake of Super Mario Bros. from Super Mario All-Stars, a collection of four Mario remakes. This remake preserves the original levels and basic actions. We release gameplay data for all 22 recorded levels, comprising approximately 30 hours across subjects, and keep the corresponding fMRI responses hidden.</p>
                     </div>
@@ -199,20 +199,19 @@
             <div class="block-rule coverage-wrap" id="subjects">
                 <div class="prose">
                     <h2>Subjects</h2>
-                    <p>Subject coverage differs across games. Five subjects played the three Mario games and four played
-                    Shinobi III. Subject <span class="subj">sub-04</span> played only Shinobi III. Data from this subject are provided for training only.</p>
+                    <p>Subject coverage differs across games. All five subjects played the three Mario games, and
+                    three of them also played Shinobi III. All five subjects are tested.</p>
                 </div>
                 <div class="table-wrap">
                     <table class="coverage">
                         <caption class="sr-only">Games played by each subject</caption>
-                        <thead><tr><th></th><th scope="col">SMB</th><th scope="col">SMB3</th><th scope="col">Shinobi</th><th scope="col" class="c-gap">All-Stars</th><th scope="col" class="role">Role</th></tr></thead>
+                        <thead><tr><th></th><th scope="col">SMB</th><th scope="col">SMB3</th><th scope="col">Shinobi</th><th scope="col" class="c-gap">All-Stars</th></tr></thead>
                         <tbody>
-                            <tr><th scope="row">sub-01</th><td class="on"><span class="sr-only">played</span></td><td class="on"><span class="sr-only">played</span></td><td class="on"><span class="sr-only">played</span></td><td class="on c-gap"><span class="sr-only">played</span></td><td class="role eval">Tested</td></tr>
-                            <tr><th scope="row">sub-02</th><td class="on"><span class="sr-only">played</span></td><td class="on"><span class="sr-only">played</span></td><td class="on"><span class="sr-only">played</span></td><td class="on c-gap"><span class="sr-only">played</span></td><td class="role eval">Tested</td></tr>
-                            <tr><th scope="row">sub-03</th><td class="on"><span class="sr-only">played</span></td><td class="on"><span class="sr-only">played</span></td><td><span class="sr-only">not played</span></td><td class="on c-gap"><span class="sr-only">played</span></td><td class="role eval">Tested</td></tr>
-                            <tr><th scope="row">sub-04</th><td><span class="sr-only">not played</span></td><td><span class="sr-only">not played</span></td><td class="on"><span class="sr-only">played</span></td><td class="c-gap"><span class="sr-only">not played</span></td><td class="role">Training only</td></tr>
-                            <tr><th scope="row">sub-05</th><td class="on"><span class="sr-only">played</span></td><td class="on"><span class="sr-only">played</span></td><td><span class="sr-only">not played</span></td><td class="on c-gap"><span class="sr-only">played</span></td><td class="role eval">Tested</td></tr>
-                            <tr><th scope="row">sub-06</th><td class="on"><span class="sr-only">played</span></td><td class="on"><span class="sr-only">played</span></td><td class="on"><span class="sr-only">played</span></td><td class="on c-gap"><span class="sr-only">played</span></td><td class="role eval">Tested</td></tr>
+                            <tr><th scope="row">sub-01</th><td class="on"><span class="sr-only">played</span></td><td class="on"><span class="sr-only">played</span></td><td class="on"><span class="sr-only">played</span></td><td class="on c-gap"><span class="sr-only">played</span></td></tr>
+                            <tr><th scope="row">sub-02</th><td class="on"><span class="sr-only">played</span></td><td class="on"><span class="sr-only">played</span></td><td class="on"><span class="sr-only">played</span></td><td class="on c-gap"><span class="sr-only">played</span></td></tr>
+                            <tr><th scope="row">sub-03</th><td class="on"><span class="sr-only">played</span></td><td class="on"><span class="sr-only">played</span></td><td><span class="sr-only">not played</span></td><td class="on c-gap"><span class="sr-only">played</span></td></tr>
+                            <tr><th scope="row">sub-05</th><td class="on"><span class="sr-only">played</span></td><td class="on"><span class="sr-only">played</span></td><td><span class="sr-only">not played</span></td><td class="on c-gap"><span class="sr-only">played</span></td></tr>
+                            <tr><th scope="row">sub-06</th><td class="on"><span class="sr-only">played</span></td><td class="on"><span class="sr-only">played</span></td><td class="on"><span class="sr-only">played</span></td><td class="on c-gap"><span class="sr-only">played</span></td></tr>
                         </tbody>
                     </table>
                 </div>
@@ -221,20 +220,19 @@
             <!-- Figure 2 -->
             <details class="optional" id="coverage-figure">
                 <summary>
-                    <span><span class="s-t">Dataset coverage figure</span><span class="s-d">Levels, attempts, subject coverage and controller use. The image shows earlier data totals.</span></span>
+                    <span><span class="s-t">Dataset coverage figure</span><span class="s-d">Gameplay and fMRI hours, levels, attempts, controller use and game events.</span></span>
                     <span class="s-i"><span class="s-show">Show</span><span class="s-hide">Hide</span></span>
                 </summary>
                 <figure class="figure">
                     <a class="figure-mat fig2-mat only-dark" href="img/Algonauts%202027%20dataset%20overview%20figure%20dark.png" target="_blank" rel="noopener">
-                        <img src="img/Algonauts%202027%20dataset%20overview%20figure%20dark.png" alt="Dataset coverage by game and subject, controller use and level exposure for sub-01. Panels A and B show earlier counts. The caption gives the current totals." width="2560" height="1350" loading="lazy">
+                        <img src="img/Algonauts%202027%20dataset%20overview%20figure%20dark.png" alt="Gameplay hours and level statistics per game, fMRI hours per subject and game (192.9 hours in total), button presses per minute and annotated game events per game, and level exposure across scanning sessions for sub-01." width="2560" height="1350" loading="lazy">
                     </a>
-                    <a class="figure-mat fig2-mat only-light" href="img/fig2_dataset_overview.png" target="_blank" rel="noopener">
-                        <img src="img/fig2_dataset_overview.png" alt="Dataset coverage by game and subject, controller use and level exposure for sub-01. Panels A and B show earlier counts. The caption gives the current totals." width="2560" height="1350" loading="lazy">
+                    <a class="figure-mat fig2-mat only-light" href="img/Algonauts%202027%20dataset%20overview%20figure.png" target="_blank" rel="noopener">
+                        <img src="img/Algonauts%202027%20dataset%20overview%20figure.png" alt="Gameplay hours and level statistics per game, fMRI hours per subject and game (192.9 hours in total), button presses per minute and annotated game events per game, and level exposure across scanning sessions for sub-01." width="2560" height="1350" loading="lazy">
                     </a>
-                    <figcaption><strong>Figure 2 | Scale and coverage of the data.</strong> (A) Gameplay by game. (B) fMRI hours by subject and game.
-                    The counts in A and B differ from the paper’s text, which reports approximately 174 hours of gameplay, 212.5 hours of fMRI and 266 distinct game-event labels across the four games.
-                    (C) Button presses per minute and annotated game events. (D) Level exposure across scanning sessions for sub-01.
-                    <br><a class="fig-open only-dark" href="img/Algonauts%202027%20dataset%20overview%20figure%20dark.png" target="_blank" rel="noopener">Open full size &#8599;</a><a class="fig-open only-light" href="img/fig2_dataset_overview.png" target="_blank" rel="noopener">Open full size &#8599;</a></figcaption>
+                    <figcaption><strong>Figure 2 | Scale and coverage of the data.</strong> (A) Gameplay hours per game, with levels, level attempts, level completion rate, controller action types and game event types. (B) fMRI hours per subject and game.
+                    (C) Button presses per minute and total annotated game events per game. (D) Level exposure across scanning sessions for sub-01.
+                    <br><a class="fig-open only-dark" href="img/Algonauts%202027%20dataset%20overview%20figure%20dark.png" target="_blank" rel="noopener">Open full size &#8599;</a><a class="fig-open only-light" href="img/Algonauts%202027%20dataset%20overview%20figure.png" target="_blank" rel="noopener">Open full size &#8599;</a></figcaption>
                 </figure>
             </details>
         </div>
@@ -381,7 +379,7 @@
                     <code>Action/Jump</code>, <code>Action/Attack</code>, …</dd>
                     <dt>Game events</dt>
                     <dd>Occurrences such as <code>Item_collected/Coin</code>, <code>Enemy_defeated/Stomp/Goomba</code>,
-                    <code>Player_damaged</code> or <code>Level_completed</code>: 266 distinct labels across the four games, each
+                    <code>Player_damaged</code> or <code>Level_completed</code>: 258 distinct labels across the four games, each
                     described in natural language in <code>task-&lt;game&gt;_events.json</code>.</dd>
                     <dt>Timing</dt>
                     <dd>A scanning session contains several fMRI runs, and each run contains several gameplay repetitions. Each run

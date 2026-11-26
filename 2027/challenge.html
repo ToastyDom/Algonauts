@@ -163,7 +163,7 @@
             </div>
 
             <div class="prose block">
-                <p>We provide gameplay video, audio, controller actions and game event annotations aligned with fMRI responses from six subjects.
+                <p>We provide gameplay video, audio, controller actions and game event annotations aligned with fMRI responses from five subjects.
                 We release both gameplay data and fMRI responses for the three model training games. For both test sets, we release all gameplay data and keep the corresponding fMRI responses hidden.
                 Participants submit predicted fMRI responses to Codabench for scoring.</p>
                 <div class="btn-row" style="margin-top:22px">
@@ -207,9 +207,8 @@
         <div class="prose">
             <h2>Evaluation and submission</h2>
             <p>For each subject and game, Codabench concatenates the predicted and measured fMRI time series across all corresponding gameplay videos in the test set. It then calculates Pearson’s correlation coefficient (<em>r</em>) between the predicted and measured sequences separately for each of the 1,134 brain parcels. The platform averages the parcel correlations to obtain one score per subject and game. For the OOD test set, which contains multiple games, it averages game scores within each subject, weighting games equally. It then averages the scores across subjects to obtain a single prediction accuracy score per submission for each test set. Codabench uses the ID scores to rank submissions on the public leaderboard during the Development Phase, and the OOD scores to determine the final challenge ranking.</p>
-            <p>Five subjects are tested: <span class="subj">sub-01</span>, <span class="subj">sub-02</span>,
-            <span class="subj">sub-03</span>, <span class="subj">sub-05</span> and <span class="subj">sub-06</span>.
-            Subject <span class="subj">sub-04</span> played only Shinobi III. Data from this subject are provided for training only.</p>
+            <p>All five subjects are tested: <span class="subj">sub-01</span>, <span class="subj">sub-02</span>,
+            <span class="subj">sub-03</span>, <span class="subj">sub-05</span> and <span class="subj">sub-06</span>.</p>
 
             <div class="block" id="submission">
                 <h3>Prepare a submission</h3>
