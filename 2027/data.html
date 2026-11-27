@@ -98,7 +98,6 @@
             <div class="hud-item"><span class="hud-k">Subjects</span><span class="hud-v">5</span></div>
             <div class="hud-item"><span class="hud-k">Brain parcels</span><span class="hud-v">1,134</span></div>
             <div class="hud-item"><span class="hud-k">fMRI sampling interval</span><span class="hud-v">1.49 s</span></div>
-            <p class="hud-note">The four named games contain about 144 hours of gameplay for model training and 30 hours for in-distribution (ID) testing on the Super Mario Bros. remake. The fMRI recordings also include loading screens and fixation periods, so they are longer than the gameplay recordings. For both ID testing and out-of-distribution (OOD) testing on hidden games, participants predict only the responses during gameplay. Each prediction gives one value per brain region (parcel) every 1.49 seconds.</p>
         </div>
     </div>
 
@@ -109,13 +108,12 @@
                 <h2 class="h2" style="margin-bottom:14px">Access the data</h2>
                 <p>The challenge data are collected and curated by the
                 <a href="https://www.cneuromod.ca/" target="_blank" rel="noopener">Courtois NeuroMod Project</a>.
-                Please read the README in each game’s folder before exploring its data: it explains the recording setup,
-                the available files and game-specific caveats.</p>
+                The documentation in each game’s <code>gamelogs/</code> folder explains the annotations, replay files and game-specific details. See the <a href="#files">file structure</a> for the layout of the gameplay and fMRI data.</p>
             </div>
             <div>
             <ol class="num-list" style="margin-top:6px">
                 <li>Fill out the <a href="#">data access form</a>.</li><!-- TODO -->
-                <li>You receive the link to the repository with the <strong>challenge data released for the current phase</strong>, and to a tutorial
+                <li>You receive the link to the repository with the <strong>challenge data</strong>, and to a tutorial
                 subset for one subject (<span class="subj">sub-01</span>) used by the Development Kit.</li>
                 <li>Follow the <a href="challenge.html#baseline">Development Kit</a> to load, align and model the data.</li>
             </ol>
@@ -125,7 +123,7 @@
             <a href="https://docs.cneuromod.ca/datasets/friends.html" target="_blank" rel="noopener">Friends</a> and
             <a href="https://docs.cneuromod.ca/datasets/movie10.html" target="_blank" rel="noopener">Movie10</a> datasets,
             whose fMRI time series have also been extracted with the CNeuroMod 2026 atlas that defines the brain parcels used in this challenge. They are
-            not part of the official challenge training data or the ID and OOD test sets.</p>
+            not part of the official challenge training data or the in-distribution (ID) and out-of-distribution (OOD) test sets.</p>
             </div>
         </div>
     </section>
@@ -133,7 +131,7 @@
     <nav class="tabs" data-tabs aria-label="Challenge data">
         <div class="tabs-inner" role="tablist">
             <a class="tab" role="tab" href="#games" id="tab-games" aria-controls="games" aria-selected="true">Games &amp; subjects</a>
-            <a class="tab" role="tab" href="#gameplay" id="tab-gameplay" aria-controls="gameplay" aria-selected="false">Gameplay<span class="tab-long"> &amp; annotations</span></a>
+            <a class="tab" role="tab" href="#gameplay" id="tab-gameplay" aria-controls="gameplay" aria-selected="false">Gameplay data</a>
             <a class="tab" role="tab" href="#brain" id="tab-brain" aria-controls="brain" aria-selected="false">Brain data</a>
             <a class="tab" role="tab" href="#files" id="tab-files" aria-controls="files" aria-selected="false">Files &amp; license</a>
         </div>
@@ -145,24 +143,23 @@
             <!-- Model training games -->
             <section class="games" id="training-games" aria-labelledby="games-title">
                 <h2 id="games-title">Model training games</h2>
-                <p class="games-intro">We release gameplay data and the corresponding fMRI responses for all recorded levels of three
-                games. In Super Mario Bros. (SMB) and Super Mario Bros. 3 (SMB3), subjects navigate levels by running, jumping and avoiding or defeating enemies. Shinobi III combines platform navigation with ninja combat.</p>
-                <p class="games-intro">The counts below include attempts across all subjects. An attempt starts when a subject plays a level from the beginning. An attempt can span several lives. Restarting the level from the beginning counts as a new attempt.</p>
+                <p class="games-intro">Across all recorded levels of the three model training games, we provide approximately 144 hours of gameplay and the corresponding fMRI responses. In Super Mario Bros. (SMB) and Super Mario Bros. 3 (SMB3), subjects navigate levels by running, jumping and avoiding or defeating enemies. Shinobi III combines platform navigation with ninja combat.</p>
+                <p class="games-intro">The counts below give the number of recorded levels and level starts across all subjects. Each <code>LevelStarted</code> row marks the start of an attempt. Restarts are recorded separately as <code>LevelRestarted</code>.</p>
                 <ul class="catalog">
                     <li class="cat-item">
                         <div class="cat-shot"><img src="img/games/cat_mario_w1l1.png" alt="Super Mario Bros. gameplay in World 1-1: Mario stands on a row of bricks and ? blocks, a Goomba walks below" width="672" height="378" loading="lazy"></div>
                         <div><h3>Super Mario Bros.</h3>
-                        <p class="cat-meta"><span>22 levels</span> · <span>3,221 attempts</span></p></div>
+                        <p class="cat-meta"><span>22 levels</span> · <span>3,215 level starts</span></p></div>
                     </li>
                     <li class="cat-item">
                         <div class="cat-shot"><img src="img/games/cat_mario3.png" alt="Super Mario Bros. 3 gameplay: Mario jumps past a Piranha Plant in a pipe" width="720" height="405" loading="lazy"></div>
                         <div><h3>Super Mario Bros. 3</h3>
-                        <p class="cat-meta"><span>80 levels</span> · <span>1,574 attempts</span></p></div>
+                        <p class="cat-meta"><span>80 levels</span> · <span>1,574 level starts</span></p></div>
                     </li>
                     <li class="cat-item">
                         <div class="cat-shot"><img src="img/games/cat_shinobi.png" alt="Shinobi III gameplay: the ninja jumps through a forest toward an enemy" width="640" height="360" loading="lazy"></div>
                         <div><h3>Shinobi III: Return of the Ninja Master</h3>
-                        <p class="cat-meta"><span>3 levels</span> · <span>484 attempts</span></p></div>
+                        <p class="cat-meta"><span>3 levels</span> · <span>484 level starts</span></p></div>
                     </li>
                 </ul>
             </section>
@@ -173,7 +170,7 @@
                     <h2 id="id-test-title">In-distribution test game</h2>
                     <div class="cat-shot"><img src="img/games/cat_mariostars_w1l1.png" alt="Super Mario All-Stars gameplay at the same spot in World 1-1, with remade graphics: Mario stands on a row of bricks and ? blocks, a Goomba walks below" width="672" height="378" loading="lazy"></div>
                     <div class="tg-title"><h3>Super Mario All-Stars</h3>
-                    <p class="cat-meta"><span>22 levels</span> · <span>1,212 attempts</span></p></div>
+                    <p class="cat-meta"><span>22 levels</span> · <span>1,212 level starts</span></p></div>
                     <div class="tg-text">
                         <p>For ID testing, we use the visually enhanced remake of Super Mario Bros. from Super Mario All-Stars, a collection of four Mario remakes. This remake preserves the original levels and basic actions. We release gameplay data for all 22 recorded levels, comprising approximately 30 hours across subjects, and keep the corresponding fMRI responses hidden.</p>
                     </div>
@@ -239,13 +236,32 @@
         </div>
     </section>
 
-    <!-- ===================== Gameplay & annotations ===================== -->
+    <!-- ===================== Gameplay data ===================== -->
     <section class="panel" id="gameplay" role="tabpanel" aria-labelledby="tab-gameplay">
         <div class="panel-inner">
             <div class="prose">
-                <h2>Gameplay recordings and annotations</h2>
-                <p>The data are organized by subject, scanning session and run. A run is one continuous fMRI recording within a session. During a run, a subject may start several level attempts. The same level can be repeated within or across runs.</p>
-                <p>Video and audio document the visual and auditory stimulation presented to the subjects. Controller action annotations describe button presses and holds, while game event annotations identify events such as collecting items, taking damage, defeating enemies, and completing levels. The events table for each fMRI run contains timestamped controller actions and game events. The example below aligns three video frames with annotations from the same gameplay recording.</p>
+                <h2>Gameplay data and timing</h2>
+                <p>For each game, we provide gameplay video, audio, controller actions and game event annotations. The data are organized by subject, scanning session and run. A run is a continuous fMRI recording with one events table and can contain several gameplay recordings.</p>
+            </div>
+            <dl class="dl">
+                <dt>Video and audio</dt>
+                <dd>Each <code>.mp4</code> file contains the video and audio from one continuous stretch of play, called a repetition, recorded at 60 frames per second. The events table marks level starts with <code>LevelStarted</code> and restarts with <code>LevelRestarted</code>. An attempt can span several recordings. In <em>Super Mario Bros. 3</em>, each recording covers one life.</dd>
+                <dt>Controller actions</dt>
+                <dd>The events table records button presses and holds, including directional inputs. For example, <code>Action/Jump</code> marks a press of the jump button, and its duration gives the time the button was held.</dd>
+                <dt>Game events</dt>
+                <dd>Annotations describe what happened during play, such as <code>ItemCollected/Coin</code>, <code>EnemyDefeated/Stomp/Goomba</code>, <code>PlayerDamaged</code> or <code>LevelCompleted</code>. Across the four games there are 258 distinct game event labels, excluding controller actions and <code>Repetition</code> markers. Each game’s <code>task-&lt;game&gt;_events.json</code> describes its labels.</dd>
+                <dt>Timing</dt>
+                <dd>
+                    <p>The fMRI scanner records continuously during a run, and a run can contain several gameplay videos. Each event therefore has two timestamps, both in seconds. Use <code>onset</code> to find the event in the fMRI run, measured from the start of the run. Use <code>onset_in_video</code> to find the same event in the gameplay video, measured from the start of that video.</p>
+                    For a recorded repetition, the <code>Repetition</code> row tells you where the video starts in the run, how long it lasts, and which file to open (<code>stim_file</code>). Frame numbers also count from the start of that video.
+                </dd>
+            </dl>
+            <div class="prose">
+            </div>
+
+            <div class="block prose">
+                <h2>Gameplay annotations in one recording</h2>
+                <p>The example below shows how the gameplay video, controller actions and game events line up in time. The three frames show Mario approaching and stomping a Goomba. The timeline shows when the player pressed Jump and when the game registered the stomp.</p>
             </div>
 
             <!-- Gameplay example -->
@@ -265,38 +281,38 @@
                     </figure></li>
                     <li><figure style="margin:0">
                         <img src="img/example/frame_586.png" alt="Frame C: Mario lands on the Goomba" width="480" height="270" loading="lazy">
-                        <figcaption><b>C</b> Enemy_defeated/Stomp/Goomba<span class="fr">frame 586</span></figcaption>
+                        <figcaption><b>C</b> EnemyDefeated/Stomp/Goomba<span class="fr">frame 586</span></figcaption>
                     </figure></li>
                 </ul>
 
 <!-- Timeline: wide and narrow versions -->
 <svg class="ex-timeline ex-timeline--wide" viewBox="0 0 640 218" role="img" aria-labelledby="ex-tl-title ex-tl-desc">
 <title id="ex-tl-title">Annotations around the first Goomba stomp</title>
-<desc id="ex-tl-desc">Timeline from 8.3 to 10.2 seconds into the recording. Right and Run are held from 8.60 and 8.50 seconds onward. Jump is held from 9.02 to 9.33 seconds. A Goomba is on screen until 10.10 seconds. The stomp is annotated at 9.75 seconds. Frames A, B and C are at 8.90, 9.40 and 9.75 seconds.</desc>
-<line class="mk" x1="332.4" y1="18" x2="332.4" y2="184"/>
-<text class="mk-l" x="332.4" y="13" text-anchor="middle">A</text>
-<line class="mk" x1="446.1" y1="18" x2="446.1" y2="184"/>
-<text class="mk-l" x="446.1" y="13" text-anchor="middle">B</text>
-<line class="mk" x1="525.7" y1="18" x2="525.7" y2="184"/>
-<text class="mk-l" x="525.7" y="13" text-anchor="middle">C</text>
+<desc id="ex-tl-desc">Timeline from 8.3 to 10.2 seconds into the recording. Run is held from 8.517 seconds and Right from 8.617 seconds, both beyond the displayed interval. Jump is held from 9.033 to 9.366 seconds. The Goomba is on screen until 10.133 seconds. Frames A, B and C are at 8.917, 9.417 and 9.767 seconds. The stomp is annotated at frame C.</desc>
+<line class="mk" x1="336.2" y1="18" x2="336.2" y2="184"/>
+<text class="mk-l" x="336.2" y="13" text-anchor="middle">A</text>
+<line class="mk" x1="449.9" y1="18" x2="449.9" y2="184"/>
+<text class="mk-l" x="449.9" y="13" text-anchor="middle">B</text>
+<line class="mk" x1="529.5" y1="18" x2="529.5" y2="184"/>
+<text class="mk-l" x="529.5" y="13" text-anchor="middle">C</text>
 <text class="lab" x="0" y="49">Action/Right</text>
 <line class="track" x1="196" y1="45" x2="628" y2="45"/>
-<rect class="action" x="264.7" y="39" width="363.3" height="12"/>
+<rect class="action" x="268.1" y="39" width="359.9" height="12"/>
 <text class="more" x="632" y="49">›</text>
 <text class="lab" x="0" y="79">Action/Run</text>
 <line class="track" x1="196" y1="75" x2="628" y2="75"/>
-<rect class="action" x="241.9" y="69" width="386.1" height="12"/>
+<rect class="action" x="245.3" y="69" width="382.7" height="12"/>
 <text class="more" x="632" y="79">›</text>
 <text class="lab" x="0" y="109">Action/Jump</text>
 <line class="track" x1="196" y1="105" x2="628" y2="105"/>
-<rect class="action" x="359.3" y="99" width="71.8" height="12"/>
-<text class="lab" x="0" y="139">Enemy_on_screen/Goomba</text>
+<rect class="action" x="362.7" y="99" width="75.7" height="12"/>
+<text class="lab" x="0" y="139">EnemyOnScreen/Goomba</text>
 <line class="track" x1="196" y1="135" x2="628" y2="135"/>
-<rect class="event" x="196.0" y="129" width="409.3" height="12"/>
+<rect class="event" x="196.0" y="129" width="416.8" height="12"/>
 <text class="more" x="186" y="139">‹</text>
-<text class="lab" x="0" y="169">Enemy_defeated/Stomp/Goomba</text>
+<text class="lab" x="0" y="169">EnemyDefeated/Stomp/Goomba</text>
 <line class="track" x1="196" y1="165" x2="628" y2="165"/>
-<rect class="inst" x="519.7" y="159" width="12" height="12" transform="rotate(45 525.7 165)"/>
+<rect class="inst" x="523.5" y="159" width="12" height="12" transform="rotate(45 529.5 165)"/>
 <line class="tick" x1="241.5" y1="186" x2="241.5" y2="192"/>
 <text class="ax" x="241.5" y="206" text-anchor="middle">8.5 s</text>
 <line class="tick" x1="355.2" y1="186" x2="355.2" y2="192"/>
@@ -308,31 +324,31 @@
 </svg>
 <svg class="ex-timeline ex-timeline--narrow" viewBox="0 0 360 250" role="img" aria-labelledby="ex-tl-title-n ex-tl-desc-n">
 <title id="ex-tl-title-n">Annotations around the first Goomba stomp</title>
-<desc id="ex-tl-desc-n">Timeline from 8.3 to 10.2 seconds into the recording. Right and Run are held from 8.60 and 8.50 seconds onward. Jump is held from 9.02 to 9.33 seconds. A Goomba is on screen until 10.10 seconds. The stomp is annotated at 9.75 seconds. Frames A, B and C are at 8.90, 9.40 and 9.75 seconds.</desc>
-<line class="mk" x1="116.1" y1="18" x2="116.1" y2="218"/>
-<text class="mk-l" x="116.1" y="13" text-anchor="middle">A</text>
-<line class="mk" x1="204.5" y1="18" x2="204.5" y2="218"/>
-<text class="mk-l" x="204.5" y="13" text-anchor="middle">B</text>
-<line class="mk" x1="266.4" y1="18" x2="266.4" y2="218"/>
-<text class="mk-l" x="266.4" y="13" text-anchor="middle">C</text>
+<desc id="ex-tl-desc-n">Timeline from 8.3 to 10.2 seconds into the recording. Run is held from 8.517 seconds and Right from 8.617 seconds, both beyond the displayed interval. Jump is held from 9.033 to 9.366 seconds. The Goomba is on screen until 10.133 seconds. Frames A, B and C are at 8.917, 9.417 and 9.767 seconds. The stomp is annotated at frame C.</desc>
+<line class="mk" x1="119.1" y1="18" x2="119.1" y2="218"/>
+<text class="mk-l" x="119.1" y="13" text-anchor="middle">A</text>
+<line class="mk" x1="207.5" y1="18" x2="207.5" y2="218"/>
+<text class="mk-l" x="207.5" y="13" text-anchor="middle">B</text>
+<line class="mk" x1="269.4" y1="18" x2="269.4" y2="218"/>
+<text class="mk-l" x="269.4" y="13" text-anchor="middle">C</text>
 <text class="lab" x="10" y="36">Action/Right</text>
 <line class="track" x1="10" y1="50" x2="346" y2="50"/>
-<rect class="action" x="63.4" y="44" width="282.6" height="12"/>
+<rect class="action" x="66.1" y="44" width="279.9" height="12"/>
 <text class="more" x="349" y="54">›</text>
 <text class="lab" x="10" y="76">Action/Run</text>
 <line class="track" x1="10" y1="90" x2="346" y2="90"/>
-<rect class="action" x="45.7" y="84" width="300.3" height="12"/>
+<rect class="action" x="48.4" y="84" width="297.6" height="12"/>
 <text class="more" x="349" y="94">›</text>
 <text class="lab" x="10" y="116">Action/Jump</text>
 <line class="track" x1="10" y1="130" x2="346" y2="130"/>
-<rect class="action" x="137.0" y="124" width="55.9" height="12"/>
-<text class="lab" x="10" y="156">Enemy_on_screen/Goomba</text>
+<rect class="action" x="139.6" y="124" width="58.9" height="12"/>
+<text class="lab" x="10" y="156">EnemyOnScreen/Goomba</text>
 <line class="track" x1="10" y1="170" x2="346" y2="170"/>
-<rect class="event" x="10.0" y="164" width="318.3" height="12"/>
+<rect class="event" x="10.0" y="164" width="324.2" height="12"/>
 <text class="more" x="7" y="174" text-anchor="end">‹</text>
-<text class="lab" x="10" y="196">Enemy_defeated/Stomp/Goomba</text>
+<text class="lab" x="10" y="196">EnemyDefeated/Stomp/Goomba</text>
 <line class="track" x1="10" y1="210" x2="346" y2="210"/>
-<rect class="inst" x="260.4" y="204" width="12" height="12" transform="rotate(45 266.4 210)"/>
+<rect class="inst" x="263.4" y="204" width="12" height="12" transform="rotate(45 269.4 210)"/>
 <line class="tick" x1="45.4" y1="220" x2="45.4" y2="226"/>
 <text class="ax" x="45.4" y="242" text-anchor="middle">8.5 s</text>
 <line class="tick" x1="133.8" y1="220" x2="133.8" y2="226"/>
@@ -351,41 +367,23 @@
                         <span class="s-i"><span class="s-show">Show</span><span class="s-hide">Hide</span></span>
                     </summary>
 <div class="codeblock tsv-block">
-<p class="c"># sub-01_ses-001_task-mario_run-01_desc-annotated_events.tsv (rows for this moment; onsets from the start of the run)</p>
+<p class="c"># sub-01_ses-001_task-mario_run-01_desc-annotated_events.tsv (selected rows)</p>
 <table class="tsv">
-<thead><tr><th scope="col">trial_type</th><th scope="col">onset</th><th scope="col">duration</th><th scope="col">frame_start</th><th scope="col">frame_stop</th><th scope="col">button</th></tr></thead>
+<thead><tr><th scope="col">trial_type</th><th scope="col">onset</th><th scope="col">duration</th><th scope="col">onset_in_video</th><th scope="col">frame_start</th><th scope="col">frame_stop</th><th scope="col">button</th><th scope="col">stim_file</th></tr></thead>
 <tbody>
-<tr><td>gym-retro_game</td><td data-k="onset">0.013</td><td data-k="duration">80.383</td><td data-k="frame_start">0</td><td data-k="frame_stop">4831</td><td data-k="button"></td></tr>
-<tr><td>Enemy_on_screen/Goomba</td><td data-k="onset">7.151</td><td data-k="duration">2.962</td><td data-k="frame_start">429</td><td data-k="frame_stop">607</td><td data-k="button"></td></tr>
-<tr><td>Action/Run</td><td data-k="onset">8.515</td><td data-k="duration">9.351</td><td data-k="frame_start">511</td><td data-k="frame_stop">1073</td><td data-k="button">B</td></tr>
-<tr><td>Action/Right</td><td data-k="onset">8.615</td><td data-k="duration">6.539</td><td data-k="frame_start">517</td><td data-k="frame_stop">910</td><td data-k="button">RIGHT</td></tr>
-<tr><td>Action/Jump</td><td data-k="onset">9.031</td><td data-k="duration">0.316</td><td data-k="frame_start">542</td><td data-k="frame_stop">561</td><td data-k="button">A</td></tr>
-<tr><td>Enemy_defeated/Stomp/Goomba</td><td data-k="onset">9.763</td><td data-k="duration">0.0</td><td data-k="frame_start">586</td><td data-k="frame_stop">586</td><td data-k="button"></td></tr>
+<tr><td>Repetition</td><td data-k="onset">0.013</td><td data-k="duration">80.517</td><td data-k="onset_in_video">0.0</td><td data-k="frame_start">0</td><td data-k="frame_stop">4830</td><td data-k="button"></td><td data-k="stim_file"><abbr title="sub-01/ses-001/game_replays/sub-01_ses-001_task-mario_run-01_level-w1l1_rep-000_recording.mp4">…_rep-000_recording.mp4</abbr></td></tr>
+<tr><td>EnemyOnScreen/Goomba</td><td data-k="onset">7.163</td><td data-k="duration">2.983</td><td data-k="onset_in_video">7.15</td><td data-k="frame_start">429</td><td data-k="frame_stop">607</td><td data-k="button"></td><td data-k="stim_file"></td></tr>
+<tr><td>Action/Run</td><td data-k="onset">8.529</td><td data-k="duration">9.383</td><td data-k="onset_in_video">8.517</td><td data-k="frame_start">511</td><td data-k="frame_stop">1073</td><td data-k="button">B</td><td data-k="stim_file"></td></tr>
+<tr><td>Action/Right</td><td data-k="onset">8.629</td><td data-k="duration">6.567</td><td data-k="onset_in_video">8.617</td><td data-k="frame_start">517</td><td data-k="frame_stop">910</td><td data-k="button">RIGHT</td><td data-k="stim_file"></td></tr>
+<tr><td>Action/Jump</td><td data-k="onset">9.046</td><td data-k="duration">0.333</td><td data-k="onset_in_video">9.033</td><td data-k="frame_start">542</td><td data-k="frame_stop">561</td><td data-k="button">A</td><td data-k="stim_file"></td></tr>
+<tr><td>EnemyDefeated/Stomp/Goomba</td><td data-k="onset">9.779</td><td data-k="duration">0.0</td><td data-k="onset_in_video">9.767</td><td data-k="frame_start">586</td><td data-k="frame_stop">586</td><td data-k="button"></td><td data-k="stim_file"></td></tr>
 </tbody>
 </table>
 </div>
-                <p class="codeblock-cap">Selected rows and columns from the events table. Onset and duration are in seconds. The <code>gym-retro_game</code> row gives the recording’s start time within the run. Frame indices count from the start of that recording.</p>
+                <p class="codeblock-cap">The stomp occurs <strong>9.779 seconds into the fMRI run</strong> and <strong>9.767 seconds into the video</strong>. These times are close because this is the first video in the run. The timeline above uses video time, so you can match the stomp to frame 586.</p>
                 </details>
             </div>
 
-            <!-- Modalities -->
-            <div class="block">
-                <h2>Gameplay data and timing</h2>
-                <dl class="dl">
-                    <dt>Video and audio</dt>
-                    <dd>One <code>.mp4</code> file per gameplay repetition at 60 frames per second. A repetition is one attempt at a level in Super Mario Bros., Super Mario All-Stars and Shinobi III. In Super Mario Bros. 3, each repetition corresponds to one life, so an attempt can span several recordings.</dd>
-                    <dt>Controller actions</dt>
-                    <dd>Button presses and their durations, labeled <code>Action/Right</code>,
-                    <code>Action/Jump</code>, <code>Action/Attack</code>, …</dd>
-                    <dt>Game events</dt>
-                    <dd>Occurrences such as <code>Item_collected/Coin</code>, <code>Enemy_defeated/Stomp/Goomba</code>,
-                    <code>Player_damaged</code> or <code>Level_completed</code>. Across the four games there are 258 distinct game-event labels, excluding controller actions and gameplay video boundary markers. Each game’s <code>task-&lt;game&gt;_events.json</code> describes its labels.</dd>
-                    <dt>Timing</dt>
-                    <dd>A scanning session contains several fMRI runs, and each run contains several gameplay repetitions. Each run
-                    has one events table, and all its timestamps are measured from the start of the run, shared with the fMRI
-                    data. Rows labelled <code>gym-retro_game</code> give each recording’s onset and duration.</dd>
-                </dl>
-            </div>
         </div>
     </section>
 
@@ -394,18 +392,18 @@
         <div class="panel-inner">
             <div class="prose">
                 <h2>fMRI responses</h2>
-                <p>We provide functional magnetic resonance imaging (fMRI) responses recorded during gameplay. The blood-oxygen-level-dependent (BOLD) signal measures brain activity indirectly through changes in blood oxygenation. The hemodynamic response typically peaks about 5–6 seconds after a brief neural event.</p>
-                <p>The neural data were derived from preprocessed BOLD images aligned to the Montreal Neurological Institute (MNI) anatomical template using the <a href="https://docs.cneuromod.ca/contents/timeseries.html#code" target="_blank" rel="noopener">CNeuroMod time
-                series extraction pipeline</a>. The voxel time series were denoised for motion, tissue and global signal
-                contributions and slow drift, smoothed with a kernel with a full width at half maximum (FWHM) of 5 mm and standardized within each run, then
-                averaged within the 1,134 parcels of the CNeuroMod 2026 atlas.</p>
+                <p>We provide whole-brain functional magnetic resonance imaging (fMRI) responses recorded while subjects played video games. The blood-oxygen-level-dependent (BOLD) signal measures brain activity indirectly through changes in blood oxygenation. After a brief neural event, the hemodynamic response typically peaks about 5–6 seconds later.</p>
+                <p>Each fMRI run is recorded continuously and can contain several gameplay videos. For the three training games, participants can use the timestamps in the events table to align each gameplay recording with its fMRI time series. For ID and OOD testing, we release the gameplay data and keep the corresponding fMRI responses hidden.</p>
+                <p>The <a href="https://docs.cneuromod.ca/contents/timeseries.html#code" target="_blank" rel="noopener">CNeuroMod time series extraction pipeline</a> uses BOLD images preprocessed with fMRIPrep in MNI152NLin2009cAsym space. Denoising includes a cosine high-pass filter and regression of 24 motion parameters, the mean white matter and cerebrospinal fluid signals, and the global signal. The voxel signals are smoothed with a 5 mm full width at half maximum (FWHM) kernel. Within each run, each voxel’s time series is then z-scored before the signals are averaged within each of the 1,134 brain parcels. The resulting parcel time series have a mean of approximately zero within each run, but their standard deviations can differ from one.</p>
             </div>
             <dl class="dl block">
-                <dt>Format</dt><dd>One <code>.h5</code> file per subject and model training game they played, with one array per fMRI run</dd>
-                <dt>Run array</dt><dd><code>(N samples, 1134 parcels)</code>, where N is the number of time points in the run. The interval between samples (repetition time, TR) is 1.49 seconds.</dd>
-                <dt>Space</dt><dd>MNI152NLin2009cAsym</dd>
-                <dt>Atlas</dt><dd><a href="https://docs.cneuromod.ca/contents/timeseries.html#file-details" target="_blank" rel="noopener">CNeuroMod 2026 atlas</a> with cortical, subcortical and cerebellar parcels, in the shared <code>atlases/</code> folder</dd>
+                <dt>Format</dt><dd>One HDF5 (<code>.h5</code>) file per subject and training game for which recordings are available, with one <code>float32</code> array per fMRI run.</dd>
+                <dt>Run array</dt><dd>Shape <code>(N, 1134)</code>, where N is the number of time points in the run. Each row contains one BOLD response value per parcel. The interval between rows is the repetition time (TR), 1.49 seconds.</dd>
+                <dt>Atlas</dt><dd>The <a href="https://docs.cneuromod.ca/contents/timeseries.html#file-details" target="_blank" rel="noopener">CNeuroMod 2026 atlas</a> combines 996 cortical parcels from Schaefer 1000 (7 networks), 50 subcortical parcels from Tian S3, and 88 cerebellar parcels from Nettekoven Asym 128. Time series were extracted using each subject’s grey-matter-masked version of the atlas, available in <code>atlases/</code>.</dd>
             </dl>
+            <div class="prose">
+                <p>To identify the brain region represented by a column, find the corresponding label in the sorted positive labels of the subject’s atlas, then look up that label in the parcel table’s <code>index</code> column.</p>
+            </div>
         </div>
     </section>
 
@@ -413,20 +411,26 @@
     <section class="panel" id="files" role="tabpanel" aria-labelledby="tab-files">
         <div class="panel-inner">
             <h2>File structure</h2>
-            <p class="prose">Each game has a <code>gamelogs/</code> folder for gameplay recordings and annotations. For the model training games, <code>fmri/</code> contains the corresponding brain responses. In the example below, <code>sub-01</code> identifies the subject and <code>ses-001</code> identifies the scanning session.</p>
+            <p class="prose">Within each scanning session, <code>game_events/</code> holds one events table per run. The <code>game_replays/</code> folder contains one video per recorded repetition. Alongside each video, <code>_summary.json</code> gives summary statistics such as duration, score and lives lost. The <code>_lowlevel.npy</code> file contains per-frame luminance, optical flow and audio envelope.</p>
+            <p class="prose">For the model training games, <code>fmri/</code> contains the corresponding brain responses. In the example below, <code>sub-01</code> identifies the subject and <code>ses-001</code> identifies the scanning session.</p>
 <pre class="codeblock">algonauts_2027.competitors/
 ├── README.md
 ├── <span class="h">mario/</span>
 │   ├── gamelogs/
 │   │   ├── task-mario_events.json                         <span class="c"># event label descriptions</span>
 │   │   └── sub-01/ses-001/
-│   │       ├── sub-01_ses-001_task-mario_run-01_desc-annotated_events.tsv
-│   │       └── sub-01_ses-001_task-mario_level-w1l1_rep-000_recording.mp4
+│   │       ├── game_events/
+│   │       │   └── sub-01_ses-001_task-mario_run-01_desc-annotated_events.tsv
+│   │       └── game_replays/
+│   │           ├── sub-01_ses-001_task-mario_run-01_level-w1l1_rep-000_recording.mp4
+│   │           ├── sub-01_ses-001_task-mario_run-01_level-w1l1_rep-000_summary.json
+│   │           └── sub-01_ses-001_task-mario_run-01_level-w1l1_rep-000_lowlevel.npy
 │   └── fmri/
-│       └── sub-01_task-mario_space-MNI152NLin2009cAsym_atlas-cneuromod26_desc-1134Parcels_timeseries.h5
-├── <span class="h">mario3/</span> · <span class="h">shinobi/</span>                                     <span class="c"># same structure</span>
+│       └── sub-01_task-mario_space-MNI152NLin2009cAsym_atlas-cneuromod2026_desc-1134Parcels_timeseries.h5
+├── <span class="h">mario3/</span>                                                <span class="c"># same data layout as mario/</span>
+├── <span class="h">shinobi/</span>                                               <span class="c"># same data layout as mario/</span>
 ├── <span class="h">mariostars/</span>                                            <span class="c"># gamelogs/ only: fMRI hidden (ID test)</span>
-└── <span class="h">atlases/</span>                                               <span class="c"># parcellations + parcel metadata</span></pre>
+└── <span class="h">atlases/</span>                                               <span class="c"># template and per-subject grey-matter-masked atlases, parcel table</span></pre>
 
             <div class="prose block">
                 <h2>License</h2>
