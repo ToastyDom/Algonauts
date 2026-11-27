@@ -164,7 +164,7 @@
                         <li><span class="fw-k">Output</span><strong>Predicted fMRI</strong><span>1,134 brain parcels</span></li>
                     </ol>
                     <ol class="fw-phases">
-                        <li><span class="fw-k">Phase 1</span><strong>Development Phase</strong><span>Model training on Super Mario Bros., Super Mario Bros. 3 and Shinobi III. In-distribution (ID) testing on all recorded levels from Super Mario All-Stars. Baseline <em>r</em> = 0.209.</span></li>
+                        <li><span class="fw-k">Phase 1</span><strong>Development Phase</strong><span>Model training on Super Mario Bros., Super Mario Bros. 3 and Shinobi III. In-distribution (ID) testing on all recorded levels from Super Mario All-Stars. Baseline <em>r</em> = 0.210.</span></li>
                         <li><span class="fw-k">Phase 2</span><strong>Generalization Phase</strong><span>Out-of-distribution (OOD) testing on hidden games and final ranking</span></li>
                         <li><span class="fw-k">After the challenge</span><strong>Post-Challenge Phase</strong><span>Ongoing public ID and OOD benchmark</span></li>
                     </ol>
@@ -203,7 +203,7 @@
                 </table>
             </div>
             <div class="prose block">
-                <h3>Development Phase <span class="muted">(26 weeks)</span></h3>
+                <h3>Development Phase <span class="muted">(6&nbsp;months)</span></h3>
                 <p><strong>Model training.</strong> The three <a href="data.html#training-games">model training games</a> are Super Mario Bros., Super Mario Bros. 3 and Shinobi III: Return of the Ninja Master. We provide approximately 144 hours of gameplay data and the corresponding fMRI responses for model training.</p>
                 <p><strong>ID testing.</strong> We use the
                 visually enhanced remake of Super Mario Bros. from
@@ -224,15 +224,15 @@
         <div class="panel-inner">
         <div class="prose">
             <h2>Evaluation and submission</h2>
-            <p>For each subject and game, Codabench joins the predicted and measured fMRI responses across all corresponding gameplay videos to form two time series. For each of the 1,134 brain parcels, it calculates Pearson’s correlation coefficient (<em>r</em>), which measures how closely the two series vary together over time. The platform averages the parcel correlations to obtain one score per subject and game. For the OOD test set, which contains multiple games, it averages game scores within each subject, weighting games equally. It then averages the scores across subjects to obtain a single prediction accuracy score per submission for each test set. Codabench uses the ID scores to rank submissions on the public leaderboard during the Development Phase, and the OOD scores to determine the final challenge ranking.</p>
-            <p>All five subjects are tested: <span class="subj">sub-01</span>, <span class="subj">sub-02</span>,
-            <span class="subj">sub-03</span>, <span class="subj">sub-05</span> and <span class="subj">sub-06</span>.</p>
+            <p>Codabench automatically evaluates model predictions by comparing the predicted fMRI time series with the corresponding withheld measurements. ID testing uses all recorded levels from Super Mario All-Stars, comprising approximately 30 hours of gameplay across subjects. OOD testing uses approximately two hours of gameplay per subject. Both test sets contain data from <span class="subj">sub-01</span>, <span class="subj">sub-02</span>, <span class="subj">sub-03</span>, <span class="subj">sub-05</span> and <span class="subj">sub-06</span>.</p>
+            <p>For each subject and game, the predicted and measured fMRI time series are concatenated across all corresponding gameplay videos in the test set. Pearson’s correlation coefficient (<em>r</em>) is then calculated between the predicted and measured sequences separately for each of the 1,134 brain parcels.</p>
+            <p>The parcel correlations are averaged to obtain one score per subject and game. For the OOD test set, which contains multiple games, game scores are averaged within each subject, weighting games equally. The scores are then averaged across subjects to obtain a single prediction accuracy score per submission. The ID scores determine submission rankings on the public leaderboard during the Development Phase, whereas the OOD scores determine the final challenge ranking.</p>
 
             <div class="block" id="submission">
                 <h3>Prepare a submission</h3>
                 <p>For the five test subjects, submit predicted fMRI responses corresponding to gameplay. Use the Super Mario All-Stars gameplay data during the Development Phase and the OOD gameplay data during the Generalization Phase.</p>
                 <p>The <a href="#">Challenge submission section of the Development Kit</a><!-- TODO: direct link to the notebook's "Challenge submission" section -->
-                will show how to prepare the predictions for upload to Codabench. The required files, prediction format and ordering are to be confirmed.</p>
+                will show how to prepare the predictions for upload to Codabench.</p>
             </div>
 
             <div class="block aside-note" id="validate">
@@ -255,17 +255,16 @@
         <div class="panel-inner">
             <h2>Rules and regulations</h2>
             <ol class="num-list">
-                <li>Challenge participants can use any encoding model derived from any source and may use <a href="data.html#external-data">external training data</a>. Training models on any neural responses corresponding to the ID or OOD test gameplay data is prohibited.</li>
+                <li>Challenge participants can use any encoding model derived from any source and may use external training data</a>. However, training models on any neural responses corresponding to the ID or OOD test gameplay data is prohibited.</li>
                 <li>Each team can make an unlimited number of submissions during the Development Phase and a maximum of ten submissions during the Generalization Phase. Each team can only compete using one account.
                     <p class="rule-note"><strong>Violation of either rule 1 or rule 2 will result in disqualification from the challenge.</strong></p>
                 </li>
-                <li>To promote open science, challenge participants who wish to be considered for the final ranking must publish a short report (approximately 4–8 pages) describing their encoding model and methodology on a preprint server (e.g., arXiv or bioRxiv) by <a href="#dates">June 30, 2027</a>.</li>
-                <li>The three highest-ranked teams are required to make their code openly available by the same deadline.</li>
+                <li>To promote open science, challenge participants who wish to be considered for the final ranking must publish a short report (approximately 4–8 pages) describing their encoding model and methodology on a preprint server (e.g., arXiv or bioRxiv). Participants must send the preprint link to the organizers by <a href="#">filling out the form below</a><!-- TODO: report and code submission form --> by June 30, 2027.</li>
+                <li>The three highest-ranked teams must make their code openly available and submit the link to the organizers using <a href="#">the same form</a><!-- TODO: report and code submission form --> by June 30, 2027. In the spirit of open science, all teams are encouraged to make their code openly available and link to it in their reports.</li>
             </ol>
             <div class="btn-row rule-action">
                 <a href="#" class="btn btn-ghost">Submit report and code links</a><!-- TODO: report and code submission form -->
             </div>
-            <p class="small muted rule-note">Use the form to send the organizers your preprint link and, for the top three teams, a public link to the code. <em>Form link to be added.</em></p>
         </div>
     </section>
 
@@ -291,16 +290,17 @@
             <div class="block">
                 <div class="prose">
                     <h2>Baseline model</h2>
-                    <p>We provide a challenge baseline model as a working example and a reference point for prediction accuracy. Participants may use their own features, model architectures, and training strategies. The model summarizes each gameplay input as a set of numerical features for each 1.49-second fMRI sampling interval. It uses features from recent intervals to account for the delay between neural activity and the measured fMRI response. For each brain parcel, ridge regression fits a weighted combination of these features and penalizes large weights. On the in-distribution test game, Super Mario All-Stars, the baseline achieved a prediction score of <em>r</em> = 0.209.</p>
+                    <p>We provide a challenge baseline encoding model as a working example and a reference point for prediction accuracy. Participants may use their own features, model architectures and training strategies.</p>
+                    <p>The baseline extracts gameplay features at each fMRI sampling interval (repetition time, TR&nbsp;=&nbsp;1.49&nbsp;s). To account for the delay in the blood-oxygen-level-dependent (BOLD) response, the model uses features from four consecutive intervals, the most recent of which precedes the response by three TRs (4.47&nbsp;s). It concatenates these features and uses ridge regression to predict the response of each brain parcel. On the in-distribution test game, Super Mario All-Stars, the baseline achieved a prediction score of <em>r</em>&nbsp;=&nbsp;0.209.</p>
                 </div>
                 <div class="table-wrap" style="max-width:var(--textw)">
                     <table class="table">
                         <thead><tr><th>Gameplay data</th><th>Features</th></tr></thead>
                         <tbody>
-                            <tr><td>Video</td><td>Visual features from the Slow R50 video network, summarized by the 100 principal components that capture the most variation</td></tr>
-                            <tr><td>Audio</td><td>Mel-frequency cepstral coefficients, which describe the sound spectrum, summarized by 10 principal components</td></tr>
-                            <tr><td>Controller actions</td><td>Fraction of each interval that each action is held. The Development Kit uses nine action labels, including <code>Action/Other</code>.</td></tr>
-                            <tr><td>Game events</td><td>Each event description is encoded as 384 numbers and weighted by the activity of that event in the interval. Combining these vectors and adding total event activity gives 385 features.</td></tr>
+                            <tr><td>Video</td><td>Activations from the final pooling layer of the pretrained Slow R50 video network, projected onto the first 100 principal components.</td></tr>
+                            <tr><td>Audio</td><td>Mel-frequency cepstral coefficients (MFCCs), averaged within each TR and projected onto the first 10 principal components.</td></tr>
+                            <tr><td>Controller actions</td><td>Fraction of each TR for which each controller action is held, using nine action labels.</td></tr>
+                            <tr><td>Game events</td><td>A 384-dimensional embedding represents each event description. Within each TR, the model sums the embeddings weighted by event activity and appends total event activity as the 385th feature.</td></tr>
                         </tbody>
                     </table>
                 </div>
@@ -308,17 +308,19 @@
 
             <div class="block prose">
                 <h2>Encoding models for fMRI prediction</h2>
-                <p>Participants may choose their modeling approach within the <a href="#rules">rules and regulations</a>.
-                One common approach is a linearizing encoding model. It predicts the fMRI response of each brain parcel
-                independently from features extracted by a computational model, typically using linear regression
+                <p>In the 2027 challenge, we leave it up to the challenge participants to determine the approach to predict brain responses (see <a href="#rules">Rules</a>).
+                As an example, we describe one common approach called linearizing encoding
                 (<a href="https://doi.org/10.1146/annurev.neuro.29.051605.113024" target="_blank" rel="noopener">Wu et al., 2006</a>;
+                <a href="https://doi.org/10.1038/nature06713" target="_blank" rel="noopener">Kay et al., 2008</a>;
                 <a href="https://doi.org/10.1016/j.neuroimage.2010.07.073" target="_blank" rel="noopener">Naselaris et al., 2011</a>;
-                <a href="https://doi.org/10.1016/j.conb.2019.04.002" target="_blank" rel="noopener">Kriegeskorte &amp; Douglas, 2019</a>).
+                <a href="https://doi.org/10.1038/nn.4244" target="_blank" rel="noopener">Yamins &amp; DiCarlo, 2016</a>;
+                <a href="https://doi.org/10.1016/j.conb.2019.04.002" target="_blank" rel="noopener">Kriegeskorte &amp; Douglas, 2019</a>),
+                where the response of each brain parcel is independently predicted from features extracted by a computational model, typically using linear regression.
                 The Development Kit illustrates the three steps below.</p>
                 <ol class="num-list">
-                    <li><strong>Feature extraction.</strong> Convert gameplay video, audio, controller actions and game event annotations from the model training games into numerical features.</li>
-                    <li><strong>Model training.</strong> Use the paired gameplay features and measured fMRI responses to fit a linear mapping for each brain parcel. The challenge baseline model uses ridge regression.</li>
-                    <li><strong>Model testing.</strong> Apply the trained mapping to features from the test gameplay data to predict the corresponding fMRI responses. Codabench compares these predictions with the hidden measured responses.</li>
+                    <li><strong>Feature extraction.</strong> Convert gameplay video, audio, controller actions and game event annotations from the model training games into numerical features. The features of a given model are interpreted as a hypothesis about the features that the brain uses to represent the gameplay.</li>
+                    <li><strong>Model training.</strong> Use the paired gameplay features and measured fMRI responses to fit a linear mapping for each brain parcel. Each parcel’s response is modeled as a weighted combination of multiple features. The challenge baseline model uses ridge regression.</li>
+                    <li><strong>Model testing.</strong> Apply the trained mapping to features from the test gameplay data to predict the corresponding fMRI responses. If the computational model is a suitable model of the brain, its predictions will fit the recorded data well.</li>
                 </ol>
                 <p>If you use the challenge resources, see the <a href="index.html#cite">papers and citation guidance</a>.</p>
             </div>
