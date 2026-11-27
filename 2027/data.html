@@ -115,7 +115,7 @@
                 <li>Fill out the <a href="#">data access form</a>.</li><!-- TODO -->
                 <li>You receive the link to the repository with the <strong>challenge data</strong>, and to a tutorial
                 subset for one subject (<span class="subj">sub-01</span>) used by the Development Kit.</li>
-                <li>Follow the <a href="challenge.html#baseline">Development Kit</a> to load, align and model the data.</li>
+                <li>Follow the <a href="challenge.html#baseline">Development Kit</a> to explore the tutorial data.</li>
             </ol>
             <!-- Optional external training data -->
             <p class="access-note" id="external-data"><strong>Optional external training data.</strong> Participants may
@@ -144,22 +144,22 @@
             <section class="games" id="training-games" aria-labelledby="games-title">
                 <h2 id="games-title">Model training games</h2>
                 <p class="games-intro">Across all recorded levels of the three model training games, we provide approximately 144 hours of gameplay and the corresponding fMRI responses. In Super Mario Bros. (SMB) and Super Mario Bros. 3 (SMB3), subjects navigate levels by running, jumping and avoiding or defeating enemies. Shinobi III combines platform navigation with ninja combat.</p>
-                <p class="games-intro">The counts below give the number of recorded levels and level starts across all subjects. Each <code>LevelStarted</code> row marks the start of an attempt. Restarts are recorded separately as <code>LevelRestarted</code>.</p>
+                <p class="games-intro">The counts below include attempts across all subjects. An attempt starts when a subject plays a level from the beginning. An attempt can span several lives. Restarting the level from the beginning counts as a new attempt.</p>
                 <ul class="catalog">
                     <li class="cat-item">
                         <div class="cat-shot"><img src="img/games/cat_mario_w1l1.png" alt="Super Mario Bros. gameplay in World 1-1: Mario stands on a row of bricks and ? blocks, a Goomba walks below" width="672" height="378" loading="lazy"></div>
                         <div><h3>Super Mario Bros.</h3>
-                        <p class="cat-meta"><span>22 levels</span> · <span>3,215 level starts</span></p></div>
+                        <p class="cat-meta"><span>22 levels</span> · <span>3,221 attempts</span></p></div>
                     </li>
                     <li class="cat-item">
                         <div class="cat-shot"><img src="img/games/cat_mario3.png" alt="Super Mario Bros. 3 gameplay: Mario jumps past a Piranha Plant in a pipe" width="720" height="405" loading="lazy"></div>
                         <div><h3>Super Mario Bros. 3</h3>
-                        <p class="cat-meta"><span>80 levels</span> · <span>1,574 level starts</span></p></div>
+                        <p class="cat-meta"><span>80 levels</span> · <span>1,574 attempts</span></p></div>
                     </li>
                     <li class="cat-item">
                         <div class="cat-shot"><img src="img/games/cat_shinobi.png" alt="Shinobi III gameplay: the ninja jumps through a forest toward an enemy" width="640" height="360" loading="lazy"></div>
                         <div><h3>Shinobi III: Return of the Ninja Master</h3>
-                        <p class="cat-meta"><span>3 levels</span> · <span>484 level starts</span></p></div>
+                        <p class="cat-meta"><span>3 levels</span> · <span>484 attempts</span></p></div>
                     </li>
                 </ul>
             </section>
@@ -170,7 +170,7 @@
                     <h2 id="id-test-title">In-distribution test game</h2>
                     <div class="cat-shot"><img src="img/games/cat_mariostars_w1l1.png" alt="Super Mario All-Stars gameplay at the same spot in World 1-1, with remade graphics: Mario stands on a row of bricks and ? blocks, a Goomba walks below" width="672" height="378" loading="lazy"></div>
                     <div class="tg-title"><h3>Super Mario All-Stars</h3>
-                    <p class="cat-meta"><span>22 levels</span> · <span>1,212 level starts</span></p></div>
+                    <p class="cat-meta"><span>22 levels</span> · <span>1,212 attempts</span></p></div>
                     <div class="tg-text">
                         <p>For ID testing, we use the visually enhanced remake of Super Mario Bros. from Super Mario All-Stars, a collection of four Mario remakes. This remake preserves the original levels and basic actions. We release gameplay data for all 22 recorded levels, comprising approximately 30 hours across subjects, and keep the corresponding fMRI responses hidden.</p>
                     </div>
@@ -245,7 +245,7 @@
             </div>
             <dl class="dl">
                 <dt>Video and audio</dt>
-                <dd>Each <code>.mp4</code> file contains the video and audio from one continuous stretch of play, called a repetition, recorded at 60 frames per second. The events table marks level starts with <code>LevelStarted</code> and restarts with <code>LevelRestarted</code>. An attempt can span several recordings. In <em>Super Mario Bros. 3</em>, each recording covers one life.</dd>
+                <dd>Each <code>.mp4</code> file contains the video and audio from one continuous stretch of play, called a repetition. See <code>ANNOTATIONS.md</code> in each game’s <code>gamelogs/</code> folder for its frame rate. In the events table, <code>LevelStarted</code> marks the start of a level attempt. In <em>Super Mario Bros. 3</em>, each recording covers one life, so an attempt can span several recordings. <code>LevelRestarted</code> marks the start of the next life after the player dies.</dd>
                 <dt>Controller actions</dt>
                 <dd>The events table records button presses and holds, including directional inputs. For example, <code>Action/Jump</code> marks a press of the jump button, and its duration gives the time the button was held.</dd>
                 <dt>Game events</dt>
