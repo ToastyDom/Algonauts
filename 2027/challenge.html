@@ -132,16 +132,15 @@
                 <p>How well does your computational model account for brain activity during gameplay?</p>
 
                 <h2>Challenge overview</h2>
-                <p>The goal of the 2027 challenge is to provide a platform for biological and artificial intelligence scientists to cooperate and compete in developing cutting-edge brain encoding models. Specifically, these models should predict brain responses during video gameplay, and generalize outside their training distribution.</p>
-                <p>In collaboration with the <a href="https://www.cneuromod.ca/" target="_blank" rel="noopener">Courtois NeuroMod Project (CNeuroMod)</a>, we provide:</p>
+                <p>Participants train encoding models to predict human brain responses during gameplay and test how well these models generalize across games. In collaboration with the <a href="https://www.cneuromod.ca/" target="_blank" rel="noopener">Courtois NeuroMod Project (CNeuroMod)</a>, we provide the following resources:</p>
                 <ul>
-                    <li>gameplay video, audio, controller actions and game events from four retro video games,</li>
-                    <li>the corresponding fMRI responses for the three model training games, and</li>
-                    <li>a <a href="#baseline">Development Kit</a> with a video tutorial to help you get familiar with the data.</li>
+                    <li>Gameplay data from three <a href="data.html#training-games">model training games</a>, Super Mario Bros., Super Mario Bros. 3 and Shinobi III: Return of the Ninja Master. The recordings include video, audio, controller actions and game event annotations.</li>
+                    <li>Brain responses recorded with functional magnetic resonance imaging (fMRI) while subjects played the three model training games. The models use the gameplay data to predict fMRI responses across 1,134 brain regions, called parcels.</li>
+                    <li>A <a href="#baseline">Development Kit</a> and video tutorial showing how to explore the data, train the baseline encoding model and prepare a submission.</li>
                 </ul>
-                <p>With that, challenge participants are expected to build computational models that predict brain responses during gameplay for which the brain data are withheld.</p>
-                <p>How well does a model trained on three games predict brain responses while subjects play other games? To answer this question, we test in-distribution (ID) generalization on the visually enhanced remake of <em>Super Mario Bros.</em> in <em>Super Mario All-Stars</em>, which preserves the original levels and basic actions. We test out-of-distribution (OOD) generalization on a separate set of hidden games.</p>
-                <p>Challenge participants submit <strong>predicted fMRI responses</strong> in the format described in the <a href="#">Development Kit</a><!-- TODO: Development Kit link --> to the challenge platform, Codabench, for automatic scoring (see <a href="#evaluation">Evaluation and submission</a>).</p>
+                <p>The challenge has two competitive <a href="#phases">phases</a>. During the Development Phase, we test in-distribution (ID) generalization on all recorded levels of the Super Mario Bros. remake in Super Mario All-Stars. The remake updates the graphics while preserving the original levels and basic actions. During the Generalization Phase, we test out-of-distribution (OOD) generalization on a separate set of games whose identities remain hidden until the phase begins.</p>
+                <p>For both tests, we release the gameplay data and keep the corresponding fMRI responses hidden. Participants submit their predicted fMRI responses to Codabench for automatic scoring (see <a href="#evaluation">Evaluation and submission</a>). Only prediction accuracy on the OOD games determines the final ranking.</p>
+                <p>After the competition, the ID and OOD tests remain open in the Post-Challenge Phase. Participants can submit predictions for the same test gameplay data and compare their results with submissions from the official challenge. The corresponding fMRI responses remain hidden.</p>
             </div>
 
             <!-- Figure 1 -->
