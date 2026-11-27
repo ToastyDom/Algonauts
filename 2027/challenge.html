@@ -140,7 +140,7 @@
                     <li>a <a href="#baseline">Development Kit</a> with a video tutorial to help you get familiar with the data.</li>
                 </ul>
                 <p>With that, challenge participants are expected to build computational models that predict brain responses during gameplay for which the brain data are withheld.</p>
-                <p>How well does a model trained on three games predict brain responses during other games? To answer this question, we test in-distribution (ID) generalization on a remake that preserves the levels and basic actions of Super Mario Bros., and out-of-distribution (OOD) generalization on a separate set of hidden games.</p>
+                <p>How well does a model trained on three games predict brain responses while subjects play other games? To answer this question, we test in-distribution (ID) generalization on the visually enhanced remake of <em>Super Mario Bros.</em> in <em>Super Mario All-Stars</em>, which preserves the original levels and basic actions. We test out-of-distribution (OOD) generalization on a separate set of hidden games.</p>
                 <p>Challenge participants submit <strong>predicted fMRI responses</strong> in the format described in the <a href="#">Development Kit</a><!-- TODO: Development Kit link --> to the challenge platform, Codabench, for automatic scoring (see <a href="#evaluation">Evaluation and submission</a>).</p>
             </div>
 
@@ -166,7 +166,7 @@
                     <ol class="fw-phases">
                         <li><span class="fw-k">Phase 1</span><strong>Development Phase</strong><span>Model training on Super Mario Bros., Super Mario Bros. 3 and Shinobi III. In-distribution (ID) testing on all recorded levels from Super Mario All-Stars. Baseline <em>r</em> = 0.209.</span></li>
                         <li><span class="fw-k">Phase 2</span><strong>Generalization Phase</strong><span>Out-of-distribution (OOD) testing on hidden games and final ranking</span></li>
-                        <li><span class="fw-k">After the challenge</span><strong>Post-Challenge Benchmark</strong><span>Ongoing public ID and OOD benchmark</span></li>
+                        <li><span class="fw-k">After the challenge</span><strong>Post-Challenge Phase</strong><span>Ongoing public ID and OOD benchmark</span></li>
                     </ol>
                     <p style="margin-top:14px"><a class="text-link only-dark" href="img/Algonauts%202027%20challenge%20overview%20(wide%20dark).png" target="_blank" rel="noopener">Open the original Figure 1 &#8599;</a><a class="text-link only-light" href="img/Algonauts%202027%20challenge%20overview%20(wide).png" target="_blank" rel="noopener">Open the original Figure 1 &#8599;</a></p>
                 </div>
@@ -191,26 +191,30 @@
     <section class="panel" id="phases" role="tabpanel" aria-labelledby="tab-phases">
         <div class="panel-inner">
             <h2>Challenge phases</h2>
-            <p class="prose">The challenge has two competitive phases. During the Development Phase, participants compare models on the in-distribution (ID) test game. During the Generalization Phase, prediction accuracy on the out-of-distribution (OOD) games determines the final ranking. The two tests remain available after the competition.</p>
+            <p class="prose">The challenge has two competitive phases. During the Development Phase, participants compare models on the in-distribution (ID) test game. During the Generalization Phase, prediction accuracy on the out-of-distribution (OOD) games determines the final ranking. The two tests remain available after the competition in the Post-Challenge Phase.</p>
             <div class="table-wrap">
                 <table class="table">
                     <thead><tr><th>Phase</th><th>Dates</th><th>Test data (fMRI withheld)</th><th>Submissions per team</th></tr></thead>
                     <tbody>
-                        <tr><td>Development Phase</td><td>Dec 14, 2026 – Jun 13, 2027</td><td>Super Mario All-Stars (ID)</td><td>Unlimited</td></tr>
-                        <tr><td>Generalization Phase</td><td>Jun 14 – Jun 20, 2027</td><td>OOD games (final ranking)</td><td>Up to 10</td></tr>
-                        <tr><td>Post-Challenge Benchmark</td><td>Indefinite</td><td>ID and OOD test sets, separate leaderboards</td><td>To be confirmed</td></tr>
+                        <tr><td>Development Phase</td><td>Dec 14, 2026 – Jun 13, 2027</td><td>ID game Super Mario All-Stars</td><td>Unlimited</td></tr>
+                        <tr><td>Generalization Phase</td><td>Jun 14 – Jun 20, 2027</td><td>OOD games (hidden)</td><td>Up to 10</td></tr>
+                        <tr><td>Post-Challenge Phase</td><td>Indefinite</td><td>ID and OOD test sets, separate leaderboards</td><td>To be confirmed</td></tr>
                     </tbody>
                 </table>
             </div>
             <div class="prose block">
-                <h3>Development Phase</h3>
+                <h3>Development Phase <span class="muted">(26 weeks)</span></h3>
                 <p><strong>Model training.</strong> The three <a href="data.html#training-games">model training games</a> are Super Mario Bros., Super Mario Bros. 3 and Shinobi III: Return of the Ninja Master. We provide approximately 144 hours of gameplay data and the corresponding fMRI responses for model training.</p>
-                <p><strong>ID testing.</strong> We use the Super Mario Bros. remake in <a href="data.html#id-test">Super Mario All-Stars</a>, which preserves the original levels and basic actions. We release approximately 30 hours of gameplay data across all 22 recorded levels and five test subjects. The corresponding fMRI responses remain hidden. Participants <a href="#submission">submit predicted fMRI responses</a> to Codabench, where they are scored against the hidden responses. Participants can use their ID scores to compare model variants during this phase.</p>
-                <h3>Generalization Phase</h3>
-                <p><strong>OOD testing.</strong> At the start of this phase, we reveal the <a href="data.html#ood-games">OOD games</a> and release approximately two hours of gameplay data per test subject. We provide the same gameplay data modalities as during the Development Phase and keep the corresponding fMRI responses hidden. Withholding the game identities until this phase begins limits game-specific preparation. The number of question marks in Figure 1 does not indicate how many OOD games will be released.</p>
+                <p><strong>ID testing.</strong> We use the
+                visually enhanced remake of Super Mario Bros. from
+                <a href="data.html#id-test">Super Mario All-Stars</a>, a collection of four Mario remakes.
+                This remake preserves the original levels and basic
+                actions. We release approximately 30 hours of gameplay data across all 22 recorded levels and five test subjects. The corresponding fMRI responses remain hidden. Participants <a href="#submission">submit predicted fMRI responses</a> to Codabench, where they are scored against the hidden responses. Participants can use their ID scores to compare model variants during this phase.</p>
+                <h3>Generalization Phase <span class="muted">(1 week)</span></h3>
+                <p><strong>OOD testing.</strong> At the start of this phase, we reveal the <a href="data.html#ood-games">OOD games</a> and release approximately two hours of gameplay data per test subject. We provide the same gameplay data modalities as during the Development Phase and keep the corresponding fMRI responses hidden. Withholding the game identities until this phase begins limits game-specific preparation.</p>
                 <p>Participants submit predicted fMRI responses for the OOD games to Codabench. Game scores are averaged within each subject, weighting games equally, and then averaged across subjects. Only OOD prediction accuracy determines the final ranking among <a href="#rules">eligible teams</a>. The <a href="#evaluation">Evaluation and submission</a> section describes the scoring procedure.</p>
-                <h3>Post-Challenge Benchmark</h3>
-                <p>Following the competitive phases, the ID and OOD tests remain open as public benchmarks. Participants can submit predictions for the same test gameplay data to compare future models with submissions from the official challenge. The corresponding fMRI responses remain hidden.</p>
+                <h3>Post-Challenge Phase <span class="muted">(indefinite)</span></h3>
+                <p>Following the competitive phases, the ID and OOD tests remain open as public benchmarks. Participants can submit predictions for the same test gameplay data to compare future models with submissions from the official challenge. This way, the challenge can keep supporting better models of brain activity during gameplay long after the competition ends. The corresponding fMRI responses remain hidden.</p>
             </div>
         </div>
     </section>
